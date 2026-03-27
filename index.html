@@ -1,1265 +1,1629 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Joseph Soares — Executive advisor, management consultant, and strategic partner. Published in Forbes and Newsweek. Harvard McLean Institute Fellow. Gatineau-Ottawa.">
-<meta property="og:title" content="Joseph Soares | Executive Advisor & Strategic Consultant">
-<meta property="og:description" content="Strategic advisory for business owners, executives, and high-growth founders. Published in Forbes and Newsweek. Harvard McLean Fellow.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://josephsoares.com">
-<title>Joseph Soares | Executive Advisor & Strategic Consultant</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --navy: #0b1a2e;
-    --navy-mid: #0f2240;
-    --navy-light: #132d54;
-    --gold: #c9a84c;
-    --gold-light: #dfc07a;
-    --gold-muted: rgba(201, 168, 76, 0.12);
-    --cream: #f5f1eb;
-    --white: #ffffff;
-    --text-dark: #1a1a2e;
-    --text-mid: #4a4a5a;
-    --text-light: rgba(255,255,255,0.75);
-    --border-light: rgba(201, 168, 76, 0.2);
-  }
-
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-
-  body {
-    font-family: 'Source Sans 3', -apple-system, sans-serif;
-    color: var(--text-dark);
-    background: var(--white);
-    -webkit-font-smoothing: antialiased;
-  }
-
-  /* ===== LANG SWITCHER ===== */
-  .lang-bar {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 200;
-    background: #06101e;
-    display: flex; justify-content: flex-end; align-items: center;
-    padding: 0 40px; height: 32px;
-    border-bottom: 1px solid rgba(201, 168, 76, 0.08);
-  }
-
-  .lang-bar button {
-    background: none; border: none; cursor: pointer;
-    font-family: 'Source Sans 3', sans-serif;
-    font-size: 11px; font-weight: 600;
-    letter-spacing: 1.5px; text-transform: uppercase;
-    color: rgba(255,255,255,0.35);
-    padding: 6px 12px;
-    transition: color 0.3s;
-  }
-
-  .lang-bar button:hover { color: var(--gold-light); }
-  .lang-bar button.active { color: var(--gold); }
-
-  .lang-bar .lang-sep {
-    color: rgba(255,255,255,0.12); font-size: 11px;
-  }
-
-  /* ===== NAV ===== */
-  nav {
-    position: fixed; top: 32px; left: 0; right: 0; z-index: 100;
-    background: rgba(11, 26, 46, 0.96);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(201, 168, 76, 0.1);
-    padding: 0 40px;
-  }
-
-  .nav-inner {
-    max-width: 1200px; margin: 0 auto;
-    display: flex; justify-content: space-between; align-items: center;
-    height: 64px;
-  }
-
-  .nav-name {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 22px; font-weight: 700;
-    color: var(--white); text-decoration: none;
-    letter-spacing: 0.02em;
-  }
-
-  .nav-name span { color: var(--gold); }
-
-  .nav-links { display: flex; gap: 28px; align-items: center; }
-
-  .nav-links a {
-    color: rgba(255,255,255,0.6); text-decoration: none;
-    font-size: 13px; font-weight: 500; letter-spacing: 0.04em;
-    transition: color 0.3s;
-  }
-
-  .nav-links a:hover { color: var(--gold); }
-
-  .nav-cta {
-    background: var(--gold) !important;
-    color: var(--navy) !important;
-    padding: 9px 22px !important;
-    border-radius: 3px;
-    font-weight: 700 !important;
-    font-size: 11px !important;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-  }
-
-  .nav-cta:hover { background: var(--gold-light) !important; color: var(--navy) !important; }
-
-  .mobile-toggle {
-    display: none; background: none; border: none; cursor: pointer;
-    flex-direction: column; gap: 5px; padding: 4px;
-  }
-
-  .mobile-toggle span {
-    display: block; width: 24px; height: 2px;
-    background: var(--white); transition: all 0.3s;
-  }
-
-  /* ===== HERO ===== */
-  .hero {
-    min-height: 100vh;
-    background: linear-gradient(155deg, var(--navy) 0%, var(--navy-mid) 55%, #0d2848 100%);
-    display: flex; align-items: center;
-    padding: 150px 40px 100px;
-    position: relative; overflow: hidden;
-  }
-
-  .hero::before {
-    content: '';
-    position: absolute; inset: 0;
-    background:
-      radial-gradient(ellipse at 10% 90%, rgba(201, 168, 76, 0.06) 0%, transparent 55%),
-      radial-gradient(ellipse at 90% 15%, rgba(91, 143, 217, 0.04) 0%, transparent 45%),
-      radial-gradient(ellipse at 50% 50%, rgba(201, 168, 76, 0.02) 0%, transparent 70%);
-    pointer-events: none;
-  }
-
-  .hero::after {
-    content: '';
-    position: absolute;
-    top: -200px; right: -100px;
-    width: 600px; height: 600px;
-    border: 1px solid rgba(201, 168, 76, 0.06);
-    border-radius: 50%;
-    pointer-events: none;
-  }
-
-  .hero-inner {
-    max-width: 1100px; margin: 0 auto; width: 100%;
-    position: relative; z-index: 1;
-  }
-
-  .hero-eyebrow {
-    display: flex; align-items: center; gap: 14px;
-    margin-bottom: 28px;
-    animation: fadeUp 0.7s ease both;
-  }
-
-  .hero-eyebrow-line {
-    width: 40px; height: 1px; background: var(--gold); opacity: 0.6;
-  }
-
-  .hero-eyebrow-text {
-    font-size: 11px; letter-spacing: 3px;
-    text-transform: uppercase; color: var(--gold);
-    font-weight: 600;
-  }
-
-  .hero h1 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(2.6rem, 5.5vw, 4.2rem);
-    font-weight: 700; color: var(--white);
-    line-height: 1.12; max-width: 850px;
-    margin-bottom: 28px;
-    animation: fadeUp 0.85s ease both;
-  }
-
-  .hero h1 em {
-    font-style: italic; color: var(--gold);
-  }
-
-  .hero-sub {
-    font-size: 18px; color: var(--text-light);
-    line-height: 1.75; max-width: 620px;
-    margin-bottom: 20px; font-weight: 300;
-    animation: fadeUp 0.95s ease both;
-  }
-
-  .hero-qualifier {
-    font-size: 14px;
-    color: rgba(255,255,255,0.38);
-    font-style: italic;
-    max-width: 580px;
-    margin-bottom: 44px;
-    line-height: 1.6;
-    animation: fadeUp 1s ease both;
-  }
-
-  .hero-ctas {
-    display: flex; gap: 16px; flex-wrap: wrap;
-    animation: fadeUp 1.05s ease both;
-    margin-bottom: 48px;
-  }
-
-  .btn-primary {
-    display: inline-block; background: var(--gold); color: var(--navy);
-    padding: 16px 38px; border: none; border-radius: 3px;
-    font-family: 'Source Sans 3', sans-serif;
-    font-size: 12px; font-weight: 700;
-    letter-spacing: 0.1em; text-transform: uppercase;
-    text-decoration: none; cursor: pointer; transition: all 0.3s;
-    box-shadow: 0 4px 28px rgba(201, 168, 76, 0.28);
-  }
-
-  .btn-primary:hover {
-    background: var(--gold-light); transform: translateY(-2px);
-    box-shadow: 0 8px 36px rgba(201, 168, 76, 0.38);
-  }
-
-  .btn-ghost {
-    display: inline-block; background: transparent; color: var(--white);
-    padding: 16px 36px; border: 1px solid rgba(255,255,255,0.2);
-    border-radius: 3px; font-family: 'Source Sans 3', sans-serif;
-    font-size: 12px; font-weight: 600; letter-spacing: 0.08em;
-    text-transform: uppercase; text-decoration: none;
-    cursor: pointer; transition: all 0.3s;
-  }
-
-  .btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
-
-  /* ===== FEATURED IN BAR ===== */
-  .featured-bar {
-    display: flex; align-items: center; gap: 32px; flex-wrap: wrap;
-    padding: 20px 24px;
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(201, 168, 76, 0.12);
-    border-radius: 5px;
-    animation: fadeUp 1.1s ease both;
-    margin-bottom: 40px;
-  }
-
-  .featured-bar-label {
-    font-size: 10px; letter-spacing: 2.5px;
-    text-transform: uppercase; color: rgba(255,255,255,0.3);
-    font-weight: 600;
-  }
-
-  .featured-bar-logos {
-    display: flex; gap: 28px; align-items: center;
-  }
-
-  .featured-bar-logos a {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 18px; font-weight: 700;
-    color: rgba(255,255,255,0.4); text-decoration: none;
-    transition: color 0.3s;
-  }
-
-  .featured-bar-logos a:hover { color: var(--gold); }
-
-  .featured-bar-sep {
-    width: 1px; height: 20px;
-    background: rgba(255,255,255,0.1);
-  }
-
-  .featured-bar-note {
-    font-size: 12px; color: rgba(255,255,255,0.35);
-    font-style: italic;
-  }
-
-  .hero-credentials {
-    display: flex; gap: 24px; flex-wrap: wrap;
-    animation: fadeUp 1.15s ease both;
-    padding-top: 32px;
-    border-top: 1px solid rgba(255,255,255,0.06);
-  }
-
-  .credential {
-    font-size: 12px; color: rgba(255,255,255,0.45);
-    font-weight: 500; letter-spacing: 0.03em;
-  }
-
-  /* ===== TRACK SELECTOR ===== */
-  .tracks {
-    padding: 0 40px;
-    background: var(--cream);
-    position: relative;
-  }
-
-  .tracks-inner {
-    max-width: 1100px; margin: 0 auto;
-    transform: translateY(-48px);
-  }
-
-  .tracks-label {
-    text-align: center;
-    font-size: 11px; letter-spacing: 3px;
-    text-transform: uppercase; color: var(--text-mid);
-    font-weight: 600; margin-bottom: 20px;
-    opacity: 0.6;
-  }
-
-  .tracks-grid {
-    display: grid; grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-  }
-
-  .track-card {
-    background: var(--white);
-    border: 1px solid rgba(0,0,0,0.07);
-    border-radius: 6px;
-    padding: 32px 28px;
-    cursor: pointer;
-    transition: all 0.35s;
-    text-decoration: none;
-    display: block;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .track-card::before {
-    content: '';
-    position: absolute; top: 0; left: 0; right: 0;
-    height: 3px; background: var(--gold);
-    transform: scaleX(0); transform-origin: left;
-    transition: transform 0.35s;
-  }
-
-  .track-card:hover {
-    transform: translateY(-6px);
-    border-color: rgba(201, 168, 76, 0.3);
-    box-shadow: 0 16px 48px rgba(0,0,0,0.1);
-  }
-
-  .track-card:hover::before { transform: scaleX(1); }
-
-  .track-number {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 13px; color: var(--gold);
-    font-weight: 600; letter-spacing: 2px;
-    margin-bottom: 14px; display: block;
-  }
-
-  .track-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 22px; font-weight: 700;
-    color: var(--text-dark); margin-bottom: 10px;
-    line-height: 1.2;
-  }
-
-  .track-desc {
-    font-size: 14px; color: var(--text-mid);
-    line-height: 1.65; margin-bottom: 18px;
-  }
-
-  .track-arrow {
-    font-size: 13px; color: var(--gold);
-    font-weight: 600; letter-spacing: 0.05em;
-    display: flex; align-items: center; gap: 6px;
-    transition: gap 0.3s;
-  }
-
-  .track-card:hover .track-arrow { gap: 10px; }
-
-  /* ===== SECTIONS COMMON ===== */
-  .section-label {
-    font-size: 11px; letter-spacing: 3px;
-    text-transform: uppercase; color: var(--gold);
-    font-weight: 600; margin-bottom: 20px; display: block;
-  }
-
-  /* ===== QUALIFIER ===== */
-  .qualifier {
-    padding: 80px 40px 100px;
-    background: var(--cream);
-  }
-
-  .qualifier-inner {
-    max-width: 820px; margin: 0 auto; text-align: center;
-  }
-
-  .qualifier h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(2rem, 4vw, 2.8rem);
-    font-weight: 700; color: var(--text-dark);
-    line-height: 1.2; margin-bottom: 20px;
-  }
-
-  .qualifier-lead {
-    font-size: 18px; color: var(--text-mid);
-    line-height: 1.75; margin-bottom: 16px;
-    font-weight: 300;
-  }
-
-  .qualifier-disqualify {
-    font-size: 14px; color: var(--text-mid);
-    line-height: 1.7; font-style: italic;
-    opacity: 0.7; margin-bottom: 48px;
-    max-width: 600px; margin-left: auto; margin-right: auto;
-  }
-
-  .qualifier-list {
-    display: grid; grid-template-columns: repeat(2, 1fr);
-    gap: 14px; text-align: left; margin-bottom: 48px;
-  }
-
-  .qualifier-item {
-    padding: 18px 20px;
-    background: var(--white);
-    border-radius: 5px;
-    border-left: 3px solid var(--gold);
-    font-size: 14px; color: var(--text-dark);
-    line-height: 1.5; font-weight: 500;
-  }
-
-  /* ===== PROOF ===== */
-  .proof {
-    padding: 100px 40px;
-    background: var(--navy);
-    color: var(--white);
-  }
-
-  .proof-inner { max-width: 1000px; margin: 0 auto; }
-
-  .proof-header {
-    text-align: center; margin-bottom: 56px;
-  }
-
-  .proof-header h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(2rem, 4vw, 2.8rem);
-    font-weight: 700; color: var(--white);
-    line-height: 1.2; margin-bottom: 14px;
-  }
-
-  .proof-header p {
-    font-size: 16px; color: var(--text-light);
-    max-width: 540px; margin: 0 auto; line-height: 1.7;
-    font-weight: 300;
-  }
-
-  .proof-stats {
-    display: grid; grid-template-columns: repeat(3, 1fr);
-    gap: 2px; margin-bottom: 56px;
-    border: 1px solid rgba(201, 168, 76, 0.15);
-    border-radius: 6px; overflow: hidden;
-  }
-
-  .proof-stat {
-    padding: 40px 32px; text-align: center;
-    background: rgba(255,255,255,0.03);
-    border-right: 1px solid rgba(201, 168, 76, 0.1);
-  }
-
-  .proof-stat:last-child { border-right: none; }
-
-  .stat-number {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 52px; font-weight: 700;
-    color: var(--gold); line-height: 1;
-    margin-bottom: 8px;
-  }
-
-  .stat-label {
-    font-size: 13px; color: rgba(255,255,255,0.5);
-    line-height: 1.5; max-width: 180px; margin: 0 auto;
-  }
-
-  .proof-attestation {
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(201, 168, 76, 0.2);
-    border-radius: 6px; padding: 40px 48px;
-    position: relative;
-  }
-
-  .attestation-quote-mark {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 80px; color: var(--gold);
-    opacity: 0.3; line-height: 0.5;
-    position: absolute; top: 28px; left: 36px;
-  }
-
-  .attestation-text {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 20px; font-style: italic;
-    color: rgba(255,255,255,0.85);
-    line-height: 1.65; margin-bottom: 20px;
-    padding-left: 16px;
-  }
-
-  .attestation-source {
-    font-size: 13px; color: rgba(255,255,255,0.4);
-    letter-spacing: 0.04em;
-  }
-
-  .attestation-source strong {
-    color: var(--gold); font-weight: 600;
-  }
-
-  /* ===== ABOUT / GUIDE ===== */
-  .guide { padding: 100px 40px; background: var(--white); }
-
-  .guide-inner {
-    max-width: 1100px; margin: 0 auto;
-    display: grid; grid-template-columns: 0.85fr 1.15fr;
-    gap: 72px; align-items: start;
-  }
-
-  .guide-sidebar { position: relative; }
-
-  .guide-creds-stack {
-    display: flex; flex-direction: column; gap: 12px;
-  }
-
-  .guide-cred-card {
-    padding: 20px 24px;
-    background: var(--cream);
-    border-radius: 6px;
-    border-left: 3px solid var(--gold);
-  }
-
-  .guide-cred-card .cred-org {
-    font-size: 11px; letter-spacing: 2px;
-    text-transform: uppercase; color: var(--gold);
-    font-weight: 700; margin-bottom: 4px;
-  }
-
-  .guide-cred-card .cred-role {
-    font-size: 14px; color: var(--text-dark);
-    font-weight: 600; line-height: 1.4;
-  }
-
-  .guide-cred-card .cred-detail {
-    font-size: 12px; color: var(--text-mid);
-    margin-top: 4px; line-height: 1.5;
-  }
-
-  .guide-text h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(1.9rem, 3.5vw, 2.5rem);
-    font-weight: 700; color: var(--text-dark);
-    margin-bottom: 20px; line-height: 1.2;
-  }
-
-  .guide-text p {
-    font-size: 16px; color: var(--text-mid);
-    line-height: 1.8; margin-bottom: 16px;
-  }
-
-  .guide-text .guide-highlight {
-    font-size: 15px; color: var(--text-dark);
-    line-height: 1.7; margin-bottom: 16px;
-    font-weight: 500;
-    padding: 20px 24px;
-    background: var(--cream);
-    border-left: 3px solid var(--gold);
-    border-radius: 0 4px 4px 0;
-  }
-
-  .guide-badges {
-    margin-top: 28px;
-    display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
-  }
-
-  .badge {
-    padding: 14px 18px; background: var(--cream);
-    border-radius: 5px;
-  }
-
-  .badge-label {
-    font-size: 10px; text-transform: uppercase;
-    letter-spacing: 1.8px; color: var(--gold);
-    font-weight: 700; margin-bottom: 4px;
-  }
-
-  .badge-value {
-    font-size: 13px; color: var(--text-dark); font-weight: 600;
-    line-height: 1.4;
-  }
-
-  .badge-value a { color: var(--gold); text-decoration: none; }
-
-  /* ===== SERVICES ===== */
-  .services-detail {
-    padding: 100px 40px;
-    background: var(--cream);
-  }
-
-  .services-detail-inner { max-width: 1100px; margin: 0 auto; }
-
-  .services-detail-header {
-    text-align: center; margin-bottom: 56px;
-  }
-
-  .services-detail-header h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(2rem, 4vw, 2.8rem);
-    font-weight: 700; color: var(--text-dark);
-    line-height: 1.2; margin-bottom: 14px;
-  }
-
-  .services-detail-header p {
-    font-size: 16px; color: var(--text-mid);
-    max-width: 540px; margin: 0 auto; line-height: 1.7;
-    font-weight: 300;
-  }
-
-  .service-track {
-    background: var(--white);
-    border: 1px solid rgba(0,0,0,0.06);
-    border-radius: 6px; margin-bottom: 20px;
-    overflow: hidden; transition: box-shadow 0.3s;
-  }
-
-  .service-track:hover { box-shadow: 0 8px 40px rgba(0,0,0,0.08); }
-
-  .service-track-header {
-    display: flex; align-items: flex-start;
-    padding: 36px 40px; gap: 24px;
-  }
-
-  .service-track-number {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 48px; font-weight: 700;
-    color: var(--gold); opacity: 0.25;
-    line-height: 1; flex-shrink: 0;
-    margin-top: -4px;
-  }
-
-  .service-track-content { flex: 1; }
-
-  .service-track-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 24px; font-weight: 700;
-    color: var(--text-dark); margin-bottom: 8px;
-  }
-
-  .service-track-subtitle {
-    font-size: 11px; color: var(--gold);
-    font-weight: 600; letter-spacing: 2px;
-    margin-bottom: 14px; text-transform: uppercase;
-  }
-
-  .service-track-desc {
-    font-size: 15px; color: var(--text-mid);
-    line-height: 1.7; margin-bottom: 16px;
-  }
-
-  .service-track-for {
-    font-size: 13px; color: var(--text-mid);
-    line-height: 1.6; padding: 14px 18px;
-    background: var(--cream); border-radius: 4px;
-    font-style: italic;
-  }
-
-  .service-track-for strong { color: var(--text-dark); font-style: normal; }
-
-  .service-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
-
-  .service-tag {
-    font-size: 11px; padding: 4px 12px;
-    background: var(--gold-muted); color: var(--gold);
-    font-weight: 600; border-radius: 3px;
-    letter-spacing: 0.04em;
-  }
-
-  /* ===== SPARK ===== */
-  .plan {
-    padding: 100px 40px;
-    background: linear-gradient(165deg, var(--navy) 0%, var(--navy-mid) 100%);
-    color: var(--white);
-  }
-
-  .plan-inner { max-width: 1000px; margin: 0 auto; text-align: center; }
-
-  .plan h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 700;
-    margin-bottom: 14px; line-height: 1.2;
-  }
-
-  .plan-subtitle {
-    font-size: 16px; color: var(--text-light);
-    max-width: 580px; margin: 0 auto 52px;
-    line-height: 1.7; font-weight: 300;
-  }
-
-  .spark-grid {
-    display: grid; grid-template-columns: repeat(5, 1fr);
-    gap: 12px; text-align: left;
-  }
-
-  .spark-item {
-    background: rgba(255,255,255,0.03);
-    border: 1px solid rgba(255,255,255,0.06);
-    border-radius: 6px; padding: 28px 18px;
-    transition: all 0.3s;
-  }
-
-  .spark-item:hover {
-    background: rgba(255,255,255,0.06);
-    border-color: var(--border-light);
-    transform: translateY(-4px);
-  }
-
-  .spark-letter {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 44px; font-weight: 700;
-    color: var(--gold); line-height: 1; margin-bottom: 10px;
-  }
-
-  .spark-title {
-    font-size: 13px; font-weight: 700;
-    color: var(--white); margin-bottom: 8px; line-height: 1.3;
-  }
-
-  .spark-desc {
-    font-size: 12px; color: rgba(255,255,255,0.45); line-height: 1.6;
-  }
-
-  /* ===== WRITING ===== */
-  .writing {
-    padding: 80px 40px;
-    background: var(--white);
-  }
-
-  .writing-inner {
-    max-width: 900px; margin: 0 auto; text-align: center;
-  }
-
-  .writing h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(1.8rem, 3vw, 2.2rem);
-    font-weight: 700; color: var(--text-dark);
-    margin-bottom: 14px;
-  }
-
-  .writing-sub {
-    font-size: 15px; color: var(--text-mid);
-    margin-bottom: 40px; line-height: 1.7;
-  }
-
-  .articles-grid {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 16px; text-align: left;
-  }
-
-  .article-card {
-    padding: 24px;
-    background: var(--cream);
-    border-radius: 6px;
-    text-decoration: none;
-    transition: all 0.3s;
-    display: block;
-  }
-
-  .article-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 32px rgba(0,0,0,0.08);
-  }
-
-  .article-pub {
-    font-size: 10px; letter-spacing: 2px;
-    text-transform: uppercase; color: var(--gold);
-    font-weight: 700; margin-bottom: 8px;
-  }
-
-  .article-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 17px; font-weight: 700;
-    color: var(--text-dark); line-height: 1.35;
-  }
-
-  /* ===== CTA ===== */
-  .cta { padding: 100px 40px; background: var(--cream); text-align: center; }
-
-  .cta-inner { max-width: 680px; margin: 0 auto; }
-
-  .cta h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(2rem, 4vw, 3rem); font-weight: 700;
-    color: var(--text-dark); margin-bottom: 16px; line-height: 1.2;
-  }
-
-  .cta h2 em { font-style: italic; color: var(--gold); }
-
-  .cta p {
-    font-size: 17px; color: var(--text-mid);
-    line-height: 1.75; margin-bottom: 14px; font-weight: 300;
-  }
-
-  .cta-qualifier {
-    font-size: 13px; color: var(--text-mid);
-    font-style: italic; opacity: 0.65;
-    margin-bottom: 40px; line-height: 1.6;
-  }
-
-  /* ===== FOOTER ===== */
-  footer {
-    background: var(--navy); padding: 48px 40px;
-    text-align: center; color: rgba(255,255,255,0.35);
-    font-size: 13px;
-    border-top: 1px solid rgba(201, 168, 76, 0.08);
-  }
-
-  footer a { color: var(--gold); text-decoration: none; }
-  footer a:hover { text-decoration: underline; }
-
-  .footer-links {
-    display: flex; justify-content: center;
-    gap: 28px; margin-bottom: 20px; flex-wrap: wrap;
-  }
-
-  .footer-firm {
-    font-size: 12px; opacity: 0.4; margin-bottom: 8px;
-    letter-spacing: 0.04em;
-  }
-
-  .footer-creds {
-    font-size: 12px; opacity: 0.5;
-    margin-bottom: 12px; letter-spacing: 0.03em;
-  }
-
-  /* ===== ANIMATIONS ===== */
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(22px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  /* ===== RESPONSIVE ===== */
-  @media (max-width: 960px) {
-    .tracks-grid { grid-template-columns: 1fr; }
-    .tracks-inner { transform: translateY(-32px); }
-    .spark-grid { grid-template-columns: repeat(3, 1fr); }
-    .guide-inner { grid-template-columns: 1fr; gap: 48px; }
-    .proof-stats { grid-template-columns: 1fr; }
-    .proof-stat { border-right: none; border-bottom: 1px solid rgba(201, 168, 76, 0.1); }
-    .proof-stat:last-child { border-bottom: none; }
-    .qualifier-list { grid-template-columns: 1fr; }
-  }
-
-  @media (max-width: 700px) {
-    .lang-bar { padding: 0 20px; }
-    nav { padding: 0 20px; }
-    .nav-links { display: none; }
-    .mobile-toggle { display: flex; }
-    .nav-links.open {
-      display: flex; flex-direction: column;
-      position: absolute; top: 64px; left: 0; right: 0;
-      background: var(--navy); padding: 24px;
-      border-bottom: 1px solid var(--border-light); gap: 18px;
-    }
-    .hero, .qualifier, .proof, .guide, .services-detail, .plan, .cta, .writing { padding-left: 24px; padding-right: 24px; }
-    .tracks { padding-left: 24px; padding-right: 24px; }
-    .spark-grid { grid-template-columns: 1fr 1fr; }
-    .guide-badges { grid-template-columns: 1fr; }
-    .service-track-header { flex-direction: column; gap: 12px; }
-    .service-track-number { font-size: 32px; }
-    .proof-attestation { padding: 28px 24px; }
-    .attestation-text { font-size: 17px; }
-    .hero-credentials { gap: 14px; }
-    .featured-bar { flex-direction: column; gap: 12px; text-align: center; }
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joseph Soares | Executive Advisor | Crisis-Tested. Government-Proven.</title>
+    <meta name="description" content="Joseph Soares — Served in the Prime Minister's Office during the 2008 global financial crisis. Senate of Canada Chief of Staff. Published in Forbes and Newsweek. Executive advisor to entrepreneurs and HNWIs.">
+    <style>
+        :root {
+            --navy: #0b1a2e;
+            --navy-mid: #0f2240;
+            --navy-light: #132d54;
+            --gold: #c9a84c;
+            --gold-light: #dfc07a;
+            --gold-muted: rgba(201, 168, 76, 0.12);
+            --cream: #f5f1eb;
+            --white: #ffffff;
+            --text-dark: #1a1a2e;
+            --text-mid: #4a4a5a;
+            --text-light: rgba(255,255,255,0.75);
+            --border-light: rgba(201, 168, 76, 0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Source Sans 3', -apple-system, sans-serif;
+            color: var(--text-dark);
+            background: var(--white);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ===== LANG SWITCHER ===== */
+        .lang-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 200;
+            background: #06101e;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 0 40px;
+            height: 32px;
+            border-bottom: 1px solid rgba(201, 168, 76, 0.08);
+        }
+
+        .lang-bar button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.35);
+            padding: 6px 12px;
+            transition: color 0.3s;
+        }
+
+        .lang-bar button:hover {
+            color: var(--gold-light);
+        }
+
+        .lang-bar button.active {
+            color: var(--gold);
+        }
+
+        .lang-bar .lang-sep {
+            color: rgba(255,255,255,0.12);
+            font-size: 11px;
+        }
+
+        /* ===== NAV ===== */
+        nav {
+            position: fixed;
+            top: 32px;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: rgba(11, 26, 46, 0.96);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+            padding: 0 40px;
+        }
+
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 64px;
+        }
+
+        .nav-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--white);
+            text-decoration: none;
+            letter-spacing: 0.02em;
+        }
+
+        .nav-name span {
+            color: var(--gold);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        .nav-cta {
+            background: var(--gold) !important;
+            color: var(--navy) !important;
+            padding: 9px 22px !important;
+            border-radius: 3px;
+            font-weight: 700 !important;
+            font-size: 11px !important;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .nav-cta:hover {
+            background: var(--gold-light) !important;
+            color: var(--navy) !important;
+        }
+
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            flex-direction: column;
+            gap: 5px;
+            padding: 4px;
+        }
+
+        .mobile-toggle span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--white);
+            transition: all 0.3s;
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(155deg, var(--navy) 0%, var(--navy-mid) 55%, #0d2848 100%);
+            display: flex;
+            align-items: center;
+            padding: 150px 40px 100px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 10% 90%, rgba(201, 168, 76, 0.06) 0%, transparent 55%), radial-gradient(ellipse at 90% 15%, rgba(91, 143, 217, 0.04) 0%, transparent 45%), radial-gradient(ellipse at 50% 50%, rgba(201, 168, 76, 0.02) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: -200px;
+            right: -100px;
+            width: 600px;
+            height: 600px;
+            border: 1px solid rgba(201, 168, 76, 0.06);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hero-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            width: 100%;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-eyebrow {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 28px;
+            animation: fadeUp 0.7s ease both;
+        }
+
+        .hero-eyebrow-line {
+            width: 40px;
+            height: 1px;
+            background: var(--gold);
+            opacity: 0.6;
+        }
+
+        .hero-eyebrow-text {
+            font-size: 11px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--gold);
+            font-weight: 600;
+        }
+
+        .hero h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2.6rem, 5.5vw, 4.2rem);
+            font-weight: 700;
+            color: var(--white);
+            line-height: 1.12;
+            max-width: 850px;
+            margin-bottom: 28px;
+            animation: fadeUp 0.85s ease both;
+        }
+
+        .hero h1 em {
+            font-style: italic;
+            color: var(--gold);
+        }
+
+        .hero-sub {
+            font-size: 18px;
+            color: var(--text-light);
+            line-height: 1.75;
+            max-width: 620px;
+            margin-bottom: 20px;
+            font-weight: 300;
+            animation: fadeUp 0.95s ease both;
+        }
+
+        .hero-qualifier {
+            font-size: 14px;
+            color: rgba(255,255,255,0.38);
+            font-style: italic;
+            max-width: 580px;
+            margin-bottom: 44px;
+            line-height: 1.6;
+            animation: fadeUp 1s ease both;
+        }
+
+        .hero-ctas {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            animation: fadeUp 1.05s ease both;
+            margin-bottom: 48px;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--navy);
+            padding: 16px 38px;
+            border: none;
+            border-radius: 3px;
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 28px rgba(201, 168, 76, 0.28);
+        }
+
+        .btn-primary:hover {
+            background: var(--gold-light);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 36px rgba(201, 168, 76, 0.38);
+        }
+
+        .btn-ghost {
+            display: inline-block;
+            background: transparent;
+            color: var(--white);
+            padding: 16px 36px;
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 3px;
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-ghost:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+
+        /* ===== FEATURED IN BAR ===== */
+        .featured-bar {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            flex-wrap: wrap;
+            padding: 20px 24px;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(201, 168, 76, 0.12);
+            border-radius: 5px;
+            animation: fadeUp 1.1s ease both;
+            margin-bottom: 40px;
+        }
+
+        .featured-bar-label {
+            font-size: 10px;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.3);
+            font-weight: 600;
+        }
+
+        .featured-bar-logos {
+            display: flex;
+            gap: 28px;
+            align-items: center;
+        }
+
+        .featured-bar-logos a {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: rgba(255,255,255,0.4);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .featured-bar-logos a:hover {
+            color: var(--gold);
+        }
+
+        .featured-bar-sep {
+            width: 1px;
+            height: 20px;
+            background: rgba(255,255,255,0.1);
+        }
+
+        .featured-bar-note {
+            font-size: 12px;
+            color: rgba(255,255,255,0.35);
+            font-style: italic;
+        }
+
+        .hero-credentials {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+            animation: fadeUp 1.15s ease both;
+            padding-top: 32px;
+            border-top: 1px solid rgba(255,255,255,0.06);
+        }
+
+        .credential {
+            font-size: 12px;
+            color: rgba(255,255,255,0.45);
+            font-weight: 500;
+            letter-spacing: 0.03em;
+        }
+
+        /* ===== TRACK SELECTOR ===== */
+        .tracks {
+            padding: 0 40px;
+            background: var(--cream);
+            position: relative;
+        }
+
+        .tracks-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            transform: translateY(-48px);
+        }
+
+        .tracks-label {
+            text-align: center;
+            font-size: 11px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--text-mid);
+            font-weight: 600;
+            margin-bottom: 20px;
+            opacity: 0.6;
+        }
+
+        .tracks-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+
+        .track-card {
+            background: var(--white);
+            border: 1px solid rgba(0,0,0,0.07);
+            border-radius: 6px;
+            padding: 32px 28px;
+            cursor: pointer;
+            transition: all 0.35s;
+            text-decoration: none;
+            display: block;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .track-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gold);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.35s;
+        }
+
+        .track-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(201, 168, 76, 0.3);
+            box-shadow: 0 16px 48px rgba(0,0,0,0.1);
+        }
+
+        .track-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .track-number {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 13px;
+            color: var(--gold);
+            font-weight: 600;
+            letter-spacing: 2px;
+            margin-bottom: 14px;
+            display: block;
+        }
+
+        .track-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+
+        .track-desc {
+            font-size: 14px;
+            color: var(--text-mid);
+            line-height: 1.65;
+            margin-bottom: 18px;
+        }
+
+        .track-arrow {
+            font-size: 13px;
+            color: var(--gold);
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: gap 0.3s;
+        }
+
+        .track-card:hover .track-arrow {
+            gap: 10px;
+        }
+
+        /* ===== SECTIONS COMMON ===== */
+        .section-label {
+            font-size: 11px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--gold);
+            font-weight: 600;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        /* ===== QUALIFIER ===== */
+        .qualifier {
+            padding: 80px 40px 100px;
+            background: var(--cream);
+        }
+
+        .qualifier-inner {
+            max-width: 820px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .qualifier h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            font-weight: 700;
+            color: var(--text-dark);
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .qualifier-lead {
+            font-size: 18px;
+            color: var(--text-mid);
+            line-height: 1.75;
+            margin-bottom: 16px;
+            font-weight: 300;
+        }
+
+        .qualifier-disqualify {
+            font-size: 14px;
+            color: var(--text-mid);
+            line-height: 1.7;
+            font-style: italic;
+            opacity: 0.7;
+            margin-bottom: 48px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .qualifier-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px;
+            text-align: left;
+            margin-bottom: 48px;
+        }
+
+        .qualifier-item {
+            padding: 18px 20px;
+            background: var(--white);
+            border-radius: 5px;
+            border-left: 3px solid var(--gold);
+            font-size: 14px;
+            color: var(--text-dark);
+            line-height: 1.5;
+            font-weight: 500;
+        }
+
+        /* ===== PROOF ===== */
+        .proof {
+            padding: 100px 40px;
+            background: var(--navy);
+            color: var(--white);
+        }
+
+        .proof-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .proof-header {
+            text-align: center;
+            margin-bottom: 56px;
+        }
+
+        .proof-header h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            font-weight: 700;
+            color: var(--white);
+            line-height: 1.2;
+            margin-bottom: 14px;
+        }
+
+        .proof-header p {
+            font-size: 16px;
+            color: var(--text-light);
+            max-width: 540px;
+            margin: 0 auto;
+            line-height: 1.7;
+            font-weight: 300;
+        }
+
+        .proof-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2px;
+            margin-bottom: 56px;
+            border: 1px solid rgba(201, 168, 76, 0.15);
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .proof-stat {
+            padding: 40px 32px;
+            text-align: center;
+            background: rgba(255,255,255,0.03);
+            border-right: 1px solid rgba(201, 168, 76, 0.1);
+        }
+
+        .proof-stat:last-child {
+            border-right: none;
+        }
+
+        .stat-number {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 52px;
+            font-weight: 700;
+            color: var(--gold);
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            font-size: 13px;
+            color: rgba(255,255,255,0.5);
+            line-height: 1.5;
+            max-width: 180px;
+            margin: 0 auto;
+        }
+
+        .proof-attestation {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(201, 168, 76, 0.2);
+            border-radius: 6px;
+            padding: 40px 48px;
+            position: relative;
+        }
+
+        .attestation-quote-mark {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 80px;
+            color: var(--gold);
+            opacity: 0.3;
+            line-height: 0.5;
+            position: absolute;
+            top: 28px;
+            left: 36px;
+        }
+
+        .attestation-text {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 20px;
+            font-style: italic;
+            color: rgba(255,255,255,0.85);
+            line-height: 1.65;
+            margin-bottom: 20px;
+            padding-left: 16px;
+        }
+
+        .attestation-source {
+            font-size: 13px;
+            color: rgba(255,255,255,0.4);
+            letter-spacing: 0.04em;
+        }
+
+        .attestation-source strong {
+            color: var(--gold);
+            font-weight: 600;
+        }
+
+        /* ===== ABOUT / GUIDE ===== */
+        .guide {
+            padding: 100px 40px;
+            background: var(--white);
+        }
+
+        .guide-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 0.85fr 1.15fr;
+            gap: 72px;
+            align-items: start;
+        }
+
+        .guide-sidebar {
+            position: relative;
+        }
+
+        .guide-creds-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .guide-cred-card {
+            padding: 20px 24px;
+            background: var(--cream);
+            border-radius: 6px;
+            border-left: 3px solid var(--gold);
+        }
+
+        .guide-cred-card .cred-org {
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--gold);
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .guide-cred-card .cred-role {
+            font-size: 14px;
+            color: var(--text-dark);
+            font-weight: 600;
+            line-height: 1.4;
+        }
+
+        .guide-cred-card .cred-detail {
+            font-size: 12px;
+            color: var(--text-mid);
+            margin-top: 4px;
+            line-height: 1.5;
+        }
+
+        .guide-text h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(1.9rem, 3.5vw, 2.5rem);
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .guide-text p {
+            font-size: 16px;
+            color: var(--text-mid);
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+
+        .guide-text .guide-highlight {
+            font-size: 15px;
+            color: var(--text-dark);
+            line-height: 1.7;
+            margin-bottom: 16px;
+            font-weight: 500;
+            padding: 20px 24px;
+            background: var(--cream);
+            border-left: 3px solid var(--gold);
+            border-radius: 0 4px 4px 0;
+        }
+
+        .guide-badges {
+            margin-top: 28px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .badge {
+            padding: 14px 18px;
+            background: var(--cream);
+            border-radius: 5px;
+        }
+
+        .badge-label {
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1.8px;
+            color: var(--gold);
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .badge-value {
+            font-size: 13px;
+            color: var(--text-dark);
+            font-weight: 600;
+            line-height: 1.4;
+        }
+
+        .badge-value a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        /* ===== SERVICES ===== */
+        .services-detail {
+            padding: 100px 40px;
+            background: var(--cream);
+        }
+
+        .services-detail-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .services-detail-header {
+            text-align: center;
+            margin-bottom: 56px;
+        }
+
+        .services-detail-header h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            font-weight: 700;
+            color: var(--text-dark);
+            line-height: 1.2;
+            margin-bottom: 14px;
+        }
+
+        .services-detail-header p {
+            font-size: 16px;
+            color: var(--text-mid);
+            max-width: 540px;
+            margin: 0 auto;
+            line-height: 1.7;
+            font-weight: 300;
+        }
+
+        .service-track {
+            background: var(--white);
+            border: 1px solid rgba(0,0,0,0.06);
+            border-radius: 6px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            transition: box-shadow 0.3s;
+        }
+
+        .service-track:hover {
+            box-shadow: 0 8px 40px rgba(0,0,0,0.08);
+        }
+
+        .service-track-header {
+            display: flex;
+            align-items: flex-start;
+            padding: 36px 40px;
+            gap: 24px;
+        }
+
+        .service-track-number {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--gold);
+            opacity: 0.25;
+            line-height: 1;
+            flex-shrink: 0;
+            margin-top: -4px;
+        }
+
+        .service-track-content {
+            flex: 1;
+        }
+
+        .service-track-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+        }
+
+        .service-track-subtitle {
+            font-size: 11px;
+            color: var(--gold);
+            font-weight: 600;
+            letter-spacing: 2px;
+            margin-bottom: 14px;
+            text-transform: uppercase;
+        }
+
+        .service-track-desc {
+            font-size: 15px;
+            color: var(--text-mid);
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+
+        .service-track-for {
+            font-size: 13px;
+            color: var(--text-mid);
+            line-height: 1.6;
+            padding: 14px 18px;
+            background: var(--cream);
+            border-radius: 4px;
+            font-style: italic;
+        }
+
+        .service-track-for strong {
+            color: var(--text-dark);
+            font-style: normal;
+        }
+
+        .service-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 16px;
+        }
+
+        .service-tag {
+            font-size: 11px;
+            padding: 4px 12px;
+            background: var(--gold-muted);
+            color: var(--gold);
+            font-weight: 600;
+            border-radius: 3px;
+            letter-spacing: 0.04em;
+        }
+
+        /* ===== SPARK ===== */
+        .plan {
+            padding: 100px 40px;
+            background: linear-gradient(165deg, var(--navy) 0%, var(--navy-mid) 100%);
+            color: var(--white);
+        }
+
+        .plan-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .plan h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            font-weight: 700;
+            margin-bottom: 14px;
+            line-height: 1.2;
+        }
+
+        .plan-subtitle {
+            font-size: 16px;
+            color: var(--text-light);
+            max-width: 580px;
+            margin: 0 auto 52px;
+            line-height: 1.7;
+            font-weight: 300;
+        }
+
+        .spark-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 12px;
+            text-align: left;
+        }
+
+        .spark-item {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 6px;
+            padding: 28px 18px;
+            transition: all 0.3s;
+        }
+
+        .spark-item:hover {
+            background: rgba(255,255,255,0.06);
+            border-color: var(--border-light);
+            transform: translateY(-4px);
+        }
+
+        .spark-letter {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 44px;
+            font-weight: 700;
+            color: var(--gold);
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+
+        .spark-title {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 8px;
+            line-height: 1.3;
+        }
+
+        .spark-desc {
+            font-size: 12px;
+            color: rgba(255,255,255,0.45);
+            line-height: 1.6;
+        }
+
+        /* ===== WRITING ===== */
+        .writing {
+            padding: 80px 40px;
+            background: var(--white);
+        }
+
+        .writing-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .writing h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(1.8rem, 3vw, 2.2rem);
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 14px;
+        }
+
+        .writing-sub {
+            font-size: 15px;
+            color: var(--text-mid);
+            margin-bottom: 40px;
+            line-height: 1.7;
+        }
+
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 16px;
+            text-align: left;
+        }
+
+        .article-card {
+            padding: 24px;
+            background: var(--cream);
+            border-radius: 6px;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: block;
+        }
+
+        .article-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+        }
+
+        .article-pub {
+            font-size: 10px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--gold);
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .article-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--text-dark);
+            line-height: 1.35;
+        }
+
+        /* ===== CTA ===== */
+        .cta {
+            padding: 100px 40px;
+            background: var(--cream);
+            text-align: center;
+        }
+
+        .cta-inner {
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        .cta h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+
+        .cta h2 em {
+            font-style: italic;
+            color: var(--gold);
+        }
+
+        .cta p {
+            font-size: 17px;
+            color: var(--text-mid);
+            line-height: 1.75;
+            margin-bottom: 14px;
+            font-weight: 300;
+        }
+
+        .cta-qualifier {
+            font-size: 13px;
+            color: var(--text-mid);
+            font-style: italic;
+            opacity: 0.65;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--navy);
+            padding: 48px 40px;
+            text-align: center;
+            color: rgba(255,255,255,0.35);
+            font-size: 13px;
+            border-top: 1px solid rgba(201, 168, 76, 0.08);
+        }
+
+        footer a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 28px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-firm {
+            font-size: 12px;
+            opacity: 0.4;
+            margin-bottom: 8px;
+            letter-spacing: 0.04em;
+        }
+
+        .footer-creds {
+            font-size: 12px;
+            opacity: 0.5;
+            margin-bottom: 12px;
+            letter-spacing: 0.03em;
+        }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(22px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 960px) {
+            .tracks-grid {
+                grid-template-columns: 1fr;
+            }
+            .tracks-inner {
+                transform: translateY(-32px);
+            }
+            .spark-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .guide-inner {
+                grid-template-columns: 1fr;
+                gap: 48px;
+            }
+            .proof-stats {
+                grid-template-columns: 1fr;
+            }
+            .proof-stat {
+                border-right: none;
+                border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+            }
+            .proof-stat:last-child {
+                border-bottom: none;
+            }
+            .qualifier-list {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 700px) {
+            .lang-bar {
+                padding: 0 20px;
+            }
+            nav {
+                padding: 0 20px;
+            }
+            .nav-links {
+                display: none;
+            }
+            .mobile-toggle {
+                display: flex;
+            }
+            .nav-links.open {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 64px;
+                left: 0;
+                right: 0;
+                background: var(--navy);
+                padding: 24px;
+                border-bottom: 1px solid var(--border-light);
+                gap: 18px;
+            }
+            .hero, .qualifier, .proof, .guide, .services-detail, .plan, .cta, .writing {
+                padding-left: 24px;
+                padding-right: 24px;
+            }
+            .tracks {
+                padding-left: 24px;
+                padding-right: 24px;
+            }
+            .spark-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .guide-badges {
+                grid-template-columns: 1fr;
+            }
+            .service-track-header {
+                flex-direction: column;
+                gap: 12px;
+            }
+            .service-track-number {
+                font-size: 32px;
+            }
+            .proof-attestation {
+                padding: 28px 24px;
+            }
+            .attestation-text {
+                font-size: 17px;
+            }
+            .hero-credentials {
+                gap: 14px;
+            }
+            .featured-bar {
+                flex-direction: column;
+                gap: 12px;
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 <body>
-
-<!-- LANGUAGE BAR -->
-<div class="lang-bar">
-  <button class="active" onclick="setLang('en')">EN</button>
-  <span class="lang-sep">|</span>
-  <button onclick="setLang('fr')">FR</button>
-  <span class="lang-sep">|</span>
-  <button onclick="setLang('pt')">PT</button>
-</div>
-
-<!-- NAV -->
-<nav>
-  <div class="nav-inner">
-    <a href="#" class="nav-name">Joseph <span>Soares</span></a>
-    <div class="nav-links" id="navLinks">
-      <a href="#who" data-en="Who This Is For" data-fr="Pour qui" data-pt="Para quem">Who This Is For</a>
-      <a href="#about" data-en="About" data-fr="&Agrave; propos" data-pt="Sobre">About</a>
-      <a href="#services" data-en="Services" data-fr="Services" data-pt="Servi&ccedil;os">Services</a>
-      <a href="#framework" data-en="Framework" data-fr="M&eacute;thode" data-pt="M&eacute;todo">Framework</a>
-      <a href="#writing" data-en="Writing" data-fr="Publications" data-pt="Publica&ccedil;&otilde;es">Writing</a>
-      <a href="https://calendar.app.google/gLExqLUqU5Vm8nBR9" target="_blank" class="nav-cta" data-en="Book a Call" data-fr="R&eacute;server" data-pt="Agendar">Book a Call</a>
-    </div>
-    <button class="mobile-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</nav>
-
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-inner">
-    <div class="hero-eyebrow">
-      <div class="hero-eyebrow-line"></div>
-      <span class="hero-eyebrow-text" data-en="Executive Advisor &amp; Strategic Consultant" data-fr="Conseiller strat&eacute;gique &amp; consultant ex&eacute;cutif" data-pt="Consultor estrat&eacute;gico &amp; assessor executivo">Executive Advisor &amp; Strategic Consultant</span>
-    </div>
-    <h1 data-en="I help leaders navigate <em>complexity</em> and close <em>what matters.</em>" data-fr="J'aide les dirigeants &agrave; naviguer la <em>complexit&eacute;</em> et conclure <em>ce qui compte.</em>" data-pt="Ajudo l&iacute;deres a navegar a <em>complexidade</em> e fechar <em>o que importa.</em>">I help leaders navigate <em>complexity</em> and close <em>what matters.</em></h1>
-    <p class="hero-sub" data-en="Business transitions, high-stakes advisory, and growth strategy for founders, executives, and organizations that need a partner who has operated at the highest levels &mdash; from the Prime Minister's Office to the boardroom." data-fr="Transitions d'affaires, conseil strat&eacute;gique et croissance pour fondateurs, dirigeants et organisations qui ont besoin d'un partenaire ayant op&eacute;r&eacute; aux plus hauts niveaux &mdash; du Cabinet du Premier ministre &agrave; la salle de conf&eacute;rence." data-pt="Transi&ccedil;&otilde;es de neg&oacute;cios, assessoria de alto impacto e estrat&eacute;gia de crescimento para fundadores, executivos e organiza&ccedil;&otilde;es que precisam de um parceiro que operou nos mais altos n&iacute;veis &mdash; do Gabinete do Primeiro-Ministro &agrave; sala de reuni&otilde;es.">Business transitions, high-stakes advisory, and growth strategy for founders, executives, and organizations that need a partner who has operated at the highest levels &mdash; from the Prime Minister's Office to the boardroom.</p>
-    <p class="hero-qualifier" data-en="I work with principals who are ready to move. If you need a sounding board, I'm not your person. If you need someone in the room &mdash; let's talk." data-fr="Je travaille avec des d&eacute;cideurs pr&ecirc;ts &agrave; agir. Si vous cherchez un simple avis, je ne suis pas votre personne. Si vous avez besoin de quelqu'un dans la pi&egrave;ce &mdash; parlons." data-pt="Trabalho com l&iacute;deres prontos para agir. Se voc&ecirc; precisa apenas de uma opini&atilde;o, n&atilde;o sou a pessoa certa. Se precisa de algu&eacute;m na sala &mdash; vamos conversar.">I work with principals who are ready to move. If you need a sounding board, I'm not your person. If you need someone in the room &mdash; let's talk.</p>
-    <div class="hero-ctas">
-      <a href="https://calendar.app.google/gLExqLUqU5Vm8nBR9" target="_blank" class="btn-primary" data-en="Book an Intro Call" data-fr="R&eacute;server un appel" data-pt="Agendar uma conversa">Book an Intro Call</a>
-      <a href="#services" class="btn-ghost" data-en="See How I Work" data-fr="D&eacute;couvrir ma m&eacute;thode" data-pt="Veja como trabalho">See How I Work</a>
+    <div class="lang-bar">
+        <button onclick="setLang('en')" class="active">EN</button>
+        <span class="lang-sep">|</span>
+        <button onclick="setLang('fr')">FR</button>
+        <span class="lang-sep">|</span>
+        <button onclick="setLang('pt')">PT</button>
     </div>
 
-    <!-- FEATURED IN -->
-    <div class="featured-bar">
-      <span class="featured-bar-label" data-en="Featured in" data-fr="Publi&eacute; dans" data-pt="Publicado em">Featured in</span>
-      <div class="featured-bar-logos">
-        <a href="https://www.forbes.com/councils/forbeshumanresourcescouncil/2024/03/07/executive-coaching-the-key-to-unlocking-potential-in-the-c-suite/" target="_blank">Forbes</a>
-        <a href="https://www.newsweek.com/beyond-authenticity-cultivating-resilient-leadership-modern-era-1829944" target="_blank">Newsweek</a>
-      </div>
-      <div class="featured-bar-sep"></div>
-      <span class="featured-bar-note" data-en="Published in Forbes and Newsweek &middot; 15+ articles" data-fr="Publi&eacute; dans Forbes et Newsweek &middot; 15+ articles" data-pt="Publicado na Forbes e Newsweek &middot; 15+ artigos">Published in Forbes and Newsweek &middot; 15+ articles</span>
-    </div>
-
-    <div class="hero-credentials">
-      <span class="credential" data-en="Published in Forbes" data-fr="Publi&eacute; dans Forbes" data-pt="Publicado na Forbes">Published in Forbes</span>
-      <span class="credential" data-en="Harvard McLean Institute Fellow" data-fr="Fellow du McLean Institute de Harvard" data-pt="Fellow do McLean Institute de Harvard">Harvard McLean Institute Fellow</span>
-      <span class="credential" data-en="Trilingual: EN &middot; FR &middot; PT" data-fr="Trilingue : EN &middot; FR &middot; PT" data-pt="Triling&uuml;e: EN &middot; FR &middot; PT">Trilingual: EN &middot; FR &middot; PT</span>
-      <span class="credential" data-en="Government &amp; Private Sector" data-fr="Gouvernement &amp; secteur priv&eacute;" data-pt="Governo &amp; setor privado">Government &amp; Private Sector</span>
-    </div>
-  </div>
-</section>
-
-<!-- TRACK SELECTOR -->
-<section class="tracks">
-  <div class="tracks-inner">
-    <p class="tracks-label" data-en="How can I help?" data-fr="Comment puis-je vous aider?" data-pt="Como posso ajudar?">How can I help?</p>
-    <div class="tracks-grid">
-      <a href="#selling" class="track-card">
-        <span class="track-number">01</span>
-        <div class="track-title" data-en="Business Transitions" data-fr="Transitions d'affaires" data-pt="Transi&ccedil;&otilde;es de neg&oacute;cios">Business Transitions</div>
-        <p class="track-desc" data-en="Selling your business, succession planning, or navigating an exit. I manage the strategy, the timeline, and your interests from start to close." data-fr="Vente de votre entreprise, planification de la rel&egrave;ve ou transition. Je g&egrave;re la strat&eacute;gie, l'&eacute;ch&eacute;ancier et vos int&eacute;r&ecirc;ts du d&eacute;but &agrave; la cl&ocirc;ture." data-pt="Venda do seu neg&oacute;cio, planejamento sucess&oacute;rio ou navega&ccedil;&atilde;o de sa&iacute;da. Eu gerencio a estrat&eacute;gia, o cronograma e seus interesses do in&iacute;cio ao fechamento.">Selling your business, succession planning, or navigating an exit. I manage the strategy, the timeline, and your interests from start to close.</p>
-        <div class="track-arrow" data-en="Selling &amp; Succession &rarr;" data-fr="Vente &amp; Rel&egrave;ve &rarr;" data-pt="Venda &amp; Sucess&atilde;o &rarr;">Selling &amp; Succession &rarr;</div>
-      </a>
-      <a href="#buying" class="track-card">
-        <span class="track-number">02</span>
-        <div class="track-title" data-en="Acquisitions &amp; Growth" data-fr="Acquisitions &amp; croissance" data-pt="Aquisi&ccedil;&otilde;es &amp; crescimento">Acquisitions &amp; Growth</div>
-        <p class="track-desc" data-en="Deal sourcing, due diligence, and commercial strategy for acquirers, investors, and founders scaling through high-value opportunities." data-fr="Recherche de transactions, diligence raisonnable et strat&eacute;gie commerciale pour acqu&eacute;reurs, investisseurs et fondateurs en croissance." data-pt="Prospec&ccedil;&atilde;o de neg&oacute;cios, due diligence e estrat&eacute;gia comercial para compradores, investidores e fundadores em escala.">Deal sourcing, due diligence, and commercial strategy for acquirers, investors, and founders scaling through high-value opportunities.</p>
-        <div class="track-arrow" data-en="Acquisitions &amp; Sourcing &rarr;" data-fr="Acquisitions &amp; prospection &rarr;" data-pt="Aquisi&ccedil;&otilde;es &amp; prospec&ccedil;&atilde;o &rarr;">Acquisitions &amp; Sourcing &rarr;</div>
-      </a>
-      <a href="#partnering" class="track-card">
-        <span class="track-number">03</span>
-        <div class="track-title" data-en="Strategic Advisory" data-fr="Conseil strat&eacute;gique" data-pt="Assessoria estrat&eacute;gica">Strategic Advisory</div>
-        <p class="track-desc" data-en="Executive advisory, organizational strategy, and high-ticket sales architecture. For leaders who need a strategic partner, not another consultant." data-fr="Conseil ex&eacute;cutif, strat&eacute;gie organisationnelle et architecture de ventes haut de gamme. Pour les dirigeants qui ont besoin d'un partenaire strat&eacute;gique." data-pt="Assessoria executiva, estrat&eacute;gia organizacional e arquitetura de vendas de alto valor. Para l&iacute;deres que precisam de um parceiro estrat&eacute;gico.">Executive advisory, organizational strategy, and high-ticket sales architecture. For leaders who need a strategic partner, not another consultant.</p>
-        <div class="track-arrow" data-en="Advisory &amp; Consulting &rarr;" data-fr="Conseil &amp; consultation &rarr;" data-pt="Assessoria &amp; consultoria &rarr;">Advisory &amp; Consulting &rarr;</div>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- QUALIFIER -->
-<section class="qualifier" id="who">
-  <div class="qualifier-inner">
-    <span class="section-label" data-en="Who This Is For" data-fr="Pour qui" data-pt="Para quem">Who This Is For</span>
-    <h2 data-en="I work with principals who are ready to move." data-fr="Je travaille avec des d&eacute;cideurs pr&ecirc;ts &agrave; agir." data-pt="Trabalho com l&iacute;deres prontos para agir.">I work with principals who are ready to move.</h2>
-    <p class="qualifier-lead" data-en="Not everyone is the right fit &mdash; and I mean that as a feature. My work is highest-impact for a specific kind of person in a specific kind of moment." data-fr="Ce n'est pas pour tout le monde &mdash; et c'est d&eacute;lib&eacute;r&eacute;. Mon travail a le plus d'impact pour un type pr&eacute;cis de personne &agrave; un moment pr&eacute;cis." data-pt="Nem todos s&atilde;o o perfil certo &mdash; e isso &eacute; intencional. Meu trabalho tem maior impacto para um tipo espec&iacute;fico de pessoa em um momento espec&iacute;fico.">Not everyone is the right fit &mdash; and I mean that as a feature. My work is highest-impact for a specific kind of person in a specific kind of moment.</p>
-    <p class="qualifier-disqualify" data-en="If you need a generalist consultant, a business broker, or someone to validate a decision you've already made &mdash; I'm not your person." data-fr="Si vous cherchez un consultant g&eacute;n&eacute;raliste, un courtier d'affaires ou quelqu'un pour valider une d&eacute;cision d&eacute;j&agrave; prise &mdash; je ne suis pas la bonne personne." data-pt="Se voc&ecirc; procura um consultor generalista, um corretor de neg&oacute;cios ou algu&eacute;m para validar uma decis&atilde;o j&aacute; tomada &mdash; n&atilde;o sou a pessoa certa.">If you need a generalist consultant, a business broker, or someone to validate a decision you've already made &mdash; I'm not your person.</p>
-    <div class="qualifier-list">
-      <div class="qualifier-item" data-en="You own a business with real assets and revenue &mdash; and you're within 1 to 5 years of a transition" data-fr="Vous poss&eacute;dez une entreprise avec des actifs et des revenus r&eacute;els &mdash; et vous &ecirc;tes &agrave; 1 &agrave; 5 ans d'une transition" data-pt="Voc&ecirc; possui um neg&oacute;cio com ativos e receita reais &mdash; e est&aacute; a 1 a 5 anos de uma transi&ccedil;&atilde;o">You own a business with real assets and revenue &mdash; and you're within 1 to 5 years of a transition</div>
-      <div class="qualifier-item" data-en="You're a founder or executive scaling through a high-growth inflection point and need strategic counsel" data-fr="Vous &ecirc;tes un fondateur ou dirigeant en pleine croissance qui a besoin de conseil strat&eacute;gique" data-pt="Voc&ecirc; &eacute; um fundador ou executivo em fase de crescimento acelerado que precisa de aconselhamento estrat&eacute;gico">You're a founder or executive scaling through a high-growth inflection point and need strategic counsel</div>
-      <div class="qualifier-item" data-en="You're an acquirer or investor who needs market access, deal-level advisory, and someone who closes" data-fr="Vous &ecirc;tes un acqu&eacute;reur ou investisseur qui a besoin d'acc&egrave;s au march&eacute; et d'un conseiller qui conclut" data-pt="Voc&ecirc; &eacute; um comprador ou investidor que precisa de acesso ao mercado e de um assessor que fecha neg&oacute;cios">You're an acquirer or investor who needs market access, deal-level advisory, and someone who closes</div>
-      <div class="qualifier-item" data-en="You're navigating something complex &mdash; a succession, stalled project, leadership gap &mdash; and need execution, not advice" data-fr="Vous naviguez dans une situation complexe &mdash; une rel&egrave;ve, un projet bloqu&eacute;, un vide de leadership &mdash; et vous avez besoin d'ex&eacute;cution" data-pt="Voc&ecirc; est&aacute; navegando algo complexo &mdash; uma sucess&atilde;o, projeto parado, lacuna de lideran&ccedil;a &mdash; e precisa de execu&ccedil;&atilde;o, n&atilde;o conselho">You're navigating something complex &mdash; a succession, stalled project, leadership gap &mdash; and need execution, not advice</div>
-    </div>
-    <a href="https://calendar.app.google/gLExqLUqU5Vm8nBR9" target="_blank" class="btn-primary" data-en="Let's See If There's a Fit" data-fr="V&eacute;rifions si c'est un bon fit" data-pt="Vamos ver se faz sentido">Let's See If There's a Fit</a>
-  </div>
-</section>
-
-<!-- DISCRETION -->
-<section class="proof">
-  <div class="proof-inner">
-    <div class="proof-header">
-      <span class="section-label" data-en="Discretion" data-fr="Discr&eacute;tion" data-pt="Discri&ccedil;&atilde;o">Discretion</span>
-      <h2 data-en="My clients expect confidentiality. I deliver it." data-fr="Mes clients exigent la confidentialit&eacute;. Je la livre." data-pt="Meus clientes esperam confidencialidade. Eu a entrego.">My clients expect confidentiality. I deliver it.</h2>
-      <p data-en="You won't find case studies, client names, or project details on this site. That's by design. The people I work with operate in environments where discretion isn't a preference &mdash; it's a requirement." data-fr="Vous ne trouverez ni &eacute;tudes de cas, ni noms de clients, ni d&eacute;tails de projets sur ce site. C'est d&eacute;lib&eacute;r&eacute;. Les personnes avec qui je travaille &eacute;voluent dans des environnements o&ugrave; la discr&eacute;tion n'est pas une pr&eacute;f&eacute;rence &mdash; c'est une exigence." data-pt="Voc&ecirc; n&atilde;o encontrar&aacute; estudos de caso, nomes de clientes ou detalhes de projetos neste site. Isso &eacute; intencional. As pessoas com quem trabalho operam em ambientes onde discri&ccedil;&atilde;o n&atilde;o &eacute; prefer&ecirc;ncia &mdash; &eacute; requisito.">You won't find case studies, client names, or project details on this site. That's by design. The people I work with operate in environments where discretion isn't a preference &mdash; it's a requirement.</p>
-    </div>
-    <div class="proof-stats">
-      <div class="proof-stat">
-        <div class="stat-number" style="font-size:36px;">Senior</div>
-        <div class="stat-label" data-en="Government, private sector, real estate, and tech" data-fr="Gouvernement, secteur priv&eacute;, immobilier et technologie" data-pt="Governo, setor privado, imobili&aacute;rio e tecnologia">Government, private sector, real estate, and tech</div>
-      </div>
-      <div class="proof-stat">
-        <div class="stat-number" style="font-size:36px;">Private</div>
-        <div class="stat-label" data-en="Select portfolio of clients &mdash; by referral and direct inquiry only" data-fr="Portefeuille s&eacute;lect de clients &mdash; par r&eacute;f&eacute;rence et demande directe uniquement" data-pt="Portf&oacute;lio seleto de clientes &mdash; apenas por indica&ccedil;&atilde;o e consulta direta">Select portfolio of clients &mdash; by referral and direct inquiry only</div>
-      </div>
-      <div class="proof-stat">
-        <div class="stat-number" style="font-size:36px;">NDA</div>
-        <div class="stat-label" data-en="All engagements are protected by confidentiality agreements" data-fr="Tous les mandats sont prot&eacute;g&eacute;s par des ententes de confidentialit&eacute;" data-pt="Todos os engajamentos s&atilde;o protegidos por acordos de confidencialidade">All engagements are protected by confidentiality agreements</div>
-      </div>
-    </div>
-    <div class="proof-attestation">
-      <div class="attestation-quote-mark">&ldquo;</div>
-      <p class="attestation-text" data-en="Results are shared in confidence during our first conversation. References are available upon request to serious principals only." data-fr="Les r&eacute;sultats sont partag&eacute;s en toute confidentialit&eacute; lors de notre premi&egrave;re conversation. Les r&eacute;f&eacute;rences sont disponibles sur demande aux d&eacute;cideurs s&eacute;rieux uniquement." data-pt="Resultados s&atilde;o compartilhados em confid&ecirc;ncia durante nossa primeira conversa. Refer&ecirc;ncias est&atilde;o dispon&iacute;veis mediante solicita&ccedil;&atilde;o apenas para l&iacute;deres s&eacute;rios.">Results are shared in confidence during our first conversation. References are available upon request to serious principals only.</p>
-      <p class="attestation-source" data-en="If you're the right fit, you'll know everything you need to know before we begin." data-fr="Si vous &ecirc;tes la bonne personne, vous saurez tout ce qu'il faut savoir avant de commencer." data-pt="Se voc&ecirc; for o perfil certo, saber&aacute; tudo o que precisa antes de come&ccedil;armos.">If you're the right fit, you'll know everything you need to know before we begin.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section class="guide" id="about">
-  <div class="guide-inner">
-    <div class="guide-sidebar">
-      <div class="guide-creds-stack">
-        <div class="guide-cred-card">
-          <p class="cred-org">Forbes</p>
-          <p class="cred-role">Published Contributor</p>
-          <p class="cred-detail" data-en="Contributing author on leadership, executive coaching, and organizational strategy" data-fr="Auteur contributeur sur le leadership, le coaching ex&eacute;cutif et la strat&eacute;gie organisationnelle" data-pt="Autor contribuinte sobre lideran&ccedil;a, coaching executivo e estrat&eacute;gia organizacional">Contributing author on leadership, executive coaching, and organizational strategy</p>
+    <nav>
+        <div class="nav-inner">
+            <a href="#" class="nav-name">Joseph <span>Soares</span></a>
+            <button class="mobile-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-links">
+                <a href="#who">Who This Is For</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#framework">Framework</a>
+                <a href="#writing">Writing</a>
+                <a href="https://calendar.app.google/pEyrPMvGY2TuEndcA" class="nav-cta">Book a Call</a>
+            </div>
         </div>
-        <div class="guide-cred-card">
-          <p class="cred-org">Newsweek</p>
-          <p class="cred-role" data-en="Expert Contributor" data-fr="Contributeur expert" data-pt="Colaborador especialista">Expert Contributor</p>
-          <p class="cred-detail" data-en="10+ published articles on leadership, AI, risk management, and business strategy" data-fr="10+ articles publi&eacute;s sur le leadership, l'IA, la gestion du risque et la strat&eacute;gie" data-pt="10+ artigos publicados sobre lideran&ccedil;a, IA, gest&atilde;o de risco e estrat&eacute;gia">10+ published articles on leadership, AI, risk management, and business strategy</p>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-inner">
+            <div class="hero-eyebrow">
+                <div class="hero-eyebrow-line"></div>
+                <span class="hero-eyebrow-text">Executive Advisor | Crisis-Tested. Government-Proven.</span>
+            </div>
+            <h1>I served in the Prime Minister's Office during a <em>global crisis.</em> Now I advise <em>leaders like you.</em></h1>
+            <p class="hero-sub">I served in the Prime Minister's Office during the 2008 global financial crisis. Chief of Staff at the Senate of Canada during the pandemic. Published in Forbes and Newsweek. I work with self-made entrepreneurs and high-net-worth business owners who've built something significant — and want to protect it, grow it, or turn it into lasting legacy.</p>
+            <p class="hero-qualifier">I work with successful, experienced leaders — primarily in the United States — who take people seriously only after trust is earned. If that sounds like you, let's talk.</p>
+            <div class="hero-ctas">
+                <a href="https://calendar.app.google/pEyrPMvGY2TuEndcA" class="btn-primary">Book an Intro Call</a>
+                <a href="#services" class="btn-ghost">See How I Work</a>
+            </div>
+            <div class="featured-bar">
+                <span class="featured-bar-label">Featured in</span>
+                <div class="featured-bar-logos">
+                    <a href="https://www.forbes.com/councils/forbeshumanresourcescouncil/2024/03/07/executive-coaching-the-key-to-unlocking-potential-in-the-c-suite/">Forbes</a>
+                    <div class="featured-bar-sep"></div>
+                    <a href="https://www.newsweek.com/beyond-authenticity-cultivating-resilient-leadership-modern-era-1829944">Newsweek</a>
+                </div>
+                <span class="featured-bar-note">Published in Forbes and Newsweek · 15+ articles</span>
+            </div>
+            <div class="hero-credentials">
+                <div class="credential">Prime Minister's Office — 2008 Crisis</div>
+                <div class="credential">Senate of Canada Chief of Staff</div>
+                <div class="credential">Published: Forbes & Newsweek</div>
+                <div class="credential">Trilingual: EN · FR · PT</div>
+            </div>
         </div>
-        <div class="guide-cred-card">
-          <p class="cred-org">Harvard Medical School</p>
-          <p class="cred-role">McLean Coaching Institute Fellow</p>
-          <p class="cred-detail" data-en="Evidence-based executive coaching methodology" data-fr="M&eacute;thodologie de coaching ex&eacute;cutif fond&eacute;e sur des donn&eacute;es probantes" data-pt="Metodologia de coaching executivo baseada em evid&ecirc;ncias">Evidence-based executive coaching methodology</p>
+    </section>
+
+    <section class="tracks">
+        <div class="tracks-inner">
+            <div class="tracks-label">How can I help?</div>
+            <div class="tracks-grid">
+                <a href="#selling" class="track-card">
+                    <span class="track-number">01</span>
+                    <h3 class="track-title">Business Transitions</h3>
+                    <p class="track-desc">Selling your business, succession planning, or navigating an exit. I manage the strategy, the timeline, and your interests from start to close.</p>
+                    <span class="track-arrow">Selling & Succession <span>→</span></span>
+                </a>
+                <a href="#buying" class="track-card">
+                    <span class="track-number">02</span>
+                    <h3 class="track-title">Acquisitions & Growth</h3>
+                    <p class="track-desc">Deal sourcing, due diligence, and commercial strategy for acquirers, investors, and founders scaling through high-value opportunities.</p>
+                    <span class="track-arrow">Acquisitions & Sourcing <span>→</span></span>
+                </a>
+                <a href="#partnering" class="track-card">
+                    <span class="track-number">03</span>
+                    <h3 class="track-title">Strategic Advisory</h3>
+                    <p class="track-desc">Executive advisory, organizational strategy, and high-ticket sales architecture. For leaders who need a strategic partner, not another consultant.</p>
+                    <span class="track-arrow">Advisory & Consulting <span>→</span></span>
+                </a>
+            </div>
         </div>
-        <div class="guide-cred-card">
-          <p class="cred-org" data-en="Government of Canada" data-fr="Gouvernement du Canada" data-pt="Governo do Canad&aacute;">Government of Canada</p>
-          <p class="cred-role" data-en="Advisory &mdash; Prime Minister's Office" data-fr="Conseil &mdash; Cabinet du Premier ministre" data-pt="Assessoria &mdash; Gabinete do Primeiro-Ministro">Advisory &mdash; Prime Minister's Office</p>
-          <p class="cred-detail" data-en="Issues management during the 2008 global financial crisis" data-fr="Gestion des enjeux pendant la crise financi&egrave;re mondiale de 2008" data-pt="Gest&atilde;o de crises durante a crise financeira global de 2008">Issues management during the 2008 global financial crisis</p>
+    </section>
+
+    <section class="qualifier" id="who">
+        <div class="qualifier-inner">
+            <h2>Who This Is For</h2>
+            <p class="qualifier-lead">I work with principals who are ready to move.</p>
+            <p class="qualifier-disqualify">Not everyone is the right fit — and I mean that as a feature. My work is highest-impact for a specific kind of person in a specific kind of moment.</p>
+            <div class="qualifier-list">
+                <div class="qualifier-item">If you need a generalist consultant, a business broker, or someone to validate a decision you've already made — I'm not your person.</div>
+                <div class="qualifier-item">You own a business with real assets and revenue — and you're within 1 to 5 years of a transition</div>
+                <div class="qualifier-item">You're a founder or executive scaling through a high-growth inflection point and need strategic counsel</div>
+                <div class="qualifier-item">You're an acquirer or investor who needs market access, deal-level advisory, and someone who closes</div>
+                <div class="qualifier-item">You're navigating something complex — a succession, stalled project, leadership gap — and need execution, not advice</div>
+            </div>
+            <a href="https://calendar.app.google/pEyrPMvGY2TuEndcA" class="btn-primary">Let's See If There's a Fit</a>
         </div>
-        <div class="guide-cred-card">
-          <p class="cred-org">UQO &mdash; 2022</p>
-          <p class="cred-role">Grand Dipl&ocirc;m&eacute; &mdash; Volet Carri&egrave;re</p>
-          <p class="cred-detail" data-en="Career excellence award for strategic impact and leadership" data-fr="Prix d'excellence de carri&egrave;re pour l'impact strat&eacute;gique et le leadership" data-pt="Pr&ecirc;mio de excel&ecirc;ncia em carreira por impacto estrat&eacute;gico e lideran&ccedil;a">Career excellence award for strategic impact and leadership</p>
+    </section>
+
+    <section class="proof">
+        <div class="proof-inner">
+            <div class="proof-header">
+                <h2>Discretion</h2>
+                <p>My clients expect confidentiality. I deliver it.</p>
+            </div>
+            <div class="proof-stats">
+                <div class="proof-stat">
+                    <div class="stat-number">Senior</div>
+                    <div class="stat-label">Government, private sector, real estate, and tech</div>
+                </div>
+                <div class="proof-stat">
+                    <div class="stat-number">Private</div>
+                    <div class="stat-label">Select portfolio of clients — by referral and direct inquiry only</div>
+                </div>
+                <div class="proof-stat">
+                    <div class="stat-number">NDA</div>
+                    <div class="stat-label">All engagements are protected by confidentiality agreements</div>
+                </div>
+            </div>
+            <div class="proof-attestation">
+                <div class="attestation-quote-mark">"</div>
+                <p class="attestation-text">Results are shared in confidence during our first conversation. References are available upon request to serious principals only.</p>
+                <p class="attestation-text">If you're the right fit, you'll know everything you need to know before we begin.</p>
+                <div class="attestation-source"><strong>Confidentiality First</strong></div>
+            </div>
         </div>
-      </div>
-    </div>
-    <div class="guide-text">
-      <span class="section-label" data-en="About" data-fr="&Agrave; propos" data-pt="Sobre">About</span>
-      <h2 data-en="Thirty years in the rooms where it happens." data-fr="Trente ans dans les pi&egrave;ces o&ugrave; tout se d&eacute;cide." data-pt="Trinta anos nas salas onde tudo acontece.">Thirty years in the rooms where it happens.</h2>
-      <p data-en="I've navigated multi-million dollar transactions, restructured portfolios, guided founders through exits, and served as a strategic advisor to institutions at the highest level of government." data-fr="J'ai navigu&eacute; des transactions de plusieurs millions, restructur&eacute; des portefeuilles, guid&eacute; des fondateurs &agrave; travers des sorties et servi comme conseiller strat&eacute;gique aux plus hautes instances gouvernementales." data-pt="Naveguei transa&ccedil;&otilde;es multimilion&aacute;rias, reestruturei portf&oacute;lios, guiei fundadores em sa&iacute;das e servi como assessor estrat&eacute;gico nas mais altas inst&acirc;ncias do governo.">I've navigated multi-million dollar transactions, restructured portfolios, guided founders through exits, and served as a strategic advisor to institutions at the highest level of government.</p>
-      <p class="guide-highlight" data-en="My value isn't in theory &mdash; it's in knowing the market, the players, the deal structures, and what actually closes. I show up with pattern recognition earned across government, global trade, real estate development, and tech." data-fr="Ma valeur n'est pas th&eacute;orique &mdash; c'est dans la connaissance du march&eacute;, des joueurs, des structures de transactions et de ce qui se conclut r&eacute;ellement. J'apporte une reconnaissance de patrons acquise au gouvernement, commerce international, immobilier et technologie." data-pt="Meu valor n&atilde;o est&aacute; na teoria &mdash; est&aacute; em conhecer o mercado, os jogadores, as estruturas de neg&oacute;cio e o que realmente fecha. Trago reconhecimento de padr&otilde;es adquirido em governo, com&eacute;rcio global, desenvolvimento imobili&aacute;rio e tecnologia.">My value isn't in theory &mdash; it's in knowing the market, the players, the deal structures, and what actually closes. I show up with pattern recognition earned across government, global trade, real estate development, and tech.</p>
-      <p data-en="Today, through IBPROM Corp., I deploy that depth of experience for a select group of founders, executives, and organizations where the work is confidential, the impact is measurable, and the relationship is long-term." data-fr="Aujourd'hui, &agrave; travers IBPROM Corp., je mets cette profondeur d'exp&eacute;rience au service d'un groupe s&eacute;lect de fondateurs, dirigeants et organisations o&ugrave; le travail est confidentiel, l'impact mesurable et la relation durable." data-pt="Hoje, atrav&eacute;s da IBPROM Corp., aplico essa profundidade de experi&ecirc;ncia para um grupo seleto de fundadores, executivos e organiza&ccedil;&otilde;es onde o trabalho &eacute; confidencial, o impacto &eacute; mensur&aacute;vel e o relacionamento &eacute; de longo prazo.">Today, through IBPROM Corp., I deploy that depth of experience for a select group of founders, executives, and organizations where the work is confidential, the impact is measurable, and the relationship is long-term.</p>
-      <div class="guide-badges">
-        <div class="badge">
-          <div class="badge-label">Gatineau-Ottawa</div>
-          <div class="badge-value" data-en="Deep market knowledge. Real relationships. Actual track record." data-fr="Connaissance approfondie du march&eacute;. Relations r&eacute;elles. R&eacute;sultats concrets." data-pt="Conhecimento profundo do mercado. Relacionamentos reais. Hist&oacute;rico comprovado.">Deep market knowledge. Real relationships. Actual track record.</div>
+    </section>
+
+    <section class="guide" id="about">
+        <div class="guide-inner">
+            <div class="guide-sidebar">
+                <div class="guide-creds-stack">
+                    <div class="guide-cred-card">
+                        <div class="cred-org">Forbes</div>
+                        <div class="cred-role">Published Contributor</div>
+                        <div class="cred-detail">Contributing author on leadership, executive coaching, and organizational strategy</div>
+                    </div>
+                    <div class="guide-cred-card">
+                        <div class="cred-org">Newsweek</div>
+                        <div class="cred-role">Expert Contributor</div>
+                        <div class="cred-detail">10+ published articles on leadership, AI, risk management, and business strategy</div>
+                    </div>
+                    <div class="guide-cred-card">
+                        <div class="cred-org">Harvard Medical School</div>
+                        <div class="cred-role">McLean Coaching Institute Fellow</div>
+                        <div class="cred-detail">Evidence-based executive coaching methodology</div>
+                    </div>
+                    <div class="guide-cred-card">
+                        <div class="cred-org">Government of Canada</div>
+                        <div class="cred-role">Advisory — Prime Minister's Office</div>
+                        <div class="cred-detail">Issues management during the 2008 global financial crisis</div>
+                    </div>
+                    <div class="guide-cred-card">
+                        <div class="cred-org">UQO — 2022</div>
+                        <div class="cred-role">Grand Diplômé — Volet Carrière</div>
+                        <div class="cred-detail">Career excellence award for strategic impact and leadership</div>
+                    </div>
+                </div>
+            </div>
+            <div class="guide-text">
+                <h2>About</h2>
+                <p><strong>Tested under real pressure. Trusted at the highest levels.</strong></p>
+                <p>I served in the Prime Minister's Office during the 2008 global financial crisis. I served as Chief of Staff at the Senate of Canada during the COVID-19 pandemic. I've been published in Forbes and Newsweek on leadership, influence, and decision-making under pressure.</p>
+                <p>That experience isn't theory — it's pattern recognition earned in rooms where the wrong decision costs careers, companies, and public trust. Today, I bring that depth to a select group of self-made entrepreneurs, business owners, and high-net-worth individuals.</p>
+                <p class="guide-highlight">Through IBPROM Corp., I deploy 30+ years of cross-sector experience for leaders who've built something worth protecting. My clients don't need more advice — they need someone who has operated at the highest levels and can help them make the right call when it matters most.</p>
+                <div class="guide-badges">
+                    <div class="badge">
+                        <div class="badge-label">Location</div>
+                        <div class="badge-value">United States (Primary) · Canada · Lusophone Markets</div>
+                        <div class="badge-label" style="margin-top: 8px; font-size: 10px;">Serving HNWIs and business leaders across North America.</div>
+                    </div>
+                    <div class="badge">
+                        <div class="badge-label">Languages</div>
+                        <div class="badge-value">English, French, Portuguese — legally, operationally, culturally.</div>
+                    </div>
+                    <div class="badge">
+                        <div class="badge-label">Firm</div>
+                        <div class="badge-value">Managing Partner, <a href="https://ibprom.com">IBPROM Corp.</a></div>
+                    </div>
+                    <div class="badge">
+                        <div class="badge-label">Affiliations</div>
+                        <div class="badge-value">Ordre des administrateurs agréés du Québec</div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="badge">
-          <div class="badge-label" data-en="Languages" data-fr="Langues" data-pt="Idiomas">Languages</div>
-          <div class="badge-value" data-en="English, French, Portuguese &mdash; legally, operationally, culturally." data-fr="Anglais, fran&ccedil;ais, portugais &mdash; juridiquement, op&eacute;rationnellement, culturellement." data-pt="Ingl&ecirc;s, franc&ecirc;s, portugu&ecirc;s &mdash; juridicamente, operacionalmente, culturalmente.">English, French, Portuguese &mdash; legally, operationally, culturally.</div>
+    </section>
+
+    <section class="services-detail" id="services">
+        <div class="services-detail-inner">
+            <div class="services-detail-header">
+                <h2>How I Work</h2>
+                <p>Three tracks. One outcome: clarity and execution.</p>
+            </div>
+
+            <div class="service-track" id="selling">
+                <div class="service-track-header">
+                    <div class="service-track-number">01</div>
+                    <div class="service-track-content">
+                        <div class="service-track-subtitle">Succession & Exit Strategy</div>
+                        <h3 class="service-track-title">Selling Your Business</h3>
+                        <p class="service-track-desc">You've built real value. Now protect it. From pre-market positioning through close, I'm the single point of contact managing strategy, timeline, and your interests.</p>
+                        <div class="service-track-for"><strong>For:</strong> Owners within 1–5 years of transition • Family business succession • Estate planning with transaction goals</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-track" id="buying">
+                <div class="service-track-header">
+                    <div class="service-track-number">02</div>
+                    <div class="service-track-content">
+                        <div class="service-track-subtitle">Deal Sourcing & Commercial Strategy</div>
+                        <h3 class="service-track-title">Acquisitions & Growth</h3>
+                        <p class="service-track-desc">Finding the right deal isn't luck — it's access, timing, and knowing what questions to ask. I bring market intelligence, deal structure expertise, and relationships.</p>
+                        <div class="service-track-for"><strong>For:</strong> Acquirers seeking United States (Primary) · Canada · Lusophone Markets targets • Investor groups • Founders scaling through acquisition</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-track" id="partnering">
+                <div class="service-track-header">
+                    <div class="service-track-number">03</div>
+                    <div class="service-track-content">
+                        <div class="service-track-subtitle">Leadership, Growth & High-Value Projects</div>
+                        <h3 class="service-track-title">Strategic Advisory & Executive Counsel</h3>
+                        <p class="service-track-desc">Some challenges don't fit the standard playbook: stalled development, leadership transitions, organizational complexity, or closing $10K–$100K+ engagements. I partner with leaders who need execution.</p>
+                        <div class="service-track-for"><strong>For:</strong> Executives navigating complexity • Founders closing high-ticket offers • Organizations in transition</div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="badge">
-          <div class="badge-label" data-en="Firm" data-fr="Cabinet" data-pt="Empresa">Firm</div>
-          <div class="badge-value">Managing Partner, <a href="https://ibprom.com">IBPROM Corp.</a></div>
+    </section>
+
+    <section class="plan" id="framework">
+        <div class="plan-inner">
+            <h2>Framework</h2>
+            <p class="plan-subtitle">The SPARK Framework</p>
+            <p class="plan-subtitle">Every engagement follows a five-stage process built on deep experience managing complex transitions. Clear. Tested. Focused on results.</p>
+            <div class="spark-grid">
+                <div class="spark-item">
+                    <div class="spark-letter">S</div>
+                    <div class="spark-title">Strategic Alignment</div>
+                    <div class="spark-desc">Ensuring every decision, resource, and action is oriented toward a single coherent direction.</div>
+                </div>
+                <div class="spark-item">
+                    <div class="spark-letter">P</div>
+                    <div class="spark-title">People & Talent</div>
+                    <div class="spark-desc">Placing the right people in the right roles and building cultures that perform under pressure.</div>
+                </div>
+                <div class="spark-item">
+                    <div class="spark-letter">A</div>
+                    <div class="spark-title">Adaptive Innovation</div>
+                    <div class="spark-desc">Embedding technology and continuous adaptation as operational defaults, not afterthoughts.</div>
+                </div>
+                <div class="spark-item">
+                    <div class="spark-letter">R</div>
+                    <div class="spark-title">Relationship & Communication</div>
+                    <div class="spark-desc">Leveraging trust, influence, and strategic communication as core business assets.</div>
+                </div>
+                <div class="spark-item">
+                    <div class="spark-letter">K</div>
+                    <div class="spark-title">Key Decisions & Execution</div>
+                    <div class="spark-desc">Making high-stakes decisions with clarity and speed, then executing without hesitation.</div>
+                </div>
+            </div>
         </div>
-        <div class="badge">
-          <div class="badge-label" data-en="Affiliations" data-fr="Affiliations" data-pt="Afilia&ccedil;&otilde;es">Affiliations</div>
-          <div class="badge-value">Ordre des administrateurs agr&eacute;&eacute;s du Qu&eacute;bec</div>
+    </section>
+
+    <section class="writing" id="writing">
+        <div class="writing-inner">
+            <h2>Published Work</h2>
+            <p class="writing-sub">Writing on leadership, strategy, and growth</p>
+            <p class="writing-sub">Selected articles from Forbes and Newsweek on executive leadership, organizational strategy, and navigating complexity.</p>
+            <div class="articles-grid">
+                <a href="https://www.forbes.com/councils/forbeshumanresourcescouncil/2024/03/07/executive-coaching-the-key-to-unlocking-potential-in-the-c-suite/" class="article-card">
+                    <div class="article-pub">Forbes</div>
+                    <h3 class="article-title">Executive Coaching: The Key to Unlocking Potential in the C-Suite</h3>
+                </a>
+                <a href="https://www.forbes.com/councils/forbeshumanresourcescouncil/2024/01/29/7-key-strategic-hr-initiatives-for-a-triumphant-2024/" class="article-card">
+                    <div class="article-pub">Forbes</div>
+                    <h3 class="article-title">7 Key Strategic HR Initiatives for a Triumphant 2024</h3>
+                </a>
+                <a href="https://www.newsweek.com/beyond-authenticity-cultivating-resilient-leadership-modern-era-1829944" class="article-card">
+                    <div class="article-pub">Newsweek</div>
+                    <h3 class="article-title">Cultivating Resilient Leadership in the Modern Era</h3>
+                </a>
+                <a href="https://www.newsweek.com/10-ways-effectively-leverage-ai-customer-acquisition-1835891" class="article-card">
+                    <div class="article-pub">Newsweek</div>
+                    <h3 class="article-title">10 Ways to Effectively Leverage AI for Customer Acquisition</h3>
+                </a>
+                <a href="https://www.newsweek.com/risk-management-leadership-balancing-stability-innovation-1817649" class="article-card">
+                    <div class="article-pub">Newsweek</div>
+                    <h3 class="article-title">Risk Management in Leadership: Balancing Stability and Innovation</h3>
+                </a>
+                <a href="https://www.newsweek.com/igniting-success-seven-leadership-strategies-triumphant-2024-1861153" class="article-card">
+                    <div class="article-pub">Newsweek</div>
+                    <h3 class="article-title">Seven Leadership Strategies for a Triumphant 2024</h3>
+                </a>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- SERVICES -->
-<section class="services-detail" id="services">
-  <div class="services-detail-inner">
-    <div class="services-detail-header">
-      <span class="section-label" data-en="How I Work" data-fr="Ma m&eacute;thode" data-pt="Como trabalho">How I Work</span>
-      <h2 data-en="Three tracks. One outcome: clarity and execution." data-fr="Trois volets. Un seul r&eacute;sultat : clart&eacute; et ex&eacute;cution." data-pt="Tr&ecirc;s trilhas. Um resultado: clareza e execu&ccedil;&atilde;o.">Three tracks. One outcome: clarity and execution.</h2>
-      <p data-en="Whether you're selling, buying, or building &mdash; my approach stays the same: Get to the truth fast. Close the gap." data-fr="Que vous vendiez, achetiez ou b&acirc;tissiez &mdash; mon approche reste la m&ecirc;me : aller &agrave; la v&eacute;rit&eacute; rapidement. Combler l'&eacute;cart." data-pt="Seja vendendo, comprando ou construindo &mdash; minha abordagem &eacute; a mesma: chegar &agrave; verdade r&aacute;pido. Fechar a lacuna.">Whether you're selling, buying, or building &mdash; my approach stays the same: Get to the truth fast. Close the gap.</p>
-    </div>
-
-    <div class="service-track" id="selling">
-      <div class="service-track-header">
-        <div class="service-track-number">01</div>
-        <div class="service-track-content">
-          <h3 class="service-track-title" data-en="Selling Your Business" data-fr="Vendre votre entreprise" data-pt="Vender seu neg&oacute;cio">Selling Your Business</h3>
-          <p class="service-track-subtitle" data-en="Succession &amp; Exit Strategy" data-fr="Rel&egrave;ve &amp; strat&eacute;gie de sortie" data-pt="Sucess&atilde;o &amp; estrat&eacute;gia de sa&iacute;da">Succession &amp; Exit Strategy</p>
-          <p class="service-track-desc" data-en="You've built real value. Now protect it. From pre-market positioning through close, I'm the single point of contact managing strategy, timeline, and your interests." data-fr="Vous avez b&acirc;ti une vraie valeur. Prot&eacute;gez-la. Du positionnement pr&eacute;-march&eacute; &agrave; la cl&ocirc;ture, je suis votre point de contact unique." data-pt="Voc&ecirc; construiu valor real. Agora proteja-o. Do posicionamento pr&eacute;-mercado ao fechamento, sou seu &uacute;nico ponto de contato.">You've built real value. Now protect it. From pre-market positioning through close, I'm the single point of contact managing strategy, timeline, and your interests.</p>
-          <div class="service-track-for" data-en="<strong>For:</strong> Owners within 1&ndash;5 years of transition &bull; Family business succession &bull; Estate planning with transaction goals" data-fr="<strong>Pour :</strong> Propri&eacute;taires &agrave; 1&ndash;5 ans d'une transition &bull; Rel&egrave;ve familiale &bull; Planification successorale" data-pt="<strong>Para:</strong> Propriet&aacute;rios a 1&ndash;5 anos de uma transi&ccedil;&atilde;o &bull; Sucess&atilde;o familiar &bull; Planejamento patrimonial"><strong>For:</strong> Owners within 1&ndash;5 years of transition &bull; Family business succession &bull; Estate planning with transaction goals</div>
+    <section class="cta">
+        <div class="cta-inner">
+            <h2>Ready to protect <em>what you've built?</em></h2>
+            <p>Whether you're scaling your business, building a personal brand, or navigating a high-stakes decision — I work with leaders who understand that the best decisions are made by people who have been tested under real pressure.</p>
+            <p class="cta-qualifier">This conversation is for decision-makers ready to act.</p>
+            <a href="https://calendar.app.google/pEyrPMvGY2TuEndcA" class="btn-primary">Book 30 Minutes</a>
         </div>
-      </div>
-    </div>
+    </section>
 
-    <div class="service-track" id="buying">
-      <div class="service-track-header">
-        <div class="service-track-number">02</div>
-        <div class="service-track-content">
-          <h3 class="service-track-title" data-en="Acquisitions &amp; Growth" data-fr="Acquisitions &amp; croissance" data-pt="Aquisi&ccedil;&otilde;es &amp; crescimento">Acquisitions &amp; Growth</h3>
-          <p class="service-track-subtitle" data-en="Deal Sourcing &amp; Commercial Strategy" data-fr="Prospection &amp; strat&eacute;gie commerciale" data-pt="Prospec&ccedil;&atilde;o &amp; estrat&eacute;gia comercial">Deal Sourcing &amp; Commercial Strategy</p>
-          <p class="service-track-desc" data-en="Finding the right deal isn't luck &mdash; it's access, timing, and knowing what questions to ask. I bring market intelligence, deal structure expertise, and relationships." data-fr="Trouver la bonne transaction n'est pas une question de chance &mdash; c'est une question d'acc&egrave;s, de timing et de savoir quelles questions poser." data-pt="Encontrar o neg&oacute;cio certo n&atilde;o &eacute; sorte &mdash; &eacute; acesso, timing e saber as perguntas certas.">Finding the right deal isn't luck &mdash; it's access, timing, and knowing what questions to ask. I bring market intelligence, deal structure expertise, and relationships.</p>
-          <div class="service-track-for" data-en="<strong>For:</strong> Acquirers seeking Gatineau-Ottawa targets &bull; Investor groups &bull; Founders scaling through acquisition" data-fr="<strong>Pour :</strong> Acqu&eacute;reurs dans la r&eacute;gion Gatineau-Ottawa &bull; Groupes d'investisseurs &bull; Fondateurs en croissance par acquisition" data-pt="<strong>Para:</strong> Compradores na regi&atilde;o Gatineau-Ottawa &bull; Grupos de investidores &bull; Fundadores crescendo por aquisi&ccedil;&atilde;o"><strong>For:</strong> Acquirers seeking Gatineau-Ottawa targets &bull; Investor groups &bull; Founders scaling through acquisition</div>
+    <footer>
+        <div class="footer-links">
+            <a href="mailto:j@josephsoares.com">Email</a>
+            <a href="https://linkedin.com/in/soaresjoseph">LinkedIn</a>
+            <a href="https://ibprom.com">IBPROM Corp.</a>
         </div>
-      </div>
-    </div>
+        <div class="footer-firm">Managing Partner, IBPROM Corp. · Harvard McLean Institute Fellow</div>
+        <div class="footer-creds">Joseph Soares · Executive Advisor | Crisis-Tested. Government-Proven. · United States (Primary) · Canada · Lusophone Markets</div>
+        <div class="footer-firm">© 2026. All rights reserved.</div>
+    </footer>
 
-    <div class="service-track" id="partnering">
-      <div class="service-track-header">
-        <div class="service-track-number">03</div>
-        <div class="service-track-content">
-          <h3 class="service-track-title" data-en="Strategic Advisory &amp; Executive Counsel" data-fr="Conseil strat&eacute;gique &amp; accompagnement de dirigeants" data-pt="Assessoria estrat&eacute;gica &amp; aconselhamento executivo">Strategic Advisory &amp; Executive Counsel</h3>
-          <p class="service-track-subtitle" data-en="Leadership, Growth &amp; High-Value Projects" data-fr="Leadership, croissance &amp; projets de haute valeur" data-pt="Lideran&ccedil;a, crescimento &amp; projetos de alto valor">Leadership, Growth &amp; High-Value Projects</p>
-          <p class="service-track-desc" data-en="Some challenges don't fit the standard playbook: stalled development, leadership transitions, organizational complexity, or closing $10K&ndash;$100K+ engagements. I partner with leaders who need execution." data-fr="Certains d&eacute;fis ne rentrent pas dans les mod&egrave;les standards : projets bloqu&eacute;s, transitions de leadership, complexit&eacute; organisationnelle ou la conclusion de mandats de 10 000 $&ndash;100 000 $+." data-pt="Alguns desafios n&atilde;o cabem no manual padr&atilde;o: projetos parados, transi&ccedil;&otilde;es de lideran&ccedil;a, complexidade organizacional ou fechamento de contratos de $10K&ndash;$100K+.">Some challenges don't fit the standard playbook: stalled development, leadership transitions, organizational complexity, or closing $10K&ndash;$100K+ engagements. I partner with leaders who need execution.</p>
-          <div class="service-track-for" data-en="<strong>For:</strong> Executives navigating complexity &bull; Founders closing high-ticket offers &bull; Organizations in transition" data-fr="<strong>Pour :</strong> Dirigeants naviguant la complexit&eacute; &bull; Fondateurs concluant des offres de haute valeur &bull; Organisations en transition" data-pt="<strong>Para:</strong> Executivos navegando complexidade &bull; Fundadores fechando ofertas de alto valor &bull; Organiza&ccedil;&otilde;es em transi&ccedil;&atilde;o"><strong>For:</strong> Executives navigating complexity &bull; Founders closing high-ticket offers &bull; Organizations in transition</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SPARK FRAMEWORK -->
-<section class="plan" id="framework">
-  <div class="plan-inner">
-    <span class="section-label" style="color: var(--gold);" data-en="Framework" data-fr="M&eacute;thode" data-pt="M&eacute;todo">Framework</span>
-    <h2 data-en="The SPARK Framework" data-fr="La m&eacute;thode SPARK" data-pt="O m&eacute;todo SPARK">The SPARK Framework</h2>
-    <p class="plan-subtitle" data-en="Every engagement follows a five-stage process built on deep experience managing complex transitions. Clear. Tested. Focused on results." data-fr="Chaque mandat suit un processus en cinq &eacute;tapes fond&eacute; sur une exp&eacute;rience approfondie de transitions complexes. Clair. &Eacute;prouv&eacute;. Ax&eacute; sur les r&eacute;sultats." data-pt="Cada engajamento segue um processo de cinco etapas baseado em profunda experi&ecirc;ncia em transi&ccedil;&otilde;es complexas. Claro. Testado. Focado em resultados.">Every engagement follows a five-stage process built on deep experience managing complex transitions. Clear. Tested. Focused on results.</p>
-    <div class="spark-grid">
-      <div class="spark-item">
-        <div class="spark-letter">S</div>
-        <div class="spark-title">Situation</div>
-        <div class="spark-desc" data-en="Get to the truth of where you actually are &mdash; assets, liabilities, timing, constraints, untapped value." data-fr="D&eacute;couvrir la v&eacute;rit&eacute; sur votre situation &mdash; actifs, passifs, d&eacute;lais, contraintes, valeur inexploit&eacute;e." data-pt="Chegar &agrave; verdade sobre onde voc&ecirc; realmente est&aacute; &mdash; ativos, passivos, prazos, restri&ccedil;&otilde;es, valor inexplorado.">Get to the truth of where you actually are &mdash; assets, liabilities, timing, constraints, untapped value.</div>
-      </div>
-      <div class="spark-item">
-        <div class="spark-letter">P</div>
-        <div class="spark-title">Plan</div>
-        <div class="spark-desc" data-en="Design the path forward. Deal structure. Timeline. Stakeholder strategy. Written. Tested against reality." data-fr="Concevoir le chemin &agrave; suivre. Structure. &Eacute;ch&eacute;ancier. Strat&eacute;gie des parties prenantes. &Eacute;crit. Test&eacute;." data-pt="Projetar o caminho. Estrutura. Cronograma. Estrat&eacute;gia de stakeholders. Documentado. Testado contra a realidade.">Design the path forward. Deal structure. Timeline. Stakeholder strategy. Written. Tested against reality.</div>
-      </div>
-      <div class="spark-item">
-        <div class="spark-letter">A</div>
-        <div class="spark-title" data-en="Access" data-fr="Acc&egrave;s" data-pt="Acesso">Access</div>
-        <div class="spark-desc" data-en="Open doors. Market connections. Buyer/seller networks. Lender relationships. The infrastructure that moves deals." data-fr="Ouvrir des portes. Connexions de march&eacute;. R&eacute;seaux acheteurs/vendeurs. Relations avec les pr&ecirc;teurs." data-pt="Abrir portas. Conex&otilde;es de mercado. Redes de compradores/vendedores. Relacionamentos com financiadores.">Open doors. Market connections. Buyer/seller networks. Lender relationships. The infrastructure that moves deals.</div>
-      </div>
-      <div class="spark-item">
-        <div class="spark-letter">R</div>
-        <div class="spark-title" data-en="Run" data-fr="Ex&eacute;cuter" data-pt="Executar">Run</div>
-        <div class="spark-desc" data-en="Manage the active phase. Keep stakeholders aligned. Remove obstacles. Make decisions when they matter." data-fr="G&eacute;rer la phase active. Aligner les parties prenantes. Supprimer les obstacles. D&eacute;cider quand &ccedil;a compte." data-pt="Gerenciar a fase ativa. Manter stakeholders alinhados. Remover obst&aacute;culos. Decidir quando importa.">Manage the active phase. Keep stakeholders aligned. Remove obstacles. Make decisions when they matter.</div>
-      </div>
-      <div class="spark-item">
-        <div class="spark-letter">K</div>
-        <div class="spark-title" data-en="Know" data-fr="Conna&icirc;tre" data-pt="Conhecer">Know</div>
-        <div class="spark-desc" data-en="Close and debrief. Document lessons. Ensure what you built &mdash; and what comes next &mdash; is protected." data-fr="Cl&ocirc;turer et d&eacute;briefer. Documenter les le&ccedil;ons. Prot&eacute;ger ce qui a &eacute;t&eacute; b&acirc;ti &mdash; et ce qui suit." data-pt="Fechar e debriefar. Documentar li&ccedil;&otilde;es. Garantir que o que foi constru&iacute;do &mdash; e o que vem a seguir &mdash; esteja protegido.">Close and debrief. Document lessons. Ensure what you built &mdash; and what comes next &mdash; is protected.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- WRITING / PUBLICATIONS -->
-<section class="writing" id="writing">
-  <div class="writing-inner">
-    <span class="section-label" data-en="Published Work" data-fr="Publications" data-pt="Publica&ccedil;&otilde;es">Published Work</span>
-    <h2 data-en="Writing on leadership, strategy, and growth" data-fr="&Eacute;crits sur le leadership, la strat&eacute;gie et la croissance" data-pt="Escritos sobre lideran&ccedil;a, estrat&eacute;gia e crescimento">Writing on leadership, strategy, and growth</h2>
-    <p class="writing-sub" data-en="Selected articles from Forbes and Newsweek on executive leadership, organizational strategy, and navigating complexity." data-fr="Articles s&eacute;lectionn&eacute;s de Forbes et Newsweek sur le leadership ex&eacute;cutif, la strat&eacute;gie organisationnelle et la navigation de la complexit&eacute;." data-pt="Artigos selecionados da Forbes e Newsweek sobre lideran&ccedil;a executiva, estrat&eacute;gia organizacional e navega&ccedil;&atilde;o da complexidade.">Selected articles from Forbes and Newsweek on executive leadership, organizational strategy, and navigating complexity.</p>
-    <div class="articles-grid">
-      <a href="https://www.forbes.com/councils/forbeshumanresourcescouncil/2024/03/07/executive-coaching-the-key-to-unlocking-potential-in-the-c-suite/" target="_blank" class="article-card">
-        <p class="article-pub">Forbes</p>
-        <p class="article-title">Executive Coaching: The Key to Unlocking Potential in the C-Suite</p>
-      </a>
-      <a href="https://www.forbes.com/councils/forbeshumanresourcescouncil/2024/01/29/7-key-strategic-hr-initiatives-for-a-triumphant-2024/" target="_blank" class="article-card">
-        <p class="article-pub">Forbes</p>
-        <p class="article-title">7 Key Strategic HR Initiatives for a Triumphant 2024</p>
-      </a>
-      <a href="https://www.newsweek.com/beyond-authenticity-cultivating-resilient-leadership-modern-era-1829944" target="_blank" class="article-card">
-        <p class="article-pub">Newsweek</p>
-        <p class="article-title">Cultivating Resilient Leadership in the Modern Era</p>
-      </a>
-      <a href="https://www.newsweek.com/10-ways-effectively-leverage-ai-customer-acquisition-1835891" target="_blank" class="article-card">
-        <p class="article-pub">Newsweek</p>
-        <p class="article-title">10 Ways to Effectively Leverage AI for Customer Acquisition</p>
-      </a>
-      <a href="https://www.newsweek.com/risk-management-leadership-balancing-stability-innovation-1817649" target="_blank" class="article-card">
-        <p class="article-pub">Newsweek</p>
-        <p class="article-title">Risk Management in Leadership: Balancing Stability and Innovation</p>
-      </a>
-      <a href="https://www.newsweek.com/igniting-success-seven-leadership-strategies-triumphant-2024-1861153" target="_blank" class="article-card">
-        <p class="article-pub">Newsweek</p>
-        <p class="article-title">Seven Leadership Strategies for a Triumphant 2024</p>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="cta">
-  <div class="cta-inner">
-    <h2 data-en="Ready to navigate <em>what's next?</em>" data-fr="Pr&ecirc;t &agrave; naviguer <em>ce qui vient?</em>" data-pt="Pronto para navegar <em>o que vem a seguir?</em>">Ready to navigate <em>what's next?</em></h2>
-    <p data-en="Whether you're selling a business, closing a high-value deal, or building organizational clarity &mdash; I work with leaders who understand that complexity isn't a barrier. It's an opportunity." data-fr="Que vous vendiez une entreprise, concluiez un mandat de haute valeur ou b&acirc;tissiez la clart&eacute; organisationnelle &mdash; je travaille avec des dirigeants qui comprennent que la complexit&eacute; est une opportunit&eacute;." data-pt="Seja vendendo um neg&oacute;cio, fechando um contrato de alto valor ou construindo clareza organizacional &mdash; trabalho com l&iacute;deres que entendem que complexidade &eacute; oportunidade.">Whether you're selling a business, closing a high-value deal, or building organizational clarity &mdash; I work with leaders who understand that complexity isn't a barrier. It's an opportunity.</p>
-    <p class="cta-qualifier" data-en="This conversation is for decision-makers ready to act." data-fr="Cette conversation est pour les d&eacute;cideurs pr&ecirc;ts &agrave; agir." data-pt="Esta conversa &eacute; para tomadores de decis&atilde;o prontos para agir.">This conversation is for decision-makers ready to act.</p>
-    <a href="https://calendar.app.google/gLExqLUqU5Vm8nBR9" target="_blank" class="btn-primary" data-en="Book 30 Minutes" data-fr="R&eacute;server 30 minutes" data-pt="Agendar 30 minutos">Book 30 Minutes</a>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <div class="footer-links">
-    <a href="mailto:j@josephsoares.com">Email</a>
-    <a href="https://linkedin.com/in/soaresjoseph" target="_blank">LinkedIn</a>
-    <a href="https://ibprom.com" target="_blank">IBPROM Corp.</a>
-  </div>
-  <p class="footer-firm">Managing Partner, IBPROM Corp. &middot; Harvard McLean Institute Fellow</p>
-  <p class="footer-creds">Joseph Soares &middot; Executive Advisor &amp; Strategic Consultant &middot; Gatineau-Ottawa</p>
-  <p style="font-size: 11px; opacity: 0.3;">&copy; 2026. All rights reserved.</p>
-</footer>
-
-<!-- LANGUAGE SWITCHING ENGINE -->
-<script>
-(function() {
-  let currentLang = 'en';
-
-  window.setLang = function(lang) {
-    currentLang = lang;
-
-    // Update lang attribute
-    document.documentElement.lang = lang === 'fr' ? 'fr' : lang === 'pt' ? 'pt' : 'en';
-
-    // Update lang bar active state
-    document.querySelectorAll('.lang-bar button').forEach(btn => {
-      btn.classList.toggle('active', btn.textContent.trim().toLowerCase() === lang);
-    });
-
-    // Update all translatable elements
-    document.querySelectorAll('[data-' + lang + ']').forEach(el => {
-      const translation = el.getAttribute('data-' + lang);
-      if (translation) {
-        el.innerHTML = translation;
-      }
-    });
-
-    // Update page title
-    const titles = {
-      en: 'Joseph Soares | Executive Advisor & Strategic Consultant',
-      fr: 'Joseph Soares | Conseiller strat\u00e9gique & consultant ex\u00e9cutif',
-      pt: 'Joseph Soares | Consultor estrat\u00e9gico & assessor executivo'
-    };
-    document.title = titles[lang] || titles.en;
-
-    // Update meta description
-    const descriptions = {
-      en: 'Joseph Soares \u2014 Executive advisor, management consultant, and strategic partner. Published in Forbes and Newsweek. Harvard McLean Institute Fellow. Gatineau-Ottawa.',
-      fr: 'Joseph Soares \u2014 Conseiller strat\u00e9gique et consultant en gestion. Publi\u00e9 dans Forbes et Newsweek. Fellow du McLean Institute de Harvard. Gatineau-Ottawa.',
-      pt: 'Joseph Soares \u2014 Assessor executivo, consultor de gest\u00e3o e parceiro estrat\u00e9gico. Publicado na Forbes e Newsweek. Fellow do McLean Institute de Harvard. Gatineau-Ottawa.'
-    };
-    const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) metaDesc.setAttribute('content', descriptions[lang] || descriptions.en);
-
-    // Save preference
-    try { localStorage.setItem('js-lang', lang); } catch(e) {}
-  };
-
-  // Auto-detect language on load
-  document.addEventListener('DOMContentLoaded', function() {
-    let savedLang = null;
-    try { savedLang = localStorage.getItem('js-lang'); } catch(e) {}
-    if (savedLang && ['en', 'fr', 'pt'].includes(savedLang)) {
-      setLang(savedLang);
-    }
-  });
-})();
-</script>
-
+    <script>
+        (function() {
+            let currentLang = 'en';
+            window.setLang = function(lang) {
+                currentLang = lang;
+                // Update lang attribute
+                document.documentElement.lang = lang === 'fr' ? 'fr' : lang === 'pt' ? 'pt' : 'en';
+                // Update lang bar active state
+                document.querySelectorAll('.lang-bar button').forEach(btn => {
+                    btn.classList.toggle('active', btn.textContent.trim().toLowerCase() === lang);
+                });
+                // Update all translatable elements
+                document.querySelectorAll('[data-' + lang + ']').forEach(el => {
+                    const translation = el.getAttribute('data-' + lang);
+                    if (translation) {
+                        el.innerHTML = translation;
+                    }
+                });
+                // Update page title
+                const titles = {
+                    en: 'Joseph Soares | Executive Advisor | Crisis-Tested. Government-Proven.',
+                    fr: 'Joseph Soares | Conseiller stratégique & consultant exécutif',
+                    pt: 'Joseph Soares | Consultor estratégico & assessor executivo'
+                };
+                document.title = titles[lang] || titles.en;
+                // Update meta description
+                const descriptions = {
+                    en: 'Joseph Soares — Executive advisor, management consultant, and strategic partner. Published in Forbes and Newsweek. Harvard McLean Institute Fellow. United States (Primary) · Canada · Lusophone Markets.',
+                    fr: 'Joseph Soares — Conseiller stratégique et consultant en gestion. Publié dans Forbes et Newsweek. Fellow du McLean Institute de Harvard. United States (Primary) · Canada · Lusophone Markets.',
+                    pt: 'Joseph Soares — Assessor executivo, consultor de gestão e parceiro estratégico. Publicado na Forbes e Newsweek. Fellow do McLean Institute de Harvard. United States (Primary) · Canada · Lusophone Markets.'
+                };
+                const metaDesc = document.querySelector('meta[name="description"]');
+                if (metaDesc) metaDesc.setAttribute('content', descriptions[lang] || descriptions.en);
+                // Save preference
+                try {
+                    localStorage.setItem('js-lang', lang);
+                } catch(e) {}
+            };
+            // Auto-detect language on load
+            document.addEventListener('DOMContentLoaded', function() {
+                let savedLang = null;
+                try {
+                    savedLang = localStorage.getItem('js-lang');
+                } catch(e) {}
+                if (savedLang && ['en', 'fr', 'pt'].includes(savedLang)) {
+                    setLang(savedLang);
+                }
+            });
+        })();
+    </script>
 </body>
 </html>
