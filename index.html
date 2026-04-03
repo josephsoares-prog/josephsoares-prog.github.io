@@ -1731,8 +1731,14 @@
                     localStorage.setItem('js-lang', lang);
                 } catch(e) {}
             };
-            // Auto-detect language on load
+            // On load: store original English innerHTML as data-en
             document.addEventListener('DOMContentLoaded', function() {
+                document.querySelectorAll('[data-fr], [data-pt]').forEach(el => {
+                    if (!el.hasAttribute('data-en')) {
+                        el.setAttribute('data-en', el.innerHTML);
+                    }
+                });
+                // Restore saved language preference
                 let savedLang = null;
                 try {
                     savedLang = localStorage.getItem('js-lang');
