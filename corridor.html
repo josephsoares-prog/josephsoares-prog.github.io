@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Corridor | Political Intelligence for Business Leaders</title>
+    <meta name="description" content="The Corridor — Bilingual political news and strategic commentary for decision-makers. By Joseph Soares, former Prime Minister's Office advisor and Senate Chief of Staff.">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "The Corridor — Political Intelligence for Business Leaders",
+      "url": "https://josephsoares.com/corridor",
+      "description": "Bilingual EN/FR political news commentary and strategic analysis for decision-makers in business, government, and public life. Published by Joseph Soares.",
+      "inLanguage": ["en", "fr"],
+      "author": {
+        "@type": "Person",
+        "name": "Joseph Soares",
+        "url": "https://josephsoares.com"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "IBPROM Corp.",
+        "url": "https://ibprom.com"
+      },
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Joseph Soares — Executive Advisor",
+        "url": "https://josephsoares.com"
+      }
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #0b1a2e;
+            --navy-mid: #0f2240;
+            --navy-light: #132d54;
+            --gold: #c9a84c;
+            --gold-light: #dfc07a;
+            --gold-muted: rgba(201, 168, 76, 0.12);
+            --cream: #f5f1eb;
+            --white: #ffffff;
+            --text-dark: #1a1a2e;
+            --text-mid: #4a4a5a;
+            --text-light: rgba(255,255,255,0.75);
+            --border-light: rgba(201, 168, 76, 0.2);
+            --corridor-accent: #2a5c8a;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Source Sans 3', -apple-system, sans-serif;
+            color: var(--text-dark);
+            background: var(--white);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ===== LANG SWITCHER ===== */
+        .lang-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 200;
+            background: #06101e;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 0 40px;
+            height: 32px;
+            border-bottom: 1px solid rgba(201, 168, 76, 0.08);
+        }
+
+        .lang-bar button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.35);
+            padding: 6px 12px;
+            transition: color 0.3s;
+        }
+
+        .lang-bar button:hover { color: var(--gold-light); }
+        .lang-bar button.active { color: var(--gold); }
+        .lang-bar .lang-sep { color: rgba(255,255,255,0.12); font-size: 11px; }
+
+        /* ===== NAV ===== */
+        nav {
+            position: fixed;
+            top: 32px;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: rgba(11, 26, 46, 0.96);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+            padding: 0 40px;
+        }
+
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 64px;
+        }
+
+        .nav-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--white);
+            text-decoration: none;
+            letter-spacing: 0.02em;
+        }
+
+        .nav-name span { color: var(--gold); }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover { color: var(--gold); }
+        .nav-links a.nav-active { color: var(--gold); }
+
+        .nav-cta {
+            background: var(--gold) !important;
+            color: var(--navy) !important;
+            padding: 9px 22px !important;
+            border-radius: 3px;
+            font-weight: 700 !important;
+            font-size: 11px !important;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .nav-cta:hover {
+            background: var(--gold-light) !important;
+            color: var(--navy) !important;
+        }
+
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            flex-direction: column;
+            gap: 5px;
+            padding: 4px;
+        }
+
+        .mobile-toggle span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--white);
+            transition: all 0.3s;
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            min-height: 70vh;
+            background: linear-gradient(155deg, var(--navy) 0%, var(--navy-mid) 55%, #0d2848 100%);
+            display: flex;
+            align-items: center;
+            padding: 150px 40px 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 10% 90%, rgba(201, 168, 76, 0.06) 0%, transparent 55%),
+                        radial-gradient(ellipse at 90% 15%, rgba(91, 143, 217, 0.04) 0%, transparent 45%);
+            pointer-events: none;
+        }
+
+        .hero-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            width: 100%;
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(201, 168, 76, 0.08);
+            border: 1px solid rgba(201, 168, 76, 0.2);
+            border-radius: 30px;
+            padding: 8px 24px;
+            margin-bottom: 32px;
+            animation: fadeUp 0.6s ease both;
+        }
+
+        .hero-badge-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--gold);
+            border-radius: 50%;
+            animation: pulse 2s ease infinite;
+        }
+
+        .hero-badge-text {
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--gold);
+        }
+
+        .hero h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2.8rem, 5.5vw, 4.2rem);
+            font-weight: 700;
+            color: var(--white);
+            line-height: 1.15;
+            margin-bottom: 24px;
+            animation: fadeUp 0.7s ease 0.1s both;
+        }
+
+        .hero h1 em {
+            font-style: italic;
+            color: var(--gold);
+        }
+
+        .hero-sub {
+            font-size: 18px;
+            color: var(--text-light);
+            line-height: 1.75;
+            max-width: 680px;
+            margin: 0 auto 20px;
+            font-weight: 300;
+            animation: fadeUp 0.7s ease 0.2s both;
+        }
+
+        .hero-lang-note {
+            font-size: 13px;
+            color: rgba(255,255,255,0.4);
+            letter-spacing: 0.5px;
+            animation: fadeUp 0.7s ease 0.3s both;
+        }
+
+        .hero-lang-note span {
+            color: var(--gold);
+            font-weight: 600;
+        }
+
+        /* ===== CONCEPT SECTION ===== */
+        .concept {
+            padding: 80px 40px;
+            background: var(--cream);
+        }
+
+        .concept-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: start;
+        }
+
+        .concept-text h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(1.8rem, 3vw, 2.4rem);
+            font-weight: 700;
+            color: var(--text-dark);
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .concept-text p {
+            font-size: 16px;
+            color: var(--text-mid);
+            line-height: 1.8;
+            margin-bottom: 16px;
+            font-weight: 300;
+        }
+
+        .concept-text p strong {
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        .concept-pillars {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .pillar-card {
+            padding: 24px 28px;
+            background: var(--white);
+            border-radius: 6px;
+            border-left: 3px solid var(--gold);
+            transition: transform 0.2s;
+        }
+
+        .pillar-card:hover {
+            transform: translateX(4px);
+        }
+
+        .pillar-icon {
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--gold);
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .pillar-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 6px;
+        }
+
+        .pillar-desc {
+            font-size: 14px;
+            color: var(--text-mid);
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        /* ===== LATEST COMMENTARY ===== */
+        .commentary {
+            padding: 80px 40px;
+            background: var(--white);
+        }
+
+        .commentary-inner {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .commentary-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .commentary-header h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(1.8rem, 3vw, 2.4rem);
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 12px;
+        }
+
+        .commentary-header p {
+            font-size: 16px;
+            color: var(--text-mid);
+            font-weight: 300;
+        }
+
+        .commentary-item {
+            padding: 36px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+        }
+
+        .commentary-item:first-child {
+            padding-top: 0;
+        }
+
+        .commentary-meta {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .commentary-date {
+            font-size: 12px;
+            color: var(--text-mid);
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        .commentary-tag {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--gold);
+            background: var(--gold-muted);
+            padding: 3px 10px;
+            border-radius: 3px;
+        }
+
+        .commentary-lang-tag {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--corridor-accent);
+            background: rgba(42, 92, 138, 0.08);
+            padding: 3px 8px;
+            border-radius: 3px;
+        }
+
+        .commentary-headline {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--text-dark);
+            line-height: 1.3;
+            margin-bottom: 8px;
+        }
+
+        .commentary-headline a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .commentary-headline a:hover {
+            color: var(--gold);
+        }
+
+        .commentary-source {
+            font-size: 13px;
+            color: var(--text-mid);
+            margin-bottom: 12px;
+            font-weight: 400;
+        }
+
+        .commentary-source a {
+            color: var(--corridor-accent);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .commentary-source a:hover {
+            text-decoration: underline;
+        }
+
+        .commentary-body {
+            font-size: 15px;
+            color: var(--text-mid);
+            line-height: 1.75;
+            font-weight: 300;
+        }
+
+        .commentary-body strong {
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        .commentary-sig {
+            font-size: 13px;
+            color: var(--gold);
+            font-weight: 600;
+            margin-top: 12px;
+            font-style: italic;
+        }
+
+        /* ===== COMING SOON STATE ===== */
+        .launch-notice {
+            text-align: center;
+            padding: 80px 40px;
+            background: var(--navy);
+        }
+
+        .launch-notice-inner {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .launch-notice h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(1.8rem, 3vw, 2.4rem);
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 16px;
+        }
+
+        .launch-notice p {
+            font-size: 16px;
+            color: var(--text-light);
+            line-height: 1.75;
+            font-weight: 300;
+            margin-bottom: 32px;
+        }
+
+        .launch-notice .btn-primary {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--navy);
+            padding: 14px 36px;
+            border-radius: 3px;
+            font-weight: 700;
+            font-size: 13px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .launch-notice .btn-primary:hover {
+            background: var(--gold-light);
+        }
+
+        /* ===== ABOUT THE EDITOR ===== */
+        .editor {
+            padding: 80px 40px;
+            background: var(--cream);
+        }
+
+        .editor-inner {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .editor-label {
+            font-size: 11px;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: var(--gold);
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .editor h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+        }
+
+        .editor p {
+            font-size: 16px;
+            color: var(--text-mid);
+            line-height: 1.8;
+            font-weight: 300;
+            margin-bottom: 16px;
+        }
+
+        .editor-creds {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 24px;
+        }
+
+        .editor-cred {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--text-dark);
+            background: var(--white);
+            padding: 6px 16px;
+            border-radius: 20px;
+            border: 1px solid rgba(201, 168, 76, 0.2);
+        }
+
+        /* ===== CTA ===== */
+        .cta {
+            padding: 80px 40px;
+            background: linear-gradient(155deg, var(--navy) 0%, var(--navy-mid) 100%);
+            text-align: center;
+        }
+
+        .cta-inner {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .cta h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+            font-weight: 700;
+            color: var(--white);
+            line-height: 1.2;
+            margin-bottom: 16px;
+        }
+
+        .cta h2 em {
+            font-style: italic;
+            color: var(--gold);
+        }
+
+        .cta p {
+            font-size: 16px;
+            color: var(--text-light);
+            line-height: 1.75;
+            font-weight: 300;
+            margin-bottom: 32px;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--navy);
+            padding: 14px 36px;
+            border-radius: 3px;
+            font-weight: 700;
+            font-size: 13px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .btn-primary:hover { background: var(--gold-light); }
+
+        .btn-secondary {
+            display: inline-block;
+            color: var(--gold);
+            padding: 14px 36px;
+            border: 1px solid rgba(201, 168, 76, 0.3);
+            border-radius: 3px;
+            font-weight: 600;
+            font-size: 13px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: all 0.3s;
+            margin-left: 12px;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--gold);
+            background: rgba(201, 168, 76, 0.06);
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            padding: 40px;
+            background: #06101e;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 28px;
+            margin-bottom: 16px;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.4);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover { color: var(--gold); }
+
+        .footer-firm {
+            font-size: 12px;
+            color: rgba(255,255,255,0.25);
+            margin-bottom: 6px;
+        }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .lang-bar { padding: 0 20px; }
+            nav { padding: 0 20px; }
+            .mobile-toggle { display: flex; }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 64px;
+                left: 0;
+                right: 0;
+                background: rgba(11, 26, 46, 0.98);
+                flex-direction: column;
+                padding: 20px;
+                gap: 16px;
+                border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+            }
+
+            .nav-links.open { display: flex; }
+
+            .hero { padding: 130px 20px 60px; min-height: 60vh; }
+            .hero h1 { font-size: 2.2rem; }
+            .hero-sub { font-size: 16px; }
+
+            .concept { padding: 60px 20px; }
+            .concept-inner { grid-template-columns: 1fr; gap: 40px; }
+
+            .commentary { padding: 60px 20px; }
+            .commentary-headline { font-size: 20px; }
+
+            .launch-notice { padding: 60px 20px; }
+            .editor { padding: 60px 20px; }
+            .cta { padding: 60px 20px; }
+
+            .editor-creds { gap: 6px; }
+
+            .btn-secondary { margin-left: 0; margin-top: 12px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- LANG BAR -->
+    <div class="lang-bar">
+        <button class="active" onclick="setLang('en')">EN</button>
+        <span class="lang-sep">·</span>
+        <button onclick="setLang('fr')">FR</button>
+    </div>
+
+    <!-- NAV -->
+    <nav>
+        <div class="nav-inner">
+            <a href="index.html" class="nav-name">Joseph <span>Soares</span></a>
+            <button class="mobile-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-links">
+                <a href="index.html#who" data-fr="Pour qui ?">Who This Is For</a>
+                <a href="index.html#about" data-fr="À propos">About</a>
+                <a href="index.html#services" data-fr="Services">Services</a>
+                <a href="corridor.html" class="nav-active" data-fr="Le Corridor">The Corridor</a>
+                <a href="podcast.html" data-fr="Balado">Podcast</a>
+                <a href="https://calendar.app.google/pEyrPMvGY2TuEndcA" class="nav-cta" data-fr="Prendre rendez-vous">Book a Call</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-inner">
+            <div class="hero-badge">
+                <div class="hero-badge-dot"></div>
+                <span class="hero-badge-text" data-fr="Veille politique pour décideurs">Political Intelligence for Decision-Makers</span>
+            </div>
+            <h1 data-fr="Le <em>Corridor</em>">The <em>Corridor</em></h1>
+            <p class="hero-sub" data-fr="Ce qui se passe à Québec, Ottawa, Washington et dans les capitales du monde — et pourquoi ça compte pour vos décisions.">What's happening in Quebec City, Ottawa, Washington, and capitals around the world — and why it matters to your next decision.</p>
+            <p class="hero-lang-note">By <span>Joseph Soares</span></p>
+        </div>
+    </section>
+
+    <!-- CONCEPT -->
+    <section class="concept">
+        <div class="concept-inner">
+            <div class="concept-text">
+                <h2 data-fr="Pourquoi <em>Le Corridor</em>">Why <em>The Corridor</em></h2>
+                <p data-fr="La politique façonne les marchés, les politiques publiques et les carrières. Les réglementations créent et détruisent des industries. Les élections déplacent des capitaux et redéfinissent les priorités. Pourtant, la plupart des décideurs lisent les nouvelles politiques comme des spectateurs — pas comme des opérateurs.">Politics shapes markets, public policy, and careers. Regulations create and destroy industries. Elections move capital and reset priorities. Yet most decision-makers read political news as spectators — not operators.</p>
+                <p data-fr="<strong>Le Corridor</strong> comble cette lacune. Chaque jour, je sélectionne ce qui compte et j'ajoute le contexte stratégique qu'on n'obtient qu'en ayant œuvré dans les couloirs du pouvoir."><strong>The Corridor</strong> closes that gap. Every day, I curate what matters and add the strategic context you only get from having worked inside the corridors of power.</p>
+                <p data-fr="Le nom est délibéré. C'est dans les corridors — pas dans les salles de réunion — que les véritables décisions se prennent. J'y ai été. Maintenant, je vous y donne accès.">The name is deliberate. It's in the corridors — not the boardrooms — where the real decisions get made. I've been there. Now I'm giving you access.</p>
+            </div>
+            <div class="concept-pillars">
+                <div class="pillar-card">
+                    <div class="pillar-icon" data-fr="Sélection">Curation</div>
+                    <div class="pillar-title" data-fr="Ce qui compte, sans le bruit">What matters, without the noise</div>
+                    <div class="pillar-desc" data-fr="Les gros titres sélectionnés pour leur pertinence stratégique, pas pour les clics. Sources canadiennes, américaines et internationales — affaires, gouvernement et politique.">Headlines selected for strategic relevance, not clicks. Canadian, American, and international sources — business, government, and politics.</div>
+                </div>
+                <div class="pillar-card">
+                    <div class="pillar-icon" data-fr="Commentaire">Commentary</div>
+                    <div class="pillar-title" data-fr="Contexte du terrain">Context from the inside</div>
+                    <div class="pillar-desc" data-fr="Analyse originale d'un ancien conseiller du Cabinet du Premier ministre et chef de cabinet au Sénat du Canada. Pas de la spéculation — de l'expérience.">Original analysis from a former Prime Minister's Office advisor and Senate Chief of Staff. Not speculation — experience.</div>
+                </div>
+                <div class="pillar-card">
+                    <div class="pillar-icon" data-fr="Bilingue">Bilingual</div>
+                    <div class="pillar-title" data-fr="Anglais et français, natifs">English and French, native</div>
+                    <div class="pillar-desc" data-fr="Couverture complète dans les deux langues officielles. Le Canada est bilingue — votre veille politique devrait l'être aussi.">Full coverage in both official languages. Canada is bilingual — your political intelligence should be too.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LATEST COMMENTARY -->
+    <section class="commentary">
+        <div class="commentary-inner">
+            <div class="commentary-header">
+                <h2 data-fr="Derniers commentaires">Latest Commentary</h2>
+                <p data-fr="Analyse stratégique des nouvelles politiques qui touchent les décideurs">Strategic analysis of political news that affects decision-makers</p>
+            </div>
+
+            <!-- ENTRY 1 — April 4, 2026 -->
+            <div class="commentary-item">
+                <div class="commentary-meta">
+                    <span class="commentary-date" data-fr="4 avril 2026">April 4, 2026</span>
+                    <span class="commentary-tag" data-fr="Commerce">Trade</span>
+                    <span class="commentary-lang-tag">EN</span>
+                </div>
+                <div class="commentary-headline" data-fr="L'exemption ACEUM est reconduite indéfiniment. Ne confondez pas sursis et victoire.">USMCA Exemption Extended Indefinitely. Don't Mistake a Reprieve for a Victory.</div>
+                <div class="commentary-body" data-fr="Le 2 avril, Washington a prolongé indéfiniment l'exemption des droits de douane pour les biens conformes à l'ACEUM. Plus de 85 % du commerce canado-américain est désormais protégé. Mais l'acier, l'aluminium et l'automobile restent sous tarifs — et quatre sénateurs républicains viennent de voter avec les démocrates pour révoquer certains droits de douane sur le Canada. <strong>Ce que cela vous dit :</strong> les lignes de parti sont en train de se briser sur le commerce. Si vous opérez des deux côtés de la frontière, la fenêtre pour restructurer vos chaînes d'approvisionnement est maintenant ouverte — mais elle ne le restera pas longtemps. Les décideurs qui attendent la « clarté » ne font qu'attendre que quelqu'un d'autre décide pour eux.">
+                    On April 2, Washington extended the USMCA tariff exemption indefinitely. Over 85% of Canada-U.S. trade is now shielded. But steel, aluminum, and autos remain under tariffs — and four Republican senators just voted with Democrats to revoke some of Trump's tariffs on Canada. <strong>What this tells you:</strong> party lines are fracturing on trade. If you operate on both sides of the border, the window to restructure your supply chains is open now — but it won't stay open forever. Decision-makers waiting for "clarity" are just waiting for someone else to decide for them.
+                </div>
+                <div class="commentary-sig">— J. Soares</div>
+            </div>
+
+            <!-- ENTRY 2 — April 4, 2026 (FR) -->
+            <div class="commentary-item">
+                <div class="commentary-meta">
+                    <span class="commentary-date" data-fr="4 avril 2026">April 4, 2026</span>
+                    <span class="commentary-tag" data-fr="Québec">Quebec</span>
+                    <span class="commentary-lang-tag">FR</span>
+                </div>
+                <div class="commentary-headline">Course à la direction de la CAQ : Fréchette contre Drainville, et ce que ça signifie pour le Québec d'après-Legault</div>
+                <div class="commentary-body">
+                    Le 12 avril, la CAQ choisit son prochain chef — et le prochain premier ministre du Québec. Christine Fréchette propose une approche plus axée sur le marché. Bernard Drainville mise sur la rigueur budgétaire. <strong>L'enjeu réel :</strong> avec un déficit de 9,9 milliards de dollars, une économie fragilisée par les tarifs américains et des élections générales dans six mois, le prochain chef hérite d'un mandat empoisonné. Les décideurs qui ont des intérêts au Québec — entreprises, investisseurs, ou acteurs du secteur public — doivent comprendre que le changement de garde ne sera pas cosmétique. Les priorités économiques du Québec sont sur le point de bouger. Positionnez-vous en conséquence.
+                </div>
+                <div class="commentary-sig">— J. Soares</div>
+            </div>
+
+            <!-- ENTRY 3 — April 3, 2026 -->
+            <div class="commentary-item">
+                <div class="commentary-meta">
+                    <span class="commentary-date" data-fr="3 avril 2026">April 3, 2026</span>
+                    <span class="commentary-tag" data-fr="Washington">Washington</span>
+                    <span class="commentary-lang-tag">EN</span>
+                </div>
+                <div class="commentary-headline" data-fr="Washington nomme les « barrières » canadiennes. Voici ce que cela signifie vraiment.">Washington Names Canadian "Barriers." Here's What It Actually Means.</div>
+                <div class="commentary-body" data-fr="Le rapport annuel du USTR vient de nommer les règles d'achat canadien, la tarification des médicaments et les contrôles sur le travail forcé comme des « obstacles au commerce ». Ce n'est pas un geste de bonne foi — c'est une liste de négociation. Chaque « barrière » est un levier que Washington utilisera dans les prochaines rondes. Si vous êtes en approvisionnement gouvernemental, en pharmaceutique, ou dans les chaînes d'approvisionnement transfrontalières, vous êtes déjà dans la mire.">
+                    The USTR's annual report just named Buy Canadian rules, drug pricing, and forced-labor controls as trade "barriers." This isn't a good-faith observation — it's a negotiating ledger. Every "barrier" is a lever Washington will pull in the next round. If you're in government procurement, pharmaceuticals, or cross-border supply chains, you're already in the crosshairs. The question isn't whether these will be negotiated — it's what Canada will give up to keep what matters most.
+                </div>
+                <div class="commentary-sig">— J. Soares</div>
+            </div>
+
+            <!-- ENTRY 4 — April 2, 2026 -->
+            <div class="commentary-item">
+                <div class="commentary-meta">
+                    <span class="commentary-date" data-fr="2 avril 2026">April 2, 2026</span>
+                    <span class="commentary-tag" data-fr="Ottawa">Ottawa</span>
+                    <span class="commentary-lang-tag">EN</span>
+                </div>
+                <div class="commentary-headline" data-fr="Carney gouverne avec une marge d'un siège. Voici pourquoi ça compte pour tout le monde.">Carney Governs by One Seat. Here's Why That Matters for Everyone.</div>
+                <div class="commentary-body" data-fr="Après deux traversées de plancher de députés conservateurs, les libéraux de Mark Carney ne sont qu'à un siège de la majorité. Un seul vote peut faire tomber le gouvernement. <strong>Ce que cela signifie en pratique :</strong> chaque député d'opposition détient un pouvoir de négociation démesuré. Les projets de loi seront dilués, retardés ou abandonnés. Si vous comptez sur une politique fédérale — une subvention, un programme, un cadre réglementaire — pour avancer un projet, prévoyez des retards. Les gouvernements minoritaires ne gouvernent pas; ils survivent.">
+                    After two Conservative floor crossings, Mark Carney's Liberals sit one seat from majority. A single vote can topple the government. <strong>What this means in practice:</strong> every opposition MP holds outsized bargaining power. Bills will be watered down, delayed, or killed. If you're counting on federal policy — a grant, a program, a regulatory framework — to move a project forward, build in delays. Minority governments don't govern; they survive. Plan accordingly.
+                </div>
+                <div class="commentary-sig">— J. Soares</div>
+            </div>
+
+            <!-- ENTRY 5 — April 1, 2026 (FR) -->
+            <div class="commentary-item">
+                <div class="commentary-meta">
+                    <span class="commentary-date" data-fr="1 avril 2026">April 1, 2026</span>
+                    <span class="commentary-tag" data-fr="Fédéral-Provincial">Federal-Provincial</span>
+                    <span class="commentary-lang-tag">FR</span>
+                </div>
+                <div class="commentary-headline">L'entente Canada-Alberta rate son échéance. Ce n'est pas un détail technique — c'est un signal.</div>
+                <div class="commentary-body">
+                    Ottawa et l'Alberta devaient finaliser quatre accords au 1er avril. Deux sont conclus en principe : les émissions de méthane et la coopération en matière d'évaluation d'impact. Deux autres sont toujours en suspens. <strong>Quand Carney et Smith admettent tous deux que l'échéance ne sera pas respectée</strong>, ce n'est pas de la transparence — c'est un aveu de faiblesse des deux côtés. Les relations fédérales-provinciales sont le véritable champ de bataille de la politique canadienne en 2026. Ceux qui comprennent cette dynamique prendront de meilleures décisions que ceux qui se concentrent uniquement sur Ottawa.
+                </div>
+                <div class="commentary-sig">— J. Soares</div>
+            </div>
+        </div>
+    </section>
+
+<!-- LAUNCH NOTICE -->
+    <section class="launch-notice">
+        <div class="launch-notice-inner">
+            <h2 data-fr="Lancement complet à venir">Full Launch Coming Soon</h2>
+            <p data-fr="Le Corridor est en développement actif. La couverture quotidienne, les fils de veille RSS et l'archive consultable arrivent bientôt. En attendant, les commentaires sont publiés ici et partagés sur LinkedIn.">The Corridor is in active development. Daily coverage, RSS feed integration, and searchable archives are coming. In the meantime, commentary is posted here and shared on LinkedIn.</p>
+            <a href="https://linkedin.com/in/soaresjoseph" class="btn-primary" data-fr="Suivre sur LinkedIn">Follow on LinkedIn</a>
+        </div>
+    </section>
+
+    <!-- ABOUT THE EDITOR -->
+    <section class="editor">
+        <div class="editor-inner">
+            <div class="editor-label" data-fr="L'éditeur">The Editor</div>
+            <h2 data-fr="Joseph Soares">Joseph Soares</h2>
+            <p data-fr="J'ai œuvré au Cabinet du Premier ministre du Canada pendant la crise financière mondiale de 2008. J'ai été Chef de cabinet au Sénat du Canada pendant la pandémie. Publié dans Forbes et Newsweek sur le leadership et la prise de décision. Je lis les nouvelles politiques comme un opérateur — parce que c'est ce que j'ai toujours été.">I served in Canada's Prime Minister's Office during the 2008 global financial crisis. Chief of Staff at the Senate of Canada during the pandemic. Published in Forbes and Newsweek on leadership and decision-making. I read political news as an operator — because that's what I've always been.</p>
+            <div class="editor-creds">
+                <span class="editor-cred" data-fr="Cabinet du Premier ministre">Prime Minister's Office</span>
+                <span class="editor-cred" data-fr="Sénat du Canada">Senate of Canada</span>
+                <span class="editor-cred">Forbes</span>
+                <span class="editor-cred">Newsweek</span>
+                <span class="editor-cred">MBA · PMP · Adm.A. · ACC</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <div class="cta-inner">
+            <h2 data-fr="Vous voulez la <em>conversation complète ?</em>">Want the <em>full conversation?</em></h2>
+            <p data-fr="Le Corridor vous donne le renseignement. Le conseil stratégique vous donne l'avantage. Si vous êtes prêt à passer de lecteur à décideur — parlons.">The Corridor gives you the intelligence. Strategic advisory gives you the edge. If you're ready to move from reader to decision-maker — let's talk.</p>
+            <a href="https://calendar.app.google/pEyrPMvGY2TuEndcA" class="btn-primary" data-fr="Prendre rendez-vous — 30 minutes">Book 30 Minutes</a>
+            <a href="index.html" class="btn-secondary" data-fr="En savoir plus sur le conseil stratégique">Learn About Advisory</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-links">
+            <a href="index.html" data-fr="Accueil">Home</a>
+            <a href="mailto:j@josephsoares.com" data-fr="Courriel">Email</a>
+            <a href="https://linkedin.com/in/soaresjoseph">LinkedIn</a>
+            <a href="podcast.html" data-fr="Balado">Podcast</a>
+        </div>
+        <div class="footer-firm" data-fr="Le Corridor · Une publication de Joseph Soares · IBPROM Corp.">The Corridor · A publication of Joseph Soares · IBPROM Corp.</div>
+        <div class="footer-firm" data-fr="© 2026. Tous droits réservés.">© 2026. All rights reserved.</div>
+    </footer>
+
+    <script>
+        (function() {
+            let currentLang = 'en';
+            window.setLang = function(lang) {
+                currentLang = lang;
+                document.documentElement.lang = lang === 'fr' ? 'fr' : 'en';
+                document.querySelectorAll('.lang-bar button').forEach(btn => {
+                    btn.classList.toggle('active', btn.textContent.trim().toLowerCase() === lang);
+                });
+                document.querySelectorAll('[data-' + lang + ']').forEach(el => {
+                    const translation = el.getAttribute('data-' + lang);
+                    if (translation) {
+                        el.innerHTML = translation;
+                    }
+                });
+                const titles = {
+                    en: 'The Corridor | Political Intelligence for Business Leaders',
+                    fr: 'Le Corridor | Veille politique pour dirigeants d\'entreprise'
+                };
+                document.title = titles[lang] || titles.en;
+                const descriptions = {
+                    en: 'The Corridor — Bilingual political news and strategic commentary for decision-makers. By Joseph Soares.',
+                    fr: 'Le Corridor — Veille politique bilingue et commentaire stratégique pour décideurs. Par Joseph Soares.'
+                };
+                const metaDesc = document.querySelector('meta[name="description"]');
+                if (metaDesc) metaDesc.setAttribute('content', descriptions[lang] || descriptions.en);
+                try {
+                    localStorage.setItem('js-lang', lang);
+                } catch(e) {}
+            };
+            document.addEventListener('DOMContentLoaded', function() {
+                document.querySelectorAll('[data-fr]').forEach(el => {
+                    if (!el.hasAttribute('data-en')) {
+                        el.setAttribute('data-en', el.innerHTML);
+                    }
+                });
+                let savedLang = null;
+                try {
+                    savedLang = localStorage.getItem('js-lang');
+                } catch(e) {}
+                if (savedLang && ['en', 'fr'].includes(savedLang)) {
+                    setLang(savedLang);
+                }
+            });
+        })();
+    </script>
+</body>
+</html>
