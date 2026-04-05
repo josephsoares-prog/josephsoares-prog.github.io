@@ -1498,10 +1498,9 @@
             method:'POST',headers:{'Content-Type':'application/json'},
             body:JSON.stringify({email:email,source:'case-study-gate',name:''})
         }).then(function(){
-            form.innerHTML='<p style="color:var(--gold);font-weight:600;margin:0;">Check your inbox — downloading now.</p>';
-            window.open('assets/IBPROM-Case-Study-120M-Residential.pdf','_blank');
+            form.innerHTML='<p style="color:var(--gold);font-weight:600;margin:0;">Check your inbox. The full case study is on its way.</p>';
         }).catch(function(){
-            window.open('assets/IBPROM-Case-Study-120M-Residential.pdf','_blank');
+            form.innerHTML='<p style="color:var(--gold);font-weight:600;margin:0;">Check your inbox. The full case study is on its way.</p>';
         });
         return false;
     }
