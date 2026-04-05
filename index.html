@@ -1478,6 +1478,35 @@
         </div>
     </section>
 
+    <!-- CASE STUDY — EMAIL GATE -->
+    <section style="padding:4rem 1.5rem; background:linear-gradient(180deg, rgba(207,181,59,0.04) 0%, transparent 100%);">
+        <div style="max-width:700px; margin:0 auto; text-align:center;">
+            <div style="font-family:'JetBrains Mono',monospace; font-size:0.7rem; letter-spacing:0.12em; color:var(--gold); text-transform:uppercase; margin-bottom:1rem;" data-fr="ÉTUDE DE CAS">CASE STUDY</div>
+            <h2 style="font-size:1.8rem; font-weight:700; color:var(--text); margin-bottom:0.75rem;" data-fr="Comment j'ai aidé un client à récupérer 6 mois sur un complexe résidentiel de 120 M$ — et économiser plus de 500 000 $.">How I Helped a Client Recover 6 Months on a $120M Residential Complex — and Save Over $500K.</h2>
+            <p style="color:var(--muted); font-size:1rem; line-height:1.7; margin-bottom:1.5rem;" data-fr="Le projet dérivait — retards en cascade, dépassements de coûts, parties prenantes désalignées. En quelques semaines, nous avons récupéré le calendrier complet et identifié plus d'un demi-million en économies. Voici exactement comment.">The project was drifting — compounding delays, cost overruns, misaligned stakeholders. Within weeks, we recovered the full schedule and identified over half a million in savings. Here's exactly how.</p>
+            <form id="case-study-gate" style="display:flex; gap:0.75rem; flex-wrap:wrap; justify-content:center; max-width:440px; margin:0 auto;" onsubmit="return caseStudyGate(this)">
+                <input type="email" name="email" required placeholder="Your email" style="flex:1; min-width:200px; padding:0.75rem 1rem; border:1px solid rgba(207,181,59,0.3); background:rgba(255,255,255,0.05); color:var(--text); font-family:'Inter',sans-serif; font-size:0.9rem; border-radius:2px;" />
+                <button type="submit" style="padding:0.75rem 1.5rem; background:var(--gold); color:var(--bg); font-family:'JetBrains Mono',monospace; font-size:0.8rem; font-weight:700; letter-spacing:0.05em; text-transform:uppercase; border:none; cursor:pointer; white-space:nowrap;" data-fr="Télécharger l'étude">Get the Case Study</button>
+            </form>
+            <p style="margin-top:0.5rem; font-size:0.7rem; color:var(--muted); opacity:0.6;" data-fr="PDF gratuit. Pas de pourriel. Vos données restent confidentielles.">Free PDF. No spam. Your data stays confidential.</p>
+        </div>
+    </section>
+    <script>
+    function caseStudyGate(form){
+        var email=form.email.value;
+        fetch('https://hook.us2.make.com/i4uhmlwxodqjczpbo3ydgi8a826a1myq',{
+            method:'POST',headers:{'Content-Type':'application/json'},
+            body:JSON.stringify({email:email,source:'case-study-gate',name:''})
+        }).then(function(){
+            form.innerHTML='<p style="color:var(--gold);font-weight:600;margin:0;">Check your inbox — downloading now.</p>';
+            window.open('assets/IBPROM-Case-Study-120M-Residential.pdf','_blank');
+        }).catch(function(){
+            window.open('assets/IBPROM-Case-Study-120M-Residential.pdf','_blank');
+        });
+        return false;
+    }
+    </script>
+
     <section class="proof">
         <div class="proof-inner">
             <div class="proof-header">
