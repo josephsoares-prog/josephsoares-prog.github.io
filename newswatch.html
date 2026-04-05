@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/favicon.ico">
+    <title>The Daily Brief | Corridor Intelligence</title>
+    <meta name="description" content="The Daily Brief — BLUF intelligence on global politics, markets, defence, technology, and natural resources. Modeled on the President's Daily Brief. By Joseph Soares.">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "The Daily Brief — Corridor Intelligence",
+      "url": "https://josephsoares.com/newswatch",
+      "description": "Daily intelligence briefing for decision-makers. BLUF-first analysis of global politics, markets, defence, technology, natural resources, and logistics.",
+      "inLanguage": ["en", "fr"],
+      "author": {
+        "@type": "Person",
+        "name": "Joseph Soares",
+        "url": "https://josephsoares.com"
+      }
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Sans+3:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #0b1a2e;
+            --navy-mid: #0f2240;
+            --navy-light: #132d54;
+            --gold: #c9a84c;
+            --gold-light: #dfc07a;
+            --gold-muted: rgba(201, 168, 76, 0.12);
+            --cream: #f5f1eb;
+            --white: #ffffff;
+            --text-dark: #1a1a2e;
+            --text-mid: #4a4a5a;
+            --text-light: rgba(255,255,255,0.75);
+            --border-light: rgba(201, 168, 76, 0.2);
+            --live-green: #2ecc71;
+            --pdb-bg: #080f1a;
+            --pdb-card: #0c1829;
+            --pdb-border: rgba(201, 168, 76, 0.15);
+            --pdb-accent: #1a3050;
+            --classified-red: #c0392b;
+            --mono: 'JetBrains Mono', 'Courier New', monospace;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Source Sans 3', -apple-system, sans-serif;
+            color: var(--text-light);
+            background: var(--pdb-bg);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ===== LANG SWITCHER ===== */
+        .lang-bar {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 200;
+            background: #04080f;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 0 40px;
+            height: 32px;
+            border-bottom: 1px solid rgba(201, 168, 76, 0.08);
+        }
+        .lang-bar button {
+            background: none; border: none; cursor: pointer;
+            font-family: var(--mono);
+            font-size: 10px; font-weight: 500;
+            letter-spacing: 2px; text-transform: uppercase;
+            color: rgba(255,255,255,0.3);
+            padding: 6px 12px; transition: color 0.3s;
+        }
+        .lang-bar button:hover { color: var(--gold-light); }
+        .lang-bar button.active { color: var(--gold); }
+        .lang-bar .lang-sep { color: rgba(255,255,255,0.1); font-size: 11px; }
+
+        /* ===== NAV ===== */
+        nav {
+            position: fixed; top: 32px; left: 0; right: 0; z-index: 100;
+            background: rgba(8, 15, 26, 0.97);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--pdb-border);
+            padding: 0 40px;
+        }
+        .nav-inner {
+            max-width: 1400px; margin: 0 auto;
+            display: flex; justify-content: space-between; align-items: center; height: 64px;
+        }
+        .nav-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 22px; font-weight: 700; color: var(--white);
+            text-decoration: none; letter-spacing: 0.02em;
+        }
+        .nav-name span { color: var(--gold); }
+        .nav-links { display: flex; gap: 28px; align-items: center; }
+        .nav-links a {
+            color: rgba(255,255,255,0.5); text-decoration: none;
+            font-size: 13px; font-weight: 500; letter-spacing: 0.04em; transition: color 0.3s;
+        }
+        .nav-links a:hover { color: var(--gold); }
+        .nav-links a.nav-active { color: var(--gold); }
+        .nav-cta {
+            background: var(--gold) !important; color: var(--navy) !important;
+            padding: 9px 22px !important; border-radius: 3px;
+            font-weight: 700 !important; font-size: 11px !important;
+            letter-spacing: 0.1em; text-transform: uppercase;
+        }
+        .nav-cta:hover { background: var(--gold-light) !important; }
+        .mobile-toggle {
+            display: none; background: none; border: none; cursor: pointer;
+            flex-direction: column; gap: 5px; padding: 4px;
+        }
+        .mobile-toggle span { display: block; width: 24px; height: 2px; background: var(--white); }
+
+        /* ===== CLASSIFICATION BANNER ===== */
+        .class-banner {
+            margin-top: 96px;
+            background: var(--pdb-accent);
+            border-bottom: 2px solid var(--gold);
+            padding: 14px 40px;
+            display: flex; align-items: center; justify-content: space-between;
+        }
+        .class-banner-left {
+            display: flex; align-items: center; gap: 16px;
+        }
+        .class-label {
+            font-family: var(--mono);
+            font-size: 11px; font-weight: 500;
+            letter-spacing: 3px; text-transform: uppercase;
+            color: var(--gold);
+            background: rgba(201, 168, 76, 0.1);
+            padding: 4px 14px; border: 1px solid var(--gold);
+            border-radius: 2px;
+        }
+        .class-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 24px; font-weight: 700; color: var(--white);
+            letter-spacing: 0.03em;
+        }
+        .class-date {
+            font-family: var(--mono);
+            font-size: 13px; color: rgba(255,255,255,0.5);
+            letter-spacing: 1px;
+        }
+        .live-dot {
+            display: inline-block; width: 8px; height: 8px;
+            background: var(--live-green); border-radius: 50%;
+            margin-right: 8px; animation: pulse-live 1s ease infinite;
+        }
+        @keyframes pulse-live { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+
+        /* ===== BRIEF CONTAINER ===== */
+        .brief-container {
+            max-width: 900px; margin: 0 auto;
+            padding: 40px 40px 100px;
+        }
+
+        /* ===== SECTION HEADER ===== */
+        .section-header {
+            display: flex; align-items: center; gap: 14px;
+            margin: 48px 0 24px; padding-bottom: 12px;
+            border-bottom: 1px solid var(--pdb-border);
+            cursor: pointer; user-select: none;
+        }
+        .section-header:first-child { margin-top: 0; }
+        .section-emoji { font-size: 20px; }
+        .section-title {
+            font-family: var(--mono);
+            font-size: 13px; font-weight: 500;
+            letter-spacing: 3px; text-transform: uppercase;
+            color: var(--gold);
+        }
+        .section-count {
+            font-family: var(--mono);
+            font-size: 11px; color: rgba(255,255,255,0.3);
+            margin-left: auto; letter-spacing: 1px;
+        }
+        .section-toggle {
+            font-size: 14px; color: var(--gold); transition: transform 0.3s;
+        }
+        .section-toggle.collapsed { transform: rotate(-90deg); }
+
+        /* ===== INTELLIGENCE ARTICLE (PDB STYLE) ===== */
+        .intel-article {
+            background: var(--pdb-card);
+            border: 1px solid var(--pdb-border);
+            border-left: 3px solid var(--gold);
+            padding: 24px 28px;
+            margin-bottom: 16px;
+            border-radius: 0 4px 4px 0;
+            transition: border-color 0.3s, background 0.3s;
+        }
+        .intel-article:hover {
+            border-left-color: var(--gold-light);
+            background: #0e1d33;
+        }
+        .intel-meta {
+            display: flex; align-items: center; gap: 10px;
+            margin-bottom: 10px; flex-wrap: wrap;
+        }
+        .intel-tag {
+            font-family: var(--mono);
+            font-size: 10px; font-weight: 500;
+            letter-spacing: 2px; text-transform: uppercase;
+            color: var(--gold);
+            background: rgba(201, 168, 76, 0.1);
+            padding: 2px 10px; border-radius: 2px;
+        }
+        .intel-tag.priority {
+            color: #e74c3c;
+            background: rgba(231, 76, 60, 0.1);
+            border: 1px solid rgba(231, 76, 60, 0.3);
+        }
+        .intel-time {
+            font-family: var(--mono);
+            font-size: 11px; color: rgba(255,255,255,0.3);
+            margin-left: auto;
+        }
+        .intel-headline {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 20px; font-weight: 700; color: var(--white);
+            line-height: 1.3; margin-bottom: 12px;
+        }
+        .intel-headline a {
+            color: var(--white); text-decoration: none;
+            transition: color 0.3s;
+        }
+        .intel-headline a:hover { color: var(--gold); }
+        .intel-bluf {
+            font-size: 15px; line-height: 1.65; color: var(--text-light);
+            margin-bottom: 12px;
+        }
+        .intel-bluf strong { color: var(--gold-light); font-weight: 600; }
+        .intel-source {
+            display: flex; align-items: center; gap: 8px;
+            font-size: 12px; color: rgba(255,255,255,0.3);
+        }
+        .intel-source img {
+            width: 14px; height: 14px; border-radius: 2px; opacity: 0.6;
+        }
+        .intel-source a {
+            color: rgba(255,255,255,0.4); text-decoration: none;
+            transition: color 0.3s;
+        }
+        .intel-source a:hover { color: var(--gold); }
+
+        /* ===== DEEP DIVE ARTICLE ===== */
+        .deep-dive {
+            border-left-color: var(--live-green);
+        }
+        .deep-dive .intel-tag.deep {
+            color: var(--live-green);
+            background: rgba(46, 204, 113, 0.1);
+        }
+
+        /* ===== SOURCES FOOTER ===== */
+        .brief-footer {
+            margin-top: 60px; padding-top: 30px;
+            border-top: 1px solid var(--pdb-border);
+            text-align: center;
+        }
+        .brief-footer p {
+            font-family: var(--mono);
+            font-size: 11px; color: rgba(255,255,255,0.25);
+            letter-spacing: 1px; line-height: 2;
+        }
+        .brief-sig {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 16px; color: var(--gold);
+            margin-top: 16px; font-style: italic;
+        }
+
+        /* ===== SECTION ITEMS CONTAINER ===== */
+        .section-items { }
+        .section-items.collapsed { display: none; }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: #040810;
+            border-top: 1px solid var(--pdb-border);
+            padding: 50px 40px 30px;
+        }
+        .footer-inner {
+            max-width: 1200px; margin: 0 auto;
+            display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px;
+        }
+        .footer-brand {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 20px; font-weight: 700; color: var(--white); margin-bottom: 12px;
+        }
+        .footer-brand span { color: var(--gold); }
+        .footer-tagline {
+            font-size: 14px; color: rgba(255,255,255,0.4); line-height: 1.6;
+        }
+        footer h3 {
+            font-family: var(--mono); font-size: 11px;
+            letter-spacing: 2px; text-transform: uppercase;
+            color: var(--gold); margin-bottom: 16px;
+        }
+        footer ul { list-style: none; }
+        footer li { margin-bottom: 8px; }
+        footer a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 14px; transition: color 0.3s; }
+        footer a:hover { color: var(--gold); }
+        .footer-bottom {
+            max-width: 1200px; margin: 30px auto 0;
+            padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.05);
+            text-align: center;
+        }
+        .footer-credit { font-size: 13px; color: rgba(255,255,255,0.25); }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .lang-bar { padding: 0 20px; }
+            nav { padding: 0 20px; }
+            .nav-links { display: none; position: absolute; top: 64px; left: 0; right: 0; background: rgba(8,15,26,0.98); flex-direction: column; padding: 20px; gap: 16px; border-bottom: 1px solid var(--pdb-border); }
+            .nav-links.open { display: flex; }
+            .mobile-toggle { display: flex; }
+            .class-banner { flex-direction: column; gap: 10px; padding: 14px 20px; text-align: center; }
+            .class-banner-left { flex-direction: column; gap: 8px; }
+            .brief-container { padding: 24px 20px 80px; }
+            .intel-article { padding: 18px 20px; }
+            .intel-headline { font-size: 18px; }
+            .footer-inner { grid-template-columns: 1fr; gap: 30px; }
+        }
+
+        /* ===== LANG TOGGLE ===== */
+        [data-fr] { }
+        body.fr [data-en] { display: none !important; }
+        body.fr [data-fr] { display: inline !important; }
+        body:not(.fr) [data-fr] { display: none !important; }
+    </style>
+</head>
+<body>
+
+<!-- Language Bar -->
+<div class="lang-bar">
+    <button class="active" onclick="setLang('en')" id="btn-en">EN</button>
+    <span class="lang-sep">|</span>
+    <button onclick="setLang('fr')" id="btn-fr">FR</button>
+</div>
+
+<!-- Navigation -->
+<nav>
+    <div class="nav-inner">
+        <a href="index.html" class="nav-name">Joseph <span>Soares</span></a>
+        <button class="mobile-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="nav-links">
+            <a href="index.html#who" data-en>Who This Is For</a>
+            <a href="index.html#about" data-en>About</a>
+            <a href="index.html#services" data-en>Services</a>
+            <a href="intelligence.html" data-en>Intelligence</a>
+            <a href="newswatch.html" class="nav-active" data-en>The Daily Brief</a>
+            <a href="podcast.html" data-en>Podcast</a>
+            <a href="https://calendar.app.google/pEyrPMvGY2TuEndcA" class="nav-cta" data-en>Book a Call</a>
+            <a href="index.html" data-fr>Pour Qui</a>
+            <a href="index.html" data-fr>&Agrave; Propos</a>
+            <a href="index.html" data-fr>Services</a>
+            <a href="intelligence.html" data-fr>Intelligence</a>
+            <a href="newswatch.html" class="nav-active" data-fr>The Daily Brief</a>
+            <a href="podcast.html" data-fr>Balado</a>
+            <a href="https://calendar.app.google/pEyrPMvGY2TuEndcA" class="nav-cta" data-fr>R&eacute;server un Appel</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Classification Banner -->
+<div class="class-banner">
+    <div class="class-banner-left">
+        <span class="class-label" data-en>OPEN SOURCE</span>
+        <span class="class-label" data-fr>SOURCE OUVERTE</span>
+        <span class="class-title" data-en>The Daily Brief</span>
+        <span class="class-title" data-fr>Le Briefing Quotidien</span>
+    </div>
+    <div>
+        <span class="live-dot"></span>
+        <span class="class-date" id="brief-date"></span>
+    </div>
+</div>
+
+<!-- Main Brief -->
+<div class="brief-container">
+
+    <!-- ============================================ -->
+    <!-- SECTION 1: USA -->
+    <!-- ============================================ -->
+    <div class="section-header" onclick="toggleSection('usa')">
+        <span class="section-emoji">&#127482;&#127480;</span>
+        <span class="section-title" data-en>USA</span>
+        <span class="section-title" data-fr>&Eacute;tats-Unis</span>
+        <span class="section-count">6 sources</span>
+        <span class="section-toggle" id="toggle-usa">&#9662;</span>
+    </div>
+    <div class="section-items" id="items-usa">
+
+        <div class="intel-article">
+            <div class="intel-meta">
+                <span class="intel-tag">POLITICS</span>
+                <span class="intel-time">Latest</span>
+            </div>
+            <div class="intel-headline"><a href="https://thehill.com" target="_blank" data-en>The Hill &mdash; Political News &amp; Policy</a><a href="https://thehill.com" target="_blank" data-fr>The Hill &mdash; Politique am&eacute;ricaine</a></div>
+            <div class="intel-bluf" data-en><strong>BLUF:</strong> Congressional and White House coverage with real-time legislative tracking. Primary source for US political intelligence.</div>
+            <div class="intel-bluf" data-fr><strong>ESSENTIEL :</strong> Couverture du Congr&egrave;s et de la Maison-Blanche avec suivi l&eacute;gislatif en temps r&eacute;el.</div>
+            <div class="intel-source"><img src="https://www.google.com/s2/favicons?domain=thehill.com&sz=32" alt="The Hill"> <a href="https://thehill.com" target="_blank">thehill.com</a></div>
+        </div>
+
+        <div class="intel-article">
+            <div class="intel-meta">
+                <span class="intel-tag">BUSINESS</span>
+                <span class="intel-time">Latest</span>
+            </div>
+            <div class="intel-headline"><a href="https://forbes.com" target="_blank">Forbes &mdash; Business, Finance &amp; Industry</a></div>
+            <div class="intel-bluf" data-en><strong>BLUF:</strong> Wealth creation, entrepreneurship, and business strategy intelligence. Tracking the decisions shaping the American economy.</div>
+            <div class="intel-bluf" data-fr><strong>ESSENTIEL :</strong> Cr&eacute;ation de richesse, entrepreneuriat et strat&eacute;gie d&rsquo;affaires. D&eacute;cisions qui fa&ccedil;onnent l&rsquo;&eacute;conomie am&eacute;ricaine.</div>
+            <div class="intel-source"><img src="https://www.google.com/s2/favicons?domain=forbes.com&sz=32" alt="Forbes"> <a href="https://forbes.com" target="_blank">forbes.com</a></div>
+        </div>
+
+        <div class="intel-article">
+            <div class="intel-meta">
+                <span class="intel-tag">ANALYSIS</span>
+                <span class="intel-time">Latest</span>
+            </div>
+            <div class="intel-headline"><a href="https://newsweek.com" target="_blank">Newsweek &mdash; News, Analysis &amp; Opinion</a></div>
+            <div class="intel-bluf" data-en><strong>BLUF:</strong> National and international affairs from one of America&rsquo;s legacy newsrooms. Politics, culture, and investigative reporting.</div>
+            <div class="intel-bluf" data-fr><strong>ESSENTIEL :</strong> Affaires nationales et internationales. Politique, culture et journalisme d&rsquo;enqu&ecirc;te.</div>
+            <div class="intel-source"><img src="https://www.google.com/s2/favicons?domain=newsweek.com&sz=32" alt="Newsweek"> <a href="https://newsweek.com" target="_blank">newsweek.com</a></div>
+        </div>
+
+        <div class="intel-article">
+            <div class="intel-meta">
+                <span class="intel-tag">MARKETS</span>
+                <span class="intel-time">Latest</span>
+            </div>
+            <div class="intel-headline"><a href="https://wsj.com" target="_blank">Wall Street Journal &mdash; Markets, Finance &amp; Economic Policy</a></div>
+            <div class="intel-bluf" data-en><strong>BLUF:</strong> The definitive source for financial markets, business strategy, and economic policy. Required reading for capital allocation decisions.</div>
+            <div class="intel-bluf" data-fr><strong>ESSENTIEL :</strong> Source d&eacute;finitive pour les march&eacute;s financiers, la strat&eacute;gie d&rsquo;affaires et la politique &eacute;conomique.</div>
+            <div class="intel-source"><img src="https://www.google.com/s2/favicons?domain=wsj.com&sz=32" alt="WSJ"> <a href="https://wsj.com" target="_blank">wsj.com</a></div>
+        </div>
+
+        <div class="intel-article">
+            <div class="intel-meta">
+                <span class="intel-tag">MARKETS</span>
+                <span class="intel-time">Latest</span>
+            </div>
+            <div class="intel-headline"><a href="https://cnbc.com" target="_blank">CNBC &mdash; Business &amp; Market Intelligence</a></div>
+            <div class="intel-bluf" data-en><strong>BLUF:</strong> Real-time market data, corporate earnings, and economic indicators. Primary feed for financial situational awareness.</div>
+            <div class="intel-bluf" data-fr><strong>ESSENTIEL :</strong> Donn&eacute;es de march&eacute; en temps r&eacute;el, r&eacute;sultats d&rsquo;entreprises et indicateurs &eacute;conomiques.</div>
+            <div class="intel-source"><img src="https://www.google.com/s2/favicons?domain=cnbc.com&sz=32" alt="CNBC"> <a href="https://cnbc.com" target="_blank">cnbc.com</a></div>
+        </div>
+
+        <div class="intel-article">
+            <div class="intel-meta">
+                <span class="intel-tag">WIRE</span>
+                <span class="intel-time">Latest</span>
+            </div>
+            <div class="intel-headline"><a href="https://reuters.com" target="_blank">Thomson Reuters &mdash; Global Wire Intelligence</a></div>
+            <div class="intel-bluf" data-en><strong>BLUF:</strong> Institutional-grade global wire service. Markets, geopolitics, and business intelligence with verified sourcing.</div>
+            <div class="intel-bluf" data-fr><strong>ESSENTIEL :</strong> Service de fil de presse mondial de calibre institutionnel. March&eacute;s, g&eacute;opolitique et renseignement commercial.</div>
+            <div class="intel-source"><img src="https://www.google.com/s2/favicons?domain=reuters.com&sz=32" alt="Reuters"> <a href="https://reuters.com" target="_blank">reuters.com</a></div>
+        </div>
+
+    </div>
+
+    <!-- ============================================ -->
+    <!-- SECTION 2: ENGLISH CANADA -->
+    <!-- ============================================ -->
+    <div class="section-header" onclick="toggleSection('encanada')">
+        <span class="section-emoji">&#127464;&#127462;</span>
+        <span class="section-title" data-en>English Canada</span>
+        <span class="section-title" data-fr>Canada anglais</span>
+        <span class="section-count">6 sources</span>
+        <span class="section-toggle" id="toggle-encanada">&#9662;</span>
+    </div>
+    <div class="section-items" id="items-encanada">
+
+        <div class="intel-article">
+            <div class="intel-meta"><span class="intel-tag">NATIONAL</span><span class="intel-time">Latest</span></div>
+            <div class="intel-headline"><a href="https://cbc.ca" target="_blank">CBC &mdash; National News</a></div>
+            <div class="intel-bluf" data-en><strong>BLUF:</strong> Canada&rsquo;s public broadcaster. Federal politics, provincial affairs, and national developments. Primary English-language source.</div>
+            <div class="intel-bluf" data-fr><strong>ESSENTIEL :</strong> Radiodiffuseur public du Canada. Politique f&eacute;d&eacute;rale, affaires provinciales et d&eacute;veloppements nationaux.</div>
+            <div class="intel-source"><img src="https://www.google.com/s2/favicons?domain=cbc.ca&sz=32" alt="CBC"> <a href="https://cbc.ca" target="_blank">cbc.ca</a></div>
+        </div>
+
+        <div class="intel-article">
+            <div class="intel-meta"><span class="intel-tag">WIRE</span><span class="intel-time">Latest</span></div>
+            <div class="intel-headline"><a href="https://thecanadianpress.com" target="_blank">Canadian Press &mdash; National Wire Service</a></div>
+            <div class="intel-bluf" data-en><strong>BLUF:</strong> Canada&rsquo;s national news agency. Breaking coverage of federal politics, provincial affairs, and national events across all regions.</div>
+            <div class="intel-bluf" data-fr><strong>ESSENTIEL :</strong> Agence de presse nationale du Canada. Couverture de la politique f&eacute;d&eacute;rale et des affaires provinciales.</div>
+            <div class="intel-source"><img src="https://www.google.com/s2/favicons?domain=thecanadianpress.com&sz=32" alt="CP"> <a href="https://thecanadianpress.com" target="_blank">thecanadianpress.com</a></div>
+        </div>
+
+        <div class="intel-article">
+            <div class="intel-meta"><span class="intel-tag">OPINION</span><span class="intel-time">Latest</span></div>
+            <div class="intel-headline"><a href="https://nationalpost.com" target="_blank">National Post &mdash; Canadian News, Politics &amp; Opinion</a></div>
+            <div class="intel-bluf" data-en><strong>BLUF:</strong> National affairs and opinion from Canada&rsquo;s leading centre-right broadsheet. Business, politics, and investigative journalism.</div>
+            <div class="intel-bluf" data-fr><strong>ESSENTIEL :</strong> Affaires nationales et opinions du principal quotidien de centre-droit du Canada.</div>
+            <div class="intel-source"><img src="https://www.google.com/s2/favicons?domain=nationalpost.com&sz=32" alt="NP"> <a href="https://nationalpost.com" target="_blank">nationalpost.com</a></div>
+        </div>
+
+        <div class="intel-article">
+            <div class="intel-meta"><span class="intel-tag">POLICY</span><span class="intel-time">Latest</span></div>
+            <div class="intel-headline"><a href="https://policyoptions.irpp.org" target="_blank">Policy Options (IRPP) &mdash; Canadian Public Policy Analysis</a></div>
+            <div class="intel-bluf" data-en><strong>BLUF:</strong> In-depth policy analysis from the Institute for Research on Public Policy. Federal and provincial governance, economics, and social policy.</div>
+            <div class="intel-bluf" data-fr><strong>ESSENTIEL :</strong> Analyse approfondie des politiques publiques de l&rsquo;IRPP. Gouvernance f&eacute;d&eacute;rale et provinciale.</div>
+            <div class="intel-source"><img src="https://www.google.com/s2/favicons?domain=policyoptions.irpp.org&sz=32" alt="IRPP"> <a href="https://policyoptions.irpp.org" target="_blank">policyoptions.irpp.org</a></div>
+        </div>
+
+        <div class="intel-article">
+            <div class="intel-meta"><span class="intel-tag">PARLIAMENT</span><span class="intel-time">Latest</span></div>
+            <div class="intel-headline"><a href="https://hilltimes.com" target="_blank">The Hill Times &mdash; Parliament Hill Insider Intelligence</a></div>
+            <div class="intel-bluf" data-en><strong>BLUF:</strong> Canada&rsquo;s politics and government newspaper. Insider coverage of Parliament, Cabinet, committees, and the federal bureaucracy.</div>
+            <div class="intel-bluf" data-fr><strong>ESSENTIEL :</strong> Journal politique et gouvernemental du Canada. Couverture privil&eacute;gi&eacute;e du Parlement et du Cabinet.</div>
+            <div class="intel-source"><img src="https://www.google.com/s2/favicons?domain=hilltimes.com&sz=32" alt="HT"> <a href="https://hilltimes.com" target="_blank">hilltimes.com</a></div>
+        </div>
+
+        <div class="intel-article">
+            <div class="intel-meta"><span class="intel-tag">ECONOMICS</span><span class="intel-time">Latest</span></div>
+            <div class="intel-headline"><a href="https://financialpost.com" target="_blank">Financial Post &mdash; Canadian Business &amp; Markets</a></div>
+            <div class="intel-bluf" data-en><strong>BLUF:</strong> Canadian business, markets, and economic intelligence. Corporate developments, energy sector, and financial regulation.</div>
+            <div class="intel-bluf" data-fr><strong>ESSENTIEL :</strong> Affaires canadiennes, march&eacute;s et renseignement &eacute;conomique. Secteur &eacute;nerg&eacute;tique et r&eacute;glementation financi&egrave;re.</div>
+            <div class="intel-source"><img src="https://www.google.com/s2/favicons?domain=financialpost.com&sz=32" alt="FP"> <a href="https://financialpost.com" target="_blank">financialpost.com</a></div>
+        </div>
+
+    </div>
+
+    <!-- ============================================ -->
+    <!-- SECTION 3: FRENCH CANADA -->
+    <!-- ============================================ -->
+    <div class="section-header" onclick="toggleSection('frcanada')">
+        <span class="section-emoji">&#9884;&#65039;</span>
+        <span class="section-title" data-en>French Canada</span>
+        <span class="section-title" data-fr>Canada fran&ccedil;ais</span>
+        <span class="section-count">3 sources</span>
+        <span class="section-toggle" id="toggle-frcanada">&#9662;</span>
+    </div>
+    <div class="section-items" id="items-frcanada">
+
+        <div class="intel-article">
+            <div class="intel-meta"><span class="intel-tag">QU&Eacute;BEC</span><span class="intel-time">Latest</span></div>
+            <div class="intel-headline"><a href="https://lapresse.ca" target="_blank">La Presse &mdash; Actualit&eacute;s et politique</a></div>
+            <div class="intel-bluf" data-en><strong>BLUF:</strong> Quebec&rsquo;s largest French-language daily. Provincial politics, national affairs, and francophone community intelligence across Canada.</div>
+            <div class="intel-bluf" data-fr><strong>ESSENTIEL :</strong> Plus grand quotidien francophone du Qu&eacute;bec. Politique provinciale, affaires nationales et communaut&eacute;s francophones.</div>
+            <div class="intel-source"><img src="https://www.google.com/s2/favicons?domain=lapresse.ca&sz=32" alt="LP"> <a href="https://lapresse.ca" target="_blank">lapresse.ca</a></div>
+        </div>
+
+        <div class="intel-article">
+            <div class="intel-meta"><span class="intel-tag">NATIONAL</span><span class="intel-time">Latest</span></div>
+            <div class="intel-headline"><a href="https://ici.radio-canada.ca" target="_blank">Radio-Canada &mdash; Nouvelles</a></div>
+            <div class="intel-bluf" data-en><strong>BLUF:</strong> French-language public broadcaster. Federal politics, Quebec affairs, and francophone communities in New Brunswick, Manitoba, and Ontario.</div>
+            <div class="intel-bluf" data-fr><strong>ESSENTIEL :</strong> Radiodiffuseur public francophone. Politique f&eacute;d&eacute;rale, affaires qu&eacute;b&eacute;coises et communaut&eacute;s francophones du N.-B., Manitoba et Ontario.</div>
+            <div class="intel-source"><img src="https://www.google.com/s2/favicons?domain=ici.radio-canada.ca&sz=32" alt="RC"> <a href="https://ici.radio-canada.ca" target="_blank">ici.radio-canada.ca</a></div>
+        </div>
+
+        <div class="intel-article">
+            <div class="intel-meta"><span class="intel-tag">OPINION</span><span class="intel-time">Latest</span></div>
+            <div class="intel-headline"><a href="https://ledevoir.com" target="_blank">Le Devoir &mdash; Analyse et opinion</a></div>
+            <div class="intel-bluf" data-en><strong>BLUF:</strong> Independent francophone daily. Deep analysis of Quebec nationalism, federal-provincial relations, culture, and social policy.</div>
+            <div class="intel-bluf" data-fr><strong>ESSENTIEL :</strong> Quotidien francophone ind&eacute;pendant. Analyse approfondie du nationalisme qu&eacute;b&eacute;cois et des relations f&eacute;d&eacute;rales-provinciales.</div>
+            <div class="intel-source"><img src="https://www.google.com/s2/favicons?domain=ledevoir.com&sz=32" alt="LD"> <a href="https://ledevoir.com" target="_blank">ledevoir.com</a></div>
+        </div>
+
+    </div>
+
+    <!-- ============================================ -->
+    <!-- SECTION 4: WORLD / GEOPOLITICS -->
+    <!-- ============================================ -->
+    <div class="section-header" onclick="toggleSection('world')">
+        <span class="section-emoji">&#127758;</span>
+        <span class="section-title" data-en>World / Geopolitics</span>
+        <span class="section-title" data-fr>Monde / G&eacute;opolitique</span>
+        <span class="section-count">4 sources</span>
+        <span class="section-toggle" id="toggle-world">&#9662;</span>
+    </div>
+    <div class="section-items" id="items-world">
+
+        <div class="intel-article">
+            <div class="intel-meta"><span class="intel-tag">WIRE</span><span class="intel-time">Latest</span></div>
+            <div class="intel-headline"><a href="https://reuters.com/world" target="_blank">Reuters World &mdash; Global Affairs</a></div>
+            <div class="intel-bluf" data-en><strong>BLUF:</strong> Global geopolitical developments, diplomatic movements, and international conflict. Wire-speed coverage from every theatre.</div>
+            <div class="intel-bluf" data-fr><strong>ESSENTIEL :</strong> D&eacute;veloppements g&eacute;opolitiques mondiaux, mouvements diplomatiques et conflits internationaux.</div>
+            <div class="intel-source"><img src="https://www.google.com/s2/favicons?domain=reuters.com&sz=32" alt="Reuters"> <a href="https://reuters.com/world" target="_blank">reuters.com/world</a></div>
+        </div>
+
+        <div class="intel-article">
+            <div class="intel-meta"><span class="intel-tag">ANALYSIS</span><span class="intel-time">Latest</span></div>
+            <div class="intel-headline"><a href="https://foreignaffairs.com" target="_blank">Foreign Affairs &mdash; Strategic Analysis</a></div>
+            <div class="intel-bluf" data-en><strong>BLUF:</strong> The Council on Foreign Relations&rsquo; flagship publication. Deep analysis of international relations, grand strategy, and global order.</div>
+            <div class="intel-bluf" data-fr><strong>ESSENTIEL :</strong> Publication phare du Council on Foreign Relations. Analyse approfondie des relations internationales et de la strat&eacute;gie mondiale.</div>
+            <div class="intel-source"><img src="https://www.google.com/s2/favicons?domain=foreignaffairs.com&sz=32" alt="FA"> <a href="https://foreignaffairs.com" target="_blank">foreignaffairs.com</a></div>
+        </div>
+
+        <div class="intel-article">
+            <div class="intel-meta"><span class="intel-tag">EUROPE</span><span class="intel-time">Latest</span></div>
+            <div class="intel-headline"><a href="https://bbc.com/news/world" target="_blank">BBC World &mdash; International News</a></div>
+            <div class="intel-bluf" data-en><strong>BLUF:</strong> Global coverage from Britain&rsquo;s public broadcaster. Regional depth in Europe, Middle East, Africa, and Asia-Pacific.</div>
+            <div class="intel-bluf" data-fr><strong>ESSENTIEL :</strong> Couverture mondiale du radiodiffuseur public britannique. Profondeur r&eacute;gionale en Europe, Moyen-Orient, Afrique et Asie-Pacifique.</div>
+            <div class="intel-source"><img src="https://www.google.com/s2/favicons?domain=bbc.com&sz=32" alt="BBC"> <a href="https://bbc.com/news/world" target="_blank">bbc.com/news/world</a></div>
+        </div>
+
+        <div class="intel-article">
+            <div class="intel-meta"><span class="intel-tag">INTELLIGENCE</span><span class="intel-time">Latest</span></div>
+            <div class="intel-headline"><a href="https://economist.com" target="_blank">The Economist &mdash; Global Intelligence</a></div>
+            <div class="intel-bluf" data-en><strong>BLUF:</strong> Macro-level analysis of global economics, politics, and markets. Required reading for anyone making cross-border decisions.</div>
+            <div class="intel-bluf" data-fr><strong>ESSENTIEL :</strong> Analyse macro de l&rsquo;&eacute;conomie mondiale, de la politique et des march&eacute;s. Lecture indispensable pour les d&eacute;cisions transfrontali&egrave;res.</div>
+            <div class="intel-source"><img src="https://www.google.com/s2/favicons?domain=economist.com&sz=32" alt="Economist"> <a href="https://economist.com" target="_blank">economist.com</a></div>
+        </div>
+
+    </div>
+
+    <!-- ============================================ -->
+    <!-- SECTION 5: MARKETS / ECONOMY -->
+    <!-- ============================================ -->
+    <div class="section-header" onclick="toggleSection('markets')">
+        <span class="section-emoji">&#128200;</span>
+        <span class="section-title" data-en>Markets / Economy</span>
+        <span class="section-title" data-fr>March&eacute;s / &Eacute;conomie</span>
+        <span class="section-count">4 sources</span>
+        <span class="section-toggle" id="toggle-markets">&#9662;</span>
+    </div>
+    <div class="section-items" id="items-markets">
+
+        <div class="intel-article">
+            <div class="intel-meta"><span class="intel-tag">MARKETS</span><span class="intel-time">Latest</span></div>
+            <div class="intel-headline"><a href="https://bloomberg.com" target="_blank">Bloomberg &mdash; Markets &amp; Financial Data</a></div>
+            <div class="intel-bluf" data-en><strong>BLUF:</strong> Real-time financial data, corporate intelligence, and economic analysis. The terminal of record for global capital markets.</div>
+            <div class="intel-bluf" data-fr><strong>ESSENTIEL :</strong> Donn&eacute;es financi&egrave;res en temps r&eacute;el, renseignement corporatif et analyse &eacute;conomique.</div>
+            <div class="intel-source"><img src="https://www.google.com/s2/favicons?domain=bloomberg.com&sz=32" alt="Bloomberg"> <a href="https://bloomberg.com" target="_blank">bloomberg.com</a></div>
+        </div>
+
+        <div class="intel-article">
+            <div class="intel-meta"><span class="intel-tag">CENTRAL BANKS</span><span class="intel-time">Latest</span></div>
+            <div class="intel-headline"><a href="https://ft.com" target="_blank">Financial Times &mdash; Global Finance &amp; Policy</a></div>
+            <div class="intel-bluf" data-en><strong>BLUF:</strong> Global finance, monetary policy, and corporate strategy. Essential for understanding central bank decisions and capital flows.</div>
+            <div class="intel-bluf" data-fr><strong>ESSENTIEL :</strong> Finance mondiale, politique mon&eacute;taire et strat&eacute;gie corporative. Essentiel pour comprendre les banques centrales.</div>
+            <div class="intel-source"><img src="https://www.google.com/s2/favicons?domain=ft.com&sz=32" alt="FT"> <a href="https://ft.com" target="_blank">ft.com</a></div>
+        </div>
+
+        <div class="intel-article">
+            <div class="intel-meta"><span class="intel-tag">TRADE</span><span class="intel-time">Latest</span></div>
+            <div class="intel-headline"><a href="https://marketwatch.com" target="_blank">MarketWatch &mdash; Stock Market &amp; Economic Data</a></div>
+            <div class="intel-bluf" data-en><strong>BLUF:</strong> Market analysis, earnings coverage, and economic indicators. Accessible financial intelligence for non-specialists.</div>
+            <div class="intel-bluf" data-fr><strong>ESSENTIEL :</strong> Analyse des march&eacute;s, couverture des r&eacute;sultats et indicateurs &eacute;conomiques.</div>
+            <div class="intel-source"><img src="https://www.google.com/s2/favicons?domain=marketwatch.com&sz=32" alt="MW"> <a href="https://marketwatch.com" target="_blank">marketwatch.com</a></div>
+        </div>
+
+        <div class="intel-article">
+            <div class="intel-meta"><span class="intel-tag">ENERGY</span><span class="intel-time">Latest</span></div>
+            <div class="intel-headline"><a href="https://oilprice.com" target="_blank">OilPrice.com &mdash; Energy Markets &amp; Commodities</a></div>
+            <div class="intel-bluf" data-en><strong>BLUF:</strong> Energy market intelligence, commodity pricing, and resource geopolitics. Critical for understanding the intersection of energy and power.</div>
+            <div class="intel-bluf" data-fr><strong>ESSENTIEL :</strong> Renseignement sur les march&eacute;s &eacute;nerg&eacute;tiques, tarification des commodit&eacute;s et g&eacute;opolitique des ressources.</div>
+            <div class="intel-source"><img src="https://www.google.com/s2/favicons?domain=oilprice.com&sz=32" alt="OilPrice"> <a href="https://oilprice.com" target="_blank">oilprice.com</a></div>
+        </div>
+
+    </div>
+
+    <!-- ============================================ -->
+    <!-- SECTION 6: DEFENCE / SECURITY -->
+    <!-- ============================================ -->
+    <div class="section-header" onclick="toggleSection('defence')">
+        <span class="section-emoji">&#128737;&#65039;</span>
+        <span class="section-title" data-en>Defence / Security</span>
+        <span class="section-title" data-fr>D&eacute;fense / S&eacute;curit&eacute;</span>
+        <span class="section-count">4 sources</span>
+        <span class="section-toggle" id="toggle-defence">&#9662;</span>
+    </div>
+    <div class="section-items" id="items-defence">
+
+        <div class="intel-article">
+            <div class="intel-meta"><span class="intel-tag">PENTAGON</span><span class="intel-time">Latest</span></div>
+            <div class="intel-headline"><a href="https://defenseone.com" target="_blank">Defense One &mdash; US Defense &amp; National Security</a></div>
+            <div class="intel-bluf" data-en><strong>BLUF:</strong> Pentagon policy, military operations, and national security strategy. Primary source for US defence intelligence.</div>
+            <div class="intel-bluf" data-fr><strong>ESSENTIEL :</strong> Politique du Pentagone, op&eacute;rations militaires et strat&eacute;gie de s&eacute;curit&eacute; nationale.</div>
+            <div class="intel-source"><img src="https://www.google.com/s2/favicons?domain=defenseone.com&sz=32" alt="D1"> <a href="https://defenseone.com" target="_blank">defenseone.com</a></div>
+        </div>
+
+        <div class="intel-article">
+            <div class="intel-meta"><span class="intel-tag">ALLIANCE</span><span class="intel-time">Latest</span></div>
+            <div class="intel-headline"><a href="https://janes.com" target="_blank">Jane&rsquo;s &mdash; Defence &amp; Security Intelligence</a></div>
+            <div class="intel-bluf" data-en><strong>BLUF:</strong> Institutional-grade defence intelligence. Weapons systems, force structures, and threat assessments used by NATO governments.</div>
+            <div class="intel-bluf" data-fr><strong>ESSENTIEL :</strong> Renseignement de d&eacute;fense de calibre institutionnel. Syst&egrave;mes d&rsquo;armes et &eacute;valuations de menaces utilis&eacute;s par les gouvernements de l&rsquo;OTAN.</div>
+            <div class="intel-source"><img src="https://www.google.com/s2/favicons?domain=janes.com&sz=32" alt="Janes"> <a href="https://janes.com" target="_blank">janes.com</a></div>
+        </div>
+
+        <div class="intel-article">
+            <div class="intel-meta"><span class="intel-tag">NATO</span><span class="intel-time">Latest</span></div>
+            <div class="intel-headline"><a href="https://breakingdefense.com" target="_blank">Breaking Defense &mdash; Military &amp; Procurement</a></div>
+            <div class="intel-bluf" data-en><strong>BLUF:</strong> Defence procurement, military technology, and alliance politics. Tracking the industrial base behind military power.</div>
+            <div class="intel-bluf" data-fr><strong>ESSENTIEL :</strong> Approvisionnement de d&eacute;fense, technologie militaire et politique d&rsquo;alliance.</div>
+            <div class="intel-source"><img src="https://www.google.com/s2/favicons?domain=breakingdefense.com&sz=32" alt="BD"> <a href="https://breakingdefense.com" target="_blank">breakingdefense.com</a></div>
+        </div>
+
+        <div class="intel-article">
+            <div class="intel-meta"><span class="intel-tag">CYBER</span><span class="intel-time">Latest</span></div>
+            <div class="intel-headline"><a href="https://therecord.media" target="_blank">The Record &mdash; Cybersecurity Intelligence</a></div>
+            <div class="intel-bluf" data-en><strong>BLUF:</strong> Cyber threat intelligence, state-sponsored hacking, and digital security. The emerging fifth domain of warfare.</div>
+            <div class="intel-bluf" data-fr><strong>ESSENTIEL :</strong> Renseignement sur les cybermenaces, piratage &eacute;tatique et s&eacute;curit&eacute; num&eacute;rique.</div>
+            <div class="intel-source"><img src="https://www.google.com/s2/favicons?domain=therecord.media&sz=32" alt="Record"> <a href="https://therecord.media" target="_blank">therecord.media</a></div>
+        </div>
+
+    </div>
+
+    <!-- ============================================ -->
+    <!-- SECTION 7: TECHNOLOGY & INNOVATION -->
+    <!-- ============================================ -->
+    <div class="section-header" onclick="toggleSection('tech')">
+        <span class="section-emoji">&#129302;</span>
+        <span class="section-title" data-en>Technology &amp; Innovation</span>
+        <span class="section-title" data-fr>Technologie &amp; Innovation</span>
+        <span class="section-count">5 sources</span>
+        <span class="section-toggle" id="toggle-tech">&#9662;</span>
+    </div>
+    <div class="section-items" id="items-tech">
+
+        <div class="intel-article">
+            <div class="intel-meta"><span class="intel-tag priority">AI</span><span class="intel-time">Latest</span></div>
+            <div class="intel-headline"><a href="https://techcrunch.com/category/artificial-intelligence/" target="_blank">TechCrunch AI &mdash; Artificial Intelligence</a></div>
+            <div class="intel-bluf" data-en><strong>BLUF:</strong> AI developments, funding rounds, and product launches. Tracking the technology reshaping every industry and government function.</div>
+            <div class="intel-bluf" data-fr><strong>ESSENTIEL :</strong> D&eacute;veloppements en IA, rondes de financement et lancements de produits. La technologie qui transforme chaque industrie.</div>
+            <div class="intel-source"><img src="https://www.google.com/s2/favicons?domain=techcrunch.com&sz=32" alt="TC"> <a href="https://techcrunch.com" target="_blank">techcrunch.com</a></div>
+        </div>
+
+        <div class="intel-article">
+            <div class="intel-meta"><span class="intel-tag">DEEP TECH</span><span class="intel-time">Latest</span></div>
+            <div class="intel-headline"><a href="https://technologyreview.com" target="_blank">MIT Technology Review &mdash; Emerging Technology</a></div>
+            <div class="intel-bluf" data-en><strong>BLUF:</strong> MIT&rsquo;s technology intelligence publication. AI, biotech, energy tech, and computing breakthroughs with long-range strategic implications.</div>
+            <div class="intel-bluf" data-fr><strong>ESSENTIEL :</strong> Publication de renseignement technologique du MIT. IA, biotech et perc&eacute;es &eacute;nerg&eacute;tiques aux implications strat&eacute;giques.</div>
+            <div class="intel-source"><img src="https://www.google.com/s2/favicons?domain=technologyreview.com&sz=32" alt="MIT"> <a href="https://technologyreview.com" target="_blank">technologyreview.com</a></div>
+        </div>
+
+        <div class="intel-article">
+            <div class="intel-meta"><span class="intel-tag">ENTERPRISE</span><span class="intel-time">Latest</span></div>
+            <div class="intel-headline"><a href="https://wired.com" target="_blank">Wired &mdash; Technology &amp; Culture</a></div>
+            <div class="intel-bluf" data-en><strong>BLUF:</strong> Technology&rsquo;s intersection with business, culture, and politics. Long-form reporting on the forces shaping the digital economy.</div>
+            <div class="intel-bluf" data-fr><strong>ESSENTIEL :</strong> Intersection de la technologie avec les affaires, la culture et la politique.</div>
+            <div class="intel-source"><img src="https://www.google.com/s2/favicons?domain=wired.com&sz=32" alt="Wired"> <a href="https://wired.com" target="_blank">wired.com</a></div>
+        </div>
+
+        <div class="intel-article">
+            <div class="intel-meta"><span class="intel-tag">INFRASTRUCTURE</span><span class="intel-time">Latest</span></div>
+            <div class="intel-headline"><a href="https://arstechnica.com" target="_blank">Ars Technica &mdash; Technology Policy &amp; Infrastructure</a></div>
+            <div class="intel-bluf" data-en><strong>BLUF:</strong> Technical depth on computing infrastructure, telecommunications, and digital policy. The engineering layer beneath the headlines.</div>
+            <div class="intel-bluf" data-fr><strong>ESSENTIEL :</strong> Profondeur technique sur l&rsquo;infrastructure informatique, les t&eacute;l&eacute;communications et la politique num&eacute;rique.</div>
+            <div class="intel-source"><img src="https://www.google.com/s2/favicons?domain=arstechnica.com&sz=32" alt="Ars"> <a href="https://arstechnica.com" target="_blank">arstechnica.com</a></div>
+        </div>
+
+        <div class="intel-article">
+            <div class="intel-meta"><span class="intel-tag">AI RESEARCH</span><span class="intel-time">Latest</span></div>
+            <div class="intel-headline"><a href="https://theverge.com/ai-artificial-intelligence" target="_blank">The Verge AI &mdash; Industry &amp; Product Intelligence</a></div>
+            <div class="intel-bluf" data-en><strong>BLUF:</strong> AI product launches, industry competition, and regulatory developments. Consumer and enterprise AI intelligence.</div>
+            <div class="intel-bluf" data-fr><strong>ESSENTIEL :</strong> Lancements de produits IA, concurrence industrielle et d&eacute;veloppements r&eacute;glementaires.</div>
+            <div class="intel-source"><img src="https://www.google.com/s2/favicons?domain=theverge.com&sz=32" alt="Verge"> <a href="https://theverge.com" target="_blank">theverge.com</a></div>
+        </div>
+
+    </div>
+
+    <!-- ============================================ -->
+    <!-- SECTION 8: NATURAL RESOURCES & GEOPOLITICS -->
+    <!-- ============================================ -->
+    <div class="section-header" onclick="toggleSection('resources')">
+        <span class="section-emoji">&#9935;&#65039;</span>
+        <span class="section-title" data-en>Natural Resources &amp; Geopolitics</span>
+        <span class="section-title" data-fr>Ressources naturelles &amp; G&eacute;opolitique</span>
+        <span class="section-count">4 sources</span>
+        <span class="section-toggle" id="toggle-resources">&#9662;</span>
+    </div>
+    <div class="section-items" id="items-resources">
+
+        <div class="intel-article">
+            <div class="intel-meta"><span class="intel-tag">ENERGY</span><span class="intel-time">Latest</span></div>
+            <div class="intel-headline"><a href="https://oilprice.com" target="_blank">OilPrice.com &mdash; Energy Geopolitics</a></div>
+            <div class="intel-bluf" data-en><strong>BLUF:</strong> Oil, gas, and energy transition intelligence. The geopolitics of who controls energy supply and at what price.</div>
+            <div class="intel-bluf" data-fr><strong>ESSENTIEL :</strong> P&eacute;trole, gaz et transition &eacute;nerg&eacute;tique. G&eacute;opolitique du contr&ocirc;le de l&rsquo;approvisionnement &eacute;nerg&eacute;tique.</div>
+            <div class="intel-source"><img src="https://www.google.com/s2/favicons?domain=oilprice.com&sz=32" alt="OP"> <a href="https://oilprice.com" target="_blank">oilprice.com</a></div>
+        </div>
+
+        <div class="intel-article">
+            <div class="intel-meta"><span class="intel-tag">CRITICAL MINERALS</span><span class="intel-time">Latest</span></div>
+            <div class="intel-headline"><a href="https://mining.com" target="_blank">Mining.com &mdash; Critical Minerals &amp; Extraction</a></div>
+            <div class="intel-bluf" data-en><strong>BLUF:</strong> Rare earths, lithium, cobalt, and critical mineral supply chains. The resource competition driving great power rivalry.</div>
+            <div class="intel-bluf" data-fr><strong>ESSENTIEL :</strong> Terres rares, lithium, cobalt et cha&icirc;nes d&rsquo;approvisionnement en min&eacute;raux critiques.</div>
+            <div class="intel-source"><img src="https://www.google.com/s2/favicons?domain=mining.com&sz=32" alt="Mining"> <a href="https://mining.com" target="_blank">mining.com</a></div>
+        </div>
+
+        <div class="intel-article">
+            <div class="intel-meta"><span class="intel-tag">WATER &amp; FOOD</span><span class="intel-time">Latest</span></div>
+            <div class="intel-headline"><a href="https://reuters.com/business/environment" target="_blank">Reuters Environment &mdash; Water, Food &amp; Climate Security</a></div>
+            <div class="intel-bluf" data-en><strong>BLUF:</strong> Water scarcity, food security, and climate-driven resource conflict. The slow-burn crises that reshape borders and alliances.</div>
+            <div class="intel-bluf" data-fr><strong>ESSENTIEL :</strong> P&eacute;nurie d&rsquo;eau, s&eacute;curit&eacute; alimentaire et conflits de ressources li&eacute;s au climat.</div>
+            <div class="intel-source"><img src="https://www.google.com/s2/favicons?domain=reuters.com&sz=32" alt="Reuters"> <a href="https://reuters.com" target="_blank">reuters.com</a></div>
+        </div>
+
+        <div class="intel-article">
+            <div class="intel-meta"><span class="intel-tag">ARCTIC</span><span class="intel-time">Latest</span></div>
+            <div class="intel-headline"><a href="https://arctictoday.com" target="_blank">Arctic Today &mdash; Northern Resource Geopolitics</a></div>
+            <div class="intel-bluf" data-en><strong>BLUF:</strong> Arctic sovereignty, northern resource development, and polar geopolitics. Canada, Russia, and NATO competition for the high north.</div>
+            <div class="intel-bluf" data-fr><strong>ESSENTIEL :</strong> Souverainet&eacute; arctique, d&eacute;veloppement des ressources nordiques et g&eacute;opolitique polaire.</div>
+            <div class="intel-source"><img src="https://www.google.com/s2/favicons?domain=arctictoday.com&sz=32" alt="Arctic"> <a href="https://arctictoday.com" target="_blank">arctictoday.com</a></div>
+        </div>
+
+    </div>
+
+    <!-- ============================================ -->
+    <!-- SECTION 9: TRANSPORTATION & LOGISTICS -->
+    <!-- ============================================ -->
+    <div class="section-header" onclick="toggleSection('logistics')">
+        <span class="section-emoji">&#128674;</span>
+        <span class="section-title" data-en>Transportation &amp; Logistics</span>
+        <span class="section-title" data-fr>Transport &amp; Logistique</span>
+        <span class="section-count">4 sources</span>
+        <span class="section-toggle" id="toggle-logistics">&#9662;</span>
+    </div>
+    <div class="section-items" id="items-logistics">
+
+        <div class="intel-article">
+            <div class="intel-meta"><span class="intel-tag">FREIGHT</span><span class="intel-time">Latest</span></div>
+            <div class="intel-headline"><a href="https://freightwaves.com" target="_blank">FreightWaves &mdash; Supply Chain Intelligence</a></div>
+            <div class="intel-bluf" data-en><strong>BLUF:</strong> Real-time freight market data, trucking, and supply chain disruptions. The logistics layer beneath global trade.</div>
+            <div class="intel-bluf" data-fr><strong>ESSENTIEL :</strong> Donn&eacute;es de march&eacute; du fret en temps r&eacute;el, camionnage et perturbations de la cha&icirc;ne d&rsquo;approvisionnement.</div>
+            <div class="intel-source"><img src="https://www.google.com/s2/favicons?domain=freightwaves.com&sz=32" alt="FW"> <a href="https://freightwaves.com" target="_blank">freightwaves.com</a></div>
+        </div>
+
+        <div class="intel-article">
+            <div class="intel-meta"><span class="intel-tag">SHIPPING</span><span class="intel-time">Latest</span></div>
+            <div class="intel-headline"><a href="https://theloadstar.com" target="_blank">The Loadstar &mdash; Global Shipping &amp; Air Cargo</a></div>
+            <div class="intel-bluf" data-en><strong>BLUF:</strong> Container shipping, air cargo, and port operations. Tracking the arteries of global commerce and their chokepoints.</div>
+            <div class="intel-bluf" data-fr><strong>ESSENTIEL :</strong> Transport maritime, fret a&eacute;rien et op&eacute;rations portuaires. Les art&egrave;res du commerce mondial.</div>
+            <div class="intel-source"><img src="https://www.google.com/s2/favicons?domain=theloadstar.com&sz=32" alt="Loadstar"> <a href="https://theloadstar.com" target="_blank">theloadstar.com</a></div>
+        </div>
+
+        <div class="intel-article">
+            <div class="intel-meta"><span class="intel-tag">TRADE</span><span class="intel-time">Latest</span></div>
+            <div class="intel-headline"><a href="https://joc.com" target="_blank">Journal of Commerce &mdash; Trade &amp; Maritime</a></div>
+            <div class="intel-bluf" data-en><strong>BLUF:</strong> International trade flows, port congestion, and tariff impacts. Intelligence for businesses that move goods across borders.</div>
+            <div class="intel-bluf" data-fr><strong>ESSENTIEL :</strong> Flux commerciaux internationaux, congestion portuaire et impacts tarifaires.</div>
+            <div class="intel-source"><img src="https://www.google.com/s2/favicons?domain=joc.com&sz=32" alt="JOC"> <a href="https://joc.com" target="_blank">joc.com</a></div>
+        </div>
+
+        <div class="intel-article">
+            <div class="intel-meta"><span class="intel-tag">INFRASTRUCTURE</span><span class="intel-time">Latest</span></div>
+            <div class="intel-headline"><a href="https://railwayage.com" target="_blank">Railway Age &mdash; Rail &amp; Intermodal</a></div>
+            <div class="intel-bluf" data-en><strong>BLUF:</strong> North American rail operations, intermodal logistics, and infrastructure investment. The backbone of continental freight movement.</div>
+            <div class="intel-bluf" data-fr><strong>ESSENTIEL :</strong> Op&eacute;rations ferroviaires nord-am&eacute;ricaines, logistique intermodale et investissements en infrastructure.</div>
+            <div class="intel-source"><img src="https://www.google.com/s2/favicons?domain=railwayage.com&sz=32" alt="RA"> <a href="https://railwayage.com" target="_blank">railwayage.com</a></div>
+        </div>
+
+    </div>
+
+    <!-- ============================================ -->
+    <!-- BRIEF FOOTER -->
+    <!-- ============================================ -->
+    <div class="brief-footer">
+        <p data-en>END OF BRIEF &mdash; PREPARED BY CORRIDOR INTELLIGENCE<br>SOURCES: OPEN SOURCE INTELLIGENCE (OSINT) &mdash; MULTI-SOURCE AGGREGATION<br>DISTRIBUTION: UNRESTRICTED</p>
+        <p data-fr>FIN DU BRIEFING &mdash; PR&Eacute;PAR&Eacute; PAR CORRIDOR INTELLIGENCE<br>SOURCES : RENSEIGNEMENT DE SOURCE OUVERTE (OSINT) &mdash; AGR&Eacute;GATION MULTISOURCE<br>DISTRIBUTION : NON RESTREINTE</p>
+        <div class="brief-sig">&mdash; J. Soares</div>
+    </div>
+
+</div>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-inner">
+        <div>
+            <div class="footer-brand">Joseph <span>Soares</span></div>
+            <p class="footer-tagline" data-en>Power is earned through trust. Influence is built through empathy. The best decisions are made by people who have been tested under real pressure.</p>
+            <p class="footer-tagline" data-fr>Le pouvoir se gagne par la confiance. L&rsquo;influence se b&acirc;tit par l&rsquo;empathie. Les meilleures d&eacute;cisions sont prises par ceux qui ont &eacute;t&eacute; &eacute;prouv&eacute;s sous pression.</p>
+        </div>
+        <div>
+            <h3 data-en>Navigation</h3><h3 data-fr>Navigation</h3>
+            <ul>
+                <li><a href="/" data-en>Home</a><a href="/" data-fr>Accueil</a></li>
+                <li><a href="/intelligence.html" data-en>Intelligence</a><a href="/intelligence.html" data-fr>Intelligence</a></li>
+                <li><a href="/newswatch.html" data-en>The Daily Brief</a><a href="/newswatch.html" data-fr>Le Briefing Quotidien</a></li>
+                <li><a href="/podcast.html" data-en>Podcast</a><a href="/podcast.html" data-fr>Balado</a></li>
+            </ul>
+        </div>
+        <div>
+            <h3 data-en>About</h3><h3 data-fr>&Agrave; Propos</h3>
+            <ul>
+                <li><a href="/index.html" data-en>Who This Is For</a><a href="/index.html" data-fr>Pour Qui</a></li>
+                <li><a href="/index.html" data-en>Services</a><a href="/index.html" data-fr>Services</a></li>
+            </ul>
+        </div>
+        <div>
+            <h3 data-en>Connect</h3><h3 data-fr>Connexion</h3>
+            <ul>
+                <li><a href="https://linkedin.com/in/josephsoares" target="_blank">LinkedIn</a></li>
+                <li><a href="https://calendar.app.google/pEyrPMvGY2TuEndcA" data-en>Book a Call</a><a href="https://calendar.app.google/pEyrPMvGY2TuEndcA" data-fr>R&eacute;server un Appel</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p class="footer-credit" data-en>&copy; 2026 Joseph Soares. All rights reserved.</p>
+        <p class="footer-credit" data-fr>&copy; 2026 Joseph Soares. Tous droits r&eacute;serv&eacute;s.</p>
+    </div>
+</footer>
+
+<script>
+// Date
+const now = new Date();
+const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+document.getElementById('brief-date').textContent = now.toLocaleDateString('en-US', options).toUpperCase();
+
+// Language
+function setLang(lang) {
+    if (lang === 'fr') { document.body.classList.add('fr'); }
+    else { document.body.classList.remove('fr'); }
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    document.getElementById('btn-fr').classList.toggle('active', lang === 'fr');
+    if (lang === 'fr') {
+        document.getElementById('brief-date').textContent = now.toLocaleDateString('fr-CA', options).toUpperCase();
+    } else {
+        document.getElementById('brief-date').textContent = now.toLocaleDateString('en-US', options).toUpperCase();
+    }
+    localStorage.setItem('lang', lang);
+}
+
+// Section toggle
+function toggleSection(id) {
+    const items = document.getElementById('items-' + id);
+    const toggle = document.getElementById('toggle-' + id);
+    items.classList.toggle('collapsed');
+    toggle.classList.toggle('collapsed');
+}
+
+// Restore lang
+const savedLang = localStorage.getItem('lang');
+if (savedLang) setLang(savedLang);
+</script>
+</body>
+</html>
