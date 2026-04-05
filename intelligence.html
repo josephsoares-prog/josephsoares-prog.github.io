@@ -1023,11 +1023,10 @@
                 <span></span>
             </button>
             <div class="nav-links">
-                <a href="index.html#who" data-fr="Pour qui ?">Who This Is For</a>
-                <a href="index.html#about" data-fr="À propos">About</a>
-                <a href="index.html#services" data-fr="Services">Services</a>
-                    <a href="intelligence.html" class="nav-active" data-fr="Renseignement">Intelligence</a>
-                    <a href="podcast.html" data-fr="Balado">Podcast</a>
+                <a href="index.html#services" data-fr="Conseil">Advisory</a>
+                <a href="intelligence.html" class="nav-active" data-fr="Renseignement">Intelligence</a>
+                <a href="newswatch.html" data-fr="Le Briefing">The Daily Brief</a>
+                <a href="podcast.html" data-fr="Balado">Podcast</a>
                 <a href="https://calendar.app.google/pEyrPMvGY2TuEndcA" class="nav-cta" data-fr="Prendre rendez-vous">Book a Call</a>
             </div>
         </div>
@@ -1081,6 +1080,21 @@
             <div class="commentary-header">
                 <h2 data-fr="Derniers commentaires">Latest Commentary</h2>
                 <p data-fr="Analyse stratégique des nouvelles politiques qui touchent les décideurs">Strategic analysis of political news that affects decision-makers</p>
+            </div>
+
+            <!-- ENTRY: BREAKING — April 5, 2026 — Iran Rescue -->
+            <div class="commentary-item" style="border-left:3px solid var(--gold); padding-left:1.5rem;">
+                <div class="commentary-meta">
+                    <span class="commentary-date" data-fr="5 avril 2026 — ALERTE">April 5, 2026 — BREAKING</span>
+                    <span class="commentary-tag" data-fr="Iran · Défense">Iran · Defence</span>
+                    <span class="commentary-lang-tag">EN</span>
+                </div>
+                <div class="commentary-headline" data-fr="« On l'a récupéré. » Un aviateur américain secouru en Iran — et ce que ça change pour la posture de l'opération.">&#8216;We Got Him.&#8217; U.S. Airman Rescued From Iran &#8212; and What It Changes About the Operation&#8217;s Posture.</div>
+                <div style="margin:1rem 0;"><img src="images/iran-rescue-apr5-2026.jpg" alt="President Trump announces rescue of downed US airman from Iran" style="width:100%; max-width:560px; border-radius:4px; border:1px solid rgba(207,181,59,0.2);" /></div>
+                <div class="commentary-body" data-fr="Le président Trump a annoncé sur Truth Social que le pilote américain abattu au-dessus de l'Iran a été secouru lors d'une opération de recherche et sauvetage menée par la Marine américaine. Un second membre d'équipage est toujours recherché. Le ton — « ON L'A RÉCUPÉRÉ ! » en majuscules — n'est pas de la bravade. C'est de la gestion narrative en temps réel.<br><br>L'administration avait besoin de cette victoire. Un aviateur américain en captivité iranienne aurait transformé l'opération d'une démonstration de force en crise d'otages — avec toute la paralysie stratégique que cela implique. Le sauvetage change le calcul : Washington maintient l'initiative, les critiques intérieurs perdent leur levier le plus puissant, et l'Iran perd un atout de négociation potentiel.<br><br><strong>Deux éléments à surveiller :</strong> Premièrement, le second membre d'équipage. S'il est récupéré, l'opération reste une histoire de compétence. S'il ne l'est pas, la dynamique bascule considérablement. Deuxièmement, la réponse iranienne. Un sauvetage réussi sur leur territoire est une humiliation opérationnelle — et les régimes humiliés ne restent pas passifs. Décideurs en énergie, défense et logistique : maintenez la posture d'alerte élevée. Ce n'est pas terminé.">
+                    President Trump announced on Truth Social that the U.S. airman downed over Iran has been rescued in a daring search-and-rescue operation by the U.S. Navy. A second crew member remains unaccounted for. The tone &#8212; &#8220;WE GOT HIM!&#8221; in block letters &#8212; isn&#8217;t bravado. It&#8217;s real-time narrative management.<br><br>The administration needed this win. An American airman in Iranian captivity would have turned the operation from a show of force into a hostage crisis &#8212; with all the strategic paralysis that entails. The rescue changes the calculus: Washington retains the initiative, domestic critics lose their most powerful talking point, and Iran loses a potential bargaining chip.<br><br><strong>Two things to watch:</strong> First, the second crew member. If recovered, the operation remains a story of competence. If not, the dynamic shifts considerably. Second, Iran&#8217;s response. A successful rescue on their soil is an operational humiliation &#8212; and humiliated regimes don&#8217;t stay quiet. Decision-makers in energy, defence, and logistics: maintain elevated posture. This isn&#8217;t over.
+                </div>
+                <div class="commentary-sig">&#8212; J. Soares</div>
             </div>
 
             <!-- ENTRY 0 — April 5, 2026 -->
@@ -1577,7 +1591,25 @@
         <div class="launch-notice-inner">
             <h2 data-fr="Ne manquez rien">Don't Miss a Beat</h2>
             <p data-fr="Le Corridor est publié quotidiennement. Suivez sur LinkedIn pour recevoir chaque analyse dans votre fil — ou prenez rendez-vous pour une conversation stratégique.">The Corridor publishes daily. Follow on LinkedIn to get every analysis in your feed — or book a call to take the conversation further.</p>
-            <a href="https://linkedin.com/in/soaresjoseph" class="btn-primary" data-fr="Suivre sur LinkedIn">Follow on LinkedIn</a>
+            <form id="corridor-signup" style="display:flex; gap:0.75rem; flex-wrap:wrap; justify-content:center; max-width:480px; margin:0 auto;" onsubmit="return corridorSignup(this)">
+                <input type="email" name="email" required placeholder="Your email" style="flex:1; min-width:200px; padding:0.75rem 1rem; border:1px solid rgba(207,181,59,0.3); background:rgba(255,255,255,0.05); color:#fff; font-family:'Inter',sans-serif; font-size:0.9rem; border-radius:2px;" />
+                <button type="submit" class="btn-primary" style="white-space:nowrap;" data-fr="S'abonner gratuitement">Subscribe — Free</button>
+            </form>
+            <p style="text-align:center; margin-top:0.75rem; font-size:0.75rem; opacity:0.5;" data-fr="Renseignement quotidien. Pas de pourriel. Désabonnement en un clic.">Daily intelligence. No spam. Unsubscribe anytime.</p>
+            <script>
+            function corridorSignup(form){
+                var email=form.email.value;
+                fetch('https://hook.us2.make.com/i4uhmlwxodqjczpbo3ydgi8a826a1myq',{
+                    method:'POST',headers:{'Content-Type':'application/json'},
+                    body:JSON.stringify({email:email,source:'intelligence-cta',name:''})
+                }).then(function(){
+                    form.innerHTML='<p style="color:var(--gold);font-weight:600;">You\u2019re in. Watch your inbox.</p>';
+                }).catch(function(){
+                    form.innerHTML='<p style="color:#e74c3c;">Something went wrong. Email j@josephsoares.com directly.</p>';
+                });
+                return false;
+            }
+            </script>
         </div>
     </section>
 
