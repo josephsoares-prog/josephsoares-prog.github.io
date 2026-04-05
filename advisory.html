@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/favicon.ico">
+    <title>Joseph Soares | Senior Advisory</title>
+    <meta name="description" content="Senior advisory retainer for founders and business leaders. Served in Canada's Prime Minister's Office. Senate Chief of Staff. Published in Forbes and Newsweek.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Senior Advisory Services",
+      "provider": {
+        "@type": "Person",
+        "name": "Joseph Soares",
+        "url": "https://josephsoares.com",
+        "email": "j@josephsoares.com"
+      },
+      "description": "Senior advisory retainer services for business leaders and entrepreneurs",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Advisory Pricing Tiers",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "name": "Strategic Session",
+            "price": "1500",
+            "priceCurrency": "USD",
+            "description": "One 90-minute strategic session",
+            "availability": "https://schema.org/InStock"
+          },
+          {
+            "@type": "Offer",
+            "name": "Advisory Retainer",
+            "price": "30000",
+            "priceCurrency": "USD",
+            "description": "Two strategic sessions per month, 6-month commitment",
+            "availability": "https://schema.org/InStock"
+          },
+          {
+            "@type": "Offer",
+            "name": "Senior Advisory Retainer",
+            "price": "120000",
+            "priceCurrency": "USD",
+            "description": "Up to four sessions per month, 12-month commitment",
+            "availability": "https://schema.org/InStock"
+          }
+        ]
+      }
+    }
+    </script>
+    <style>
+        :root {
+            --navy: #0b1a2e;
+            --navy-mid: #0f2240;
+            --navy-light: #132d54;
+            --gold: #c9a84c;
+            --gold-light: #dfc07a;
+            --gold-muted: rgba(201, 168, 76, 0.12);
+            --cream: #f5f1eb;
+            --white: #ffffff;
+            --text-dark: #1a1a2e;
+            --text-mid: #4a4a5a;
+            --text-light: rgba(255,255,255,0.75);
+            --border-light: rgba(201, 168, 76, 0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Source Sans 3', -apple-system, sans-serif;
+            color: var(--text-dark);
+            background: var(--white);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ===== LANG SWITCHER ===== */
+        .lang-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 200;
+            background: #06101e;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 0 40px;
+            height: 32px;
+            border-bottom: 1px solid rgba(201, 168, 76, 0.08);
+        }
+
+        .lang-bar button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.35);
+            padding: 6px 12px;
+            transition: color 0.3s;
+        }
+
+        .lang-bar button:hover {
+            color: var(--gold-light);
+        }
+
+        .lang-bar button.active {
+            color: var(--gold);
+        }
+
+        .lang-bar .lang-sep {
+            color: rgba(255,255,255,0.12);
+            font-size: 11px;
+        }
+
+        /* ===== NAV ===== */
+        nav {
+            position: fixed;
+            top: 32px;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: rgba(11, 26, 46, 0.96);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+            padding: 0 40px;
+        }
+
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 64px;
+        }
+
+        .nav-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--white);
+            text-decoration: none;
+            letter-spacing: 0.02em;
+        }
+
+        .nav-name span {
+            color: var(--gold);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        .nav-links a.active {
+            color: var(--gold);
+        }
+
+        .nav-cta {
+            background: var(--gold) !important;
+            color: var(--navy) !important;
+            padding: 9px 22px !important;
+            border-radius: 3px;
+            font-weight: 700 !important;
+            font-size: 11px !important;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .nav-cta:hover {
+            background: var(--gold-light) !important;
+            color: var(--navy) !important;
+        }
+
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            flex-direction: column;
+            gap: 5px;
+            padding: 4px;
+        }
+
+        .mobile-toggle span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--white);
+            transition: all 0.3s;
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(155deg, var(--navy) 0%, var(--navy-mid) 55%, #0d2848 100%);
+            display: flex;
+            align-items: center;
+            padding: 150px 40px 100px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 10% 90%, rgba(201, 168, 76, 0.06) 0%, transparent 55%), radial-gradient(ellipse at 90% 15%, rgba(91, 143, 217, 0.04) 0%, transparent 45%), radial-gradient(ellipse at 50% 50%, rgba(201, 168, 76, 0.02) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: -200px;
+            right: -100px;
+            width: 600px;
+            height: 600px;
+            border: 1px solid rgba(201, 168, 76, 0.06);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hero-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            width: 100%;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-eyebrow {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 28px;
+            animation: fadeUp 0.7s ease both;
+        }
+
+        .hero-eyebrow-line {
+            width: 40px;
+            height: 1px;
+            background: var(--gold);
+            opacity: 0.6;
+        }
+
+        .hero-eyebrow-text {
+            font-size: 11px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--gold);
+            font-weight: 600;
+        }
+
+        .hero h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2.6rem, 5.5vw, 4.2rem);
+            font-weight: 700;
+            color: var(--white);
+            line-height: 1.12;
+            max-width: 850px;
+            margin-bottom: 28px;
+            animation: fadeUp 0.85s ease both;
+        }
+
+        .hero h1 em {
+            font-style: italic;
+            color: var(--gold);
+        }
+
+        .hero-sub {
+            font-size: 18px;
+            color: var(--text-light);
+            line-height: 1.75;
+            max-width: 700px;
+            margin-bottom: 44px;
+            font-weight: 300;
+            animation: fadeUp 0.95s ease both;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--navy);
+            padding: 16px 38px;
+            border: none;
+            border-radius: 3px;
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 28px rgba(201, 168, 76, 0.28);
+        }
+
+        .btn-primary:hover {
+            background: var(--gold-light);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 36px rgba(201, 168, 76, 0.38);
+        }
+
+        .btn-ghost {
+            display: inline-block;
+            background: transparent;
+            color: var(--white);
+            padding: 16px 36px;
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 3px;
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-ghost:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+
+        /* ===== RELATIONSHIP SECTION ===== */
+        .relationship {
+            padding: 100px 40px;
+            background: var(--cream);
+        }
+
+        .relationship-inner {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .relationship h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2rem, 4vw, 2.6rem);
+            font-weight: 700;
+            color: var(--text-dark);
+            line-height: 1.2;
+            margin-bottom: 24px;
+            animation: fadeUp 0.85s ease both;
+        }
+
+        .relationship-text {
+            font-size: 17px;
+            color: var(--text-mid);
+            line-height: 1.8;
+            font-weight: 300;
+            animation: fadeUp 0.95s ease both;
+        }
+
+        /* ===== PRICING SECTION ===== */
+        .pricing {
+            padding: 100px 40px;
+            background: var(--white);
+        }
+
+        .pricing-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .pricing-header {
+            text-align: center;
+            margin-bottom: 60px;
+            animation: fadeUp 0.85s ease both;
+        }
+
+        .pricing-header h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            font-weight: 700;
+            color: var(--text-dark);
+            line-height: 1.2;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        .pricing-card {
+            background: var(--cream);
+            border: 1px solid rgba(201, 168, 76, 0.15);
+            border-radius: 6px;
+            padding: 40px 32px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.35s;
+            animation: fadeUp 1s ease both;
+        }
+
+        .pricing-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gold);
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(201, 168, 76, 0.35);
+            box-shadow: 0 16px 48px rgba(0,0,0,0.08);
+        }
+
+        .pricing-card.featured {
+            border: 2px solid var(--gold);
+            box-shadow: 0 12px 40px rgba(201, 168, 76, 0.15);
+        }
+
+        .pricing-card.featured:hover {
+            box-shadow: 0 20px 56px rgba(201, 168, 76, 0.25);
+        }
+
+        .pricing-badge {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--navy);
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            padding: 6px 12px;
+            border-radius: 3px;
+            margin-bottom: 20px;
+            width: fit-content;
+        }
+
+        .pricing-card:not(.featured) .pricing-badge {
+            display: none;
+        }
+
+        .pricing-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+
+        .pricing-price {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 52px;
+            font-weight: 700;
+            color: var(--gold);
+            line-height: 1;
+            margin-bottom: 6px;
+        }
+
+        .pricing-period {
+            font-size: 13px;
+            color: var(--text-mid);
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .pricing-total {
+            font-size: 12px;
+            color: var(--text-mid);
+            margin-bottom: 24px;
+            font-weight: 400;
+        }
+
+        .pricing-description {
+            font-size: 15px;
+            color: var(--text-mid);
+            line-height: 1.6;
+            margin-bottom: 28px;
+            flex-grow: 0;
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 32px;
+            flex-grow: 1;
+        }
+
+        .pricing-features li {
+            font-size: 14px;
+            color: var(--text-dark);
+            line-height: 1.7;
+            padding-bottom: 12px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .pricing-features li:last-child {
+            padding-bottom: 0;
+        }
+
+        .pricing-features li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-weight: 700;
+        }
+
+        .pricing-cta {
+            width: 100%;
+            padding: 16px 24px;
+            border: none;
+            border-radius: 3px;
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .pricing-card.featured .pricing-cta {
+            background: var(--gold);
+            color: var(--navy);
+            box-shadow: 0 4px 16px rgba(201, 168, 76, 0.25);
+        }
+
+        .pricing-card.featured .pricing-cta:hover {
+            background: var(--gold-light);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 24px rgba(201, 168, 76, 0.35);
+        }
+
+        .pricing-card:not(.featured) .pricing-cta {
+            background: transparent;
+            color: var(--text-dark);
+            border: 1px solid rgba(201, 168, 76, 0.3);
+        }
+
+        .pricing-card:not(.featured) .pricing-cta:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+            background: rgba(201, 168, 76, 0.04);
+        }
+
+        /* ===== QUALIFICATION SECTION ===== */
+        .qualification {
+            padding: 100px 40px;
+            background: var(--navy);
+            color: var(--white);
+        }
+
+        .qualification-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .qualification h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            font-weight: 700;
+            color: var(--white);
+            line-height: 1.2;
+            margin-bottom: 24px;
+            animation: fadeUp 0.85s ease both;
+        }
+
+        .qualification-text {
+            font-size: 18px;
+            color: var(--text-light);
+            line-height: 1.8;
+            max-width: 700px;
+            margin: 0 auto 44px;
+            font-weight: 300;
+            animation: fadeUp 0.95s ease both;
+        }
+
+        .qualification-cta {
+            animation: fadeUp 1s ease both;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            padding: 60px 40px;
+            background: var(--navy);
+            color: rgba(255,255,255,0.6);
+            border-top: 1px solid rgba(201, 168, 76, 0.1);
+        }
+
+        footer-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 32px;
+            justify-content: center;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--gold);
+        }
+
+        .footer-credit {
+            text-align: center;
+            font-size: 12px;
+            color: rgba(255,255,255,0.35);
+            padding-top: 24px;
+            border-top: 1px solid rgba(201, 168, 76, 0.08);
+            line-height: 1.6;
+        }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(22px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 960px) {
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 700px) {
+            .lang-bar {
+                padding: 0 20px;
+            }
+            nav {
+                padding: 0 20px;
+            }
+            .nav-links {
+                display: none;
+            }
+            .mobile-toggle {
+                display: flex;
+            }
+            .nav-links.open {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 64px;
+                left: 0;
+                right: 0;
+                background: var(--navy);
+                padding: 24px;
+                border-bottom: 1px solid var(--border-light);
+                gap: 18px;
+            }
+            .hero, .relationship, .pricing, .qualification, footer {
+                padding-left: 24px;
+                padding-right: 24px;
+            }
+            .hero-sub {
+                max-width: 100%;
+            }
+            .pricing-header h2 {
+                font-size: 2rem;
+            }
+            .footer-links {
+                flex-direction: column;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Lang Switcher -->
+    <div class="lang-bar">
+        <button class="active">EN</button>
+        <span class="lang-sep">|</span>
+        <button>FR</button>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-inner">
+            <a href="/" class="nav-name">Joseph <span>Soares</span></a>
+            <button class="mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-links">
+                <a href="/#who">Who This Is For</a>
+                <a href="/#about">About</a>
+                <a href="/advisory.html" class="active">Advisory</a>
+                <a href="/#framework">Framework</a>
+                <a href="/#writing">Writing</a>
+                <a href="/intelligence.html">Intelligence</a>
+                <a href="/newswatch.html">The Daily Brief</a>
+                <a href="/podcast.html">Podcast</a>
+                <a href="https://calendar.app.google/pEyrPMvGY2TuEndcA" class="nav-cta">Book a Call</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-inner">
+            <div class="hero-eyebrow">
+                <div class="hero-eyebrow-line"></div>
+                <span class="hero-eyebrow-text">Senior Advisory</span>
+            </div>
+            <h1>A mind tested at the highest levels. Available when you need it.</h1>
+            <p class="hero-sub">I served as an advisor to the Prime Minister of Canada during the 2008 financial crisis. As Chief of Staff at the Senate of Canada during the 2020 pandemic. I've been featured in Forbes, Newsweek, the National Post, the Globe and Mail, and media globally. I now advise a select number of leaders who want a senior mind in their corner when the stakes are high.</p>
+        </div>
+    </section>
+
+    <!-- The Relationship Section -->
+    <section class="relationship">
+        <div class="relationship-inner">
+            <h2>This is not consulting.</h2>
+            <p class="relationship-text">You're not buying a deliverable, a slide deck, or a strategy document. You're securing access to judgment — the kind earned in rooms where the wrong decision costs careers, companies, and public trust. When you retain me, you get a confidential, direct-access relationship with a senior advisor who has operated at the national level. I'm a sounding board for your hardest decisions.</p>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing">
+        <div class="pricing-inner">
+            <div class="pricing-header">
+                <h2>How We Work Together</h2>
+            </div>
+            <div class="pricing-grid">
+                <!-- Card 1: Strategic Session -->
+                <div class="pricing-card">
+                    <div class="pricing-title">Strategic Session</div>
+                    <div class="pricing-price">$1,500</div>
+                    <div class="pricing-period">single session</div>
+                    <p class="pricing-description">One 90-minute strategic session. For the leader who has a specific decision to think through and wants a senior mind in the room.</p>
+                    <ul class="pricing-features">
+                        <li>90-minute deep-dive session</li>
+                        <li>Confidential and direct</li>
+                        <li>No commitment required</li>
+                    </ul>
+                    <a href="https://calendar.app.google/pEyrPMvGY2TuEndcA" class="pricing-cta">Book a Session</a>
+                </div>
+
+                <!-- Card 2: Advisory Retainer (FEATURED) -->
+                <div class="pricing-card featured">
+                    <span class="pricing-badge">Recommended</span>
+                    <div class="pricing-title">Advisory Retainer</div>
+                    <div class="pricing-price">$5,000</div>
+                    <div class="pricing-period">/month · 6-month commitment</div>
+                    <div class="pricing-total">Total: $30,000</div>
+                    <p class="pricing-description">Two strategic sessions per month. Async access between sessions for time-sensitive decisions. Quarterly SPARK audit.</p>
+                    <ul class="pricing-features">
+                        <li>Two sessions per month (60–90 min)</li>
+                        <li>Async access via direct message</li>
+                        <li>Quarterly SPARK strategic audit</li>
+                        <li>Full confidentiality agreement</li>
+                    </ul>
+                    <a href="https://calendar.app.google/pEyrPMvGY2TuEndcA" class="pricing-cta">Start a Conversation</a>
+                </div>
+
+                <!-- Card 3: Senior Advisory Retainer -->
+                <div class="pricing-card">
+                    <div class="pricing-title">Senior Advisory Retainer</div>
+                    <div class="pricing-price">$10,000</div>
+                    <div class="pricing-period">/month · 12-month commitment</div>
+                    <div class="pricing-total">Total: $120,000</div>
+                    <p class="pricing-description">Weekly access. Up to four sessions per month. Priority async. Quarterly deep-dive working session.</p>
+                    <ul class="pricing-features">
+                        <li>Up to four sessions per month</li>
+                        <li>Priority async access</li>
+                        <li>Quarterly half-day deep-dive</li>
+                        <li>Full confidentiality agreement</li>
+                        <li>Direct line access</li>
+                    </ul>
+                    <a href="https://calendar.app.google/pEyrPMvGY2TuEndcA" class="pricing-cta">Start a Conversation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Qualification Section -->
+    <section class="qualification">
+        <div class="qualification-inner">
+            <h2>Who This Is For</h2>
+            <p class="qualification-text">Self-made entrepreneurs and business leaders — typically in the United States — who have built something significant and want someone of genuine senior caliber available when the stakes are high. You value directness, credibility, and results. You don't need more advice. You need judgment.</p>
+            <div class="qualification-cta">
+                <a href="https://calendar.app.google/pEyrPMvGY2TuEndcA" class="btn-primary">Book 30 Minutes</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="mailto:j@josephsoares.com">Email</a>
+            <a href="https://www.linkedin.com/in/soaresjoseph/">LinkedIn</a>
+            <a href="https://ibprom.com">IBPROM Corp.</a>
+        </div>
+        <div class="footer-credit">
+            <p>Managing Partner, IBPROM Corp.</p>
+            <p>Joseph Soares · Senior Advisor · United States</p>
+            <p>© 2026. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const toggle = document.querySelector('.mobile-toggle');
+        const links = document.querySelector('.nav-links');
+
+        toggle.addEventListener('click', () => {
+            links.classList.toggle('open');
+        });
+
+        // Close menu on link click
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                links.classList.remove('open');
+            });
+        });
+
+        // Language switcher (placeholder)
+        document.querySelectorAll('.lang-bar button').forEach((btn, idx) => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.lang-bar button').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
