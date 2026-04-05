@@ -406,10 +406,9 @@
         /* ===== FEATURED IN BAR ===== */
         .featured-bar {
             display: flex;
-            align-items: center;
-            gap: 32px;
-            flex-wrap: wrap;
-            padding: 20px 24px;
+            flex-direction: column;
+            gap: 14px;
+            padding: 22px 28px;
             background: rgba(255,255,255,0.04);
             border: 1px solid rgba(201, 168, 76, 0.12);
             border-radius: 5px;
@@ -427,15 +426,19 @@
 
         .featured-bar-logos {
             display: flex;
-            gap: 28px;
+            gap: 20px;
             align-items: center;
+            flex-wrap: wrap;
         }
 
         .featured-bar-logos a {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 18px;
-            font-weight: 700;
-            color: rgba(255,255,255,0.4);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 13px;
+            font-weight: 500;
+            color: rgba(255,255,255,0.45);
             text-decoration: none;
             transition: color 0.3s;
         }
@@ -444,16 +447,28 @@
             color: var(--gold);
         }
 
+        .featured-bar-logos a img {
+            width: 20px;
+            height: 20px;
+            border-radius: 3px;
+            opacity: 0.7;
+            filter: grayscale(30%);
+            transition: opacity 0.3s;
+        }
+
+        .featured-bar-logos a:hover img {
+            opacity: 1;
+            filter: grayscale(0%);
+        }
+
         .featured-bar-sep {
             width: 1px;
-            height: 20px;
-            background: rgba(255,255,255,0.1);
+            height: 18px;
+            background: rgba(255,255,255,0.08);
         }
 
         .featured-bar-note {
-            font-size: 12px;
-            color: rgba(255,255,255,0.35);
-            font-style: italic;
+            display: none;
         }
 
         .hero-credentials {
@@ -1329,6 +1344,22 @@
                 flex-direction: column;
                 gap: 12px;
                 text-align: center;
+                padding: 16px 18px;
+            }
+            .featured-bar-logos {
+                gap: 12px;
+                justify-content: center;
+            }
+            .featured-bar-logos a {
+                font-size: 11px;
+                gap: 5px;
+            }
+            .featured-bar-logos a img {
+                width: 16px;
+                height: 16px;
+            }
+            .featured-bar-sep {
+                display: none;
             }
         }
     </style>
@@ -1368,25 +1399,40 @@
                 <span class="hero-eyebrow-text" data-fr="Conseiller stratégique | Éprouvé en crise. Reconnu au sommet.">Executive Advisor | Crisis-Tested. Trusted at the Top.</span>
             </div>
             <h1 data-fr="J'ai conseillé le Premier ministre pendant une <em>crise financière mondiale.</em> Maintenant je conseille <em>les dirigeants comme vous.</em>">I advised the Prime Minister during a <em>global financial crisis.</em> Now I advise <em>leaders like you.</em></h1>
-            <p class="hero-sub" data-fr="J'ai été conseiller du Premier ministre pendant la crise financière de 2008. J'ai œuvré comme Chef de cabinet au Sénat du Canada pendant la pandémie de 2020. Publié dans Forbes et Newsweek. Je travaille avec des entrepreneurs accomplis et des dirigeants d'entreprises qui ont construit quelque chose de significatif — et qui veulent le protéger, le développer ou en faire un héritage durable.">I served as an advisor to the Prime Minister of Canada during the 2008 financial crisis. Chief of Staff at the Senate of Canada during the pandemic. Published in Forbes and Newsweek. I work with self-made entrepreneurs and high-net-worth business owners who've built something significant — and want to protect it, grow it, or turn it into lasting legacy.</p>
+            <p class="hero-sub" data-fr="J'ai été conseiller du Premier ministre pendant la crise financière de 2008. J'ai œuvré comme Chef de cabinet au Sénat du Canada pendant la pandémie de 2020. Couvert par Forbes, Newsweek, le Globe and Mail et des médias de trois pays. Je travaille avec des entrepreneurs accomplis et des dirigeants d'entreprises qui ont construit quelque chose de significatif — et qui veulent le protéger, le développer ou en faire un héritage durable.">I served as an advisor to the Prime Minister of Canada during the 2008 financial crisis. Chief of Staff at the Senate of Canada during the pandemic. Featured in Forbes, Newsweek, the Globe and Mail, and media across three countries. I work with self-made entrepreneurs and high-net-worth business owners who've built something significant — and want to protect it, grow it, or turn it into lasting legacy.</p>
             <p class="hero-qualifier" data-fr="Je travaille avec des dirigeants accomplis et expérimentés — principalement aux États-Unis — qui valorisent la franchise, la crédibilité et les résultats plutôt que les titres. Si cela vous ressemble, parlons.">I work with successful, experienced leaders — primarily in the United States — who value directness, credibility, and results over credentials alone. If that sounds like you, let's talk.</p>
             <div class="hero-ctas">
                 <a href="https://calendar.app.google/pEyrPMvGY2TuEndcA" class="btn-primary" data-fr="Prendre rendez-vous">Book a Call</a>
                 <a href="#services" class="btn-ghost" data-fr="Voir comment je travaille">See How I Work</a>
             </div>
             <div class="featured-bar">
-                <span class="featured-bar-label" data-fr="Publié dans">Featured in</span>
+                <span class="featured-bar-label" data-fr="Tel que vu dans">As seen in</span>
                 <div class="featured-bar-logos">
-                    <a href="https://www.forbes.com/councils/forbeshumanresourcescouncil/2024/03/07/executive-coaching-the-key-to-unlocking-potential-in-the-c-suite/">Forbes</a>
+                    <a href="https://www.forbes.com/councils/forbeshumanresourcescouncil/2024/03/07/executive-coaching-the-key-to-unlocking-potential-in-the-c-suite/" target="_blank" rel="noopener"><img src="https://www.google.com/s2/favicons?domain=forbes.com&sz=32" alt="">Forbes</a>
                     <div class="featured-bar-sep"></div>
-                    <a href="https://www.newsweek.com/beyond-authenticity-cultivating-resilient-leadership-modern-era-1829944">Newsweek</a>
+                    <a href="https://www.newsweek.com/beyond-authenticity-cultivating-resilient-leadership-modern-era-1829944" target="_blank" rel="noopener"><img src="https://www.google.com/s2/favicons?domain=newsweek.com&sz=32" alt="">Newsweek</a>
+                    <div class="featured-bar-sep"></div>
+                    <a href="https://www.huffingtonpost.ca/author/joseph-soares/" target="_blank" rel="noopener"><img src="https://www.google.com/s2/favicons?domain=huffpost.com&sz=32" alt="">HuffPost</a>
+                    <div class="featured-bar-sep"></div>
+                    <a href="https://www.theglobeandmail.com/" target="_blank" rel="noopener"><img src="https://www.google.com/s2/favicons?domain=theglobeandmail.com&sz=32" alt="">Globe and Mail</a>
+                    <div class="featured-bar-sep"></div>
+                    <a href="https://nationalpost.com/" target="_blank" rel="noopener"><img src="https://www.google.com/s2/favicons?domain=nationalpost.com&sz=32" alt="">National Post</a>
+                    <div class="featured-bar-sep"></div>
+                    <a href="https://calgaryherald.com/" target="_blank" rel="noopener"><img src="https://www.google.com/s2/favicons?domain=calgaryherald.com&sz=32" alt="">Calgary Herald</a>
+                    <div class="featured-bar-sep"></div>
+                    <a href="https://www.lapresse.ca/" target="_blank" rel="noopener"><img src="https://www.google.com/s2/favicons?domain=lapresse.ca&sz=32" alt="">La Presse</a>
+                    <div class="featured-bar-sep"></div>
+                    <a href="https://www.ledevoir.com/" target="_blank" rel="noopener"><img src="https://www.google.com/s2/favicons?domain=ledevoir.com&sz=32" alt="">Le Devoir</a>
+                    <div class="featured-bar-sep"></div>
+                    <a href="https://www.ledroit.com/" target="_blank" rel="noopener"><img src="https://www.google.com/s2/favicons?domain=ledroit.com&sz=32" alt="">Le Droit</a>
+                    <div class="featured-bar-sep"></div>
+                    <a href="https://www.acoreanooriental.pt/" target="_blank" rel="noopener"><img src="https://www.google.com/s2/favicons?domain=acoreanooriental.pt&sz=32" alt="">Açoreano Oriental</a>
                 </div>
-                <span class="featured-bar-note" data-fr="Publié dans Forbes et Newsweek">Published in Forbes and Newsweek</span>
             </div>
             <div class="hero-credentials">
                 <div class="credential" data-fr="Cabinet du Premier ministre — Crise de 2008">Prime Minister's Office — 2008 Crisis</div>
                 <div class="credential" data-fr="Sénat du Canada — Pandémie 2020">Senate of Canada — 2020 Pandemic</div>
-                <div class="credential" data-fr="Publié : Forbes et Newsweek">Published: Forbes & Newsweek</div>
+                <div class="credential" data-fr="Couvert par : Forbes · Newsweek · Globe and Mail · et d'autres">Featured: Forbes · Newsweek · Globe and Mail · + 7 more</div>
                 <div class="credential" data-fr="Trilingue : EN · FR · PT">Trilingual: EN · FR · PT</div>
             </div>
         </div>
