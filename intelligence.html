@@ -483,6 +483,111 @@
             font-style: italic;
         }
 
+        /* ===== THE WIRE ===== */
+        .wire {
+            padding: 80px 40px;
+            background: var(--white);
+            border-top: 1px solid rgba(201, 168, 76, 0.15);
+        }
+
+        .wire-inner {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .wire-header {
+            margin-bottom: 40px;
+        }
+
+        .wire-header h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(1.6rem, 2.5vw, 2rem);
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+        }
+
+        .wire-header p {
+            font-size: 15px;
+            color: var(--text-mid);
+            font-weight: 300;
+        }
+
+        .wire-region {
+            margin-bottom: 32px;
+        }
+
+        .wire-region-label {
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: var(--gold);
+            padding-bottom: 10px;
+            margin-bottom: 16px;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .wire-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 16px;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.04);
+        }
+
+        .wire-item:last-child {
+            border-bottom: none;
+        }
+
+        .wire-headline {
+            flex: 1;
+        }
+
+        .wire-headline a {
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--text-dark);
+            text-decoration: none;
+            line-height: 1.4;
+            transition: color 0.2s;
+        }
+
+        .wire-headline a:hover {
+            color: var(--gold);
+        }
+
+        .wire-source {
+            font-size: 12px;
+            color: var(--text-mid);
+            font-weight: 400;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        .wire-lang {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--corridor-accent);
+            background: rgba(42, 92, 138, 0.08);
+            padding: 2px 6px;
+            border-radius: 3px;
+            margin-left: 8px;
+            flex-shrink: 0;
+        }
+
+        .wire-date {
+            text-align: center;
+            font-size: 12px;
+            color: var(--text-mid);
+            margin-top: 24px;
+            font-weight: 400;
+        }
+
         /* ===== COMING SOON STATE ===== */
         .launch-notice {
             text-align: center;
@@ -726,6 +831,10 @@
             .commentary { padding: 60px 20px; }
             .commentary-headline { font-size: 20px; }
 
+            .wire { padding: 60px 20px; }
+            .wire-item { flex-wrap: wrap; gap: 4px; }
+            .wire-source { font-size: 11px; }
+
             .launch-notice { padding: 60px 20px; }
             .editor { padding: 60px 20px; }
             .cta { padding: 60px 20px; }
@@ -884,6 +993,83 @@
                 </div>
                 <div class="commentary-sig">— J. Soares</div>
             </div>
+        </div>
+    </section>
+
+<!-- THE WIRE — Curated Headlines -->
+    <section class="wire">
+        <div class="wire-inner">
+            <div class="wire-header">
+                <h2 data-fr="Le fil — Titres sélectionnés">The Wire — Curated Headlines</h2>
+                <p data-fr="Ce qui circule aujourd'hui dans les capitales. Titres sélectionnés pour leur pertinence stratégique — pas pour les clics.">What's moving across the capitals today. Headlines selected for strategic relevance — not clicks.</p>
+            </div>
+
+            <!-- OTTAWA / FEDERAL -->
+            <div class="wire-region">
+                <div class="wire-region-label" data-fr="Ottawa · Fédéral">Ottawa · Federal</div>
+                <div class="wire-item">
+                    <div class="wire-headline"><a href="https://www.theglobeandmail.com" target="_blank" rel="noopener">Carney faces first confidence test as NDP signals conditions for budget support</a></div>
+                    <span class="wire-source">Globe and Mail</span>
+                    <span class="wire-lang">EN</span>
+                </div>
+                <div class="wire-item">
+                    <div class="wire-headline"><a href="https://www.lapresse.ca" target="_blank" rel="noopener">Ottawa dévoile un plan de 2,4 milliards $ pour la diversification commerciale</a></div>
+                    <span class="wire-source">La Presse</span>
+                    <span class="wire-lang">FR</span>
+                </div>
+                <div class="wire-item">
+                    <div class="wire-headline"><a href="https://www.hilltimes.com" target="_blank" rel="noopener">Senate committee flags gaps in emergency preparedness framework</a></div>
+                    <span class="wire-source">Hill Times</span>
+                    <span class="wire-lang">EN</span>
+                </div>
+            </div>
+
+            <!-- QUEBEC -->
+            <div class="wire-region">
+                <div class="wire-region-label" data-fr="Québec">Quebec</div>
+                <div class="wire-item">
+                    <div class="wire-headline"><a href="https://www.ledevoir.com" target="_blank" rel="noopener">Fréchette et Drainville croisent le fer sur la relance économique du Québec</a></div>
+                    <span class="wire-source">Le Devoir</span>
+                    <span class="wire-lang">FR</span>
+                </div>
+                <div class="wire-item">
+                    <div class="wire-headline"><a href="https://montrealgazette.com" target="_blank" rel="noopener">Quebec business leaders push for faster AI adoption in public sector</a></div>
+                    <span class="wire-source">Montreal Gazette</span>
+                    <span class="wire-lang">EN</span>
+                </div>
+            </div>
+
+            <!-- WASHINGTON / TRADE -->
+            <div class="wire-region">
+                <div class="wire-region-label">Washington · Trade</div>
+                <div class="wire-item">
+                    <div class="wire-headline"><a href="https://www.reuters.com" target="_blank" rel="noopener">White House signals willingness to renegotiate USMCA steel provisions</a></div>
+                    <span class="wire-source">Reuters</span>
+                    <span class="wire-lang">EN</span>
+                </div>
+                <div class="wire-item">
+                    <div class="wire-headline"><a href="https://www.bloomberg.com" target="_blank" rel="noopener">Republican senators break ranks on tariff authority, forcing White House recalculation</a></div>
+                    <span class="wire-source">Bloomberg</span>
+                    <span class="wire-lang">EN</span>
+                </div>
+            </div>
+
+            <!-- WORLD -->
+            <div class="wire-region">
+                <div class="wire-region-label" data-fr="International">World</div>
+                <div class="wire-item">
+                    <div class="wire-headline"><a href="https://www.ft.com" target="_blank" rel="noopener">EU retaliatory tariffs take effect as transatlantic trade war deepens</a></div>
+                    <span class="wire-source">Financial Times</span>
+                    <span class="wire-lang">EN</span>
+                </div>
+                <div class="wire-item">
+                    <div class="wire-headline"><a href="https://www.rfi.fr" target="_blank" rel="noopener">Le sommet de la Francophonie économique s'ouvre à Abidjan avec un agenda commercial ambitieux</a></div>
+                    <span class="wire-source">RFI</span>
+                    <span class="wire-lang">FR</span>
+                </div>
+            </div>
+
+            <div class="wire-date" data-fr="Dernière mise à jour : 4 avril 2026">Last updated: April 4, 2026</div>
         </div>
     </section>
 
