@@ -484,14 +484,15 @@
         }
 
         /* ===== THE WIRE ===== */
+        /* ===== THE WIRE — NEWS GRID ===== */
         .wire {
             padding: 80px 40px;
-            background: var(--white);
+            background: #f8f7f4;
             border-top: 1px solid rgba(201, 168, 76, 0.15);
         }
 
         .wire-inner {
-            max-width: 800px;
+            max-width: 1100px;
             margin: 0 auto;
         }
 
@@ -511,8 +512,117 @@
             font-size: 15px;
             color: var(--text-mid);
             font-weight: 300;
+            max-width: 700px;
         }
 
+        /* Featured stories — large cards */
+        .wire-featured {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 36px;
+        }
+
+        .wire-card {
+            background: var(--white);
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+            transition: box-shadow 0.2s, transform 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .wire-card:hover {
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+            transform: translateY(-2px);
+        }
+
+        .wire-card-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .wire-card-body {
+            padding: 18px 20px 16px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .wire-card-meta {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 10px;
+        }
+
+        .wire-card-source-icon {
+            width: 16px;
+            height: 16px;
+            border-radius: 2px;
+            flex-shrink: 0;
+        }
+
+        .wire-card-source {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            color: var(--text-mid);
+        }
+
+        .wire-card-region {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 2px 7px;
+            border-radius: 3px;
+            margin-left: auto;
+            flex-shrink: 0;
+        }
+
+        .region-usa { color: #1a3a5c; background: rgba(26, 58, 92, 0.08); }
+        .region-canada { color: #8b1a1a; background: rgba(139, 26, 26, 0.08); }
+        .region-quebec { color: #1a5c8b; background: rgba(26, 92, 139, 0.08); }
+        .region-world { color: #5c4a1a; background: rgba(92, 74, 26, 0.08); }
+        .region-markets { color: #1a5c3a; background: rgba(26, 92, 58, 0.08); }
+
+        .wire-card-headline {
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 17px;
+            font-weight: 600;
+            line-height: 1.35;
+            flex: 1;
+        }
+
+        .wire-card-headline a {
+            color: var(--text-dark);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .wire-card-headline a:hover {
+            color: var(--gold);
+        }
+
+        .wire-card-lang {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--corridor-accent);
+            background: rgba(42, 92, 138, 0.08);
+            padding: 2px 6px;
+            border-radius: 3px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        /* Region sections */
         .wire-region {
             margin-bottom: 32px;
         }
@@ -524,21 +634,51 @@
             font-weight: 700;
             color: var(--gold);
             padding-bottom: 10px;
-            margin-bottom: 16px;
-            border-bottom: 1px solid var(--border-light);
+            margin-bottom: 4px;
+            border-bottom: 2px solid var(--gold);
+        }
+
+        .wire-region-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
         }
 
         .wire-item {
             display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            gap: 16px;
-            padding: 10px 0;
-            border-bottom: 1px solid rgba(0,0,0,0.04);
+            align-items: flex-start;
+            gap: 12px;
+            padding: 14px 16px 14px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            transition: background 0.15s;
         }
 
-        .wire-item:last-child {
-            border-bottom: none;
+        .wire-item:hover {
+            background: rgba(201, 168, 76, 0.04);
+        }
+
+        .wire-item:nth-child(odd) {
+            border-right: 1px solid rgba(0,0,0,0.05);
+            padding-right: 20px;
+            padding-left: 0;
+        }
+
+        .wire-item:nth-child(even) {
+            padding-left: 20px;
+            padding-right: 0;
+        }
+
+        .wire-item-icon {
+            width: 16px;
+            height: 16px;
+            border-radius: 2px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .wire-item-content {
+            flex: 1;
+            min-width: 0;
         }
 
         .wire-headline {
@@ -547,7 +687,7 @@
 
         .wire-headline a {
             font-family: 'Source Sans 3', sans-serif;
-            font-size: 15px;
+            font-size: 14px;
             font-weight: 500;
             color: var(--text-dark);
             text-decoration: none;
@@ -559,33 +699,45 @@
             color: var(--gold);
         }
 
+        .wire-item-meta {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 4px;
+        }
+
         .wire-source {
-            font-size: 12px;
+            font-size: 11px;
             color: var(--text-mid);
-            font-weight: 400;
-            white-space: nowrap;
-            flex-shrink: 0;
+            font-weight: 500;
         }
 
         .wire-lang {
-            font-size: 10px;
+            font-size: 9px;
             font-weight: 700;
             letter-spacing: 1px;
             text-transform: uppercase;
             color: var(--corridor-accent);
             background: rgba(42, 92, 138, 0.08);
-            padding: 2px 6px;
+            padding: 1px 5px;
             border-radius: 3px;
-            margin-left: 8px;
-            flex-shrink: 0;
         }
 
         .wire-date {
             text-align: center;
             font-size: 12px;
             color: var(--text-mid);
-            margin-top: 24px;
+            margin-top: 32px;
             font-weight: 400;
+        }
+
+        .wire-sources-list {
+            text-align: center;
+            font-size: 11px;
+            color: var(--text-mid);
+            margin-top: 8px;
+            font-weight: 300;
+            letter-spacing: 0.3px;
         }
 
         /* ===== COMING SOON STATE ===== */
@@ -832,7 +984,11 @@
             .commentary-headline { font-size: 20px; }
 
             .wire { padding: 60px 20px; }
-            .wire-item { flex-wrap: wrap; gap: 4px; }
+            .wire-featured { grid-template-columns: 1fr; }
+            .wire-region-grid { grid-template-columns: 1fr; }
+            .wire-item:nth-child(odd) { border-right: none; padding-right: 0; }
+            .wire-item:nth-child(even) { padding-left: 0; }
+            .wire-item { flex-wrap: nowrap; gap: 10px; }
             .wire-source { font-size: 11px; }
 
             .launch-notice { padding: 60px 20px; }
@@ -1000,111 +1156,311 @@
     <section class="wire">
         <div class="wire-inner">
             <div class="wire-header">
-                <h2 data-fr="Le fil — Titres sélectionnés">The Wire — Curated Headlines</h2>
-                <p data-fr="Ce qui circule aujourd'hui dans les capitales. Titres sélectionnés pour leur pertinence stratégique — pas pour les clics.">What's moving across the capitals today. Headlines selected for strategic relevance — not clicks.</p>
+                <h2 data-fr="Le fil — Ce qui compte aujourd'hui">The Wire — What Matters Today</h2>
+                <p data-fr="Les gros titres des sources qui comptent — sélectionnés pour la pertinence stratégique, pas pour les clics. Actualités en anglais et en français.">Top headlines from the sources that matter — selected for strategic relevance, not clicks. Coverage in English and French.</p>
             </div>
 
-            <!-- OTTAWA / FEDERAL -->
+            <!-- ========== FEATURED STORIES ========== -->
+            <div class="wire-featured">
+                <div class="wire-card">
+                    <img class="wire-card-img" src="https://images.unsplash.com/photo-1580752300992-559f8e0734e0?w=600&h=360&fit=crop" alt="Iran bridge strike">
+                    <div class="wire-card-body">
+                        <div class="wire-card-meta">
+                            <img class="wire-card-source-icon" src="https://www.google.com/s2/favicons?domain=breitbart.com&sz=32" alt="">
+                            <span class="wire-card-source">Breitbart</span>
+                            <span class="wire-card-region region-usa">USA</span>
+                        </div>
+                        <div class="wire-card-headline"><a href="https://www.breitbart.com/politics/2026/04/02/watch-trump-posts-video-of-irans-highest-bridge-tumbling-down-warns-make-a-deal-before-its-too-late/" target="_blank" rel="noopener">Iran's Highest Bridge Struck — Trump Warns 'Much More to Follow'</a></div>
+                    </div>
+                </div>
+                <div class="wire-card">
+                    <img class="wire-card-img" src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&h=360&fit=crop" alt="Trump budget">
+                    <div class="wire-card-body">
+                        <div class="wire-card-meta">
+                            <img class="wire-card-source-icon" src="https://www.google.com/s2/favicons?domain=foxbusiness.com&sz=32" alt="">
+                            <span class="wire-card-source">Fox Business</span>
+                            <span class="wire-card-region region-usa">USA</span>
+                        </div>
+                        <div class="wire-card-headline"><a href="https://www.foxbusiness.com/category/government-spending" target="_blank" rel="noopener">Trump Releases 2027 Budget: $445B Defense Increase, $73B in Non-Defense Cuts</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== WASHINGTON · USA ========== -->
             <div class="wire-region">
-                <div class="wire-region-label" data-fr="Ottawa · Fédéral">Ottawa · Federal</div>
-                <div class="wire-item">
-                    <div class="wire-headline"><a href="https://www.theglobeandmail.com/politics/article-liberal-government-survives-confidence-vote-on-federal-budget/" target="_blank" rel="noopener">Carney government survives confidence vote on federal budget</a></div>
-                    <span class="wire-source">Globe and Mail</span>
-                    <span class="wire-lang">EN</span>
-                </div>
-                <div class="wire-item">
-                    <div class="wire-headline"><a href="https://www.cbc.ca/news/politics/conservatives-helped-pass-carney-budget-9.6983603" target="_blank" rel="noopener">How the Conservatives helped pass Carney's budget, avoiding an election</a></div>
-                    <span class="wire-source">CBC News</span>
-                    <span class="wire-lang">EN</span>
-                </div>
-                <div class="wire-item">
-                    <div class="wire-headline"><a href="https://www.lapresse.ca/actualites/politique/2026-03-31/en-cas-de-majorite-parlementaire/aucune-chance-de-prorogation-du-parlement-assure-mark-carney.php" target="_blank" rel="noopener">« Aucune chance » de prorogation du Parlement, assure Mark Carney</a></div>
-                    <span class="wire-source">La Presse</span>
-                    <span class="wire-lang">FR</span>
-                </div>
-                <div class="wire-item">
-                    <div class="wire-headline"><a href="https://www.ledevoir.com/politique/canada/932574/mark-carney-ne-souhaite-pas-modifier-budget-malgre-vote-confiance-venir" target="_blank" rel="noopener">Carney ne souhaite pas modifier son budget malgré un vote de confiance à venir</a></div>
-                    <span class="wire-source">Le Devoir</span>
-                    <span class="wire-lang">FR</span>
-                </div>
-                <div class="wire-item">
-                    <div class="wire-headline"><a href="https://www.hilltimes.com/2026/04/01/indigenous-inspired-art-in-senate-room-in-centre-block-deemed-cultural-appropriation-removed/497416/" target="_blank" rel="noopener">'Indigenous-inspired' art in Senate room in Centre Block deemed 'cultural appropriation,' removed</a></div>
-                    <span class="wire-source">Hill Times</span>
-                    <span class="wire-lang">EN</span>
-                </div>
-                <div class="wire-item">
-                    <div class="wire-headline"><a href="https://www.lapresse.ca/actualites/politique/2026-03-10/mark-carney-s-approche-d-une-majorite/une-deputee-du-npd-passe-chez-les-liberaux.php" target="_blank" rel="noopener">Une députée du NPD passe chez les libéraux — Carney s'approche d'une majorité</a></div>
-                    <span class="wire-source">La Presse</span>
-                    <span class="wire-lang">FR</span>
+                <div class="wire-region-label" data-fr="Washington · États-Unis">Washington · USA</div>
+                <div class="wire-region-grid">
+                    <div class="wire-item">
+                        <img class="wire-item-icon" src="https://www.google.com/s2/favicons?domain=breitbart.com&sz=32" alt="">
+                        <div class="wire-item-content">
+                            <div class="wire-headline"><a href="https://www.breitbart.com/europe/2026/04/02/iran-nuke-sites-turned-to-dust-missiles-wait-to-strike-again-says-trump/" target="_blank" rel="noopener">Iran Nuke Sites Turned to 'Dust,' Missiles Wait to Strike Again Says Trump</a></div>
+                            <div class="wire-item-meta"><span class="wire-source">Breitbart</span></div>
+                        </div>
+                    </div>
+                    <div class="wire-item">
+                        <img class="wire-item-icon" src="https://www.google.com/s2/favicons?domain=breitbart.com&sz=32" alt="">
+                        <div class="wire-item-content">
+                            <div class="wire-headline"><a href="https://www.breitbart.com/economy/2026/04/03/new-break-even/" target="_blank" rel="noopener">Fed Researchers: Economy Now Needs Far Fewer Jobs to Stay Healthy</a></div>
+                            <div class="wire-item-meta"><span class="wire-source">Breitbart</span></div>
+                        </div>
+                    </div>
+                    <div class="wire-item">
+                        <img class="wire-item-icon" src="https://www.google.com/s2/favicons?domain=foxnews.com&sz=32" alt="">
+                        <div class="wire-item-content">
+                            <div class="wire-headline"><a href="https://www.foxnews.com/" target="_blank" rel="noopener">Sen. Sheehy: 'We've Largely Established Air Superiority' Over Iran</a></div>
+                            <div class="wire-item-meta"><span class="wire-source">Fox News</span></div>
+                        </div>
+                    </div>
+                    <div class="wire-item">
+                        <img class="wire-item-icon" src="https://www.google.com/s2/favicons?domain=whitehouse.gov&sz=32" alt="">
+                        <div class="wire-item-content">
+                            <div class="wire-headline"><a href="https://www.whitehouse.gov/fact-sheets/2026/04/fact-sheet-president-donald-j-trump-strengthens-tariffs-on-steel-aluminum-and-copper-imports/" target="_blank" rel="noopener">White House: 50% Tariff on Steel, Aluminum and Copper — Effective April 6</a></div>
+                            <div class="wire-item-meta"><span class="wire-source">White House</span></div>
+                        </div>
+                    </div>
+                    <div class="wire-item">
+                        <img class="wire-item-icon" src="https://www.google.com/s2/favicons?domain=whitehouse.gov&sz=32" alt="">
+                        <div class="wire-item-content">
+                            <div class="wire-headline"><a href="https://www.whitehouse.gov/fact-sheets/2026/04/fact-sheet-president-donald-j-trump-bolsters-national-security-and-strengthens-u-s-supply-chains-by-imposing-tariffs-on-patented-pharmaceutical-products/" target="_blank" rel="noopener">100% Tariff on Patented Pharmaceutical Imports — Effective in 120 Days</a></div>
+                            <div class="wire-item-meta"><span class="wire-source">White House</span></div>
+                        </div>
+                    </div>
+                    <div class="wire-item">
+                        <img class="wire-item-icon" src="https://www.google.com/s2/favicons?domain=taxfoundation.org&sz=32" alt="">
+                        <div class="wire-item-content">
+                            <div class="wire-headline"><a href="https://taxfoundation.org/research/all/federal/trump-tariffs-trade-war/" target="_blank" rel="noopener">Tariff Tracker: 2026 Trump Tariffs &amp; Trade War by the Numbers</a></div>
+                            <div class="wire-item-meta"><span class="wire-source">Tax Foundation</span></div>
+                        </div>
+                    </div>
+                    <div class="wire-item">
+                        <img class="wire-item-icon" src="https://www.google.com/s2/favicons?domain=foxbusiness.com&sz=32" alt="">
+                        <div class="wire-item-content">
+                            <div class="wire-headline"><a href="https://www.foxbusiness.com/category/economy" target="_blank" rel="noopener">Federal Deficit Hits $1 Trillion in Five Months as Tariff Revenue Surges</a></div>
+                            <div class="wire-item-meta"><span class="wire-source">Fox Business</span></div>
+                        </div>
+                    </div>
+                    <div class="wire-item">
+                        <img class="wire-item-icon" src="https://www.google.com/s2/favicons?domain=breitbart.com&sz=32" alt="">
+                        <div class="wire-item-content">
+                            <div class="wire-headline"><a href="https://www.breitbart.com/crime/2026/04/03/cybercriminals-lurking-in-health-tech-system-stole-3-4-million-patients-information/" target="_blank" rel="noopener">Cybercriminals Lurking in Health Tech System Stole Data of 3.4M Patients</a></div>
+                            <div class="wire-item-meta"><span class="wire-source">Breitbart</span></div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <!-- QUEBEC -->
+            <!-- ========== OTTAWA · CANADA ========== -->
+            <div class="wire-region">
+                <div class="wire-region-label" data-fr="Ottawa · Canada">Ottawa · Canada</div>
+                <div class="wire-region-grid">
+                    <div class="wire-item">
+                        <img class="wire-item-icon" src="https://www.google.com/s2/favicons?domain=theglobeandmail.com&sz=32" alt="">
+                        <div class="wire-item-content">
+                            <div class="wire-headline"><a href="https://www.theglobeandmail.com/politics/article-liberal-government-survives-confidence-vote-on-federal-budget/" target="_blank" rel="noopener">Carney Government Survives Confidence Vote on Federal Budget</a></div>
+                            <div class="wire-item-meta"><span class="wire-source">Globe and Mail</span></div>
+                        </div>
+                    </div>
+                    <div class="wire-item">
+                        <img class="wire-item-icon" src="https://www.google.com/s2/favicons?domain=cbc.ca&sz=32" alt="">
+                        <div class="wire-item-content">
+                            <div class="wire-headline"><a href="https://www.cbc.ca/news/politics/poilievre-federal-fuel-tax-holiday-9.7150899" target="_blank" rel="noopener">Poilievre Calls for Federal Tax Holiday on Fuel as Gas Prices Spike</a></div>
+                            <div class="wire-item-meta"><span class="wire-source">CBC News</span></div>
+                        </div>
+                    </div>
+                    <div class="wire-item">
+                        <img class="wire-item-icon" src="https://www.google.com/s2/favicons?domain=theglobeandmail.com&sz=32" alt="">
+                        <div class="wire-item-content">
+                            <div class="wire-headline"><a href="https://www.theglobeandmail.com/politics/article-poilievre-on-challenging-year-and-what-lies-ahead/" target="_blank" rel="noopener">Poilievre Sees Better Days Ahead for Conservatives After a 'Challenging Year'</a></div>
+                            <div class="wire-item-meta"><span class="wire-source">Globe and Mail</span></div>
+                        </div>
+                    </div>
+                    <div class="wire-item">
+                        <img class="wire-item-icon" src="https://www.google.com/s2/favicons?domain=hilltimes.com&sz=32" alt="">
+                        <div class="wire-item-content">
+                            <div class="wire-headline"><a href="https://www.hilltimes.com/2026/04/01/indigenous-inspired-art-in-senate-room-in-centre-block-deemed-cultural-appropriation-removed/497416/" target="_blank" rel="noopener">'Indigenous-Inspired' Art in Senate Room Deemed 'Cultural Appropriation,' Removed</a></div>
+                            <div class="wire-item-meta"><span class="wire-source">Hill Times</span></div>
+                        </div>
+                    </div>
+                    <div class="wire-item">
+                        <img class="wire-item-icon" src="https://www.google.com/s2/favicons?domain=lapresse.ca&sz=32" alt="">
+                        <div class="wire-item-content">
+                            <div class="wire-headline"><a href="https://www.lapresse.ca/actualites/politique/2026-03-31/en-cas-de-majorite-parlementaire/aucune-chance-de-prorogation-du-parlement-assure-mark-carney.php" target="_blank" rel="noopener">« Aucune chance » de prorogation du Parlement, assure Mark Carney</a></div>
+                            <div class="wire-item-meta"><span class="wire-source">La Presse</span> <span class="wire-lang">FR</span></div>
+                        </div>
+                    </div>
+                    <div class="wire-item">
+                        <img class="wire-item-icon" src="https://www.google.com/s2/favicons?domain=ledevoir.com&sz=32" alt="">
+                        <div class="wire-item-content">
+                            <div class="wire-headline"><a href="https://www.ledevoir.com/politique/canada/932574/mark-carney-ne-souhaite-pas-modifier-budget-malgre-vote-confiance-venir" target="_blank" rel="noopener">Carney ne souhaite pas modifier son budget malgré un vote de confiance à venir</a></div>
+                            <div class="wire-item-meta"><span class="wire-source">Le Devoir</span> <span class="wire-lang">FR</span></div>
+                        </div>
+                    </div>
+                    <div class="wire-item">
+                        <img class="wire-item-icon" src="https://www.google.com/s2/favicons?domain=cbc.ca&sz=32" alt="">
+                        <div class="wire-item-content">
+                            <div class="wire-headline"><a href="https://www.cbc.ca/news/politics/trump-tariffs-canada-trade-negotiation-cusma-usmca-9.7132301" target="_blank" rel="noopener">Canada's Biggest Points of Leverage in Tariff and Trade Talks</a></div>
+                            <div class="wire-item-meta"><span class="wire-source">CBC News</span></div>
+                        </div>
+                    </div>
+                    <div class="wire-item">
+                        <img class="wire-item-icon" src="https://www.google.com/s2/favicons?domain=ledevoir.com&sz=32" alt="">
+                        <div class="wire-item-content">
+                            <div class="wire-headline"><a href="https://www.ledevoir.com/politique/canada/952788/credit-tps-annonce-gouvernement-carney-coutera-12-4-milliards-six-ans" target="_blank" rel="noopener">Le crédit sur la TPS du gouvernement Carney coûtera 12,4 milliards sur six ans</a></div>
+                            <div class="wire-item-meta"><span class="wire-source">Le Devoir</span> <span class="wire-lang">FR</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== QUEBEC ========== -->
             <div class="wire-region">
                 <div class="wire-region-label" data-fr="Québec">Quebec</div>
-                <div class="wire-item">
-                    <div class="wire-headline"><a href="https://www.cbc.ca/news/canada/montreal/caq-leadership-debate-laval-immigration-9.7145869" target="_blank" rel="noopener">Fréchette promises extended language law, Drainville fewer immigrants in final CAQ leadership debate</a></div>
-                    <span class="wire-source">CBC News</span>
-                    <span class="wire-lang">EN</span>
-                </div>
-                <div class="wire-item">
-                    <div class="wire-headline"><a href="https://www.cbc.ca/news/canada/montreal/caq-first-leadership-debate-9.7137419" target="_blank" rel="noopener">CAQ candidates get heated over shale gas, Third Link project in first official debate</a></div>
-                    <span class="wire-source">CBC News</span>
-                    <span class="wire-lang">EN</span>
-                </div>
-                <div class="wire-item">
-                    <div class="wire-headline"><a href="https://www.ledevoir.com/politique/canada/963039/mark-carney-prepare-majorite-apres" target="_blank" rel="noopener">Carney se prépare à un gouvernement majoritaire — quelles conséquences pour Ottawa?</a></div>
-                    <span class="wire-source">Le Devoir</span>
-                    <span class="wire-lang">FR</span>
+                <div class="wire-region-grid">
+                    <div class="wire-item">
+                        <img class="wire-item-icon" src="https://www.google.com/s2/favicons?domain=cbc.ca&sz=32" alt="">
+                        <div class="wire-item-content">
+                            <div class="wire-headline"><a href="https://www.cbc.ca/news/canada/montreal/caq-leadership-debate-laval-immigration-9.7145869" target="_blank" rel="noopener">Fréchette Promises Extended Language Law, Drainville Fewer Immigrants in Final CAQ Debate</a></div>
+                            <div class="wire-item-meta"><span class="wire-source">CBC News</span></div>
+                        </div>
+                    </div>
+                    <div class="wire-item">
+                        <img class="wire-item-icon" src="https://www.google.com/s2/favicons?domain=cbc.ca&sz=32" alt="">
+                        <div class="wire-item-content">
+                            <div class="wire-headline"><a href="https://www.cbc.ca/news/canada/montreal/legault-new-caq-leader-quebec-government-limbo-9.7092399" target="_blank" rel="noopener">Legault's Exit Leaves Key Quebec Files in Limbo — Who's in Charge?</a></div>
+                            <div class="wire-item-meta"><span class="wire-source">CBC News</span></div>
+                        </div>
+                    </div>
+                    <div class="wire-item">
+                        <img class="wire-item-icon" src="https://www.google.com/s2/favicons?domain=cbc.ca&sz=32" alt="">
+                        <div class="wire-item-content">
+                            <div class="wire-headline"><a href="https://www.cbc.ca/news/canada/montreal/caq-first-leadership-debate-9.7137419" target="_blank" rel="noopener">CAQ Candidates Get Heated Over Shale Gas, Third Link in First Official Debate</a></div>
+                            <div class="wire-item-meta"><span class="wire-source">CBC News</span></div>
+                        </div>
+                    </div>
+                    <div class="wire-item">
+                        <img class="wire-item-icon" src="https://www.google.com/s2/favicons?domain=ledevoir.com&sz=32" alt="">
+                        <div class="wire-item-content">
+                            <div class="wire-headline"><a href="https://www.ledevoir.com/politique/canada/963039/mark-carney-prepare-majorite-apres" target="_blank" rel="noopener">Carney se prépare à un gouvernement majoritaire — quelles conséquences pour Ottawa?</a></div>
+                            <div class="wire-item-meta"><span class="wire-source">Le Devoir</span> <span class="wire-lang">FR</span></div>
+                        </div>
+                    </div>
+                    <div class="wire-item">
+                        <img class="wire-item-icon" src="https://www.google.com/s2/favicons?domain=lapresse.ca&sz=32" alt="">
+                        <div class="wire-item-content">
+                            <div class="wire-headline"><a href="https://www.lapresse.ca/actualites/politique/2026-03-10/mark-carney-s-approche-d-une-majorite/une-deputee-du-npd-passe-chez-les-liberaux.php" target="_blank" rel="noopener">Une députée du NPD passe chez les libéraux — Carney s'approche d'une majorité</a></div>
+                            <div class="wire-item-meta"><span class="wire-source">La Presse</span> <span class="wire-lang">FR</span></div>
+                        </div>
+                    </div>
+                    <div class="wire-item">
+                        <img class="wire-item-icon" src="https://www.google.com/s2/favicons?domain=ledevoir.com&sz=32" alt="">
+                        <div class="wire-item-content">
+                            <div class="wire-headline"><a href="https://www.ledevoir.com/economie/945756/debut-negociations-fin-aceum" target="_blank" rel="noopener">Le début de négociations sans fin sur l'ACEUM?</a></div>
+                            <div class="wire-item-meta"><span class="wire-source">Le Devoir</span> <span class="wire-lang">FR</span></div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <!-- WASHINGTON / TRADE -->
+            <!-- ========== WORLD · GEOPOLITICS ========== -->
             <div class="wire-region">
-                <div class="wire-region-label">Washington · Trade</div>
-                <div class="wire-item">
-                    <div class="wire-headline"><a href="https://www.cbc.ca/news/politics/trump-tariffs-canada-trade-negotiation-cusma-usmca-9.7132301" target="_blank" rel="noopener">Canada's biggest points of leverage in tariff and trade talks with the U.S.</a></div>
-                    <span class="wire-source">CBC News</span>
-                    <span class="wire-lang">EN</span>
-                </div>
-                <div class="wire-item">
-                    <div class="wire-headline"><a href="https://taxfoundation.org/research/all/federal/trump-tariffs-trade-war/" target="_blank" rel="noopener">Tariff Tracker: 2026 Trump Tariffs &amp; Trade War by the Numbers</a></div>
-                    <span class="wire-source">Tax Foundation</span>
-                    <span class="wire-lang">EN</span>
-                </div>
-                <div class="wire-item">
-                    <div class="wire-headline"><a href="https://thefulcrum.us/economy/u-s-canada-tariffs-2026" target="_blank" rel="noopener">The Facts on U.S.–Canada Tariffs Nearly One Year Into Trump's Plan</a></div>
-                    <span class="wire-source">The Fulcrum</span>
-                    <span class="wire-lang">EN</span>
-                </div>
-                <div class="wire-item">
-                    <div class="wire-headline"><a href="https://www.ledevoir.com/politique/canada/952788/credit-tps-annonce-gouvernement-carney-coutera-12-4-milliards-six-ans" target="_blank" rel="noopener">Le crédit sur la TPS du gouvernement Carney coûtera 12,4 milliards sur six ans</a></div>
-                    <span class="wire-source">Le Devoir</span>
-                    <span class="wire-lang">FR</span>
+                <div class="wire-region-label" data-fr="International · Géopolitique">World · Geopolitics</div>
+                <div class="wire-region-grid">
+                    <div class="wire-item">
+                        <img class="wire-item-icon" src="https://www.google.com/s2/favicons?domain=breitbart.com&sz=32" alt="">
+                        <div class="wire-item-content">
+                            <div class="wire-headline"><a href="https://www.breitbart.com/politics/2026/03/31/iran-fires-missiles-across-middle-east-as-trump-threatens-oil-hub/" target="_blank" rel="noopener">Iran Fires Missiles Across Middle East as Trump Threatens Oil Hub</a></div>
+                            <div class="wire-item-meta"><span class="wire-source">Breitbart</span></div>
+                        </div>
+                    </div>
+                    <div class="wire-item">
+                        <img class="wire-item-icon" src="https://www.google.com/s2/favicons?domain=cnbc.com&sz=32" alt="">
+                        <div class="wire-item-content">
+                            <div class="wire-headline"><a href="https://www.cnbc.com/2026/02/24/us-eu-trade-deal-eu-parliament-suspends-trade-deal-trump-tariffs-eu-retaliation-aci.html" target="_blank" rel="noopener">EU Parliament Suspends Trade Deal Ratification as Retaliation Options Widen</a></div>
+                            <div class="wire-item-meta"><span class="wire-source">CNBC</span></div>
+                        </div>
+                    </div>
+                    <div class="wire-item">
+                        <img class="wire-item-icon" src="https://www.google.com/s2/favicons?domain=cnbc.com&sz=32" alt="">
+                        <div class="wire-item-content">
+                            <div class="wire-headline"><a href="https://www.cnbc.com/2026/04/03/trump-tariffs-trade-war-impact.html" target="_blank" rel="noopener">Trump Tariffs Fall, But Trade War Impacts Linger</a></div>
+                            <div class="wire-item-meta"><span class="wire-source">CNBC</span></div>
+                        </div>
+                    </div>
+                    <div class="wire-item">
+                        <img class="wire-item-icon" src="https://www.google.com/s2/favicons?domain=ec.europa.eu&sz=32" alt="">
+                        <div class="wire-item-content">
+                            <div class="wire-headline"><a href="https://ec.europa.eu/commission/presscorner/detail/en/ip_25_740" target="_blank" rel="noopener">EU Commission Responds to U.S. Steel &amp; Aluminium Tariffs With Countermeasures</a></div>
+                            <div class="wire-item-meta"><span class="wire-source">European Commission</span></div>
+                        </div>
+                    </div>
+                    <div class="wire-item">
+                        <img class="wire-item-icon" src="https://www.google.com/s2/favicons?domain=defence24.com&sz=32" alt="">
+                        <div class="wire-item-content">
+                            <div class="wire-headline"><a href="https://defence24.com/armed-forces/global-military-balance-in-2026" target="_blank" rel="noopener">Global Military Balance in 2026: European Budgets Surge 13%</a></div>
+                            <div class="wire-item-meta"><span class="wire-source">Defence24</span></div>
+                        </div>
+                    </div>
+                    <div class="wire-item">
+                        <img class="wire-item-icon" src="https://www.google.com/s2/favicons?domain=diplomatie.gouv.fr&sz=32" alt="">
+                        <div class="wire-item-content">
+                            <div class="wire-headline"><a href="https://www.defense.gouv.fr/actualites/catherine-vautrin-nous-rearmer-rearmer-lindustrie-defense-europeenne" target="_blank" rel="noopener">« Nous réarmer et réarmer l'industrie de défense européenne »</a></div>
+                            <div class="wire-item-meta"><span class="wire-source">Ministère des Armées</span> <span class="wire-lang">FR</span></div>
+                        </div>
+                    </div>
+                    <div class="wire-item">
+                        <img class="wire-item-icon" src="https://www.google.com/s2/favicons?domain=congress.gov&sz=32" alt="">
+                        <div class="wire-item-content">
+                            <div class="wire-headline"><a href="https://www.congress.gov/crs-product/IF12595" target="_blank" rel="noopener">U.S.–Canada Trade Relations — Congressional Research Service Update</a></div>
+                            <div class="wire-item-meta"><span class="wire-source">Congress.gov</span></div>
+                        </div>
+                    </div>
+                    <div class="wire-item">
+                        <img class="wire-item-icon" src="https://www.google.com/s2/favicons?domain=thefulcrum.us&sz=32" alt="">
+                        <div class="wire-item-content">
+                            <div class="wire-headline"><a href="https://thefulcrum.us/economy/u-s-canada-tariffs-2026" target="_blank" rel="noopener">The Facts on U.S.–Canada Tariffs Nearly One Year Into Trump's Plan</a></div>
+                            <div class="wire-item-meta"><span class="wire-source">The Fulcrum</span></div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <!-- WORLD -->
+            <!-- ========== MARKETS · ECONOMY ========== -->
             <div class="wire-region">
-                <div class="wire-region-label" data-fr="International">World</div>
-                <div class="wire-item">
-                    <div class="wire-headline"><a href="https://www.cnbc.com/2026/02/24/us-eu-trade-deal-eu-parliament-suspends-trade-deal-trump-tariffs-eu-retaliation-aci.html" target="_blank" rel="noopener">EU Parliament suspends trade deal ratification as retaliation options widen</a></div>
-                    <span class="wire-source">CNBC</span>
-                    <span class="wire-lang">EN</span>
-                </div>
-                <div class="wire-item">
-                    <div class="wire-headline"><a href="https://ec.europa.eu/commission/presscorner/detail/en/ip_25_740" target="_blank" rel="noopener">Commission responds to unjustified US steel and aluminium tariffs with countermeasures</a></div>
-                    <span class="wire-source">European Commission</span>
-                    <span class="wire-lang">EN</span>
-                </div>
-                <div class="wire-item">
-                    <div class="wire-headline"><a href="https://www.congress.gov/crs-product/IF12595" target="_blank" rel="noopener">U.S.-Canada Trade Relations — Congressional Research Service Update</a></div>
-                    <span class="wire-source">Congress.gov</span>
-                    <span class="wire-lang">EN</span>
+                <div class="wire-region-label" data-fr="Marchés · Économie">Markets · Economy</div>
+                <div class="wire-region-grid">
+                    <div class="wire-item">
+                        <img class="wire-item-icon" src="https://www.google.com/s2/favicons?domain=foxbusiness.com&sz=32" alt="">
+                        <div class="wire-item-content">
+                            <div class="wire-headline"><a href="https://www.foxbusiness.com/category/government-spending" target="_blank" rel="noopener">Trump Proposes Massive $1.5 Trillion Defense Budget — Up From $1T Plan</a></div>
+                            <div class="wire-item-meta"><span class="wire-source">Fox Business</span></div>
+                        </div>
+                    </div>
+                    <div class="wire-item">
+                        <img class="wire-item-icon" src="https://www.google.com/s2/favicons?domain=foxbusiness.com&sz=32" alt="">
+                        <div class="wire-item-content">
+                            <div class="wire-headline"><a href="https://www.foxbusiness.com/category/economic-indicators" target="_blank" rel="noopener">Fed's Williams: Monetary Policy 'Well Positioned' — Energy Surge Will Take Months to Hit</a></div>
+                            <div class="wire-item-meta"><span class="wire-source">Fox Business</span></div>
+                        </div>
+                    </div>
+                    <div class="wire-item">
+                        <img class="wire-item-icon" src="https://www.google.com/s2/favicons?domain=supplychaindive.com&sz=32" alt="">
+                        <div class="wire-item-content">
+                            <div class="wire-headline"><a href="https://www.supplychaindive.com/news/trump-steel-aluminum-copper-tariff-adjustments/816547/" target="_blank" rel="noopener">Trump Adjusts Tariffs for Steel, Aluminum, Copper — Supply Chain Impact</a></div>
+                            <div class="wire-item-meta"><span class="wire-source">Supply Chain Dive</span></div>
+                        </div>
+                    </div>
+                    <div class="wire-item">
+                        <img class="wire-item-icon" src="https://www.google.com/s2/favicons?domain=finance.yahoo.com&sz=32" alt="">
+                        <div class="wire-item-content">
+                            <div class="wire-headline"><a href="https://finance.yahoo.com/news/live/trump-tariffs-live-updates-china-opens-probes-into-us-trade-practices-eu-advances-us-trade-agreement-122637962.html" target="_blank" rel="noopener">China Opens Probes Into U.S. Trade Practices; EU Advances Trade Agreement</a></div>
+                            <div class="wire-item-meta"><span class="wire-source">Yahoo Finance</span></div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div class="wire-date" data-fr="Dernière mise à jour : 4 avril 2026">Last updated: April 4, 2026</div>
+            <div class="wire-sources-list" data-fr="Sources : Breitbart · Fox News · Fox Business · White House · Globe and Mail · Hill Times · CBC · La Presse · Le Devoir · CNBC · Tax Foundation · Congress.gov · Defence24 · Ministère des Armées">Sources: Breitbart · Fox News · Fox Business · White House · Globe and Mail · Hill Times · CBC · La Presse · Le Devoir · CNBC · Tax Foundation · Congress.gov · Defence24 · Ministère des Armées</div>
         </div>
     </section>
 
