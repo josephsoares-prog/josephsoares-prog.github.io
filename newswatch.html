@@ -1,0 +1,1477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/favicon.ico">
+    <title>Newswatch | Real-Time Political &amp; Business Intelligence</title>
+    <meta name="description" content="Newswatch — Real-time political and business intelligence. Live feed of developments in Washington, Ottawa, Quebec, and capitals around the world. By Joseph Soares.">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Newswatch — Real-Time Political Intelligence",
+      "url": "https://josephsoares.com/newswatch",
+      "description": "Real-time political and business intelligence feed for decision-makers. Live updates from Washington, Ottawa, Quebec, and global capitals.",
+      "inLanguage": ["en", "fr"],
+      "author": {
+        "@type": "Person",
+        "name": "Joseph Soares",
+        "url": "https://josephsoares.com"
+      }
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #0b1a2e;
+            --navy-mid: #0f2240;
+            --navy-light: #132d54;
+            --gold: #c9a84c;
+            --gold-light: #dfc07a;
+            --gold-muted: rgba(201, 168, 76, 0.12);
+            --cream: #f5f1eb;
+            --white: #ffffff;
+            --text-dark: #1a1a2e;
+            --text-mid: #4a4a5a;
+            --text-light: rgba(255,255,255,0.75);
+            --border-light: rgba(201, 168, 76, 0.2);
+            --corridor-accent: #2a5c8a;
+            --live-green: #2ecc71;
+            --news-bg: #0d1b2f;
+            --news-card: #11233a;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Source Sans 3', -apple-system, sans-serif;
+            color: var(--text-dark);
+            background: var(--news-bg);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ===== LANG SWITCHER ===== */
+        .lang-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 200;
+            background: #06101e;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 0 40px;
+            height: 32px;
+            border-bottom: 1px solid rgba(201, 168, 76, 0.08);
+        }
+
+        .lang-bar button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.35);
+            padding: 6px 12px;
+            transition: color 0.3s;
+        }
+
+        .lang-bar button:hover { color: var(--gold-light); }
+        .lang-bar button.active { color: var(--gold); }
+        .lang-bar .lang-sep { color: rgba(255,255,255,0.12); font-size: 11px; }
+
+        /* ===== NAV ===== */
+        nav {
+            position: fixed;
+            top: 32px;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: rgba(11, 26, 46, 0.96);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+            padding: 0 40px;
+        }
+
+        .nav-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 64px;
+        }
+
+        .nav-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--white);
+            text-decoration: none;
+            letter-spacing: 0.02em;
+        }
+
+        .nav-name span { color: var(--gold); }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover { color: var(--gold); }
+        .nav-links a.nav-active { color: var(--gold); }
+
+        .nav-cta {
+            background: var(--gold) !important;
+            color: var(--navy) !important;
+            padding: 9px 22px !important;
+            border-radius: 3px;
+            font-weight: 700 !important;
+            font-size: 11px !important;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .nav-cta:hover {
+            background: var(--gold-light) !important;
+            color: var(--navy) !important;
+        }
+
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            flex-direction: column;
+            gap: 5px;
+            padding: 4px;
+        }
+
+        .mobile-toggle span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--white);
+            transition: all 0.3s;
+        }
+
+        /* ===== LIVE STATUS BAR ===== */
+        .live-bar {
+            position: fixed;
+            top: 96px;
+            left: 0;
+            right: 0;
+            z-index: 99;
+            background: rgba(13, 27, 47, 0.95);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid rgba(46, 204, 113, 0.3);
+            padding: 12px 40px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .live-indicator {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--live-green);
+            letter-spacing: 1px;
+        }
+
+        .live-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--live-green);
+            border-radius: 50%;
+            animation: pulse-live 1s ease infinite;
+        }
+
+        .live-time {
+            font-size: 13px;
+            color: rgba(255,255,255,0.6);
+            margin-left: auto;
+        }
+
+        @keyframes pulse-live {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            min-height: 35vh;
+            background: linear-gradient(155deg, var(--navy) 0%, var(--navy-mid) 55%, #0d2848 100%);
+            display: flex;
+            align-items: center;
+            padding: 150px 40px 60px;
+            position: relative;
+            overflow: hidden;
+            margin-top: 140px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 10% 90%, rgba(201, 168, 76, 0.06) 0%, transparent 55%),
+                        radial-gradient(ellipse at 90% 15%, rgba(46, 204, 113, 0.04) 0%, transparent 45%);
+            pointer-events: none;
+        }
+
+        .hero-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+            width: 100%;
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+            font-weight: 700;
+            color: var(--white);
+            line-height: 1.15;
+            margin-bottom: 16px;
+            animation: fadeUp 0.6s ease both;
+        }
+
+        .hero-sub {
+            font-size: 18px;
+            color: var(--text-light);
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 0 auto;
+            font-weight: 300;
+            animation: fadeUp 0.6s ease 0.1s both;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ===== NEWSWATCH FEED ===== */
+        .newswatch {
+            padding: 60px 40px 100px;
+            background: var(--news-bg);
+        }
+
+        .newswatch-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .region-section {
+            margin-bottom: 48px;
+        }
+
+        .region-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 24px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid rgba(201, 168, 76, 0.3);
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .region-header:hover {
+            border-bottom-color: var(--gold);
+        }
+
+        .region-toggle {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            height: 20px;
+            border: 1px solid rgba(201, 168, 76, 0.4);
+            border-radius: 3px;
+            color: var(--gold);
+            font-size: 12px;
+            font-weight: bold;
+            background: rgba(201, 168, 76, 0.08);
+            transition: all 0.3s;
+        }
+
+        .region-header:hover .region-toggle {
+            border-color: var(--gold);
+            background: rgba(201, 168, 76, 0.15);
+        }
+
+        .region-toggle.collapsed {
+            transform: rotate(-90deg);
+        }
+
+        .region-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--white);
+            letter-spacing: 0.02em;
+        }
+
+        .region-title-emoji {
+            font-size: 28px;
+            margin-right: 8px;
+        }
+
+        .region-items {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .region-items.collapsed {
+            display: none;
+        }
+
+        .news-item {
+            background: var(--news-card);
+            border: 1px solid rgba(201, 168, 76, 0.15);
+            border-radius: 4px;
+            padding: 20px;
+            transition: all 0.2s;
+            display: flex;
+            gap: 16px;
+        }
+
+        .news-item:hover {
+            border-color: var(--gold);
+            background: rgba(201, 168, 76, 0.05);
+            transform: translateX(4px);
+        }
+
+        .news-favicon {
+            flex-shrink: 0;
+            width: 32px;
+            height: 32px;
+            border-radius: 3px;
+            background: rgba(201, 168, 76, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .news-favicon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .news-content {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .news-meta {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+            flex-wrap: wrap;
+        }
+
+        .news-source {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--gold);
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .news-time {
+            font-size: 12px;
+            color: rgba(255,255,255,0.5);
+        }
+
+        .news-region-tag {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--corridor-accent);
+            background: rgba(42, 92, 138, 0.2);
+            padding: 3px 8px;
+            border-radius: 2px;
+        }
+
+        .news-lang-tag {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #e67e22;
+            background: rgba(230, 126, 34, 0.2);
+            padding: 3px 8px;
+            border-radius: 2px;
+        }
+
+        .news-headline {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--white);
+            line-height: 1.4;
+            margin-bottom: 8px;
+        }
+
+        .news-headline a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .news-headline a:hover {
+            color: var(--gold);
+        }
+
+        .news-summary {
+            font-size: 14px;
+            color: rgba(255,255,255,0.65);
+            line-height: 1.5;
+            display: none;
+        }
+
+        .news-item:hover .news-summary {
+            display: block;
+        }
+
+        /* ===== BACK LINK ===== */
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--gold);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            padding: 8px 12px;
+            border: 1px solid rgba(201, 168, 76, 0.3);
+            border-radius: 3px;
+            transition: all 0.3s;
+            margin-bottom: 40px;
+        }
+
+        .back-link:hover {
+            background: rgba(201, 168, 76, 0.1);
+            border-color: var(--gold);
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--navy);
+            border-top: 1px solid rgba(201, 168, 76, 0.1);
+            padding: 60px 40px 40px;
+        }
+
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 16px;
+            letter-spacing: 0.02em;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col a {
+            font-size: 14px;
+            color: rgba(255,255,255,0.65);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-col a:hover {
+            color: var(--gold);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(201, 168, 76, 0.1);
+            padding-top: 32px;
+            text-align: center;
+        }
+
+        .footer-credit {
+            font-size: 13px;
+            color: rgba(255,255,255,0.5);
+            letter-spacing: 0.5px;
+        }
+
+        .footer-credit a {
+            color: var(--gold);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-credit a:hover {
+            color: var(--gold-light);
+        }
+
+        /* ===== HIDDEN TEXT ===== */
+        [data-fr] {
+            display: none;
+        }
+
+        body.fr [data-en] {
+            display: none;
+        }
+
+        body.fr [data-fr] {
+            display: inline;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            nav, .lang-bar {
+                padding: 0 20px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-toggle {
+                display: flex;
+            }
+
+            .hero {
+                padding: 150px 20px 40px;
+                min-height: 30vh;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero-sub {
+                font-size: 16px;
+            }
+
+            .newswatch {
+                padding: 40px 20px 60px;
+            }
+
+            .region-title {
+                font-size: 20px;
+            }
+
+            .news-item {
+                gap: 12px;
+                padding: 16px;
+            }
+
+            .news-headline {
+                font-size: 15px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-name {
+                font-size: 18px;
+            }
+
+            .live-bar {
+                font-size: 11px;
+                padding: 10px 15px;
+            }
+
+            .hero {
+                min-height: 25vh;
+                padding: 140px 15px 30px;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+                margin-bottom: 12px;
+            }
+
+            .hero-sub {
+                font-size: 14px;
+            }
+
+            .newswatch {
+                padding: 30px 15px 40px;
+            }
+
+            .region-title {
+                font-size: 18px;
+            }
+
+            .news-item {
+                padding: 14px;
+            }
+
+            .news-headline {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Language Switcher -->
+    <div class="lang-bar">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <span class="lang-sep">|</span>
+        <button class="lang-btn" data-lang="fr">FR</button>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-inner">
+            <a href="/" class="nav-name"><span>Joseph</span> Soares</a>
+            <div class="nav-links">
+                <a href="/index.html" data-en>Who This Is For</a>
+                <a href="/index.html" data-en>About</a>
+                <a href="/index.html" data-en>Services</a>
+                <a href="/index.html" data-en>Framework</a>
+                <a href="/writing.html" data-en>Writing</a>
+                <a href="/intelligence.html" class="nav-active" data-en>Intelligence</a>
+                <a href="/newswatch.html" class="nav-active" data-en>Newswatch</a>
+                <a href="/podcast.html" data-en>Podcast</a>
+                <a href="https://calendly.com/josephsoares" class="nav-cta" data-en>Book a Call</a>
+
+                <a href="/index.html" data-fr>Pour Qui</a>
+                <a href="/index.html" data-fr>À Propos</a>
+                <a href="/index.html" data-fr>Services</a>
+                <a href="/index.html" data-fr>Cadre</a>
+                <a href="/writing.html" data-fr>Textes</a>
+                <a href="/intelligence.html" class="nav-active" data-fr>Intelligence</a>
+                <a href="/newswatch.html" class="nav-active" data-fr>Newswatch</a>
+                <a href="/podcast.html" data-fr>Balado</a>
+                <a href="https://calendly.com/josephsoares" class="nav-cta" data-fr>R&#233;server un Appel</a>
+            </div>
+            <button class="mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Live Status Bar -->
+    <div class="live-bar">
+        <div class="live-indicator">
+            <div class="live-dot"></div>
+            <span data-en>LIVE</span>
+            <span data-fr style="display: none;">EN DIRECT</span>
+        </div>
+        <div class="live-time" id="last-refresh" data-en>Last refreshed: Loading...</div>
+        <div class="live-time" id="last-refresh-fr" data-fr style="display: none;">Derni&#232;re actualisation : Chargement...</div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-inner">
+            <h1 data-en>Newswatch</h1>
+            <h1 data-fr style="display: none;">Veille Infos</h1>
+            <p class="hero-sub" data-en>Real-time political and business intelligence. Updated continuously.</p>
+            <p class="hero-sub" data-fr style="display: none;">Intelligence politique et commerciale en temps r&#233;el. Mise &#224; jour continue.</p>
+        </div>
+    </section>
+
+    <!-- Back Link -->
+    <div class="newswatch" style="padding-bottom: 20px;">
+        <div class="newswatch-inner">
+            <a href="/intelligence.html" class="back-link" data-en>&larr; Back to Commentary</a>
+            <a href="/intelligence.html" class="back-link" data-fr style="display: none;">&larr; Retour au Commentaire</a>
+        </div>
+    </div>
+
+    <!-- Newswatch Feed -->
+    <section class="newswatch">
+        <div class="newswatch-inner">
+
+            <!-- USA Section -->
+            <div class="region-section">
+                <div class="region-header" data-toggle="usa">
+                    <div class="region-toggle">▾</div>
+                    <div class="region-title">
+                        <span class="region-title-emoji">🇺🇸</span>
+                        <span data-en>USA / Washington</span>
+                        <span data-fr style="display: none;">USA / Washington</span>
+                    </div>
+                </div>
+                <div class="region-items" id="usa-items">
+                    <div class="news-item">
+                        <div class="news-favicon">
+                            <img src="https://www.google.com/s2/favicons?domain=foxnews.com&sz=32" alt="Fox News" onerror="this.style.display='none'">
+                        </div>
+                        <div class="news-content">
+                            <div class="news-meta">
+                                <span class="news-source">Fox News</span>
+                                <span class="news-time">1h ago</span>
+                                <span class="news-region-tag">WASHINGTON</span>
+                            </div>
+                            <div class="news-headline">
+                                <a href="#" target="_blank">Trump Issues Profanity-Laced Ultimatum to Iran: &lsquo;Open the Strait&rsquo; or Face &lsquo;Power Plant Day&rsquo;</a>
+                            </div>
+                            <div class="news-summary">President Trump escalates rhetoric toward Iran over Strait of Hormuz access, signaling potential military action.</div>
+                        </div>
+                    </div>
+
+                    <div class="news-item">
+                        <div class="news-favicon">
+                            <img src="https://www.google.com/s2/favicons?domain=axios.com&sz=32" alt="Axios" onerror="this.style.display='none'">
+                        </div>
+                        <div class="news-content">
+                            <div class="news-meta">
+                                <span class="news-source">Axios</span>
+                                <span class="news-time">2h ago</span>
+                                <span class="news-region-tag">WASHINGTON</span>
+                            </div>
+                            <div class="news-headline">
+                                <a href="#" target="_blank">Second U.S. Crew Member From Downed F-15 Rescued Inside Iran After 36-Hour Mountain Evasion</a>
+                            </div>
+                            <div class="news-summary">Both pilots from downed aircraft have been recovered following successful rescue operations in mountainous terrain.</div>
+                        </div>
+                    </div>
+
+                    <div class="news-item">
+                        <div class="news-favicon">
+                            <img src="https://www.google.com/s2/favicons?domain=cbsnews.com&sz=32" alt="CBS News" onerror="this.style.display='none'">
+                        </div>
+                        <div class="news-content">
+                            <div class="news-meta">
+                                <span class="news-source">CBS News</span>
+                                <span class="news-time">3h ago</span>
+                                <span class="news-region-tag">WASHINGTON</span>
+                            </div>
+                            <div class="news-headline">
+                                <a href="#" target="_blank">Trump: Rescued Airman Was &lsquo;Seriously Wounded&rsquo; and &lsquo;Really Brave&rsquo;</a>
+                            </div>
+                            <div class="news-summary">President offers praise for military personnel involved in rescue of downed pilot from hostile territory.</div>
+                        </div>
+                    </div>
+
+                    <div class="news-item">
+                        <div class="news-favicon">
+                            <img src="https://www.google.com/s2/favicons?domain=cnbc.com&sz=32" alt="CNBC" onerror="this.style.display='none'">
+                        </div>
+                        <div class="news-content">
+                            <div class="news-meta">
+                                <span class="news-source">CNBC</span>
+                                <span class="news-time">4h ago</span>
+                                <span class="news-region-tag">ECONOMIC</span>
+                            </div>
+                            <div class="news-headline">
+                                <a href="#" target="_blank">March Jobs Report: 178K Payrolls Added, Beating Estimate</a>
+                            </div>
+                            <div class="news-summary">Labor market shows resilience with jobs growth exceeding economist forecasts amid Fed policy uncertainty.</div>
+                        </div>
+                    </div>
+
+                    <div class="news-item">
+                        <div class="news-favicon">
+                            <img src="https://www.google.com/s2/favicons?domain=foxbusiness.com&sz=32" alt="Fox Business" onerror="this.style.display='none'">
+                        </div>
+                        <div class="news-content">
+                            <div class="news-meta">
+                                <span class="news-source">Fox Business</span>
+                                <span class="news-time">5h ago</span>
+                                <span class="news-region-tag">MARKETS</span>
+                            </div>
+                            <div class="news-headline">
+                                <a href="#" target="_blank">Oil Surges Near $110/Barrel After Trump Speech</a>
+                            </div>
+                            <div class="news-summary">Crude prices spike on geopolitical tensions and administration rhetoric regarding energy markets and supply.</div>
+                        </div>
+                    </div>
+
+                    <div class="news-item">
+                        <div class="news-favicon">
+                            <img src="https://www.google.com/s2/favicons?domain=reuters.com&sz=32" alt="Reuters" onerror="this.style.display='none'">
+                        </div>
+                        <div class="news-content">
+                            <div class="news-meta">
+                                <span class="news-source">Reuters</span>
+                                <span class="news-time">6h ago</span>
+                                <span class="news-region-tag">WASHINGTON</span>
+                            </div>
+                            <div class="news-headline">
+                                <a href="#" target="_blank">Senate Advances $2.1 Trillion Budget Bill With Defense Increases</a>
+                            </div>
+                            <div class="news-summary">Bipartisan support moves spending measure forward with significant military funding allocations for 2026.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Canada Section -->
+            <div class="region-section">
+                <div class="region-header" data-toggle="canada">
+                    <div class="region-toggle">▾</div>
+                    <div class="region-title">
+                        <span class="region-title-emoji">🇨🇦</span>
+                        <span data-en>Canada / Ottawa</span>
+                        <span data-fr style="display: none;">Canada / Ottawa</span>
+                    </div>
+                </div>
+                <div class="region-items" id="canada-items">
+                    <div class="news-item">
+                        <div class="news-favicon">
+                            <img src="https://www.google.com/s2/favicons?domain=cbc.ca&sz=32" alt="CBC" onerror="this.style.display='none'">
+                        </div>
+                        <div class="news-content">
+                            <div class="news-meta">
+                                <span class="news-source">CBC</span>
+                                <span class="news-time">2h ago</span>
+                                <span class="news-region-tag">OTTAWA</span>
+                            </div>
+                            <div class="news-headline">
+                                <a href="#" target="_blank">Artemis II Launches: NASA&rsquo;s 10-Day Moon Mission Carries First Canadian to Lunar Orbit</a>
+                            </div>
+                            <div class="news-summary">Canadian astronaut joins historic lunar exploration mission, marking significant achievement for nation&rsquo;s space program.</div>
+                        </div>
+                    </div>
+
+                    <div class="news-item">
+                        <div class="news-favicon">
+                            <img src="https://www.google.com/s2/favicons?domain=theglobeandmail.com&sz=32" alt="Globe and Mail" onerror="this.style.display='none'">
+                        </div>
+                        <div class="news-content">
+                            <div class="news-meta">
+                                <span class="news-source">Globe and Mail</span>
+                                <span class="news-time">3h ago</span>
+                                <span class="news-region-tag">ECONOMIC</span>
+                            </div>
+                            <div class="news-headline">
+                                <a href="#" target="_blank">More Tariffs, More Problems: 12 Charts to Watch</a>
+                            </div>
+                            <div class="news-summary">Analysis reveals significant economic risks from escalating trade barriers affecting Canadian exporters and consumers.</div>
+                        </div>
+                    </div>
+
+                    <div class="news-item">
+                        <div class="news-favicon">
+                            <img src="https://www.google.com/s2/favicons?domain=thehill.ca&sz=32" alt="Hill Times" onerror="this.style.display:'none'">
+                        </div>
+                        <div class="news-content">
+                            <div class="news-meta">
+                                <span class="news-source">Hill Times</span>
+                                <span class="news-time">4h ago</span>
+                                <span class="news-region-tag">DEFENCE</span>
+                            </div>
+                            <div class="news-headline">
+                                <a href="#" target="_blank">Carney Watches Arctic NATO Military Drill in Norway</a>
+                            </div>
+                            <div class="news-summary">Canadian defence minister observes NATO exercises in Arctic region, strengthening alliance coordination and deterrence.</div>
+                        </div>
+                    </div>
+
+                    <div class="news-item">
+                        <div class="news-favicon">
+                            <img src="https://www.google.com/s2/favicons?domain=westernstandardonline.com&sz=32" alt="Western Standard" onerror="this.style.display='none'">
+                        </div>
+                        <div class="news-content">
+                            <div class="news-meta">
+                                <span class="news-source">Western Standard</span>
+                                <span class="news-time">5h ago</span>
+                                <span class="news-region-tag">ECONOMIC</span>
+                            </div>
+                            <div class="news-headline">
+                                <a href="#" target="_blank">Alberta Forecast to Lead Canada&rsquo;s Economy in 2026</a>
+                            </div>
+                            <div class="news-summary">Provincial growth projections show Alberta outpacing other regions due to energy sector strength and business investment.</div>
+                        </div>
+                    </div>
+
+                    <div class="news-item">
+                        <div class="news-favicon">
+                            <img src="https://www.google.com/s2/favicons?domain=winnipegfreepress.com&sz=32" alt="Winnipeg Free Press" onerror="this.style.display='none'">
+                        </div>
+                        <div class="news-content">
+                            <div class="news-meta">
+                                <span class="news-source">Winnipeg Free Press</span>
+                                <span class="news-time">6h ago</span>
+                                <span class="news-region-tag">OTTAWA</span>
+                            </div>
+                            <div class="news-headline">
+                                <a href="#" target="_blank">Mackenzie King Bridge Closure to Impact Cross-Border Trade Routes</a>
+                            </div>
+                            <div class="news-summary">Infrastructure maintenance forces rerouting of commercial traffic between Canada and United States affecting supply chains.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quebec Section -->
+            <div class="region-section">
+                <div class="region-header" data-toggle="quebec">
+                    <div class="region-toggle">▾</div>
+                    <div class="region-title">
+                        <span class="region-title-emoji">🏴</span>
+                        <span data-en>Quebec</span>
+                        <span data-fr style="display: none;">Qu&#233;bec</span>
+                    </div>
+                </div>
+                <div class="region-items" id="quebec-items">
+                    <div class="news-item">
+                        <div class="news-favicon">
+                            <img src="https://www.google.com/s2/favicons?domain=lapresse.ca&sz=32" alt="La Presse" onerror="this.style.display='none'">
+                        </div>
+                        <div class="news-content">
+                            <div class="news-meta">
+                                <span class="news-source">La Presse</span>
+                                <span class="news-time">1h ago</span>
+                                <span class="news-region-tag">QU&#201;BEC</span>
+                                <span class="news-lang-tag">FR</span>
+                            </div>
+                            <div class="news-headline">
+                                <a href="#" target="_blank">La derni&#232;re C&#232;ne de Legault &mdash; prise de parole en Chambre avant son d&#233;part</a>
+                            </div>
+                            <div class="news-summary">Le premier ministre livre ses derni&#232;res allocutions &#224; l&#39;Assembl&#233;e nationale avant la fin de son mandat.</div>
+                        </div>
+                    </div>
+
+                    <div class="news-item">
+                        <div class="news-favicon">
+                            <img src="https://www.google.com/s2/favicons?domain=ledevoir.com&sz=32" alt="Le Devoir" onerror="this.style.display='none'">
+                        </div>
+                        <div class="news-content">
+                            <div class="news-meta">
+                                <span class="news-source">Le Devoir</span>
+                                <span class="news-time">2h ago</span>
+                                <span class="news-region-tag">QU&#201;BEC</span>
+                                <span class="news-lang-tag">FR</span>
+                            </div>
+                            <div class="news-headline">
+                                <a href="#" target="_blank">Budget du Qu&#233;bec 2026-2027 : d&#233;ficit de 8,6 milliards $</a>
+                            </div>
+                            <div class="news-summary">Les projections budg&#233;taires r&#233;v&#232;lent un d&#233;ficit plus important que pr&#233;vu, soulevant des questions sur les d&#233;penses.</div>
+                        </div>
+                    </div>
+
+                    <div class="news-item">
+                        <div class="news-favicon">
+                            <img src="https://www.google.com/s2/favicons?domain=ledroit.com&sz=32" alt="Le Droit" onerror="this.style.display='none'">
+                        </div>
+                        <div class="news-content">
+                            <div class="news-meta">
+                                <span class="news-source">Le Droit</span>
+                                <span class="news-time">3h ago</span>
+                                <span class="news-region-tag">QU&#201;BEC</span>
+                                <span class="news-lang-tag">FR</span>
+                            </div>
+                            <div class="news-headline">
+                                <a href="#" target="_blank">Immigration : Drainville accuse Fr&#233;chette de mentir sur les chiffres</a>
+                            </div>
+                            <div class="news-summary">Controverse sur les statistiques d&#39;immigration alors que les minist&#232;res divergent sur les donn&#233;es d&#39;arriv&#233;es.</div>
+                        </div>
+                    </div>
+
+                    <div class="news-item">
+                        <div class="news-favicon">
+                            <img src="https://www.google.com/s2/favicons?domain=journaldemontreal.com&sz=32" alt="Journal de Montr&#233;al" onerror="this.style.display='none'">
+                        </div>
+                        <div class="news-content">
+                            <div class="news-meta">
+                                <span class="news-source">Journal de Montr&#233;al</span>
+                                <span class="news-time">4h ago</span>
+                                <span class="news-region-tag">QU&#201;BEC</span>
+                                <span class="news-lang-tag">FR</span>
+                            </div>
+                            <div class="news-headline">
+                                <a href="#" target="_blank">Hausse des tarifs d&rsquo;hydro-&#233;lectricit&#233; : citoyens fassent face &#224; l&rsquo;impactaux portefeuilles</a>
+                            </div>
+                            <div class="news-summary">Les augmentations annonc&#233;es par Hydro-Qu&#233;bec affecteront les m&#233;nages et les commerces &#224; partir de mai.</div>
+                        </div>
+                    </div>
+
+                    <div class="news-item">
+                        <div class="news-favicon">
+                            <img src="https://www.google.com/s2/favicons?domain=tvanouvelles.ca&sz=32" alt="TVA Nouvelles" onerror="this.style.display='none'">
+                        </div>
+                        <div class="news-content">
+                            <div class="news-meta">
+                                <span class="news-source">TVA Nouvelles</span>
+                                <span class="news-time">5h ago</span>
+                                <span class="news-region-tag">QU&#201;BEC</span>
+                                <span class="news-lang-tag">FR</span>
+                            </div>
+                            <div class="news-headline">
+                                <a href="#" target="_blank">Sant&#233; : manifestation devant l&rsquo;Assembl&#233;e nationale contre les coupures</a>
+                            </div>
+                            <div class="news-summary">Les travailleurs de la sant&#233; s&rsquo;opposent aux r&#233;ductions de financement propos&#233;es par le gouvernement.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- World Section -->
+            <div class="region-section">
+                <div class="region-header" data-toggle="world">
+                    <div class="region-toggle">▾</div>
+                    <div class="region-title">
+                        <span class="region-title-emoji">🌍</span>
+                        <span data-en>World / Geopolitics</span>
+                        <span data-fr style="display: none;">Monde / G&#233;opolitique</span>
+                    </div>
+                </div>
+                <div class="region-items" id="world-items">
+                    <div class="news-item">
+                        <div class="news-favicon">
+                            <img src="https://www.google.com/s2/favicons?domain=foxnews.com&sz=32" alt="Fox News" onerror="this.style.display='none'">
+                        </div>
+                        <div class="news-content">
+                            <div class="news-meta">
+                                <span class="news-source">Fox News</span>
+                                <span class="news-time">1h ago</span>
+                                <span class="news-region-tag">MIDDLE EAST</span>
+                            </div>
+                            <div class="news-headline">
+                                <a href="#" target="_blank">Iran Asks for Ceasefire &mdash; Trump Reveals Tehran&rsquo;s Request</a>
+                            </div>
+                            <div class="news-summary">Diplomatic overture from Iranian leadership signals potential opening for negotiations on regional tensions.</div>
+                        </div>
+                    </div>
+
+                    <div class="news-item">
+                        <div class="news-favicon">
+                            <img src="https://www.google.com/s2/favicons?domain=ec.europa.eu&sz=32" alt="EU Commission" onerror="this.style.display='none'">
+                        </div>
+                        <div class="news-content">
+                            <div class="news-meta">
+                                <span class="news-source">EU Commission</span>
+                                <span class="news-time">2h ago</span>
+                                <span class="news-region-tag">EUROPE</span>
+                            </div>
+                            <div class="news-headline">
+                                <a href="#" target="_blank">EU Commission Adopts &#8364;1.5 Billion Defence Programme</a>
+                            </div>
+                            <div class="news-summary">European leadership accelerates military spending in response to regional security concerns and NATO coordination.</div>
+                        </div>
+                    </div>
+
+                    <div class="news-item">
+                        <div class="news-favicon">
+                            <img src="https://www.google.com/s2/favicons?domain=defence24.com&sz=32" alt="Defence24" onerror="this.style.display='none'">
+                        </div>
+                        <div class="news-content">
+                            <div class="news-meta">
+                                <span class="news-source">Defence24</span>
+                                <span class="news-time">3h ago</span>
+                                <span class="news-region-tag">DEFENCE</span>
+                            </div>
+                            <div class="news-headline">
+                                <a href="#" target="_blank">Global Military Balance 2026: U.S. Proposes Record $1.01T Budget</a>
+                            </div>
+                            <div class="news-summary">American defense spending reaches unprecedented levels, reshaping global military balance and alliance dynamics.</div>
+                        </div>
+                    </div>
+
+                    <div class="news-item">
+                        <div class="news-favicon">
+                            <img src="https://www.google.com/s2/favicons?domain=reuters.com&sz=32" alt="Reuters" onerror="this.style.display='none'">
+                        </div>
+                        <div class="news-content">
+                            <div class="news-meta">
+                                <span class="news-source">Reuters</span>
+                                <span class="news-time">4h ago</span>
+                                <span class="news-region-tag">ASIA</span>
+                            </div>
+                            <div class="news-headline">
+                                <a href="#" target="_blank">Japan Strengthens Taiwan Strait Coordination With U.S. Navy</a>
+                            </div>
+                            <div class="news-summary">Enhanced military cooperation reflects growing alignment on regional security strategy in Indo-Pacific theater.</div>
+                        </div>
+                    </div>
+
+                    <div class="news-item">
+                        <div class="news-favicon">
+                            <img src="https://www.google.com/s2/favicons?domain=bbc.com&sz=32" alt="BBC" onerror="this.style.display='none'">
+                        </div>
+                        <div class="news-content">
+                            <div class="news-meta">
+                                <span class="news-source">BBC</span>
+                                <span class="news-time">5h ago</span>
+                                <span class="news-region-tag">UK</span>
+                            </div>
+                            <div class="news-headline">
+                                <a href="#" target="_blank">UK Parliament Debates Extended Military Presence in Eastern Europe</a>
+                            </div>
+                            <div class="news-summary">Westminster considers long-term commitments to NATO allies amid evolving strategic landscape in region.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Markets Section -->
+            <div class="region-section">
+                <div class="region-header" data-toggle="markets">
+                    <div class="region-toggle">▾</div>
+                    <div class="region-title">
+                        <span class="region-title-emoji">📈</span>
+                        <span data-en>Markets / Economy</span>
+                        <span data-fr style="display: none;">March&#233;s / &#201;conomie</span>
+                    </div>
+                </div>
+                <div class="region-items" id="markets-items">
+                    <div class="news-item">
+                        <div class="news-favicon">
+                            <img src="https://www.google.com/s2/favicons?domain=cnbc.com&sz=32" alt="CNBC" onerror="this.style.display='none'">
+                        </div>
+                        <div class="news-content">
+                            <div class="news-meta">
+                                <span class="news-source">CNBC</span>
+                                <span class="news-time">2h ago</span>
+                                <span class="news-region-tag">MARKETS</span>
+                            </div>
+                            <div class="news-headline">
+                                <a href="#" target="_blank">S&amp;P 500 Snaps 5-Week Losing Streak &mdash; Up 3.4%</a>
+                            </div>
+                            <div class="news-summary">Market rally driven by corporate earnings resilience and investor reassessment of recession probabilities.</div>
+                        </div>
+                    </div>
+
+                    <div class="news-item">
+                        <div class="news-favicon">
+                            <img src="https://www.google.com/s2/favicons?domain=supplychaindive.com&sz=32" alt="Supply Chain Dive" onerror="this.style.display='none'">
+                        </div>
+                        <div class="news-content">
+                            <div class="news-meta">
+                                <span class="news-source">Supply Chain Dive</span>
+                                <span class="news-time">3h ago</span>
+                                <span class="news-region-tag">TRADE</span>
+                            </div>
+                            <div class="news-headline">
+                                <a href="#" target="_blank">Steel, Aluminum, Copper: 50% Tariff Effective April 6</a>
+                            </div>
+                            <div class="news-summary">Commodity markets brace for significant tariff implementation affecting materials prices and manufacturing costs.</div>
+                        </div>
+                    </div>
+
+                    <div class="news-item">
+                        <div class="news-favicon">
+                            <img src="https://www.google.com/s2/favicons?domain=taxfoundation.org&sz=32" alt="Tax Foundation" onerror="this.style.display='none'">
+                        </div>
+                        <div class="news-content">
+                            <div class="news-meta">
+                                <span class="news-source">Tax Foundation</span>
+                                <span class="news-time">4h ago</span>
+                                <span class="news-region-tag">POLICY</span>
+                            </div>
+                            <div class="news-headline">
+                                <a href="#" target="_blank">Trump Tariffs Threaten to Offset Tax Cuts</a>
+                            </div>
+                            <div class="news-summary">Economic analysis suggests trade barriers could reduce household purchasing power and negate tax relief benefits.</div>
+                        </div>
+                    </div>
+
+                    <div class="news-item">
+                        <div class="news-favicon">
+                            <img src="https://www.google.com/s2/favicons?domain=marketwatch.com&sz=32" alt="MarketWatch" onerror="this.style.display='none'">
+                        </div>
+                        <div class="news-content">
+                            <div class="news-meta">
+                                <span class="news-source">MarketWatch</span>
+                                <span class="news-time">5h ago</span>
+                                <span class="news-region-tag">BANKING</span>
+                            </div>
+                            <div class="news-headline">
+                                <a href="#" target="_blank">Fed Signals Pause on Rate Cuts as Inflation Remains Sticky</a>
+                            </div>
+                            <div class="news-summary">Central bank indicates holding course on monetary policy amid persistent price pressures and labor market strength.</div>
+                        </div>
+                    </div>
+
+                    <div class="news-item">
+                        <div class="news-favicon">
+                            <img src="https://www.google.com/s2/favicons?domain=bloomberg.com&sz=32" alt="Bloomberg" onerror="this.style.display='none'">
+                        </div>
+                        <div class="news-content">
+                            <div class="news-meta">
+                                <span class="news-source">Bloomberg</span>
+                                <span class="news-time">6h ago</span>
+                                <span class="news-region-tag">ENERGY</span>
+                            </div>
+                            <div class="news-headline">
+                                <a href="#" target="_blank">Natural Gas Prices Surge on Spring Shortage Concerns</a>
+                            </div>
+                            <div class="news-summary">Energy markets react to supply constraints and seasonal demand patterns ahead of peak heating season.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Defence Section -->
+            <div class="region-section">
+                <div class="region-header" data-toggle="defence">
+                    <div class="region-toggle">▾</div>
+                    <div class="region-title">
+                        <span class="region-title-emoji">🛡️</span>
+                        <span data-en>Defence / Security</span>
+                        <span data-fr style="display: none;">D&#233;fense / S&#233;curit&#233;</span>
+                    </div>
+                </div>
+                <div class="region-items" id="defence-items">
+                    <div class="news-item">
+                        <div class="news-favicon">
+                            <img src="https://www.google.com/s2/favicons?domain=defense.gov&sz=32" alt="DoD" onerror="this.style.display='none'">
+                        </div>
+                        <div class="news-content">
+                            <div class="news-meta">
+                                <span class="news-source">U.S. DoD</span>
+                                <span class="news-time">1h ago</span>
+                                <span class="news-region-tag">DEFENCE</span>
+                            </div>
+                            <div class="news-headline">
+                                <a href="#" target="_blank">Pentagon Announces Advanced Weapons Shipment to Eastern European Allies</a>
+                            </div>
+                            <div class="news-summary">Defense Department accelerates arms transfers to NATO partners in response to regional threat assessments.</div>
+                        </div>
+                    </div>
+
+                    <div class="news-item">
+                        <div class="news-favicon">
+                            <img src="https://www.google.com/s2/favicons?domain=nato.int&sz=32" alt="NATO" onerror="this.style.display='none'">
+                        </div>
+                        <div class="news-content">
+                            <div class="news-meta">
+                                <span class="news-source">NATO</span>
+                                <span class="news-time">2h ago</span>
+                                <span class="news-region-tag">ALLIANCE</span>
+                            </div>
+                            <div class="news-headline">
+                                <a href="#" target="_blank">NATO Allies Pledge Enhanced Arctic Surveillance and Deterrence Capabilities</a>
+                            </div>
+                            <div class="news-summary">Alliance members commit to expanded military presence in high-north region amid strategic competition.</div>
+                        </div>
+                    </div>
+
+                    <div class="news-item">
+                        <div class="news-favicon">
+                            <img src="https://www.google.com/s2/favicons?domain=militarytimes.com&sz=32" alt="Military Times" onerror="this.style.display:'none'">
+                        </div>
+                        <div class="news-content">
+                            <div class="news-meta">
+                                <span class="news-source">Military Times</span>
+                                <span class="news-time">3h ago</span>
+                                <span class="news-region-tag">PERSONNEL</span>
+                            </div>
+                            <div class="news-headline">
+                                <a href="#" target="_blank">Army Doubles Down on Cyber Warfare Training for Next Generation Soldiers</a>
+                            </div>
+                            <div class="news-summary">Military branch expands digital defense training as cyber threats become increasingly critical to national security.</div>
+                        </div>
+                    </div>
+
+                    <div class="news-item">
+                        <div class="news-favicon">
+                            <img src="https://www.google.com/s2/favicons?domain=janes.com&sz=32" alt="Jane&rsquo;s" onerror="this.style.display='none'">
+                        </div>
+                        <div class="news-content">
+                            <div class="news-meta">
+                                <span class="news-source">Jane&rsquo;s</span>
+                                <span class="news-time">4h ago</span>
+                                <span class="news-region-tag">DEFENCE</span>
+                            </div>
+                            <div class="news-headline">
+                                <a href="#" target="_blank">Next-Generation Hypersonic Missile Successfully Completes Flight Tests</a>
+                            </div>
+                            <div class="news-summary">U.S. weapons development program achieves key milestone with successful hypersonic platform demonstrations.</div>
+                        </div>
+                    </div>
+
+                    <div class="news-item">
+                        <div class="news-favicon">
+                            <img src="https://www.google.com/s2/favicons?domain=globalsecurity.org&sz=32" alt="Global Security" onerror="this.style.display='none'">
+                        </div>
+                        <div class="news-content">
+                            <div class="news-meta">
+                                <span class="news-source">Global Security</span>
+                                <span class="news-time">5h ago</span>
+                                <span class="news-region-tag">INTELLIGENCE</span>
+                            </div>
+                            <div class="news-headline">
+                                <a href="#" target="_blank">Intelligence Agencies Report Increased Foreign Interference in North American Elections</a>
+                            </div>
+                            <div class="news-summary">Security services warn of coordinated disinformation campaigns targeting democratic processes across continent.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3 data-en>Navigation</h3>
+                    <h3 data-fr style="display: none;">Navigation</h3>
+                    <ul>
+                        <li><a href="/" data-en>Home</a><a href="/" data-fr style="display: none;">Accueil</a></li>
+                        <li><a href="/intelligence.html" data-en>Corridor Intelligence</a><a href="/intelligence.html" data-fr style="display: none;">Intelligence du Corridor</a></li>
+                        <li><a href="/newswatch.html" data-en>Newswatch</a><a href="/newswatch.html" data-fr style="display: none;">Veille Infos</a></li>
+                        <li><a href="/podcast.html" data-en>Podcast</a><a href="/podcast.html" data-fr style="display: none;">Balado</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3 data-en>About</h3>
+                    <h3 data-fr style="display: none;">À Propos</h3>
+                    <ul>
+                        <li><a href="/index.html" data-en>Who This Is For</a><a href="/index.html" data-fr style="display: none;">Pour Qui</a></li>
+                        <li><a href="/index.html" data-en>Services</a><a href="/index.html" data-fr style="display: none;">Services</a></li>
+                        <li><a href="/index.html" data-en>Framework</a><a href="/index.html" data-fr style="display: none;">Cadre</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3 data-en>Connect</h3>
+                    <h3 data-fr style="display: none;">Connexion</h3>
+                    <ul>
+                        <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
+                        <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
+                        <li><a href="https://calendly.com/josephsoares" data-en>Book a Call</a><a href="https://calendly.com/josephsoares" data-fr style="display: none;">R&#233;server un Appel</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-credit" data-en>&copy; 2026 Joseph Soares. All rights reserved.</p>
+                <p class="footer-credit" data-fr style="display: none;">&copy; 2026 Joseph Soares. Tous droits r&#233;serv&#233;s.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Language Switcher
+        const langButtons = document.querySelectorAll('.lang-btn');
+        const body = document.body;
+
+        langButtons.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const lang = this.dataset.lang;
+                langButtons.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                body.classList.remove('fr', 'en');
+                if (lang === 'fr') {
+                    body.classList.add('fr');
+                } else {
+                    body.classList.add('en');
+                }
+            });
+        });
+
+        // Initialize to EN
+        body.classList.add('en');
+        langButtons[0].classList.add('active');
+
+        // Update timestamp
+        function updateTimestamp() {
+            const now = new Date();
+            const timeStr = now.toLocaleString('en-US', {
+                month: 'short',
+                day: 'numeric',
+                year: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit',
+                timeZoneName: 'short'
+            });
+            const timeFr = now.toLocaleString('fr-CA', {
+                month: 'short',
+                day: 'numeric',
+                year: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit',
+                timeZoneName: 'short'
+            });
+
+            const elem = document.getElementById('last-refresh');
+            const elemFr = document.getElementById('last-refresh-fr');
+            if (elem) {
+                elem.textContent = 'Last refreshed: ' + timeStr;
+            }
+            if (elemFr) {
+                elemFr.textContent = 'Dernière actualisation : ' + timeFr;
+            }
+        }
+
+        updateTimestamp();
+        setInterval(updateTimestamp, 60000); // Update every minute
+
+        // Region collapsing
+        const regionHeaders = document.querySelectorAll('.region-header');
+        regionHeaders.forEach(header => {
+            header.addEventListener('click', function() {
+                const toggle = this.dataset.toggle;
+                const items = document.getElementById(toggle + '-items');
+                const toggleBtn = this.querySelector('.region-toggle');
+
+                if (items.classList.contains('collapsed')) {
+                    items.classList.remove('collapsed');
+                    toggleBtn.classList.remove('collapsed');
+                } else {
+                    items.classList.add('collapsed');
+                    toggleBtn.classList.add('collapsed');
+                }
+            });
+        });
+
+        // Mark Newswatch as active in nav
+        document.querySelectorAll('a[href="/newswatch.html"]').forEach(link => {
+            link.classList.add('nav-active');
+        });
+    </script>
+</body>
+</html>
