@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/favicon.ico">
+    <title>Book a Call | Joseph Soares — Senior Advisor</title>
+    <meta name="description" content="Book a 30-minute introductory call with Joseph Soares. No pitch, no obligation — a confidential conversation to see if we're a fit.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Book a Call — Joseph Soares",
+      "description": "Schedule a 30-minute introductory call with Joseph Soares, Senior Advisor.",
+      "url": "https://josephsoares.com/call.html",
+      "mainEntity": {
+        "@type": "Person",
+        "name": "Joseph Soares",
+        "jobTitle": "Senior Advisor",
+        "url": "https://josephsoares.com"
+      }
+    }
+    </script>
+    <style>
+        :root {
+            --navy: #0b1a2e;
+            --navy-mid: #0f2240;
+            --navy-light: #132d54;
+            --gold: #c9a84c;
+            --gold-light: #dfc07a;
+            --gold-muted: rgba(201, 168, 76, 0.12);
+            --cream: #f5f1eb;
+            --white: #ffffff;
+            --text-dark: #1a1a2e;
+            --text-mid: #4a4a5a;
+            --text-light: rgba(255,255,255,0.75);
+            --border-light: rgba(201, 168, 76, 0.2);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Source Sans 3', -apple-system, sans-serif;
+            color: var(--text-dark);
+            background: var(--white);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ===== LANG SWITCHER ===== */
+        .lang-bar {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 200;
+            background: #06101e;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 0 40px;
+            height: 32px;
+            border-bottom: 1px solid rgba(201, 168, 76, 0.08);
+        }
+        .lang-bar button {
+            background: none; border: none; cursor: pointer;
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 11px; font-weight: 600;
+            letter-spacing: 1.5px; text-transform: uppercase;
+            color: rgba(255,255,255,0.35);
+            padding: 6px 12px; transition: color 0.3s;
+        }
+        .lang-bar button:hover { color: var(--gold-light); }
+        .lang-bar button.active { color: var(--gold); }
+        .lang-bar .lang-sep { color: rgba(255,255,255,0.12); font-size: 11px; }
+
+        /* ===== NAV ===== */
+        nav {
+            position: fixed;
+            top: 32px; left: 0; right: 0;
+            z-index: 100;
+            background: rgba(11, 26, 46, 0.96);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+            padding: 0 40px;
+        }
+        .nav-inner {
+            max-width: 1200px; margin: 0 auto;
+            display: flex; justify-content: space-between; align-items: center;
+            height: 64px;
+        }
+        .nav-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 22px; font-weight: 700;
+            color: var(--white); text-decoration: none;
+            letter-spacing: 0.02em;
+        }
+        .nav-name span { color: var(--gold); }
+        .nav-links { display: flex; gap: 28px; align-items: center; }
+        .nav-links a {
+            color: rgba(255,255,255,0.6); text-decoration: none;
+            font-size: 13px; font-weight: 500;
+            letter-spacing: 0.04em; transition: color 0.3s;
+        }
+        .nav-links a:hover { color: var(--gold); }
+        .nav-cta {
+            background: var(--gold) !important;
+            color: var(--navy) !important;
+            padding: 9px 22px !important;
+            border-radius: 3px;
+            font-weight: 700 !important;
+            font-size: 11px !important;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+        .nav-cta:hover { background: var(--gold-light) !important; color: var(--navy) !important; }
+        .mobile-toggle {
+            display: none; background: none; border: none;
+            cursor: pointer; flex-direction: column; gap: 5px; padding: 4px;
+        }
+        .mobile-toggle span { display: block; width: 24px; height: 2px; background: var(--white); transition: all 0.3s; }
+
+        /* ===== PAGE LAYOUT ===== */
+        .page-wrap {
+            min-height: 100vh;
+            background: linear-gradient(155deg, var(--navy) 0%, var(--navy-mid) 55%, #0d2848 100%);
+            padding: 150px 40px 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        .page-wrap::before {
+            content: '';
+            position: absolute; inset: 0;
+            background: radial-gradient(ellipse at 10% 90%, rgba(201, 168, 76, 0.06) 0%, transparent 55%),
+                        radial-gradient(ellipse at 90% 15%, rgba(91, 143, 217, 0.04) 0%, transparent 45%);
+            pointer-events: none;
+        }
+
+        .page-inner {
+            max-width: 960px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        /* Left column — context */
+        .call-context {
+            padding-top: 20px;
+        }
+
+        .call-eyebrow {
+            display: flex; align-items: center; gap: 14px;
+            margin-bottom: 28px;
+            animation: fadeUp 0.7s ease both;
+        }
+        .call-eyebrow-line { width: 40px; height: 1px; background: var(--gold); opacity: 0.6; }
+        .call-eyebrow-text {
+            font-size: 11px; letter-spacing: 3px; text-transform: uppercase;
+            color: var(--gold); font-weight: 600;
+        }
+
+        .call-context h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            font-weight: 700;
+            color: var(--white);
+            line-height: 1.15;
+            margin-bottom: 24px;
+            animation: fadeUp 0.85s ease both;
+        }
+        .call-context h1 em { font-style: italic; color: var(--gold); }
+
+        .call-description {
+            font-size: 17px;
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 40px;
+            font-weight: 300;
+            animation: fadeUp 0.95s ease both;
+        }
+
+        .expect-list {
+            list-style: none;
+            animation: fadeUp 1s ease both;
+        }
+        .expect-list li {
+            font-size: 15px;
+            color: rgba(255,255,255,0.8);
+            line-height: 1.7;
+            padding: 12px 0;
+            padding-left: 28px;
+            position: relative;
+            border-bottom: 1px solid rgba(201, 168, 76, 0.08);
+        }
+        .expect-list li:last-child { border-bottom: none; }
+        .expect-list li::before {
+            content: '';
+            position: absolute;
+            left: 0; top: 18px;
+            width: 8px; height: 8px;
+            border: 1.5px solid var(--gold);
+            border-radius: 50%;
+        }
+        .expect-label {
+            display: block;
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--gold);
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        /* Right column — calendar embed */
+        .call-booking {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(201, 168, 76, 0.12);
+            border-radius: 8px;
+            padding: 40px 32px;
+            animation: fadeUp 1.1s ease both;
+        }
+
+        .booking-header {
+            text-align: center;
+            margin-bottom: 28px;
+        }
+
+        .booking-header h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 8px;
+        }
+
+        .booking-meta {
+            font-size: 14px;
+            color: var(--text-light);
+            font-weight: 300;
+        }
+
+        .booking-cta {
+            display: block;
+            width: 100%;
+            background: var(--gold);
+            color: var(--navy);
+            padding: 18px 24px;
+            border: none;
+            border-radius: 3px;
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-align: center;
+            box-shadow: 0 4px 28px rgba(201, 168, 76, 0.28);
+            margin-bottom: 20px;
+        }
+        .booking-cta:hover {
+            background: var(--gold-light);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 36px rgba(201, 168, 76, 0.38);
+        }
+
+        .booking-detail {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px 0;
+            border-bottom: 1px solid rgba(201, 168, 76, 0.06);
+        }
+        .booking-detail:last-child { border-bottom: none; }
+        .booking-detail-icon {
+            width: 20px;
+            text-align: center;
+            color: var(--gold);
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+        .booking-detail-text {
+            font-size: 14px;
+            color: rgba(255,255,255,0.7);
+            line-height: 1.5;
+        }
+
+        .booking-trust {
+            margin-top: 24px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(201, 168, 76, 0.1);
+            text-align: center;
+        }
+        .booking-trust p {
+            font-size: 12px;
+            color: rgba(255,255,255,0.4);
+            line-height: 1.6;
+            font-style: italic;
+        }
+
+        /* ===== SOCIAL PROOF STRIP ===== */
+        .proof-strip {
+            max-width: 960px;
+            margin: 48px auto 0;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            animation: fadeUp 1.2s ease both;
+        }
+        .proof-label {
+            font-size: 10px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.3);
+            margin-bottom: 16px;
+        }
+        .proof-outlets {
+            font-size: 13px;
+            color: rgba(255,255,255,0.35);
+            font-weight: 300;
+            letter-spacing: 0.02em;
+        }
+        .proof-outlets span { margin: 0 12px; }
+
+        /* ===== FOOTER ===== */
+        footer {
+            padding: 40px;
+            background: var(--navy);
+            color: rgba(255,255,255,0.6);
+            border-top: 1px solid rgba(201, 168, 76, 0.08);
+            text-align: center;
+        }
+        .footer-links { display: flex; gap: 32px; justify-content: center; margin-bottom: 16px; flex-wrap: wrap; }
+        .footer-links a { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 13px; font-weight: 500; transition: color 0.3s; }
+        .footer-links a:hover { color: var(--gold); }
+        .footer-credit { font-size: 12px; color: rgba(255,255,255,0.35); line-height: 1.6; }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(22px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .page-inner { grid-template-columns: 1fr; gap: 40px; }
+            .page-wrap, footer { padding-left: 24px; padding-right: 24px; }
+            .lang-bar, nav { padding: 0 20px; }
+            .nav-links { display: none; }
+            .mobile-toggle { display: flex; }
+            .nav-links.open {
+                display: flex; flex-direction: column;
+                position: absolute; top: 64px; left: 0; right: 0;
+                background: var(--navy); padding: 24px;
+                border-bottom: 1px solid var(--border-light); gap: 18px;
+            }
+            .call-booking { padding: 28px 20px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Lang Switcher -->
+    <div class="lang-bar">
+        <button class="active">EN</button>
+        <span class="lang-sep">|</span>
+        <button>FR</button>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-inner">
+            <a href="/" class="nav-name">Joseph <span>Soares</span></a>
+            <button class="mobile-toggle">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="nav-links">
+                <a href="/#who">Who This Is For</a>
+                <a href="/#about">About</a>
+                <a href="/advisory.html">Advisory</a>
+                <a href="/intelligence.html">Intelligence</a>
+                <a href="/podcast.html">Podcast</a>
+                <a href="/call.html" class="nav-cta">Book a Call</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="page-wrap">
+        <div class="page-inner">
+            <!-- Left: Context -->
+            <div class="call-context">
+                <div class="call-eyebrow">
+                    <div class="call-eyebrow-line"></div>
+                    <span class="call-eyebrow-text">Introductory Call</span>
+                </div>
+                <h1>30 minutes. <em>No pitch.</em> No obligation.</h1>
+                <p class="call-description">This is a confidential conversation to see if we're a fit. I'll listen to what you're navigating, share how I've handled similar situations, and give you an honest read on whether my experience is the right match for your challenge.</p>
+
+                <span class="expect-label">What to expect</span>
+                <ul class="expect-list">
+                    <li>A direct, confidential conversation — not a sales call</li>
+                    <li>Bring the decision or situation on your mind. I'll bring the questions.</li>
+                    <li>If we're a fit, I'll explain how we'd work together. If not, I'll tell you that too.</li>
+                    <li>You'll walk away with at least one insight you didn't have before — whether we work together or not.</li>
+                </ul>
+            </div>
+
+            <!-- Right: Booking -->
+            <div class="call-booking">
+                <div class="booking-header">
+                    <h2>Schedule Your Call</h2>
+                    <p class="booking-meta">30 minutes &middot; Video or phone &middot; Confidential</p>
+                </div>
+
+                <a href="https://calendar.app.google/pEyrPMvGY2TuEndcA" class="booking-cta">Choose a Time</a>
+
+                <div class="booking-detail">
+                    <div class="booking-detail-icon">&#9202;</div>
+                    <div class="booking-detail-text">30 minutes, scheduled at your convenience</div>
+                </div>
+                <div class="booking-detail">
+                    <div class="booking-detail-icon">&#128274;</div>
+                    <div class="booking-detail-text">Fully confidential — nothing shared without your permission</div>
+                </div>
+                <div class="booking-detail">
+                    <div class="booking-detail-icon">&#127919;</div>
+                    <div class="booking-detail-text">Come with a decision or challenge in mind — we'll use the time well</div>
+                </div>
+                <div class="booking-detail">
+                    <div class="booking-detail-icon">&#10003;</div>
+                    <div class="booking-detail-text">Zero cost, zero obligation — if it's not a fit, I'll say so directly</div>
+                </div>
+
+                <div class="booking-trust">
+                    <p>Served as an advisor to the Prime Minister of Canada. Chief of Staff at the Senate. Featured in Forbes and Newsweek. This is the same mind — available to you.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Social Proof Strip -->
+        <div class="proof-strip">
+            <p class="proof-label">As featured in</p>
+            <p class="proof-outlets">
+                Forbes<span>·</span>Newsweek<span>·</span>Globe and Mail<span>·</span>National Post<span>·</span>La Presse<span>·</span>HuffPost
+            </p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="mailto:j@josephsoares.com">j@josephsoares.com</a>
+            <a href="https://www.linkedin.com/in/soaresjoseph/">LinkedIn</a>
+            <a href="https://ibprom.com">IBPROM Corp.</a>
+        </div>
+        <div class="footer-credit">
+            <p>Joseph Soares · Senior Advisor · IBPROM Corp. · © 2026</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const toggle = document.querySelector('.mobile-toggle');
+        const links = document.querySelector('.nav-links');
+        toggle.addEventListener('click', () => links.classList.toggle('open'));
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => links.classList.remove('open'));
+        });
+
+        // Language switcher
+        document.querySelectorAll('.lang-bar button').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.lang-bar button').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
