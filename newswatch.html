@@ -339,61 +339,45 @@
         body.fr [data-fr] { display: inline !important; }
         body:not(.fr) [data-fr] { display: none !important; }
 
-        /* ===== CURATED BRIEF ===== */
-        .curated-brief-wrapper {
+        /* ===== PDB RANKED BRIEF ===== */
+        .pdb-brief {
             max-width: 900px;
-            margin: 0 auto 60px;
+            margin: 0 auto;
         }
-        .curated-brief-header {
-            text-align: center;
-            margin-bottom: 32px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid var(--pdb-border);
+        .pdb-item {
+            display: flex;
+            gap: 20px;
+            padding: 22px 0;
+            border-bottom: 1px solid rgba(201, 168, 76, 0.1);
         }
-        .curated-brief-title {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 28px;
+        .pdb-item:last-child {
+            border-bottom: none;
+        }
+        .pdb-rank {
+            font-family: var(--mono);
+            font-size: 13px;
             font-weight: 600;
             color: var(--gold);
-            letter-spacing: 1px;
-            margin-bottom: 8px;
+            min-width: 28px;
+            padding-top: 2px;
+            opacity: 0.7;
         }
-        .curated-brief-subtitle {
+        .pdb-content {
+            flex: 1;
+        }
+        .pdb-tag {
             font-family: var(--mono);
-            font-size: 11px;
-            color: rgba(255,255,255,0.4);
+            font-size: 10px;
+            font-weight: 600;
             letter-spacing: 2px;
             text-transform: uppercase;
-        }
-        .curated-section {
-            margin-bottom: 28px;
-        }
-        .curated-section-label {
-            font-family: var(--mono);
-            font-size: 11px;
-            font-weight: 600;
-            letter-spacing: 3px;
-            text-transform: uppercase;
             color: var(--gold);
-            padding: 8px 0;
-            margin-bottom: 12px;
-            border-bottom: 1px solid rgba(201, 168, 76, 0.15);
-        }
-        .curated-article {
-            background: var(--pdb-card);
-            border: 1px solid var(--pdb-border);
-            border-radius: 6px;
-            padding: 18px 22px;
-            margin-bottom: 10px;
-            transition: border-color 0.3s;
-        }
-        .curated-article:hover {
-            border-color: var(--gold);
-        }
-        .curated-headline {
             margin-bottom: 6px;
         }
-        .curated-headline a {
+        .pdb-headline {
+            margin-bottom: 6px;
+        }
+        .pdb-headline a {
             font-family: 'Source Sans 3', sans-serif;
             font-size: 17px;
             font-weight: 600;
@@ -402,51 +386,34 @@
             line-height: 1.4;
             transition: color 0.3s;
         }
-        .curated-headline a:hover {
+        .pdb-headline a:hover {
             color: var(--gold-light);
         }
-        .curated-source {
+        .pdb-source {
             font-size: 12px;
-            color: rgba(255,255,255,0.35);
+            color: rgba(255,255,255,0.3);
             margin-bottom: 10px;
             display: flex;
             align-items: center;
             gap: 6px;
         }
-        .curated-source img {
+        .pdb-source img {
             width: 14px; height: 14px;
             border-radius: 2px;
-            opacity: 0.6;
+            opacity: 0.5;
         }
-        .curated-bluf {
+        .pdb-bluf {
             font-size: 14px;
-            line-height: 1.6;
-            color: rgba(255,255,255,0.65);
+            line-height: 1.65;
+            color: rgba(255,255,255,0.6);
         }
-        .bluf-label {
-            font-family: var(--mono);
-            font-size: 11px;
-            font-weight: 600;
-            color: var(--gold);
-            letter-spacing: 1px;
-            margin-right: 4px;
+        @media (max-width: 768px) {
+            .pdb-item { gap: 14px; padding: 18px 0; }
+            .pdb-rank { min-width: 24px; font-size: 12px; }
+            .pdb-headline a { font-size: 16px; }
         }
-        .source-directory-divider {
-            max-width: 900px;
-            margin: 40px auto 30px;
-            padding: 16px 0;
-            text-align: center;
-            border-top: 1px solid var(--pdb-border);
-            border-bottom: 1px solid var(--pdb-border);
-        }
-        .source-directory-divider span {
-            font-family: var(--mono);
-            font-size: 11px;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            color: rgba(255,255,255,0.3);
-        }
-    </style>
+
+            </style>
 </head>
 <body>
 
@@ -499,167 +466,192 @@
     <!-- ============================================ -->
     <!-- TODAY'S CURATED BRIEF -->
     <!-- ============================================ -->
-    <div class="curated-brief-wrapper">
-
-
-        <div class="curated-section">
-            <div class="curated-section-label" data-en>POLITICS</div>
-            <div class="curated-section-label" data-fr>POLITIQUE</div>
-            <div class="curated-article">
-                <div class="curated-headline">
-                    <a href="https://thehill.com/homenews/house/5815556-ice-funding-dhs-reconciliation/" target="_blank" rel="noopener" data-en>GOP&rsquo;s ICE Funding Gambit Squeezes Republican Agenda</a>
-                    <a href="https://thehill.com/homenews/house/5815556-ice-funding-dhs-reconciliation/" target="_blank" rel="noopener" data-fr>Le pari r&eacute;publicain sur le financement de l&rsquo;ICE comprime leur propre programme</a>
+    <div class="pdb-brief">
+        <div class="pdb-item">
+            <div class="pdb-rank">01</div>
+            <div class="pdb-content">
+                <div class="pdb-tag" data-en>DIPLOMACY</div>
+                <div class="pdb-tag" data-fr>DIPLOMATIE</div>
+                <div class="pdb-headline">
+                    <a href="https://www.cbc.ca/news/world/ceasefire-proposal-reopening-strait-of-hormuz-9.7153000" target="_blank" rel="noopener" data-en>Iran and U.S. Receive 45-Day Ceasefire Proposal for Strait of Hormuz</a>
+                    <a href="https://www.cbc.ca/news/world/ceasefire-proposal-reopening-strait-of-hormuz-9.7153000" target="_blank" rel="noopener" data-fr>L&rsquo;Iran et les &Eacute;.-U. re&ccedil;oivent une proposition de cessez-le-feu de 45 jours pour le d&eacute;troit d&rsquo;Hormuz</a>
                 </div>
-                <div class="curated-source"><img src="https://www.google.com/s2/favicons?domain=thehill.com&sz=16" alt="The Hill"> The Hill</div>
-                <div class="curated-bluf" data-en><span class="bluf-label">BLUF:</span> Republican leadership is burning political capital on immigration enforcement funding at the expense of their broader legislative agenda. Watch for downstream stalls on tax and trade legislation that matter to markets.</div>
-                <div class="curated-bluf" data-fr><span class="bluf-label">ESSENTIEL :</span> Les dirigeants r&eacute;publicains consacrent leur capital politique au financement de l&rsquo;immigration, au d&eacute;triment de leur programme l&eacute;gislatif. &Agrave; surveiller : les blocages en cascade sur la fiscalit&eacute; et le commerce.</div>
+                <div class="pdb-source"><img src="https://www.google.com/s2/favicons?domain=cbc.ca&sz=16" alt="CBC"> CBC</div>
+                <div class="pdb-bluf" data-en>A ceasefire framework changes the calculus on Strait of Hormuz risk premiums, energy supply chains, and defence posture across NATO. If this gains traction, expect oil futures to respond within hours.</div>
+                <div class="pdb-bluf" data-fr>Un cadre de cessez-le-feu modifie le calcul des primes de risque du d&eacute;troit d&rsquo;Hormuz, des cha&icirc;nes d&rsquo;approvisionnement &eacute;nerg&eacute;tique et de la posture de d&eacute;fense de l&rsquo;OTAN.</div>
             </div>
         </div>
-
-        <div class="curated-section">
-            <div class="curated-section-label" data-en>MARKETS</div>
-            <div class="curated-section-label" data-fr>MARCH&Eacute;S</div>
-            <div class="curated-article">
-                <div class="curated-headline">
-                    <a href="https://www.cnbc.com/2026/04/05/stock-market-today-live-updates.html" target="_blank" rel="noopener" data-en>S&amp;P 500 Futures Edge Higher on Iran Ceasefire Report</a>
-                    <a href="https://www.cnbc.com/2026/04/05/stock-market-today-live-updates.html" target="_blank" rel="noopener" data-fr>Les contrats &agrave; terme du S&amp;P 500 progressent sur les rapports de cessez-le-feu iranien</a>
-                </div>
-                <div class="curated-source"><img src="https://www.google.com/s2/favicons?domain=cnbc.com&sz=16" alt="CNBC"> CNBC</div>
-                <div class="curated-bluf" data-en><span class="bluf-label">BLUF:</span> Futures signal cautious optimism after last week&rsquo;s volatility. The real tell is whether the rally holds past the opening bell &mdash; positioning data suggests institutional hedging remains elevated.</div>
-                <div class="curated-bluf" data-fr><span class="bluf-label">ESSENTIEL :</span> Les contrats &agrave; terme signalent un optimisme prudent apr&egrave;s la volatilit&eacute; de la semaine derni&egrave;re. Le vrai signal sera la tenue du rebond apr&egrave;s l&rsquo;ouverture.</div>
-            </div>
-            <div class="curated-article">
-                <div class="curated-headline">
-                    <a href="https://www.cnbc.com/2026/04/06/jpmorgan-ceo-jamie-dimon-annual-letter-risks.html" target="_blank" rel="noopener" data-en>JPMorgan CEO Jamie Dimon Cites Risks in Geopolitics, AI</a>
-                    <a href="https://www.cnbc.com/2026/04/06/jpmorgan-ceo-jamie-dimon-annual-letter-risks.html" target="_blank" rel="noopener" data-fr>Le PDG de JPMorgan Jamie Dimon signale des risques g&eacute;opolitiques et li&eacute;s &agrave; l&rsquo;IA</a>
-                </div>
-                <div class="curated-source"><img src="https://www.google.com/s2/favicons?domain=cnbc.com&sz=16" alt="CNBC"> CNBC</div>
-                <div class="curated-bluf" data-en><span class="bluf-label">BLUF:</span> When Dimon flags risk publicly, institutional capital listens. His pairing of geopolitical instability with AI disruption signals that JPMorgan is pricing both into forward guidance &mdash; a leading indicator for corporate investment posture through Q3.</div>
-                <div class="curated-bluf" data-fr><span class="bluf-label">ESSENTIEL :</span> Quand Dimon signale un risque publiquement, le capital institutionnel &eacute;coute. Son couplage de l&rsquo;instabilit&eacute; g&eacute;opolitique avec la disruption de l&rsquo;IA est un indicateur avantc&eacute;d&eacute; pour la posture d&rsquo;investissement des entreprises.</div>
-            </div>
-        </div>
-
-        <div class="curated-section">
-            <div class="curated-section-label" data-en>NATIONAL</div>
-            <div class="curated-section-label" data-fr>NATIONAL</div>
-            <div class="curated-article">
-                <div class="curated-headline">
-                    <a href="https://www.cbc.ca/news/science/artemis-lunar-flyby-apollo-13-record-9.7153912" target="_blank" rel="noopener" data-en>Artemis II on Track to Break Apollo 13 Record</a>
-                    <a href="https://www.cbc.ca/news/science/artemis-lunar-flyby-apollo-13-record-9.7153912" target="_blank" rel="noopener" data-fr>Artemis II en voie de battre le record d&rsquo;Apollo 13</a>
-                </div>
-                <div class="curated-source"><img src="https://www.google.com/s2/favicons?domain=cbc.ca&sz=16" alt="CBC"> CBC</div>
-                <div class="curated-bluf" data-en><span class="bluf-label">BLUF:</span> Canada&rsquo;s Canadarm contribution keeps the country in the manned spaceflight conversation. The mission&rsquo;s timeline matters for Canadian aerospace procurement and STEM talent pipeline &mdash; both active policy files in Ottawa.</div>
-                <div class="curated-bluf" data-fr><span class="bluf-label">ESSENTIEL :</span> La contribution du Canadarm maintient le Canada dans la conversation sur les vols habit&eacute;s. Le calendrier de la mission concerne l&rsquo;approvisionnement a&eacute;rospatial et le pipeline de talents STIM.</div>
-            </div>
-            <div class="curated-article">
-                <div class="curated-headline">
-                    <a href="https://www.cbc.ca/news/world/ceasefire-proposal-reopening-strait-of-hormuz-9.7153000" target="_blank" rel="noopener" data-en>Iran and U.S. Receive 45-Day Ceasefire Proposal</a>
-                    <a href="https://www.cbc.ca/news/world/ceasefire-proposal-reopening-strait-of-hormuz-9.7153000" target="_blank" rel="noopener" data-fr>L&rsquo;Iran et les &Eacute;.-U. re&ccedil;oivent une proposition de cessez-le-feu de 45 jours</a>
-                </div>
-                <div class="curated-source"><img src="https://www.google.com/s2/favicons?domain=cbc.ca&sz=16" alt="CBC"> CBC</div>
-                <div class="curated-bluf" data-en><span class="bluf-label">BLUF:</span> A ceasefire framework changes the calculus on Strait of Hormuz risk premiums, energy supply chains, and defence posture across NATO. If this gains traction, expect oil futures to respond within hours.</div>
-                <div class="curated-bluf" data-fr><span class="bluf-label">ESSENTIEL :</span> Un cadre de cessez-le-feu modifie le calcul des primes de risque du d&eacute;troit d&rsquo;Hormuz, des cha&icirc;nes d&rsquo;approvisionnement &eacute;nerg&eacute;tique et de la posture de d&eacute;fense de l&rsquo;OTAN.</div>
-            </div>
-        </div>
-
-        <div class="curated-section">
-            <div class="curated-section-label" data-en>GLOBAL</div>
-            <div class="curated-section-label" data-fr>MONDIAL</div>
-            <div class="curated-article">
-                <div class="curated-headline">
-                    <a href="https://www.bbc.com/news/articles/cx2vpz1kwreo" target="_blank" rel="noopener" data-en>How Rescue of US Airman in Remote Part of Iran Unfolded</a>
-                    <a href="https://www.bbc.com/news/articles/cx2vpz1kwreo" target="_blank" rel="noopener" data-fr>Comment le sauvetage du pilote am&eacute;ricain en Iran s&rsquo;est d&eacute;roul&eacute;</a>
-                </div>
-                <div class="curated-source"><img src="https://www.google.com/s2/favicons?domain=bbc.com&sz=16" alt="BBC"> BBC</div>
-                <div class="curated-bluf" data-en><span class="bluf-label">BLUF:</span> The operational detail emerging from this rescue reveals capability and willingness to project force inside Iranian territory &mdash; a signal that recalibrates Tehran&rsquo;s risk calculus and reshapes the negotiating environment for any ceasefire talks.</div>
-                <div class="curated-bluf" data-fr><span class="bluf-label">ESSENTIEL :</span> Les d&eacute;tails op&eacute;rationnels de ce sauvetage r&eacute;v&egrave;lent la capacit&eacute; et la volont&eacute; de projeter la force en territoire iranien &mdash; un signal qui recalibre le calcul de risque de T&eacute;h&eacute;ran.</div>
-            </div>
-            <div class="curated-article">
-                <div class="curated-headline">
-                    <a href="https://www.bbc.com/news/articles/cy01vg7x5ppo" target="_blank" rel="noopener" data-en>Trump Declares Victory but Threats to US Operation in Iran Still Loom</a>
-                    <a href="https://www.bbc.com/news/articles/cy01vg7x5ppo" target="_blank" rel="noopener" data-fr>Trump d&eacute;clare victoire mais les menaces sur l&rsquo;op&eacute;ration am&eacute;ricaine en Iran persistent</a>
-                </div>
-                <div class="curated-source"><img src="https://www.google.com/s2/favicons?domain=bbc.com&sz=16" alt="BBC"> BBC</div>
-                <div class="curated-bluf" data-en><span class="bluf-label">BLUF:</span> The &ldquo;mission accomplished&rdquo; framing creates a political ceiling &mdash; any escalation from here becomes harder to justify domestically. Decision-makers should watch whether this declaration constrains or enables the next move on Iran.</div>
-                <div class="curated-bluf" data-fr><span class="bluf-label">ESSENTIEL :</span> Le cadrage &laquo; mission accomplie &raquo; cr&eacute;e un plafond politique &mdash; toute escalade devient plus difficile &agrave; justifier. &Agrave; surveiller : cette d&eacute;claration contraint-elle ou permet-elle le prochain mouvement sur l&rsquo;Iran?</div>
-            </div>
-        </div>
-
-        <div class="curated-section">
-            <div class="curated-section-label" data-en>AI &amp; TECHNOLOGY</div>
-            <div class="curated-section-label" data-fr>IA &amp; TECHNOLOGIE</div>
-            <div class="curated-article">
-                <div class="curated-headline">
-                    <a href="https://techcrunch.com/2026/04/06/xiaomi-17-ultra-review-camera-leica-specs-photos/" target="_blank" rel="noopener" data-en>Xiaomi 17 Ultra: Impressive Camera Add-Ons Push Premium Hardware</a>
-                    <a href="https://techcrunch.com/2026/04/06/xiaomi-17-ultra-review-camera-leica-specs-photos/" target="_blank" rel="noopener" data-fr>Xiaomi 17 Ultra : des accessoires photo impressionnants poussent le mat&eacute;riel haut de gamme</a>
-                </div>
-                <div class="curated-source"><img src="https://www.google.com/s2/favicons?domain=techcrunch.com&sz=16" alt="TechCrunch"> TechCrunch</div>
-                <div class="curated-bluf" data-en><span class="bluf-label">BLUF:</span> Xiaomi&rsquo;s continued push into premium hardware signals that Chinese consumer tech brands are competing on capability, not just price &mdash; relevant for anyone tracking the US-China tech decoupling trajectory.</div>
-                <div class="curated-bluf" data-fr><span class="bluf-label">ESSENTIEL :</span> La pouss&eacute;e continue de Xiaomi vers le mat&eacute;riel haut de gamme signale que les marques technologiques chinoises rivalisent en capacit&eacute;, pas seulement en prix &mdash; pertinent pour le d&eacute;couplage technologique US-Chine.</div>
-            </div>
-            <div class="curated-article">
-                <div class="curated-headline">
-                    <a href="https://techcrunch.com/2026/04/05/polymarket-took-down-wagers-tied-to-rescue-of-downed-air-force-officer/" target="_blank" rel="noopener" data-en>Polymarket Took Down Wagers Tied to Air Force Rescue</a>
-                    <a href="https://techcrunch.com/2026/04/05/polymarket-took-down-wagers-tied-to-rescue-of-downed-air-force-officer/" target="_blank" rel="noopener" data-fr>Polymarket retire les paris li&eacute;s au sauvetage de l&rsquo;Air Force</a>
-                </div>
-                <div class="curated-source"><img src="https://www.google.com/s2/favicons?domain=techcrunch.com&sz=16" alt="TechCrunch"> TechCrunch</div>
-                <div class="curated-bluf" data-en><span class="bluf-label">BLUF:</span> Prediction markets self-policing on military operations is a governance signal. As these platforms grow in influence, their editorial decisions on what&rsquo;s &ldquo;bettable&rdquo; become a form of soft regulation worth watching.</div>
-                <div class="curated-bluf" data-fr><span class="bluf-label">ESSENTIEL :</span> Les march&eacute;s de pr&eacute;diction qui s&rsquo;autor&eacute;gulent sur les op&eacute;rations militaires sont un signal de gouvernance. Leurs d&eacute;cisions &eacute;ditoriales deviennent une forme de r&eacute;gulation douce.</div>
-            </div>
-        </div>
-
-        <div class="curated-section">
-            <div class="curated-section-label" data-en>ENERGY</div>
-            <div class="curated-section-label" data-fr>&Eacute;NERGIE</div>
-            <div class="curated-article">
-                <div class="curated-headline">
+        <div class="pdb-item">
+            <div class="pdb-rank">02</div>
+            <div class="pdb-content">
+                <div class="pdb-tag" data-en>ENERGY</div>
+                <div class="pdb-tag" data-fr>&Eacute;NERGIE</div>
+                <div class="pdb-headline">
                     <a href="https://oilprice.com/Latest-Energy-News/World-News/Saudi-Arabia-Sets-Record-Premium-for-Flagship-Crude-as-Hormuz-Crisis-Deepens.html" target="_blank" rel="noopener" data-en>Saudi Arabia Sets Record Premium for Flagship Crude as Hormuz Crisis Deepens</a>
                     <a href="https://oilprice.com/Latest-Energy-News/World-News/Saudi-Arabia-Sets-Record-Premium-for-Flagship-Crude-as-Hormuz-Crisis-Deepens.html" target="_blank" rel="noopener" data-fr>L&rsquo;Arabie saoudite fixe une prime record pour son brut phare alors que la crise d&rsquo;Hormuz s&rsquo;aggrave</a>
                 </div>
-                <div class="curated-source"><img src="https://www.google.com/s2/favicons?domain=oilprice.com&sz=16" alt="OilPrice"> OilPrice</div>
-                <div class="curated-bluf" data-en><span class="bluf-label">BLUF:</span> Record premiums on Saudi crude mean the Hormuz chokepoint risk is now fully priced into physical markets. This is the energy cost of the Iran standoff &mdash; and it flows directly into consumer prices, shipping rates, and inflation forecasts.</div>
-                <div class="curated-bluf" data-fr><span class="bluf-label">ESSENTIEL :</span> Les primes records sur le brut saoudien signifient que le risque du d&eacute;troit d&rsquo;Hormuz est d&eacute;sormais pleinement int&eacute;gr&eacute; aux march&eacute;s physiques. Cela se r&eacute;percute sur les prix, les taux de fret et les pr&eacute;visions d&rsquo;inflation.</div>
+                <div class="pdb-source"><img src="https://www.google.com/s2/favicons?domain=oilprice.com&sz=16" alt="OilPrice"> OilPrice</div>
+                <div class="pdb-bluf" data-en>Record premiums on Saudi crude mean the Hormuz chokepoint risk is now fully priced into physical markets. This is the energy cost of the Iran standoff &mdash; and it flows directly into consumer prices, shipping rates, and inflation forecasts.</div>
+                <div class="pdb-bluf" data-fr>Les primes records sur le brut saoudien signifient que le risque du d&eacute;troit d&rsquo;Hormuz est d&eacute;sormais pleinement int&eacute;gr&eacute; aux march&eacute;s physiques. Cela se r&eacute;percute sur les prix, les taux de fret et les pr&eacute;visions d&rsquo;inflation.</div>
             </div>
-            <div class="curated-article">
-                <div class="curated-headline">
+        </div>
+        <div class="pdb-item">
+            <div class="pdb-rank">03</div>
+            <div class="pdb-content">
+                <div class="pdb-tag" data-en>MARKETS</div>
+                <div class="pdb-tag" data-fr>MARCH&Eacute;S</div>
+                <div class="pdb-headline">
+                    <a href="https://www.cnbc.com/2026/04/06/jpmorgan-ceo-jamie-dimon-annual-letter-risks.html" target="_blank" rel="noopener" data-en>JPMorgan CEO Jamie Dimon Cites Risks in Geopolitics, AI in Annual Letter</a>
+                    <a href="https://www.cnbc.com/2026/04/06/jpmorgan-ceo-jamie-dimon-annual-letter-risks.html" target="_blank" rel="noopener" data-fr>Le PDG de JPMorgan Jamie Dimon signale des risques g&eacute;opolitiques et li&eacute;s &agrave; l&rsquo;IA</a>
+                </div>
+                <div class="pdb-source"><img src="https://www.google.com/s2/favicons?domain=cnbc.com&sz=16" alt="CNBC"> CNBC</div>
+                <div class="pdb-bluf" data-en>When Dimon flags risk publicly, institutional capital listens. His pairing of geopolitical instability with AI disruption signals that JPMorgan is pricing both into forward guidance &mdash; a leading indicator for corporate investment posture through Q3.</div>
+                <div class="pdb-bluf" data-fr>Quand Dimon signale un risque publiquement, le capital institutionnel &eacute;coute. Son couplage de l&rsquo;instabilit&eacute; g&eacute;opolitique avec la disruption de l&rsquo;IA est un indicateur avanc&eacute; pour la posture d&rsquo;investissement des entreprises.</div>
+            </div>
+        </div>
+        <div class="pdb-item">
+            <div class="pdb-rank">04</div>
+            <div class="pdb-content">
+                <div class="pdb-tag" data-en>GLOBAL</div>
+                <div class="pdb-tag" data-fr>MONDIAL</div>
+                <div class="pdb-headline">
+                    <a href="https://www.bbc.com/news/articles/cy01vg7x5ppo" target="_blank" rel="noopener" data-en>Trump Declares Victory After Rescue but Threats to US Operation in Iran Still Loom</a>
+                    <a href="https://www.bbc.com/news/articles/cy01vg7x5ppo" target="_blank" rel="noopener" data-fr>Trump d&eacute;clare victoire mais les menaces sur l&rsquo;op&eacute;ration am&eacute;ricaine en Iran persistent</a>
+                </div>
+                <div class="pdb-source"><img src="https://www.google.com/s2/favicons?domain=bbc.com&sz=16" alt="BBC"> BBC</div>
+                <div class="pdb-bluf" data-en>The &ldquo;mission accomplished&rdquo; framing creates a political ceiling &mdash; any escalation from here becomes harder to justify domestically. Decision-makers should watch whether this declaration constrains or enables the next move on Iran.</div>
+                <div class="pdb-bluf" data-fr>Le cadrage &laquo; mission accomplie &raquo; cr&eacute;e un plafond politique &mdash; toute escalade devient plus difficile &agrave; justifier. &Agrave; surveiller : cette d&eacute;claration contraint-elle ou permet-elle le prochain mouvement sur l&rsquo;Iran?</div>
+            </div>
+        </div>
+        <div class="pdb-item">
+            <div class="pdb-rank">05</div>
+            <div class="pdb-content">
+                <div class="pdb-tag" data-en>GLOBAL</div>
+                <div class="pdb-tag" data-fr>MONDIAL</div>
+                <div class="pdb-headline">
+                    <a href="https://www.bbc.com/news/articles/cx2vpz1kwreo" target="_blank" rel="noopener" data-en>How Rescue of US Airman in Remote Part of Iran Unfolded</a>
+                    <a href="https://www.bbc.com/news/articles/cx2vpz1kwreo" target="_blank" rel="noopener" data-fr>Comment le sauvetage du pilote am&eacute;ricain en Iran s&rsquo;est d&eacute;roul&eacute;</a>
+                </div>
+                <div class="pdb-source"><img src="https://www.google.com/s2/favicons?domain=bbc.com&sz=16" alt="BBC"> BBC</div>
+                <div class="pdb-bluf" data-en>The operational detail emerging from this rescue reveals capability and willingness to project force inside Iranian territory &mdash; a signal that recalibrates Tehran&rsquo;s risk calculus and reshapes the negotiating environment for any ceasefire talks.</div>
+                <div class="pdb-bluf" data-fr>Les d&eacute;tails op&eacute;rationnels de ce sauvetage r&eacute;v&egrave;lent la capacit&eacute; et la volont&eacute; de projeter la force en territoire iranien &mdash; un signal qui recalibre le calcul de risque de T&eacute;h&eacute;ran.</div>
+            </div>
+        </div>
+        <div class="pdb-item">
+            <div class="pdb-rank">06</div>
+            <div class="pdb-content">
+                <div class="pdb-tag" data-en>ENERGY</div>
+                <div class="pdb-tag" data-fr>&Eacute;NERGIE</div>
+                <div class="pdb-headline">
                     <a href="https://oilprice.com/Latest-Energy-News/World-News/Nearly-50-Qatar-LNG-Tankers-Sit-Idle-Across-Asia.html" target="_blank" rel="noopener" data-en>Nearly 50 Qatar LNG Tankers Sit Idle Across Asia</a>
                     <a href="https://oilprice.com/Latest-Energy-News/World-News/Nearly-50-Qatar-LNG-Tankers-Sit-Idle-Across-Asia.html" target="_blank" rel="noopener" data-fr>Pr&egrave;s de 50 m&eacute;thaniers qataris inactifs en Asie</a>
                 </div>
-                <div class="curated-source"><img src="https://www.google.com/s2/favicons?domain=oilprice.com&sz=16" alt="OilPrice"> OilPrice</div>
-                <div class="curated-bluf" data-en><span class="bluf-label">BLUF:</span> Idle LNG tankers signal either a demand collapse or a routing problem. Either way, it&rsquo;s a leading indicator for Asian energy security and global LNG spot pricing &mdash; the Hormuz disruption is reshaping physical trade flows in real time.</div>
-                <div class="curated-bluf" data-fr><span class="bluf-label">ESSENTIEL :</span> Les m&eacute;thaniers inactifs signalent un effondrement de la demande ou un probl&egrave;me de routage. Dans les deux cas, c&rsquo;est un indicateur avanc&eacute; pour la s&eacute;curit&eacute; &eacute;nerg&eacute;tique asiatique.</div>
+                <div class="pdb-source"><img src="https://www.google.com/s2/favicons?domain=oilprice.com&sz=16" alt="OilPrice"> OilPrice</div>
+                <div class="pdb-bluf" data-en>Idle LNG tankers signal either a demand collapse or a routing problem. Either way, it&rsquo;s a leading indicator for Asian energy security and global LNG spot pricing &mdash; the Hormuz disruption is reshaping physical trade flows in real time.</div>
+                <div class="pdb-bluf" data-fr>Les m&eacute;thaniers inactifs signalent un effondrement de la demande ou un probl&egrave;me de routage. Dans les deux cas, c&rsquo;est un indicateur avanc&eacute; pour la s&eacute;curit&eacute; &eacute;nerg&eacute;tique asiatique.</div>
             </div>
         </div>
-
-        <div class="curated-section">
-            <div class="curated-section-label" data-en>SHIPPING &amp; LOGISTICS</div>
-            <div class="curated-section-label" data-fr>TRANSPORT &amp; LOGISTIQUE</div>
-            <div class="curated-article">
-                <div class="curated-headline">
+        <div class="pdb-item">
+            <div class="pdb-rank">07</div>
+            <div class="pdb-content">
+                <div class="pdb-tag" data-en>SHIPPING</div>
+                <div class="pdb-tag" data-fr>TRANSPORT</div>
+                <div class="pdb-headline">
                     <a href="https://theloadstar.com/amazon-discloses-3-5-fuel-logistics-related-surcharge/" target="_blank" rel="noopener" data-en>Amazon Discloses 3.5% Fuel &amp; Logistics Surcharge</a>
                     <a href="https://theloadstar.com/amazon-discloses-3-5-fuel-logistics-related-surcharge/" target="_blank" rel="noopener" data-fr>Amazon annonce un suppl&eacute;ment carburant et logistique de 3,5 %</a>
                 </div>
-                <div class="curated-source"><img src="https://www.google.com/s2/favicons?domain=theloadstar.com&sz=16" alt="The Loadstar"> The Loadstar</div>
-                <div class="curated-bluf" data-en><span class="bluf-label">BLUF:</span> When Amazon passes costs forward, it means their internal models show sustained logistics inflation. This surcharge becomes the floor for every other shipper&rsquo;s pricing &mdash; watch for cascading surcharge announcements across the sector.</div>
-                <div class="curated-bluf" data-fr><span class="bluf-label">ESSENTIEL :</span> Quand Amazon r&eacute;percute ses co&ucirc;ts, cela signifie que ses mod&egrave;les internes montrent une inflation logistique soutenue. Ce suppl&eacute;ment devient le plancher pour tous les autres transporteurs.</div>
+                <div class="pdb-source"><img src="https://www.google.com/s2/favicons?domain=theloadstar.com&sz=16" alt="The Loadstar"> The Loadstar</div>
+                <div class="pdb-bluf" data-en>When Amazon passes costs forward, it means their internal models show sustained logistics inflation. This surcharge becomes the floor for every other shipper&rsquo;s pricing &mdash; watch for cascading surcharge announcements across the sector.</div>
+                <div class="pdb-bluf" data-fr>Quand Amazon r&eacute;percute ses co&ucirc;ts, cela signifie que ses mod&egrave;les internes montrent une inflation logistique soutenue. Ce suppl&eacute;ment devient le plancher pour tous les autres transporteurs.</div>
             </div>
-            <div class="curated-article">
-                <div class="curated-headline">
+        </div>
+        <div class="pdb-item">
+            <div class="pdb-rank">08</div>
+            <div class="pdb-content">
+                <div class="pdb-tag" data-en>MARKETS</div>
+                <div class="pdb-tag" data-fr>MARCH&Eacute;S</div>
+                <div class="pdb-headline">
+                    <a href="https://www.cnbc.com/2026/04/05/stock-market-today-live-updates.html" target="_blank" rel="noopener" data-en>S&amp;P 500 Futures Edge Higher on Iran Ceasefire Report</a>
+                    <a href="https://www.cnbc.com/2026/04/05/stock-market-today-live-updates.html" target="_blank" rel="noopener" data-fr>Les contrats &agrave; terme du S&amp;P 500 progressent sur les rapports de cessez-le-feu iranien</a>
+                </div>
+                <div class="pdb-source"><img src="https://www.google.com/s2/favicons?domain=cnbc.com&sz=16" alt="CNBC"> CNBC</div>
+                <div class="pdb-bluf" data-en>Futures signal cautious optimism after last week&rsquo;s volatility. The real tell is whether the rally holds past the opening bell &mdash; positioning data suggests institutional hedging remains elevated.</div>
+                <div class="pdb-bluf" data-fr>Les contrats &agrave; terme signalent un optimisme prudent apr&egrave;s la volatilit&eacute; de la semaine derni&egrave;re. Le vrai signal sera la tenue du rebond apr&egrave;s l&rsquo;ouverture.</div>
+            </div>
+        </div>
+        <div class="pdb-item">
+            <div class="pdb-rank">09</div>
+            <div class="pdb-content">
+                <div class="pdb-tag" data-en>POLITICS</div>
+                <div class="pdb-tag" data-fr>POLITIQUE</div>
+                <div class="pdb-headline">
+                    <a href="https://thehill.com/homenews/house/5815556-ice-funding-dhs-reconciliation/" target="_blank" rel="noopener" data-en>GOP&rsquo;s ICE Funding Gambit Squeezes Republican Agenda</a>
+                    <a href="https://thehill.com/homenews/house/5815556-ice-funding-dhs-reconciliation/" target="_blank" rel="noopener" data-fr>Le pari r&eacute;publicain sur le financement de l&rsquo;ICE comprime leur propre programme</a>
+                </div>
+                <div class="pdb-source"><img src="https://www.google.com/s2/favicons?domain=thehill.com&sz=16" alt="The Hill"> The Hill</div>
+                <div class="pdb-bluf" data-en>Republican leadership is burning political capital on immigration enforcement funding at the expense of their broader legislative agenda. Watch for downstream stalls on tax and trade legislation that matter to markets.</div>
+                <div class="pdb-bluf" data-fr>Les dirigeants r&eacute;publicains consacrent leur capital politique au financement de l&rsquo;immigration, au d&eacute;triment de leur programme l&eacute;gislatif. &Agrave; surveiller : les blocages en cascade sur la fiscalit&eacute; et le commerce.</div>
+            </div>
+        </div>
+        <div class="pdb-item">
+            <div class="pdb-rank">10</div>
+            <div class="pdb-content">
+                <div class="pdb-tag" data-en>SHIPPING</div>
+                <div class="pdb-tag" data-fr>TRANSPORT</div>
+                <div class="pdb-headline">
                     <a href="https://theloadstar.com/ch-robinson-leads-buys-loyalty-at-inflection-point/" target="_blank" rel="noopener" data-en>CH Robinson Leads, Buys Loyalty at Inflection Point</a>
                     <a href="https://theloadstar.com/ch-robinson-leads-buys-loyalty-at-inflection-point/" target="_blank" rel="noopener" data-fr>CH Robinson investit dans la fid&eacute;lit&eacute; au point d&rsquo;inflexion</a>
                 </div>
-                <div class="curated-source"><img src="https://www.google.com/s2/favicons?domain=theloadstar.com&sz=16" alt="The Loadstar"> The Loadstar</div>
-                <div class="curated-bluf" data-en><span class="bluf-label">BLUF:</span> The largest freight broker is investing in shipper loyalty during a soft market &mdash; a classic cycle play. When volumes recover, the brokers who locked in relationships now will control pricing power. Signals that smart money sees the freight bottom forming.</div>
-                <div class="curated-bluf" data-fr><span class="bluf-label">ESSENTIEL :</span> Le plus grand courtier en fret investit dans la fid&eacute;lit&eacute; des exp&eacute;diteurs en march&eacute; mou &mdash; un jeu de cycle classique. L&rsquo;argent intelligent voit le creux du march&eacute; du fret se former.</div>
+                <div class="pdb-source"><img src="https://www.google.com/s2/favicons?domain=theloadstar.com&sz=16" alt="The Loadstar"> The Loadstar</div>
+                <div class="pdb-bluf" data-en>The largest freight broker is investing in shipper loyalty during a soft market &mdash; a classic cycle play. When volumes recover, the brokers who locked in relationships now will control pricing power. Signals that smart money sees the freight bottom forming.</div>
+                <div class="pdb-bluf" data-fr>Le plus grand courtier en fret investit dans la fid&eacute;lit&eacute; des exp&eacute;diteurs en march&eacute; mou &mdash; un jeu de cycle classique. L&rsquo;argent intelligent voit le creux du march&eacute; du fret se former.</div>
             </div>
         </div>
-
+        <div class="pdb-item">
+            <div class="pdb-rank">11</div>
+            <div class="pdb-content">
+                <div class="pdb-tag" data-en>CANADA</div>
+                <div class="pdb-tag" data-fr>CANADA</div>
+                <div class="pdb-headline">
+                    <a href="https://www.cbc.ca/news/science/artemis-lunar-flyby-apollo-13-record-9.7153912" target="_blank" rel="noopener" data-en>Artemis II on Track to Break Apollo 13 Record</a>
+                    <a href="https://www.cbc.ca/news/science/artemis-lunar-flyby-apollo-13-record-9.7153912" target="_blank" rel="noopener" data-fr>Artemis II en voie de battre le record d&rsquo;Apollo 13</a>
+                </div>
+                <div class="pdb-source"><img src="https://www.google.com/s2/favicons?domain=cbc.ca&sz=16" alt="CBC"> CBC</div>
+                <div class="pdb-bluf" data-en>Canada&rsquo;s Canadarm contribution keeps the country in the manned spaceflight conversation. The mission&rsquo;s timeline matters for Canadian aerospace procurement and STEM talent pipeline &mdash; both active policy files in Ottawa.</div>
+                <div class="pdb-bluf" data-fr>La contribution du Canadarm maintient le Canada dans la conversation sur les vols habit&eacute;s. Le calendrier de la mission concerne l&rsquo;approvisionnement a&eacute;rospatial et le pipeline de talents STIM.</div>
+            </div>
+        </div>
+        <div class="pdb-item">
+            <div class="pdb-rank">12</div>
+            <div class="pdb-content">
+                <div class="pdb-tag" data-en>TECHNOLOGY</div>
+                <div class="pdb-tag" data-fr>TECHNOLOGIE</div>
+                <div class="pdb-headline">
+                    <a href="https://techcrunch.com/2026/04/05/polymarket-took-down-wagers-tied-to-rescue-of-downed-air-force-officer/" target="_blank" rel="noopener" data-en>Polymarket Took Down Wagers Tied to Air Force Rescue</a>
+                    <a href="https://techcrunch.com/2026/04/05/polymarket-took-down-wagers-tied-to-rescue-of-downed-air-force-officer/" target="_blank" rel="noopener" data-fr>Polymarket retire les paris li&eacute;s au sauvetage de l&rsquo;Air Force</a>
+                </div>
+                <div class="pdb-source"><img src="https://www.google.com/s2/favicons?domain=techcrunch.com&sz=16" alt="TechCrunch"> TechCrunch</div>
+                <div class="pdb-bluf" data-en>Prediction markets self-policing on military operations is a governance signal. As these platforms grow in influence, their editorial decisions on what&rsquo;s &ldquo;bettable&rdquo; become a form of soft regulation worth watching.</div>
+                <div class="pdb-bluf" data-fr>Les march&eacute;s de pr&eacute;diction qui s&rsquo;autor&eacute;gulent sur les op&eacute;rations militaires sont un signal de gouvernance. Leurs d&eacute;cisions &eacute;ditoriales deviennent une forme de r&eacute;gulation douce.</div>
+            </div>
+        </div>
+        <div class="pdb-item">
+            <div class="pdb-rank">13</div>
+            <div class="pdb-content">
+                <div class="pdb-tag" data-en>TECHNOLOGY</div>
+                <div class="pdb-tag" data-fr>TECHNOLOGIE</div>
+                <div class="pdb-headline">
+                    <a href="https://techcrunch.com/2026/04/06/xiaomi-17-ultra-review-camera-leica-specs-photos/" target="_blank" rel="noopener" data-en>Xiaomi 17 Ultra: Premium Camera Add-Ons Signal Hardware Ambition</a>
+                    <a href="https://techcrunch.com/2026/04/06/xiaomi-17-ultra-review-camera-leica-specs-photos/" target="_blank" rel="noopener" data-fr>Xiaomi 17 Ultra : des accessoires photo haut de gamme signalent une ambition mat&eacute;rielle</a>
+                </div>
+                <div class="pdb-source"><img src="https://www.google.com/s2/favicons?domain=techcrunch.com&sz=16" alt="TechCrunch"> TechCrunch</div>
+                <div class="pdb-bluf" data-en>Xiaomi&rsquo;s continued push into premium hardware signals that Chinese consumer tech brands are competing on capability, not just price &mdash; relevant for anyone tracking the US-China tech decoupling trajectory.</div>
+                <div class="pdb-bluf" data-fr>La pouss&eacute;e continue de Xiaomi vers le mat&eacute;riel haut de gamme signale que les marques technologiques chinoises rivalisent en capacit&eacute;, pas seulement en prix &mdash; pertinent pour le d&eacute;couplage technologique US-Chine.</div>
+            </div>
+        </div>
     </div>
 
-    
-</div>
-
-<!-- Footer -->
+    <!-- Footer -->
 <footer>
     <div class="footer-inner">
         <div>
