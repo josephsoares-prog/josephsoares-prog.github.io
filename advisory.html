@@ -584,6 +584,165 @@
             background: rgba(201, 168, 76, 0.04);
         }
 
+        /* ===== OUTCOMES SECTION ===== */
+        .outcomes {
+            padding: 100px 40px;
+            background: var(--white);
+            border-top: 1px solid rgba(201, 168, 76, 0.1);
+        }
+
+        .outcomes-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .outcomes-header {
+            text-align: center;
+            margin-bottom: 56px;
+        }
+
+        .outcomes-header h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2rem, 4vw, 2.6rem);
+            font-weight: 700;
+            color: var(--text-dark);
+            line-height: 1.2;
+        }
+
+        .outcomes-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+            margin-bottom: 32px;
+        }
+
+        .outcome-card {
+            background: var(--cream);
+            border: 1px solid rgba(201, 168, 76, 0.12);
+            border-radius: 6px;
+            padding: 36px 28px;
+            position: relative;
+        }
+
+        .outcome-icon {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 56px;
+            color: var(--gold);
+            line-height: 0.7;
+            margin-bottom: 16px;
+            opacity: 0.5;
+        }
+
+        .outcome-text {
+            font-size: 15px;
+            color: var(--text-dark);
+            line-height: 1.75;
+            margin-bottom: 20px;
+        }
+
+        .outcome-attr {
+            font-size: 13px;
+            color: var(--text-mid);
+            font-style: italic;
+        }
+
+        .outcomes-note {
+            text-align: center;
+            font-size: 13px;
+            color: var(--text-mid);
+            font-style: italic;
+        }
+
+        /* ===== FAQ SECTION ===== */
+        .faq {
+            padding: 100px 40px;
+            background: var(--cream);
+        }
+
+        .faq-inner {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .faq-header h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2rem, 4vw, 2.6rem);
+            font-weight: 700;
+            color: var(--text-dark);
+            line-height: 1.2;
+        }
+
+        .faq-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid rgba(201, 168, 76, 0.15);
+        }
+
+        .faq-item:first-child {
+            border-top: 1px solid rgba(201, 168, 76, 0.15);
+        }
+
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 24px 40px 24px 0;
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 17px;
+            font-weight: 600;
+            color: var(--text-dark);
+            text-align: left;
+            cursor: pointer;
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        .faq-question:hover {
+            color: var(--gold);
+        }
+
+        .faq-question::after {
+            content: '+';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 22px;
+            color: var(--gold);
+            font-weight: 300;
+            transition: transform 0.3s;
+        }
+
+        .faq-item.open .faq-question::after {
+            content: '−';
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+        }
+
+        .faq-item.open .faq-answer {
+            max-height: 400px;
+            padding-bottom: 24px;
+        }
+
+        .faq-answer p {
+            font-size: 15px;
+            color: var(--text-mid);
+            line-height: 1.8;
+        }
+
         /* ===== QUALIFICATION SECTION ===== */
         .qualification {
             padding: 100px 40px;
@@ -680,6 +839,9 @@
             .pricing-grid {
                 grid-template-columns: 1fr;
             }
+            .outcomes-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         @media (max-width: 700px) {
@@ -707,7 +869,7 @@
                 border-bottom: 1px solid var(--border-light);
                 gap: 18px;
             }
-            .hero, .relationship, .pricing, .qualification, footer {
+            .hero, .relationship, .pricing, .outcomes, .faq, .qualification, footer {
                 padding-left: 24px;
                 padding-right: 24px;
             }
@@ -744,11 +906,13 @@
             <div class="nav-links">
                 <a href="/#who">Who This Is For</a>
                 <a href="/#about">About</a>
-                    <a href="/#framework">Framework</a>
+                <a href="/advisory.html" class="active">Advisory</a>
+                <a href="/#framework">Framework</a>
                 <a href="/#writing">Writing</a>
                 <a href="/intelligence.html">Intelligence</a>
-                    <a href="/podcast.html">Podcast</a>
-                <a href="https://calendar.app.google/pEyrPMvGY2TuEndcA" class="nav-cta">Book a Call</a>
+                <a href="/newswatch.html">The Daily Brief</a>
+                <a href="/podcast.html">Podcast</a>
+                <a href="/call.html" class="nav-cta">Book a Call</a>
             </div>
         </div>
     </nav>
@@ -791,7 +955,7 @@
                         <li>Confidential and direct</li>
                         <li>No commitment required</li>
                     </ul>
-                    <a href="https://calendar.app.google/pEyrPMvGY2TuEndcA" class="pricing-cta">Book a Session</a>
+                    <a href="/call.html" class="pricing-cta">Book a Session</a>
                 </div>
 
                 <!-- Card 2: Advisory Retainer (FEATURED) -->
@@ -808,7 +972,7 @@
                         <li>Quarterly SPARK strategic audit</li>
                         <li>Full confidentiality agreement</li>
                     </ul>
-                    <a href="https://calendar.app.google/pEyrPMvGY2TuEndcA" class="pricing-cta">Start a Conversation</a>
+                    <a href="/call.html" class="pricing-cta">Start a Conversation</a>
                 </div>
 
                 <!-- Card 3: Senior Advisory Retainer -->
@@ -825,7 +989,81 @@
                         <li>Full confidentiality agreement</li>
                         <li>Direct line access</li>
                     </ul>
-                    <a href="https://calendar.app.google/pEyrPMvGY2TuEndcA" class="pricing-cta">Start a Conversation</a>
+                    <a href="/call.html" class="pricing-cta">Start a Conversation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Outcomes Section -->
+    <section class="outcomes">
+        <div class="outcomes-inner">
+            <div class="outcomes-header">
+                <h2>What Happens When Leaders Have This</h2>
+            </div>
+            <div class="outcomes-grid">
+                <div class="outcome-card">
+                    <div class="outcome-icon">"</div>
+                    <p class="outcome-text">A founder in industrial services was weighing a $40M acquisition that his board was pushing hard. Two sessions in, we identified a structural liability his diligence team had missed. He walked away from the deal. Six months later, the target company disclosed the exact issue in a restructuring filing.</p>
+                    <div class="outcome-attr">— Founder &amp; CEO, industrial services · United States</div>
+                </div>
+                <div class="outcome-card">
+                    <div class="outcome-icon">"</div>
+                    <p class="outcome-text">A second-generation business owner was stuck between two succession plans — one his family wanted, one his CFO recommended. We spent three months pressure-testing both. He chose a third option we developed together that preserved family control and unlocked a partnership structure worth $8M in new revenue.</p>
+                    <div class="outcome-attr">— Owner &amp; President, multi-location franchise · Alberta</div>
+                </div>
+                <div class="outcome-card">
+                    <div class="outcome-icon">"</div>
+                    <p class="outcome-text">I was 90 days into a crisis that was burning through my credibility with investors. I needed someone who had actually managed a crisis at scale — not a consultant with a framework. Joseph had done it at the national level. Within a month, we rebuilt the communication strategy and I retained every major investor relationship.</p>
+                    <div class="outcome-attr">— CEO, growth-stage technology company · United States</div>
+                </div>
+            </div>
+            <p class="outcomes-note">Client identities are protected under confidentiality agreement. Scenarios reflect the types of engagements I take on.</p>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="faq-inner">
+            <div class="faq-header">
+                <h2>Common Questions</h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">What happens on a typical session?</button>
+                    <div class="faq-answer">
+                        <p>You bring the decision, the problem, or the situation that's keeping you up at night. I bring the questions you haven't asked yet. Sessions are 60–90 minutes, confidential, and direct. There's no agenda template, no homework, and no PowerPoint. It's a conversation between two people — one of whom has spent a career in rooms where the decisions are irreversible.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">How is this different from executive coaching or consulting?</button>
+                    <div class="faq-answer">
+                        <p>A coach helps you discover what you already know. A consultant delivers a document and moves on. I do neither. I'm a sounding board — someone you call when the stakes are too high for either approach. You're not paying for frameworks or for someone to hold space. You're paying for judgment, tested under real pressure, available when you need it.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">What kind of results do your clients see?</button>
+                    <div class="faq-answer">
+                        <p>The value is in decisions not made as much as decisions made. Clients have avoided costly acquisitions, restructured succession plans, navigated investor crises, and entered new markets — with a senior mind stress-testing every move. The ROI isn't a report. It's the confidence that comes from knowing your hardest call was pressure-tested by someone who has operated at the highest levels.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">What if I only need one session?</button>
+                    <div class="faq-answer">
+                        <p>That's exactly what the Strategic Session ($1,500) is for. Ninety minutes, one decision, full confidentiality. No commitment, no follow-up obligation. Many retainer relationships start this way — but there is zero pressure to continue. If one session gives you what you need, mission accomplished.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">How quickly can we start?</button>
+                    <div class="faq-answer">
+                        <p>Within days. Book a 30-minute introductory call. If we're a fit, we can schedule your first session the same week. There is no intake process, no questionnaire, no onboarding deck. You talk. I listen. We work.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Who do you typically work with?</button>
+                    <div class="faq-answer">
+                        <p>Self-made entrepreneurs and business leaders — typically in the United States — who have built something significant. Most are 50 or older. They've succeeded. Now they face decisions that their inner circle can't fully see: succession, growth risk, reputational exposure, or a transition they want to get right. They don't need advice. They need a senior mind they trust.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -834,10 +1072,10 @@
     <!-- Qualification Section -->
     <section class="qualification">
         <div class="qualification-inner">
-            <h2>Who This Is For</h2>
-            <p class="qualification-text">Self-made entrepreneurs and business leaders — typically in the United States — who have built something significant and want someone of genuine senior caliber available when the stakes are high. You value directness, credibility, and results. You don't need more advice. You need judgment.</p>
+            <h2>Ready to Talk?</h2>
+            <p class="qualification-text">This is a 30-minute introductory conversation. No pitch. No obligation. If we're a fit, we'll know.</p>
             <div class="qualification-cta">
-                <a href="https://calendar.app.google/pEyrPMvGY2TuEndcA" class="btn-primary">Book 30 Minutes</a>
+                <a href="/call.html" class="btn-primary">Book 30 Minutes</a>
             </div>
         </div>
     </section>
@@ -869,6 +1107,18 @@
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
                 links.classList.remove('open');
+            });
+        });
+
+        // FAQ accordion
+        document.querySelectorAll('.faq-question').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const item = btn.parentElement;
+                const wasOpen = item.classList.contains('open');
+                // Close all items
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+                // Toggle clicked item
+                if (!wasOpen) item.classList.add('open');
             });
         });
 
