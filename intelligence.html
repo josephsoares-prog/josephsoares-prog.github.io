@@ -1084,6 +1084,22 @@
 
 
 
+            <!-- SUBSTACK CTA -->
+            <div style="background:rgba(207,181,59,0.06); border:1px solid rgba(207,181,59,0.25); border-radius:4px; padding:2rem; margin-bottom:2rem; text-align:center;">
+                <p style="font-family:'Inter',sans-serif; font-size:0.65rem; letter-spacing:3px; text-transform:uppercase; color:var(--gold); margin-bottom:0.75rem;" data-fr="Abonnez-vous &agrave; Corridor Intelligence">Subscribe to Corridor Intelligence</p>
+                <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:1.5rem; margin-bottom:1.25rem;">
+                    <div style="flex:1; min-width:200px; max-width:280px; padding:1rem; background:rgba(255,255,255,0.03); border:1px solid rgba(207,181,59,0.15); border-radius:3px;">
+                        <p style="font-family:'Inter',sans-serif; font-size:0.7rem; letter-spacing:2px; text-transform:uppercase; color:var(--gold); margin-bottom:0.5rem;" data-fr="Gratuit">Free</p>
+                        <p style="font-family:'Inter',sans-serif; font-size:0.85rem; color:rgba(255,255,255,0.75); line-height:1.6;" data-fr="Titres du briefing quotidien + commentaire quotidien">Daily Brief headlines + daily commentary</p>
+                    </div>
+                    <div style="flex:1; min-width:200px; max-width:280px; padding:1rem; background:rgba(207,181,59,0.08); border:1px solid rgba(207,181,59,0.3); border-radius:3px;">
+                        <p style="font-family:'Inter',sans-serif; font-size:0.7rem; letter-spacing:2px; text-transform:uppercase; color:var(--gold); margin-bottom:0.5rem;" data-fr="Premium &mdash; 39$/mois">Premium &mdash; $39/month</p>
+                        <p style="font-family:'Inter',sans-serif; font-size:0.85rem; color:rgba(255,255,255,0.75); line-height:1.6;" data-fr="L&#8217;ensemble complet du renseignement">Full intelligence package</p>
+                    </div>
+                </div>
+                <a href="https://corridorintelligence.substack.com" target="_blank" rel="noopener" class="btn-primary" style="display:inline-block; padding:0.75rem 2rem; font-size:0.8rem;" data-fr="S&#8217;abonner">Subscribe</a>
+            </div>
+
             <!-- ENTRY: April 6, 2026 — Iran Rescue / Uranium Extraction -->
             <div class="commentary-item" style="border-left:3px solid var(--gold); padding-left:1.5rem;">
                 <div class="commentary-meta">
@@ -1647,30 +1663,23 @@
         </div>
     </section>
 
-<!-- STAY INFORMED -->
+<!-- STAY INFORMED — SUBSTACK -->
     <section class="launch-notice">
         <div class="launch-notice-inner">
-            <h2 data-fr="Ne manquez rien">Don't Miss a Beat</h2>
-            <p data-fr="Le Corridor est publié quotidiennement. Suivez sur LinkedIn pour recevoir chaque analyse dans votre fil — ou prenez rendez-vous pour une conversation stratégique.">The Corridor publishes daily. Follow on LinkedIn to get every analysis in your feed — or book a call to take the conversation further.</p>
-            <form id="corridor-signup" style="display:flex; gap:0.75rem; flex-wrap:wrap; justify-content:center; max-width:480px; margin:0 auto;" onsubmit="return corridorSignup(this)">
-                <input type="email" name="email" required placeholder="Your email" style="flex:1; min-width:200px; padding:0.75rem 1rem; border:1px solid rgba(207,181,59,0.3); background:rgba(255,255,255,0.05); color:#fff; font-family:'Inter',sans-serif; font-size:0.9rem; border-radius:2px;" />
-                <button type="submit" class="btn-primary" style="white-space:nowrap;" data-fr="S'abonner gratuitement">Subscribe — Free</button>
-            </form>
-            <p style="text-align:center; margin-top:0.75rem; font-size:0.75rem; opacity:0.5;" data-fr="Renseignement quotidien. Pas de pourriel. Désabonnement en un clic.">Daily intelligence. No spam. Unsubscribe anytime.</p>
-            <script>
-            function corridorSignup(form){
-                var email=form.email.value;
-                fetch('https://hook.us2.make.com/i4uhmlwxodqjczpbo3ydgi8a826a1myq',{
-                    method:'POST',headers:{'Content-Type':'application/json'},
-                    body:JSON.stringify({email:email,source:'intelligence-cta',name:''})
-                }).then(function(){
-                    form.innerHTML='<p style="color:var(--gold);font-weight:600;">You\u2019re in. Watch your inbox.</p>';
-                }).catch(function(){
-                    form.innerHTML='<p style="color:#e74c3c;">Something went wrong. Email j@josephsoares.com directly.</p>';
-                });
-                return false;
-            }
-            </script>
+            <h2 data-fr="Recevez Corridor Intelligence">Get Corridor Intelligence Delivered</h2>
+            <p data-fr="Analyse g&eacute;opolitique pour les d&eacute;cideurs qui ne peuvent pas se permettre d&#8217;&ecirc;tre surpris. Abonnement gratuit et premium disponibles.">Geopolitical analysis for decision-makers who can&#8217;t afford to be surprised. Free and paid tiers available.</p>
+            <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:1.5rem; margin:1.5rem auto; max-width:560px;">
+                <div style="flex:1; min-width:220px; padding:1.25rem; background:rgba(255,255,255,0.03); border:1px solid rgba(207,181,59,0.2); border-radius:3px; text-align:center;">
+                    <p style="font-family:'Inter',sans-serif; font-size:0.7rem; letter-spacing:2px; text-transform:uppercase; color:var(--gold); margin-bottom:0.5rem;" data-fr="Gratuit">Free</p>
+                    <p style="font-family:'Inter',sans-serif; font-size:0.85rem; color:rgba(255,255,255,0.7); line-height:1.6;" data-fr="Titres du briefing quotidien + commentaire quotidien">Daily Brief headlines + daily commentary</p>
+                </div>
+                <div style="flex:1; min-width:220px; padding:1.25rem; background:rgba(207,181,59,0.08); border:1px solid rgba(207,181,59,0.3); border-radius:3px; text-align:center;">
+                    <p style="font-family:'Inter',sans-serif; font-size:0.7rem; letter-spacing:2px; text-transform:uppercase; color:var(--gold); margin-bottom:0.5rem;" data-fr="Premium &mdash; 39$/mois">Premium &mdash; $39/month</p>
+                    <p style="font-family:'Inter',sans-serif; font-size:0.85rem; color:rgba(255,255,255,0.7); line-height:1.6;" data-fr="L&#8217;ensemble complet du renseignement">Full intelligence package</p>
+                </div>
+            </div>
+            <a href="https://corridorintelligence.substack.com" target="_blank" rel="noopener" class="btn-primary" style="display:inline-block; padding:0.9rem 2.5rem; font-size:0.85rem;" data-fr="S&#8217;abonner maintenant">Subscribe Now</a>
+            <p style="text-align:center; margin-top:0.75rem; font-size:0.75rem; opacity:0.5;" data-fr="Renseignement quotidien. Pas de pourriel. D&eacute;sabonnement en un clic.">Daily intelligence. No spam. Unsubscribe anytime.</p>
         </div>
     </section>
 
