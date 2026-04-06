@@ -280,6 +280,49 @@
             margin-top: 16px; font-style: italic;
         }
 
+        /* ===== LIVE HEADLINES ===== */
+        .live-headlines {
+            margin: 8px 0 12px;
+            padding: 0;
+            list-style: none;
+        }
+        .live-headlines li {
+            padding: 6px 0;
+            border-bottom: 1px solid rgba(201,168,76,0.06);
+            display: flex;
+            align-items: baseline;
+            gap: 10px;
+        }
+        .live-headlines li:last-child { border-bottom: none; }
+        .live-headlines a {
+            color: rgba(255,255,255,0.85);
+            text-decoration: none;
+            font-size: 14px;
+            line-height: 1.45;
+            transition: color 0.2s;
+        }
+        .live-headlines a:hover { color: var(--gold); }
+        .live-headlines .hl-time {
+            font-family: var(--mono);
+            font-size: 10px;
+            color: rgba(255,255,255,0.25);
+            white-space: nowrap;
+            min-width: 42px;
+        }
+        .feed-loading {
+            font-family: var(--mono);
+            font-size: 11px;
+            color: rgba(255,255,255,0.2);
+            padding: 6px 0;
+            letter-spacing: 1px;
+        }
+        .feed-error {
+            font-family: var(--mono);
+            font-size: 11px;
+            color: rgba(192,57,43,0.5);
+            padding: 6px 0;
+        }
+
         /* ===== SECTION ITEMS CONTAINER ===== */
         .section-items { }
         .section-items.collapsed { display: none; }
@@ -400,67 +443,73 @@
     </div>
     <div class="section-items" id="items-usa">
 
-        <div class="intel-article">
+        <div class="intel-article" data-feed="https://thehill.com/feed/">
             <div class="intel-meta">
                 <span class="intel-tag">POLITICS</span>
                 <span class="intel-time">Latest</span>
             </div>
             <div class="intel-headline"><a href="https://thehill.com" target="_blank" data-en>The Hill &mdash; Political News &amp; Policy</a><a href="https://thehill.com" target="_blank" data-fr>The Hill &mdash; Politique am&eacute;ricaine</a></div>
+            <div class="live-headlines" data-slot></div>
             <div class="intel-bluf" data-en><strong>BLUF:</strong> Congressional and White House coverage with real-time legislative tracking. Primary source for US political intelligence.</div>
             <div class="intel-bluf" data-fr><strong>ESSENTIEL :</strong> Couverture du Congr&egrave;s et de la Maison-Blanche avec suivi l&eacute;gislatif en temps r&eacute;el.</div>
             <div class="intel-source"><img src="https://www.google.com/s2/favicons?domain=thehill.com&sz=32" alt="The Hill"> <a href="https://thehill.com" target="_blank">thehill.com</a></div>
         </div>
 
-        <div class="intel-article">
+        <div class="intel-article" data-feed="https://www.forbes.com/real-time/feed2/">
             <div class="intel-meta">
                 <span class="intel-tag">BUSINESS</span>
                 <span class="intel-time">Latest</span>
             </div>
             <div class="intel-headline"><a href="https://forbes.com" target="_blank">Forbes &mdash; Business, Finance &amp; Industry</a></div>
+            <div class="live-headlines" data-slot></div>
             <div class="intel-bluf" data-en><strong>BLUF:</strong> Wealth creation, entrepreneurship, and business strategy intelligence. Tracking the decisions shaping the American economy.</div>
             <div class="intel-bluf" data-fr><strong>ESSENTIEL :</strong> Cr&eacute;ation de richesse, entrepreneuriat et strat&eacute;gie d&rsquo;affaires. D&eacute;cisions qui fa&ccedil;onnent l&rsquo;&eacute;conomie am&eacute;ricaine.</div>
             <div class="intel-source"><img src="https://www.google.com/s2/favicons?domain=forbes.com&sz=32" alt="Forbes"> <a href="https://forbes.com" target="_blank">forbes.com</a></div>
         </div>
 
-        <div class="intel-article">
+        <div class="intel-article" data-feed="https://www.newsweek.com/rss">
             <div class="intel-meta">
                 <span class="intel-tag">ANALYSIS</span>
                 <span class="intel-time">Latest</span>
             </div>
             <div class="intel-headline"><a href="https://newsweek.com" target="_blank">Newsweek &mdash; News, Analysis &amp; Opinion</a></div>
+            <div class="live-headlines" data-slot></div>
             <div class="intel-bluf" data-en><strong>BLUF:</strong> National and international affairs from one of America&rsquo;s legacy newsrooms. Politics, culture, and investigative reporting.</div>
             <div class="intel-bluf" data-fr><strong>ESSENTIEL :</strong> Affaires nationales et internationales. Politique, culture et journalisme d&rsquo;enqu&ecirc;te.</div>
             <div class="intel-source"><img src="https://www.google.com/s2/favicons?domain=newsweek.com&sz=32" alt="Newsweek"> <a href="https://newsweek.com" target="_blank">newsweek.com</a></div>
         </div>
 
-        <div class="intel-article">
+        <div class="intel-article" data-feed="https://feeds.content.dowjones.io/public/rss/WSJcomUSBusiness">
             <div class="intel-meta">
                 <span class="intel-tag">MARKETS</span>
                 <span class="intel-time">Latest</span>
             </div>
             <div class="intel-headline"><a href="https://wsj.com" target="_blank">Wall Street Journal &mdash; Markets, Finance &amp; Economic Policy</a></div>
+            <div class="live-headlines" data-slot></div>
             <div class="intel-bluf" data-en><strong>BLUF:</strong> The definitive source for financial markets, business strategy, and economic policy. Required reading for capital allocation decisions.</div>
             <div class="intel-bluf" data-fr><strong>ESSENTIEL :</strong> Source d&eacute;finitive pour les march&eacute;s financiers, la strat&eacute;gie d&rsquo;affaires et la politique &eacute;conomique.</div>
             <div class="intel-source"><img src="https://www.google.com/s2/favicons?domain=wsj.com&sz=32" alt="WSJ"> <a href="https://wsj.com" target="_blank">wsj.com</a></div>
         </div>
 
-        <div class="intel-article">
+        <div class="intel-article" data-feed="https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=100003114">
             <div class="intel-meta">
                 <span class="intel-tag">MARKETS</span>
                 <span class="intel-time">Latest</span>
             </div>
             <div class="intel-headline"><a href="https://cnbc.com" target="_blank">CNBC &mdash; Business &amp; Market Intelligence</a></div>
+            <div class="live-headlines" data-slot></div>
             <div class="intel-bluf" data-en><strong>BLUF:</strong> Real-time market data, corporate earnings, and economic indicators. Primary feed for financial situational awareness.</div>
             <div class="intel-bluf" data-fr><strong>ESSENTIEL :</strong> Donn&eacute;es de march&eacute; en temps r&eacute;el, r&eacute;sultats d&rsquo;entreprises et indicateurs &eacute;conomiques.</div>
             <div class="intel-source"><img src="https://www.google.com/s2/favicons?domain=cnbc.com&sz=32" alt="CNBC"> <a href="https://cnbc.com" target="_blank">cnbc.com</a></div>
         </div>
 
-        <div class="intel-article">
+        <div class="intel-article" data-feed="https://news.google.com/rss/search?q=site:reuters.com&hl=en-US&gl=US&ceid=US:en">
             <div class="intel-meta">
                 <span class="intel-tag">WIRE</span>
                 <span class="intel-time">Latest</span>
             </div>
             <div class="intel-headline"><a href="https://reuters.com" target="_blank">Thomson Reuters &mdash; Global Wire Intelligence</a></div>
+            <div class="live-headlines" data-slot></div>
             <div class="intel-bluf" data-en><strong>BLUF:</strong> Institutional-grade global wire service. Markets, geopolitics, and business intelligence with verified sourcing.</div>
             <div class="intel-bluf" data-fr><strong>ESSENTIEL :</strong> Service de fil de presse mondial de calibre institutionnel. March&eacute;s, g&eacute;opolitique et renseignement commercial.</div>
             <div class="intel-source"><img src="https://www.google.com/s2/favicons?domain=reuters.com&sz=32" alt="Reuters"> <a href="https://reuters.com" target="_blank">reuters.com</a></div>
@@ -480,49 +529,55 @@
     </div>
     <div class="section-items" id="items-encanada">
 
-        <div class="intel-article">
+        <div class="intel-article" data-feed="https://www.cbc.ca/webfeed/rss/rss-topstories">
             <div class="intel-meta"><span class="intel-tag">NATIONAL</span><span class="intel-time">Latest</span></div>
             <div class="intel-headline"><a href="https://cbc.ca" target="_blank">CBC &mdash; National News</a></div>
+            <div class="live-headlines" data-slot></div>
             <div class="intel-bluf" data-en><strong>BLUF:</strong> Canada&rsquo;s public broadcaster. Federal politics, provincial affairs, and national developments. Primary English-language source.</div>
             <div class="intel-bluf" data-fr><strong>ESSENTIEL :</strong> Radiodiffuseur public du Canada. Politique f&eacute;d&eacute;rale, affaires provinciales et d&eacute;veloppements nationaux.</div>
             <div class="intel-source"><img src="https://www.google.com/s2/favicons?domain=cbc.ca&sz=32" alt="CBC"> <a href="https://cbc.ca" target="_blank">cbc.ca</a></div>
         </div>
 
-        <div class="intel-article">
+        <div class="intel-article" data-feed="https://www.thecanadianpress.com/feed/">
             <div class="intel-meta"><span class="intel-tag">WIRE</span><span class="intel-time">Latest</span></div>
             <div class="intel-headline"><a href="https://thecanadianpress.com" target="_blank">Canadian Press &mdash; National Wire Service</a></div>
+            <div class="live-headlines" data-slot></div>
             <div class="intel-bluf" data-en><strong>BLUF:</strong> Canada&rsquo;s national news agency. Breaking coverage of federal politics, provincial affairs, and national events across all regions.</div>
             <div class="intel-bluf" data-fr><strong>ESSENTIEL :</strong> Agence de presse nationale du Canada. Couverture de la politique f&eacute;d&eacute;rale et des affaires provinciales.</div>
             <div class="intel-source"><img src="https://www.google.com/s2/favicons?domain=thecanadianpress.com&sz=32" alt="CP"> <a href="https://thecanadianpress.com" target="_blank">thecanadianpress.com</a></div>
         </div>
 
-        <div class="intel-article">
+        <div class="intel-article" data-feed="https://nationalpost.com/feed">
             <div class="intel-meta"><span class="intel-tag">OPINION</span><span class="intel-time">Latest</span></div>
             <div class="intel-headline"><a href="https://nationalpost.com" target="_blank">National Post &mdash; Canadian News, Politics &amp; Opinion</a></div>
+            <div class="live-headlines" data-slot></div>
             <div class="intel-bluf" data-en><strong>BLUF:</strong> National affairs and opinion from Canada&rsquo;s leading centre-right broadsheet. Business, politics, and investigative journalism.</div>
             <div class="intel-bluf" data-fr><strong>ESSENTIEL :</strong> Affaires nationales et opinions du principal quotidien de centre-droit du Canada.</div>
             <div class="intel-source"><img src="https://www.google.com/s2/favicons?domain=nationalpost.com&sz=32" alt="NP"> <a href="https://nationalpost.com" target="_blank">nationalpost.com</a></div>
         </div>
 
-        <div class="intel-article">
+        <div class="intel-article" data-feed="https://policyoptions.irpp.org/feed/">
             <div class="intel-meta"><span class="intel-tag">POLICY</span><span class="intel-time">Latest</span></div>
             <div class="intel-headline"><a href="https://policyoptions.irpp.org" target="_blank">Policy Options (IRPP) &mdash; Canadian Public Policy Analysis</a></div>
+            <div class="live-headlines" data-slot></div>
             <div class="intel-bluf" data-en><strong>BLUF:</strong> In-depth policy analysis from the Institute for Research on Public Policy. Federal and provincial governance, economics, and social policy.</div>
             <div class="intel-bluf" data-fr><strong>ESSENTIEL :</strong> Analyse approfondie des politiques publiques de l&rsquo;IRPP. Gouvernance f&eacute;d&eacute;rale et provinciale.</div>
             <div class="intel-source"><img src="https://www.google.com/s2/favicons?domain=policyoptions.irpp.org&sz=32" alt="IRPP"> <a href="https://policyoptions.irpp.org" target="_blank">policyoptions.irpp.org</a></div>
         </div>
 
-        <div class="intel-article">
+        <div class="intel-article" data-feed="https://www.hilltimes.com/feed/">
             <div class="intel-meta"><span class="intel-tag">PARLIAMENT</span><span class="intel-time">Latest</span></div>
             <div class="intel-headline"><a href="https://hilltimes.com" target="_blank">The Hill Times &mdash; Parliament Hill Insider Intelligence</a></div>
+            <div class="live-headlines" data-slot></div>
             <div class="intel-bluf" data-en><strong>BLUF:</strong> Canada&rsquo;s politics and government newspaper. Insider coverage of Parliament, Cabinet, committees, and the federal bureaucracy.</div>
             <div class="intel-bluf" data-fr><strong>ESSENTIEL :</strong> Journal politique et gouvernemental du Canada. Couverture privil&eacute;gi&eacute;e du Parlement et du Cabinet.</div>
             <div class="intel-source"><img src="https://www.google.com/s2/favicons?domain=hilltimes.com&sz=32" alt="HT"> <a href="https://hilltimes.com" target="_blank">hilltimes.com</a></div>
         </div>
 
-        <div class="intel-article">
+        <div class="intel-article" data-feed="https://financialpost.com/feed">
             <div class="intel-meta"><span class="intel-tag">ECONOMICS</span><span class="intel-time">Latest</span></div>
             <div class="intel-headline"><a href="https://financialpost.com" target="_blank">Financial Post &mdash; Canadian Business &amp; Markets</a></div>
+            <div class="live-headlines" data-slot></div>
             <div class="intel-bluf" data-en><strong>BLUF:</strong> Canadian business, markets, and economic intelligence. Corporate developments, energy sector, and financial regulation.</div>
             <div class="intel-bluf" data-fr><strong>ESSENTIEL :</strong> Affaires canadiennes, march&eacute;s et renseignement &eacute;conomique. Secteur &eacute;nerg&eacute;tique et r&eacute;glementation financi&egrave;re.</div>
             <div class="intel-source"><img src="https://www.google.com/s2/favicons?domain=financialpost.com&sz=32" alt="FP"> <a href="https://financialpost.com" target="_blank">financialpost.com</a></div>
@@ -542,25 +597,28 @@
     </div>
     <div class="section-items" id="items-frcanada">
 
-        <div class="intel-article">
+        <div class="intel-article" data-feed="https://www.lapresse.ca/rss">
             <div class="intel-meta"><span class="intel-tag">QU&Eacute;BEC</span><span class="intel-time">Latest</span></div>
             <div class="intel-headline"><a href="https://lapresse.ca" target="_blank">La Presse &mdash; Actualit&eacute;s et politique</a></div>
+            <div class="live-headlines" data-slot></div>
             <div class="intel-bluf" data-en><strong>BLUF:</strong> Quebec&rsquo;s largest French-language daily. Provincial politics, national affairs, and francophone community intelligence across Canada.</div>
             <div class="intel-bluf" data-fr><strong>ESSENTIEL :</strong> Plus grand quotidien francophone du Qu&eacute;bec. Politique provinciale, affaires nationales et communaut&eacute;s francophones.</div>
             <div class="intel-source"><img src="https://www.google.com/s2/favicons?domain=lapresse.ca&sz=32" alt="LP"> <a href="https://lapresse.ca" target="_blank">lapresse.ca</a></div>
         </div>
 
-        <div class="intel-article">
+        <div class="intel-article" data-feed="https://ici.radio-canada.ca/rss/4159">
             <div class="intel-meta"><span class="intel-tag">NATIONAL</span><span class="intel-time">Latest</span></div>
             <div class="intel-headline"><a href="https://ici.radio-canada.ca" target="_blank">Radio-Canada &mdash; Nouvelles</a></div>
+            <div class="live-headlines" data-slot></div>
             <div class="intel-bluf" data-en><strong>BLUF:</strong> French-language public broadcaster. Federal politics, Quebec affairs, and francophone communities in New Brunswick, Manitoba, and Ontario.</div>
             <div class="intel-bluf" data-fr><strong>ESSENTIEL :</strong> Radiodiffuseur public francophone. Politique f&eacute;d&eacute;rale, affaires qu&eacute;b&eacute;coises et communaut&eacute;s francophones du N.-B., Manitoba et Ontario.</div>
             <div class="intel-source"><img src="https://www.google.com/s2/favicons?domain=ici.radio-canada.ca&sz=32" alt="RC"> <a href="https://ici.radio-canada.ca" target="_blank">ici.radio-canada.ca</a></div>
         </div>
 
-        <div class="intel-article">
+        <div class="intel-article" data-feed="https://www.ledevoir.com/rss/manchettes.xml">
             <div class="intel-meta"><span class="intel-tag">OPINION</span><span class="intel-time">Latest</span></div>
             <div class="intel-headline"><a href="https://ledevoir.com" target="_blank">Le Devoir &mdash; Analyse et opinion</a></div>
+            <div class="live-headlines" data-slot></div>
             <div class="intel-bluf" data-en><strong>BLUF:</strong> Independent francophone daily. Deep analysis of Quebec nationalism, federal-provincial relations, culture, and social policy.</div>
             <div class="intel-bluf" data-fr><strong>ESSENTIEL :</strong> Quotidien francophone ind&eacute;pendant. Analyse approfondie du nationalisme qu&eacute;b&eacute;cois et des relations f&eacute;d&eacute;rales-provinciales.</div>
             <div class="intel-source"><img src="https://www.google.com/s2/favicons?domain=ledevoir.com&sz=32" alt="LD"> <a href="https://ledevoir.com" target="_blank">ledevoir.com</a></div>
@@ -588,9 +646,10 @@
             <div class="intel-source"><img src="https://www.google.com/s2/favicons?domain=reuters.com&sz=32" alt="Reuters"> <a href="https://reuters.com/world" target="_blank">reuters.com/world</a></div>
         </div>
 
-        <div class="intel-article">
+        <div class="intel-article" data-feed="https://www.foreignaffairs.com/rss.xml">
             <div class="intel-meta"><span class="intel-tag">ANALYSIS</span><span class="intel-time">Latest</span></div>
             <div class="intel-headline"><a href="https://foreignaffairs.com" target="_blank">Foreign Affairs &mdash; Strategic Analysis</a></div>
+            <div class="live-headlines" data-slot></div>
             <div class="intel-bluf" data-en><strong>BLUF:</strong> The Council on Foreign Relations&rsquo; flagship publication. Deep analysis of international relations, grand strategy, and global order.</div>
             <div class="intel-bluf" data-fr><strong>ESSENTIEL :</strong> Publication phare du Council on Foreign Relations. Analyse approfondie des relations internationales et de la strat&eacute;gie mondiale.</div>
             <div class="intel-source"><img src="https://www.google.com/s2/favicons?domain=foreignaffairs.com&sz=32" alt="FA"> <a href="https://foreignaffairs.com" target="_blank">foreignaffairs.com</a></div>
@@ -642,17 +701,19 @@
             <div class="intel-source"><img src="https://www.google.com/s2/favicons?domain=ft.com&sz=32" alt="FT"> <a href="https://ft.com" target="_blank">ft.com</a></div>
         </div>
 
-        <div class="intel-article">
+        <div class="intel-article" data-feed="https://feeds.content.dowjones.io/public/rss/mw_topstories">
             <div class="intel-meta"><span class="intel-tag">TRADE</span><span class="intel-time">Latest</span></div>
             <div class="intel-headline"><a href="https://marketwatch.com" target="_blank">MarketWatch &mdash; Stock Market &amp; Economic Data</a></div>
+            <div class="live-headlines" data-slot></div>
             <div class="intel-bluf" data-en><strong>BLUF:</strong> Market analysis, earnings coverage, and economic indicators. Accessible financial intelligence for non-specialists.</div>
             <div class="intel-bluf" data-fr><strong>ESSENTIEL :</strong> Analyse des march&eacute;s, couverture des r&eacute;sultats et indicateurs &eacute;conomiques.</div>
             <div class="intel-source"><img src="https://www.google.com/s2/favicons?domain=marketwatch.com&sz=32" alt="MW"> <a href="https://marketwatch.com" target="_blank">marketwatch.com</a></div>
         </div>
 
-        <div class="intel-article">
+        <div class="intel-article" data-feed="https://oilprice.com/rss/main">
             <div class="intel-meta"><span class="intel-tag">ENERGY</span><span class="intel-time">Latest</span></div>
             <div class="intel-headline"><a href="https://oilprice.com" target="_blank">OilPrice.com &mdash; Energy Markets &amp; Commodities</a></div>
+            <div class="live-headlines" data-slot></div>
             <div class="intel-bluf" data-en><strong>BLUF:</strong> Energy market intelligence, commodity pricing, and resource geopolitics. Critical for understanding the intersection of energy and power.</div>
             <div class="intel-bluf" data-fr><strong>ESSENTIEL :</strong> Renseignement sur les march&eacute;s &eacute;nerg&eacute;tiques, tarification des commodit&eacute;s et g&eacute;opolitique des ressources.</div>
             <div class="intel-source"><img src="https://www.google.com/s2/favicons?domain=oilprice.com&sz=32" alt="OilPrice"> <a href="https://oilprice.com" target="_blank">oilprice.com</a></div>
@@ -672,9 +733,10 @@
     </div>
     <div class="section-items" id="items-defence">
 
-        <div class="intel-article">
+        <div class="intel-article" data-feed="https://www.defenseone.com/rss/">
             <div class="intel-meta"><span class="intel-tag">PENTAGON</span><span class="intel-time">Latest</span></div>
             <div class="intel-headline"><a href="https://defenseone.com" target="_blank">Defense One &mdash; US Defense &amp; National Security</a></div>
+            <div class="live-headlines" data-slot></div>
             <div class="intel-bluf" data-en><strong>BLUF:</strong> Pentagon policy, military operations, and national security strategy. Primary source for US defence intelligence.</div>
             <div class="intel-bluf" data-fr><strong>ESSENTIEL :</strong> Politique du Pentagone, op&eacute;rations militaires et strat&eacute;gie de s&eacute;curit&eacute; nationale.</div>
             <div class="intel-source"><img src="https://www.google.com/s2/favicons?domain=defenseone.com&sz=32" alt="D1"> <a href="https://defenseone.com" target="_blank">defenseone.com</a></div>
@@ -688,17 +750,19 @@
             <div class="intel-source"><img src="https://www.google.com/s2/favicons?domain=janes.com&sz=32" alt="Janes"> <a href="https://janes.com" target="_blank">janes.com</a></div>
         </div>
 
-        <div class="intel-article">
+        <div class="intel-article" data-feed="https://breakingdefense.com/feed/">
             <div class="intel-meta"><span class="intel-tag">NATO</span><span class="intel-time">Latest</span></div>
             <div class="intel-headline"><a href="https://breakingdefense.com" target="_blank">Breaking Defense &mdash; Military &amp; Procurement</a></div>
+            <div class="live-headlines" data-slot></div>
             <div class="intel-bluf" data-en><strong>BLUF:</strong> Defence procurement, military technology, and alliance politics. Tracking the industrial base behind military power.</div>
             <div class="intel-bluf" data-fr><strong>ESSENTIEL :</strong> Approvisionnement de d&eacute;fense, technologie militaire et politique d&rsquo;alliance.</div>
             <div class="intel-source"><img src="https://www.google.com/s2/favicons?domain=breakingdefense.com&sz=32" alt="BD"> <a href="https://breakingdefense.com" target="_blank">breakingdefense.com</a></div>
         </div>
 
-        <div class="intel-article">
+        <div class="intel-article" data-feed="https://therecord.media/feed">
             <div class="intel-meta"><span class="intel-tag">CYBER</span><span class="intel-time">Latest</span></div>
             <div class="intel-headline"><a href="https://therecord.media" target="_blank">The Record &mdash; Cybersecurity Intelligence</a></div>
+            <div class="live-headlines" data-slot></div>
             <div class="intel-bluf" data-en><strong>BLUF:</strong> Cyber threat intelligence, state-sponsored hacking, and digital security. The emerging fifth domain of warfare.</div>
             <div class="intel-bluf" data-fr><strong>ESSENTIEL :</strong> Renseignement sur les cybermenaces, piratage &eacute;tatique et s&eacute;curit&eacute; num&eacute;rique.</div>
             <div class="intel-source"><img src="https://www.google.com/s2/favicons?domain=therecord.media&sz=32" alt="Record"> <a href="https://therecord.media" target="_blank">therecord.media</a></div>
@@ -718,41 +782,46 @@
     </div>
     <div class="section-items" id="items-tech">
 
-        <div class="intel-article">
+        <div class="intel-article" data-feed="https://techcrunch.com/feed/">
             <div class="intel-meta"><span class="intel-tag priority">AI</span><span class="intel-time">Latest</span></div>
             <div class="intel-headline"><a href="https://techcrunch.com/category/artificial-intelligence/" target="_blank">TechCrunch AI &mdash; Artificial Intelligence</a></div>
+            <div class="live-headlines" data-slot></div>
             <div class="intel-bluf" data-en><strong>BLUF:</strong> AI developments, funding rounds, and product launches. Tracking the technology reshaping every industry and government function.</div>
             <div class="intel-bluf" data-fr><strong>ESSENTIEL :</strong> D&eacute;veloppements en IA, rondes de financement et lancements de produits. La technologie qui transforme chaque industrie.</div>
             <div class="intel-source"><img src="https://www.google.com/s2/favicons?domain=techcrunch.com&sz=32" alt="TC"> <a href="https://techcrunch.com" target="_blank">techcrunch.com</a></div>
         </div>
 
-        <div class="intel-article">
+        <div class="intel-article" data-feed="https://www.technologyreview.com/feed/">
             <div class="intel-meta"><span class="intel-tag">DEEP TECH</span><span class="intel-time">Latest</span></div>
             <div class="intel-headline"><a href="https://technologyreview.com" target="_blank">MIT Technology Review &mdash; Emerging Technology</a></div>
+            <div class="live-headlines" data-slot></div>
             <div class="intel-bluf" data-en><strong>BLUF:</strong> MIT&rsquo;s technology intelligence publication. AI, biotech, energy tech, and computing breakthroughs with long-range strategic implications.</div>
             <div class="intel-bluf" data-fr><strong>ESSENTIEL :</strong> Publication de renseignement technologique du MIT. IA, biotech et perc&eacute;es &eacute;nerg&eacute;tiques aux implications strat&eacute;giques.</div>
             <div class="intel-source"><img src="https://www.google.com/s2/favicons?domain=technologyreview.com&sz=32" alt="MIT"> <a href="https://technologyreview.com" target="_blank">technologyreview.com</a></div>
         </div>
 
-        <div class="intel-article">
+        <div class="intel-article" data-feed="https://www.wired.com/feed/rss">
             <div class="intel-meta"><span class="intel-tag">ENTERPRISE</span><span class="intel-time">Latest</span></div>
             <div class="intel-headline"><a href="https://wired.com" target="_blank">Wired &mdash; Technology &amp; Culture</a></div>
+            <div class="live-headlines" data-slot></div>
             <div class="intel-bluf" data-en><strong>BLUF:</strong> Technology&rsquo;s intersection with business, culture, and politics. Long-form reporting on the forces shaping the digital economy.</div>
             <div class="intel-bluf" data-fr><strong>ESSENTIEL :</strong> Intersection de la technologie avec les affaires, la culture et la politique.</div>
             <div class="intel-source"><img src="https://www.google.com/s2/favicons?domain=wired.com&sz=32" alt="Wired"> <a href="https://wired.com" target="_blank">wired.com</a></div>
         </div>
 
-        <div class="intel-article">
+        <div class="intel-article" data-feed="https://feeds.arstechnica.com/arstechnica/index">
             <div class="intel-meta"><span class="intel-tag">INFRASTRUCTURE</span><span class="intel-time">Latest</span></div>
             <div class="intel-headline"><a href="https://arstechnica.com" target="_blank">Ars Technica &mdash; Technology Policy &amp; Infrastructure</a></div>
+            <div class="live-headlines" data-slot></div>
             <div class="intel-bluf" data-en><strong>BLUF:</strong> Technical depth on computing infrastructure, telecommunications, and digital policy. The engineering layer beneath the headlines.</div>
             <div class="intel-bluf" data-fr><strong>ESSENTIEL :</strong> Profondeur technique sur l&rsquo;infrastructure informatique, les t&eacute;l&eacute;communications et la politique num&eacute;rique.</div>
             <div class="intel-source"><img src="https://www.google.com/s2/favicons?domain=arstechnica.com&sz=32" alt="Ars"> <a href="https://arstechnica.com" target="_blank">arstechnica.com</a></div>
         </div>
 
-        <div class="intel-article">
+        <div class="intel-article" data-feed="https://www.theverge.com/rss/ai-artificial-intelligence/index.xml">
             <div class="intel-meta"><span class="intel-tag">AI RESEARCH</span><span class="intel-time">Latest</span></div>
             <div class="intel-headline"><a href="https://theverge.com/ai-artificial-intelligence" target="_blank">The Verge AI &mdash; Industry &amp; Product Intelligence</a></div>
+            <div class="live-headlines" data-slot></div>
             <div class="intel-bluf" data-en><strong>BLUF:</strong> AI product launches, industry competition, and regulatory developments. Consumer and enterprise AI intelligence.</div>
             <div class="intel-bluf" data-fr><strong>ESSENTIEL :</strong> Lancements de produits IA, concurrence industrielle et d&eacute;veloppements r&eacute;glementaires.</div>
             <div class="intel-source"><img src="https://www.google.com/s2/favicons?domain=theverge.com&sz=32" alt="Verge"> <a href="https://theverge.com" target="_blank">theverge.com</a></div>
@@ -772,17 +841,19 @@
     </div>
     <div class="section-items" id="items-resources">
 
-        <div class="intel-article">
+        <div class="intel-article" data-feed="https://oilprice.com/rss/main">
             <div class="intel-meta"><span class="intel-tag">ENERGY</span><span class="intel-time">Latest</span></div>
             <div class="intel-headline"><a href="https://oilprice.com" target="_blank">OilPrice.com &mdash; Energy Geopolitics</a></div>
+            <div class="live-headlines" data-slot></div>
             <div class="intel-bluf" data-en><strong>BLUF:</strong> Oil, gas, and energy transition intelligence. The geopolitics of who controls energy supply and at what price.</div>
             <div class="intel-bluf" data-fr><strong>ESSENTIEL :</strong> P&eacute;trole, gaz et transition &eacute;nerg&eacute;tique. G&eacute;opolitique du contr&ocirc;le de l&rsquo;approvisionnement &eacute;nerg&eacute;tique.</div>
             <div class="intel-source"><img src="https://www.google.com/s2/favicons?domain=oilprice.com&sz=32" alt="OP"> <a href="https://oilprice.com" target="_blank">oilprice.com</a></div>
         </div>
 
-        <div class="intel-article">
+        <div class="intel-article" data-feed="https://www.mining.com/feed/">
             <div class="intel-meta"><span class="intel-tag">CRITICAL MINERALS</span><span class="intel-time">Latest</span></div>
             <div class="intel-headline"><a href="https://mining.com" target="_blank">Mining.com &mdash; Critical Minerals &amp; Extraction</a></div>
+            <div class="live-headlines" data-slot></div>
             <div class="intel-bluf" data-en><strong>BLUF:</strong> Rare earths, lithium, cobalt, and critical mineral supply chains. The resource competition driving great power rivalry.</div>
             <div class="intel-bluf" data-fr><strong>ESSENTIEL :</strong> Terres rares, lithium, cobalt et cha&icirc;nes d&rsquo;approvisionnement en min&eacute;raux critiques.</div>
             <div class="intel-source"><img src="https://www.google.com/s2/favicons?domain=mining.com&sz=32" alt="Mining"> <a href="https://mining.com" target="_blank">mining.com</a></div>
@@ -796,9 +867,10 @@
             <div class="intel-source"><img src="https://www.google.com/s2/favicons?domain=reuters.com&sz=32" alt="Reuters"> <a href="https://reuters.com" target="_blank">reuters.com</a></div>
         </div>
 
-        <div class="intel-article">
+        <div class="intel-article" data-feed="https://www.arctictoday.com/feed/">
             <div class="intel-meta"><span class="intel-tag">ARCTIC</span><span class="intel-time">Latest</span></div>
             <div class="intel-headline"><a href="https://arctictoday.com" target="_blank">Arctic Today &mdash; Northern Resource Geopolitics</a></div>
+            <div class="live-headlines" data-slot></div>
             <div class="intel-bluf" data-en><strong>BLUF:</strong> Arctic sovereignty, northern resource development, and polar geopolitics. Canada, Russia, and NATO competition for the high north.</div>
             <div class="intel-bluf" data-fr><strong>ESSENTIEL :</strong> Souverainet&eacute; arctique, d&eacute;veloppement des ressources nordiques et g&eacute;opolitique polaire.</div>
             <div class="intel-source"><img src="https://www.google.com/s2/favicons?domain=arctictoday.com&sz=32" alt="Arctic"> <a href="https://arctictoday.com" target="_blank">arctictoday.com</a></div>
@@ -818,33 +890,37 @@
     </div>
     <div class="section-items" id="items-logistics">
 
-        <div class="intel-article">
+        <div class="intel-article" data-feed="https://www.freightwaves.com/news/rss.xml">
             <div class="intel-meta"><span class="intel-tag">FREIGHT</span><span class="intel-time">Latest</span></div>
             <div class="intel-headline"><a href="https://freightwaves.com" target="_blank">FreightWaves &mdash; Supply Chain Intelligence</a></div>
+            <div class="live-headlines" data-slot></div>
             <div class="intel-bluf" data-en><strong>BLUF:</strong> Real-time freight market data, trucking, and supply chain disruptions. The logistics layer beneath global trade.</div>
             <div class="intel-bluf" data-fr><strong>ESSENTIEL :</strong> Donn&eacute;es de march&eacute; du fret en temps r&eacute;el, camionnage et perturbations de la cha&icirc;ne d&rsquo;approvisionnement.</div>
             <div class="intel-source"><img src="https://www.google.com/s2/favicons?domain=freightwaves.com&sz=32" alt="FW"> <a href="https://freightwaves.com" target="_blank">freightwaves.com</a></div>
         </div>
 
-        <div class="intel-article">
+        <div class="intel-article" data-feed="https://theloadstar.com/feed/">
             <div class="intel-meta"><span class="intel-tag">SHIPPING</span><span class="intel-time">Latest</span></div>
             <div class="intel-headline"><a href="https://theloadstar.com" target="_blank">The Loadstar &mdash; Global Shipping &amp; Air Cargo</a></div>
+            <div class="live-headlines" data-slot></div>
             <div class="intel-bluf" data-en><strong>BLUF:</strong> Container shipping, air cargo, and port operations. Tracking the arteries of global commerce and their chokepoints.</div>
             <div class="intel-bluf" data-fr><strong>ESSENTIEL :</strong> Transport maritime, fret a&eacute;rien et op&eacute;rations portuaires. Les art&egrave;res du commerce mondial.</div>
             <div class="intel-source"><img src="https://www.google.com/s2/favicons?domain=theloadstar.com&sz=32" alt="Loadstar"> <a href="https://theloadstar.com" target="_blank">theloadstar.com</a></div>
         </div>
 
-        <div class="intel-article">
+        <div class="intel-article" data-feed="https://www.joc.com/feed">
             <div class="intel-meta"><span class="intel-tag">TRADE</span><span class="intel-time">Latest</span></div>
             <div class="intel-headline"><a href="https://joc.com" target="_blank">Journal of Commerce &mdash; Trade &amp; Maritime</a></div>
+            <div class="live-headlines" data-slot></div>
             <div class="intel-bluf" data-en><strong>BLUF:</strong> International trade flows, port congestion, and tariff impacts. Intelligence for businesses that move goods across borders.</div>
             <div class="intel-bluf" data-fr><strong>ESSENTIEL :</strong> Flux commerciaux internationaux, congestion portuaire et impacts tarifaires.</div>
             <div class="intel-source"><img src="https://www.google.com/s2/favicons?domain=joc.com&sz=32" alt="JOC"> <a href="https://joc.com" target="_blank">joc.com</a></div>
         </div>
 
-        <div class="intel-article">
+        <div class="intel-article" data-feed="https://www.railwayage.com/feed/">
             <div class="intel-meta"><span class="intel-tag">INFRASTRUCTURE</span><span class="intel-time">Latest</span></div>
             <div class="intel-headline"><a href="https://railwayage.com" target="_blank">Railway Age &mdash; Rail &amp; Intermodal</a></div>
+            <div class="live-headlines" data-slot></div>
             <div class="intel-bluf" data-en><strong>BLUF:</strong> North American rail operations, intermodal logistics, and infrastructure investment. The backbone of continental freight movement.</div>
             <div class="intel-bluf" data-fr><strong>ESSENTIEL :</strong> Op&eacute;rations ferroviaires nord-am&eacute;ricaines, logistique intermodale et investissements en infrastructure.</div>
             <div class="intel-source"><img src="https://www.google.com/s2/favicons?domain=railwayage.com&sz=32" alt="RA"> <a href="https://railwayage.com" target="_blank">railwayage.com</a></div>
@@ -932,6 +1008,72 @@ function toggleSection(id) {
 // Restore lang
 const savedLang = localStorage.getItem('lang');
 if (savedLang) setLang(savedLang);
+
+// ===== LIVE HEADLINE FETCHER =====
+(function() {
+    var API = 'https://api.rss2json.com/v1/api.json?rss_url=';
+    var HEADLINES_PER_SOURCE = 3;
+
+    function timeAgo(dateStr) {
+        try {
+            var d = new Date(dateStr);
+            if (isNaN(d.getTime())) return '';
+            var diff = Math.floor((Date.now() - d.getTime()) / 1000);
+            if (diff < 60) return 'now';
+            if (diff < 3600) return Math.floor(diff / 60) + 'm';
+            if (diff < 86400) return Math.floor(diff / 3600) + 'h';
+            return Math.floor(diff / 86400) + 'd';
+        } catch(e) { return ''; }
+    }
+
+    function fetchFeed(article) {
+        var feedUrl = article.getAttribute('data-feed');
+        var slot = article.querySelector('[data-slot]');
+        if (!feedUrl || !slot) return;
+
+        slot.innerHTML = '<div class="feed-loading">LOADING WIRE...</div>';
+
+        fetch(API + encodeURIComponent(feedUrl))
+            .then(function(r) { return r.json(); })
+            .then(function(data) {
+                if (data.status !== 'ok' || !data.items || data.items.length === 0) {
+                    slot.innerHTML = '';
+                    return;
+                }
+                var items = data.items.slice(0, HEADLINES_PER_SOURCE);
+                var html = '';
+                items.forEach(function(item) {
+                    var ago = timeAgo(item.pubDate);
+                    var agoHtml = ago ? '<span class="hl-time">' + ago + '</span>' : '';
+                    html += '<li>' + agoHtml + '<a href="' + item.link + '" target="_blank" rel="noopener">' + item.title + '</a></li>';
+                });
+                slot.innerHTML = html;
+
+                // Update the "Latest" timestamp to show most recent item age
+                var timeEl = article.querySelector('.intel-time');
+                var firstAgo = timeAgo(items[0].pubDate);
+                if (timeEl && firstAgo) {
+                    timeEl.textContent = firstAgo + ' ago';
+                }
+            })
+            .catch(function() {
+                slot.innerHTML = '';
+            });
+    }
+
+    // Fetch all feeds on page load — stagger to avoid rate limiting
+    var articles = document.querySelectorAll('.intel-article[data-feed]');
+    articles.forEach(function(article, idx) {
+        setTimeout(function() { fetchFeed(article); }, idx * 250);
+    });
+
+    // Auto-refresh every 10 minutes
+    setInterval(function() {
+        articles.forEach(function(article, idx) {
+            setTimeout(function() { fetchFeed(article); }, idx * 250);
+        });
+    }, 600000);
+})();
 </script>
 </body>
 </html>
