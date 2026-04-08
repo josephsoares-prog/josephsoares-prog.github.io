@@ -842,6 +842,13 @@
             .outcomes-grid {
                 grid-template-columns: 1fr;
             }
+            .spark-method [style*="grid-template-columns: repeat(5"] {
+                grid-template-columns: 1fr !important;
+            }
+            .spark-method [style*="border-right"] {
+                border-right: none !important;
+                border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+            }
         }
 
         @media (max-width: 700px) {
@@ -933,11 +940,50 @@
         </div>
     </section>
 
+    <!-- SPARK Methodology Section -->
+    <section class="spark-method" style="padding: 80px 40px; background: var(--white); border-top: 1px solid rgba(201, 168, 76, 0.1);">
+        <div style="max-width: 900px; margin: 0 auto;">
+            <div style="text-align: center; margin-bottom: 48px;">
+                <p style="font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 12px;" data-fr="MÉTHODOLOGIE">METHODOLOGY</p>
+                <h2 style="font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 2.6rem); font-weight: 700; color: var(--text-dark); line-height: 1.2;" data-fr="Comment les sessions sont structurées">How Sessions Are Structured</h2>
+                <p style="font-size: 15px; color: var(--text-mid); margin-top: 16px; line-height: 1.7; max-width: 650px; margin-left: auto; margin-right: auto;" data-fr="Chaque engagement est structuré autour du cadre SPARK — cinq dimensions que j'évalue dans chaque décision d'affaire.">Every engagement is structured around the SPARK framework — five dimensions I assess in every business decision.</p>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; border: 1px solid rgba(201, 168, 76, 0.15); border-radius: 6px; overflow: hidden;">
+                <div style="padding: 28px 20px; text-align: center; border-right: 1px solid rgba(201, 168, 76, 0.1);">
+                    <div style="font-family: 'Cormorant Garamond', serif; font-size: 36px; font-weight: 700; color: var(--gold); line-height: 1; margin-bottom: 10px;">S</div>
+                    <div style="font-size: 12px; font-weight: 700; letter-spacing: 0.05em; color: var(--text-dark); margin-bottom: 6px;" data-fr="Alignement stratégique">Strategic Alignment</div>
+                    <div style="font-size: 12px; color: var(--text-mid); line-height: 1.5;" data-fr="Chaque décision orientée vers un objectif cohérent.">Every decision oriented toward a single coherent objective.</div>
+                </div>
+                <div style="padding: 28px 20px; text-align: center; border-right: 1px solid rgba(201, 168, 76, 0.1);">
+                    <div style="font-family: 'Cormorant Garamond', serif; font-size: 36px; font-weight: 700; color: var(--gold); line-height: 1; margin-bottom: 10px;">P</div>
+                    <div style="font-size: 12px; font-weight: 700; letter-spacing: 0.05em; color: var(--text-dark); margin-bottom: 6px;" data-fr="Personnes et talents">People & Talent</div>
+                    <div style="font-size: 12px; color: var(--text-mid); line-height: 1.5;" data-fr="Les bonnes personnes aux bons postes.">Right people in the right roles under the right conditions.</div>
+                </div>
+                <div style="padding: 28px 20px; text-align: center; border-right: 1px solid rgba(201, 168, 76, 0.1);">
+                    <div style="font-family: 'Cormorant Garamond', serif; font-size: 36px; font-weight: 700; color: var(--gold); line-height: 1; margin-bottom: 10px;">A</div>
+                    <div style="font-size: 12px; font-weight: 700; letter-spacing: 0.05em; color: var(--text-dark); margin-bottom: 6px;" data-fr="Innovation adaptative">Adaptive Innovation</div>
+                    <div style="font-size: 12px; color: var(--text-mid); line-height: 1.5;" data-fr="Technologie et adaptation comme avantages opérationnels.">Technology and adaptation as operational defaults.</div>
+                </div>
+                <div style="padding: 28px 20px; text-align: center; border-right: 1px solid rgba(201, 168, 76, 0.1);">
+                    <div style="font-family: 'Cormorant Garamond', serif; font-size: 36px; font-weight: 700; color: var(--gold); line-height: 1; margin-bottom: 10px;">R</div>
+                    <div style="font-size: 12px; font-weight: 700; letter-spacing: 0.05em; color: var(--text-dark); margin-bottom: 6px;" data-fr="Relations et communication">Relationship & Communication</div>
+                    <div style="font-size: 12px; color: var(--text-mid); line-height: 1.5;" data-fr="Confiance, influence et communication stratégique.">Trust, influence, and strategic communication as assets.</div>
+                </div>
+                <div style="padding: 28px 20px; text-align: center;">
+                    <div style="font-family: 'Cormorant Garamond', serif; font-size: 36px; font-weight: 700; color: var(--gold); line-height: 1; margin-bottom: 10px;">K</div>
+                    <div style="font-size: 12px; font-weight: 700; letter-spacing: 0.05em; color: var(--text-dark); margin-bottom: 6px;" data-fr="Décisions et exécution">Key Decisions & Execution</div>
+                    <div style="font-size: 12px; color: var(--text-mid); line-height: 1.5;" data-fr="Décider avec clarté. Exécuter sans hésitation.">Decide with clarity. Execute without hesitation.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Pricing Section -->
     <section class="pricing">
         <div class="pricing-inner">
             <div class="pricing-header">
                 <h2>How We Work Together</h2>
+                <p style="font-size: 14px; color: var(--text-mid); margin-top: 12px; letter-spacing: 0.03em;" data-fr="Disponibilité limitée. J'accepte un nombre restreint de mandats à la fois.">Limited availability. I take on a small number of advisory relationships at any given time.</p>
             </div>
             <div class="pricing-grid">
                 <!-- Card 1: Strategic Session -->
@@ -951,7 +997,8 @@
                         <li>Confidential and direct</li>
                         <li>No commitment required</li>
                     </ul>
-                    <a href="/call.html" class="pricing-cta">Book a Session</a>
+                    <a href="/call.html" class="pricing-cta" data-fr="Prendre rendez-vous">Book a Session</a>
+                    <p style="font-size: 12px; color: var(--text-mid); font-style: italic; margin-top: 16px; line-height: 1.6; text-align: center;" data-fr="« Nous avons identifié un passif structurel que son équipe de vérification avait manqué. Il a renoncé à l'acquisition. » — PDG, services industriels">"We identified a structural liability his diligence team had missed. He walked away from the deal." — Founder, industrial services</p>
                 </div>
 
                 <!-- Card 2: Advisory Retainer (FEATURED) -->
@@ -968,7 +1015,8 @@
                         <li>Quarterly SPARK strategic audit</li>
                         <li>Full confidentiality agreement</li>
                     </ul>
-                    <a href="/call.html" class="pricing-cta">Start a Conversation</a>
+                    <a href="/call.html" class="pricing-cta" data-fr="Entamer une conversation">Start a Conversation</a>
+                    <p style="font-size: 12px; color: var(--text-mid); font-style: italic; margin-top: 16px; line-height: 1.6; text-align: center;" data-fr="« Nous avons développé ensemble une troisième option qui a préservé le contrôle familial et généré 8 M$ de nouveaux revenus. » — Propriétaire, franchise multi-sites">"We developed a third option together that preserved family control and unlocked $8M in new revenue." — Owner, multi-location franchise</p>
                 </div>
 
                 <!-- Card 3: Senior Advisory Retainer -->
@@ -985,7 +1033,8 @@
                         <li>Full confidentiality agreement</li>
                         <li>Direct line access</li>
                     </ul>
-                    <a href="/call.html" class="pricing-cta">Start a Conversation</a>
+                    <a href="/call.html" class="pricing-cta" data-fr="Entamer une conversation">Start a Conversation</a>
+                    <p style="font-size: 12px; color: var(--text-mid); font-style: italic; margin-top: 16px; line-height: 1.6; text-align: center;" data-fr="« En un mois, nous avons reconstruit la stratégie de communication et j'ai conservé toutes mes relations avec les investisseurs. » — PDG, entreprise technologique">"Within a month, we rebuilt the communication strategy and I retained every major investor relationship." — CEO, technology company</p>
                 </div>
             </div>
         </div>
@@ -1069,10 +1118,11 @@
     <section class="qualification">
         <div class="qualification-inner">
             <h2>Ready to Talk?</h2>
-            <p class="qualification-text">This is a 30-minute introductory conversation. No pitch. No obligation. If we're a fit, we'll know.</p>
+            <p class="qualification-text" data-fr="Il s'agit d'une conversation de 30 minutes. Aucun argumentaire. Aucune obligation. Si nous sommes compatibles, nous le saurons.">This is a 30-minute introductory conversation. No pitch. No obligation. If we're a fit, we'll know.</p>
             <div class="qualification-cta">
-                <a href="/call.html" class="btn-primary">Book 30 Minutes</a>
+                <a href="/call.html" class="btn-primary" data-fr="Prendre rendez-vous">Book a Call</a>
             </div>
+            <p style="color: rgba(255,255,255,0.3); font-size: 12px; margin-top: 16px;" data-fr="J'accepte actuellement de nouveaux mandats consultatifs sur une base limitée.">Currently accepting new advisory relationships on a limited basis.</p>
         </div>
     </section>
 
