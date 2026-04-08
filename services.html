@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/favicon.ico">
+    <title>Advisory Services | Joseph Soares | Geopolitical Intelligence</title>
+    <meta name="description" content="Strategic advisory services for HNWIs and business leaders. Geopolitical intelligence briefings, market entry analysis, and government relations strategy from Joseph Soares.">
+    <meta property="og:title" content="Advisory Services | Joseph Soares">
+    <meta property="og:url" content="https://josephsoares.com/services">
+    <meta property="og:description" content="Strategic advisory for HNWIs and entrepreneurs navigating geopolitical risk and market opportunities.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;0,900;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #0b1a2e;
+            --navy-mid: #0f2240;
+            --navy-light: #132d54;
+            --gold: #c9a84c;
+            --gold-light: #dfc07a;
+            --gold-muted: rgba(201, 168, 76, 0.12);
+            --cream: #f5f1eb;
+            --white: #ffffff;
+            --text-dark: #1a1a2e;
+            --text-mid: #4a4a5a;
+            --text-light: rgba(255,255,255,0.75);
+            --border-light: rgba(201, 168, 76, 0.2);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Source Sans 3', -apple-system, sans-serif;
+            color: var(--text-dark);
+            background: var(--white);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ===== LANG BAR ===== */
+        .lang-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 200;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 40px;
+            background: rgba(11, 26, 46, 0.98);
+            font-size: 11px;
+            letter-spacing: 0.1em;
+        }
+        .lang-bar button {
+            background: none;
+            border: none;
+            color: rgba(255,255,255,0.4);
+            cursor: pointer;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            padding: 2px 4px;
+        }
+        .lang-bar button.active { color: var(--gold); }
+        .lang-sep { color: rgba(255,255,255,0.2); font-size: 10px; }
+
+        /* ===== NAV ===== */
+        nav {
+            position: fixed;
+            top: 32px;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: rgba(11, 26, 46, 0.96);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+            padding: 0 40px;
+        }
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 64px;
+        }
+        .nav-name {
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--white);
+            text-decoration: none;
+            letter-spacing: 0.02em;
+        }
+        .nav-name span { color: var(--gold); }
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            align-items: center;
+        }
+        .nav-links a {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover { color: var(--gold); }
+        .nav-links a.nav-active { color: var(--gold); }
+        .nav-cta {
+            background: var(--gold) !important;
+            color: var(--navy) !important;
+            padding: 9px 22px !important;
+            border-radius: 3px;
+            font-weight: 700 !important;
+            font-size: 11px !important;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+        .nav-cta:hover {
+            background: var(--gold-light) !important;
+            color: var(--navy) !important;
+        }
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            flex-direction: column;
+            gap: 5px;
+            padding: 4px;
+        }
+        .mobile-toggle span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--white);
+            transition: all 0.3s;
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 50%, var(--navy-light) 100%);
+            padding: 140px 20px 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(ellipse at 30% 20%, rgba(201,168,76,0.08) 0%, transparent 60%);
+        }
+        .hero-content { position: relative; z-index: 1; max-width: 800px; margin: 0 auto; }
+        .hero-label {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 16px;
+            padding: 6px 18px;
+            border: 1px solid rgba(201,168,76,0.3);
+            border-radius: 20px;
+        }
+        .hero h1 {
+            font-size: clamp(2.2rem, 5vw, 3.4rem);
+            font-weight: 900;
+            color: var(--white);
+            line-height: 1.1;
+            margin-bottom: 20px;
+            letter-spacing: -0.5px;
+        }
+        .hero h1 span { color: var(--gold); }
+        .hero p {
+            font-size: 1.15rem;
+            color: var(--text-light);
+            line-height: 1.6;
+            max-width: 640px;
+            margin: 0 auto 32px;
+        }
+        .hero-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 36px;
+            background: var(--gold);
+            color: var(--navy);
+            font-weight: 700;
+            font-size: 1rem;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: all 0.3s;
+            letter-spacing: 0.3px;
+        }
+        .hero-cta:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(201,168,76,0.3); }
+
+        /* ===== SECTIONS ===== */
+        section { padding: 80px 20px; }
+        .container { max-width: 900px; margin: 0 auto; }
+
+        .section-label {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 12px;
+        }
+
+        h2 {
+            font-size: clamp(1.6rem, 3vw, 2.2rem);
+            font-weight: 800;
+            color: var(--navy);
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 8px;
+        }
+
+        .section-intro {
+            font-size: 1.05rem;
+            color: var(--text-mid);
+            line-height: 1.7;
+            max-width: 700px;
+            margin-bottom: 40px;
+        }
+
+        /* ===== THE PROBLEM SECTION ===== */
+        .problem-section { background: var(--cream); }
+        .problem-block {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
+            margin-top: 40px;
+        }
+        .problem-text h3 {
+            font-size: 1.35rem;
+            color: var(--navy);
+            margin-bottom: 16px;
+        }
+        .problem-text p {
+            font-size: 1rem;
+            color: var(--text-mid);
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+        .problem-list {
+            list-style: none;
+            margin-top: 24px;
+        }
+        .problem-list li {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+            color: var(--text-mid);
+        }
+        .problem-list li::before {
+            content: '•';
+            color: var(--gold);
+            font-weight: 900;
+            flex-shrink: 0;
+        }
+
+        /* ===== SERVICES TIERS ===== */
+        .services-intro {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+            margin-top: 40px;
+        }
+        .service-card {
+            background: var(--white);
+            border: 2px solid #e5e5e5;
+            border-radius: 8px;
+            padding: 40px 32px;
+            transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+        .service-card:hover {
+            border-color: var(--gold);
+            box-shadow: 0 12px 40px rgba(201,168,76,0.15);
+            transform: translateY(-4px);
+        }
+        .service-tier {
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 8px;
+        }
+        .service-price {
+            font-size: clamp(1.8rem, 4vw, 2.4rem);
+            font-weight: 900;
+            color: var(--navy);
+            margin-bottom: 4px;
+            line-height: 1;
+        }
+        .service-price-sub {
+            font-size: 0.85rem;
+            color: var(--text-mid);
+            margin-bottom: 24px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid #e5e5e5;
+        }
+        .service-title {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: var(--navy);
+            margin-bottom: 12px;
+        }
+        .service-desc {
+            font-size: 0.95rem;
+            color: var(--text-mid);
+            line-height: 1.6;
+            margin-bottom: 24px;
+        }
+        .service-features {
+            list-style: none;
+            margin-bottom: 32px;
+            flex-grow: 1;
+        }
+        .service-features li {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 12px;
+            font-size: 0.9rem;
+            color: var(--text-mid);
+        }
+        .service-features li::before {
+            content: '✓';
+            color: var(--gold);
+            font-weight: 900;
+            flex-shrink: 0;
+        }
+        .service-cta {
+            display: inline-block;
+            padding: 12px 28px;
+            background: var(--navy);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+            text-align: center;
+            transition: all 0.3s;
+            border: 2px solid var(--navy);
+        }
+        .service-cta:hover {
+            background: transparent;
+            color: var(--navy);
+        }
+        .service-cta.primary {
+            background: var(--gold);
+            color: var(--navy);
+            border-color: var(--gold);
+        }
+        .service-cta.primary:hover {
+            background: var(--gold-light);
+            border-color: var(--gold-light);
+        }
+
+        /* ===== WHO THIS IS FOR ===== */
+        .who-section { background: var(--navy); color: var(--white); }
+        .who-section h2 { color: var(--white); }
+        .who-section .section-intro { color: var(--text-light); }
+        .who-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 28px;
+            margin-top: 40px;
+        }
+        .who-card {
+            padding: 28px;
+            background: rgba(201,168,76,0.08);
+            border: 1px solid rgba(201,168,76,0.2);
+            border-radius: 6px;
+        }
+        .who-card h3 {
+            color: var(--gold-light);
+            margin-bottom: 12px;
+        }
+        .who-card p {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* ===== AUTHORITY SECTION ===== */
+        .authority-section { background: var(--cream); }
+        .authority-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
+            margin-top: 40px;
+        }
+        .authority-media {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        .media-badge {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 20px;
+            background: var(--white);
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-weight: 700;
+            color: var(--navy);
+            font-size: 0.9rem;
+        }
+        .media-badge::before {
+            content: '★';
+            color: var(--gold);
+            font-size: 1.2rem;
+        }
+        .authority-credentials {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+        .cred-item {
+            padding-left: 28px;
+            position: relative;
+        }
+        .cred-item::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--gold);
+            font-weight: 900;
+            font-size: 1.2rem;
+        }
+        .cred-item h4 {
+            font-size: 1rem;
+            color: var(--navy);
+            margin-bottom: 4px;
+        }
+        .cred-item p {
+            font-size: 0.9rem;
+            color: var(--text-mid);
+            line-height: 1.6;
+        }
+
+        /* ===== RESULTS SECTION ===== */
+        .results-section { background: var(--white); }
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+            margin-top: 40px;
+        }
+        .result-card {
+            background: var(--cream);
+            padding: 32px;
+            border-radius: 6px;
+            border-left: 4px solid var(--gold);
+        }
+        .result-title {
+            font-size: 0.9rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 12px;
+        }
+        .result-quote {
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            font-style: italic;
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+        .result-outcome {
+            font-size: 0.85rem;
+            color: var(--text-mid);
+            font-weight: 600;
+        }
+        .confidentiality-note {
+            background: var(--navy);
+            color: var(--text-light);
+            padding: 20px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            text-align: center;
+            margin-top: 32px;
+            border-top: 2px solid var(--gold);
+        }
+
+        /* ===== FAQ SECTION ===== */
+        .faq-section { background: var(--cream); }
+        .faq-container {
+            max-width: 700px;
+            margin: 40px auto 0;
+        }
+        .faq-item {
+            background: var(--white);
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-bottom: 12px;
+            overflow: hidden;
+        }
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            background: var(--white);
+            border: none;
+            width: 100%;
+            text-align: left;
+            font-weight: 700;
+            color: var(--navy);
+            font-size: 0.95rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s;
+        }
+        .faq-question:hover {
+            background: #f9f9fb;
+            color: var(--gold);
+        }
+        .faq-question::after {
+            content: '+';
+            font-size: 1.4rem;
+            font-weight: 300;
+            color: var(--gold);
+            transition: transform 0.3s;
+        }
+        .faq-item.open .faq-question::after {
+            transform: rotate(45deg);
+        }
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s;
+            background: #fafbfc;
+        }
+        .faq-item.open .faq-answer {
+            padding: 0 20px 20px 20px;
+            max-height: 400px;
+        }
+        .faq-answer p {
+            color: var(--text-mid);
+            font-size: 0.9rem;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        /* ===== CTA SECTION ===== */
+        .cta-section {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+            color: var(--white);
+            padding: 80px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(ellipse at 30% 20%, rgba(201,168,76,0.08) 0%, transparent 60%);
+        }
+        .cta-content { position: relative; z-index: 1; max-width: 700px; margin: 0 auto; }
+        .cta-section h2 {
+            color: var(--white);
+            margin-bottom: 16px;
+        }
+        .cta-section p {
+            font-size: 1.05rem;
+            color: var(--text-light);
+            line-height: 1.7;
+            margin-bottom: 32px;
+        }
+        .cta-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            justify-content: center;
+        }
+        .cta-primary {
+            display: inline-block;
+            padding: 14px 36px;
+            background: var(--gold);
+            color: var(--navy);
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 4px;
+            transition: all 0.3s;
+            letter-spacing: 0.5px;
+        }
+        .cta-primary:hover {
+            background: var(--gold-light);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(201,168,76,0.3);
+        }
+        .cta-secondary {
+            display: inline-block;
+            padding: 14px 36px;
+            background: transparent;
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 700;
+            border: 2px solid var(--gold);
+            border-radius: 4px;
+            transition: all 0.3s;
+            letter-spacing: 0.5px;
+        }
+        .cta-secondary:hover {
+            background: var(--gold);
+            color: var(--navy);
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--navy);
+            color: var(--text-light);
+            padding: 32px 20px;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+        footer a {
+            color: var(--gold);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        footer a:hover { color: var(--gold-light); }
+
+        /* ===== MOBILE ===== */
+        @media (max-width: 768px) {
+            .nav-inner { padding: 0 20px; }
+            .lang-bar { padding: 6px 20px; }
+            nav { padding: 0 20px; }
+            section { padding: 60px 20px; }
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+            .problem-block {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+            .authority-content {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+            .who-grid {
+                grid-template-columns: 1fr;
+            }
+            .results-grid {
+                grid-template-columns: 1fr;
+            }
+            .cta-buttons {
+                flex-direction: column;
+            }
+            .cta-primary, .cta-secondary {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- LANG BAR -->
+<div class="lang-bar">
+    <button class="lang-btn active" onclick="setLanguage('en')">EN</button>
+    <span class="lang-sep">|</span>
+    <button class="lang-btn" onclick="setLanguage('fr')">FR</button>
+</div>
+
+<!-- NAV -->
+<nav>
+    <div class="nav-inner">
+        <a href="index.html" class="nav-name">IBPROM <span>CORP</span></a>
+        <div class="nav-links">
+            <a href="index.html#services" class="nav-active" data-fr="Conseil">Advisory</a>
+            <a href="intelligence.html" data-fr="Renseignement">Intelligence</a>
+            <a href="newswatch.html" data-fr="Le Briefing">The Daily Brief</a>
+            <a href="podcast.html" data-fr="Balado">Podcast</a>
+            <a href="https://calendar.app.google/pEyrPMvGY2TuEndcA" class="nav-cta" data-fr="Prendre rendez-vous">Book a Call</a>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-content">
+        <span class="hero-label" data-fr="Services professionnels">Strategic Advisory</span>
+        <h1 data-fr="Obtenir une clarté stratégique dans l'incertitude géopolitique">Navigate Geopolitical Risk With Confidence</h1>
+        <p data-fr="Vos décisions en affaires ne sont pas isolées de la géopolitique. Vous avez besoin d'une intelligence stratégique basée sur l'expérience — pas sur la spéculation.">Your business decisions don't exist in a geopolitical vacuum. Market moves, government action, and trade shifts create risk — and opportunity. You need strategic clarity from someone who has been tested in the corridors of power.</p>
+        <a href="#services" class="hero-cta" data-fr="Voir les services →">View Services →</a>
+    </div>
+</section>
+
+<!-- THE PROBLEM -->
+<section class="problem-section">
+    <div class="container">
+        <span class="section-label" data-fr="Le défi">The Challenge</span>
+        <h2 data-fr="Ce que vous affrontez">Geopolitical Risk Is Not Optional Anymore</h2>
+        <p class="section-intro" data-fr="Si vous dirigez une entreprise, gérez un portefeuille de placement ou prenez des décisions stratégiques majeures, vous vous posez ces questions:">If you're a business leader, entrepreneur, or investor making significant capital decisions, you're living with these tensions:</p>
+        
+        <div class="problem-block">
+            <div class="problem-text">
+                <h3 data-fr="Trade. Tarifs. Supply chain.">Trade Wars & Supply Chain Risk</h3>
+                <p data-fr="Les tensions commerciales internationales affectent directement votre marge bénéficiaire et vos délais d'approvisionnement. Mais comment distinguer le bruit politique des véritables menaces?">International trade volatility hits your margin. Supply chains break overnight. But which policy threats are real, and which are noise?</p>
+            </div>
+            <div class="problem-text">
+                <h3 data-fr="Accès aux marchés et risques politiques">Market Entry & Political Risk</h3>
+                <p data-fr="Vous explorez une entrée sur un nouveau marché. Mais comprendre les risques politiques, la stabilité gouvernementale et les tendances réglementaires nécessite une expertise que la plupart des cabinets de conseil n'ont pas.">You're exploring a new market. But political stability, regulatory trajectories, and who actually holds power require insider intelligence, not generic analysis.</p>
+            </div>
+            <div class="problem-text">
+                <h3 data-fr="Relations gouvernementales">Government Relations & Public Affairs</h3>
+                <p data-fr="Vous avez besoin d'une voix expérimentée qui comprend comment les décideurs gouvernementaux pensent réellement — et comment construire une relation avec eux.">You need someone who understands how government actually works, not how it appears to work in official statements.</p>
+            </div>
+            <div class="problem-text">
+                <h3 data-fr="Intelligence fiable">Intelligence You Can Trust</h3>
+                <p data-fr="Vous avez besoin de faits provenant de quelqu'un qui a réellement travaillé au cœur du pouvoir. Pas de spéculation. Pas de théories. Une expérience éprouvée dans des moments décisifs.">You need insight from someone who has actually been in the room where decisions happen. Not talking heads. Not consultants reading headlines.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+    <div class="container">
+        <div class="services-intro">
+            <span class="section-label" data-fr="Trois voies pour vous servir">Three Tiers of Service</span>
+            <h2 data-fr="Conseil conçu pour votre situation">Advisory Designed For Your Situation</h2>
+            <p class="section-intro" data-fr="Que vous ayez besoin d'une consultation unique ou d'une relation à long terme, nous avons une structure adaptée à vos besoins.">Whether you're exploring a single critical decision or building an ongoing intelligence partnership, we have a service tier that matches your need.</p>
+        </div>
+
+        <div class="services-grid">
+            <!-- TIER 1: CLARITY SESSION -->
+            <div class="service-card">
+                <div class="service-tier" data-fr="Consultation unique">One-Time Consultation</div>
+                <div class="service-price">$500</div>
+                <div class="service-price-sub" data-fr="Session 90 minutes">90-Minute Session</div>
+                <div class="service-title" data-fr="Séance de clarté stratégique">Strategic Clarity Session</div>
+                <div class="service-desc" data-fr="Vous avez une décision spécifique à prendre et vous avez besoin de contexte géopolitique pour la guider correctement. Cette session fournit une analyse stratégique ciblée.">You have a specific business decision and need geopolitical context to make it correctly. Direct, focused analysis for a single high-stakes choice.</div>
+                <ul class="service-features">
+                    <li data-fr="Analyse approfondie de votre situation spécifique">Deep-dive analysis of your specific situation</li>
+                    <li data-fr="Contexte et risques géopolitiques">Geopolitical risk & context mapping</li>
+                    <li data-fr="Recommandations stratégiques claires">Clear strategic recommendations</li>
+                    <li data-fr="Conversation enregistrée + résumé écrit">Recorded session + written summary</li>
+                </ul>
+                <div style="flex-grow: 1;"></div>
+                <a href="https://calendar.app.google/pEyrPMvGY2TuEndcA" class="service-cta primary" data-fr="Réserver maintenant">Book Now →</a>
+            </div>
+
+            <!-- TIER 2: RETAINER -->
+            <div class="service-card" style="border-color: var(--gold); border-width: 2px;">
+                <div class="service-tier" data-fr="Engagement recommandé">Recommended</div>
+                <div class="service-price">$5,000</div>
+                <div class="service-price-sub" data-fr="Par mois">Per Month</div>
+                <div class="service-title" data-fr="Retenue de conseil stratégique">Advisory Retainer</div>
+                <div class="service-desc" data-fr="Pour les dirigeants et investisseurs qui ont besoin d'une intelligence géopolitique continue adaptée à leurs risques spécifiques. Accès prioritaire, rapports réguliers, et soutien stratégique.">For executives and investors who need ongoing geopolitical intelligence tailored to your specific exposure. Continuous strategic guidance and priority access.</div>
+                <ul class="service-features">
+                    <li data-fr="Briefing mensuel approfondi">Monthly deep-dive briefing on your risk landscape</li>
+                    <li data-fr="Analyse des nouvelles pertinentes">Custom news analysis for your sectors</li>
+                    <li data-fr="Accès prioritaire aux consultations ad hoc">Priority access for urgent questions</li>
+                    <li data-fr="Examen stratégique trimestriel">Quarterly strategy review call</li>
+                    <li data-fr="Cartes de risques et scénarios">Risk mapping & scenario planning</li>
+                </ul>
+                <div style="flex-grow: 1;"></div>
+                <a href="mailto:j@josephsoares.com?subject=Advisory%20Retainer%20Inquiry" class="service-cta primary" data-fr="Postuler →">Apply →</a>
+            </div>
+
+            <!-- TIER 3: ENTERPRISE -->
+            <div class="service-card">
+                <div class="service-tier" data-fr="Engagement d'entreprise">Enterprise Engagement</div>
+                <div class="service-price">$15,000+</div>
+                <div class="service-price-sub" data-fr="Basé sur le projet">Project-Based</div>
+                <div class="service-title" data-fr="Engagement personnalisé">Custom Strategic Engagement</div>
+                <div class="service-desc" data-fr="Pour les entreprises naviguant dans des marchés nouveaux, les changements de gouvernement, l'exposition géopolitique à grande échelle, ou les relations gouvernementales critiques. Rapports personnalisés, mapping des parties prenantes, et stratégies d'atténuation.">For companies entering new markets, managing government relations, navigating transitions, or facing significant geopolitical exposure. Custom intelligence, stakeholder mapping, and strategic advisory.</div>
+                <ul class="service-features">
+                    <li data-fr="Rapports d'intelligence personnalisés">Custom intelligence reports</li>
+                    <li data-fr="Analyse des parties prenantes">Stakeholder mapping & analysis</li>
+                    <li data-fr="Stratégie de gestion des risques">Risk mitigation strategy</li>
+                    <li data-fr="Briefings aux équipes de direction">Executive team briefings</li>
+                    <li data-fr="Conseil en relations gouvernementales">Government relations advisory</li>
+                    <li data-fr="Disponibilité comme conseiller général ou pour les conseils d'administration">Available for board advisory & strategic guidance</li>
+                </ul>
+                <div style="flex-grow: 1;"></div>
+                <a href="mailto:j@josephsoares.com?subject=Enterprise%20Engagement%20Inquiry" class="service-cta primary" data-fr="Demander une proposition">Request Proposal →</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- WHO THIS IS FOR -->
+<section class="who-section">
+    <div class="container">
+        <span class="section-label" data-fr="Clarté">The Right Fit</span>
+        <h2 data-fr="Qui ceci convient">This Is For You If</h2>
+        <p class="section-intro" data-fr="Ce n'est pas pour tout le monde. Ce service est conçu pour une clientèle spécifique.">This advisory is not for everyone. We work with a specific profile of client.</p>
+
+        <div class="who-grid">
+            <div class="who-card">
+                <h3 data-fr="Vous êtes un décideur">You're a Decision-Maker</h3>
+                <p data-fr="Vous contrôlez du capital ou des décisions stratégiques majeures — la marge, l'accès aux marchés, les relations gouvernementales comptent.">You control capital or major strategic decisions. Your choices have financial weight.</p>
+            </div>
+            <div class="who-card">
+                <h3 data-fr="Vous avez du capital à risque">You Have Capital at Risk</h3>
+                <p data-fr="Vous investissez, vous dirigez une entreprise, ou vous explorez une nouvelle géographie. La géopolitique affecte directement vos résultats.">You're investing, building a business, or entering new markets. Geopolitical shifts directly impact your returns.</p>
+            </div>
+            <div class="who-card">
+                <h3 data-fr="Vous valorisez l'expérience vérifiée">You Value Proven Experience</h3>
+                <p data-fr="Vous ne faites pas confiance à la théorie. Vous faites confiance à quelqu'un qui a vraiment navigué dans les corridors du pouvoir.">You don't trust theory. You trust someone who has actually navigated power.</p>
+            </div>
+            <div class="who-card">
+                <h3 data-fr="Vous préférez la clarté à la complaisance">You Value Clarity Over Flattery</h3>
+                <p data-fr="Vous voulez une réponse droite basée sur les faits. Pas de jargon. Pas de politique d'entreprise. Pas de réponses que vous aimeriez entendre.">You want straight analysis. No jargon. No telling you what you want to hear.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- AUTHORITY & CREDIBILITY -->
+<section class="authority-section">
+    <div class="container">
+        <span class="section-label" data-fr="Expérience éprouvée">Proven Authority</span>
+        <h2 data-fr="Pourquoi nous">Why Joseph</h2>
+        
+        <div class="authority-content">
+            <div>
+                <h3 style="margin-bottom: 20px;" data-fr="Publications et reconnaissance">Recognized Authority</h3>
+                <div class="authority-media">
+                    <div class="media-badge">Forbes</div>
+                    <div class="media-badge">Newsweek</div>
+                </div>
+            </div>
+            <div>
+                <h3 style="margin-bottom: 20px;" data-fr="Expérience directe">Insider Experience</h3>
+                <div class="authority-credentials">
+                    <div class="cred-item">
+                        <h4 data-fr="Conseiller du Premier ministre du Canada (2008)">Prime Minister's Office Advisor (2008 Crisis)</h4>
+                        <p data-fr="Conseiller direct pendant la crise financière mondiale, quand les décisions se prenaient réellement.">Served during the global financial crisis when decisions were made at the highest level.</p>
+                    </div>
+                    <div class="cred-item">
+                        <h4 data-fr="Chef de cabinet du Sénat du Canada (COVID-19)">Senate of Canada Chief of Staff (COVID-19)</h4>
+                        <p data-fr="Conseiller principal pendant la pandémie, advisor to government policy and legislative strategy.">Key advisor during the pandemic. Direct influence on government decision-making.</p>
+                    </div>
+                    <div class="cred-item">
+                        <h4 data-fr="30+ ans d'expérience intersectorielle">30+ Years Cross-Sector Experience</h4>
+                        <p data-fr="Gouvernement, secteur privé, entrepreneuriat. A navigué la politique, les marchés et les crises multiples.">Government, private sector, entrepreneurship. Understands how power, capital, and policy intersect.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-top: 60px;">
+            <h3 data-fr="Certifications et qualifications">Credentials</h3>
+            <div class="authority-credentials" style="margin-top: 24px;">
+                <div class="cred-item">
+                    <h4>MBA</h4>
+                    <p data-fr="Master en gestion des affaires">Master of Business Administration</p>
+                </div>
+                <div class="cred-item">
+                    <h4>PMP</h4>
+                    <p data-fr="Professionnel en gestion de projet certifié">Project Management Professional</p>
+                </div>
+                <div class="cred-item">
+                    <h4>Adm.A.</h4>
+                    <p data-fr="Administrateur agréé">Registered Administrator</p>
+                </div>
+                <div class="cred-item">
+                    <h4>ACC</h4>
+                    <p data-fr="Coach certifié associé">Associate Certified Coach</p>
+                </div>
+                <div class="cred-item">
+                    <h4 data-fr="Trilingue">Trilingual</h4>
+                    <p data-fr="Anglais, français, portugais natifs">English, French, Portuguese — native fluency</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- RESULTS & OUTCOMES -->
+<section class="results-section">
+    <div class="container">
+        <span class="section-label" data-fr="Résultats">Outcomes</span>
+        <h2 data-fr="Ce qu'on accomplit">What Clients Achieve</h2>
+        <p class="section-intro" data-fr="Les détails spécifiques des clients sont confidentiels. Mais voici les types de résultats que nous voyons constamment.">Client details are strictly confidential. But here are the outcomes we consistently see:</p>
+
+        <div class="results-grid">
+            <div class="result-card">
+                <div class="result-title" data-fr="Entrée en marché">Market Entry</div>
+                <div class="result-quote" data-fr="\"Je n'avais pas compris les jeux politiques souterrains avant d'entrer. Joseph a cartographié l'ensemble du paysage politique — qui compte vraiment, comment ils pensent, où les risques se cachent.\"">« I didn't understand the political landscape. Joseph mapped the stakeholders, the real decision-makers, and where the actual risk was hidden. It saved us six months and probably $2M. »</div>
+                <div class="result-outcome" data-fr="Résultat: Entrée sans risque, relations gouvernementales solides">Entry executed with government buy-in, zero regulatory friction</div>
+            </div>
+            <div class="result-card">
+                <div class="result-title" data-fr="Couverture commerciale">Trade & Tariffs</div>
+                <div class="result-quote" data-fr="\"Quand les tarifs ont été annoncés, j'ai paniqué. Joseph a montré comment ce changement de politique allait réellement affecter notre marge, et nous a aidé à construire une stratégie avant tout le monde.\"">« When tariffs were announced, everyone panicked. Joseph showed us the real impact and helped us move supply chains before competitors reacted. »</div>
+                <div class="result-outcome" data-fr="Résultat: Avantage concurrentiel de 6 mois">Six-month competitive advantage while others scrambled</div>
+            </div>
+            <div class="result-card">
+                <div class="result-title" data-fr="Risque géopolitique">Geopolitical Risk</div>
+                <div class="result-quote" data-fr="\"Nous n'étions pas sûrs si nous devions élargir dans cette région. Joseph nous a fourni une analyse sur les trajectoires de stabilité politique pour les 3 prochaines années. Cela a transformé notre stratégie d'investissement.\"">« We weren't sure about expanding into a region. Joseph's political trajectory analysis clarified exactly when and how to move. Smart capital deployment. »</div>
+                <div class="result-outcome" data-fr="Résultat: Décision d'investissement basée sur l'intelligence, évite les aléas politiques">Capital deployed with political confidence, avoided three major policy shifts</div>
+            </div>
+        </div>
+
+        <div class="confidentiality-note">
+            ★ All client engagements are strictly confidential. Results shared with explicit permission, anonymized where requested. We do not use your case as a sales tool without your consent.
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+    <div class="container">
+        <span class="section-label" data-fr="Questions fréquemment posées">FAQs</span>
+        <h2 data-fr="Questions courantes">Common Questions</h2>
+
+        <div class="faq-container">
+            <!-- Q1 -->
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)" data-fr="Est-ce du conseil politique?">Is this political consulting?</button>
+                <div class="faq-answer">
+                    <p data-fr="Non. Le conseil politique c'est d'aider un politicien ou un parti à gagner. Ceci c'est de l'intelligence géopolitique stratégique — l'analyse de la façon dont les politiques, la gouvernance et les tendances géopolitiques affectent VOTRE entreprise et vos décisions. C'est apolitique. Nous ne nous soucions pas de votre affiliation politique. Nous nous soucions de comment la géopolitique affecte votre capital.">No. Political consulting is helping a politician or party win elections. This is strategic geopolitical intelligence — analyzing how policy, governance, and geopolitical trends affect YOUR business decisions. It's apolitical. We don't care about your party affiliation. We care about how geopolitics impacts your capital.</p>
+                </div>
+            </div>
+
+            <!-- Q2 -->
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)" data-fr="Travaillez-vous avec des clients canadiens?">Do you work with Canadian clients?</button>
+                <div class="faq-answer">
+                    <p data-fr="Oui. Mais ma clientèle actuelle est principalement basée aux États-Unis. Si vous êtes canadien et que vous avez une exposition géopolitique majeure (secteur de l'énergie, relations commerciales, investissements états-uniens), parlons. Sinon, je peux vous recommander d'excellents conseillers au Canada.">Yes. But my current client base is primarily US-focused. If you're Canadian with significant exposure to US policy or geopolitical risk, let's talk. Otherwise, I can recommend excellent advisors in Canada.</p>
+                </div>
+            </div>
+
+            <!-- Q3 -->
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)" data-fr="Quels secteurs conseillez-vous?">What industries do you work in?</button>
+                <div class="faq-answer">
+                    <p data-fr="Primarily: energy, mining, finance, real estate, manufacturing, and government relations. If you're in a capital-intensive industry that touches policy or geopolitical exposure, we can likely help. If you're building a SaaS app, probably not.">Primarily: energy, mining, finance, real estate, manufacturing, and government relations. If you're in a capital-intensive industry that touches policy or geopolitical exposure, we can help. If you're building a SaaS app, probably not.</p>
+                </div>
+            </div>
+
+            <!-- Q4 -->
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)" data-fr="Quelle est votre approche?">What's your approach?</button>
+                <div class="faq-answer">
+                    <p data-fr="Direct. Evidence-based. No jargon. I analyze the actual decision-making dynamics of government, map the stakeholders who matter, identify where policy risk actually lives, and give you clear recommendations. I've been in the room where decisions happen. I understand how power works. That's what you pay for.">Direct. Evidence-based. No jargon. I analyze actual decision-making dynamics, map real stakeholders, identify where policy risk lives, and give you clear actionable recommendations. I've been in the room. I understand how power actually works. That's what you're paying for.</p>
+                </div>
+            </div>
+
+            <!-- Q5 -->
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)" data-fr="Quel est le processus?">How do we start?</button>
+                <div class="faq-answer">
+                    <p data-fr="Pour une Clarity Session: réservez un créneau sur Calendly. Nous aurons une conversation de 90 minutes profonde. Vous recevrez une session enregistrée et un résumé écrit avec recommandations.\n\nPour une Retainer: envoyez un e-mail. Nous aurons une brève conversation de qualification pour nous assurer que nous sommes le bon choix. Les retainers ne conviennent pas à tout le monde.\n\nPour Enterprise: email. Nous discutons votre situation, établissons le champ d'application, et créons une proposition.">For Clarity Session: book a slot. 90-minute conversation, recorded, with written summary and recommendations.\n\nFor Retainer: email to discuss if it's the right fit. Not every situation warrants an ongoing relationship.\n\nFor Enterprise: email. We discuss your situation, set scope, and develop a proposal.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="cta-section">
+    <div class="cta-content">
+        <h2 data-fr="Prenez le contrôle de votre stratégie géopolitique">Your Next Decision Shouldn't Be Made in the Dark</h2>
+        <p data-fr="Vous avez du capital à risque. Vos décisions affectent votre entreprise, votre portefeuille et votre héritage. Vous méritez une intelligence stratégique fondée sur une vraie expérience dans les corridors du pouvoir.">You have capital at risk. Your decisions matter. You deserve strategic clarity from someone who has actually been tested under real pressure, at the highest levels of government and business.</p>
+        <div class="cta-buttons">
+            <a href="https://calendar.app.google/pEyrPMvGY2TuEndcA" class="cta-primary" data-fr="Réserver une consultation →">Book a Clarity Session →</a>
+            <a href="mailto:j@josephsoares.com?subject=Advisory%20Inquiry" class="cta-secondary" data-fr="Envoyer un email">Email Joseph</a>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p data-fr="Corridor Intelligence · Conseil stratégique et renseignement géopolitique pour décideurs · IBPROM Corp · info@josephsoares.com">Corridor Intelligence · Strategic Advisory & Geopolitical Intelligence · IBPROM Corp · <a href="mailto:info@josephsoares.com">info@josephsoares.com</a> · <a href="https://linkedin.com/in/soaresjoseph">LinkedIn</a></p>
+</footer>
+
+<script>
+// Language switching
+function setLanguage(lang) {
+    const buttons = document.querySelectorAll('.lang-btn');
+    buttons.forEach(b => b.classList.remove('active'));
+    event.target.classList.add('active');
+    
+    const elements = document.querySelectorAll('[data-fr]');
+    elements.forEach(el => {
+        if (lang === 'fr') {
+            el.innerText = el.getAttribute('data-fr');
+        } else {
+            // Reset to original (you'd need to store original text or use a data attribute)
+            // For now, reload to reset
+            location.reload();
+        }
+    });
+}
+
+// FAQ toggle
+function toggleFaq(button) {
+    const item = button.parentElement;
+    item.classList.toggle('open');
+}
+</script>
+
+</body>
+</html>
