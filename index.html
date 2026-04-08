@@ -253,11 +253,10 @@
 
         /* ===== HERO ===== */
         .hero {
-            min-height: 100vh;
             background: linear-gradient(155deg, var(--navy) 0%, var(--navy-mid) 55%, #0d2848 100%);
             display: flex;
             align-items: center;
-            padding: 150px 40px 100px;
+            padding: 130px 40px 60px;
             position: relative;
             overflow: hidden;
         }
@@ -1361,6 +1360,39 @@
             .featured-bar-sep {
                 display: none;
             }
+            /* Sticky mobile CTA bar */
+            .mobile-sticky-cta {
+                display: block;
+            }
+            body {
+                padding-bottom: 60px;
+            }
+        }
+
+        /* Sticky mobile CTA */
+        .mobile-sticky-cta {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 150;
+            background: var(--navy);
+            border-top: 1px solid var(--gold);
+            padding: 10px 20px;
+            text-align: center;
+        }
+        .mobile-sticky-cta a {
+            display: block;
+            background: var(--gold);
+            color: var(--navy);
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 3px;
+            font-weight: 700;
+            font-size: 13px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
         }
     </style>
 </head>
@@ -1380,15 +1412,10 @@
                 <span></span>
             </button>
             <div class="nav-links">
-                <a href="#who" data-fr="Pour qui ?">Who This Is For</a>
-                <a href="#about" data-fr="À propos">About</a>
-                <a href="#services" data-fr="Services">Services</a>
-                <a href="#framework" data-fr="Cadre">Framework</a>
-                <a href="#writing" data-fr="Articles">Writing</a>
                 <a href="advisory.html" data-fr="Services consultatifs">Advisory</a>
                 <a href="intelligence.html" data-fr="Renseignement">Intelligence</a>
-                <a href="newswatch.html" data-fr="Veille">The Daily Brief</a>
                 <a href="podcast.html" data-fr="Balado">Podcast</a>
+                <a href="#about" data-fr="À propos">About</a>
                 <a href="/call.html" class="nav-cta" data-fr="Prendre rendez-vous">Book a Call</a>
             </div>
         </div>
@@ -1401,18 +1428,8 @@
                 <span class="hero-eyebrow-text" data-fr="Conseiller stratégique | Éprouvé en crise. Reconnu au sommet.">Senior Advisor | Crisis-Tested. Trusted at the Top.</span>
             </div>
             <h1 data-fr="J'ai conseillé le Premier ministre pendant une <em>crise financière mondiale.</em> Maintenant je conseille <em>les dirigeants comme vous.</em>">I advised the Prime Minister during a <em>global financial crisis.</em> Now I advise <em>leaders like you.</em></h1>
-            <p class="hero-sub" data-fr="J'ai servi comme conseiller du Premier ministre du Canada pendant la crise financière de 2008. Comme Chef de cabinet au Sénat du Canada pendant la pandémie de 2020. J'ai été publié dans Forbes, Newsweek, le National Post, le Globe and Mail et des médias à travers le monde. Je conseille maintenant un nombre restreint de dirigeants qui veulent un esprit stratégique à leurs côtés quand les enjeux sont élevés.">I served as an advisor to the Prime Minister of Canada during the 2008 financial crisis. As Chief of Staff at the Senate of Canada during the 2020 pandemic. I've been featured in Forbes, Newsweek, the National Post, the Globe and Mail, and media globally. I now advise a select number of leaders who want a senior mind in their corner when the stakes are high.</p>
-            <p class="hero-qualifier" data-fr="Je travaille avec des dirigeants accomplis et expérimentés — principalement aux États-Unis — qui valorisent la franchise, la crédibilité et les résultats plutôt que les titres. Si cela vous ressemble, parlons.">I work with successful, experienced leaders — primarily in the United States — who value directness, credibility, and results over credentials alone. If that sounds like you, let's talk.</p>
-            <div style="margin:2rem auto; max-width:640px; text-align:center;">
-                <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:8px; border:1px solid rgba(207,181,59,0.3); box-shadow:0 4px 20px rgba(0,0,0,0.3);">
-                    <iframe src="https://www.youtube.com/embed/2bZhhD22pk8?rel=0&modestbranding=1" style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-            </div>
-            <div class="hero-ctas">
-                <a href="/call.html" class="btn-primary" data-fr="Prendre rendez-vous">Book a Call</a>
-                <a href="#services" class="btn-ghost" data-fr="Voir comment je travaille">See How I Work</a>
-            </div>
-            <div class="featured-bar">
+            <p class="hero-sub" data-fr="Ancien conseiller du Premier ministre du Canada. Chef de cabinet au Sénat du Canada. Publié dans Forbes et Newsweek. Je conseille maintenant un nombre restreint de dirigeants d'affaires à travers des mandats consultatifs confidentiels et à accès direct.">Former advisor in the Prime Minister's Office during the 2008 financial crisis. Chief of Staff at the Senate of Canada during the pandemic. Featured in Forbes and Newsweek. Now advising a select number of business leaders through confidential, direct-access advisory retainers.</p>
+            <div class="featured-bar" style="margin-bottom: 28px;">
                 <span class="featured-bar-label" data-fr="Tel que vu dans">As seen in</span>
                 <div class="featured-bar-logos">
                     <a href="https://www.forbes.com/councils/forbeshumanresourcescouncil/2024/03/07/executive-coaching-the-key-to-unlocking-potential-in-the-c-suite/" target="_blank" rel="noopener"><img src="https://www.google.com/s2/favicons?domain=forbes.com&sz=32" alt="">Forbes</a>
@@ -1436,11 +1453,9 @@
                     <a href="https://www.acoreanooriental.pt/" target="_blank" rel="noopener"><img src="https://www.google.com/s2/favicons?domain=acoreanooriental.pt&sz=32" alt="">Açoreano Oriental</a>
                 </div>
             </div>
-            <div class="hero-credentials">
-                <div class="credential" data-fr="Cabinet du Premier ministre — Crise de 2008">Prime Minister's Office — 2008 Crisis</div>
-                <div class="credential" data-fr="Sénat du Canada — Pandémie 2020">Senate of Canada — 2020 Pandemic</div>
-                <div class="credential" data-fr="Couvert par : Forbes · Newsweek · Globe and Mail · et d'autres">Featured: Forbes · Newsweek · Globe and Mail · + 7 more</div>
-                <div class="credential" data-fr="Trilingue : EN · FR · PT">Trilingual: EN · FR · PT</div>
+            <div class="hero-ctas">
+                <a href="/call.html" class="btn-primary" data-fr="Prendre rendez-vous">Book a Call</a>
+                <a href="advisory.html" class="btn-ghost" data-fr="Voir les options de mandat">See Advisory Options</a>
             </div>
         </div>
     </section>
@@ -1483,7 +1498,7 @@
                 <div class="qualifier-item" data-fr="Vous êtes un acquéreur ou un investisseur qui a besoin d'un accès au marché, d'un conseil au niveau des transactions et de quelqu'un qui conclut">You're an acquirer or investor who needs market access, deal-level advisory, and someone who closes</div>
                 <div class="qualifier-item" data-fr="Vous naviguez quelque chose de complexe — une succession, un projet bloqué, une lacune de leadership — et avez besoin d'exécution, pas de conseil">You're navigating something complex — a succession, stalled project, leadership gap — and need execution, not advice</div>
             </div>
-            <a href="/call.html" class="btn-primary" data-fr="Voyons si nous sommes faits pour travailler ensemble">Let's See If There's a Fit</a>
+            <a href="/call.html" class="btn-primary" data-fr="Prendre rendez-vous">Book a Call</a>
         </div>
     </section>
 
@@ -1596,113 +1611,49 @@
                         <h3 class="service-track-title" data-fr="Contrat consultatif SPARK">SPARK Advisory Retainer</h3>
                         <p class="service-track-desc" data-fr="Vous n'avez pas construit ce que vous avez construit en suivant un modèle. Vous l'avez construit par instinct, les relations et les décisions prises sous pression. Mais plus les enjeux augmentent, moins les gens autour de vous peuvent voir ce que vous voyez — et la solitude du pouvoir devient un passif stratégique. Je ne suis pas un consultant qui vend des conseils. Je suis un conseiller principal qui a été dans la salle quand les enjeux étaient nationaux. Lorsque vous me retenez, vous obtenez une relation confidentielle et d'accès direct avec quelqu'un qui comprend le poids de ce que vous portez.">You didn't build what you've built by following a playbook. You built it through instinct, relationships, and decisions made under pressure. But the higher the stakes get, the fewer people around you can see what you see — and the loneliness of command becomes a strategic liability. I'm not a consultant who sells advice. I'm a senior advisor who has been in the room when the stakes were national — serving in the Prime Minister's Office during a financial crisis and at the Senate of Canada during a pandemic. When you retain me, you get a confidential, direct-access relationship with someone who understands the weight of what you carry.</p>
                         <div class="service-track-for"><strong data-fr="Pour :">For:</strong> Self-made entrepreneurs who've outgrown their inner circle · Business leaders carrying decisions that affect significant capital, teams, or legacy · Leaders navigating government, regulatory, or institutional complexity · High-net-worth individuals who value directness, credibility, and results</div>
-                        <div style="margin-top: 24px;"><a href="/advisory.html" class="btn-primary" data-fr="Voir les options de mandat">See Retainer Options</a></div>
+                        <div style="margin-top: 24px;">
+                            <a href="/advisory.html" class="btn-primary" data-fr="Voir les options de mandat">See Advisory Options</a>
+                            <span style="display: inline-block; margin-left: 16px; color: var(--text-mid); font-size: 14px;" data-fr="Sessions à partir de 1 500 $. Mandats à partir de 5 000 $/mois.">Sessions from $1,500. Retainers from $5,000/month.</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="plan" id="framework">
-        <div class="plan-inner">
-            <h2 data-fr="Cadre">Framework</h2>
-            <p class="plan-subtitle" data-fr="Le cadre SPARK">The SPARK Framework</p>
-            <p class="plan-subtitle" data-fr="Chaque engagement suit un processus en cinq étapes basé sur une expérience approfondie de la gestion de transitions complexes. Clair. Testé. Axé sur les résultats.">Every engagement follows a five-stage process built on deep experience managing complex transitions. Clear. Tested. Focused on results.</p>
-            <div class="spark-grid">
-                <div class="spark-item">
-                    <div class="spark-letter">S</div>
-                    <div class="spark-title" data-fr="Alignement stratégique">Strategic Alignment</div>
-                    <div class="spark-desc" data-fr="S'assurer que chaque décision, ressource et action est orientée vers une direction cohérente unique.">Ensuring every decision, resource, and action is oriented toward a single coherent direction.</div>
-                </div>
-                <div class="spark-item">
-                    <div class="spark-letter">P</div>
-                    <div class="spark-title" data-fr="Personnes et talents">People & Talent</div>
-                    <div class="spark-desc" data-fr="Placer les bonnes personnes aux bons postes et construire des cultures qui performent sous pression.">Placing the right people in the right roles and building cultures that perform under pressure.</div>
-                </div>
-                <div class="spark-item">
-                    <div class="spark-letter">A</div>
-                    <div class="spark-title" data-fr="Innovation adaptative">Adaptive Innovation</div>
-                    <div class="spark-desc" data-fr="Intégrer la technologie et l'adaptation continue comme valeurs par défaut opérationnelles, pas comme des arrière-pensées.">Embedding technology and continuous adaptation as operational defaults, not afterthoughts.</div>
-                </div>
-                <div class="spark-item">
-                    <div class="spark-letter">R</div>
-                    <div class="spark-title" data-fr="Relation et communication">Relationship & Communication</div>
-                    <div class="spark-desc" data-fr="Exploiter la confiance, l'influence et la communication stratégique comme des actifs commerciaux de base.">Leveraging trust, influence, and strategic communication as core business assets.</div>
-                </div>
-                <div class="spark-item">
-                    <div class="spark-letter">K</div>
-                    <div class="spark-title" data-fr="Décisions clés et exécution">Key Decisions & Execution</div>
-                    <div class="spark-desc" data-fr="Prendre des décisions à enjeux élevés avec clarté et rapidité, puis exécuter sans hésitation.">Making high-stakes decisions with clarity and speed, then executing without hesitation.</div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- SPARK Framework moved to advisory.html — removed from homepage to reduce cognitive load -->
 
     <section class="writing" id="writing">
         <div class="writing-inner">
             <h2 data-fr="Travaux publiés">Published Work</h2>
-            <p class="writing-sub" data-fr="Écriture sur le leadership, la stratégie et la croissance">Writing on leadership, strategy, and growth</p>
-            <p class="writing-sub" data-fr="Articles sélectionnés de Forbes et Newsweek sur le leadership exécutif, la stratégie organisationnelle et la navigation de la complexité.">Selected articles from Forbes and Newsweek on executive leadership, organizational strategy, and navigating complexity.</p>
+            <p class="writing-sub" data-fr="Articles sélectionnés de Forbes et Newsweek.">Selected articles from Forbes and Newsweek on leadership, strategy, and navigating complexity.</p>
             <div class="articles-grid">
-                <!-- Forbes (5) -->
                 <a href="https://www.forbes.com/councils/forbeshumanresourcescouncil/2024/03/07/executive-coaching-the-key-to-unlocking-potential-in-the-c-suite/" class="article-card" target="_blank" rel="noopener">
                     <div class="article-pub">Forbes</div>
                     <h3 class="article-title">Executive Coaching: The Key to Unlocking Potential in the C-Suite</h3>
-                </a>
-                <a href="https://www.forbes.com/sites/forbeshumanresourcescouncil/2024/01/29/7-key-strategic-hr-initiatives-for-a-triumphant-2024/" class="article-card" target="_blank" rel="noopener">
-                    <div class="article-pub">Forbes</div>
-                    <h3 class="article-title">7 Key Strategic HR Initiatives for a Triumphant 2024</h3>
-                </a>
-                <a href="https://www.forbes.com/councils/forbeshumanresourcescouncil/2023/11/08/unlocking-hidden-talent-the-power-of-neurodiversity-in-modern-organizations/" class="article-card" target="_blank" rel="noopener">
-                    <div class="article-pub">Forbes</div>
-                    <h3 class="article-title">Unlocking Hidden Talent: The Power of Neurodiversity in Modern Organizations</h3>
-                </a>
-                <a href="https://www.forbes.com/councils/forbeshumanresourcescouncil/2023/07/13/leadership-humility-how-and-why-leaders-must-avoid-superiority-complexes/" class="article-card" target="_blank" rel="noopener">
-                    <div class="article-pub">Forbes</div>
-                    <h3 class="article-title">Leadership Humility: How and Why Leaders Must Avoid Superiority Complexes</h3>
-                </a>
-                <a href="https://www.forbes.com/councils/forbeshumanresourcescouncil/2023/07/03/18-insights-on-hiring-practices-and-finding-the-right-match-in-a-gig-driven-marketplace/" class="article-card" target="_blank" rel="noopener">
-                    <div class="article-pub">Forbes</div>
-                    <h3 class="article-title">18 Insights on Hiring Practices and Finding the Right Match in a Gig-Driven Marketplace</h3>
-                </a>
-                <!-- Newsweek (9) -->
-                <a href="https://www.newsweek.com/elevating-leadership-globalized-economy-strategic-role-executive-coaching-1871765" class="article-card" target="_blank" rel="noopener">
-                    <div class="article-pub">Newsweek</div>
-                    <h3 class="article-title">Elevating Leadership in a Globalized Economy: The Strategic Role of Executive Coaching</h3>
-                </a>
-                <a href="https://www.newsweek.com/igniting-success-seven-leadership-strategies-triumphant-2024-1861153" class="article-card" target="_blank" rel="noopener">
-                    <div class="article-pub">Newsweek</div>
-                    <h3 class="article-title">Igniting Success: Seven Leadership Strategies for a Triumphant 2024</h3>
-                </a>
-                <a href="https://www.newsweek.com/navigating-talent-fast-track-transportation-high-speed-rail-hr-landscape-1844840" class="article-card" target="_blank" rel="noopener">
-                    <div class="article-pub">Newsweek</div>
-                    <h3 class="article-title">Navigating Talent in the Fast Track: Transportation, High-Speed Rail, and the HR Landscape</h3>
-                </a>
-                <a href="https://www.newsweek.com/intersection-resilience-authenticity-navigating-leadership-challenges-post-pandemic-world-1836231" class="article-card" target="_blank" rel="noopener">
-                    <div class="article-pub">Newsweek</div>
-                    <h3 class="article-title">The Intersection of Resilience and Authenticity: Navigating Leadership Challenges in the Post-Pandemic World</h3>
                 </a>
                 <a href="https://www.newsweek.com/beyond-authenticity-cultivating-resilient-leadership-modern-era-1829944" class="article-card" target="_blank" rel="noopener">
                     <div class="article-pub">Newsweek</div>
                     <h3 class="article-title">Beyond Authenticity: Cultivating Resilient Leadership in the Modern Era</h3>
                 </a>
-                <a href="https://www.newsweek.com/reviving-leadership-power-truth-authenticity-1823491" class="article-card" target="_blank" rel="noopener">
-                    <div class="article-pub">Newsweek</div>
-                    <h3 class="article-title">Reviving Leadership: The Power of Truth and Authenticity</h3>
-                </a>
                 <a href="https://www.newsweek.com/risk-management-leadership-balancing-stability-innovation-1817649" class="article-card" target="_blank" rel="noopener">
                     <div class="article-pub">Newsweek</div>
                     <h3 class="article-title">Risk Management in Leadership: Balancing Stability and Innovation</h3>
                 </a>
-                <a href="https://www.newsweek.com/good-leadership-about-understanding-that-sometimes-you-lead-sometimes-you-are-led-1812547" class="article-card" target="_blank" rel="noopener">
-                    <div class="article-pub">Newsweek</div>
-                    <h3 class="article-title">Good Leadership Is About Understanding That Sometimes You Lead and Sometimes You Are Led</h3>
-                </a>
-                <a href="https://www.newsweek.com/if-leadership-matters-why-our-leadership-failing-us-1807311" class="article-card" target="_blank" rel="noopener">
-                    <div class="article-pub">Newsweek</div>
-                    <h3 class="article-title">If Leadership Matters, Why Is Our Leadership Failing Us?</h3>
-                </a>
             </div>
+            <div style="text-align: center; margin-top: 28px;">
+                <a href="writing.html" style="color: var(--gold); text-decoration: none; font-size: 14px; font-weight: 600; letter-spacing: 0.05em;" data-fr="Voir les 14 articles →">See All 14 Articles →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- EMAIL CAPTURE — captures warm-but-not-ready visitors -->
+    <section class="email-capture" style="background: var(--navy); padding: 60px 40px; text-align: center;">
+        <div style="max-width: 600px; margin: 0 auto;">
+            <h2 style="font-family: 'Cormorant Garamond', serif; color: var(--white); font-size: clamp(1.6rem, 2.5vw, 2rem); margin-bottom: 12px;" data-fr="Pas encore prêt ? Restez dans le Corridor.">Not ready to talk? Stay in The Corridor.</h2>
+            <p style="color: var(--text-light); font-size: 15px; line-height: 1.6; margin-bottom: 24px;" data-fr="Recevez Corridor Intelligence — renseignement politique quotidien pour les décideurs. Gratuit.">Get Corridor Intelligence — daily political intelligence for decision-makers. Free.</p>
+            <a href="https://corridorintelligence.substack.com/subscribe" target="_blank" rel="noopener" class="btn-primary" style="display: inline-block;" data-fr="S'abonner gratuitement">Subscribe Free</a>
+            <p style="color: rgba(255,255,255,0.35); font-size: 12px; margin-top: 12px;" data-fr="Renseignement quotidien. Pas de pourriel. Désabonnement à tout moment.">Daily intelligence. No spam. Unsubscribe anytime.</p>
         </div>
     </section>
 
@@ -1710,10 +1661,15 @@
         <div class="cta-inner">
             <h2 data-fr="Prêt à avoir un <em>esprit stratégique à vos côtés ?</em>">Ready for a <em>senior mind in your corner?</em></h2>
             <p data-fr="Je travaille avec un nombre restreint de dirigeants qui veulent un accès confidentiel et direct à quelqu'un qui a été testé aux plus hauts niveaux. Si vous portez des décisions trop lourdes pour votre cercle interne, cette conversation est pour vous.">I work with a small number of business leaders who want confidential, direct-access counsel from someone who has been tested at the highest levels. If you're carrying decisions too heavy for your inner circle, this conversation is for you.</p>
-            <p class="cta-qualifier" data-fr="Cette conversation est pour les décideurs prêts à agir.">This conversation is for decision-makers ready to act.</p>
-            <a href="/call.html" class="btn-primary" data-fr="Prendre rendez-vous — 30 minutes">Book 30 Minutes</a>
+            <p class="cta-qualifier" data-fr="Disponibilité limitée. Cette conversation est pour les décideurs prêts à agir.">Limited availability. This conversation is for decision-makers ready to act.</p>
+            <a href="/call.html" class="btn-primary" data-fr="Prendre rendez-vous">Book a Call</a>
         </div>
     </section>
+
+    <!-- Sticky mobile CTA bar -->
+    <div class="mobile-sticky-cta">
+        <a href="/call.html" data-fr="Prendre rendez-vous">Book a Call</a>
+    </div>
 
     <footer>
         <div class="footer-links">
