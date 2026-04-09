@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Strategic Intelligence Session — Joseph Soares</title>
+  <meta name="description" content="90-minute private strategy session with Joseph Soares. Crisis-tested strategic advisory from a senior advisor who served in the Prime Minister's Office. $500 USD.">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #0b1a2e;
+      --navy-mid: #0f2240;
+      --navy-light: #132d54;
+      --gold: #c9a84c;
+      --gold-light: #dfc07a;
+      --gold-muted: rgba(201, 168, 76, 0.12);
+      --cream: #f5f1eb;
+      --white: #ffffff;
+      --text-dark: #1a1a2e;
+      --text-mid: #4a4a5a;
+      --text-light: rgba(255,255,255,0.75);
+      --border-light: rgba(201, 168, 76, 0.2);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Source Sans 3', -apple-system, sans-serif;
+      background: var(--navy);
+      color: var(--white);
+      line-height: 1.7;
+    }
+
+    /* NAV */
+    nav {
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border-light);
+    }
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--white);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+    }
+    .nav-name span { color: var(--gold); }
+    .nav-links { display: flex; gap: 32px; align-items: center; }
+    .nav-links a {
+      color: var(--text-light);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: color 0.3s;
+    }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-cta {
+      background: var(--gold) !important;
+      color: var(--navy) !important;
+      padding: 10px 24px !important;
+      font-weight: 700 !important;
+      letter-spacing: 0.1em !important;
+      font-size: 11px !important;
+    }
+
+    /* HERO */
+    .hero {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 80px 30px 60px;
+      text-align: center;
+    }
+    .hero-label {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 24px;
+    }
+    .hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 48px;
+      font-weight: 500;
+      line-height: 1.2;
+      margin-bottom: 24px;
+      color: var(--white);
+    }
+    .hero h1 em {
+      font-style: italic;
+      color: var(--gold);
+    }
+    .hero p {
+      font-size: 18px;
+      color: var(--text-light);
+      max-width: 600px;
+      margin: 0 auto 40px;
+      line-height: 1.8;
+    }
+    .price-block {
+      display: inline-block;
+      background: var(--gold-muted);
+      border: 1px solid var(--border-light);
+      padding: 16px 40px;
+      margin-bottom: 40px;
+    }
+    .price {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 42px;
+      font-weight: 600;
+      color: var(--gold);
+    }
+    .price-note {
+      font-size: 14px;
+      color: var(--text-light);
+      margin-top: 4px;
+    }
+
+    /* CTA BUTTON */
+    .btn-primary {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--navy);
+      padding: 18px 44px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      box-shadow: 0 4px 28px rgba(201, 168, 76, 0.28);
+      transition: all 0.3s;
+    }
+    .btn-primary:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 36px rgba(201, 168, 76, 0.35);
+    }
+
+    /* DETAILS SECTION */
+    .details {
+      background: var(--navy-mid);
+      border-top: 1px solid var(--border-light);
+      border-bottom: 1px solid var(--border-light);
+    }
+    .details-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 80px 30px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+    }
+    .details h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 32px;
+      font-weight: 500;
+      margin-bottom: 24px;
+      color: var(--white);
+    }
+    .details p {
+      color: var(--text-light);
+      font-size: 16px;
+      margin-bottom: 16px;
+      line-height: 1.8;
+    }
+    .detail-item {
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border-light);
+    }
+    .detail-item:last-child { border-bottom: none; }
+    .detail-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 6px;
+    }
+    .detail-value {
+      font-size: 16px;
+      color: var(--white);
+    }
+
+    /* WHO THIS IS FOR */
+    .who-section {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 80px 30px;
+    }
+    .who-section h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 32px;
+      font-weight: 500;
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    .who-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+    .who-card {
+      background: var(--navy-mid);
+      border: 1px solid var(--border-light);
+      padding: 32px;
+    }
+    .who-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+    .who-card p {
+      font-size: 15px;
+      color: var(--text-light);
+      line-height: 1.7;
+    }
+
+    /* CREDENTIAL BAR */
+    .credentials {
+      text-align: center;
+      padding: 60px 30px;
+      border-top: 1px solid var(--border-light);
+    }
+    .credentials p {
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-light);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* BOTTOM CTA */
+    .bottom-cta {
+      text-align: center;
+      padding: 80px 30px;
+      background: var(--navy-mid);
+      border-top: 1px solid var(--border-light);
+    }
+    .bottom-cta h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 36px;
+      font-weight: 500;
+      margin-bottom: 16px;
+    }
+    .bottom-cta p {
+      color: var(--text-light);
+      font-size: 16px;
+      margin-bottom: 36px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 40px 30px;
+      border-top: 1px solid var(--border-light);
+    }
+    footer p {
+      font-size: 13px;
+      color: var(--text-light);
+    }
+    footer a {
+      color: var(--gold);
+      text-decoration: none;
+    }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 32px; }
+      .price { font-size: 32px; }
+      .details-inner { grid-template-columns: 1fr; gap: 40px; }
+      .who-grid { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="nav-name">Joseph <span>Soares</span></a>
+      <div class="nav-links">
+        <a href="/advisory.html">Advisory</a>
+        <a href="/intelligence.html">Intelligence</a>
+        <a href="/podcast.html">Podcast</a>
+        <a href="/#about">About</a>
+        <a href="#book" class="nav-cta">BOOK A SESSION</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-label">Strategic Intelligence Session</div>
+    <h1>90 minutes with a <em>crisis-tested</em> strategic advisor.</h1>
+    <p>You bring the decision. I bring a career spent operating at the highest levels of government and business. One session. One conversation. No retainer required.</p>
+
+    <div class="price-block">
+      <div class="price">$500 <span style="font-size: 20px; color: var(--text-light);">USD</span></div>
+      <div class="price-note">90-minute private session via Zoom</div>
+    </div>
+
+    <br>
+    
+    <a href="/call.html" class="btn-primary" id="book">RESERVE YOUR SESSION</a>
+  </section>
+
+  <!-- DETAILS -->
+  <section class="details">
+    <div class="details-inner">
+      <div>
+        <h2>What you get.</h2>
+        <p>This is not a discovery call. This is not a pitch for a retainer. This is a working session where we go deep on the strategic decision that's keeping you up at night.</p>
+        <p>You'll walk away with clarity on your situation, a framework for thinking through the decision, and a specific set of next moves — from someone who has made these calls at the highest levels of government and business.</p>
+        <p>Some clients use a single session to resolve what's been blocking them for months. Others come back for more. Either way, the value is immediate.</p>
+      </div>
+      <div>
+        <div class="detail-item">
+          <div class="detail-label">Duration</div>
+          <div class="detail-value">90 minutes, uninterrupted</div>
+        </div>
+        <div class="detail-item">
+          <div class="detail-label">Format</div>
+          <div class="detail-value">Private video call (Zoom)</div>
+        </div>
+        <div class="detail-item">
+          <div class="detail-label">Confidentiality</div>
+          <div class="detail-value">Every conversation is treated as privileged</div>
+        </div>
+        <div class="detail-item">
+          <div class="detail-label">Preparation</div>
+          <div class="detail-value">You'll receive a brief intake form to focus the session</div>
+        </div>
+        <div class="detail-item">
+          <div class="detail-label">Deliverable</div>
+          <div class="detail-value">Written summary of key decisions and next steps within 24 hours</div>
+        </div>
+        <div class="detail-item">
+          <div class="detail-label">Investment</div>
+          <div class="detail-value">$500 USD — paid at booking</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO THIS IS FOR -->
+  <section class="who-section">
+    <h2>This session is built for leaders who carry weight.</h2>
+    <div class="who-grid">
+      <div class="who-card">
+        <h3>The Decision-Maker</h3>
+        <p>You're facing an acquisition, a succession, a market entry, or a strategic pivot — and you want a second set of eyes from someone who has operated under this kind of pressure at the highest level.</p>
+      </div>
+      <div class="who-card">
+        <h3>The Builder at a Crossroads</h3>
+        <p>You've built something significant. Now you're asking what comes next — scale, exit, legacy, or reinvention. You need clarity, not another opinion.</p>
+      </div>
+      <div class="who-card">
+        <h3>The Leader Under Pressure</h3>
+        <p>A crisis, a transition, a reputational challenge, or an organizational breakdown. You need someone who has navigated these situations from inside the room — not from a textbook.</p>
+      </div>
+      <div class="who-card">
+        <h3>The Entrepreneur Going Global</h3>
+        <p>You're entering new markets, navigating government relations, or managing cross-border complexity. You need a strategist who operates across jurisdictions and languages.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREDENTIALS -->
+  <section class="credentials">
+    <p>Served as an advisor to the Prime Minister of Canada (2008 financial crisis) · Chief of Staff, Senate of Canada (COVID-19 pandemic) · Published in Forbes and Newsweek · MBA · PMP · Adm.A. · ACC · Trilingual: English, French, Portuguese</p>
+  </section>
+
+  <!-- BOTTOM CTA -->
+  <section class="bottom-cta">
+    <h2>One conversation can change your trajectory.</h2>
+    <p>$500 USD. 90 minutes. The same strategic mind that served in the Prime Minister&#8217;s Office — focused entirely on your decision.</p>
+    
+    <a href="/call.html" class="btn-primary">RESERVE YOUR SESSION</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 IBPROM Corp. · <a href="mailto:j@josephsoares.com">j@josephsoares.com</a> · <a href="https://www.linkedin.com/in/soaresjoseph/" target="_blank">LinkedIn</a> · <a href="https://ibprom.com" target="_blank">IBPROM Corp.</a></p>
+  </footer>
+
+</body>
+</html>
