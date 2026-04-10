@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/favicon.ico">
+    <title>Terms of Service | Joseph Soares — Senior Advisor</title>
+    <meta name="description" content="Terms of Service for Joseph Soares / IBPROM Corp. Advisory services, confidentiality, limitations of liability, and legal framework.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Terms of Service — Joseph Soares",
+      "description": "Terms of Service for Joseph Soares / IBPROM Corp.",
+      "url": "https://josephsoares.com/terms.html",
+      "mainEntity": {
+        "@type": "LocalBusiness",
+        "name": "IBPROM Corp.",
+        "contact": {
+          "@type": "ContactPoint",
+          "contactType": "Customer Service",
+          "email": "info@josephsoares.com"
+        }
+      }
+    }
+    </script>
+    <style>
+        :root {
+            --navy: #0b1a2e;
+            --navy-mid: #0f2240;
+            --navy-light: #132d54;
+            --gold: #c9a84c;
+            --gold-light: #dfc07a;
+            --gold-muted: rgba(201, 168, 76, 0.12);
+            --cream: #f5f1eb;
+            --white: #ffffff;
+            --text-dark: #1a1a2e;
+            --text-mid: #4a4a5a;
+            --text-light: rgba(255,255,255,0.75);
+            --border-light: rgba(201, 168, 76, 0.2);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Source Sans 3', -apple-system, sans-serif;
+            color: var(--text-dark);
+            background: var(--white);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ===== LANG SWITCHER ===== */
+        .lang-bar {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 200;
+            background: #06101e;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 0 40px;
+            height: 32px;
+            border-bottom: 1px solid rgba(201, 168, 76, 0.08);
+        }
+        .lang-bar button {
+            background: none; border: none; cursor: pointer;
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 11px; font-weight: 600;
+            letter-spacing: 1.5px; text-transform: uppercase;
+            color: rgba(255,255,255,0.35);
+            padding: 6px 12px; transition: color 0.3s;
+        }
+        .lang-bar button:hover { color: var(--gold-light); }
+        .lang-bar button.active { color: var(--gold); }
+        .lang-bar .lang-sep { color: rgba(255,255,255,0.12); font-size: 11px; }
+
+        /* ===== NAV ===== */
+        nav {
+            position: fixed;
+            top: 32px; left: 0; right: 0;
+            z-index: 100;
+            background: rgba(11, 26, 46, 0.96);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+            padding: 0 40px;
+        }
+        .nav-inner {
+            max-width: 1200px; margin: 0 auto;
+            display: flex; justify-content: space-between; align-items: center;
+            height: 64px;
+        }
+        .nav-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 22px; font-weight: 700;
+            color: var(--white); text-decoration: none;
+            letter-spacing: 0.02em;
+        }
+        .nav-name span { color: var(--gold); }
+        .nav-links { display: flex; gap: 28px; align-items: center; }
+        .nav-links a {
+            color: rgba(255,255,255,0.6); text-decoration: none;
+            font-size: 13px; font-weight: 500;
+            letter-spacing: 0.04em; transition: color 0.3s;
+        }
+        .nav-links a:hover { color: var(--gold); }
+        .nav-cta {
+            background: var(--gold) !important;
+            color: var(--navy) !important;
+            padding: 9px 22px !important;
+            border-radius: 3px;
+            font-weight: 700 !important;
+            font-size: 11px !important;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+        .nav-cta:hover { background: var(--gold-light) !important; color: var(--navy) !important; }
+        .mobile-toggle {
+            display: none; background: none; border: none;
+            cursor: pointer; flex-direction: column; gap: 5px; padding: 4px;
+        }
+        .mobile-toggle span { display: block; width: 24px; height: 2px; background: var(--white); transition: all 0.3s; }
+
+        /* ===== HERO HEADER ===== */
+        .hero {
+            background: linear-gradient(155deg, var(--navy) 0%, var(--navy-mid) 55%, #0d2848 100%);
+            padding: 150px 40px 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute; inset: 0;
+            background: radial-gradient(ellipse at 10% 90%, rgba(201, 168, 76, 0.06) 0%, transparent 55%),
+                        radial-gradient(ellipse at 90% 15%, rgba(91, 143, 217, 0.04) 0%, transparent 45%);
+            pointer-events: none;
+        }
+        .hero-inner {
+            max-width: 960px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        .hero-eyebrow {
+            display: flex; align-items: center; gap: 14px;
+            margin-bottom: 28px;
+            animation: fadeUp 0.7s ease both;
+        }
+        .hero-eyebrow-line { width: 40px; height: 1px; background: var(--gold); opacity: 0.6; }
+        .hero-eyebrow-text {
+            font-size: 11px; letter-spacing: 3px; text-transform: uppercase;
+            color: var(--gold); font-weight: 600;
+        }
+        .hero h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            font-weight: 700;
+            color: var(--white);
+            line-height: 1.15;
+            margin-bottom: 24px;
+            animation: fadeUp 0.85s ease both;
+        }
+        .hero p {
+            font-size: 17px;
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 0;
+            font-weight: 300;
+            animation: fadeUp 0.95s ease both;
+        }
+
+        /* ===== CONTENT SECTION ===== */
+        .content {
+            background: var(--white);
+            padding: 60px 40px;
+            position: relative;
+        }
+        .content-inner {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        /* Headings */
+        .content h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 26px;
+            font-weight: 700;
+            color: var(--navy);
+            margin-top: 40px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            border-bottom: 2px solid var(--gold-muted);
+            padding-bottom: 16px;
+        }
+        .content h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-top: 32px;
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+        .content p {
+            font-size: 15px;
+            color: var(--text-mid);
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+        .content ul, .content ol {
+            margin-left: 24px;
+            margin-bottom: 16px;
+        }
+        .content li {
+            font-size: 15px;
+            color: var(--text-mid);
+            line-height: 1.8;
+            margin-bottom: 12px;
+        }
+
+        /* Intro text */
+        .intro-section {
+            background: var(--gold-muted);
+            border-left: 4px solid var(--gold);
+            padding: 24px;
+            margin-bottom: 40px;
+            border-radius: 2px;
+        }
+        .intro-section p {
+            margin-bottom: 0;
+            font-size: 15px;
+            color: var(--text-dark);
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            padding: 40px;
+            background: var(--navy);
+            color: rgba(255,255,255,0.6);
+            border-top: 1px solid rgba(201, 168, 76, 0.08);
+            text-align: center;
+        }
+        .footer-links { display: flex; gap: 32px; justify-content: center; margin-bottom: 16px; flex-wrap: wrap; }
+        .footer-links a { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 13px; font-weight: 500; transition: color 0.3s; }
+        .footer-links a:hover { color: var(--gold); }
+        .footer-legal {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 16px;
+            font-size: 12px;
+            opacity: 0.5;
+            flex-wrap: wrap;
+        }
+        .footer-legal a {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            font-size: 12px;
+            transition: color 0.3s;
+        }
+        .footer-legal a:hover {
+            color: var(--gold);
+        }
+        .footer-firm { font-size: 12px; color: rgba(255,255,255,0.35); }
+        .footer-creds { font-size: 12px; color: rgba(255,255,255,0.35); margin-top: 8px; }
+        .footer-copyright { font-size: 12px; color: rgba(255,255,255,0.35); margin-top: 8px; }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(22px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .hero, .content { padding-left: 24px; padding-right: 24px; }
+            .lang-bar, nav { padding: 0 20px; }
+            .nav-links { display: none; }
+            .mobile-toggle { display: flex; }
+            .nav-links.open {
+                display: flex; flex-direction: column;
+                position: absolute; top: 64px; left: 0; right: 0;
+                background: var(--navy); padding: 24px;
+                border-bottom: 1px solid var(--border-light); gap: 18px;
+            }
+            .content h2 { font-size: 22px; }
+            .content h3 { font-size: 16px; }
+            .footer-legal { gap: 12px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Lang Switcher -->
+    <div class="lang-bar">
+        <button class="active" onclick="setLang('en')">EN</button>
+        <span class="lang-sep">|</span>
+        <button onclick="setLang('fr')">FR</button>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-inner">
+            <a href="/" class="nav-name">Joseph <span>Soares</span></a>
+            <button class="mobile-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="nav-links">
+                <a href="/advisory.html">Advisory</a>
+                <a href="/intelligence.html">Intelligence</a>
+                <a href="/podcast.html">Podcast</a>
+                <a href="index.html#about">About</a>
+                <a href="/call.html" class="nav-cta">Book a Call</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Header -->
+    <div class="hero">
+        <div class="hero-inner">
+            <div class="hero-eyebrow">
+                <div class="hero-eyebrow-line"></div>
+                <span class="hero-eyebrow-text">Legal</span>
+            </div>
+            <h1>Terms of Service</h1>
+            <p>Governing your relationship with Joseph Soares and IBPROM Corp.</p>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+        <div class="content-inner">
+            <div class="intro-section">
+                <p><strong>Effective Date:</strong> April 9, 2026</p>
+                <p><strong>Last Updated:</strong> April 9, 2026</p>
+                <p style="margin-top: 16px;">These Terms of Service ("Terms") govern your use of josephsoares.com, engagement with advisory services, and your relationship with Joseph Soares / IBPROM Corp. Please read these Terms carefully. By accessing the website or engaging our services, you accept these Terms in their entirety.</p>
+            </div>
+
+            <!-- 1. Acceptance of Terms -->
+            <h2>1. Acceptance of Terms</h2>
+            <p>By visiting josephsoares.com, accessing content, subscribing to newsletters, requesting a consultation, or entering into an advisory engagement with Joseph Soares or IBPROM Corp., you acknowledge that you have read, understood, and agree to be bound by these Terms, our Privacy Policy, and all other posted guidelines.</p>
+            <p>If you do not agree to these Terms, you must not access or use the website or our services. Your continued use of the website and services constitutes your acceptance of any changes or updates to these Terms.</p>
+
+            <!-- 2. Service Description -->
+            <h2>2. Description of Services</h2>
+            <p>Joseph Soares provides senior advisory services through IBPROM Corp. Advisory services are provided on a confidential, one-on-one or small-group basis and may include:</p>
+            <ul>
+                <li>Strategic advisory sessions (90 minutes)</li>
+                <li>Ongoing advisory retainers (monthly recurring engagement)</li>
+                <li>Intelligence briefings and market research</li>
+                <li>Podcast interviews and guest appearances</li>
+                <li>Content and publications on leadership and decision-making</li>
+                <li>Newsletter subscriptions on strategic topics</li>
+            </ul>
+            <p>Joseph Soares is not a consultant, coach, therapist, financial advisor, or legal counsel. The services provided are advisory in nature—strategic sounding board and judgment on retainer—and are not a substitute for professional advice from licensed practitioners in law, finance, medicine, or psychology.</p>
+
+            <!-- 3. Intellectual Property -->
+            <h2>3. Intellectual Property Rights</h2>
+            <h3>Your IP</h3>
+            <p>Any materials, documents, information, or intellectual property you share with Joseph Soares during an advisory engagement remain your property. You retain all rights to your materials. By sharing materials during an engagement, you grant Joseph Soares a non-exclusive, confidential license to review, analyze, and discuss those materials solely for the purposes of providing advisory services.</p>
+
+            <h3>Our IP</h3>
+            <p>All content on josephsoares.com, including but not limited to text, articles, podcasts, videos, images, logos, and design elements, are the property of Joseph Soares or IBPROM Corp. and are protected by copyright and intellectual property laws. You may not reproduce, distribute, modify, or transmit any content without prior written consent, except as permitted by fair use or applicable law.</p>
+            <p>You may download and print content for personal, non-commercial use only, provided you retain all copyright notices and attribution.</p>
+
+            <!-- 4. Disclaimer of Professional Advice -->
+            <h2>4. Disclaimer of Professional Advice</h2>
+            <p><strong>NOT LEGAL ADVICE:</strong> Nothing on this website or in advisory sessions constitutes legal advice. Joseph Soares is not a licensed attorney. Do not rely on any content or statements as legal advice. If you require legal advice, consult a licensed attorney in your jurisdiction.</p>
+            <p><strong>NOT FINANCIAL ADVICE:</strong> Nothing on this website or in advisory sessions constitutes financial advice, investment advice, or recommendations to buy, sell, or hold any security or investment. Advisory services discuss financial and business strategy conceptually but do not constitute personalized financial or investment recommendations. Past performance does not guarantee future results. Consult a licensed financial advisor or investment professional for advice specific to your situation.</p>
+            <p><strong>NOT MEDICAL OR PSYCHOLOGICAL ADVICE:</strong> Nothing on this website or in advisory sessions constitutes medical, psychological, or therapeutic advice. If you are struggling with your health or mental health, consult a licensed medical professional or therapist.</p>
+            <p><strong>STRATEGIC JUDGMENT ONLY:</strong> Advisory services provide strategic judgment and experience-based insights. These are opinions formed through professional experience and are not guarantees of outcomes. Business decisions carry inherent risk and uncertainty. You are responsible for your own decisions and their consequences.</p>
+
+            <!-- 5. Limitation of Liability -->
+            <h2>5. Limitation of Liability</h2>
+            <p><strong>TO THE FULLEST EXTENT PERMITTED BY LAW,</strong> Joseph Soares and IBPROM Corp. shall not be liable for any indirect, incidental, special, consequential, punitive, or exemplary damages, including but not limited to damages for loss of profits, goodwill, data, business opportunity, or any other intangible loss, arising from:</p>
+            <ul>
+                <li>Your use or inability to use the website or services</li>
+                <li>Any advisory guidance, statements, or recommendations provided</li>
+                <li>Any decision you make based on advisory services or website content</li>
+                <li>Errors, omissions, or inaccuracies in content or communications</li>
+                <li>Delays, interruptions, or unavailability of the website or services</li>
+                <li>Third-party content or conduct</li>
+            </ul>
+            <p><strong>DIRECT DAMAGES CAP:</strong> In no event shall Joseph Soares or IBPROM Corp. be liable for direct damages exceeding the total amount you have paid for advisory services in the 12 months preceding the claim, or $1,000 CAD, whichever is greater.</p>
+            <p>Some jurisdictions do not permit the exclusion or limitation of consequential damages. In such jurisdictions, the above limitation shall apply to the fullest extent permitted by law.</p>
+
+            <!-- 6. Indemnification -->
+            <h2>6. Indemnification</h2>
+            <p>You agree to indemnify, defend, and hold harmless Joseph Soares, IBPROM Corp., and their officers, directors, employees, and agents from any claims, damages, liabilities, costs, and expenses (including reasonable legal fees) arising from:</p>
+            <ul>
+                <li>Your violation of these Terms or any applicable law</li>
+                <li>Your use or misuse of the website or services</li>
+                <li>Your infringement of any third-party intellectual property rights</li>
+                <li>Decisions you make or actions you take based on advisory services</li>
+                <li>Any material you provide to Joseph Soares</li>
+            </ul>
+
+            <!-- 7. Confidentiality -->
+            <h2>7. Confidentiality and Privacy</h2>
+            <p>All advisory engagements are strictly confidential. Joseph Soares will not disclose information shared during sessions without your explicit written consent, except:</p>
+            <ul>
+                <li>As required by law, court order, or regulatory authority</li>
+                <li>To protect against fraud or illegal activity</li>
+                <li>When necessary to enforce these Terms or protect rights and safety</li>
+            </ul>
+            <p>Your privacy during advisory engagements is paramount. For details on how we collect, use, and protect your data, see our Privacy Policy at josephsoares.com/privacy.html.</p>
+
+            <!-- 8. Payment and Billing -->
+            <h2>8. Payment and Billing</h2>
+            <p>Advisory service fees are as follows:</p>
+            <ul>
+                <li><strong>Tier 1 - Strategic Session:</strong> $1,500 USD (single 90-minute session, no commitment)</li>
+                <li><strong>Tier 2 - Advisory Retainer:</strong> $5,000 USD/month (6-month minimum, 2 sessions/month + async)</li>
+                <li><strong>Tier 3 - Senior Advisory Retainer:</strong> $10,000 USD/month (12-month commitment, 4 sessions/month + priority async + quarterly deep-dive)</li>
+            </ul>
+            <p>Payment is due as specified in your service agreement or invoice. Late payments may result in suspension of services. Fees do not include taxes, which may be applied based on jurisdiction.</p>
+            <p>Retainer agreements are non-refundable once services have commenced, except as required by applicable law. Cancellation of ongoing retainers must be provided in writing with 30 days' notice at the end of the current billing period.</p>
+
+            <!-- 9. Governing Law and Jurisdiction -->
+            <h2>9. Governing Law and Jurisdiction</h2>
+            <p>These Terms are governed by and construed in accordance with the laws of the Province of Ontario, Canada, without regard to its conflict of laws principles. You irrevocably submit to the exclusive jurisdiction of the courts of Ontario for the resolution of any dispute arising from these Terms or your use of the website and services.</p>
+            <p>If you are located outside Canada, you consent to the jurisdiction of the Ontario courts and waive any objection to venue.</p>
+
+            <!-- 10. Changes to Terms -->
+            <h2>10. Changes to These Terms</h2>
+            <p>Joseph Soares reserves the right to modify these Terms at any time. Changes will be effective immediately upon posting to the website. The "Last Updated" date at the top of this page indicates when changes were made. Your continued use of the website and services following changes constitutes your acceptance of the updated Terms. For significant changes, we will provide notice via email or prominent notice on the website.</p>
+
+            <!-- 11. Email and Newsletter Consent -->
+            <h2>11. Email and Newsletter Consent</h2>
+            <p>By providing your email address on this website, you consent to receive communications from Joseph Soares, including newsletters, updates, and service announcements. You may unsubscribe from these communications at any time by clicking the unsubscribe link in any email or by contacting us directly.</p>
+            <p>We will not share your email address with third parties without your explicit consent, except as required by law.</p>
+
+            <!-- 12. Contact Information -->
+            <h2>12. Contact Information</h2>
+            <p>For questions about these Terms, to request clarification, or to address concerns, contact us at:</p>
+            <p>
+                <strong>Email:</strong> <a href="mailto:info@josephsoares.com">info@josephsoares.com</a><br>
+                <strong>Business Name:</strong> IBPROM Corp.<br>
+                <strong>Location:</strong> Gatineau, Quebec, Canada<br>
+                <strong>Website:</strong> <a href="https://josephsoares.com">josephsoares.com</a>
+            </p>
+
+            <!-- 13. Severability -->
+            <h2>13. Severability</h2>
+            <p>If any provision of these Terms is found to be invalid, illegal, or unenforceable by a court of competent jurisdiction, that provision shall be modified to the minimum extent necessary to make it enforceable, or if not possible, shall be severed. The remaining provisions shall remain in full force and effect.</p>
+
+            <!-- 14. Entire Agreement -->
+            <h2>14. Entire Agreement</h2>
+            <p>These Terms, along with our Privacy Policy and any other agreements between you and Joseph Soares / IBPROM Corp., constitute the entire agreement regarding the use of the website and advisory services. These Terms supersede all prior agreements, understandings, and communications, whether written or oral.</p>
+
+            <!-- 15. No Waiver -->
+            <h2>15. No Waiver</h2>
+            <p>The failure of Joseph Soares or IBPROM Corp. to enforce any provision of these Terms does not constitute a waiver of that provision or any other provision. No waiver is effective unless in writing and signed by an authorized representative.</p>
+
+            <!-- 16. Limitation Period -->
+            <h2>16. Limitation Period</h2>
+            <p>Any claim or action arising out of these Terms or your use of the website or services must be initiated within one (1) year of the date the claim or cause of action first arose. Claims initiated after this period shall be time-barred.</p>
+
+            <div style="margin-top: 60px; padding-top: 40px; border-top: 1px solid var(--gold-muted);">
+                <p style="font-size: 14px; color: var(--text-mid); font-style: italic;">These Terms were last updated on April 9, 2026. For questions or concerns, contact Joseph Soares at info@josephsoares.com.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="mailto:info@josephsoares.com">Email</a>
+            <a href="https://linkedin.com/in/soaresjoseph">LinkedIn</a>
+            <a href="https://ibprom.com">IBPROM Corp.</a>
+        </div>
+        <div class="footer-legal">
+            <a href="/privacy.html">Privacy Policy</a>
+            <a href="/terms.html">Terms of Service</a>
+            <a href="/cookies.html">Cookie Policy</a>
+        </div>
+        <div class="footer-firm">Managing Partner, IBPROM Corp.</div>
+        <div class="footer-creds">Joseph Soares · Senior Advisor · United States</div>
+        <div class="footer-copyright">© 2026. All rights reserved.</div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const toggle = document.querySelector('.mobile-toggle');
+        const links = document.querySelector('.nav-links');
+        if (toggle) {
+            toggle.addEventListener('click', () => links.classList.toggle('open'));
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => links.classList.remove('open'));
+            });
+        }
+
+        // Language switcher (placeholder for future translations)
+        function setLang(lang) {
+            document.querySelectorAll('.lang-bar button').forEach(b => b.classList.remove('active'));
+            event.target.classList.add('active');
+            // Translation logic would go here
+        }
+    </script>
+</body>
+</html>
