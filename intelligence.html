@@ -80,11 +80,74 @@
             z-index: 200;
             background: #06101e;
             display: flex;
-            justify-content: flex-end;
+            justify-content: space-between;
             align-items: center;
             padding: 0 40px;
-            height: 32px;
+            height: 36px;
             border-bottom: 1px solid rgba(201, 168, 76, 0.08);
+        }
+
+        .lang-bar-left {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            height: 20px;
+            color: rgba(255,255,255,0.5);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .social-link:hover {
+            color: var(--gold);
+        }
+        .social-icon {
+            width: 16px;
+            height: 16px;
+        }
+        .lang-bar-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .btn-advisory-brief {
+            background: none;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            padding: 6px 14px;
+            border-radius: 3px;
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .btn-advisory-brief:hover {
+            background: var(--gold);
+            color: #06101e;
+        }
+        .btn-subscribe {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+        .btn-subscribe:hover {
+            color: var(--gold);
+        }
+        .lang-buttons {
+            display: flex;
+            align-items: center;
+            gap: 0;
         }
 
         .lang-bar button {
@@ -108,7 +171,7 @@
         /* ===== NAV ===== */
         nav {
             position: fixed;
-            top: 32px;
+            top: 36px;
             left: 0;
             right: 0;
             z-index: 100;
@@ -994,6 +1057,7 @@
             padding: 40px;
             background: #06101e;
             text-align: center;
+            color: rgba(255,255,255,0.7);
         }
 
         .footer-links {
@@ -1004,7 +1068,7 @@
         }
 
         .footer-links a {
-            color: rgba(255,255,255,0.4);
+            color: rgba(255,255,255,0.6);
             text-decoration: none;
             font-size: 13px;
             font-weight: 500;
@@ -1015,7 +1079,7 @@
 
         .footer-firm {
             font-size: 12px;
-            color: rgba(255,255,255,0.25);
+            color: rgba(255,255,255,0.55);
             margin-bottom: 6px;
         }
 
@@ -1077,15 +1141,180 @@
 
             .btn-secondary { margin-left: 0; margin-top: 12px; }
         }
+
+        /* ===== EMAIL CAPTURE POPUP ===== */
+        .popup-overlay {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .popup-overlay.active {
+            display: flex;
+            opacity: 1;
+        }
+        .popup-card {
+            background: var(--navy);
+            border: 1px solid rgba(201, 168, 76, 0.2);
+            border-radius: 8px;
+            padding: 40px;
+            max-width: 420px;
+            width: 90%;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            position: relative;
+            animation: popupSlide 0.4s ease;
+        }
+        @keyframes popupSlide {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .popup-close {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: none;
+            border: none;
+            color: rgba(255,255,255,0.5);
+            font-size: 24px;
+            cursor: pointer;
+            transition: color 0.3s;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .popup-close:hover {
+            color: var(--gold);
+        }
+        .popup-header {
+            margin-bottom: 28px;
+        }
+        .popup-header h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 8px;
+        }
+        .popup-header p {
+            font-size: 14px;
+            color: rgba(255,255,255,0.6);
+            line-height: 1.6;
+        }
+        .popup-form {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .popup-input {
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(201, 168, 76, 0.2);
+            border-radius: 4px;
+            padding: 12px 16px;
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 14px;
+            color: var(--white);
+            transition: border-color 0.3s;
+        }
+        .popup-input::placeholder {
+            color: rgba(255,255,255,0.4);
+        }
+        .popup-input:focus {
+            outline: none;
+            border-color: var(--gold);
+            background: rgba(255,255,255,0.12);
+        }
+        .popup-submit {
+            background: var(--gold);
+            color: var(--navy);
+            border: none;
+            padding: 12px 24px;
+            border-radius: 4px;
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 8px;
+        }
+        .popup-submit:hover {
+            background: var(--gold-light);
+            transform: translateY(-2px);
+        }
+        .popup-success {
+            display: none;
+            text-align: center;
+        }
+        .popup-success.active {
+            display: block;
+        }
+        .popup-success h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 16px;
+        }
+        .popup-success p {
+            font-size: 14px;
+            color: rgba(255,255,255,0.6);
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .popup-pdf-link {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--navy);
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            transition: all 0.3s;
+        }
+        .popup-pdf-link:hover {
+            background: var(--gold-light);
+            transform: translateY(-2px);
+        }
     </style>
 </head>
 <body>
 
     <!-- LANG BAR -->
     <div class="lang-bar">
-        <button class="active" onclick="setLang('en')">EN</button>
-        <span class="lang-sep">·</span>
-        <button onclick="setLang('fr')">FR</button>
+        <div class="lang-bar-left">
+            <a href="https://www.linkedin.com/in/soaresjoseph/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+                <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+            <a href="https://x.com/JosephSoares" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="X (Twitter)">
+                <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.514l-5.106-6.694-5.848 6.694h-3.308l7.73-8.835L.424 2.25h6.679l4.632 6.124L17.77 2.25h.474zm-1.161 17.52h1.833L7.084 4.126H5.117l12.926 15.644z"/></svg>
+            </a>
+            <a href="https://www.youtube.com/@corridorintelligence" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="YouTube">
+                <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/soaresjoseph/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+                <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+        </div>
+        <div class="lang-bar-right">
+            <button class="btn-advisory-brief" id="advisoryBriefBtn">Advisory Brief</button>
+            <a href="https://corridorintelligence.substack.com/subscribe" target="_blank" rel="noopener noreferrer" class="btn-subscribe">Subscribe</a>
+            <div class="lang-buttons">
+                <button class="active" onclick="setLang('en')">EN</button>
+                <span class="lang-sep">·</span>
+                <button onclick="setLang('fr')">FR</button>
+            </div>
+        </div>
     </div>
 
     <!-- NAV -->
@@ -1839,13 +2068,36 @@
         <div class="footer-firm" data-fr="© 2026. Tous droits réservés.">© 2026. All rights reserved.</div>
     </footer>
 
+    <!-- Email Capture Popup -->
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup-card">
+            <button class="popup-close" id="popupClose">&times;</button>
+            <div class="popup-form-container">
+                <div class="popup-header">
+                    <h2>Get the Advisory Brief</h2>
+                    <p>Insights on decision-making, delivered weekly.</p>
+                </div>
+                <form class="popup-form" id="popupForm">
+                    <input type="text" class="popup-input" id="firstName" placeholder="First name" required>
+                    <input type="email" class="popup-input" id="email" placeholder="Email address" required>
+                    <button type="submit" class="popup-submit">Send Brief</button>
+                </form>
+            </div>
+            <div class="popup-success" id="popupSuccess">
+                <h3>Got it.</h3>
+                <p>Check your email for the Advisory Brief. It's on the way.</p>
+                <a href="#" class="popup-pdf-link" download>Download PDF</a>
+            </div>
+        </div>
+    </div>
+
     <script>
         (function() {
             let currentLang = 'en';
             window.setLang = function(lang) {
                 currentLang = lang;
                 document.documentElement.lang = lang === 'fr' ? 'fr' : 'en';
-                document.querySelectorAll('.lang-bar button').forEach(btn => {
+                document.querySelectorAll('.lang-buttons button').forEach(btn => {
                     btn.classList.toggle('active', btn.textContent.trim().toLowerCase() === lang);
                 });
                 document.querySelectorAll('[data-' + lang + ']').forEach(el => {
@@ -1882,6 +2134,54 @@
                 if (savedLang && ['en', 'fr'].includes(savedLang)) {
                     setLang(savedLang);
                 }
+            });
+        })();
+
+        // Email popup handler
+        (function() {
+            const overlay = document.getElementById('popupOverlay');
+            const closeBtn = document.getElementById('popupClose');
+            const advisoryBtn = document.getElementById('advisoryBriefBtn');
+            const form = document.getElementById('popupForm');
+            const successScreen = document.getElementById('popupSuccess');
+            const formContainer = document.querySelector('.popup-form-container');
+
+            advisoryBtn.addEventListener('click', () => {
+                overlay.classList.add('active');
+            });
+
+            closeBtn.addEventListener('click', () => {
+                overlay.classList.remove('active');
+            });
+
+            overlay.addEventListener('click', (e) => {
+                if (e.target === overlay) {
+                    overlay.classList.remove('active');
+                }
+            });
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    overlay.classList.remove('active');
+                }
+            });
+
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const firstName = document.getElementById('firstName').value;
+                const email = document.getElementById('email').value;
+
+                fetch('MAKE_WEBHOOK_URL', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ firstName, email })
+                }).then(() => {
+                    formContainer.style.display = 'none';
+                    successScreen.classList.add('active');
+                }).catch(() => {
+                    formContainer.style.display = 'none';
+                    successScreen.classList.add('active');
+                });
             });
         })();
     </script>
