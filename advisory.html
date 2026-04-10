@@ -107,10 +107,10 @@
             z-index: 200;
             background: #06101e;
             display: flex;
-            justify-content: flex-end;
+            justify-content: space-between;
             align-items: center;
             padding: 0 40px;
-            height: 32px;
+            height: 36px;
             border-bottom: 1px solid rgba(201, 168, 76, 0.08);
         }
 
@@ -141,10 +141,137 @@
             font-size: 11px;
         }
 
+        /* ===== TOP BAR ADDITIONS ===== */
+        .lang-bar-left {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+        .lang-bar-left .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+            color: rgba(255,255,255,0.4);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .lang-bar-left .social-link:hover { color: #c9a84c; }
+        .lang-bar-left .social-icon { width: 14px; height: 14px; }
+        .lang-bar-right {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+        .btn-advisory-brief {
+            background: #c9a84c;
+            color: #0b1a2e;
+            border: none;
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            padding: 5px 14px;
+            cursor: pointer;
+            transition: all 0.3s;
+            white-space: nowrap;
+        }
+        .btn-advisory-brief:hover { background: #dfc07a; }
+        .btn-subscribe {
+            background: transparent;
+            color: rgba(255,255,255,0.5);
+            border: 1px solid rgba(255,255,255,0.2);
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            padding: 4px 12px;
+            text-decoration: none;
+            transition: all 0.3s;
+            white-space: nowrap;
+        }
+        .btn-subscribe:hover { color: #c9a84c; border-color: #c9a84c; }
+        .lang-buttons {
+            display: flex;
+            align-items: center;
+            gap: 2px;
+            margin-left: 4px;
+        }
+
+        /* ===== EMAIL CAPTURE POPUP ===== */
+        .popup-overlay {
+            display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+            background-color: rgba(0,0,0,0.6); z-index: 9999;
+            align-items: center; justify-content: center;
+            animation: popupFadeIn 0.3s ease;
+        }
+        .popup-overlay.active { display: flex; }
+        @keyframes popupFadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .popup-card {
+            background: #ffffff; border-radius: 6px; max-width: 460px; width: 100%;
+            padding: 40px; position: relative;
+            box-shadow: 0 8px 40px rgba(0,0,0,0.3);
+            animation: popupSlideUp 0.3s ease;
+        }
+        @keyframes popupSlideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        .popup-close {
+            position: absolute; top: 14px; right: 14px; width: 30px; height: 30px;
+            background: none; border: none; font-size: 26px; color: #999;
+            cursor: pointer; display: flex; align-items: center; justify-content: center;
+            transition: color 0.3s;
+        }
+        .popup-close:hover { color: #0b1a2e; }
+        .popup-label {
+            font-size: 11px; font-weight: 700; color: #c9a84c;
+            margin: 0 0 8px 0; text-transform: uppercase; letter-spacing: 1.5px;
+        }
+        .popup-heading {
+            font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 700;
+            color: #0b1a2e; margin: 0 0 12px 0; line-height: 1.2;
+        }
+        .popup-subtext {
+            font-family: 'Source Sans 3', sans-serif; font-size: 14px; color: #666;
+            line-height: 1.6; margin: 0 0 24px 0;
+        }
+        .popup-form { display: flex; flex-direction: column; gap: 10px; margin-bottom: 16px; }
+        .popup-form .form-input {
+            font-family: 'Source Sans 3', sans-serif; font-size: 14px; padding: 11px 14px;
+            border: 1px solid #ddd; border-radius: 4px; background: #f8f8f8; color: #0b1a2e;
+            transition: border-color 0.3s;
+        }
+        .popup-form .form-input:focus { outline: none; border-color: #c9a84c; background: #ffffff; }
+        .popup-form .form-input::placeholder { color: #999; }
+        .btn-popup-submit {
+            background: #0b1a2e; color: #ffffff; border: none;
+            font-family: 'Source Sans 3', sans-serif; font-size: 13px; font-weight: 700;
+            letter-spacing: 0.5px; padding: 12px 20px; cursor: pointer; border-radius: 4px;
+            margin-top: 4px; transition: all 0.3s;
+        }
+        .btn-popup-submit:hover { background: #162540; }
+        .popup-privacy { font-size: 11px; color: #999; line-height: 1.5; margin: 0; }
+        .popup-privacy a { color: #c9a84c; text-decoration: none; }
+        .popup-privacy a:hover { text-decoration: underline; }
+        .popup-success { text-align: center; }
+        .popup-success .success-heading {
+            font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 700;
+            color: #0b1a2e; margin: 0 0 10px 0;
+        }
+        .popup-success .success-text {
+            font-family: 'Source Sans 3', sans-serif; font-size: 14px; color: #666;
+            line-height: 1.6; margin: 0 0 20px 0;
+        }
+        .btn-popup-download {
+            display: inline-block; background: #c9a84c; color: #0b1a2e;
+            font-family: 'Source Sans 3', sans-serif; font-size: 13px; font-weight: 700;
+            padding: 12px 28px; border-radius: 4px; text-decoration: none; transition: all 0.3s;
+        }
+        .btn-popup-download:hover { background: #dfc07a; }
+
         /* ===== NAV ===== */
         nav {
             position: fixed;
-            top: 32px;
+            top: 36px;
             left: 0;
             right: 0;
             z-index: 100;
@@ -792,8 +919,8 @@
         footer {
             padding: 60px 40px;
             background: var(--navy);
-            color: rgba(255,255,255,0.6);
-            border-top: 1px solid rgba(201, 168, 76, 0.1);
+            color: rgba(255,255,255,0.7);
+            border-top: 1px solid rgba(201, 168, 76, 0.15);
         }
 
         footer-inner {
@@ -824,7 +951,7 @@
         .footer-credit {
             text-align: center;
             font-size: 12px;
-            color: rgba(255,255,255,0.35);
+            color: rgba(255,255,255,0.65);
             padding-top: 24px;
             border-top: 1px solid rgba(201, 168, 76, 0.08);
             line-height: 1.6;
@@ -904,9 +1031,29 @@
 <body>
     <!-- Lang Switcher -->
     <div class="lang-bar">
-        <button class="active">EN</button>
-        <span class="lang-sep">|</span>
-        <button>FR</button>
+        <div class="lang-bar-left">
+            <a href="https://www.linkedin.com/in/soaresjoseph/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+                <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+            <a href="https://x.com/JosephSoares" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="X (Twitter)">
+                <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.514l-5.106-6.694-5.848 6.694h-3.308l7.73-8.835L.424 2.25h6.679l4.632 6.124L17.77 2.25h.474zm-1.161 17.52h1.833L7.084 4.126H5.117l12.926 15.644z"/></svg>
+            </a>
+            <a href="https://www.youtube.com/@corridorintelligence" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="YouTube">
+                <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/soaresjoseph/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+                <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+        </div>
+        <div class="lang-bar-right">
+            <button class="btn-advisory-brief" id="advisoryBriefBtn">Advisory Brief</button>
+            <a href="https://corridorintelligence.substack.com/subscribe" target="_blank" rel="noopener noreferrer" class="btn-subscribe">Subscribe</a>
+            <div class="lang-buttons">
+                <button onclick="setLang('en')" class="active">EN</button>
+                <span class="lang-sep">|</span>
+                <button onclick="setLang('fr')">FR</button>
+            </div>
+        </div>
     </div>
 
     <!-- Navigation -->
@@ -1149,7 +1296,7 @@
             <a href="https://www.linkedin.com/in/soaresjoseph/">LinkedIn</a>
             <a href="https://ibprom.com">IBPROM Corp.</a>
         </div>
-        <div class="footer-legal" style="display:flex; justify-content:center; gap:20px; margin-bottom:16px; font-size:12px; opacity:0.5;">
+        <div class="footer-legal" style="display:flex; justify-content:center; gap:20px; margin-bottom:16px; font-size:12px;">
             <a href="/privacy.html">Privacy Policy</a>
             <a href="/terms.html">Terms of Service</a>
             <a href="/cookies.html">Cookie Policy</a>
@@ -1190,12 +1337,74 @@
         });
 
         // Language switcher (placeholder)
-        document.querySelectorAll('.lang-bar button').forEach((btn, idx) => {
+        document.querySelectorAll('.lang-bar .lang-buttons button').forEach((btn, idx) => {
             btn.addEventListener('click', function() {
-                document.querySelectorAll('.lang-bar button').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('.lang-bar .lang-buttons button').forEach(b => b.classList.remove('active'));
                 this.classList.add('active');
             });
         });
+    </script>
+
+    <!-- EMAIL CAPTURE POPUP -->
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup-card">
+            <button class="popup-close" id="popupClose" aria-label="Close popup">&times;</button>
+            <div class="popup-content" id="popupContent">
+                <p class="popup-label">Get Instant Access</p>
+                <h2 class="popup-heading">The SPARK Advisory Brief</h2>
+                <p class="popup-subtext">Everything you need to know about working with a crisis-tested senior advisor. The framework. The investment. What to expect.</p>
+                <form class="popup-form" id="emailCaptureForm">
+                    <input type="text" name="firstName" placeholder="First Name" required class="form-input">
+                    <input type="email" name="email" placeholder="Email Address" required class="form-input">
+                    <button type="submit" class="btn-popup-submit">GET THE BRIEF &rarr;</button>
+                </form>
+                <p class="popup-privacy">Your privacy is protected. We collect and process your data in accordance with our <a href="/privacy.html">Privacy Policy</a>.</p>
+            </div>
+            <div class="popup-success" id="popupSuccess" style="display: none;">
+                <p class="success-heading">Check your inbox!</p>
+                <p class="success-text">Your SPARK Advisory Brief is on the way. In the meantime, you can download it here:</p>
+                <a href="/assets/spark-advisory-brief.pdf" class="btn-popup-download" download>Download PDF</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    (function() {
+        var advisoryBtn = document.getElementById('advisoryBriefBtn');
+        var popupOverlay = document.getElementById('popupOverlay');
+        var popupClose = document.getElementById('popupClose');
+        var emailForm = document.getElementById('emailCaptureForm');
+        var popupContent = document.getElementById('popupContent');
+        var popupSuccess = document.getElementById('popupSuccess');
+        var MAKE_WEBHOOK_URL = 'MAKE_WEBHOOK_URL';
+
+        function openPopup() {
+            popupOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        function closePopup() {
+            popupOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+            setTimeout(function() {
+                if (emailForm) emailForm.reset();
+                popupContent.style.display = 'block';
+                popupSuccess.style.display = 'none';
+            }, 300);
+        }
+        if (advisoryBtn) advisoryBtn.addEventListener('click', openPopup);
+        if (popupClose) popupClose.addEventListener('click', closePopup);
+        popupOverlay.addEventListener('click', function(e) { if (e.target === popupOverlay) closePopup(); });
+        document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && popupOverlay.classList.contains('active')) closePopup(); });
+        emailForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            var firstName = emailForm.querySelector('input[name="firstName"]').value;
+            var email = emailForm.querySelector('input[name="email"]').value;
+            if (MAKE_WEBHOOK_URL === 'MAKE_WEBHOOK_URL') { popupContent.style.display = 'none'; popupSuccess.style.display = 'block'; return; }
+            fetch(MAKE_WEBHOOK_URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ firstName: firstName, email: email, timestamp: new Date().toISOString() }) })
+            .then(function(r) { if (r.ok) { popupContent.style.display = 'none'; popupSuccess.style.display = 'block'; } else { alert('Something went wrong. Please try again.'); } })
+            .catch(function() { popupContent.style.display = 'none'; popupSuccess.style.display = 'block'; });
+        });
+    })();
     </script>
 </body>
 </html>
