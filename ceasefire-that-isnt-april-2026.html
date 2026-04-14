@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XZTR3BXT49"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XZTR3BXT49');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/favicon.ico">
+    <title>The Ceasefire That Isn't: Why Markets Shouldn't Exhale</title>
+    <meta name="description" content="A two-week ceasefire between the US and Iran paused the conflict but resolved nothing. Oil crashed from $144 to $93, then bounced back above $99. Markets confused a pause with peace. Here's why that matters.">
+    <meta property="og:title" content="The Ceasefire That Isn't: Why Markets Shouldn't Exhale">
+    <meta property="og:description" content="Markets misread the Pakistan ceasefire as a strategic breakthrough. It resolved nothing.">
+    <meta property="og:image" content="https://josephsoares.com/assets/ceasefire-isnt-april-2026.png">
+    <meta property="og:url" content="https://josephsoares.com/ceasefire-that-isnt-april-2026.html">
+    <meta property="og:type" content="article">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The Ceasefire That Isn't: Why Markets Shouldn't Exhale">
+    <meta name="twitter:description" content="Markets misread the Pakistan ceasefire as a strategic breakthrough. It resolved nothing.">
+    <meta name="twitter:image" content="https://josephsoares.com/assets/ceasefire-isnt-april-2026.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "The Ceasefire That Isn't: Why Markets Shouldn't Exhale",
+      "description": "A two-week ceasefire between the US and Iran paused the conflict but resolved nothing.",
+      "image": "https://josephsoares.com/assets/ceasefire-isnt-april-2026.png",
+      "datePublished": "2026-04-10",
+      "dateModified": "2026-04-10",
+      "author": {
+        "@type": "Person",
+        "name": "Joseph Soares",
+        "url": "https://josephsoares.com"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "IBPROM Corp.",
+        "url": "https://ibprom.com"
+      },
+      "inLanguage": "en"
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --navy: #0b1a2e;
+            --navy-mid: #0f2240;
+            --navy-light: #132d54;
+            --gold: #c9a84c;
+            --gold-light: #dfc07a;
+            --gold-muted: rgba(201, 168, 76, 0.12);
+            --cream: #f5f1eb;
+            --white: #ffffff;
+            --text-dark: #1a1a2e;
+            --text-mid: #4a4a5a;
+            --text-light: rgba(255,255,255,0.75);
+            --border-light: rgba(201, 168, 76, 0.2);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Source Sans 3', -apple-system, sans-serif;
+            color: var(--text-dark);
+            background: var(--white);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ===== LANG BAR ===== */
+        .lang-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 200;
+            background: #06101e;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 40px;
+            height: 36px;
+            border-bottom: 1px solid rgba(201, 168, 76, 0.08);
+        }
+
+        .lang-bar-left {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            height: 20px;
+            color: rgba(255,255,255,0.5);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .social-link:hover {
+            color: var(--gold);
+        }
+
+        .lang-bar-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .btn-subscribe {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+
+        .btn-subscribe:hover {
+            color: var(--gold);
+        }
+
+        .lang-buttons {
+            display: flex;
+            align-items: center;
+            gap: 0;
+        }
+
+        .lang-bar button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.35);
+            padding: 6px 12px;
+            transition: color 0.3s;
+        }
+
+        .lang-bar button:hover { color: var(--gold-light); }
+        .lang-bar button.active { color: var(--gold); }
+        .lang-bar .lang-sep { color: rgba(255,255,255,0.12); }
+
+        /* ===== NAV ===== */
+        nav {
+            position: fixed;
+            top: 36px;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: rgba(11, 26, 46, 0.96);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+            padding: 0 40px;
+        }
+
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 64px;
+        }
+
+        .nav-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--white);
+            text-decoration: none;
+            letter-spacing: 0.02em;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: rgba(255,255,255,0.65);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        .nav-links a.active {
+            color: var(--gold);
+        }
+
+        .nav-cta {
+            background: var(--gold);
+            color: var(--navy);
+            padding: 8px 18px;
+            border-radius: 3px;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .nav-cta:hover {
+            background: var(--gold-light);
+        }
+
+        /* ===== ARTICLE HEADER ===== */
+        .article-hero {
+            padding: 120px 40px 60px;
+            background: var(--white);
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .article-header {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 24px;
+            font-size: 13px;
+            color: var(--text-mid);
+        }
+
+        .article-meta-item {
+            padding: 4px 10px;
+            background: var(--gold-muted);
+            border-radius: 3px;
+            font-weight: 500;
+        }
+
+        .article-date {
+            color: var(--gold);
+            font-weight: 600;
+        }
+
+        .article-headline {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 24px;
+            color: var(--text-dark);
+        }
+
+        .article-subheading {
+            font-size: 18px;
+            color: var(--text-mid);
+            line-height: 1.6;
+            font-weight: 300;
+            max-width: 700px;
+        }
+
+        /* ===== ARTICLE IMAGE ===== */
+        .article-image {
+            max-width: 900px;
+            margin: 0 auto 40px;
+            padding: 0 40px;
+        }
+
+        .article-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 4px;
+        }
+
+        /* ===== ARTICLE BODY ===== */
+        .article-body {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 40px 80px;
+            font-size: 16px;
+            line-height: 1.8;
+            color: var(--text-mid);
+        }
+
+        .article-body p {
+            margin-bottom: 24px;
+        }
+
+        .article-body strong {
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        .article-body h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin: 40px 0 20px;
+            line-height: 1.3;
+        }
+
+        .article-body em {
+            color: var(--gold);
+            font-style: italic;
+        }
+
+        /* ===== DIVIDER ===== */
+        .article-divider {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 0 40px;
+            text-align: center;
+            color: var(--gold);
+            font-size: 24px;
+        }
+
+        /* ===== SIGNATURE & CTA ===== */
+        .article-signature {
+            max-width: 800px;
+            margin: 0 auto 40px;
+            padding: 0 40px;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 18px;
+            color: var(--gold);
+            font-weight: 600;
+            font-style: italic;
+        }
+
+        .article-cta {
+            max-width: 800px;
+            margin: 0 auto 60px;
+            padding: 0 40px;
+        }
+
+        .cta-text {
+            font-size: 15px;
+            line-height: 1.7;
+            color: var(--text-mid);
+            margin-bottom: 16px;
+        }
+
+        .cta-link {
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 600;
+            transition: opacity 0.3s;
+        }
+
+        .cta-link:hover {
+            opacity: 0.8;
+        }
+
+        /* ===== SUBSTACK CTA ===== */
+        .substack-cta {
+            max-width: 800px;
+            margin: 0 auto 40px;
+            padding: 0 40px;
+        }
+
+        .substack-card {
+            background: var(--gold-muted);
+            border: 1px solid var(--border-light);
+            border-radius: 6px;
+            padding: 28px;
+            text-align: center;
+        }
+
+        .substack-card h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4rem;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .substack-card p {
+            font-size: 14px;
+            color: var(--text-mid);
+            margin-bottom: 18px;
+        }
+
+        .btn-substack {
+            background: var(--navy);
+            color: var(--gold);
+            padding: 10px 24px;
+            border: 1px solid var(--gold);
+            border-radius: 3px;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .btn-substack:hover {
+            background: var(--gold);
+            color: var(--navy);
+        }
+
+        /* ===== BACK LINK ===== */
+        .article-back {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 40px 40px;
+        }
+
+        .back-link {
+            color: var(--gold);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: opacity 0.3s;
+        }
+
+        .back-link:hover {
+            opacity: 0.8;
+        }
+
+        /* ===== FOOTER (3-COLUMN) ===== */
+        footer {
+            background: var(--navy);
+            padding: 60px 40px;
+            border-top: 1px solid var(--border-light);
+        }
+
+        .footer-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .footer-columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 16px;
+            letter-spacing: 0.5px;
+        }
+
+        .footer-col p {
+            font-size: 13px;
+            line-height: 1.7;
+            color: rgba(255,255,255,0.6);
+            margin-bottom: 12px;
+        }
+
+        .footer-col a {
+            display: inline-block;
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            font-size: 13px;
+            line-height: 1.8;
+            transition: color 0.3s;
+        }
+
+        .footer-col a:hover {
+            color: var(--gold);
+        }
+
+        .footer-creds {
+            font-size: 12px;
+            color: rgba(255,255,255,0.5);
+            line-height: 1.8;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(201, 168, 76, 0.15);
+            padding-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+            color: rgba(255,255,255,0.5);
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-legal {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-legal a {
+            color: rgba(255,255,255,0.5);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-legal a:hover {
+            color: rgba(255,255,255,0.8);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .lang-bar {
+                padding: 0 20px;
+            }
+
+            .nav-inner {
+                padding: 0 20px;
+            }
+
+            .nav-links {
+                gap: 20px;
+            }
+
+            .article-hero {
+                padding: 100px 20px 40px;
+            }
+
+            .article-headline {
+                font-size: 2rem;
+            }
+
+            .article-body {
+                padding: 0 20px 60px;
+                font-size: 15px;
+            }
+
+            .article-image {
+                padding: 0 20px;
+                margin-bottom: 30px;
+            }
+
+            .article-divider {
+                padding: 0 20px;
+            }
+
+            .article-signature {
+                padding: 0 20px;
+            }
+
+            .article-cta {
+                padding: 0 20px;
+            }
+
+            .substack-cta {
+                padding: 0 20px;
+            }
+
+            .article-back {
+                padding: 0 20px 40px;
+            }
+
+            .footer-columns {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- LANG BAR -->
+    <div class="lang-bar">
+        <div class="lang-bar-left">
+            <a href="https://www.linkedin.com/in/soaresjoseph/" class="social-link">in</a>
+            <a href="https://x.com" class="social-link">𝕏</a>
+            <a href="https://substack.com" class="social-link">⤵</a>
+        </div>
+        <div class="lang-bar-right">
+            <a href="https://substack.com" class="btn-subscribe">SUBSCRIBE</a>
+            <div class="lang-buttons">
+                <button class="active" onclick="switchLang('en')">EN</button>
+                <span class="lang-sep">|</span>
+                <button onclick="switchLang('fr')">FR</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAV -->
+    <nav>
+        <div class="nav-inner">
+            <a href="/" class="nav-name">J. Soares</a>
+            <ul class="nav-links">
+                <li><a href="/advisory.html" data-fr="Conseil">Advisory</a></li>
+                <li><a href="/intelligence.html" class="active" data-fr="Intelligence">Intelligence</a></li>
+                <li><a href="/podcast.html" data-fr="Podcast">Podcast</a></li>
+                <li><a href="/writing.html" data-fr="Écrits">Writing</a></li>
+            </ul>
+            <a href="/call.html" class="nav-cta" data-fr="Accès Conseil">Advisory Access</a>
+        </div>
+    </nav>
+
+    <!-- ARTICLE HERO -->
+    <div class="article-hero">
+        <div class="article-header">
+            <div class="article-meta">
+                <span class="article-meta-item" data-fr="Iran">Iran</span>
+                <span class="article-meta-item" data-fr="Géopolitique">Geopolitics</span>
+                <span class="article-meta-item" data-fr="Énergie">Energy</span>
+                <span class="article-date" data-fr="10 avril 2026">April 10, 2026</span>
+            </div>
+            <h1 class="article-headline">The Ceasefire That Isn't: Why Markets Shouldn't Exhale</h1>
+            <p class="article-subheading">Oil crashed from $144 to $93 on a false premise. Markets mistook a pause for peace. Here's why the correction will be sharp.</p>
+        </div>
+    </div>
+
+    <!-- ARTICLE IMAGE -->
+    <div class="article-image">
+        <img src="/assets/ceasefire-isnt-april-2026.png" alt="The Middle East ceasefire collapses within 48 hours">
+    </div>
+
+    <!-- ARTICLE BODY -->
+    <article class="article-body">
+        <p>Pakistan brokered a two-week ceasefire between the United States and Iran. Markets celebrated. Oil crashed from $144 per barrel to $93 in a single session. Traders bought risk assets. The consensus was instantaneous: the conflict was over.</p>
+
+        <p>Within 24 hours, reality reasserted itself. Oil bounced back above $99. The Strait of Hormuz remained functionally closed. The ceasefire wasn't resolving anything. It was just a pause.</p>
+
+        <p>This is what happens when markets confuse a tactical pause with a strategic resolution. The ceasefire didn't address any of the underlying causes of the conflict. It didn't resolve the nuclear question. It didn't address Lebanon. It didn't resolve Strait sovereignty. It froze the fighting without resolving any of its causes.</p>
+
+        <h3>What the Ceasefire Actually Resolved</h3>
+
+        <p>Nothing.</p>
+
+        <p>The two sides agreed to stop shooting for two weeks. That's it. Islamabad has 48 hours to reconcile positions that are structurally incompatible. The US demands restrictions on Iranian nuclear enrichment. Iran demands no restrictions whatsoever. One side must capitulate or the ceasefire ends.</p>
+
+        <p>Israel intensified strikes in Lebanon during the ceasefire, proving that even the pause was conditional and fragile. Iran's parliament immediately accused the US of breaching the agreement through the Israeli strikes and alleged drone incursions. The regime is looking for a pretext to resume fighting.</p>
+
+        <p>The Strait of Hormuz hasn't reopened. Oil tankers are still rerouting. Insurance costs haven't normalized. The structural constraints on supply are unchanged.</p>
+
+        <p>And yet markets believed the ceasefire meant peace was coming.</p>
+
+        <h3>Why the Regime Needs Conflict</h3>
+
+        <p>A theocratic state that requires external conflict to justify domestic oppression will never accept a lasting peace negotiated from weakness. The regime walked into Islamabad knowing it couldn't win on the merits. But accepting a pause allows it to frame the conflict as ongoing, which validates the security apparatus, the surveillance state, and the repression of dissent.</p>
+
+        <p>For a regime like Iran's, a ceasefire is a tactic, not a strategy. It buys time. It allows the regime to regroup. It keeps the population focused on external threat rather than internal failure. The moment the ceasefire ends—and it will end—the conflict resumes with renewed intensity.</p>
+
+        <p>Markets priced this as if the regime had capitulated. It hadn't. It had merely paused.</p>
+
+        <h3>What the Oil Market Tells Us</h3>
+
+        <p>Brent crude at $144 was reflecting genuine supply disruption and genuine uncertainty about duration. It was reflecting a Strait that was closed and might stay closed for months. It was pricing in the possibility of full-scale regional conflict.</p>
+
+        <p>Brent at $93 is pricing in a resolution that doesn't exist. The ceasefire doesn't resolve the supply question. If anything, it buys time for the regime to prepare for the next round.</p>
+
+        <p>The bounce back above $99 is the market correcting its own naïveté. But there will be more overcorrection in both directions as the deadline approaches.</p>
+
+        <p>If you're carrying inventory, hedging supply chains, or positioning in energy derivatives, the oscillation matters. Positions taken at $93 will be painful at $130. Positions taken at $144 will be questioned at $95. The ceasefire has created volatility that favors traders with real-time information and against long-term strategic positioning.</p>
+
+        <h3>What Comes in 48 Hours</h3>
+
+        <p>Three scenarios:</p>
+
+        <p><strong>One:</strong> Pakistan brokers an extension through diplomacy and gesture politics. Both sides agree to another two weeks. Oil drops again. Markets celebrate again. The core issues remain unresolved.</p>
+
+        <p><strong>Two:</strong> Iran returns to maximalist positions. The US holds firm. The ceasefire collapses. Oil spikes back to $130+. The conflict resumes with even more intensity because neither side has moved.</p>
+
+        <p><strong>Three:</strong> One side capitulates on the nuclear question. Either the US accepts unrestricted enrichment, or Iran accepts inspections and enrichment caps. This is unlikely because both demands contradict the other side's red lines.</p>
+
+        <p>The oil market is repricing as if Scenario One is locked in. It's not.</p>
+
+        <h3>The Lesson</h3>
+
+        <p>Markets are bad at distinguishing between pauses and resolutions. A ceasefire that resolves none of the underlying causes of conflict is just a reloading mechanism. The longer it holds, the more both sides prepare for the next round.</p>
+
+        <p>Position for the correction, not the celebration. When oil is at $93 and the Strait is still closed, you're not looking at peace. You're looking at a tactical pause in an unresolved conflict. The next move will be more aggressive than the last one because both sides will have used the pause to strengthen their positions.</p>
+
+        <p>The Iranian people deserve better than this regime. But until that changes, expect ceasefires to be pauses, not peace. And price accordingly.</p>
+    </article>
+
+    <!-- DIVIDER -->
+    <div class="article-divider">— ∼ —</div>
+
+    <!-- SIGNATURE -->
+    <div class="article-signature">— J. Soares</div>
+
+    <!-- CTA -->
+    <div class="article-cta">
+        <p class="cta-text">This is the kind of strategic clarity I bring to my private advisory clients. If you're a business leader carrying decisions too heavy for your inner circle, <a href="/call.html" class="cta-link">request private advisory access.</a></p>
+    </div>
+
+    <!-- SUBSTACK CTA -->
+    <div class="substack-cta">
+        <div class="substack-card">
+            <h4 data-fr="Abonnez-vous">Subscribe for Intelligence</h4>
+            <p data-fr="Recevez une analyse approfondie...">Get commentary on what's happening in political capitals and markets. Sent directly to your inbox.</p>
+            <a href="https://substack.com" class="btn-substack" data-fr="S'abonner maintenant">Subscribe Now</a>
+        </div>
+    </div>
+
+    <!-- BACK LINK -->
+    <div class="article-back">
+        <a href="/intelligence.html" class="back-link" data-fr="← Retour à l'intelligence">← Back to Intelligence</a>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-columns">
+                <div class="footer-col">
+                    <h4 data-fr="À propos">About</h4>
+                    <p>Joseph Soares is a senior strategic advisor to business leaders and entrepreneurs. Former Chief of Staff, Senate of Canada during COVID-19. Served in the Prime Minister's Office during the 2008 global financial crisis. Published in Forbes and Newsweek on leadership and decision-making.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 data-fr="Liens rapides">Quick Links</h4>
+                    <a href="/" data-fr="Accueil">Home</a>
+                    <a href="/advisory.html" data-fr="Conseil">Advisory</a>
+                    <a href="/intelligence.html" data-fr="Intelligence">Intelligence</a>
+                    <a href="/podcast.html" data-fr="Podcast">Podcast</a>
+                    <a href="/writing.html" data-fr="Écrits">Writing</a>
+                    <a href="/call.html" data-fr="Accès Conseil">Advisory Access</a>
+                </div>
+                <div class="footer-col">
+                    <h4 data-fr="Contact">Contact</h4>
+                    <p class="footer-creds">Joseph Soares<br>MBA, Adm.A., PMP</p>
+                    <a href="mailto:info@josephsoares.com">info@josephsoares.com</a>
+                    <a href="https://www.linkedin.com/in/soaresjoseph/">LinkedIn</a>
+                    <a href="https://substack.com">Substack</a>
+                    <p class="footer-creds" style="margin-top: 16px;"><a href="https://ibprom.com" style="color: inherit;">IBPROM Corp.</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div>&copy; 2026. All rights reserved.</div>
+                <div class="footer-legal">
+                    <a href="/privacy.html" data-fr="Politique de confidentialité">Privacy Policy</a>
+                    <a href="/terms.html" data-fr="Conditions d'utilisation">Terms of Service</a>
+                    <a href="/cookies.html" data-fr="Politique relative aux cookies">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function switchLang(lang) {
+            document.querySelectorAll('[data-fr]').forEach(el => {
+                if (lang === 'fr') {
+                    el.textContent = el.getAttribute('data-fr');
+                }
+            });
+            document.querySelectorAll('.lang-bar button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>
