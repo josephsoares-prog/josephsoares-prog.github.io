@@ -56,6 +56,32 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Corridor Intelligence — Full Analysis Articles -->
+  <url>
+    <loc>https://josephsoares.com/hungary-orban-magyar-april-2026.html</loc>
+    <lastmod>2026-04-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://josephsoares.com/islamabad-failed-blockade-april-2026.html</loc>
+    <lastmod>2026-04-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://josephsoares.com/ceasefire-that-isnt-april-2026.html</loc>
+    <lastmod>2026-04-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://josephsoares.com/canada-face-au-mur-avril-2026.html</loc>
+    <lastmod>2026-04-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
   <!-- PDF Assets — downloadable case study and offer sheet -->
   <url>
     <loc>https://josephsoares.com/assets/case-study-acquisition.pdf</loc>
