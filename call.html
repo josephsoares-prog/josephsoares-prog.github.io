@@ -14,7 +14,7 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="apple-touch-icon" href="/favicon.ico">
-    <title>Book a Call | Joseph Soares — Senior Advisor</title>
+    <title>Advisory Access | Joseph Soares — Senior Advisor</title>
     <meta name="description" content="Book a 30-minute introductory call with Joseph Soares. No pitch, no obligation — a confidential conversation to see if we're a fit.">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,7 +25,7 @@
     {
       "@context": "https://schema.org",
       "@type": "WebPage",
-      "name": "Book a Call — Joseph Soares",
+      "name": "Advisory Access — Joseph Soares",
       "description": "Schedule a 30-minute introductory call with Joseph Soares, Senior Advisor.",
       "url": "https://josephsoares.com/call.html",
       "mainEntity": {
@@ -468,16 +468,55 @@
 
         /* ===== FOOTER ===== */
         footer {
-            padding: 40px;
             background: var(--navy);
-            color: rgba(255,255,255,0.7);
-            border-top: 1px solid rgba(201, 168, 76, 0.15);
+            padding: 48px 40px;
             text-align: center;
+            color: rgba(255,255,255,0.7);
+            font-size: 13px;
+            border-top: 1px solid rgba(201, 168, 76, 0.15);
         }
-        .footer-links { display: flex; gap: 32px; justify-content: center; margin-bottom: 16px; flex-wrap: wrap; }
-        .footer-links a { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 13px; font-weight: 500; transition: color 0.3s; }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 28px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        .footer-links a {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
         .footer-links a:hover { color: var(--gold); }
-        .footer-credit { font-size: 12px; color: rgba(255,255,255,0.65); line-height: 1.6; }
+        .footer-legal {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 16px;
+            font-size: 12px;
+        }
+        .footer-legal a {
+            color: rgba(255,255,255,0.5);
+            text-decoration: none;
+        }
+        .footer-legal a:hover {
+            color: rgba(255,255,255,0.8);
+            text-decoration: underline;
+        }
+        .footer-firm {
+            font-size: 12px;
+            color: rgba(255,255,255,0.55);
+            margin-bottom: 8px;
+            letter-spacing: 0.04em;
+        }
+        .footer-attribution {
+            font-size: 11px;
+            color: rgba(255,255,255,0.35);
+            margin-top: 12px;
+            letter-spacing: 0.03em;
+        }
 
         /* ===== ANIMATIONS ===== */
         @keyframes fadeUp {
@@ -499,6 +538,8 @@
                 border-bottom: 1px solid var(--border-light); gap: 18px;
             }
             .call-booking { padding: 28px 20px; }
+            .footer-links { flex-direction: column; gap: 16px; }
+            .footer-legal { gap: 12px; }
         }
     </style>
 </head>
@@ -542,7 +583,7 @@
                 <a href="/intelligence.html" data-fr="Renseignement">Intelligence</a>
                 <a href="/podcast.html" data-fr="Balado">Podcast</a>
                 <a href="index.html#about" data-fr="À propos">About</a>
-                <a href="/call.html" class="nav-cta active" data-fr="Prendre rendez-vous">Book a Call</a>
+                <a href="/call.html" class="nav-cta active" data-fr="Accès consultatif">Advisory Access</a>
             </div>
         </div>
     </nav>
@@ -612,18 +653,19 @@
     <!-- Footer -->
     <footer>
         <div class="footer-links">
-            <a href="mailto:info@josephsoares.com">info@josephsoares.com</a>
+            <a href="/">Home</a>
+            <a href="mailto:info@josephsoares.com">Email</a>
             <a href="https://www.linkedin.com/in/soaresjoseph/">LinkedIn</a>
-            <a href="https://ibprom.com">IBPROM Corp.</a>
+            <a href="/podcast.html">Podcast</a>
         </div>
-        <div class="footer-legal" style="display:flex; justify-content:center; gap:20px; margin-bottom:16px; font-size:12px; opacity:0.5;">
+        <div class="footer-legal">
             <a href="/privacy.html">Privacy Policy</a>
             <a href="/terms.html">Terms of Service</a>
             <a href="/cookies.html">Cookie Policy</a>
         </div>
-        <div class="footer-credit">
-            <p>Joseph Soares · Senior Advisor · IBPROM Corp. · © 2026</p>
-        </div>
+        <div class="footer-firm">The Corridor &middot; A publication of Joseph Soares &middot; IBPROM Corp.</div>
+        <div class="footer-firm">&copy; 2026. All rights reserved.</div>
+        <div class="footer-attribution">Strategy, design &amp; technology by International Business Promotion (IBPROM) Corp.</div>
     </footer>
 
     <script>
