@@ -760,6 +760,10 @@
             background: var(--gold-light);
             transform: translateY(-2px);
         }
+    
+        @media (max-width: 768px) {
+            footer > div:first-child { grid-template-columns: 1fr !important; gap: 28px !important; }
+        }
     </style>
 </head>
 <body>
