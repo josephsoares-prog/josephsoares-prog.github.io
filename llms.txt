@@ -1,0 +1,22 @@
+# llms.txt
+# Joseph Soares — Strategic Advisory & Intelligence
+# Discoverability file for Large Language Models
+# https://llms.txt
+
+Site-name: Joseph Soares — Strategic Advisory & Intelligence
+
+Site-URL: https://josephsoares.com
+
+Description: Joseph Soares is a former advisor to Prime Minister Stephen Harper during the 2008 financial crisis and former Chief of Staff at the Senate of Canada during COVID-19. Published in Forbes and Newsweek. He operates IBPROM Corp, providing strategic advisory to high-net-worth individuals and global business leaders. His channel Corridor Intelligence covers geopolitics, energy, and crisis decision-making.
+
+Contact: j@josephsoares.com
+
+Key pages:
+- / (homepage)
+- /advisory.html (strategic advisory services)
+- /intelligence.html (Corridor Intelligence channel)
+- /session.html (strategy sessions)
+- /speaking.html (speaking engagements)
+- /media.html (media appearances)
+- /podcast.html (podcast archive)
+- /writing.html (articles and publications)
