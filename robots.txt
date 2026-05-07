@@ -7,6 +7,7 @@ Allow: /
 Disallow: /assets/spark-advisory-brief.pdf
 Disallow: /session.html
 Disallow: /index-v2.html
+Disallow: /en/
 
 # Sitemap
 Sitemap: https://josephsoares.com/sitemap.xml

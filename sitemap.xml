@@ -129,4 +129,12 @@
     <priority>0.75</priority>
   </url>
 
+  <!-- Added 2026-05-07: Corridor brand landing page (catches /corridor 404 traffic) -->
+  <url>
+    <loc>https://josephsoares.com/corridor.html</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
 </urlset>
