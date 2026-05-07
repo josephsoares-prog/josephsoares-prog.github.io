@@ -1,1051 +1,378 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-lang="en">
 <head>
-<!-- Google Analytics (GA4) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-DQXQMXZXLV"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-DQXQMXZXLV');
-</script>
-    <meta charset="UTF-8">
-    <link rel="canonical" href="https://josephsoares.com/newswatch.html">
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="apple-touch-icon" href="/favicon.ico">
-    <title>The Daily Brief | Corridor Intelligence</title>
-    <meta property="og:title" content="The Daily Brief | Corridor Intelligence">
-    <meta property="og:description" content="The Daily Brief — BLUF intelligence on global politics, markets, defence, technology, and natural resources. Modeled on the President's Daily Brief. By Joseph Soares.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://josephsoares.com/newswatch.html">
-    
-    <meta name="description" content="The Daily Brief — BLUF intelligence on global politics, markets, defence, technology, and natural resources. Modeled on the President's Daily Brief. By Joseph Soares.">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "name": "The Daily Brief — Corridor Intelligence",
-      "url": "https://josephsoares.com/newswatch",
-      "description": "Daily intelligence briefing for decision-makers. BLUF-first analysis of global politics, markets, defence, technology, natural resources, and logistics.",
-      "inLanguage": ["en", "fr"],
-      "author": {
-        "@type": "Person",
-        "name": "Joseph Soares",
-        "url": "https://josephsoares.com"
-      }
-    }
-    </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Sans+3:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --navy: #0b1a2e;
-            --navy-mid: #0f2240;
-            --navy-light: #132d54;
-            --gold: #c9a84c;
-            --gold-light: #dfc07a;
-            --gold-muted: rgba(201, 168, 76, 0.12);
-            --cream: #f5f1eb;
-            --white: #ffffff;
-            --text-dark: #1a1a2e;
-            --text-mid: #4a4a5a;
-            --text-light: rgba(255,255,255,0.75);
-            --border-light: rgba(201, 168, 76, 0.2);
-            --live-green: #2ecc71;
-            --pdb-bg: #080f1a;
-            --pdb-card: #0c1829;
-            --pdb-border: rgba(201, 168, 76, 0.15);
-            --pdb-accent: #1a3050;
-            --classified-red: #c0392b;
-            --mono: 'JetBrains Mono', 'Courier New', monospace;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-
-        body {
-            font-family: 'Source Sans 3', -apple-system, sans-serif;
-            color: var(--text-light);
-            background: var(--pdb-bg);
-            -webkit-font-smoothing: antialiased;
-        }
-
-        /* ===== LANG SWITCHER ===== */
-        .lang-bar {
-            position: fixed;
-            top: 0; left: 0; right: 0;
-            z-index: 200;
-            background: #04080f;
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            padding: 0 40px;
-            height: 32px;
-            border-bottom: 1px solid rgba(201, 168, 76, 0.08);
-        }
-        .lang-bar button {
-            background: none; border: none; cursor: pointer;
-            font-family: var(--mono);
-            font-size: 10px; font-weight: 500;
-            letter-spacing: 2px; text-transform: uppercase;
-            color: rgba(255,255,255,0.3);
-            padding: 6px 12px; transition: color 0.3s;
-        }
-        .lang-bar button:hover { color: var(--gold-light); }
-        .lang-bar button.active { color: var(--gold); }
-        .lang-bar .lang-sep { color: rgba(255,255,255,0.1); font-size: 11px; }
-
-        /* ===== NAV ===== */
-        nav {
-            position: fixed; top: 32px; left: 0; right: 0; z-index: 100;
-            background: rgba(8, 15, 26, 0.97);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--pdb-border);
-            padding: 0 40px;
-        }
-        .nav-inner {
-            max-width: 1400px; margin: 0 auto;
-            display: flex; justify-content: space-between; align-items: center; height: 64px;
-        }
-        .nav-name {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 22px; font-weight: 700; color: var(--white);
-            text-decoration: none; letter-spacing: 0.02em;
-        }
-        .nav-name span { color: var(--gold); }
-        .nav-links { display: flex; gap: 28px; align-items: center; }
-        .nav-links a {
-            color: rgba(255,255,255,0.5); text-decoration: none;
-            font-size: 13px; font-weight: 500; letter-spacing: 0.04em; transition: color 0.3s;
-        }
-        .nav-links a:hover { color: var(--gold); }
-        .nav-links a.nav-active { color: var(--gold); }
-        .nav-cta {
-            background: var(--gold) !important; color: var(--navy) !important;
-            padding: 9px 22px !important; border-radius: 3px;
-            font-weight: 700 !important; font-size: 11px !important;
-            letter-spacing: 0.1em; text-transform: uppercase;
-        }
-        .nav-cta:hover { background: var(--gold-light) !important; }
-        .mobile-toggle {
-            display: none; background: none; border: none; cursor: pointer;
-            flex-direction: column; gap: 5px; padding: 4px;
-        }
-        .mobile-toggle span { display: block; width: 24px; height: 2px; background: var(--white); }
-
-        /* ===== CLASSIFICATION BANNER ===== */
-        .class-banner {
-            margin-top: 96px;
-            background: var(--pdb-accent);
-            border-bottom: 2px solid var(--gold);
-            padding: 14px 40px;
-            display: flex; align-items: center; justify-content: space-between;
-        }
-        .class-banner-left {
-            display: flex; align-items: center; gap: 16px;
-        }
-        .class-label {
-            font-family: var(--mono);
-            font-size: 11px; font-weight: 500;
-            letter-spacing: 3px; text-transform: uppercase;
-            color: var(--gold);
-            background: rgba(201, 168, 76, 0.1);
-            padding: 4px 14px; border: 1px solid var(--gold);
-            border-radius: 2px;
-        }
-        .class-title {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 24px; font-weight: 700; color: var(--white);
-            letter-spacing: 0.03em;
-        }
-        .class-date {
-            font-family: var(--mono);
-            font-size: 13px; color: rgba(255,255,255,0.5);
-            letter-spacing: 1px;
-        }
-        .live-dot {
-            display: inline-block; width: 8px; height: 8px;
-            background: var(--live-green); border-radius: 50%;
-            margin-right: 8px; animation: pulse-live 1s ease infinite;
-        }
-        @keyframes pulse-live { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
-
-        /* ===== BRIEF CONTAINER ===== */
-        .brief-container {
-            max-width: 900px; margin: 0 auto;
-            padding: 40px 40px 100px;
-        }
-
-        /* ===== SECTION HEADER ===== */
-        .section-header {
-            display: flex; align-items: center; gap: 14px;
-            margin: 48px 0 24px; padding-bottom: 12px;
-            border-bottom: 1px solid var(--pdb-border);
-            cursor: pointer; user-select: none;
-        }
-        .section-header:first-child { margin-top: 0; }
-        .section-emoji { font-size: 20px; }
-        .section-title {
-            font-family: var(--mono);
-            font-size: 13px; font-weight: 500;
-            letter-spacing: 3px; text-transform: uppercase;
-            color: var(--gold);
-        }
-        .section-count {
-            font-family: var(--mono);
-            font-size: 11px; color: rgba(255,255,255,0.3);
-            margin-left: auto; letter-spacing: 1px;
-        }
-        .section-toggle {
-            font-size: 14px; color: var(--gold); transition: transform 0.3s;
-        }
-        .section-toggle.collapsed { transform: rotate(-90deg); }
-
-        /* ===== INTELLIGENCE ARTICLE (PDB STYLE) ===== */
-        .intel-article {
-            background: var(--pdb-card);
-            border: 1px solid var(--pdb-border);
-            border-left: 3px solid var(--gold);
-            padding: 24px 28px;
-            margin-bottom: 16px;
-            border-radius: 0 4px 4px 0;
-            transition: border-color 0.3s, background 0.3s;
-        }
-        .intel-article:hover {
-            border-left-color: var(--gold-light);
-            background: #0e1d33;
-        }
-        .intel-meta {
-            display: flex; align-items: center; gap: 10px;
-            margin-bottom: 10px; flex-wrap: wrap;
-        }
-        .intel-tag {
-            font-family: var(--mono);
-            font-size: 10px; font-weight: 500;
-            letter-spacing: 2px; text-transform: uppercase;
-            color: var(--gold);
-            background: rgba(201, 168, 76, 0.1);
-            padding: 2px 10px; border-radius: 2px;
-        }
-        .intel-tag.priority {
-            color: #e74c3c;
-            background: rgba(231, 76, 60, 0.1);
-            border: 1px solid rgba(231, 76, 60, 0.3);
-        }
-        .intel-time {
-            font-family: var(--mono);
-            font-size: 11px; color: rgba(255,255,255,0.3);
-            margin-left: auto;
-        }
-        .intel-headline {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 20px; font-weight: 700; color: var(--white);
-            line-height: 1.3; margin-bottom: 12px;
-        }
-        .intel-headline a {
-            color: var(--white); text-decoration: none;
-            transition: color 0.3s;
-        }
-        .intel-headline a:hover { color: var(--gold); }
-        .intel-bluf {
-            font-size: 15px; line-height: 1.65; color: var(--text-light);
-            margin-bottom: 12px;
-        }
-        .intel-bluf strong { color: var(--gold-light); font-weight: 600; }
-        .intel-source {
-            display: flex; align-items: center; gap: 8px;
-            font-size: 12px; color: rgba(255,255,255,0.3);
-        }
-        .intel-source img {
-            width: 14px; height: 14px; border-radius: 2px; opacity: 0.6;
-        }
-        .intel-source a {
-            color: rgba(255,255,255,0.4); text-decoration: none;
-            transition: color 0.3s;
-        }
-        .intel-source a:hover { color: var(--gold); }
-
-        /* ===== DEEP DIVE ARTICLE ===== */
-        .deep-dive {
-            border-left-color: var(--live-green);
-        }
-        .deep-dive .intel-tag.deep {
-            color: var(--live-green);
-            background: rgba(46, 204, 113, 0.1);
-        }
-
-        /* ===== SOURCES FOOTER ===== */
-        .brief-footer {
-            margin-top: 60px; padding-top: 30px;
-            border-top: 1px solid var(--pdb-border);
-            text-align: center;
-        }
-        .brief-footer p {
-            font-family: var(--mono);
-            font-size: 11px; color: rgba(255,255,255,0.25);
-            letter-spacing: 1px; line-height: 2;
-        }
-        .brief-sig {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 16px; color: var(--gold);
-            margin-top: 16px; font-style: italic;
-        }
-
-        /* ===== SECTION ITEMS CONTAINER ===== */
-        .section-items { }
-        .section-items.collapsed { display: none; }
-
-        /* ===== FOOTER ===== */
-        footer {
-            background: #040810;
-            border-top: 1px solid var(--pdb-border);
-            padding: 50px 40px 30px;
-        }
-        .footer-inner {
-            max-width: 1200px; margin: 0 auto;
-            display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px;
-        }
-        .footer-brand {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 20px; font-weight: 700; color: var(--white); margin-bottom: 12px;
-        }
-        .footer-brand span { color: var(--gold); }
-        .footer-tagline {
-            font-size: 14px; color: rgba(255,255,255,0.4); line-height: 1.6;
-        }
-        footer h3 {
-            font-family: var(--mono); font-size: 11px;
-            letter-spacing: 2px; text-transform: uppercase;
-            color: var(--gold); margin-bottom: 16px;
-        }
-        footer ul { list-style: none; }
-        footer li { margin-bottom: 8px; }
-        footer a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 14px; transition: color 0.3s; }
-        footer a:hover { color: var(--gold); }
-        .footer-bottom {
-            max-width: 1200px; margin: 30px auto 0;
-            padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.05);
-            text-align: center;
-        }
-        .footer-credit { font-size: 13px; color: rgba(255,255,255,0.25); }
-
-        /* ===== RESPONSIVE ===== */
-        @media (max-width: 768px) {
-            .lang-bar { padding: 0 20px; }
-            nav { padding: 0 20px; }
-            .nav-links { display: none; position: absolute; top: 64px; left: 0; right: 0; background: rgba(8,15,26,0.98); flex-direction: column; padding: 20px; gap: 16px; border-bottom: 1px solid var(--pdb-border); }
-            .nav-links.open { display: flex; }
-            .mobile-toggle { display: flex; }
-            .class-banner { flex-direction: column; gap: 10px; padding: 14px 20px; text-align: center; }
-            .class-banner-left { flex-direction: column; gap: 8px; }
-            .brief-container { padding: 24px 20px 80px; }
-            .intel-article { padding: 18px 20px; }
-            .intel-headline { font-size: 18px; }
-            .footer-inner { grid-template-columns: 1fr; gap: 30px; }
-        }
-
-        /* ===== LANG TOGGLE ===== */
-        [data-fr] { }
-        body.fr [data-en] { display: none !important; }
-        body.fr [data-fr] { display: inline !important; }
-        body:not(.fr) [data-fr] { display: none !important; }
-
-        /* ===== PDB RANKED BRIEF ===== */
-        .pdb-brief {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        .pdb-item {
-            display: flex;
-            gap: 20px;
-            padding: 22px 0;
-            border-bottom: 1px solid rgba(201, 168, 76, 0.1);
-        }
-        .pdb-item:last-child {
-            border-bottom: none;
-        }
-        .pdb-rank {
-            font-family: var(--mono);
-            font-size: 13px;
-            font-weight: 600;
-            color: var(--gold);
-            min-width: 28px;
-            padding-top: 2px;
-            opacity: 0.7;
-        }
-        .pdb-content {
-            flex: 1;
-        }
-        .pdb-tag {
-            font-family: var(--mono);
-            font-size: 10px;
-            font-weight: 600;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: var(--gold);
-            margin-bottom: 6px;
-        }
-        .pdb-headline {
-            margin-bottom: 6px;
-        }
-        .pdb-headline a {
-            font-family: 'Source Sans 3', sans-serif;
-            font-size: 17px;
-            font-weight: 600;
-            color: var(--cream);
-            text-decoration: none;
-            line-height: 1.4;
-            transition: color 0.3s;
-        }
-        .pdb-headline a:hover {
-            color: var(--gold-light);
-        }
-        .pdb-source {
-            font-size: 12px;
-            color: rgba(255,255,255,0.3);
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-        .pdb-source img {
-            width: 14px; height: 14px;
-            border-radius: 2px;
-            opacity: 0.5;
-        }
-        .pdb-bluf {
-            font-size: 14px;
-            line-height: 1.65;
-            color: rgba(255,255,255,0.6);
-        }
-        @media (max-width: 768px) {
-            .pdb-item { gap: 14px; padding: 18px 0; }
-            .pdb-rank { min-width: 24px; font-size: 12px; }
-            .pdb-headline a { font-size: 16px; }
-        }
-
-            </style>
-  <!-- Apollo.io website visitor tracking -->
-  <script>function initApollo(){var n=Math.random().toString(36).substring(7),o=document.createElement("script");
-o.src="https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache="+n,o.async=!0,o.defer=!0,
-o.onload=function(){window.trackingFunctions.onLoad({appId:"69b933d5574de0002181290e"})},
-document.head.appendChild(o)}initApollo();</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Newswatch — Joseph Soares</title>
+<meta name="description" content="PDB-ranked daily intelligence brief. Bilingual (EN/FR). Top 30 articles by decision impact. Curated by Joseph Soares.">
+<style>
+  :root {
+    --bg: #0b1020; --panel: #121a33; --ink: #e7ecf7; --muted: #9aa6c4;
+    --accent: #c9a14a; --accent-2: #e2b657; --line: #1c2748; --link: #ffd47a;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: var(--bg); color: var(--ink); line-height: 1.55;
+  }
+  header {
+    padding: 32px 24px 18px; border-bottom: 1px solid var(--line);
+    background: linear-gradient(180deg, #0d1430 0%, #0b1020 100%);
+  }
+  .wrap { max-width: 920px; margin: 0 auto; }
+  h1 { font-size: 28px; margin: 0 0 6px; letter-spacing: 0.5px; color: var(--accent-2); }
+  .sub { color: var(--muted); font-size: 14px; }
+  .toolbar { display: flex; align-items: center; gap: 12px; margin-top: 14px; }
+  .lang-toggle button {
+    background: transparent; border: 1px solid var(--accent); color: var(--ink);
+    padding: 6px 12px; font: inherit; cursor: pointer; border-radius: 4px;
+  }
+  .lang-toggle button.active { background: var(--accent); color: #1a1300; }
+  main { padding: 24px; }
+  .pdb-item {
+    display: grid; grid-template-columns: 56px 1fr; gap: 14px;
+    padding: 18px 0; border-bottom: 1px solid var(--line);
+  }
+  .pdb-rank {
+    font-family: "Helvetica Neue", Arial, sans-serif; font-weight: 700;
+    font-size: 28px; color: var(--accent-2); text-align: right;
+  }
+  .pdb-content { display: flex; flex-direction: column; }
+  .pdb-tag {
+    display: inline-block; align-self: flex-start;
+    background: var(--accent); color: #1a1300; font-family: Arial, sans-serif;
+    font-weight: 700; font-size: 11px; letter-spacing: 1.2px;
+    padding: 3px 8px; border-radius: 3px; margin-bottom: 6px; text-transform: uppercase;
+  }
+  .pdb-headline {
+    color: var(--link); text-decoration: none; font-size: 19px;
+    font-weight: 600; line-height: 1.3;
+  }
+  .pdb-headline:hover { text-decoration: underline; }
+  .pdb-source {
+    color: var(--muted); font-family: Arial, sans-serif;
+    font-size: 12px; margin: 4px 0 8px;
+  }
+  .pdb-bluf { margin: 0; color: var(--ink); font-size: 15px; }
+  footer {
+    padding: 24px; text-align: center; color: var(--muted);
+    font-size: 12px; border-top: 1px solid var(--line);
+  }
+  @media (max-width: 600px) {
+    .pdb-item { grid-template-columns: 40px 1fr; gap: 10px; }
+    .pdb-rank { font-size: 22px; }
+    .pdb-headline { font-size: 17px; }
+  }
+</style>
 </head>
 <body>
-
-<!-- Language Bar -->
-<div class="lang-bar">
-    <button class="active" onclick="setLang('en')" id="btn-en">EN</button>
-    <span class="lang-sep">|</span>
-    <button onclick="setLang('fr')" id="btn-fr">FR</button>
-</div>
-
-<!-- Navigation -->
-<nav>
-    <div class="nav-inner">
-        <a href="index.html" class="nav-name">Joseph <span>Soares</span></a>
-        <button class="mobile-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">
-            <span></span><span></span><span></span>
-        </button>
-        <div class="nav-links">
-            <a href="index.html#services" data-en>Advisory</a>
-            <a href="intelligence.html" data-en>Intelligence</a>
-            <a href="newswatch.html" class="nav-active" data-en>The Daily Brief</a>
-            <a href="podcast.html" data-en>Podcast</a>
-            <a href="https://calendar.app.google/pEyrPMvGY2TuEndcA" class="nav-cta" data-en>Book a Call</a>
-            <a href="index.html#services" data-fr>Conseil</a>
-            <a href="intelligence.html" data-fr>Renseignement</a>
-            <a href="newswatch.html" class="nav-active" data-fr>Le Briefing</a>
-            <a href="podcast.html" data-fr>Balado</a>
-            <a href="https://calendar.app.google/pEyrPMvGY2TuEndcA" class="nav-cta" data-fr>R&eacute;server un Appel</a>
-        </div>
+<header>
+  <div class="wrap">
+    <h1 data-en="Newswatch — PDB Morning Brief" data-fr="Newswatch — Briefing matinal PDB">Newswatch — PDB Morning Brief</h1>
+    <div class="sub" data-en="Thursday, May 07, 2026 · Top 30 by decision impact · Curated by Joseph Soares" data-fr="Thursday, May 07, 2026 · Top 30 par impact décisionnel · Préparé par Joseph Soares">Thursday, May 07, 2026 · Top 30 by decision impact · Curated by Joseph Soares</div>
+    <div class="toolbar">
+      <div class="lang-toggle">
+        <button id="btn-en" class="active" onclick="setLang('en')">EN</button>
+        <button id="btn-fr" onclick="setLang('fr')">FR</button>
+      </div>
     </div>
-</nav>
-
-<!-- Classification Banner -->
-<div class="class-banner">
-    <div class="class-banner-left">
-        <span class="class-label" data-en>OPEN SOURCE</span>
-        <span class="class-label" data-fr>SOURCE OUVERTE</span>
-        <span class="class-title" data-en>The Daily Brief</span>
-        <span class="class-title" data-fr>Le Briefing Quotidien</span>
+  </div>
+</header>
+<main>
+  <div class="wrap">
+    
+    <div class="pdb-item">
+      <div class="pdb-rank">1</div>
+      <div class="pdb-content">
+        <span class="pdb-tag" data-en="DIPLOMACY" data-fr="DIPLOMATIE">DIPLOMACY</span>
+        <a class="pdb-headline" href="https://www.bbc.com/news/articles/c80zry42lp9o" target="_blank" rel="noopener" data-en="Iran weighing US proposal as Trump says war will be &#x27;over quickly&#x27;" data-fr="L&#x27;Iran étudie la proposition américaine alors que Trump prédit une guerre qui sera &#x27;rapidement terminée&#x27;">Iran weighing US proposal as Trump says war will be &#x27;over quickly&#x27;</a>
+        <span class="pdb-source">BBC World · bbc.com</span>
+        <p class="pdb-bluf" data-en="Iran is publicly deliberating a US ceasefire framework while Washington signals a short war. Decision-makers must price in either rapid de-escalation that releases oil pressure or a hard rejection that forces a wider US military commitment within days." data-fr="L&#x27;Iran délibère publiquement sur un cadre de cessez-le-feu américain pendant que Washington annonce une guerre courte. Les décideurs doivent intégrer soit une désescalade rapide libérant la pression pétrolière, soit un refus dur forçant un engagement militaire américain élargi en quelques jours.">Iran is publicly deliberating a US ceasefire framework while Washington signals a short war. Decision-makers must price in either rapid de-escalation that releases oil pressure or a hard rejection that forces a wider US military commitment within days.</p>
+      </div>
     </div>
-    <div>
-        <span class="live-dot"></span>
-        <span class="class-date" id="brief-date"></span>
+    <div class="pdb-item">
+      <div class="pdb-rank">2</div>
+      <div class="pdb-content">
+        <span class="pdb-tag" data-en="HORMUZ" data-fr="HORMUZ">HORMUZ</span>
+        <a class="pdb-headline" href="https://www.cgtn.com/world" target="_blank" rel="noopener" data-en="Wang Yi: Blockade of Strait of Hormuz not in common interests" data-fr="Wang Yi : un blocus du détroit d&#x27;Ormuz ne sert pas l&#x27;intérêt commun">Wang Yi: Blockade of Strait of Hormuz not in common interests</a>
+        <span class="pdb-source">CGTN · cgtn.com</span>
+        <p class="pdb-bluf" data-en="Beijing has openly told Tehran a Hormuz closure is unacceptable, removing China as a diplomatic shield for Iran. This is the single largest signal yet that Iran&#x27;s escalation options are narrowing and that the global oil chokepoint may stay open." data-fr="Pékin a publiquement signifié à Téhéran qu&#x27;une fermeture d&#x27;Ormuz est inacceptable, retirant à l&#x27;Iran sa couverture diplomatique chinoise. C&#x27;est le plus fort signal à ce jour que les options d&#x27;escalade iraniennes se resserrent et que le point d&#x27;étranglement pétrolier mondial pourrait rester ouvert.">Beijing has openly told Tehran a Hormuz closure is unacceptable, removing China as a diplomatic shield for Iran. This is the single largest signal yet that Iran&#x27;s escalation options are narrowing and that the global oil chokepoint may stay open.</p>
+      </div>
     </div>
-</div>
-
-<!-- Main Brief -->
-<div class="brief-container">
-
-    <!-- ============================================ -->
-    <!-- TODAY'S CURATED BRIEF -->
-    <!-- ============================================ -->
-    <div class="pdb-brief">
-        <div class="pdb-item">
-            <div class="pdb-rank">01</div>
-            <div class="pdb-content">
-                <div class="pdb-tag" data-en>DIPLOMACY</div>
-                <div class="pdb-tag" data-fr>DIPLOMATIE</div>
-                <div class="pdb-headline">
-                    <a href="https://www.reuters.com/world/middle-east/" target="_blank" rel="noopener" data-en>Iran Has Formulated Response to Ceasefire Proposals &mdash; Foreign Ministry</a>
-                    <a href="https://www.reuters.com/world/middle-east/" target="_blank" rel="noopener" data-fr>L&rsquo;Iran a formul&eacute; sa r&eacute;ponse aux propositions de cessez-le-feu &mdash; Minist&egrave;re des Affaires &eacute;trang&egrave;res</a>
-                </div>
-                <div class="pdb-source"><img src="https://www.google.com/s2/favicons?domain=reuters.com&sz=16" alt="Reuters"> Reuters</div>
-                <div class="pdb-bluf" data-en>Tehran signaling it has a counter-proposal changes the diplomatic tempo. The question is whether the terms are a genuine opening or a stall tactic &mdash; watch for Washington&rsquo;s response within 48 hours.</div>
-                <div class="pdb-bluf" data-fr>T&eacute;h&eacute;ran signale une contre-proposition, changeant le tempo diplomatique. La question : ouverture r&eacute;elle ou tactique dilatoire. &Agrave; surveiller : la r&eacute;ponse de Washington sous 48 heures.</div>
-            </div>
-        </div>
-        <div class="pdb-item">
-            <div class="pdb-rank">02</div>
-            <div class="pdb-content">
-                <div class="pdb-tag" data-en>DIPLOMACY</div>
-                <div class="pdb-tag" data-fr>DIPLOMATIE</div>
-                <div class="pdb-headline">
-                    <a href="https://www.foreignaffairs.com/middle-east/avoiding-next-gulf-war" target="_blank" rel="noopener" data-en>Avoiding the Next Gulf War</a>
-                    <a href="https://www.foreignaffairs.com/middle-east/avoiding-next-gulf-war" target="_blank" rel="noopener" data-fr>&Eacute;viter la prochaine guerre du Golfe</a>
-                </div>
-                <div class="pdb-source"><img src="https://www.google.com/s2/favicons?domain=foreignaffairs.com&sz=16" alt="Foreign Affairs"> Foreign Affairs</div>
-                <div class="pdb-bluf" data-en>Foreign Affairs framing the Iran crisis as a potential full-scale Gulf war signals that the establishment foreign policy community sees escalation risk as materially higher than the White House acknowledges publicly.</div>
-                <div class="pdb-bluf" data-fr>Foreign Affairs cadre la crise iranienne comme une guerre du Golfe potentielle &mdash; signe que l&rsquo;&eacute;tablissement voit un risque d&rsquo;escalade sup&eacute;rieur &agrave; ce que la Maison-Blanche reconna&icirc;t publiquement.</div>
-            </div>
-        </div>
-        <div class="pdb-item">
-            <div class="pdb-rank">03</div>
-            <div class="pdb-content">
-                <div class="pdb-tag" data-en>ENERGY</div>
-                <div class="pdb-tag" data-fr>&Eacute;NERGIE</div>
-                <div class="pdb-headline">
-                    <a href="https://oilprice.com/Latest-Energy-News/World-News/Saudi-Arabia-Sets-Record-Premium-for-Flagship-Crude-as-Hormuz-Crisis-Deepens.html" target="_blank" rel="noopener" data-en>Saudi Arabia Sets Record Premium for Flagship Crude as Hormuz Crisis Deepens</a>
-                    <a href="https://oilprice.com/Latest-Energy-News/World-News/Saudi-Arabia-Sets-Record-Premium-for-Flagship-Crude-as-Hormuz-Crisis-Deepens.html" target="_blank" rel="noopener" data-fr>L&rsquo;Arabie saoudite fixe une prime record pour son brut phare alors que la crise d&rsquo;Hormuz s&rsquo;aggrave</a>
-                </div>
-                <div class="pdb-source"><img src="https://www.google.com/s2/favicons?domain=oilprice.com&sz=16" alt="OilPrice"> OilPrice</div>
-                <div class="pdb-bluf" data-en>Record premiums on Saudi crude mean Hormuz chokepoint risk is now fully priced into physical markets. This flows directly into consumer prices, shipping rates, and inflation forecasts.</div>
-                <div class="pdb-bluf" data-fr>Les primes records sur le brut saoudien signifient que le risque d&rsquo;Hormuz est pleinement int&eacute;gr&eacute; aux march&eacute;s physiques &mdash; r&eacute;percussions directes sur les prix, le fret et l&rsquo;inflation.</div>
-            </div>
-        </div>
-        <div class="pdb-item">
-            <div class="pdb-rank">04</div>
-            <div class="pdb-content">
-                <div class="pdb-tag" data-en>ENERGY</div>
-                <div class="pdb-tag" data-fr>&Eacute;NERGIE</div>
-                <div class="pdb-headline">
-                    <a href="https://oilprice.com/Latest-Energy-News/World-News/Nearly-50-Qatar-LNG-Tankers-Sit-Idle-Across-Asia.html" target="_blank" rel="noopener" data-en>Nearly 50 Qatar LNG Tankers Sit Idle Across Asia</a>
-                    <a href="https://oilprice.com/Latest-Energy-News/World-News/Nearly-50-Qatar-LNG-Tankers-Sit-Idle-Across-Asia.html" target="_blank" rel="noopener" data-fr>Pr&egrave;s de 50 m&eacute;thaniers qataris inactifs en Asie</a>
-                </div>
-                <div class="pdb-source"><img src="https://www.google.com/s2/favicons?domain=oilprice.com&sz=16" alt="OilPrice"> OilPrice</div>
-                <div class="pdb-bluf" data-en>Idle LNG tankers signal either demand collapse or routing disruption. A leading indicator for Asian energy security and global LNG spot pricing &mdash; Hormuz is reshaping physical trade flows in real time.</div>
-                <div class="pdb-bluf" data-fr>Les m&eacute;thaniers inactifs signalent un effondrement de la demande ou un probl&egrave;me de routage &mdash; indicateur avanc&eacute; pour la s&eacute;curit&eacute; &eacute;nerg&eacute;tique asiatique.</div>
-            </div>
-        </div>
-        <div class="pdb-item">
-            <div class="pdb-rank">05</div>
-            <div class="pdb-content">
-                <div class="pdb-tag" data-en>ENERGY</div>
-                <div class="pdb-tag" data-fr>&Eacute;NERGIE</div>
-                <div class="pdb-headline">
-                    <a href="https://www.caixinglobal.com" target="_blank" rel="noopener" data-en>Energy Shockwaves From U.S.-Iran War Hit Global Economy</a>
-                    <a href="https://www.caixinglobal.com" target="_blank" rel="noopener" data-fr>Les ondes de choc &eacute;nerg&eacute;tiques de la guerre &Eacute;.-U./Iran frappent l&rsquo;&eacute;conomie mondiale</a>
-                </div>
-                <div class="pdb-source"><img src="https://www.google.com/s2/favicons?domain=caixinglobal.com&sz=16" alt="Caixin Global"> Caixin Global</div>
-                <div class="pdb-bluf" data-en>When China&rsquo;s most serious financial publication frames this as &ldquo;shockwaves,&rdquo; it reflects how Beijing is calculating the economic cost. China is the world&rsquo;s largest oil importer &mdash; their pain threshold shapes the diplomatic endgame.</div>
-                <div class="pdb-bluf" data-fr>Quand la publication financi&egrave;re la plus s&eacute;rieuse de Chine utilise &laquo; ondes de choc &raquo;, cela refl&egrave;te le calcul de P&eacute;kin. La Chine, premier importateur mondial de p&eacute;trole, fa&ccedil;onne le d&eacute;nouement diplomatique.</div>
-            </div>
-        </div>
-        <div class="pdb-item">
-            <div class="pdb-rank">06</div>
-            <div class="pdb-content">
-                <div class="pdb-tag" data-en>MARKETS</div>
-                <div class="pdb-tag" data-fr>MARCH&Eacute;S</div>
-                <div class="pdb-headline">
-                    <a href="https://www.cnbc.com/2026/04/06/jpmorgan-ceo-jamie-dimon-annual-letter-risks.html" target="_blank" rel="noopener" data-en>JPMorgan CEO Jamie Dimon Cites Risks in Geopolitics, AI in Annual Letter</a>
-                    <a href="https://www.cnbc.com/2026/04/06/jpmorgan-ceo-jamie-dimon-annual-letter-risks.html" target="_blank" rel="noopener" data-fr>Le PDG de JPMorgan Jamie Dimon signale des risques g&eacute;opolitiques et li&eacute;s &agrave; l&rsquo;IA</a>
-                </div>
-                <div class="pdb-source"><img src="https://www.google.com/s2/favicons?domain=cnbc.com&sz=16" alt="CNBC"> CNBC</div>
-                <div class="pdb-bluf" data-en>When Dimon flags risk publicly, institutional capital listens. His pairing of geopolitical instability with AI disruption signals JPMorgan is pricing both into forward guidance &mdash; a leading indicator for corporate investment posture through Q3.</div>
-                <div class="pdb-bluf" data-fr>Quand Dimon signale un risque, le capital institutionnel &eacute;coute. Le couplage instabilit&eacute; g&eacute;opolitique + disruption IA est un indicateur avanc&eacute; de la posture d&rsquo;investissement des entreprises.</div>
-            </div>
-        </div>
-        <div class="pdb-item">
-            <div class="pdb-rank">07</div>
-            <div class="pdb-content">
-                <div class="pdb-tag" data-en>DEFENCE</div>
-                <div class="pdb-tag" data-fr>D&Eacute;FENSE</div>
-                <div class="pdb-headline">
-                    <a href="https://breakingdefense.com" target="_blank" rel="noopener" data-en>Golden Dome, Out-Years and Lots of Missiles: Details of Trump&rsquo;s $1.5T Defense Budget</a>
-                    <a href="https://breakingdefense.com" target="_blank" rel="noopener" data-fr>Golden Dome et missiles : les d&eacute;tails du budget de d&eacute;fense de 1 500 milliards de Trump</a>
-                </div>
-                <div class="pdb-source"><img src="https://www.google.com/s2/favicons?domain=breakingdefense.com&sz=16" alt="Breaking Defense"> Breaking Defense</div>
-                <div class="pdb-bluf" data-en>A $1.5 trillion defense budget is a structural signal, not a one-year line item. The Golden Dome missile defense program and out-year procurement commitments lock in spending trajectories that reshape the defence-industrial base for a decade.</div>
-                <div class="pdb-bluf" data-fr>Un budget de d&eacute;fense de 1 500 milliards est un signal structurel. Le programme Golden Dome et les engagements d&rsquo;approvisionnement verrouillent des trajectoires de d&eacute;penses qui remodeleront la base industrielle de d&eacute;fense pour une d&eacute;cennie.</div>
-            </div>
-        </div>
-        <div class="pdb-item">
-            <div class="pdb-rank">08</div>
-            <div class="pdb-content">
-                <div class="pdb-tag" data-en>DEFENCE</div>
-                <div class="pdb-tag" data-fr>D&Eacute;FENSE</div>
-                <div class="pdb-headline">
-                    <a href="https://www.janes.com" target="_blank" rel="noopener" data-en>Pentagon Budget 2027: Proposed Spending Plans Seek to Increase US Navy Shipbuilding</a>
-                    <a href="https://www.janes.com" target="_blank" rel="noopener" data-fr>Budget du Pentagone 2027 : les plans de d&eacute;penses visent &agrave; augmenter la construction navale am&eacute;ricaine</a>
-                </div>
-                <div class="pdb-source"><img src="https://www.google.com/s2/favicons?domain=janes.com&sz=16" alt="Janes"> Janes</div>
-                <div class="pdb-bluf" data-en>Increased Navy shipbuilding in the context of the Hormuz crisis is not coincidence &mdash; it is force-structure signaling. The US is telling adversaries and allies alike that it intends to hold maritime dominance through the next decade.</div>
-                <div class="pdb-bluf" data-fr>L&rsquo;augmentation de la construction navale dans le contexte d&rsquo;Hormuz n&rsquo;est pas une co&iuml;ncidence &mdash; c&rsquo;est un signal de posture de force. Les &Eacute;.-U. affirment leur intention de maintenir la dominance maritime.</div>
-            </div>
-        </div>
-        <div class="pdb-item">
-            <div class="pdb-rank">09</div>
-            <div class="pdb-content">
-                <div class="pdb-tag" data-en>GLOBAL</div>
-                <div class="pdb-tag" data-fr>MONDIAL</div>
-                <div class="pdb-headline">
-                    <a href="https://www.bbc.com/news/articles/cx2vpz1kwreo" target="_blank" rel="noopener" data-en>How Rescue of US Airman in Remote Part of Iran Unfolded</a>
-                    <a href="https://www.bbc.com/news/articles/cx2vpz1kwreo" target="_blank" rel="noopener" data-fr>Comment le sauvetage du pilote am&eacute;ricain en Iran s&rsquo;est d&eacute;roul&eacute;</a>
-                </div>
-                <div class="pdb-source"><img src="https://www.google.com/s2/favicons?domain=bbc.com&sz=16" alt="BBC"> BBC</div>
-                <div class="pdb-bluf" data-en>Operational detail from this rescue reveals capability and willingness to project force inside Iranian territory &mdash; recalibrating Tehran&rsquo;s risk calculus and reshaping the negotiating environment for ceasefire talks.</div>
-                <div class="pdb-bluf" data-fr>Les d&eacute;tails op&eacute;rationnels r&eacute;v&egrave;lent la capacit&eacute; et la volont&eacute; de projeter la force en territoire iranien &mdash; recalibrant le calcul de risque de T&eacute;h&eacute;ran.</div>
-            </div>
-        </div>
-        <div class="pdb-item">
-            <div class="pdb-rank">10</div>
-            <div class="pdb-content">
-                <div class="pdb-tag" data-en>GLOBAL</div>
-                <div class="pdb-tag" data-fr>MONDIAL</div>
-                <div class="pdb-headline">
-                    <a href="https://www.bbc.com/news/articles/cy01vg7x5ppo" target="_blank" rel="noopener" data-en>Trump Declares Victory After Rescue but Threats to US Operation in Iran Still Loom</a>
-                    <a href="https://www.bbc.com/news/articles/cy01vg7x5ppo" target="_blank" rel="noopener" data-fr>Trump d&eacute;clare victoire mais les menaces persistent sur l&rsquo;op&eacute;ration en Iran</a>
-                </div>
-                <div class="pdb-source"><img src="https://www.google.com/s2/favicons?domain=bbc.com&sz=16" alt="BBC"> BBC</div>
-                <div class="pdb-bluf" data-en>The &ldquo;mission accomplished&rdquo; framing creates a political ceiling &mdash; any escalation becomes harder to justify domestically. Watch whether this declaration constrains or enables the next move on Iran.</div>
-                <div class="pdb-bluf" data-fr>Le cadrage &laquo; mission accomplie &raquo; cr&eacute;e un plafond politique. Toute escalade devient plus difficile &agrave; justifier. &Agrave; surveiller : contrainte ou tr&eacute;mplin?</div>
-            </div>
-        </div>
-        <div class="pdb-item">
-            <div class="pdb-rank">11</div>
-            <div class="pdb-content">
-                <div class="pdb-tag" data-en>INTELLIGENCE</div>
-                <div class="pdb-tag" data-fr>RENSEIGNEMENT</div>
-                <div class="pdb-headline">
-                    <a href="https://www.justsecurity.org" target="_blank" rel="noopener" data-en>How Good Is Our Intelligence on Iran?</a>
-                    <a href="https://www.justsecurity.org" target="_blank" rel="noopener" data-fr>Quelle est la qualit&eacute; de notre renseignement sur l&rsquo;Iran?</a>
-                </div>
-                <div class="pdb-source"><img src="https://www.google.com/s2/favicons?domain=justsecurity.org&sz=16" alt="Just Security"> Just Security</div>
-                <div class="pdb-bluf" data-en>The quality of US intelligence on Iran determines the ceiling on every diplomatic and military option. If collection gaps exist, decision-makers are operating with more uncertainty than the confident public posture suggests.</div>
-                <div class="pdb-bluf" data-fr>La qualit&eacute; du renseignement am&eacute;ricain sur l&rsquo;Iran d&eacute;termine le plafond de chaque option. Si des lacunes existent, les d&eacute;cideurs op&egrave;rent avec plus d&rsquo;incertitude que la posture publique ne le sugg&egrave;re.</div>
-            </div>
-        </div>
-        <div class="pdb-item">
-            <div class="pdb-rank">12</div>
-            <div class="pdb-content">
-                <div class="pdb-tag" data-en>NUCLEAR</div>
-                <div class="pdb-tag" data-fr>NUCL&Eacute;AIRE</div>
-                <div class="pdb-headline">
-                    <a href="https://news.un.org" target="_blank" rel="noopener" data-en>UN Nuclear Agency Chief &lsquo;Deeply Concerned&rsquo; by Reports of Latest Attack on Iran Power Plant</a>
-                    <a href="https://news.un.org" target="_blank" rel="noopener" data-fr>Le chef de l&rsquo;AIEA &laquo; profond&eacute;ment pr&eacute;occup&eacute; &raquo; par les rapports d&rsquo;attaque sur la centrale iranienne</a>
-                </div>
-                <div class="pdb-source"><img src="https://www.google.com/s2/favicons?domain=news.un.org&sz=16" alt="UN News"> UN News</div>
-                <div class="pdb-bluf" data-en>Attacks on nuclear facilities cross a threshold that changes the character of the conflict. IAEA concern is a leading indicator for international intervention pressure and potential Security Council action.</div>
-                <div class="pdb-bluf" data-fr>Les attaques sur des installations nucl&eacute;aires franchissent un seuil qui change le caract&egrave;re du conflit. L&rsquo;inqui&eacute;tude de l&rsquo;AIEA est un indicateur avanc&eacute; de pression pour une intervention internationale.</div>
-            </div>
-        </div>
-        <div class="pdb-item">
-            <div class="pdb-rank">13</div>
-            <div class="pdb-content">
-                <div class="pdb-tag" data-en>GEOPOLITICS</div>
-                <div class="pdb-tag" data-fr>G&Eacute;OPOLITIQUE</div>
-                <div class="pdb-headline">
-                    <a href="https://www.foreignaffairs.com" target="_blank" rel="noopener" data-en>Europe Is Stuck With America</a>
-                    <a href="https://www.foreignaffairs.com" target="_blank" rel="noopener" data-fr>L&rsquo;Europe est li&eacute;e &agrave; l&rsquo;Am&eacute;rique</a>
-                </div>
-                <div class="pdb-source"><img src="https://www.google.com/s2/favicons?domain=foreignaffairs.com&sz=16" alt="Foreign Affairs"> Foreign Affairs</div>
-                <div class="pdb-bluf" data-en>The transatlantic dependency thesis matters because it constrains Europe&rsquo;s capacity for independent action on Iran, trade, and defence. For European leaders, strategic autonomy remains aspiration, not capability.</div>
-                <div class="pdb-bluf" data-fr>La th&egrave;se de la d&eacute;pendance transatlantique contraint la capacit&eacute; d&rsquo;action ind&eacute;pendante de l&rsquo;Europe sur l&rsquo;Iran, le commerce et la d&eacute;fense. L&rsquo;autonomie strat&eacute;gique reste une aspiration.</div>
-            </div>
-        </div>
-        <div class="pdb-item">
-            <div class="pdb-rank">14</div>
-            <div class="pdb-content">
-                <div class="pdb-tag" data-en>GEOPOLITICS</div>
-                <div class="pdb-tag" data-fr>G&Eacute;OPOLITIQUE</div>
-                <div class="pdb-headline">
-                    <a href="https://warontherocks.com" target="_blank" rel="noopener" data-en>The Age of Unlearning: How Democracies Lost Their Grip on Strategic Time</a>
-                    <a href="https://warontherocks.com" target="_blank" rel="noopener" data-fr>L&rsquo;&egrave;re du d&eacute;sapprentissage : comment les d&eacute;mocraties ont perdu le sens du temps strat&eacute;gique</a>
-                </div>
-                <div class="pdb-source"><img src="https://www.google.com/s2/favicons?domain=warontherocks.com&sz=16" alt="War on the Rocks"> War on the Rocks</div>
-                <div class="pdb-bluf" data-en>Strategic time compression is why democracies keep getting surprised &mdash; by COVID, by Ukraine, by Hormuz. This analysis frames the structural disadvantage that shapes every crisis response going forward.</div>
-                <div class="pdb-bluf" data-fr>La compression du temps strat&eacute;gique explique pourquoi les d&eacute;mocraties sont r&eacute;p&eacute;titivement surprises. Cette analyse cadre le d&eacute;savantage structurel qui fa&ccedil;onne chaque r&eacute;ponse de crise.</div>
-            </div>
-        </div>
-        <div class="pdb-item">
-            <div class="pdb-rank">15</div>
-            <div class="pdb-content">
-                <div class="pdb-tag" data-en>MARKETS</div>
-                <div class="pdb-tag" data-fr>MARCH&Eacute;S</div>
-                <div class="pdb-headline">
-                    <a href="https://www.wsj.com" target="_blank" rel="noopener" data-en>Gulf Funds Agree to Back Paramount&rsquo;s $81 Billion Takeover of Warner</a>
-                    <a href="https://www.wsj.com" target="_blank" rel="noopener" data-fr>Les fonds du Golfe soutiennent le rachat de Warner par Paramount pour 81 milliards</a>
-                </div>
-                <div class="pdb-source"><img src="https://www.google.com/s2/favicons?domain=wsj.com&sz=16" alt="WSJ"> WSJ</div>
-                <div class="pdb-bluf" data-en>Gulf sovereign wealth deploying $81B into US media during a regional war tells you where sovereign capital sees long-term value &mdash; and that Gulf states are hedging geopolitical risk with American asset concentration.</div>
-                <div class="pdb-bluf" data-fr>Le d&eacute;ploiement de 81 milliards de fonds souverains du Golfe dans les m&eacute;dias am&eacute;ricains pendant une guerre r&eacute;gionale r&eacute;v&egrave;le o&ugrave; le capital souverain voit la valeur &agrave; long terme.</div>
-            </div>
-        </div>
-        <div class="pdb-item">
-            <div class="pdb-rank">16</div>
-            <div class="pdb-content">
-                <div class="pdb-tag" data-en>ICC</div>
-                <div class="pdb-tag" data-fr>CPI</div>
-                <div class="pdb-headline">
-                    <a href="https://www.icc-cpi.int" target="_blank" rel="noopener" data-en>ICC Refers Italy&rsquo;s Non-Compliance Regarding Libya Situation to Assembly of States Parties</a>
-                    <a href="https://www.icc-cpi.int" target="_blank" rel="noopener" data-fr>La CPI r&eacute;f&egrave;re la non-conformit&eacute; de l&rsquo;Italie sur la Libye &agrave; l&rsquo;Assembl&eacute;e des &Eacute;tats parties</a>
-                </div>
-                <div class="pdb-source"><img src="https://www.google.com/s2/favicons?domain=icc-cpi.int&sz=16" alt="ICC"> ICC</div>
-                <div class="pdb-bluf" data-en>The ICC escalating against a G7 member on non-compliance is a rare institutional move that tests the court&rsquo;s enforcement credibility and sets a precedent for how states can be held accountable for Libya obligations.</div>
-                <div class="pdb-bluf" data-fr>La CPI qui escalade contre un membre du G7 pour non-conformit&eacute; est un geste institutionnel rare qui teste la cr&eacute;dibilit&eacute; d&rsquo;application de la cour.</div>
-            </div>
-        </div>
-        <div class="pdb-item">
-            <div class="pdb-rank">17</div>
-            <div class="pdb-content">
-                <div class="pdb-tag" data-en>SHIPPING</div>
-                <div class="pdb-tag" data-fr>TRANSPORT</div>
-                <div class="pdb-headline">
-                    <a href="https://theloadstar.com/amazon-discloses-3-5-fuel-logistics-related-surcharge/" target="_blank" rel="noopener" data-en>Amazon Discloses 3.5% Fuel &amp; Logistics Surcharge</a>
-                    <a href="https://theloadstar.com/amazon-discloses-3-5-fuel-logistics-related-surcharge/" target="_blank" rel="noopener" data-fr>Amazon annonce un suppl&eacute;ment carburant et logistique de 3,5 %</a>
-                </div>
-                <div class="pdb-source"><img src="https://www.google.com/s2/favicons?domain=theloadstar.com&sz=16" alt="The Loadstar"> The Loadstar</div>
-                <div class="pdb-bluf" data-en>When Amazon passes costs forward, their internal models show sustained logistics inflation. This surcharge becomes the floor for every other shipper&rsquo;s pricing &mdash; watch for cascading announcements across the sector.</div>
-                <div class="pdb-bluf" data-fr>Quand Amazon r&eacute;percute ses co&ucirc;ts, ses mod&egrave;les internes montrent une inflation logistique soutenue. Ce suppl&eacute;ment devient le plancher pour tous les transporteurs.</div>
-            </div>
-        </div>
-        <div class="pdb-item">
-            <div class="pdb-rank">18</div>
-            <div class="pdb-content">
-                <div class="pdb-tag" data-en>SHIPPING</div>
-                <div class="pdb-tag" data-fr>TRANSPORT</div>
-                <div class="pdb-headline">
-                    <a href="https://theloadstar.com" target="_blank" rel="noopener" data-en>Spot Rates Shrug Off Iran Shock as Carriers Chase Volume Over Profits</a>
-                    <a href="https://theloadstar.com" target="_blank" rel="noopener" data-fr>Les taux spot ignorent le choc iranien alors que les transporteurs privil&eacute;gient le volume</a>
-                </div>
-                <div class="pdb-source"><img src="https://www.google.com/s2/favicons?domain=theloadstar.com&sz=16" alt="The Loadstar"> The Loadstar</div>
-                <div class="pdb-bluf" data-en>Carriers prioritizing volume over margin during a crisis is a bet that the disruption is temporary. If they&rsquo;re wrong and Hormuz stays constrained, the rate snapback will be violent.</div>
-                <div class="pdb-bluf" data-fr>Les transporteurs qui privil&eacute;gient le volume au d&eacute;triment de la marge parient que la perturbation est temporaire. S&rsquo;ils ont tort, le rebond des taux sera brutal.</div>
-            </div>
-        </div>
-        <div class="pdb-item">
-            <div class="pdb-rank">19</div>
-            <div class="pdb-content">
-                <div class="pdb-tag" data-en>RUSSIA</div>
-                <div class="pdb-tag" data-fr>RUSSIE</div>
-                <div class="pdb-headline">
-                    <a href="https://www.themoscowtimes.com" target="_blank" rel="noopener" data-en>Murmansk Governor Confirms Russian Navy General&rsquo;s Death in Crimea Plane Crash</a>
-                    <a href="https://www.themoscowtimes.com" target="_blank" rel="noopener" data-fr>Le gouverneur de Mourmansk confirme la mort d&rsquo;un g&eacute;n&eacute;ral de la marine russe dans un crash en Crim&eacute;e</a>
-                </div>
-                <div class="pdb-source"><img src="https://www.google.com/s2/favicons?domain=themoscowtimes.com&sz=16" alt="Moscow Times"> Moscow Times</div>
-                <div class="pdb-bluf" data-en>A Russian Navy general killed in Crimea during an active conflict is an operational security signal. The loss of senior military leadership degrades command capacity and reveals vulnerability in Russia&rsquo;s rear areas.</div>
-                <div class="pdb-bluf" data-fr>Un g&eacute;n&eacute;ral de la marine russe tu&eacute; en Crim&eacute;e est un signal de s&eacute;curit&eacute; op&eacute;rationnelle. La perte de cadres sup&eacute;rieurs d&eacute;grade la capacit&eacute; de commandement.</div>
-            </div>
-        </div>
-        <div class="pdb-item">
-            <div class="pdb-rank">20</div>
-            <div class="pdb-content">
-                <div class="pdb-tag" data-en>RUSSIA</div>
-                <div class="pdb-tag" data-fr>RUSSIE</div>
-                <div class="pdb-headline">
-                    <a href="https://www.themoscowtimes.com" target="_blank" rel="noopener" data-en>Ukrainian Drone Attack Triggers Fire at Key Russian Black Sea Oil Terminal</a>
-                    <a href="https://www.themoscowtimes.com" target="_blank" rel="noopener" data-fr>Une attaque de drone ukrainien d&eacute;clenche un incendie sur un terminal p&eacute;trolier cl&eacute; en mer Noire</a>
-                </div>
-                <div class="pdb-source"><img src="https://www.google.com/s2/favicons?domain=themoscowtimes.com&sz=16" alt="Moscow Times"> Moscow Times</div>
-                <div class="pdb-bluf" data-en>Ukrainian strikes on Russian energy infrastructure create a second front of oil supply disruption beyond Hormuz. Combined with the Gulf crisis, this compounds the global energy supply picture.</div>
-                <div class="pdb-bluf" data-fr>Les frappes ukrainiennes sur l&rsquo;infrastructure &eacute;nerg&eacute;tique russe cr&eacute;ent un deuxi&egrave;me front de perturbation p&eacute;troli&egrave;re au-del&agrave; d&rsquo;Hormuz.</div>
-            </div>
-        </div>
-        <div class="pdb-item">
-            <div class="pdb-rank">21</div>
-            <div class="pdb-content">
-                <div class="pdb-tag" data-en>MACRO</div>
-                <div class="pdb-tag" data-fr>MACRO</div>
-                <div class="pdb-headline">
-                    <a href="https://www.ecb.europa.eu" target="_blank" rel="noopener" data-en>Isabel Schnabel: Monetary Policy in Times of Geopolitical Fragmentation</a>
-                    <a href="https://www.ecb.europa.eu" target="_blank" rel="noopener" data-fr>Isabel Schnabel : la politique mon&eacute;taire en temps de fragmentation g&eacute;opolitique</a>
-                </div>
-                <div class="pdb-source"><img src="https://www.google.com/s2/favicons?domain=ecb.europa.eu&sz=16" alt="ECB"> ECB</div>
-                <div class="pdb-bluf" data-en>An ECB Executive Board member framing monetary policy around geopolitical fragmentation signals that rate decisions will increasingly factor in supply-chain risk, not just demand. This changes the policy reaction function.</div>
-                <div class="pdb-bluf" data-fr>Un membre du directoire de la BCE cadrant la politique mon&eacute;taire autour de la fragmentation g&eacute;opolitique signale que les taux int&eacute;greront le risque de cha&icirc;ne d&rsquo;approvisionnement.</div>
-            </div>
-        </div>
-        <div class="pdb-item">
-            <div class="pdb-rank">22</div>
-            <div class="pdb-content">
-                <div class="pdb-tag" data-en>INDIA</div>
-                <div class="pdb-tag" data-fr>INDE</div>
-                <div class="pdb-headline">
-                    <a href="https://economictimes.indiatimes.com" target="_blank" rel="noopener" data-en>India Refiners Halt Maintenance to Meet Demand</a>
-                    <a href="https://economictimes.indiatimes.com" target="_blank" rel="noopener" data-fr>Les raffineurs indiens interrompent la maintenance pour r&eacute;pondre &agrave; la demande</a>
-                </div>
-                <div class="pdb-source"><img src="https://www.google.com/s2/favicons?domain=economictimes.indiatimes.com&sz=16" alt="Economic Times"> Economic Times</div>
-                <div class="pdb-bluf" data-en>India canceling refinery maintenance is an emergency measure that tells you the energy squeeze is real, not speculative. The world&rsquo;s third-largest consumer is sacrificing long-term asset health for short-term supply.</div>
-                <div class="pdb-bluf" data-fr>L&rsquo;Inde annulant la maintenance des raffineries est une mesure d&rsquo;urgence qui confirme que la crise &eacute;nerg&eacute;tique est r&eacute;elle. Le troisi&egrave;me consommateur mondial sacrifie la sant&eacute; des actifs pour l&rsquo;approvisionnement.</div>
-            </div>
-        </div>
-        <div class="pdb-item">
-            <div class="pdb-rank">23</div>
-            <div class="pdb-content">
-                <div class="pdb-tag" data-en>LUSOPHONE</div>
-                <div class="pdb-tag" data-fr>LUSOPHONE</div>
-                <div class="pdb-headline">
-                    <a href="https://www.folha.uol.com.br" target="_blank" rel="noopener" data-en>EUA e Ir&atilde; v&ecirc;em tr&eacute;gua dif&iacute;cil e se amea&ccedil;am; Israel mata general</a>
-                    <a href="https://www.folha.uol.com.br" target="_blank" rel="noopener" data-fr>Les &Eacute;.-U. et l&rsquo;Iran voient une tr&ecirc;ve difficile et se menacent; Isra&euml;l tue un g&eacute;n&eacute;ral</a>
-                </div>
-                <div class="pdb-source"><img src="https://www.google.com/s2/favicons?domain=folha.uol.com.br&sz=16" alt="Folha de S. Paulo"> Folha de S. Paulo</div>
-                <div class="pdb-bluf" data-en>Brazil&rsquo;s paper of record framing the crisis as &ldquo;difficult truce&rdquo; while Israel eliminates an Iranian general &mdash; the Lusophone world is watching this conflict through a lens that includes Brazilian energy imports and BRICS alignment.</div>
-                <div class="pdb-bluf" data-fr>Le journal de r&eacute;f&eacute;rence du Br&eacute;sil cadre la crise comme &laquo; tr&ecirc;ve difficile &raquo; tandis qu&rsquo;Isra&euml;l &eacute;limine un g&eacute;n&eacute;ral iranien. Le monde lusophone observe &agrave; travers le prisme des importations &eacute;nerg&eacute;tiques et de l&rsquo;alignement BRICS.</div>
-            </div>
-        </div>
-        <div class="pdb-item">
-            <div class="pdb-rank">24</div>
-            <div class="pdb-content">
-                <div class="pdb-tag" data-en>AFRICA</div>
-                <div class="pdb-tag" data-fr>AFRIQUE</div>
-                <div class="pdb-headline">
-                    <a href="https://www.jeuneafrique.com" target="_blank" rel="noopener" data-en>Guerre en Iran : L&rsquo;Afrique est mieux pr&eacute;par&eacute;e que lors des pr&eacute;c&eacute;dentes crises</a>
-                    <a href="https://www.jeuneafrique.com" target="_blank" rel="noopener" data-fr>Guerre en Iran : l&rsquo;Afrique est mieux pr&eacute;par&eacute;e que lors des pr&eacute;c&eacute;dentes crises</a>
-                </div>
-                <div class="pdb-source"><img src="https://www.google.com/s2/favicons?domain=jeuneafrique.com&sz=16" alt="Jeune Afrique"> Jeune Afrique</div>
-                <div class="pdb-bluf" data-en>Africa&rsquo;s leading francophone magazine says the continent is better prepared for this crisis than previous ones. If true, it changes the calculus on African market resilience and investment risk during global energy shocks.</div>
-                <div class="pdb-bluf" data-fr>Le principal magazine francophone d&rsquo;Afrique affirme que le continent est mieux pr&eacute;par&eacute; pour cette crise. Si c&rsquo;est vrai, cela change le calcul de r&eacute;silience et de risque d&rsquo;investissement en Afrique.</div>
-            </div>
-        </div>
-        <div class="pdb-item">
-            <div class="pdb-rank">25</div>
-            <div class="pdb-content">
-                <div class="pdb-tag" data-en>HUMANITARIAN</div>
-                <div class="pdb-tag" data-fr>HUMANITAIRE</div>
-                <div class="pdb-headline">
-                    <a href="https://news.un.org" target="_blank" rel="noopener" data-en>&lsquo;We Watched Them Die Before Our Eyes&rsquo;: Sudan Health Workers Helpless Amid Medical Shortage</a>
-                    <a href="https://news.un.org" target="_blank" rel="noopener" data-fr>&laquo; Nous les avons regard&eacute;s mourir &raquo; : le personnel de sant&eacute; soudanais impuissant face &agrave; la p&eacute;nurie</a>
-                </div>
-                <div class="pdb-source"><img src="https://www.google.com/s2/favicons?domain=news.un.org&sz=16" alt="UN News"> UN News</div>
-                <div class="pdb-bluf" data-en>Sudan&rsquo;s humanitarian collapse is being eclipsed by Iran coverage but remains the world&rsquo;s largest displacement crisis. For decision-makers tracking global instability, this is the slow-burn catastrophe that will demand resources when the acute crisis passes.</div>
-                <div class="pdb-bluf" data-fr>L&rsquo;effondrement humanitaire du Soudan est &eacute;clips&eacute; par la couverture iranienne mais reste la plus grande crise de d&eacute;placement au monde.</div>
-            </div>
-        </div>
-        <div class="pdb-item">
-            <div class="pdb-rank">26</div>
-            <div class="pdb-content">
-                <div class="pdb-tag" data-en>MARKETS</div>
-                <div class="pdb-tag" data-fr>MARCH&Eacute;S</div>
-                <div class="pdb-headline">
-                    <a href="https://www.cnbc.com/2026/04/05/stock-market-today-live-updates.html" target="_blank" rel="noopener" data-en>S&amp;P 500 Futures Edge Higher on Iran Ceasefire Report</a>
-                    <a href="https://www.cnbc.com/2026/04/05/stock-market-today-live-updates.html" target="_blank" rel="noopener" data-fr>Les contrats &agrave; terme du S&amp;P 500 progressent sur les rapports de cessez-le-feu</a>
-                </div>
-                <div class="pdb-source"><img src="https://www.google.com/s2/favicons?domain=cnbc.com&sz=16" alt="CNBC"> CNBC</div>
-                <div class="pdb-bluf" data-en>Futures pricing in ceasefire optimism before terms are known. If talks stall, the unwind will be sharp &mdash; this is a sentiment trade, not a fundamental one.</div>
-                <div class="pdb-bluf" data-fr>Les contrats &agrave; terme int&egrave;grent l&rsquo;optimisme du cessez-le-feu avant de conna&icirc;tre les termes. Si les n&eacute;gociations stagnent, le retournement sera brutal.</div>
-            </div>
-        </div>
-        <div class="pdb-item">
-            <div class="pdb-rank">27</div>
-            <div class="pdb-content">
-                <div class="pdb-tag" data-en>EU</div>
-                <div class="pdb-tag" data-fr>UE</div>
-                <div class="pdb-headline">
-                    <a href="https://euobserver.com" target="_blank" rel="noopener" data-en>Europe Must Treat Africa Like a Partner &mdash; Not a Problem</a>
-                    <a href="https://euobserver.com" target="_blank" rel="noopener" data-fr>L&rsquo;Europe doit traiter l&rsquo;Afrique comme un partenaire &mdash; pas un probl&egrave;me</a>
-                </div>
-                <div class="pdb-source"><img src="https://www.google.com/s2/favicons?domain=euobserver.com&sz=16" alt="EUobserver"> EUobserver</div>
-                <div class="pdb-bluf" data-en>The EU-Africa partnership framing matters for anyone tracking European development finance, resource access, and migration policy. This signals a strategic pivot in EU external policy that has trade and investment implications.</div>
-                <div class="pdb-bluf" data-fr>Le cadrage du partenariat UE-Afrique est important pour le financement du d&eacute;veloppement, l&rsquo;acc&egrave;s aux ressources et la politique migratoire.</div>
-            </div>
-        </div>
-        <div class="pdb-item">
-            <div class="pdb-rank">28</div>
-            <div class="pdb-content">
-                <div class="pdb-tag" data-en>INTL LAW</div>
-                <div class="pdb-tag" data-fr>DROIT INTL</div>
-                <div class="pdb-headline">
-                    <a href="https://opiniojuris.org" target="_blank" rel="noopener" data-en>The Use of Convoys and the Risk of Combined US &amp; Neutral Escorts</a>
-                    <a href="https://opiniojuris.org" target="_blank" rel="noopener" data-fr>L&rsquo;utilisation de convois et le risque des escortes combin&eacute;es am&eacute;ricaines et neutres</a>
-                </div>
-                <div class="pdb-source"><img src="https://www.google.com/s2/favicons?domain=opiniojuris.org&sz=16" alt="Opinio Juris"> Opinio Juris</div>
-                <div class="pdb-bluf" data-en>Maritime escort law becomes operationally relevant when Hormuz is contested. The legal distinction between belligerent and neutral convoys determines which vessels Iran can lawfully target &mdash; a question with immediate consequences for shipping insurance and routing.</div>
-                <div class="pdb-bluf" data-fr>Le droit des escortes maritimes devient op&eacute;rationnellement pertinent quand Hormuz est contest&eacute;. La distinction juridique entre convois bellig&eacute;rants et neutres d&eacute;termine quels navires l&rsquo;Iran peut cibler.</div>
-            </div>
-        </div>
-        <div class="pdb-item">
-            <div class="pdb-rank">29</div>
-            <div class="pdb-content">
-                <div class="pdb-tag" data-en>HORMUZ</div>
-                <div class="pdb-tag" data-fr>HORMUZ</div>
-                <div class="pdb-headline">
-                    <a href="https://www.rfi.fr" target="_blank" rel="noopener" data-en>South Korea Fears Plastics Shortage From Strait of Hormuz Blockage</a>
-                    <a href="https://www.rfi.fr" target="_blank" rel="noopener" data-fr>La Cor&eacute;e du Sud craint une p&eacute;nurie de plastique &agrave; cause du blocage d&rsquo;Hormuz</a>
-                </div>
-                <div class="pdb-source"><img src="https://www.google.com/s2/favicons?domain=rfi.fr&sz=16" alt="RFI"> RFI</div>
-                <div class="pdb-bluf" data-en>Hormuz disruption hitting South Korea&rsquo;s petrochemical supply chain shows the crisis is reaching second-order effects &mdash; not just fuel prices but industrial feedstock. Manufacturing economies across Asia are the next pressure point.</div>
-                <div class="pdb-bluf" data-fr>La perturbation d&rsquo;Hormuz frappant la cha&icirc;ne p&eacute;trochimique sud-cor&eacute;enne montre que la crise atteint les effets de second ordre &mdash; pas seulement les prix du carburant mais les mati&egrave;res premi&egrave;res industrielles.</div>
-            </div>
-        </div>
-        <div class="pdb-item">
-            <div class="pdb-rank">30</div>
-            <div class="pdb-content">
-                <div class="pdb-tag" data-en>CHINA</div>
-                <div class="pdb-tag" data-fr>CHINE</div>
-                <div class="pdb-headline">
-                    <a href="https://www.janes.com" target="_blank" rel="noopener" data-en>Russian Navy Vessels Arrive in Indonesia for Rare Bilateral Drills</a>
-                    <a href="https://www.janes.com" target="_blank" rel="noopener" data-fr>Des navires de la marine russe arrivent en Indon&eacute;sie pour des exercices bilat&eacute;raux rares</a>
-                </div>
-                <div class="pdb-source"><img src="https://www.google.com/s2/favicons?domain=janes.com&sz=16" alt="Janes"> Janes</div>
-                <div class="pdb-bluf" data-en>Russia conducting naval exercises in Southeast Asian waters during a Gulf crisis is a geographic hedge &mdash; projecting presence far from Hormuz while the US is focused there. Indonesia&rsquo;s willingness to host signals non-aligned positioning.</div>
-                <div class="pdb-bluf" data-fr>La Russie menant des exercices navals en Asie du Sud-Est pendant une crise du Golfe est une couverture g&eacute;ographique &mdash; projetant une pr&eacute;sence loin d&rsquo;Hormuz. L&rsquo;accueil de l&rsquo;Indon&eacute;sie signale un positionnement non-align&eacute;.</div>
-            </div>
-        </div>
+    <div class="pdb-item">
+      <div class="pdb-rank">3</div>
+      <div class="pdb-content">
+        <span class="pdb-tag" data-en="DEFENCE" data-fr="DÉFENSE">DEFENCE</span>
+        <a class="pdb-headline" href="https://www.defensenews.com/" target="_blank" rel="noopener" data-en="US forces fire at, disable Iran-flagged tanker trying to evade blockade" data-fr="Les forces américaines tirent et neutralisent un pétrolier iranien tentant d&#x27;échapper au blocus">US forces fire at, disable Iran-flagged tanker trying to evade blockade</a>
+        <span class="pdb-source">Defense News · defensenews.com</span>
+        <p class="pdb-bluf" data-en="US naval forces have crossed from interdiction to live fire against Iranian-flagged shipping. This is a kinetic baseline shift — every subsequent Iranian tanker move is now a potential war trigger, and insurance markets will reprice Gulf shipping today." data-fr="Les forces navales américaines sont passées de l&#x27;interception au tir réel contre des navires sous pavillon iranien. C&#x27;est un changement kinétique de référence — chaque mouvement de pétrolier iranien devient un déclencheur potentiel de guerre, et les marchés d&#x27;assurance vont retarifer le transport dans le Golfe dès aujourd&#x27;hui.">US naval forces have crossed from interdiction to live fire against Iranian-flagged shipping. This is a kinetic baseline shift — every subsequent Iranian tanker move is now a potential war trigger, and insurance markets will reprice Gulf shipping today.</p>
+      </div>
     </div>
-
+    <div class="pdb-item">
+      <div class="pdb-rank">4</div>
+      <div class="pdb-content">
+        <span class="pdb-tag" data-en="RUSSIA" data-fr="RUSSIE">RUSSIA</span>
+        <a class="pdb-headline" href="https://meduza.io/en/news" target="_blank" rel="noopener" data-en="Russia warns countries to evacuate Kyiv diplomats ahead of May 9 &#x27;retaliatory strike&#x27;" data-fr="La Russie demande aux pays d&#x27;évacuer leurs diplomates de Kiev avant une &#x27;frappe de représailles&#x27; du 9 mai">Russia warns countries to evacuate Kyiv diplomats ahead of May 9 &#x27;retaliatory strike&#x27;</a>
+        <span class="pdb-source">Meduza · meduza.io</span>
+        <p class="pdb-bluf" data-en="Moscow&#x27;s Foreign Ministry has issued a formal warning to evacuate diplomatic staff from Kyiv before May 9. This is escalation language Russia rarely uses publicly — markets, NATO capitals, and air carriers should treat the next 48 hours as a high-impact strike window." data-fr="Le ministère russe des Affaires étrangères a émis un avertissement formel d&#x27;évacuation du personnel diplomatique de Kiev avant le 9 mai. C&#x27;est un langage d&#x27;escalade que la Russie utilise rarement publiquement — marchés, capitales OTAN et transporteurs aériens doivent considérer les prochaines 48 heures comme une fenêtre de frappe à fort impact.">Moscow&#x27;s Foreign Ministry has issued a formal warning to evacuate diplomatic staff from Kyiv before May 9. This is escalation language Russia rarely uses publicly — markets, NATO capitals, and air carriers should treat the next 48 hours as a high-impact strike window.</p>
+      </div>
     </div>
-
-<!-- Footer -->
+    <div class="pdb-item">
+      <div class="pdb-rank">5</div>
+      <div class="pdb-content">
+        <span class="pdb-tag" data-en="ENERGY" data-fr="ÉNERGIE">ENERGY</span>
+        <a class="pdb-headline" href="https://www.foreignaffairs.com/iran/irans-new-oil-weapon" target="_blank" rel="noopener" data-en="Iran&#x27;s new oil weapon" data-fr="La nouvelle arme pétrolière de l&#x27;Iran">Iran&#x27;s new oil weapon</a>
+        <span class="pdb-source">Foreign Affairs · foreignaffairs.com</span>
+        <p class="pdb-bluf" data-en="Foreign Affairs reframes Iran&#x27;s escalation toolkit beyond a Hormuz closure — covert tanker attacks, port sabotage, and proxy strikes on Saudi infrastructure. Treating the choke point as the only risk underestimates the supply shocks already in motion." data-fr="Foreign Affairs recadre l&#x27;arsenal d&#x27;escalade iranien au-delà d&#x27;une fermeture d&#x27;Ormuz — attaques clandestines de pétroliers, sabotage portuaire et frappes par procuration sur les infrastructures saoudiennes. Considérer le détroit comme l&#x27;unique risque sous-estime les chocs d&#x27;offre déjà en cours.">Foreign Affairs reframes Iran&#x27;s escalation toolkit beyond a Hormuz closure — covert tanker attacks, port sabotage, and proxy strikes on Saudi infrastructure. Treating the choke point as the only risk underestimates the supply shocks already in motion.</p>
+      </div>
+    </div>
+    <div class="pdb-item">
+      <div class="pdb-rank">6</div>
+      <div class="pdb-content">
+        <span class="pdb-tag" data-en="MARKETS" data-fr="MARCHÉS">MARKETS</span>
+        <a class="pdb-headline" href="https://www.cnbc.com/" target="_blank" rel="noopener" data-en="Iran war threatens jet fuel shortage that could disrupt summer travel in Asia and Europe" data-fr="La guerre en Iran menace une pénurie de carburant aviation qui pourrait perturber les voyages d&#x27;été en Asie et en Europe">Iran war threatens jet fuel shortage that could disrupt summer travel in Asia and Europe</a>
+        <span class="pdb-source">CNBC · cnbc.com</span>
+        <p class="pdb-bluf" data-en="Asian and European jet fuel inventories are exposed to Gulf disruption at the start of peak travel season. Airlines, freight forwarders, and travel-exposed equities face margin compression that has not yet been fully discounted into Q3 forecasts." data-fr="Les stocks de carburant aviation en Asie et en Europe sont exposés à une perturbation du Golfe au début de la haute saison touristique. Compagnies aériennes, transitaires et titres exposés au voyage font face à une compression des marges encore non intégrée dans les prévisions du T3.">Asian and European jet fuel inventories are exposed to Gulf disruption at the start of peak travel season. Airlines, freight forwarders, and travel-exposed equities face margin compression that has not yet been fully discounted into Q3 forecasts.</p>
+      </div>
+    </div>
+    <div class="pdb-item">
+      <div class="pdb-rank">7</div>
+      <div class="pdb-content">
+        <span class="pdb-tag" data-en="DEFENCE" data-fr="DÉFENSE">DEFENCE</span>
+        <a class="pdb-headline" href="https://breakingdefense.com/" target="_blank" rel="noopener" data-en="Turkey rolls out intercontinental missile with purported 6,000km range" data-fr="La Turquie dévoile un missile intercontinental d&#x27;une portée annoncée de 6 000 km">Turkey rolls out intercontinental missile with purported 6,000km range</a>
+        <span class="pdb-source">Breaking Defense · breakingdefense.com</span>
+        <p class="pdb-bluf" data-en="A Turkish 6,000-km missile reaches London, Moscow, Riyadh, and most of Africa from Anatolia. NATO acquires a power-projection asset Ankara controls unilaterally — a strategic shift that complicates every alliance calculation in the eastern Mediterranean." data-fr="Un missile turc de 6 000 km couvre Londres, Moscou, Riyad et la majorité de l&#x27;Afrique depuis l&#x27;Anatolie. L&#x27;OTAN gagne un actif de projection contrôlé unilatéralement par Ankara — un basculement stratégique qui complique chaque calcul d&#x27;alliance en Méditerranée orientale.">A Turkish 6,000-km missile reaches London, Moscow, Riyadh, and most of Africa from Anatolia. NATO acquires a power-projection asset Ankara controls unilaterally — a strategic shift that complicates every alliance calculation in the eastern Mediterranean.</p>
+      </div>
+    </div>
+    <div class="pdb-item">
+      <div class="pdb-rank">8</div>
+      <div class="pdb-content">
+        <span class="pdb-tag" data-en="RUSSIA" data-fr="RUSSIE">RUSSIA</span>
+        <a class="pdb-headline" href="https://meduza.io/en/news" target="_blank" rel="noopener" data-en="Russia&#x27;s economy slows as war costs mount, budget deficit widens, rate cuts near limit" data-fr="L&#x27;économie russe ralentit alors que les coûts de guerre montent, le déficit budgétaire se creuse et les baisses de taux atteignent leur limite">Russia&#x27;s economy slows as war costs mount, budget deficit widens, rate cuts near limit</a>
+        <span class="pdb-source">Meduza · meduza.io</span>
+        <p class="pdb-bluf" data-en="Russia&#x27;s wartime economy is hitting its monetary ceiling — deficit expanding, central bank out of room. This is the first quarter where the Kremlin&#x27;s structural funding for the war shows visible cracks, and it shortens the timeline for Putin&#x27;s strategic decision points." data-fr="L&#x27;économie de guerre russe atteint son plafond monétaire — déficit en hausse, banque centrale à court de marge. C&#x27;est le premier trimestre où le financement structurel de la guerre par le Kremlin montre des fissures visibles, raccourcissant la chronologie des points de décision stratégique de Poutine.">Russia&#x27;s wartime economy is hitting its monetary ceiling — deficit expanding, central bank out of room. This is the first quarter where the Kremlin&#x27;s structural funding for the war shows visible cracks, and it shortens the timeline for Putin&#x27;s strategic decision points.</p>
+      </div>
+    </div>
+    <div class="pdb-item">
+      <div class="pdb-rank">9</div>
+      <div class="pdb-content">
+        <span class="pdb-tag" data-en="ENERGY" data-fr="ÉNERGIE">ENERGY</span>
+        <a class="pdb-headline" href="https://oilprice.com/" target="_blank" rel="noopener" data-en="EU Suspends Methane Rules as Energy Crunch Intensifies" data-fr="L&#x27;UE suspend les règles sur le méthane alors que la crise énergétique s&#x27;aggrave">EU Suspends Methane Rules as Energy Crunch Intensifies</a>
+        <span class="pdb-source">OilPrice · oilprice.com</span>
+        <p class="pdb-bluf" data-en="Brussels has formally subordinated climate enforcement to energy security. The methane suspension signals that EU compliance investments tied to that regime carry political risk, and that LNG suppliers including US producers gain pricing power into winter." data-fr="Bruxelles a formellement subordonné l&#x27;application climatique à la sécurité énergétique. La suspension méthane signale que les investissements européens de conformité liés à ce régime portent un risque politique, et que les fournisseurs de GNL, dont les producteurs américains, gagnent en pouvoir de tarification d&#x27;ici l&#x27;hiver.">Brussels has formally subordinated climate enforcement to energy security. The methane suspension signals that EU compliance investments tied to that regime carry political risk, and that LNG suppliers including US producers gain pricing power into winter.</p>
+      </div>
+    </div>
+    <div class="pdb-item">
+      <div class="pdb-rank">10</div>
+      <div class="pdb-content">
+        <span class="pdb-tag" data-en="CANADA" data-fr="CANADA">CANADA</span>
+        <a class="pdb-headline" href="https://ici.radio-canada.ca/" target="_blank" rel="noopener" data-en="Carney government to accelerate pipeline approval procedures" data-fr="Le gouvernement Carney veut accélérer les procédures d&#x27;autorisation pour les pipelines">Carney government to accelerate pipeline approval procedures</a>
+        <span class="pdb-source">Radio-Canada · ici.radio-canada.ca</span>
+        <p class="pdb-bluf" data-en="Ottawa is moving from rhetoric to procedural reform on pipeline approvals during a global energy supply scare. Alberta producers, midstream operators, and Indigenous benefit-agreement counterparties should expect a regulatory window that may close once Gulf prices normalise." data-fr="Ottawa passe de la rhétorique à la réforme procédurale sur l&#x27;autorisation des pipelines pendant une crise mondiale d&#x27;approvisionnement énergétique. Producteurs albertains, opérateurs intermédiaires et signataires d&#x27;ententes de bénéfices autochtones doivent anticiper une fenêtre réglementaire qui pourrait se refermer dès la normalisation des prix du Golfe.">Ottawa is moving from rhetoric to procedural reform on pipeline approvals during a global energy supply scare. Alberta producers, midstream operators, and Indigenous benefit-agreement counterparties should expect a regulatory window that may close once Gulf prices normalise.</p>
+      </div>
+    </div>
+    <div class="pdb-item">
+      <div class="pdb-rank">11</div>
+      <div class="pdb-content">
+        <span class="pdb-tag" data-en="DEFENCE" data-fr="DÉFENSE">DEFENCE</span>
+        <a class="pdb-headline" href="https://www.defensenews.com/" target="_blank" rel="noopener" data-en="France moves aircraft carrier to Red Sea with eye on Hormuz mission" data-fr="La France déplace son porte-avions vers la mer Rouge en vue d&#x27;une mission à Ormuz">France moves aircraft carrier to Red Sea with eye on Hormuz mission</a>
+        <span class="pdb-source">Defense News · defensenews.com</span>
+        <p class="pdb-bluf" data-en="Paris has committed its only carrier strike group to the Hormuz theater, the highest level of French force commitment outside NATO Article 5. Europe is now visibly underwriting Gulf security, which changes the political math on US ground commitments and EU defence spending." data-fr="Paris engage son unique groupe aéronaval dans le théâtre d&#x27;Ormuz, le plus haut niveau d&#x27;engagement français hors article 5 de l&#x27;OTAN. L&#x27;Europe assume désormais visiblement la sécurité du Golfe, modifiant le calcul politique des engagements américains au sol et des dépenses de défense de l&#x27;UE.">Paris has committed its only carrier strike group to the Hormuz theater, the highest level of French force commitment outside NATO Article 5. Europe is now visibly underwriting Gulf security, which changes the political math on US ground commitments and EU defence spending.</p>
+      </div>
+    </div>
+    <div class="pdb-item">
+      <div class="pdb-rank">12</div>
+      <div class="pdb-content">
+        <span class="pdb-tag" data-en="MARKETS" data-fr="MARCHÉS">MARKETS</span>
+        <a class="pdb-headline" href="https://www.wsj.com/" target="_blank" rel="noopener" data-en="Kraft Heinz CEO: &#x27;Consumers are literally running out of money&#x27;" data-fr="PDG de Kraft Heinz : « Les consommateurs sont littéralement à court d&#x27;argent »">Kraft Heinz CEO: &#x27;Consumers are literally running out of money&#x27;</a>
+        <span class="pdb-source">WSJ · wsj.com</span>
+        <p class="pdb-bluf" data-en="A staple-foods CEO publicly declaring consumer cash exhaustion is a recession-grade signal, not marketing language. Defensive equities, private credit, and discretionary retail need to revisit base-case demand assumptions before Q2 prints." data-fr="Un PDG de l&#x27;alimentation de base déclarant publiquement l&#x27;épuisement de la trésorerie des consommateurs est un signal de niveau récession, pas du langage marketing. Titres défensifs, crédit privé et commerce discrétionnaire doivent revoir les hypothèses de demande de scénario central avant la publication du T2.">A staple-foods CEO publicly declaring consumer cash exhaustion is a recession-grade signal, not marketing language. Defensive equities, private credit, and discretionary retail need to revisit base-case demand assumptions before Q2 prints.</p>
+      </div>
+    </div>
+    <div class="pdb-item">
+      <div class="pdb-rank">13</div>
+      <div class="pdb-content">
+        <span class="pdb-tag" data-en="INTL LAW" data-fr="DROIT INTERNATIONAL">INTL LAW</span>
+        <a class="pdb-headline" href="http://opiniojuris.org/" target="_blank" rel="noopener" data-en="The closure of the Strait of Hormuz: Law of the Sea and Naval Warfare considerations" data-fr="La fermeture du détroit d&#x27;Ormuz : considérations sur le droit de la mer et le droit de la guerre navale">The closure of the Strait of Hormuz: Law of the Sea and Naval Warfare considerations</a>
+        <span class="pdb-source">Opinio Juris · opiniojuris.org</span>
+        <p class="pdb-bluf" data-en="Legal scholars are now publishing the doctrinal framework that will be cited if the US, France, or UK takes Iranian shipping action to international tribunals. Boards exposed to maritime, energy, or insurance counterparties should brief counsel on the transit-passage regime now, not after a dispute lands." data-fr="Les juristes publient désormais le cadre doctrinal qui sera invoqué si les États-Unis, la France ou le Royaume-Uni portent une action contre la navigation iranienne devant des tribunaux internationaux. Les conseils d&#x27;administration exposés aux contreparties maritimes, énergétiques ou d&#x27;assurance doivent informer leurs juristes sur le régime de passage en transit dès maintenant, pas après un litige.">Legal scholars are now publishing the doctrinal framework that will be cited if the US, France, or UK takes Iranian shipping action to international tribunals. Boards exposed to maritime, energy, or insurance counterparties should brief counsel on the transit-passage regime now, not after a dispute lands.</p>
+      </div>
+    </div>
+    <div class="pdb-item">
+      <div class="pdb-rank">14</div>
+      <div class="pdb-content">
+        <span class="pdb-tag" data-en="DEFENCE" data-fr="DÉFENSE">DEFENCE</span>
+        <a class="pdb-headline" href="https://www.janes.com/" target="_blank" rel="noopener" data-en="US approves extended-range JDAMs for Ukraine" data-fr="Les États-Unis approuvent les JDAM à portée étendue pour l&#x27;Ukraine">US approves extended-range JDAMs for Ukraine</a>
+        <span class="pdb-source">Janes · janes.com</span>
+        <p class="pdb-bluf" data-en="Washington is unlocking deeper-strike weapons for Kyiv inside the May 9 escalation window. This narrows Moscow&#x27;s Crimea and rear-area sanctuaries and signals US willingness to risk Russian reprisal in order to constrain the next operational cycle." data-fr="Washington débloque des armes à frappe profonde pour Kiev dans la fenêtre d&#x27;escalade du 9 mai. Cela rétrécit les sanctuaires russes en Crimée et à l&#x27;arrière et signale la volonté américaine de prendre le risque de représailles russes pour contraindre le prochain cycle opérationnel.">Washington is unlocking deeper-strike weapons for Kyiv inside the May 9 escalation window. This narrows Moscow&#x27;s Crimea and rear-area sanctuaries and signals US willingness to risk Russian reprisal in order to constrain the next operational cycle.</p>
+      </div>
+    </div>
+    <div class="pdb-item">
+      <div class="pdb-rank">15</div>
+      <div class="pdb-content">
+        <span class="pdb-tag" data-en="RUSSIA" data-fr="RUSSIE">RUSSIA</span>
+        <a class="pdb-headline" href="https://meduza.io/en/news" target="_blank" rel="noopener" data-en="Russia–Ukraine Victory Day truce collapses as Moscow and Kyiv trade violation accusations" data-fr="La trêve russo-ukrainienne du Jour de la Victoire s&#x27;effondre, Moscou et Kiev s&#x27;accusant mutuellement de violations">Russia–Ukraine Victory Day truce collapses as Moscow and Kyiv trade violation accusations</a>
+        <span class="pdb-source">Meduza · meduza.io</span>
+        <p class="pdb-bluf" data-en="The May 9 unilateral truce died on day one. Any near-term diplomatic optimism about a Ukraine ceasefire framework should be discounted — the next negotiating window is now realistically post-summer, after another fighting cycle." data-fr="La trêve unilatérale du 9 mai est morte dès le premier jour. Tout optimisme diplomatique à court terme sur un cadre de cessez-le-feu en Ukraine doit être actualisé — la prochaine fenêtre de négociation se situe désormais réalistement après l&#x27;été, après un autre cycle de combats.">The May 9 unilateral truce died on day one. Any near-term diplomatic optimism about a Ukraine ceasefire framework should be discounted — the next negotiating window is now realistically post-summer, after another fighting cycle.</p>
+      </div>
+    </div>
+    <div class="pdb-item">
+      <div class="pdb-rank">16</div>
+      <div class="pdb-content">
+        <span class="pdb-tag" data-en="MARKETS" data-fr="MARCHÉS">MARKETS</span>
+        <a class="pdb-headline" href="https://oilprice.com/" target="_blank" rel="noopener" data-en="Shell beats profit estimates as war brings trading windfall, $6.9B Q1, dividend up 5%" data-fr="Shell dépasse les estimations grâce à une manne de trading de guerre — 6,9 G$ au T1, dividende en hausse de 5 %">Shell beats profit estimates as war brings trading windfall, $6.9B Q1, dividend up 5%</a>
+        <span class="pdb-source">OilPrice · oilprice.com</span>
+        <p class="pdb-bluf" data-en="Integrated majors are translating Gulf volatility into trading-desk profits, not production gains. The dispersion between supermajors and pure E&amp;P names will widen, and dividend-coverage signals just got materially stronger for Shell, Total, and BP." data-fr="Les majors intégrées convertissent la volatilité du Golfe en profits de salles de marché, pas en gains de production. La dispersion entre supermajors et E&amp;P pures va s&#x27;élargir, et les signaux de couverture de dividende viennent de se renforcer matériellement pour Shell, Total et BP.">Integrated majors are translating Gulf volatility into trading-desk profits, not production gains. The dispersion between supermajors and pure E&amp;P names will widen, and dividend-coverage signals just got materially stronger for Shell, Total, and BP.</p>
+      </div>
+    </div>
+    <div class="pdb-item">
+      <div class="pdb-rank">17</div>
+      <div class="pdb-content">
+        <span class="pdb-tag" data-en="SHIPPING" data-fr="TRANSPORT MARITIME">SHIPPING</span>
+        <a class="pdb-headline" href="https://theloadstar.com/" target="_blank" rel="noopener" data-en="Middle East conflict sees shippers face soaring costs and weakening demand" data-fr="Conflit au Moyen-Orient : les chargeurs font face à des coûts en flèche et une demande affaiblie">Middle East conflict sees shippers face soaring costs and weakening demand</a>
+        <span class="pdb-source">The Loadstar · theloadstar.com</span>
+        <p class="pdb-bluf" data-en="Shippers are getting hit on both sides — war-risk premiums up, end-customer demand falling. Q2 earnings for Maersk, Hapag-Lloyd, and ZIM will likely confirm a margin squeeze that prevents the carrier sector from monetising the disruption the way 2024 implied." data-fr="Les chargeurs sont touchés des deux côtés — primes de risque de guerre en hausse, demande clientèle en baisse. Les résultats T2 de Maersk, Hapag-Lloyd et ZIM confirmeront probablement une compression des marges empêchant le secteur transporteur de monétiser la perturbation comme 2024 l&#x27;avait suggéré.">Shippers are getting hit on both sides — war-risk premiums up, end-customer demand falling. Q2 earnings for Maersk, Hapag-Lloyd, and ZIM will likely confirm a margin squeeze that prevents the carrier sector from monetising the disruption the way 2024 implied.</p>
+      </div>
+    </div>
+    <div class="pdb-item">
+      <div class="pdb-rank">18</div>
+      <div class="pdb-content">
+        <span class="pdb-tag" data-en="MACRO" data-fr="MACRO">MACRO</span>
+        <a class="pdb-headline" href="https://www.ecb.europa.eu/" target="_blank" rel="noopener" data-en="ECB&#x27;s Cipollone publishes new energy shock policy paper with economic scenarios" data-fr="Cipollone (BCE) publie un nouveau document de politique sur le choc énergétique avec scénarios économiques">ECB&#x27;s Cipollone publishes new energy shock policy paper with economic scenarios</a>
+        <span class="pdb-source">ECB · ecb.europa.eu</span>
+        <p class="pdb-bluf" data-en="The ECB is formally modelling a new energy shock — language usually reserved for the policy lead-up to emergency measures. Sovereign spreads, euro-area bank capital buffers, and corporate hedging desks should treat this as a policy-direction signal not a research note." data-fr="La BCE modélise formellement un nouveau choc énergétique — langage habituellement réservé aux préparatifs de mesures d&#x27;urgence. Spreads souverains, coussins de capital des banques de la zone euro et bureaux de couverture d&#x27;entreprise doivent traiter cela comme un signal d&#x27;orientation politique, pas une simple note de recherche.">The ECB is formally modelling a new energy shock — language usually reserved for the policy lead-up to emergency measures. Sovereign spreads, euro-area bank capital buffers, and corporate hedging desks should treat this as a policy-direction signal not a research note.</p>
+      </div>
+    </div>
+    <div class="pdb-item">
+      <div class="pdb-rank">19</div>
+      <div class="pdb-content">
+        <span class="pdb-tag" data-en="POLITICS" data-fr="POLITIQUE">POLITICS</span>
+        <a class="pdb-headline" href="https://www.reuters.com/" target="_blank" rel="noopener" data-en="UK voters cast ballots in elections expected to deal blow to Starmer" data-fr="Les électeurs britanniques aux urnes pour des élections qui devraient porter un coup à Starmer">UK voters cast ballots in elections expected to deal blow to Starmer</a>
+        <span class="pdb-source">Reuters · reuters.com</span>
+        <p class="pdb-bluf" data-en="A weakened Starmer constrains UK fiscal flexibility just as Treasury faces oil-shock spending pressure. Sterling, gilts, and any deal involving UK sovereign counterparties should be reassessed for political-risk premium increases over the next 30 days." data-fr="Un Starmer affaibli contraint la flexibilité budgétaire britannique au moment où le Trésor fait face à la pression de dépenses du choc pétrolier. Sterling, gilts et toute transaction impliquant des contreparties souveraines britanniques doivent être réévalués pour une hausse de prime de risque politique sur 30 jours.">A weakened Starmer constrains UK fiscal flexibility just as Treasury faces oil-shock spending pressure. Sterling, gilts, and any deal involving UK sovereign counterparties should be reassessed for political-risk premium increases over the next 30 days.</p>
+      </div>
+    </div>
+    <div class="pdb-item">
+      <div class="pdb-rank">20</div>
+      <div class="pdb-content">
+        <span class="pdb-tag" data-en="GEOPOLITICS" data-fr="GÉOPOLITIQUE">GEOPOLITICS</span>
+        <a class="pdb-headline" href="https://www.thehindu.com/" target="_blank" rel="noopener" data-en="No-confidence vote topples Solomon Islands Prime Minister" data-fr="Un vote de défiance renverse le Premier ministre des Îles Salomon">No-confidence vote topples Solomon Islands Prime Minister</a>
+        <span class="pdb-source">The Hindu · thehindu.com</span>
+        <p class="pdb-bluf" data-en="The Solomon Islands sits at the centre of the US-China Pacific contest because of the 2022 security pact with Beijing. A government change here will be tested immediately for whether the China security agreement survives — a small island vote with disproportionate strategic weight." data-fr="Les Îles Salomon se trouvent au centre de la rivalité Pacifique États-Unis–Chine en raison du pacte de sécurité de 2022 avec Pékin. Un changement de gouvernement ici sera immédiatement testé sur la survie de l&#x27;accord avec la Chine — un vote d&#x27;île avec un poids stratégique disproportionné.">The Solomon Islands sits at the centre of the US-China Pacific contest because of the 2022 security pact with Beijing. A government change here will be tested immediately for whether the China security agreement survives — a small island vote with disproportionate strategic weight.</p>
+      </div>
+    </div>
+    <div class="pdb-item">
+      <div class="pdb-rank">21</div>
+      <div class="pdb-content">
+        <span class="pdb-tag" data-en="DEFENCE" data-fr="DÉFENSE">DEFENCE</span>
+        <a class="pdb-headline" href="https://www.janes.com/" target="_blank" rel="noopener" data-en="Tokyo and Manila advance potential transfer of Abukuma-class destroyers" data-fr="Tokyo et Manille avancent sur un possible transfert de destroyers de classe Abukuma">Tokyo and Manila advance potential transfer of Abukuma-class destroyers</a>
+        <span class="pdb-source">Janes · janes.com</span>
+        <p class="pdb-bluf" data-en="Japan transferring frigates to the Philippines hardens the second island chain against Chinese naval activity in the West Philippine Sea. This is the most concrete recent step in Indo-Pacific deterrence and signals continued partner-burden-sharing momentum despite Gulf distractions." data-fr="Le transfert de frégates du Japon aux Philippines durcit la deuxième chaîne d&#x27;îles face à l&#x27;activité navale chinoise en mer de l&#x27;Ouest des Philippines. C&#x27;est l&#x27;étape concrète la plus récente de la dissuasion indo-pacifique et signale une dynamique continue de partage du fardeau malgré les distractions du Golfe.">Japan transferring frigates to the Philippines hardens the second island chain against Chinese naval activity in the West Philippine Sea. This is the most concrete recent step in Indo-Pacific deterrence and signals continued partner-burden-sharing momentum despite Gulf distractions.</p>
+      </div>
+    </div>
+    <div class="pdb-item">
+      <div class="pdb-rank">22</div>
+      <div class="pdb-content">
+        <span class="pdb-tag" data-en="HUMANITARIAN" data-fr="HUMANITAIRE">HUMANITARIAN</span>
+        <a class="pdb-headline" href="https://news.un.org/" target="_blank" rel="noopener" data-en="More than 70 civilians killed in Ukraine in less than a week" data-fr="Plus de 70 civils tués en Ukraine en moins d&#x27;une semaine">More than 70 civilians killed in Ukraine in less than a week</a>
+        <span class="pdb-source">UN News · un.org</span>
+        <p class="pdb-bluf" data-en="Civilian casualty pace inside Ukraine has accelerated even before the May 9 strike window. The UN&#x27;s documented numbers will shape the next sanctions debate, the European Parliament procurement vote, and the political tolerance for Ukraine aid in Washington." data-fr="Le rythme des pertes civiles en Ukraine s&#x27;est accéléré même avant la fenêtre de frappe du 9 mai. Les chiffres documentés de l&#x27;ONU façonneront le prochain débat sur les sanctions, le vote d&#x27;achat du Parlement européen et la tolérance politique pour l&#x27;aide à l&#x27;Ukraine à Washington.">Civilian casualty pace inside Ukraine has accelerated even before the May 9 strike window. The UN&#x27;s documented numbers will shape the next sanctions debate, the European Parliament procurement vote, and the political tolerance for Ukraine aid in Washington.</p>
+      </div>
+    </div>
+    <div class="pdb-item">
+      <div class="pdb-rank">23</div>
+      <div class="pdb-content">
+        <span class="pdb-tag" data-en="MARKETS" data-fr="MARCHÉS">MARKETS</span>
+        <a class="pdb-headline" href="https://www.wsj.com/" target="_blank" rel="noopener" data-en="Whirlpool profit crushed by Iran war, higher consumer prices coming" data-fr="Le bénéfice de Whirlpool écrasé par la guerre en Iran, hausse des prix à la consommation à venir">Whirlpool profit crushed by Iran war, higher consumer prices coming</a>
+        <span class="pdb-source">WSJ · wsj.com</span>
+        <p class="pdb-bluf" data-en="Durable goods producers are confirming the Gulf shock is now passing through to North American shelf prices. CPI prints for the next two months will run hotter than current Fed projections — re-rate Fed terminal rate expectations accordingly." data-fr="Les producteurs de biens durables confirment que le choc du Golfe se répercute déjà sur les prix de détail nord-américains. Les publications IPC des deux prochains mois seront plus élevées que les projections actuelles de la Fed — révisez en conséquence les anticipations de taux terminal de la Fed.">Durable goods producers are confirming the Gulf shock is now passing through to North American shelf prices. CPI prints for the next two months will run hotter than current Fed projections — re-rate Fed terminal rate expectations accordingly.</p>
+      </div>
+    </div>
+    <div class="pdb-item">
+      <div class="pdb-rank">24</div>
+      <div class="pdb-content">
+        <span class="pdb-tag" data-en="DEFENCE" data-fr="DÉFENSE">DEFENCE</span>
+        <a class="pdb-headline" href="https://breakingdefense.com/" target="_blank" rel="noopener" data-en="Space Force boosts Andromeda space monitoring contract ceiling to $6.2B" data-fr="La Space Force porte à 6,2 G$ le plafond contractuel de la surveillance spatiale Andromeda">Space Force boosts Andromeda space monitoring contract ceiling to $6.2B</a>
+        <span class="pdb-source">Breaking Defense · breakingdefense.com</span>
+        <p class="pdb-bluf" data-en="The US is materially expanding orbital surveillance funding inside this fiscal cycle. Space domain awareness contractors — L3Harris, Northrop, BAE — gain a multi-year revenue tailwind that diversifies away from terrestrial defence priorities." data-fr="Les États-Unis élargissent matériellement le financement de la surveillance orbitale dans le cycle budgétaire en cours. Les contractants de connaissance du domaine spatial — L3Harris, Northrop, BAE — bénéficient d&#x27;un vent porteur pluriannuel qui diversifie hors des priorités terrestres de défense.">The US is materially expanding orbital surveillance funding inside this fiscal cycle. Space domain awareness contractors — L3Harris, Northrop, BAE — gain a multi-year revenue tailwind that diversifies away from terrestrial defence priorities.</p>
+      </div>
+    </div>
+    <div class="pdb-item">
+      <div class="pdb-rank">25</div>
+      <div class="pdb-content">
+        <span class="pdb-tag" data-en="AFRICA" data-fr="AFRIQUE">AFRICA</span>
+        <a class="pdb-headline" href="https://news.un.org/" target="_blank" rel="noopener" data-en="UN warns of worsening human rights crisis in Mali after deadly attacks" data-fr="L&#x27;ONU alerte sur une crise des droits humains qui s&#x27;aggrave au Mali après des attaques meurtrières">UN warns of worsening human rights crisis in Mali after deadly attacks</a>
+        <span class="pdb-source">UN Security · un.org</span>
+        <p class="pdb-bluf" data-en="Mali&#x27;s deterioration accelerates the Sahel security collapse, increases migration pressure on the EU, and weakens Wagner-successor influence over a region France just abandoned. Strategic implications for Francophone investment, security contractors, and EU border policy are immediate." data-fr="La détérioration au Mali accélère l&#x27;effondrement sécuritaire au Sahel, accroît la pression migratoire sur l&#x27;UE et affaiblit l&#x27;influence des successeurs de Wagner sur une région que la France vient de quitter. Les implications stratégiques pour l&#x27;investissement francophone, les contractants de sécurité et la politique frontalière de l&#x27;UE sont immédiates.">Mali&#x27;s deterioration accelerates the Sahel security collapse, increases migration pressure on the EU, and weakens Wagner-successor influence over a region France just abandoned. Strategic implications for Francophone investment, security contractors, and EU border policy are immediate.</p>
+      </div>
+    </div>
+    <div class="pdb-item">
+      <div class="pdb-rank">26</div>
+      <div class="pdb-content">
+        <span class="pdb-tag" data-en="CHINA" data-fr="CHINE">CHINA</span>
+        <a class="pdb-headline" href="https://www.cgtn.com/" target="_blank" rel="noopener" data-en="Vietnam&#x27;s top leader To Lam arrives in Beijing for state visit" data-fr="Le numéro un vietnamien To Lam arrive à Pékin en visite d&#x27;État">Vietnam&#x27;s top leader To Lam arrives in Beijing for state visit</a>
+        <span class="pdb-source">CGTN · cgtn.com</span>
+        <p class="pdb-bluf" data-en="Hanoi accepting a state visit during the Hormuz crisis is a hedge — Vietnam balances US factory investment against Chinese supply chain dependency. Watch for joint statements on the South China Sea; any softening of Hanoi&#x27;s traditional position would shift the regional risk picture quickly." data-fr="Hanoï acceptant une visite d&#x27;État pendant la crise d&#x27;Ormuz est une couverture — le Vietnam équilibre les investissements industriels américains contre la dépendance chinoise des chaînes d&#x27;approvisionnement. Surveillez les déclarations communes sur la mer de Chine méridionale ; tout assouplissement de la position traditionnelle de Hanoï modifierait rapidement le tableau régional du risque.">Hanoi accepting a state visit during the Hormuz crisis is a hedge — Vietnam balances US factory investment against Chinese supply chain dependency. Watch for joint statements on the South China Sea; any softening of Hanoi&#x27;s traditional position would shift the regional risk picture quickly.</p>
+      </div>
+    </div>
+    <div class="pdb-item">
+      <div class="pdb-rank">27</div>
+      <div class="pdb-content">
+        <span class="pdb-tag" data-en="CANADA" data-fr="CANADA">CANADA</span>
+        <a class="pdb-headline" href="https://ici.radio-canada.ca/" target="_blank" rel="noopener" data-en="Does Mexico fare better than Canada with Trump?" data-fr="Le Mexique s&#x27;en sort-il mieux que le Canada avec Trump ?">Does Mexico fare better than Canada with Trump?</a>
+        <span class="pdb-source">Radio-Canada · ici.radio-canada.ca</span>
+        <p class="pdb-bluf" data-en="The bilateral comparison is becoming a Canadian political litmus test on USMCA renegotiation strategy. Boards with cross-border exposure should track this framing — public sentiment is shifting toward harder Canadian leverage tactics, which raises trade-disruption risk into the fall." data-fr="La comparaison bilatérale devient un test politique canadien sur la stratégie de renégociation de l&#x27;AEUMC. Les conseils ayant une exposition transfrontalière devraient suivre ce cadrage — l&#x27;opinion publique évolue vers des tactiques canadiennes plus dures, ce qui augmente le risque de perturbation commerciale d&#x27;ici l&#x27;automne.">The bilateral comparison is becoming a Canadian political litmus test on USMCA renegotiation strategy. Boards with cross-border exposure should track this framing — public sentiment is shifting toward harder Canadian leverage tactics, which raises trade-disruption risk into the fall.</p>
+      </div>
+    </div>
+    <div class="pdb-item">
+      <div class="pdb-rank">28</div>
+      <div class="pdb-content">
+        <span class="pdb-tag" data-en="ENERGY" data-fr="ÉNERGIE">ENERGY</span>
+        <a class="pdb-headline" href="https://oilprice.com/" target="_blank" rel="noopener" data-en="Oil crunch prompts plastics crisis in Asia" data-fr="La crise pétrolière déclenche une crise des plastiques en Asie">Oil crunch prompts plastics crisis in Asia</a>
+        <span class="pdb-source">OilPrice · oilprice.com</span>
+        <p class="pdb-bluf" data-en="Petrochemical feedstock disruption is bleeding into manufactured-goods supply chains across Asia. Expect Q3 input-cost inflation in consumer electronics, automotive interiors, and packaging — second-order Iran impact that has not yet shown up in equity guidance." data-fr="La perturbation des matières premières pétrochimiques se répercute sur les chaînes d&#x27;approvisionnement de biens manufacturés en Asie. Anticipez une inflation des coûts d&#x27;intrants au T3 dans l&#x27;électronique grand public, l&#x27;aménagement automobile et l&#x27;emballage — un impact iranien de second ordre encore absent des prévisions des sociétés cotées.">Petrochemical feedstock disruption is bleeding into manufactured-goods supply chains across Asia. Expect Q3 input-cost inflation in consumer electronics, automotive interiors, and packaging — second-order Iran impact that has not yet shown up in equity guidance.</p>
+      </div>
+    </div>
+    <div class="pdb-item">
+      <div class="pdb-rank">29</div>
+      <div class="pdb-content">
+        <span class="pdb-tag" data-en="TECHNOLOGY" data-fr="TECHNOLOGIE">TECHNOLOGY</span>
+        <a class="pdb-headline" href="https://techcrunch.com/" target="_blank" rel="noopener" data-en="Five architects of the AI economy explain where the wheels are coming off" data-fr="Cinq architectes de l&#x27;économie IA expliquent où les choses dérapent">Five architects of the AI economy explain where the wheels are coming off</a>
+        <span class="pdb-source">TechCrunch · techcrunch.com</span>
+        <p class="pdb-bluf" data-en="Insiders are now publicly questioning AI capex sustainability while hyperscaler equity multiples remain at peak. Asset allocators should pressure-test concentration risk in mega-cap tech before the next earnings season exposes the financing model strains." data-fr="Des initiés remettent désormais publiquement en question la soutenabilité des dépenses en IA alors que les multiples actions des hyperscalers restent au sommet. Les répartiteurs d&#x27;actifs devraient stress-tester le risque de concentration dans les méga-caps technologiques avant que la prochaine saison de résultats expose les tensions du modèle de financement.">Insiders are now publicly questioning AI capex sustainability while hyperscaler equity multiples remain at peak. Asset allocators should pressure-test concentration risk in mega-cap tech before the next earnings season exposes the financing model strains.</p>
+      </div>
+    </div>
+    <div class="pdb-item">
+      <div class="pdb-rank">30</div>
+      <div class="pdb-content">
+        <span class="pdb-tag" data-en="DEFENCE" data-fr="DÉFENSE">DEFENCE</span>
+        <a class="pdb-headline" href="https://warontherocks.com/" target="_blank" rel="noopener" data-en="The Pentagon needs a playbook for munitions surge production" data-fr="Le Pentagone a besoin d&#x27;un plan de production accélérée de munitions">The Pentagon needs a playbook for munitions surge production</a>
+        <span class="pdb-source">War on the Rocks · warontherocks.com</span>
+        <p class="pdb-bluf" data-en="US munitions stockpiles are still drawing down faster than they can be replenished, and a two-front Iran-Ukraine demand profile exposes that gap. Defence prime contractors with surge capacity in PGMs and air defence interceptors are the most likely beneficiaries of supplemental appropriations within 90 days." data-fr="Les stocks de munitions américains diminuent encore plus vite qu&#x27;ils ne sont reconstitués, et un profil de demande à deux fronts Iran-Ukraine expose cet écart. Les principaux contractants de défense avec capacité de production accélérée en munitions guidées et intercepteurs antiaériens sont les principaux bénéficiaires probables de crédits supplémentaires dans les 90 jours.">US munitions stockpiles are still drawing down faster than they can be replenished, and a two-front Iran-Ukraine demand profile exposes that gap. Defence prime contractors with surge capacity in PGMs and air defence interceptors are the most likely beneficiaries of supplemental appropriations within 90 days.</p>
+      </div>
+    </div>
+  </div>
+</main>
 <footer>
-    <div class="footer-inner">
-        <div>
-            <div class="footer-brand">Joseph <span>Soares</span></div>
-            <p class="footer-tagline" data-en>Power is earned through trust. Influence is built through empathy. The best decisions are made by people who have been tested under real pressure.</p>
-            <p class="footer-tagline" data-fr>Le pouvoir se gagne par la confiance. L&rsquo;influence se b&acirc;tit par l&rsquo;empathie. Les meilleures d&eacute;cisions sont prises par ceux qui ont &eacute;t&eacute; &eacute;prouv&eacute;s sous pression.</p>
-        </div>
-        <div>
-            <h3 data-en>Navigation</h3><h3 data-fr>Navigation</h3>
-            <ul>
-                <li><a href="/" data-en>Home</a><a href="/" data-fr>Accueil</a></li>
-                <li><a href="/intelligence.html" data-en>Intelligence</a><a href="/intelligence.html" data-fr>Intelligence</a></li>
-                <li><a href="/newswatch.html" data-en>The Daily Brief</a><a href="/newswatch.html" data-fr>Le Briefing Quotidien</a></li>
-                <li><a href="/podcast.html" data-en>Podcast</a><a href="/podcast.html" data-fr>Balado</a></li>
-            </ul>
-        </div>
-        <div>
-            <h3 data-en>About</h3><h3 data-fr>&Agrave; Propos</h3>
-            <ul>
-                <li><a href="/index.html" data-en>Who This Is For</a><a href="/index.html" data-fr>Pour Qui</a></li>
-                <li><a href="/index.html" data-en>Services</a><a href="/index.html" data-fr>Services</a></li>
-            </ul>
-        </div>
-        <div>
-            <h3 data-en>Connect</h3><h3 data-fr>Connexion</h3>
-            <ul>
-                <li><a href="https://linkedin.com/in/josephsoares" target="_blank">LinkedIn</a></li>
-                <li><a href="https://calendar.app.google/pEyrPMvGY2TuEndcA" data-en>Book a Call</a><a href="https://calendar.app.google/pEyrPMvGY2TuEndcA" data-fr>R&eacute;server un Appel</a></li>
-            </ul>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <p class="footer-credit" data-en>&copy; 2026 Joseph Soares. All rights reserved.</p>
-        <p class="footer-credit" data-fr>&copy; 2026 Joseph Soares. Tous droits r&eacute;serv&eacute;s.</p>
-    </div>
+  <div class="wrap" data-en="© Joseph Soares · IBPROM Corp · Sources cited inline" data-fr="© Joseph Soares · IBPROM Corp · Sources citées en ligne">© Joseph Soares · IBPROM Corp · Sources cited inline</div>
 </footer>
-
 <script>
-// Date
-const now = new Date();
-const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-document.getElementById('brief-date').textContent = now.toLocaleDateString('en-US', options).toUpperCase();
-
-// Language
-function setLang(lang) {
-    if (lang === 'fr') { document.body.classList.add('fr'); }
-    else { document.body.classList.remove('fr'); }
+  function setLang(lang) {
+    document.documentElement.setAttribute('data-lang', lang);
+    document.querySelectorAll('[data-en]').forEach(el => {
+      const v = el.getAttribute('data-' + lang);
+      if (v) {
+        if (el.tagName === 'A') el.textContent = v;
+        else if (el.children.length === 0) el.textContent = v;
+        else el.firstChild && (el.firstChild.nodeType === 3) && (el.firstChild.nodeValue = v);
+        // simple replacement: rewrite text content if no element children
+        if (el.children.length === 0) el.textContent = v;
+      }
+    });
     document.getElementById('btn-en').classList.toggle('active', lang === 'en');
     document.getElementById('btn-fr').classList.toggle('active', lang === 'fr');
-    if (lang === 'fr') {
-        document.getElementById('brief-date').textContent = now.toLocaleDateString('fr-CA', options).toUpperCase();
-    } else {
-        document.getElementById('brief-date').textContent = now.toLocaleDateString('en-US', options).toUpperCase();
-    }
-    localStorage.setItem('lang', lang);
-}
-
-// Section toggle
-function toggleSection(id) {
-    const items = document.getElementById('items-' + id);
-    const toggle = document.getElementById('toggle-' + id);
-    items.classList.toggle('collapsed');
-    toggle.classList.toggle('collapsed');
-}
-
-// Restore lang
-const savedLang = localStorage.getItem('lang');
-if (savedLang) setLang(savedLang);
-
-// ===== LIVE HEADLINE FETCHER =====
-(function() {
-    var API = 'https://api.rss2json.com/v1/api.json?rss_url=';
-    var HEADLINES_PER_SOURCE = 3;
-
-    function timeAgo(dateStr) {
-        try {
-            var d = new Date(dateStr);
-            if (isNaN(d.getTime())) return '';
-            var diff = Math.floor((Date.now() - d.getTime()) / 1000);
-            if (diff < 60) return 'now';
-            if (diff < 3600) return Math.floor(diff / 60) + 'm';
-            if (diff < 86400) return Math.floor(diff / 3600) + 'h';
-            return Math.floor(diff / 86400) + 'd';
-        } catch(e) { return ''; }
-    }
-
-    function fetchFeed(article) {
-        var feedUrl = article.getAttribute('data-feed');
-        var slot = article.querySelector('[data-slot]');
-        if (!feedUrl || !slot) return;
-
-        slot.innerHTML = '<div class="feed-loading">LOADING WIRE...</div>';
-
-        fetch(API + encodeURIComponent(feedUrl))
-            .then(function(r) { return r.json(); })
-            .then(function(data) {
-                if (data.status !== 'ok' || !data.items || data.items.length === 0) {
-                    slot.innerHTML = '';
-                    return;
-                }
-                var items = data.items.slice(0, HEADLINES_PER_SOURCE);
-                var html = '';
-                items.forEach(function(item) {
-                    var ago = timeAgo(item.pubDate);
-                    var agoHtml = ago ? '<span class="hl-time">' + ago + '</span>' : '';
-                    html += '<li>' + agoHtml + '<a href="' + item.link + '" target="_blank" rel="noopener">' + item.title + '</a></li>';
-                });
-                slot.innerHTML = html;
-
-                // Update the "Latest" timestamp to show most recent item age
-                var timeEl = article.querySelector('.intel-time');
-                var firstAgo = timeAgo(items[0].pubDate);
-                if (timeEl && firstAgo) {
-                    timeEl.textContent = firstAgo + ' ago';
-                }
-            })
-            .catch(function() {
-                slot.innerHTML = '';
-            });
-    }
-
-    // Fetch all feeds on page load — stagger to avoid rate limiting
-    var articles = document.querySelectorAll('.intel-article[data-feed]');
-    articles.forEach(function(article, idx) {
-        setTimeout(function() { fetchFeed(article); }, idx * 250);
-    });
-
-    // Auto-refresh every 10 minutes
-    setInterval(function() {
-        articles.forEach(function(article, idx) {
-            setTimeout(function() { fetchFeed(article); }, idx * 250);
-        });
-    }, 600000);
-})();
+  }
 </script>
 </body>
 </html>
