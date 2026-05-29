@@ -2028,12 +2028,9 @@ document.head.appendChild(o)}initApollo();</script>
             <div class="popup-content" id="popupContent">
                 <p class="popup-label">Get Instant Access</p>
                 <h2 class="popup-heading">The SPARK Advisory Brief</h2>
-                <p class="popup-subtext">Everything you need to know about working with a crisis-tested senior advisor. The framework. The investment. What to expect.</p>
-                <form class="popup-form" id="emailCaptureForm">
-                    <input type="text" name="firstName" placeholder="First Name" required class="form-input">
-                    <input type="email" name="email" placeholder="Email Address" required class="form-input">
-                    <button type="submit" class="btn-popup-submit">GET THE BRIEF &rarr;</button>
-                </form>
+                <p class="popup-subtext">Everything you need to know about working with a crisis-tested senior advisor &mdash; the framework, the investment, what to expect. Enter your email to get it instantly and join <em>Corridor Intelligence</em>, Joseph's private briefings on power and high-stakes decision-making.</p>
+                <iframe src="https://corridorintelligence.substack.com/embed" width="100%" height="120" style="border:1px solid #e5e5e5;border-radius:8px;background:#fff;margin-bottom:14px;" frameborder="0" scrolling="no" title="Subscribe to Corridor Intelligence"></iframe>
+                <a href="/assets/spark-advisory-brief.pdf" class="btn-popup-download" download onclick="if(typeof gtag==='function'){gtag('event','lead_magnet_download',{file_name:'spark-advisory-brief'});}">Download the Brief (PDF) &rarr;</a>
                 <p class="popup-privacy">Your privacy is protected. We collect and process your data in accordance with our <a href="/privacy.html">Privacy Policy</a>.</p>
             </div>
             <div class="popup-success" id="popupSuccess" style="display: none;">
@@ -2082,7 +2079,7 @@ document.head.appendChild(o)}initApollo();</script>
                 if (e.key === 'Escape' && popupOverlay.classList.contains('active')) closePopup();
             });
 
-            emailForm.addEventListener('submit', function(e) {
+            if (emailForm) emailForm.addEventListener('submit', function(e) {
                 e.preventDefault();
                 var firstName = emailForm.querySelector('input[name="firstName"]').value;
                 var email = emailForm.querySelector('input[name="email"]').value;
