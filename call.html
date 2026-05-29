@@ -777,7 +777,6 @@ document.head.appendChild(o)}initApollo();</script>
         if (bookingCta) {
             bookingCta.addEventListener('click', function() {
                 fireAttributionEvent('booking_click');
-                if (typeof gtag === 'function') { gtag('event', 'booking_click', { method: 'google_calendar', page: 'call' }); }
                 // Proceed to Google Calendar booking as normal — no delay
             });
         }
