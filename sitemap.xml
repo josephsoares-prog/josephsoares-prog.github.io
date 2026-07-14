@@ -149,4 +149,30 @@
     <changefreq>never</changefreq>
     <priority>0.6</priority>
   </url>
+
+  <!-- Allied Hub Series — Corridor Intelligence long-form (added 2026-07-14) -->
+  <url>
+    <loc>https://josephsoares.com/canada-allied-hub-may-2026.html</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://josephsoares.com/canada-allied-hub-atlantic-front-june-2026.html</loc>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://josephsoares.com/canada-allied-hub-hemispheric-front-july-2026.html</loc>
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://josephsoares.com/canada-allied-hub-indo-pacific-front-july-2026.html</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
