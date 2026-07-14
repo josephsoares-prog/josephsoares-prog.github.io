@@ -1,378 +1,364 @@
 <!DOCTYPE html>
-<html lang="en" data-lang="en">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Newswatch — Joseph Soares</title>
-<meta name="description" content="PDB-ranked daily intelligence brief. Bilingual (EN/FR). Top 30 articles by decision impact. Curated by Joseph Soares.">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Newswatch — Daily Brief | Joseph Soares</title>
 <style>
-  :root {
-    --bg: #0b1020; --panel: #121a33; --ink: #e7ecf7; --muted: #9aa6c4;
-    --accent: #c9a14a; --accent-2: #e2b657; --line: #1c2748; --link: #ffd47a;
-  }
-  * { box-sizing: border-box; }
-  html, body { margin: 0; padding: 0; }
-  body {
-    font-family: Georgia, "Times New Roman", serif;
-    background: var(--bg); color: var(--ink); line-height: 1.55;
-  }
-  header {
-    padding: 32px 24px 18px; border-bottom: 1px solid var(--line);
-    background: linear-gradient(180deg, #0d1430 0%, #0b1020 100%);
-  }
-  .wrap { max-width: 920px; margin: 0 auto; }
-  h1 { font-size: 28px; margin: 0 0 6px; letter-spacing: 0.5px; color: var(--accent-2); }
-  .sub { color: var(--muted); font-size: 14px; }
-  .toolbar { display: flex; align-items: center; gap: 12px; margin-top: 14px; }
-  .lang-toggle button {
-    background: transparent; border: 1px solid var(--accent); color: var(--ink);
-    padding: 6px 12px; font: inherit; cursor: pointer; border-radius: 4px;
-  }
-  .lang-toggle button.active { background: var(--accent); color: #1a1300; }
-  main { padding: 24px; }
-  .pdb-item {
-    display: grid; grid-template-columns: 56px 1fr; gap: 14px;
-    padding: 18px 0; border-bottom: 1px solid var(--line);
-  }
-  .pdb-rank {
-    font-family: "Helvetica Neue", Arial, sans-serif; font-weight: 700;
-    font-size: 28px; color: var(--accent-2); text-align: right;
-  }
-  .pdb-content { display: flex; flex-direction: column; }
-  .pdb-tag {
-    display: inline-block; align-self: flex-start;
-    background: var(--accent); color: #1a1300; font-family: Arial, sans-serif;
-    font-weight: 700; font-size: 11px; letter-spacing: 1.2px;
-    padding: 3px 8px; border-radius: 3px; margin-bottom: 6px; text-transform: uppercase;
-  }
-  .pdb-headline {
-    color: var(--link); text-decoration: none; font-size: 19px;
-    font-weight: 600; line-height: 1.3;
-  }
-  .pdb-headline:hover { text-decoration: underline; }
-  .pdb-source {
-    color: var(--muted); font-family: Arial, sans-serif;
-    font-size: 12px; margin: 4px 0 8px;
-  }
-  .pdb-bluf { margin: 0; color: var(--ink); font-size: 15px; }
-  footer {
-    padding: 24px; text-align: center; color: var(--muted);
-    font-size: 12px; border-top: 1px solid var(--line);
-  }
-  @media (max-width: 600px) {
-    .pdb-item { grid-template-columns: 40px 1fr; gap: 10px; }
-    .pdb-rank { font-size: 22px; }
-    .pdb-headline { font-size: 17px; }
-  }
+:root{--bg:#0d1117;--panel:#161b22;--line:#232a33;--txt:#e6edf3;--mut:#8b949e;--acc:#c9a227;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--txt);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;line-height:1.55}
+header{border-bottom:1px solid var(--line);padding:34px 24px 22px;max-width:900px;margin:0 auto}
+.kicker{letter-spacing:.22em;font-size:11px;color:var(--acc);text-transform:uppercase;font-weight:700}
+h1{margin:8px 0 4px;font-size:32px;letter-spacing:-.5px}
+.dateline{color:var(--mut);font-size:13px}
+.lang{margin-top:16px}
+.lang button{background:transparent;border:1px solid var(--line);color:var(--mut);padding:6px 14px;font-size:12px;cursor:pointer;border-radius:4px;margin-right:6px;letter-spacing:.08em}
+.lang button.active{border-color:var(--acc);color:var(--acc)}
+main{max-width:900px;margin:0 auto;padding:8px 24px 60px}
+.pdb-item{display:flex;gap:18px;padding:22px 0;border-bottom:1px solid var(--line)}
+.pdb-rank{flex:0 0 44px;font-size:20px;font-weight:700;color:var(--acc);font-variant-numeric:tabular-nums;padding-top:2px}
+.pdb-content{flex:1;min-width:0}
+.pdb-tag{display:inline-block;font-size:10px;letter-spacing:.14em;font-weight:700;color:var(--bg);background:var(--acc);padding:3px 8px;border-radius:3px;text-transform:uppercase}
+.pdb-headline{margin:9px 0 4px;font-size:19px;line-height:1.35;font-weight:650}
+.pdb-headline a{color:var(--txt);text-decoration:none;border-bottom:1px solid transparent}
+.pdb-headline a:hover{border-bottom-color:var(--acc);color:var(--acc)}
+.pdb-source{font-size:12px;color:var(--mut);margin-bottom:8px}
+.pdb-bluf{margin:0;font-size:14.5px;color:#c3ccd6}
+footer{max-width:900px;margin:0 auto;padding:0 24px 50px;color:var(--mut);font-size:12px;border-top:1px solid var(--line);padding-top:18px}
+@media(max-width:640px){.pdb-item{gap:12px}.pdb-rank{flex:0 0 30px;font-size:16px}h1{font-size:24px}}
 </style>
 </head>
 <body>
 <header>
-  <div class="wrap">
-    <h1 data-en="Newswatch — PDB Morning Brief" data-fr="Newswatch — Briefing matinal PDB">Newswatch — PDB Morning Brief</h1>
-    <div class="sub" data-en="Thursday, May 07, 2026 · Top 30 by decision impact · Curated by Joseph Soares" data-fr="Thursday, May 07, 2026 · Top 30 par impact décisionnel · Préparé par Joseph Soares">Thursday, May 07, 2026 · Top 30 by decision impact · Curated by Joseph Soares</div>
-    <div class="toolbar">
-      <div class="lang-toggle">
-        <button id="btn-en" class="active" onclick="setLang('en')">EN</button>
-        <button id="btn-fr" onclick="setLang('fr')">FR</button>
-      </div>
-    </div>
+  <div class="kicker" data-en="Newswatch · Presidential Daily Brief Format" data-fr="Veille · Format Briefing Présidentiel Quotidien">Newswatch · Presidential Daily Brief Format</div>
+  <h1 data-en="Daily Brief" data-fr="Briefing quotidien">Daily Brief</h1>
+  <div class="dateline" data-en="Tuesday, 14 July 2026 · 34 items · Ranked by decision impact" data-fr="Mardi 14 juillet 2026 · 34 articles · Classés par impact décisionnel">Tuesday, 14 July 2026 · 34 items · Ranked by decision impact</div>
+  <div class="lang">
+    <button id="btn-en" class="active" onclick="setLang('en')">EN</button>
+    <button id="btn-fr" onclick="setLang('fr')">FR</button>
   </div>
 </header>
 <main>
-  <div class="wrap">
-    
     <div class="pdb-item">
-      <div class="pdb-rank">1</div>
-      <div class="pdb-content">
-        <span class="pdb-tag" data-en="DIPLOMACY" data-fr="DIPLOMATIE">DIPLOMACY</span>
-        <a class="pdb-headline" href="https://www.bbc.com/news/articles/c80zry42lp9o" target="_blank" rel="noopener" data-en="Iran weighing US proposal as Trump says war will be &#x27;over quickly&#x27;" data-fr="L&#x27;Iran étudie la proposition américaine alors que Trump prédit une guerre qui sera &#x27;rapidement terminée&#x27;">Iran weighing US proposal as Trump says war will be &#x27;over quickly&#x27;</a>
-        <span class="pdb-source">BBC World · bbc.com</span>
-        <p class="pdb-bluf" data-en="Iran is publicly deliberating a US ceasefire framework while Washington signals a short war. Decision-makers must price in either rapid de-escalation that releases oil pressure or a hard rejection that forces a wider US military commitment within days." data-fr="L&#x27;Iran délibère publiquement sur un cadre de cessez-le-feu américain pendant que Washington annonce une guerre courte. Les décideurs doivent intégrer soit une désescalade rapide libérant la pression pétrolière, soit un refus dur forçant un engagement militaire américain élargi en quelques jours.">Iran is publicly deliberating a US ceasefire framework while Washington signals a short war. Decision-makers must price in either rapid de-escalation that releases oil pressure or a hard rejection that forces a wider US military commitment within days.</p>
-      </div>
-    </div>
-    <div class="pdb-item">
-      <div class="pdb-rank">2</div>
+      <div class="pdb-rank">01</div>
       <div class="pdb-content">
         <span class="pdb-tag" data-en="HORMUZ" data-fr="HORMUZ">HORMUZ</span>
-        <a class="pdb-headline" href="https://www.cgtn.com/world" target="_blank" rel="noopener" data-en="Wang Yi: Blockade of Strait of Hormuz not in common interests" data-fr="Wang Yi : un blocus du détroit d&#x27;Ormuz ne sert pas l&#x27;intérêt commun">Wang Yi: Blockade of Strait of Hormuz not in common interests</a>
-        <span class="pdb-source">CGTN · cgtn.com</span>
-        <p class="pdb-bluf" data-en="Beijing has openly told Tehran a Hormuz closure is unacceptable, removing China as a diplomatic shield for Iran. This is the single largest signal yet that Iran&#x27;s escalation options are narrowing and that the global oil chokepoint may stay open." data-fr="Pékin a publiquement signifié à Téhéran qu&#x27;une fermeture d&#x27;Ormuz est inacceptable, retirant à l&#x27;Iran sa couverture diplomatique chinoise. C&#x27;est le plus fort signal à ce jour que les options d&#x27;escalade iraniennes se resserrent et que le point d&#x27;étranglement pétrolier mondial pourrait rester ouvert.">Beijing has openly told Tehran a Hormuz closure is unacceptable, removing China as a diplomatic shield for Iran. This is the single largest signal yet that Iran&#x27;s escalation options are narrowing and that the global oil chokepoint may stay open.</p>
+        <h2 class="pdb-headline"><a href="https://thehill.com/policy/international/5966855-uae-tankers-targeted-iranian-forces/" target="_blank" rel="noopener" data-en="Iran strikes two UAE tankers in the Strait of Hormuz, killing a crew member" data-fr="L&#x27;Iran frappe deux pétroliers émiratis dans le détroit d&#x27;Ormuz, tuant un membre d&#x27;équipage">Iran strikes two UAE tankers in the Strait of Hormuz, killing a crew member</a></h2>
+        <div class="pdb-source">The Hill · thehill.com</div>
+        <p class="pdb-bluf" data-en="Iran has crossed from threatening shipping to killing Gulf-flagged crews. Striking UAE vessels attacks a state that has stayed out of the fight, widening the war&#x27;s participant set and pulling Abu Dhabi toward retaliation or dependence on US escort. Every hull in the Gulf now reprices insurance, and every Gulf capital reprices its neutrality." data-fr="L&#x27;Iran est passé de la menace contre la navigation au meurtre d&#x27;équipages battant pavillon du Golfe. Frapper des navires émiratis attaque un État resté hors du conflit, élargit le cercle des belligérants et pousse Abou Dhabi vers la représaille ou la dépendance à l&#x27;escorte américaine. Chaque coque du Golfe revalorise son assurance ; chaque capitale du Golfe revalorise sa neutralité.">Iran has crossed from threatening shipping to killing Gulf-flagged crews. Striking UAE vessels attacks a state that has stayed out of the fight, widening the war&#x27;s participant set and pulling Abu Dhabi toward retaliation or dependence on US escort. Every hull in the Gulf now reprices insurance, and every Gulf capital reprices its neutrality.</p>
       </div>
     </div>
     <div class="pdb-item">
-      <div class="pdb-rank">3</div>
-      <div class="pdb-content">
-        <span class="pdb-tag" data-en="DEFENCE" data-fr="DÉFENSE">DEFENCE</span>
-        <a class="pdb-headline" href="https://www.defensenews.com/" target="_blank" rel="noopener" data-en="US forces fire at, disable Iran-flagged tanker trying to evade blockade" data-fr="Les forces américaines tirent et neutralisent un pétrolier iranien tentant d&#x27;échapper au blocus">US forces fire at, disable Iran-flagged tanker trying to evade blockade</a>
-        <span class="pdb-source">Defense News · defensenews.com</span>
-        <p class="pdb-bluf" data-en="US naval forces have crossed from interdiction to live fire against Iranian-flagged shipping. This is a kinetic baseline shift — every subsequent Iranian tanker move is now a potential war trigger, and insurance markets will reprice Gulf shipping today." data-fr="Les forces navales américaines sont passées de l&#x27;interception au tir réel contre des navires sous pavillon iranien. C&#x27;est un changement kinétique de référence — chaque mouvement de pétrolier iranien devient un déclencheur potentiel de guerre, et les marchés d&#x27;assurance vont retarifer le transport dans le Golfe dès aujourd&#x27;hui.">US naval forces have crossed from interdiction to live fire against Iranian-flagged shipping. This is a kinetic baseline shift — every subsequent Iranian tanker move is now a potential war trigger, and insurance markets will reprice Gulf shipping today.</p>
-      </div>
-    </div>
-    <div class="pdb-item">
-      <div class="pdb-rank">4</div>
-      <div class="pdb-content">
-        <span class="pdb-tag" data-en="RUSSIA" data-fr="RUSSIE">RUSSIA</span>
-        <a class="pdb-headline" href="https://meduza.io/en/news" target="_blank" rel="noopener" data-en="Russia warns countries to evacuate Kyiv diplomats ahead of May 9 &#x27;retaliatory strike&#x27;" data-fr="La Russie demande aux pays d&#x27;évacuer leurs diplomates de Kiev avant une &#x27;frappe de représailles&#x27; du 9 mai">Russia warns countries to evacuate Kyiv diplomats ahead of May 9 &#x27;retaliatory strike&#x27;</a>
-        <span class="pdb-source">Meduza · meduza.io</span>
-        <p class="pdb-bluf" data-en="Moscow&#x27;s Foreign Ministry has issued a formal warning to evacuate diplomatic staff from Kyiv before May 9. This is escalation language Russia rarely uses publicly — markets, NATO capitals, and air carriers should treat the next 48 hours as a high-impact strike window." data-fr="Le ministère russe des Affaires étrangères a émis un avertissement formel d&#x27;évacuation du personnel diplomatique de Kiev avant le 9 mai. C&#x27;est un langage d&#x27;escalade que la Russie utilise rarement publiquement — marchés, capitales OTAN et transporteurs aériens doivent considérer les prochaines 48 heures comme une fenêtre de frappe à fort impact.">Moscow&#x27;s Foreign Ministry has issued a formal warning to evacuate diplomatic staff from Kyiv before May 9. This is escalation language Russia rarely uses publicly — markets, NATO capitals, and air carriers should treat the next 48 hours as a high-impact strike window.</p>
-      </div>
-    </div>
-    <div class="pdb-item">
-      <div class="pdb-rank">5</div>
+      <div class="pdb-rank">02</div>
       <div class="pdb-content">
         <span class="pdb-tag" data-en="ENERGY" data-fr="ÉNERGIE">ENERGY</span>
-        <a class="pdb-headline" href="https://www.foreignaffairs.com/iran/irans-new-oil-weapon" target="_blank" rel="noopener" data-en="Iran&#x27;s new oil weapon" data-fr="La nouvelle arme pétrolière de l&#x27;Iran">Iran&#x27;s new oil weapon</a>
-        <span class="pdb-source">Foreign Affairs · foreignaffairs.com</span>
-        <p class="pdb-bluf" data-en="Foreign Affairs reframes Iran&#x27;s escalation toolkit beyond a Hormuz closure — covert tanker attacks, port sabotage, and proxy strikes on Saudi infrastructure. Treating the choke point as the only risk underestimates the supply shocks already in motion." data-fr="Foreign Affairs recadre l&#x27;arsenal d&#x27;escalade iranien au-delà d&#x27;une fermeture d&#x27;Ormuz — attaques clandestines de pétroliers, sabotage portuaire et frappes par procuration sur les infrastructures saoudiennes. Considérer le détroit comme l&#x27;unique risque sous-estime les chocs d&#x27;offre déjà en cours.">Foreign Affairs reframes Iran&#x27;s escalation toolkit beyond a Hormuz closure — covert tanker attacks, port sabotage, and proxy strikes on Saudi infrastructure. Treating the choke point as the only risk underestimates the supply shocks already in motion.</p>
+        <h2 class="pdb-headline"><a href="https://oilprice.com/Energy/Oil-Prices/Brent-Surges-Above-86-After-Iran-Strikes-Two-UAE-Tankers-in-Hormuz.html" target="_blank" rel="noopener" data-en="Brent surges above $86 after Iran strikes two UAE tankers in Hormuz" data-fr="Le Brent bondit au-dessus de 86 $ après les frappes iraniennes sur deux pétroliers émiratis à Ormuz">Brent surges above $86 after Iran strikes two UAE tankers in Hormuz</a></h2>
+        <div class="pdb-source">OilPrice · oilprice.com</div>
+        <p class="pdb-bluf" data-en="The market is no longer pricing a scare — it is pricing a closure. Above $86 Brent, the pass-through hits fuel, freight and food within two quarters, and importing economies lose the disinflation they had banked on. Treat $86 as a floor, not a spike, while Iranian anti-shipping capability remains intact." data-fr="Le marché ne valorise plus une frayeur, mais une fermeture. Au-dessus de 86 $, la répercussion touche carburants, fret et alimentation en deux trimestres, et les économies importatrices perdent la désinflation escomptée. Considérer 86 $ comme un plancher, non un pic, tant que la capacité antinavire iranienne reste intacte.">The market is no longer pricing a scare — it is pricing a closure. Above $86 Brent, the pass-through hits fuel, freight and food within two quarters, and importing economies lose the disinflation they had banked on. Treat $86 as a floor, not a spike, while Iranian anti-shipping capability remains intact.</p>
       </div>
     </div>
     <div class="pdb-item">
-      <div class="pdb-rank">6</div>
+      <div class="pdb-rank">03</div>
       <div class="pdb-content">
-        <span class="pdb-tag" data-en="MARKETS" data-fr="MARCHÉS">MARKETS</span>
-        <a class="pdb-headline" href="https://www.cnbc.com/" target="_blank" rel="noopener" data-en="Iran war threatens jet fuel shortage that could disrupt summer travel in Asia and Europe" data-fr="La guerre en Iran menace une pénurie de carburant aviation qui pourrait perturber les voyages d&#x27;été en Asie et en Europe">Iran war threatens jet fuel shortage that could disrupt summer travel in Asia and Europe</a>
-        <span class="pdb-source">CNBC · cnbc.com</span>
-        <p class="pdb-bluf" data-en="Asian and European jet fuel inventories are exposed to Gulf disruption at the start of peak travel season. Airlines, freight forwarders, and travel-exposed equities face margin compression that has not yet been fully discounted into Q3 forecasts." data-fr="Les stocks de carburant aviation en Asie et en Europe sont exposés à une perturbation du Golfe au début de la haute saison touristique. Compagnies aériennes, transitaires et titres exposés au voyage font face à une compression des marges encore non intégrée dans les prévisions du T3.">Asian and European jet fuel inventories are exposed to Gulf disruption at the start of peak travel season. Airlines, freight forwarders, and travel-exposed equities face margin compression that has not yet been fully discounted into Q3 forecasts.</p>
+        <span class="pdb-tag" data-en="GEOPOLITICS" data-fr="GÉOPOLITIQUE">GEOPOLITICS</span>
+        <h2 class="pdb-headline"><a href="https://www.livemint.com/news/us-news/trump-announces-us-as-guardian-of-the-hormuz-strait-proposes-30-mn-cargo-fee-heres-how-it-compares-with-tehrans-11784015936652.html" target="_blank" rel="noopener" data-en="Trump declares the US &#x27;Guardian of the Strait of Hormuz,&#x27; proposes $30m cargo fee" data-fr="Trump se déclare « gardien du détroit d&#x27;Ormuz » et propose un péage de 30 M$ par cargaison">Trump declares the US &#x27;Guardian of the Strait of Hormuz,&#x27; proposes $30m cargo fee</a></h2>
+        <div class="pdb-source">Livemint · livemint.com</div>
+        <p class="pdb-bluf" data-en="Washington is monetising a chokepoint it has policed for free since 1980. A US toll competes directly with Tehran&#x27;s own levy, converting a security guarantee into a transactional service and inviting every other strait-owner to do the same. Asian importers, who transit most of the cargo, absorb the cost and will hedge toward non-US escort arrangements." data-fr="Washington monétise un point de passage qu&#x27;il surveillait gratuitement depuis 1980. Un péage américain concurrence directement celui de Téhéran, transforme une garantie de sécurité en service marchand et invite tous les autres détenteurs de détroits à l&#x27;imiter. Les importateurs asiatiques, qui font transiter l&#x27;essentiel du fret, en absorbent le coût et chercheront des escortes non américaines.">Washington is monetising a chokepoint it has policed for free since 1980. A US toll competes directly with Tehran&#x27;s own levy, converting a security guarantee into a transactional service and inviting every other strait-owner to do the same. Asian importers, who transit most of the cargo, absorb the cost and will hedge toward non-US escort arrangements.</p>
       </div>
     </div>
     <div class="pdb-item">
-      <div class="pdb-rank">7</div>
+      <div class="pdb-rank">04</div>
       <div class="pdb-content">
         <span class="pdb-tag" data-en="DEFENCE" data-fr="DÉFENSE">DEFENCE</span>
-        <a class="pdb-headline" href="https://breakingdefense.com/" target="_blank" rel="noopener" data-en="Turkey rolls out intercontinental missile with purported 6,000km range" data-fr="La Turquie dévoile un missile intercontinental d&#x27;une portée annoncée de 6 000 km">Turkey rolls out intercontinental missile with purported 6,000km range</a>
-        <span class="pdb-source">Breaking Defense · breakingdefense.com</span>
-        <p class="pdb-bluf" data-en="A Turkish 6,000-km missile reaches London, Moscow, Riyadh, and most of Africa from Anatolia. NATO acquires a power-projection asset Ankara controls unilaterally — a strategic shift that complicates every alliance calculation in the eastern Mediterranean." data-fr="Un missile turc de 6 000 km couvre Londres, Moscou, Riyad et la majorité de l&#x27;Afrique depuis l&#x27;Anatolie. L&#x27;OTAN gagne un actif de projection contrôlé unilatéralement par Ankara — un basculement stratégique qui complique chaque calcul d&#x27;alliance en Méditerranée orientale.">A Turkish 6,000-km missile reaches London, Moscow, Riyadh, and most of Africa from Anatolia. NATO acquires a power-projection asset Ankara controls unilaterally — a strategic shift that complicates every alliance calculation in the eastern Mediterranean.</p>
+        <h2 class="pdb-headline"><a href="https://thehill.com/policy/defense/5966832-esper-supports-trump-blockade/" target="_blank" rel="noopener" data-en="Trump reimposes naval blockade on Iran; Esper calls it &#x27;the right move&#x27;" data-fr="Trump rétablit le blocus naval contre l&#x27;Iran ; Esper juge la décision « juste »">Trump reimposes naval blockade on Iran; Esper calls it &#x27;the right move&#x27;</a></h2>
+        <div class="pdb-source">The Hill · thehill.com</div>
+        <p class="pdb-bluf" data-en="A blockade is an act of war under customary international law, and bipartisan cover from a former SecDef removes the domestic brake on escalation. It commits US surface assets to a static mission inside range of Iranian ASBMs and drones — the exact target set Tehran has optimised for. Expect a maritime incident to be the trigger for the next phase." data-fr="Un blocus constitue un acte de guerre en droit international coutumier, et l&#x27;appui bipartisan d&#x27;un ancien secrétaire à la Défense lève le frein intérieur à l&#x27;escalade. Il fige des bâtiments de surface américains dans la portée des missiles balistiques antinavires et des drones iraniens — précisément la cible pour laquelle Téhéran s&#x27;est optimisé. Un incident maritime déclenchera vraisemblablement la phase suivante.">A blockade is an act of war under customary international law, and bipartisan cover from a former SecDef removes the domestic brake on escalation. It commits US surface assets to a static mission inside range of Iranian ASBMs and drones — the exact target set Tehran has optimised for. Expect a maritime incident to be the trigger for the next phase.</p>
       </div>
     </div>
     <div class="pdb-item">
-      <div class="pdb-rank">8</div>
+      <div class="pdb-rank">05</div>
       <div class="pdb-content">
-        <span class="pdb-tag" data-en="RUSSIA" data-fr="RUSSIE">RUSSIA</span>
-        <a class="pdb-headline" href="https://meduza.io/en/news" target="_blank" rel="noopener" data-en="Russia&#x27;s economy slows as war costs mount, budget deficit widens, rate cuts near limit" data-fr="L&#x27;économie russe ralentit alors que les coûts de guerre montent, le déficit budgétaire se creuse et les baisses de taux atteignent leur limite">Russia&#x27;s economy slows as war costs mount, budget deficit widens, rate cuts near limit</a>
-        <span class="pdb-source">Meduza · meduza.io</span>
-        <p class="pdb-bluf" data-en="Russia&#x27;s wartime economy is hitting its monetary ceiling — deficit expanding, central bank out of room. This is the first quarter where the Kremlin&#x27;s structural funding for the war shows visible cracks, and it shortens the timeline for Putin&#x27;s strategic decision points." data-fr="L&#x27;économie de guerre russe atteint son plafond monétaire — déficit en hausse, banque centrale à court de marge. C&#x27;est le premier trimestre où le financement structurel de la guerre par le Kremlin montre des fissures visibles, raccourcissant la chronologie des points de décision stratégique de Poutine.">Russia&#x27;s wartime economy is hitting its monetary ceiling — deficit expanding, central bank out of room. This is the first quarter where the Kremlin&#x27;s structural funding for the war shows visible cracks, and it shortens the timeline for Putin&#x27;s strategic decision points.</p>
+        <span class="pdb-tag" data-en="SHIPPING" data-fr="TRANSPORT MARITIME">SHIPPING</span>
+        <h2 class="pdb-headline"><a href="https://theloadstar.com/box-ship-attacked-hormuz-shut-again-middle-east-rates-sail-past-pandemic-peak/" target="_blank" rel="noopener" data-en="Box ship attacked, Hormuz shut again, Middle East freight rates pass pandemic peak" data-fr="Porte-conteneurs attaqué, Ormuz de nouveau fermé, les taux de fret au Moyen-Orient dépassent le pic pandémique">Box ship attacked, Hormuz shut again, Middle East freight rates pass pandemic peak</a></h2>
+        <div class="pdb-source">The Loadstar · theloadstar.com</div>
+        <p class="pdb-bluf" data-en="Container rates above 2021 levels mean the shock has escaped the energy complex and entered the goods economy. Manufacturers relying on Gulf transit face committed-cargo losses and 6–8 week rerouting penalties, and the inflation print follows on a lag. Anyone with Q4 delivery commitments through the Gulf should be renegotiating now." data-fr="Des taux conteneurs supérieurs à 2021 signifient que le choc a quitté le complexe énergétique pour entrer dans l&#x27;économie des biens. Les industriels dépendant du transit par le Golfe subissent des pertes sur cargaisons engagées et des détours de six à huit semaines ; l&#x27;inflation suivra avec retard. Toute livraison du T4 via le Golfe doit être renégociée dès maintenant.">Container rates above 2021 levels mean the shock has escaped the energy complex and entered the goods economy. Manufacturers relying on Gulf transit face committed-cargo losses and 6–8 week rerouting penalties, and the inflation print follows on a lag. Anyone with Q4 delivery commitments through the Gulf should be renegotiating now.</p>
       </div>
     </div>
     <div class="pdb-item">
-      <div class="pdb-rank">9</div>
+      <div class="pdb-rank">06</div>
+      <div class="pdb-content">
+        <span class="pdb-tag" data-en="CHINA" data-fr="CHINE">CHINA</span>
+        <h2 class="pdb-headline"><a href="https://oilprice.com/Latest-Energy-News/World-News/Chinas-Crude-Oil-Imports-Crash-to-Decade-Low-as-Hormuz-Crisis-Bites.html" target="_blank" rel="noopener" data-en="China&#x27;s crude imports crash to a decade low as the Hormuz crisis bites" data-fr="Les importations chinoises de brut s&#x27;effondrent à un creux décennal sous l&#x27;effet de la crise d&#x27;Ormuz">China&#x27;s crude imports crash to a decade low as the Hormuz crisis bites</a></h2>
+        <div class="pdb-source">OilPrice · oilprice.com</div>
+        <p class="pdb-bluf" data-en="China is the largest buyer of Gulf crude and its import collapse is the clearest evidence the blockade is biting physical flows, not just sentiment. Sustained shortfalls force Beijing to draw strategic reserves, buy discounted Russian and Iranian barrels, or apply real diplomatic pressure on Tehran. Which of the three it picks tells you whether China becomes a de-escalating force or a sanctions-busting one." data-fr="La Chine est le premier acheteur de brut du Golfe : l&#x27;effondrement de ses importations prouve que le blocus atteint les flux physiques, pas seulement le sentiment. Un déficit durable obligera Pékin à puiser dans ses réserves stratégiques, à acheter du brut russe et iranien décoté, ou à exercer une véritable pression sur Téhéran. Le choix retenu dira si la Chine devient une force de désescalade ou de contournement des sanctions.">China is the largest buyer of Gulf crude and its import collapse is the clearest evidence the blockade is biting physical flows, not just sentiment. Sustained shortfalls force Beijing to draw strategic reserves, buy discounted Russian and Iranian barrels, or apply real diplomatic pressure on Tehran. Which of the three it picks tells you whether China becomes a de-escalating force or a sanctions-busting one.</p>
+      </div>
+    </div>
+    <div class="pdb-item">
+      <div class="pdb-rank">07</div>
+      <div class="pdb-content">
+        <span class="pdb-tag" data-en="MACRO" data-fr="MACRO">MACRO</span>
+        <h2 class="pdb-headline"><a href="https://financialpost.com/pmn/business-pmn/traders-boost-boe-and-ecb-rate-hike-bets-after-oil-price-surge" target="_blank" rel="noopener" data-en="Traders boost Bank of England and ECB rate-hike bets after the oil surge" data-fr="Les marchés relèvent leurs paris de hausse de taux pour la BoE et la BCE après la flambée pétrolière">Traders boost Bank of England and ECB rate-hike bets after the oil surge</a></h2>
+        <div class="pdb-source">Financial Post · financialpost.com</div>
+        <p class="pdb-bluf" data-en="The easing cycle Europe was counting on is being repriced into hikes by an external supply shock central banks cannot control. Higher-for-longer rates land on the same balance sheets already carrying energy costs, and refinancing assumptions made in 2025 are now wrong. Rate-sensitive sectors — housing, leveraged mid-caps, sovereign issuers — should be stress-tested against a hiking path, not a cutting one." data-fr="Le cycle d&#x27;assouplissement attendu en Europe se retourne en hausses sous l&#x27;effet d&#x27;un choc d&#x27;offre externe que les banques centrales ne maîtrisent pas. Des taux durablement élevés frappent des bilans déjà alourdis par l&#x27;énergie, et les hypothèses de refinancement de 2025 sont caduques. Immobilier, moyennes capitalisations endettées et émetteurs souverains doivent être testés contre une trajectoire de hausse, non de baisse.">The easing cycle Europe was counting on is being repriced into hikes by an external supply shock central banks cannot control. Higher-for-longer rates land on the same balance sheets already carrying energy costs, and refinancing assumptions made in 2025 are now wrong. Rate-sensitive sectors — housing, leveraged mid-caps, sovereign issuers — should be stress-tested against a hiking path, not a cutting one.</p>
+      </div>
+    </div>
+    <div class="pdb-item">
+      <div class="pdb-rank">08</div>
       <div class="pdb-content">
         <span class="pdb-tag" data-en="ENERGY" data-fr="ÉNERGIE">ENERGY</span>
-        <a class="pdb-headline" href="https://oilprice.com/" target="_blank" rel="noopener" data-en="EU Suspends Methane Rules as Energy Crunch Intensifies" data-fr="L&#x27;UE suspend les règles sur le méthane alors que la crise énergétique s&#x27;aggrave">EU Suspends Methane Rules as Energy Crunch Intensifies</a>
-        <span class="pdb-source">OilPrice · oilprice.com</span>
-        <p class="pdb-bluf" data-en="Brussels has formally subordinated climate enforcement to energy security. The methane suspension signals that EU compliance investments tied to that regime carry political risk, and that LNG suppliers including US producers gain pricing power into winter." data-fr="Bruxelles a formellement subordonné l&#x27;application climatique à la sécurité énergétique. La suspension méthane signale que les investissements européens de conformité liés à ce régime portent un risque politique, et que les fournisseurs de GNL, dont les producteurs américains, gagnent en pouvoir de tarification d&#x27;ici l&#x27;hiver.">Brussels has formally subordinated climate enforcement to energy security. The methane suspension signals that EU compliance investments tied to that regime carry political risk, and that LNG suppliers including US producers gain pricing power into winter.</p>
+        <h2 class="pdb-headline"><a href="https://oilprice.com/Latest-Energy-News/World-News/Iran-Sneaks-12-Million-Barrels-Past-Renewed-US-Oil-Blockade.html" target="_blank" rel="noopener" data-en="Iran slips 12 million barrels past the renewed US oil blockade" data-fr="L&#x27;Iran fait passer 12 millions de barils malgré le nouveau blocus pétrolier américain">Iran slips 12 million barrels past the renewed US oil blockade</a></h2>
+        <div class="pdb-source">OilPrice · oilprice.com</div>
+        <p class="pdb-bluf" data-en="The blockade is leaking at scale, which undercuts the coercive logic behind it while keeping all of its escalation risk. Tehran retains export revenue and the political argument that US pressure fails, so it has no incentive to concede at the table. Enforcement will tighten toward interdiction of the dark fleet — the most likely path to a direct naval clash." data-fr="Le blocus fuit à grande échelle, ce qui ruine sa logique coercitive tout en conservant son risque d&#x27;escalade. Téhéran garde ses revenus d&#x27;exportation et l&#x27;argument politique de l&#x27;échec de la pression américaine : aucune incitation à céder. Le durcissement passera par l&#x27;arraisonnement de la flotte fantôme — la voie la plus probable vers un affrontement naval direct.">The blockade is leaking at scale, which undercuts the coercive logic behind it while keeping all of its escalation risk. Tehran retains export revenue and the political argument that US pressure fails, so it has no incentive to concede at the table. Enforcement will tighten toward interdiction of the dark fleet — the most likely path to a direct naval clash.</p>
+      </div>
+    </div>
+    <div class="pdb-item">
+      <div class="pdb-rank">09</div>
+      <div class="pdb-content">
+        <span class="pdb-tag" data-en="DEFENCE" data-fr="DÉFENSE">DEFENCE</span>
+        <h2 class="pdb-headline"><a href="https://breakingdefense.com/2026/07/in-first-us-uses-sea-drones-in-combat-in-iran-strikes-centcom/" target="_blank" rel="noopener" data-en="CENTCOM: US uses sea drones in combat for the first time in Iran strikes" data-fr="CENTCOM : les États-Unis emploient pour la première fois des drones marins au combat contre l&#x27;Iran">CENTCOM: US uses sea drones in combat for the first time in Iran strikes</a></h2>
+        <div class="pdb-source">Breaking Defense · breakingdefense.com</div>
+        <p class="pdb-bluf" data-en="A doctrinal threshold has been crossed: the US can now project lethal maritime effect without risking crews, lowering the political cost of each strike. That makes escalation cheaper for Washington and hands every adversary and non-state actor a validated template. Naval procurement, port security and maritime insurance all reprice off this precedent." data-fr="Un seuil doctrinal est franchi : les États-Unis peuvent désormais frapper en mer sans exposer d&#x27;équipages, abaissant le coût politique de chaque frappe. L&#x27;escalade devient moins chère pour Washington et fournit à tout adversaire — étatique ou non — un modèle validé. Achats navals, sûreté portuaire et assurance maritime se revalorisent sur ce précédent.">A doctrinal threshold has been crossed: the US can now project lethal maritime effect without risking crews, lowering the political cost of each strike. That makes escalation cheaper for Washington and hands every adversary and non-state actor a validated template. Naval procurement, port security and maritime insurance all reprice off this precedent.</p>
       </div>
     </div>
     <div class="pdb-item">
       <div class="pdb-rank">10</div>
       <div class="pdb-content">
-        <span class="pdb-tag" data-en="CANADA" data-fr="CANADA">CANADA</span>
-        <a class="pdb-headline" href="https://ici.radio-canada.ca/" target="_blank" rel="noopener" data-en="Carney government to accelerate pipeline approval procedures" data-fr="Le gouvernement Carney veut accélérer les procédures d&#x27;autorisation pour les pipelines">Carney government to accelerate pipeline approval procedures</a>
-        <span class="pdb-source">Radio-Canada · ici.radio-canada.ca</span>
-        <p class="pdb-bluf" data-en="Ottawa is moving from rhetoric to procedural reform on pipeline approvals during a global energy supply scare. Alberta producers, midstream operators, and Indigenous benefit-agreement counterparties should expect a regulatory window that may close once Gulf prices normalise." data-fr="Ottawa passe de la rhétorique à la réforme procédurale sur l&#x27;autorisation des pipelines pendant une crise mondiale d&#x27;approvisionnement énergétique. Producteurs albertains, opérateurs intermédiaires et signataires d&#x27;ententes de bénéfices autochtones doivent anticiper une fenêtre réglementaire qui pourrait se refermer dès la normalisation des prix du Golfe.">Ottawa is moving from rhetoric to procedural reform on pipeline approvals during a global energy supply scare. Alberta producers, midstream operators, and Indigenous benefit-agreement counterparties should expect a regulatory window that may close once Gulf prices normalise.</p>
+        <span class="pdb-tag" data-en="MARKETS" data-fr="MARCHÉS">MARKETS</span>
+        <h2 class="pdb-headline"><a href="https://www.cnbc.com/2026/07/14/jpm-bank-of-america-citi-bank-earnings-live-updates.html" target="_blank" rel="noopener" data-en="Big-bank earnings land today: JPMorgan, BofA, Goldman, Citi, Wells Fargo" data-fr="Résultats des grandes banques aujourd&#x27;hui : JPMorgan, BofA, Goldman, Citi, Wells Fargo">Big-bank earnings land today: JPMorgan, BofA, Goldman, Citi, Wells Fargo</a></h2>
+        <div class="pdb-source">CNBC · cnbc.com</div>
+        <p class="pdb-bluf" data-en="These are the first major balance sheets to report inside the oil shock, and their loan-loss provisions are the market&#x27;s earliest read on whether the crisis is being priced as transitory or structural. Watch commentary on energy exposure, trade finance and net interest margin under a repriced rate path. Guidance here sets the risk tone for the rest of the quarter." data-fr="Ce sont les premiers grands bilans publiés dans le choc pétrolier : leurs provisions pour pertes offrent la première lecture de marché sur le caractère transitoire ou structurel de la crise. Surveiller les commentaires sur l&#x27;exposition énergétique, le financement du commerce et la marge nette d&#x27;intérêt sous une trajectoire de taux revalorisée. Ces prévisions fixeront le ton du risque pour le trimestre.">These are the first major balance sheets to report inside the oil shock, and their loan-loss provisions are the market&#x27;s earliest read on whether the crisis is being priced as transitory or structural. Watch commentary on energy exposure, trade finance and net interest margin under a repriced rate path. Guidance here sets the risk tone for the rest of the quarter.</p>
       </div>
     </div>
     <div class="pdb-item">
       <div class="pdb-rank">11</div>
       <div class="pdb-content">
-        <span class="pdb-tag" data-en="DEFENCE" data-fr="DÉFENSE">DEFENCE</span>
-        <a class="pdb-headline" href="https://www.defensenews.com/" target="_blank" rel="noopener" data-en="France moves aircraft carrier to Red Sea with eye on Hormuz mission" data-fr="La France déplace son porte-avions vers la mer Rouge en vue d&#x27;une mission à Ormuz">France moves aircraft carrier to Red Sea with eye on Hormuz mission</a>
-        <span class="pdb-source">Defense News · defensenews.com</span>
-        <p class="pdb-bluf" data-en="Paris has committed its only carrier strike group to the Hormuz theater, the highest level of French force commitment outside NATO Article 5. Europe is now visibly underwriting Gulf security, which changes the political math on US ground commitments and EU defence spending." data-fr="Paris engage son unique groupe aéronaval dans le théâtre d&#x27;Ormuz, le plus haut niveau d&#x27;engagement français hors article 5 de l&#x27;OTAN. L&#x27;Europe assume désormais visiblement la sécurité du Golfe, modifiant le calcul politique des engagements américains au sol et des dépenses de défense de l&#x27;UE.">Paris has committed its only carrier strike group to the Hormuz theater, the highest level of French force commitment outside NATO Article 5. Europe is now visibly underwriting Gulf security, which changes the political math on US ground commitments and EU defence spending.</p>
+        <span class="pdb-tag" data-en="DIPLOMACY" data-fr="DIPLOMATIE">DIPLOMACY</span>
+        <h2 class="pdb-headline"><a href="https://www.thehindu.com/news/international/us-strikes-iran-for-third-day-will-reimpose-blockade/article71220175.ece" target="_blank" rel="noopener" data-en="US strikes Iran for a third day; Lebanon and Israel hold talks in Rome" data-fr="Les États-Unis frappent l&#x27;Iran pour un troisième jour ; Liban et Israël négocient à Rome">US strikes Iran for a third day; Lebanon and Israel hold talks in Rome</a></h2>
+        <div class="pdb-source">The Hindu · thehindu.com</div>
+        <p class="pdb-bluf" data-en="Three consecutive days of strikes is a campaign, not a signal, and it forecloses the off-ramp the ceasefire was meant to provide. The parallel Rome track shows a second, quieter effort to fence off the Lebanese front before it merges with the Iranian one. Whether those talks hold determines if this stays a two-party war or becomes a regional one." data-fr="Trois jours consécutifs de frappes constituent une campagne, non un signal, et ferment la porte de sortie qu&#x27;offrait le cessez-le-feu. La filière romaine parallèle révèle un effort plus discret pour cloisonner le front libanais avant qu&#x27;il ne fusionne avec le front iranien. L&#x27;issue de ces pourparlers dira si la guerre reste bilatérale ou devient régionale.">Three consecutive days of strikes is a campaign, not a signal, and it forecloses the off-ramp the ceasefire was meant to provide. The parallel Rome track shows a second, quieter effort to fence off the Lebanese front before it merges with the Iranian one. Whether those talks hold determines if this stays a two-party war or becomes a regional one.</p>
       </div>
     </div>
     <div class="pdb-item">
       <div class="pdb-rank">12</div>
       <div class="pdb-content">
-        <span class="pdb-tag" data-en="MARKETS" data-fr="MARCHÉS">MARKETS</span>
-        <a class="pdb-headline" href="https://www.wsj.com/" target="_blank" rel="noopener" data-en="Kraft Heinz CEO: &#x27;Consumers are literally running out of money&#x27;" data-fr="PDG de Kraft Heinz : « Les consommateurs sont littéralement à court d&#x27;argent »">Kraft Heinz CEO: &#x27;Consumers are literally running out of money&#x27;</a>
-        <span class="pdb-source">WSJ · wsj.com</span>
-        <p class="pdb-bluf" data-en="A staple-foods CEO publicly declaring consumer cash exhaustion is a recession-grade signal, not marketing language. Defensive equities, private credit, and discretionary retail need to revisit base-case demand assumptions before Q2 prints." data-fr="Un PDG de l&#x27;alimentation de base déclarant publiquement l&#x27;épuisement de la trésorerie des consommateurs est un signal de niveau récession, pas du langage marketing. Titres défensifs, crédit privé et commerce discrétionnaire doivent revoir les hypothèses de demande de scénario central avant la publication du T2.">A staple-foods CEO publicly declaring consumer cash exhaustion is a recession-grade signal, not marketing language. Defensive equities, private credit, and discretionary retail need to revisit base-case demand assumptions before Q2 prints.</p>
+        <span class="pdb-tag" data-en="INTELLIGENCE" data-fr="RENSEIGNEMENT">INTELLIGENCE</span>
+        <h2 class="pdb-headline"><a href="https://warontherocks.com/outgunned-but-not-outplayed-irans-theory-of-victory/" target="_blank" rel="noopener" data-en="Outgunned but not outplayed: Iran&#x27;s theory of victory" data-fr="Surclassé mais pas déjoué : la théorie de la victoire iranienne">Outgunned but not outplayed: Iran&#x27;s theory of victory</a></h2>
+        <div class="pdb-source">War on the Rocks · warontherocks.com</div>
+        <p class="pdb-bluf" data-en="Iran is not trying to win the exchange of fire; it is trying to make the cost of the blockade unbearable for everyone else. Reading Tehran through a conventional balance-of-forces lens will keep producing surprises like the tanker strikes. Planning assumptions should shift from &#x27;when does Iran capitulate&#x27; to &#x27;how long can the Gulf economy absorb this&#x27;." data-fr="L&#x27;Iran ne cherche pas à gagner l&#x27;échange de tirs, mais à rendre le coût du blocus insoutenable pour tous les autres. Lire Téhéran à travers un rapport de forces conventionnel continuera de produire des surprises comme les frappes sur les pétroliers. L&#x27;hypothèse de planification doit passer de « quand l&#x27;Iran capitulera-t-il » à « combien de temps l&#x27;économie du Golfe peut-elle encaisser ».">Iran is not trying to win the exchange of fire; it is trying to make the cost of the blockade unbearable for everyone else. Reading Tehran through a conventional balance-of-forces lens will keep producing surprises like the tanker strikes. Planning assumptions should shift from &#x27;when does Iran capitulate&#x27; to &#x27;how long can the Gulf economy absorb this&#x27;.</p>
       </div>
     </div>
     <div class="pdb-item">
       <div class="pdb-rank">13</div>
       <div class="pdb-content">
-        <span class="pdb-tag" data-en="INTL LAW" data-fr="DROIT INTERNATIONAL">INTL LAW</span>
-        <a class="pdb-headline" href="http://opiniojuris.org/" target="_blank" rel="noopener" data-en="The closure of the Strait of Hormuz: Law of the Sea and Naval Warfare considerations" data-fr="La fermeture du détroit d&#x27;Ormuz : considérations sur le droit de la mer et le droit de la guerre navale">The closure of the Strait of Hormuz: Law of the Sea and Naval Warfare considerations</a>
-        <span class="pdb-source">Opinio Juris · opiniojuris.org</span>
-        <p class="pdb-bluf" data-en="Legal scholars are now publishing the doctrinal framework that will be cited if the US, France, or UK takes Iranian shipping action to international tribunals. Boards exposed to maritime, energy, or insurance counterparties should brief counsel on the transit-passage regime now, not after a dispute lands." data-fr="Les juristes publient désormais le cadre doctrinal qui sera invoqué si les États-Unis, la France ou le Royaume-Uni portent une action contre la navigation iranienne devant des tribunaux internationaux. Les conseils d&#x27;administration exposés aux contreparties maritimes, énergétiques ou d&#x27;assurance doivent informer leurs juristes sur le régime de passage en transit dès maintenant, pas après un litige.">Legal scholars are now publishing the doctrinal framework that will be cited if the US, France, or UK takes Iranian shipping action to international tribunals. Boards exposed to maritime, energy, or insurance counterparties should brief counsel on the transit-passage regime now, not after a dispute lands.</p>
+        <span class="pdb-tag" data-en="RUSSIA" data-fr="RUSSIE">RUSSIA</span>
+        <h2 class="pdb-headline"><a href="https://meduza.io/en/news/2026/07/14/ukrainian-drones-spark-fires-at-two-russian-refineries-overnight-including-one-of-the-country-s-biggest-petrochem" target="_blank" rel="noopener" data-en="Ukrainian drones ignite two Russian refineries overnight, including a top petrochemical plant" data-fr="Des drones ukrainiens incendient deux raffineries russes, dont l&#x27;un des plus grands sites pétrochimiques">Ukrainian drones ignite two Russian refineries overnight, including a top petrochemical plant</a></h2>
+        <div class="pdb-source">Meduza · meduza.io</div>
+        <p class="pdb-bluf" data-en="Ukraine is removing Russian refining capacity at the exact moment Hormuz is removing Gulf supply — two independent shocks compounding into one global price. Kyiv&#x27;s deep-strike campaign is now a material variable in Western inflation, not just a battlefield story. Every successful refinery hit tightens the same fuel market that is driving ECB and BoE hike bets." data-fr="L&#x27;Ukraine détruit des capacités de raffinage russes au moment même où Ormuz retire l&#x27;offre du Golfe — deux chocs indépendants se composant en un seul prix mondial. La campagne de frappes profondes de Kyiv est devenue une variable matérielle de l&#x27;inflation occidentale, et non un simple épisode militaire. Chaque raffinerie touchée resserre le marché des carburants qui alimente les paris de hausse de la BCE et de la BoE.">Ukraine is removing Russian refining capacity at the exact moment Hormuz is removing Gulf supply — two independent shocks compounding into one global price. Kyiv&#x27;s deep-strike campaign is now a material variable in Western inflation, not just a battlefield story. Every successful refinery hit tightens the same fuel market that is driving ECB and BoE hike bets.</p>
       </div>
     </div>
     <div class="pdb-item">
       <div class="pdb-rank">14</div>
       <div class="pdb-content">
-        <span class="pdb-tag" data-en="DEFENCE" data-fr="DÉFENSE">DEFENCE</span>
-        <a class="pdb-headline" href="https://www.janes.com/" target="_blank" rel="noopener" data-en="US approves extended-range JDAMs for Ukraine" data-fr="Les États-Unis approuvent les JDAM à portée étendue pour l&#x27;Ukraine">US approves extended-range JDAMs for Ukraine</a>
-        <span class="pdb-source">Janes · janes.com</span>
-        <p class="pdb-bluf" data-en="Washington is unlocking deeper-strike weapons for Kyiv inside the May 9 escalation window. This narrows Moscow&#x27;s Crimea and rear-area sanctuaries and signals US willingness to risk Russian reprisal in order to constrain the next operational cycle." data-fr="Washington débloque des armes à frappe profonde pour Kiev dans la fenêtre d&#x27;escalade du 9 mai. Cela rétrécit les sanctuaires russes en Crimée et à l&#x27;arrière et signale la volonté américaine de prendre le risque de représailles russes pour contraindre le prochain cycle opérationnel.">Washington is unlocking deeper-strike weapons for Kyiv inside the May 9 escalation window. This narrows Moscow&#x27;s Crimea and rear-area sanctuaries and signals US willingness to risk Russian reprisal in order to constrain the next operational cycle.</p>
+        <span class="pdb-tag" data-en="RUSSIA" data-fr="RUSSIE">RUSSIA</span>
+        <h2 class="pdb-headline"><a href="https://meduza.io/en/news/2026/07/14/russian-ballistic-missiles-hit-kyiv-overnight" target="_blank" rel="noopener" data-en="Russian ballistic missiles hit Kyiv overnight" data-fr="Des missiles balistiques russes frappent Kyiv dans la nuit">Russian ballistic missiles hit Kyiv overnight</a></h2>
+        <div class="pdb-source">Meduza · meduza.io</div>
+        <p class="pdb-bluf" data-en="Ballistic salvos on the capital signal Moscow has no intention of freezing the front while ceasefire diplomacy proceeds. Each strike burns Ukrainian interceptor stocks that the West cannot replenish at the rate they are consumed — the binding constraint on Ukraine&#x27;s defence, not manpower. Air-defence resupply, not territory, is the decision point for European capitals this quarter." data-fr="Des salves balistiques sur la capitale montrent que Moscou n&#x27;entend nullement geler le front pendant la diplomatie du cessez-le-feu. Chaque frappe consomme des intercepteurs ukrainiens que l&#x27;Occident ne peut reconstituer au rythme de leur usage — la véritable contrainte, plus que les effectifs. Le réapprovisionnement en défense antiaérienne, non le territoire, est la décision du trimestre pour les capitales européennes.">Ballistic salvos on the capital signal Moscow has no intention of freezing the front while ceasefire diplomacy proceeds. Each strike burns Ukrainian interceptor stocks that the West cannot replenish at the rate they are consumed — the binding constraint on Ukraine&#x27;s defence, not manpower. Air-defence resupply, not territory, is the decision point for European capitals this quarter.</p>
       </div>
     </div>
     <div class="pdb-item">
       <div class="pdb-rank">15</div>
       <div class="pdb-content">
-        <span class="pdb-tag" data-en="RUSSIA" data-fr="RUSSIE">RUSSIA</span>
-        <a class="pdb-headline" href="https://meduza.io/en/news" target="_blank" rel="noopener" data-en="Russia–Ukraine Victory Day truce collapses as Moscow and Kyiv trade violation accusations" data-fr="La trêve russo-ukrainienne du Jour de la Victoire s&#x27;effondre, Moscou et Kiev s&#x27;accusant mutuellement de violations">Russia–Ukraine Victory Day truce collapses as Moscow and Kyiv trade violation accusations</a>
-        <span class="pdb-source">Meduza · meduza.io</span>
-        <p class="pdb-bluf" data-en="The May 9 unilateral truce died on day one. Any near-term diplomatic optimism about a Ukraine ceasefire framework should be discounted — the next negotiating window is now realistically post-summer, after another fighting cycle." data-fr="La trêve unilatérale du 9 mai est morte dès le premier jour. Tout optimisme diplomatique à court terme sur un cadre de cessez-le-feu en Ukraine doit être actualisé — la prochaine fenêtre de négociation se situe désormais réalistement après l&#x27;été, après un autre cycle de combats.">The May 9 unilateral truce died on day one. Any near-term diplomatic optimism about a Ukraine ceasefire framework should be discounted — the next negotiating window is now realistically post-summer, after another fighting cycle.</p>
+        <span class="pdb-tag" data-en="DEFENCE" data-fr="DÉFENSE">DEFENCE</span>
+        <h2 class="pdb-headline"><a href="https://www.defensenews.com/global/europe/2026/07/14/ukraine-agrees-on-plan-to-acquire-16-rafale-jets-frances-macron-says/" target="_blank" rel="noopener" data-en="Ukraine agrees a plan to acquire 16 Rafale jets, Macron says" data-fr="L&#x27;Ukraine s&#x27;accorde sur l&#x27;acquisition de 16 Rafale, annonce Macron">Ukraine agrees a plan to acquire 16 Rafale jets, Macron says</a></h2>
+        <div class="pdb-source">Defense News · defensenews.com</div>
+        <p class="pdb-bluf" data-en="France is locking Ukraine into a European airframe for decades, hedging against a US supply cut-off that Kyiv now treats as a live risk. Sixteen jets change little tactically but a lot industrially: this is Europe buying strategic autonomy through Ukraine&#x27;s order book. Watch which nations fund it — that list is the real coalition." data-fr="La France arrime l&#x27;Ukraine à une cellule européenne pour des décennies, en couverture d&#x27;une rupture d&#x27;approvisionnement américaine que Kyiv juge désormais plausible. Seize appareils changent peu sur le plan tactique, beaucoup sur le plan industriel : l&#x27;Europe achète son autonomie stratégique via le carnet de commandes ukrainien. Les nations qui financeront cet achat constituent la vraie coalition.">France is locking Ukraine into a European airframe for decades, hedging against a US supply cut-off that Kyiv now treats as a live risk. Sixteen jets change little tactically but a lot industrially: this is Europe buying strategic autonomy through Ukraine&#x27;s order book. Watch which nations fund it — that list is the real coalition.</p>
       </div>
     </div>
     <div class="pdb-item">
       <div class="pdb-rank">16</div>
       <div class="pdb-content">
-        <span class="pdb-tag" data-en="MARKETS" data-fr="MARCHÉS">MARKETS</span>
-        <a class="pdb-headline" href="https://oilprice.com/" target="_blank" rel="noopener" data-en="Shell beats profit estimates as war brings trading windfall, $6.9B Q1, dividend up 5%" data-fr="Shell dépasse les estimations grâce à une manne de trading de guerre — 6,9 G$ au T1, dividende en hausse de 5 %">Shell beats profit estimates as war brings trading windfall, $6.9B Q1, dividend up 5%</a>
-        <span class="pdb-source">OilPrice · oilprice.com</span>
-        <p class="pdb-bluf" data-en="Integrated majors are translating Gulf volatility into trading-desk profits, not production gains. The dispersion between supermajors and pure E&amp;P names will widen, and dividend-coverage signals just got materially stronger for Shell, Total, and BP." data-fr="Les majors intégrées convertissent la volatilité du Golfe en profits de salles de marché, pas en gains de production. La dispersion entre supermajors et E&amp;P pures va s&#x27;élargir, et les signaux de couverture de dividende viennent de se renforcer matériellement pour Shell, Total et BP.">Integrated majors are translating Gulf volatility into trading-desk profits, not production gains. The dispersion between supermajors and pure E&amp;P names will widen, and dividend-coverage signals just got materially stronger for Shell, Total, and BP.</p>
+        <span class="pdb-tag" data-en="DEFENCE" data-fr="DÉFENSE">DEFENCE</span>
+        <h2 class="pdb-headline"><a href="https://www.defensenews.com/global/europe/2026/07/14/9-nations-back-ukraines-patriot-alternative-freyja-and-want-it-flying-in-a-year/" target="_blank" rel="noopener" data-en="Nine nations back Ukraine&#x27;s Patriot alternative, Freyja — and want it flying within a year" data-fr="Neuf pays soutiennent Freyja, l&#x27;alternative ukrainienne au Patriot, et la veulent opérationnelle en un an">Nine nations back Ukraine&#x27;s Patriot alternative, Freyja — and want it flying within a year</a></h2>
+        <div class="pdb-source">Defense News · defensenews.com</div>
+        <p class="pdb-bluf" data-en="Nine states funding a non-US interceptor is the clearest admission yet that Patriot supply cannot meet European demand. A one-year fielding target is aggressive but the strategic point is already made: air defence is decoupling from Washington. Raytheon&#x27;s monopoly premium and NATO&#x27;s dependency assumptions both weaken from here." data-fr="Neuf États finançant un intercepteur non américain constituent l&#x27;aveu le plus net que l&#x27;offre de Patriot ne peut satisfaire la demande européenne. L&#x27;échéance d&#x27;un an est ambitieuse, mais le message stratégique est déjà passé : la défense antiaérienne se découple de Washington. La prime de monopole de Raytheon et les hypothèses de dépendance de l&#x27;OTAN s&#x27;affaiblissent d&#x27;autant.">Nine states funding a non-US interceptor is the clearest admission yet that Patriot supply cannot meet European demand. A one-year fielding target is aggressive but the strategic point is already made: air defence is decoupling from Washington. Raytheon&#x27;s monopoly premium and NATO&#x27;s dependency assumptions both weaken from here.</p>
       </div>
     </div>
     <div class="pdb-item">
       <div class="pdb-rank">17</div>
       <div class="pdb-content">
-        <span class="pdb-tag" data-en="SHIPPING" data-fr="TRANSPORT MARITIME">SHIPPING</span>
-        <a class="pdb-headline" href="https://theloadstar.com/" target="_blank" rel="noopener" data-en="Middle East conflict sees shippers face soaring costs and weakening demand" data-fr="Conflit au Moyen-Orient : les chargeurs font face à des coûts en flèche et une demande affaiblie">Middle East conflict sees shippers face soaring costs and weakening demand</a>
-        <span class="pdb-source">The Loadstar · theloadstar.com</span>
-        <p class="pdb-bluf" data-en="Shippers are getting hit on both sides — war-risk premiums up, end-customer demand falling. Q2 earnings for Maersk, Hapag-Lloyd, and ZIM will likely confirm a margin squeeze that prevents the carrier sector from monetising the disruption the way 2024 implied." data-fr="Les chargeurs sont touchés des deux côtés — primes de risque de guerre en hausse, demande clientèle en baisse. Les résultats T2 de Maersk, Hapag-Lloyd et ZIM confirmeront probablement une compression des marges empêchant le secteur transporteur de monétiser la perturbation comme 2024 l&#x27;avait suggéré.">Shippers are getting hit on both sides — war-risk premiums up, end-customer demand falling. Q2 earnings for Maersk, Hapag-Lloyd, and ZIM will likely confirm a margin squeeze that prevents the carrier sector from monetising the disruption the way 2024 implied.</p>
+        <span class="pdb-tag" data-en="GEOPOLITICS" data-fr="GÉOPOLITIQUE">GEOPOLITICS</span>
+        <h2 class="pdb-headline"><a href="https://www.foreignaffairs.com/russia/putin-will-turn-cease-fire-weapon" target="_blank" rel="noopener" data-en="Putin will turn a cease-fire into a weapon" data-fr="Poutine transformera un cessez-le-feu en arme">Putin will turn a cease-fire into a weapon</a></h2>
+        <div class="pdb-source">Foreign Affairs · foreignaffairs.com</div>
+        <p class="pdb-bluf" data-en="Any pause Moscow accepts will be used to reconstitute forces and split the Western coalition over sanctions relief, not to end the war. Negotiators who treat a ceasefire as an end state rather than a Russian operational phase will hand Moscow the initiative. The test of any deal is what it does to Russian reconstitution rates, not what it says on paper." data-fr="Toute pause acceptée par Moscou servira à reconstituer ses forces et à diviser la coalition occidentale sur la levée des sanctions, non à finir la guerre. Les négociateurs qui prennent un cessez-le-feu pour une fin plutôt que pour une phase opérationnelle russe céderont l&#x27;initiative. Le seul test d&#x27;un accord est son effet sur le rythme de reconstitution russe, non son libellé.">Any pause Moscow accepts will be used to reconstitute forces and split the Western coalition over sanctions relief, not to end the war. Negotiators who treat a ceasefire as an end state rather than a Russian operational phase will hand Moscow the initiative. The test of any deal is what it does to Russian reconstitution rates, not what it says on paper.</p>
       </div>
     </div>
     <div class="pdb-item">
       <div class="pdb-rank">18</div>
       <div class="pdb-content">
-        <span class="pdb-tag" data-en="MACRO" data-fr="MACRO">MACRO</span>
-        <a class="pdb-headline" href="https://www.ecb.europa.eu/" target="_blank" rel="noopener" data-en="ECB&#x27;s Cipollone publishes new energy shock policy paper with economic scenarios" data-fr="Cipollone (BCE) publie un nouveau document de politique sur le choc énergétique avec scénarios économiques">ECB&#x27;s Cipollone publishes new energy shock policy paper with economic scenarios</a>
-        <span class="pdb-source">ECB · ecb.europa.eu</span>
-        <p class="pdb-bluf" data-en="The ECB is formally modelling a new energy shock — language usually reserved for the policy lead-up to emergency measures. Sovereign spreads, euro-area bank capital buffers, and corporate hedging desks should treat this as a policy-direction signal not a research note." data-fr="La BCE modélise formellement un nouveau choc énergétique — langage habituellement réservé aux préparatifs de mesures d&#x27;urgence. Spreads souverains, coussins de capital des banques de la zone euro et bureaux de couverture d&#x27;entreprise doivent traiter cela comme un signal d&#x27;orientation politique, pas une simple note de recherche.">The ECB is formally modelling a new energy shock — language usually reserved for the policy lead-up to emergency measures. Sovereign spreads, euro-area bank capital buffers, and corporate hedging desks should treat this as a policy-direction signal not a research note.</p>
+        <span class="pdb-tag" data-en="DIPLOMACY" data-fr="DIPLOMATIE">DIPLOMACY</span>
+        <h2 class="pdb-headline"><a href="https://news.google.com/rss/search?q=site:reuters.com+Peace+in+Ukraine+unlikely+Polish+PM&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" target="_blank" rel="noopener" data-en="Peace in Ukraine unlikely to be reached soon, Polish PM says" data-fr="La paix en Ukraine n&#x27;est pas pour bientôt, selon le premier ministre polonais">Peace in Ukraine unlikely to be reached soon, Polish PM says</a></h2>
+        <div class="pdb-source">Reuters · reuters.com</div>
+        <p class="pdb-bluf" data-en="Warsaw is the frontline state with the least incentive to be wrong about this, and it is publicly discounting the diplomatic track. That guidance should anchor procurement and fiscal planning across NATO&#x27;s eastern flank for at least another budget cycle. Firms modelling a 2026 reconstruction boom are early." data-fr="Varsovie est l&#x27;État de première ligne le moins susceptible de se tromper à ce sujet, et elle dévalue publiquement la voie diplomatique. Cette lecture doit ancrer les achats et la planification budgétaire du flanc oriental de l&#x27;OTAN pour au moins un cycle de plus. Les entreprises misant sur un boom de reconstruction en 2026 anticipent trop tôt.">Warsaw is the frontline state with the least incentive to be wrong about this, and it is publicly discounting the diplomatic track. That guidance should anchor procurement and fiscal planning across NATO&#x27;s eastern flank for at least another budget cycle. Firms modelling a 2026 reconstruction boom are early.</p>
       </div>
     </div>
     <div class="pdb-item">
       <div class="pdb-rank">19</div>
       <div class="pdb-content">
-        <span class="pdb-tag" data-en="POLITICS" data-fr="POLITIQUE">POLITICS</span>
-        <a class="pdb-headline" href="https://www.reuters.com/" target="_blank" rel="noopener" data-en="UK voters cast ballots in elections expected to deal blow to Starmer" data-fr="Les électeurs britanniques aux urnes pour des élections qui devraient porter un coup à Starmer">UK voters cast ballots in elections expected to deal blow to Starmer</a>
-        <span class="pdb-source">Reuters · reuters.com</span>
-        <p class="pdb-bluf" data-en="A weakened Starmer constrains UK fiscal flexibility just as Treasury faces oil-shock spending pressure. Sterling, gilts, and any deal involving UK sovereign counterparties should be reassessed for political-risk premium increases over the next 30 days." data-fr="Un Starmer affaibli contraint la flexibilité budgétaire britannique au moment où le Trésor fait face à la pression de dépenses du choc pétrolier. Sterling, gilts et toute transaction impliquant des contreparties souveraines britanniques doivent être réévalués pour une hausse de prime de risque politique sur 30 jours.">A weakened Starmer constrains UK fiscal flexibility just as Treasury faces oil-shock spending pressure. Sterling, gilts, and any deal involving UK sovereign counterparties should be reassessed for political-risk premium increases over the next 30 days.</p>
+        <span class="pdb-tag" data-en="INTELLIGENCE" data-fr="RENSEIGNEMENT">INTELLIGENCE</span>
+        <h2 class="pdb-headline"><a href="https://www1.folha.uol.com.br/mundo/2026/07/mossad-planejou-recrutamento-do-ex-presidente-do-ira.shtml" target="_blank" rel="noopener" data-en="Mossad planned the recruitment of a former Iranian president, report says" data-fr="Le Mossad aurait planifié le recrutement d&#x27;un ancien président iranien">Mossad planned the recruitment of a former Iranian president, report says</a></h2>
+        <div class="pdb-source">Folha de S.Paulo · folha.uol.com.br</div>
+        <p class="pdb-bluf" data-en="Whether or not the operation succeeded, publication is itself a weapon: it forces a paranoid purge inside Iran&#x27;s political elite at the moment Tehran most needs cohesion. Expect arrests, factional score-settling and a hardening against any negotiator who can be smeared as compromised. This shrinks the pool of Iranians the West can actually deal with." data-fr="Réussie ou non, l&#x27;opération devient une arme par sa seule publication : elle impose une purge paranoïaque au sommet iranien au moment où Téhéran a le plus besoin de cohésion. Attendre arrestations, règlements de comptes entre factions et durcissement contre tout négociateur suspect de compromission. Le vivier d&#x27;interlocuteurs iraniens disponibles pour l&#x27;Occident se réduit d&#x27;autant.">Whether or not the operation succeeded, publication is itself a weapon: it forces a paranoid purge inside Iran&#x27;s political elite at the moment Tehran most needs cohesion. Expect arrests, factional score-settling and a hardening against any negotiator who can be smeared as compromised. This shrinks the pool of Iranians the West can actually deal with.</p>
       </div>
     </div>
     <div class="pdb-item">
       <div class="pdb-rank">20</div>
       <div class="pdb-content">
-        <span class="pdb-tag" data-en="GEOPOLITICS" data-fr="GÉOPOLITIQUE">GEOPOLITICS</span>
-        <a class="pdb-headline" href="https://www.thehindu.com/" target="_blank" rel="noopener" data-en="No-confidence vote topples Solomon Islands Prime Minister" data-fr="Un vote de défiance renverse le Premier ministre des Îles Salomon">No-confidence vote topples Solomon Islands Prime Minister</a>
-        <span class="pdb-source">The Hindu · thehindu.com</span>
-        <p class="pdb-bluf" data-en="The Solomon Islands sits at the centre of the US-China Pacific contest because of the 2022 security pact with Beijing. A government change here will be tested immediately for whether the China security agreement survives — a small island vote with disproportionate strategic weight." data-fr="Les Îles Salomon se trouvent au centre de la rivalité Pacifique États-Unis–Chine en raison du pacte de sécurité de 2022 avec Pékin. Un changement de gouvernement ici sera immédiatement testé sur la survie de l&#x27;accord avec la Chine — un vote d&#x27;île avec un poids stratégique disproportionné.">The Solomon Islands sits at the centre of the US-China Pacific contest because of the 2022 security pact with Beijing. A government change here will be tested immediately for whether the China security agreement survives — a small island vote with disproportionate strategic weight.</p>
+        <span class="pdb-tag" data-en="INTELLIGENCE" data-fr="RENSEIGNEMENT">INTELLIGENCE</span>
+        <h2 class="pdb-headline"><a href="https://meduza.io/en/news/2026/07/14/russia-s-fsb-says-it-foiled-a-35-drone-attack-near-moscow-and-blames-ukrainian-intelligence-and-a-rapper-living-in-the-u-s" target="_blank" rel="noopener" data-en="FSB says it foiled a 35-drone attack near Moscow, blames Ukrainian intelligence" data-fr="Le FSB dit avoir déjoué une attaque de 35 drones près de Moscou et accuse le renseignement ukrainien">FSB says it foiled a 35-drone attack near Moscow, blames Ukrainian intelligence</a></h2>
+        <div class="pdb-source">Meduza · meduza.io</div>
+        <p class="pdb-bluf" data-en="A claimed 35-drone plot inside the capital region — plausible or fabricated — gives the Kremlin the pretext for a domestic security crackdown and a justification for escalation against Kyiv. Note the inclusion of a US-based figure in the accusation: that is groundwork for framing Washington as a direct party. Watch for it to reappear in Russian justifications for strikes on decision-making centres." data-fr="Un complot revendiqué de 35 drones dans la région de la capitale — plausible ou fabriqué — offre au Kremlin le prétexte d&#x27;un tour de vis intérieur et la justification d&#x27;une escalade contre Kyiv. Noter l&#x27;inclusion d&#x27;une figure résidant aux États-Unis : c&#x27;est la préparation d&#x27;un récit désignant Washington comme partie directe. Cet argument resservira pour justifier des frappes sur les centres de décision.">A claimed 35-drone plot inside the capital region — plausible or fabricated — gives the Kremlin the pretext for a domestic security crackdown and a justification for escalation against Kyiv. Note the inclusion of a US-based figure in the accusation: that is groundwork for framing Washington as a direct party. Watch for it to reappear in Russian justifications for strikes on decision-making centres.</p>
       </div>
     </div>
     <div class="pdb-item">
       <div class="pdb-rank">21</div>
       <div class="pdb-content">
-        <span class="pdb-tag" data-en="DEFENCE" data-fr="DÉFENSE">DEFENCE</span>
-        <a class="pdb-headline" href="https://www.janes.com/" target="_blank" rel="noopener" data-en="Tokyo and Manila advance potential transfer of Abukuma-class destroyers" data-fr="Tokyo et Manille avancent sur un possible transfert de destroyers de classe Abukuma">Tokyo and Manila advance potential transfer of Abukuma-class destroyers</a>
-        <span class="pdb-source">Janes · janes.com</span>
-        <p class="pdb-bluf" data-en="Japan transferring frigates to the Philippines hardens the second island chain against Chinese naval activity in the West Philippine Sea. This is the most concrete recent step in Indo-Pacific deterrence and signals continued partner-burden-sharing momentum despite Gulf distractions." data-fr="Le transfert de frégates du Japon aux Philippines durcit la deuxième chaîne d&#x27;îles face à l&#x27;activité navale chinoise en mer de l&#x27;Ouest des Philippines. C&#x27;est l&#x27;étape concrète la plus récente de la dissuasion indo-pacifique et signale une dynamique continue de partage du fardeau malgré les distractions du Golfe.">Japan transferring frigates to the Philippines hardens the second island chain against Chinese naval activity in the West Philippine Sea. This is the most concrete recent step in Indo-Pacific deterrence and signals continued partner-burden-sharing momentum despite Gulf distractions.</p>
+        <span class="pdb-tag" data-en="POLITICS" data-fr="POLITIQUE">POLITICS</span>
+        <h2 class="pdb-headline"><a href="https://www.bbc.co.uk/news/articles/cp8r002gdevo" target="_blank" rel="noopener" data-en="Hungary&#x27;s parliament votes to remove the president from office" data-fr="Le Parlement hongrois vote la destitution du président">Hungary&#x27;s parliament votes to remove the president from office</a></h2>
+        <div class="pdb-source">BBC World · bbc.co.uk</div>
+        <p class="pdb-bluf" data-en="An EU member state has just removed a head of state by parliamentary vote, testing the bloc&#x27;s rule-of-law machinery at a moment when Brussels needs Budapest&#x27;s consent on Ukraine and energy files. The immediate question is who fills the office and what it does to Hungary&#x27;s veto behaviour in Council. EU-exposed investors should watch the Article 7 and cohesion-funds track closely." data-fr="Un État membre de l&#x27;UE vient de destituer un chef d&#x27;État par vote parlementaire, mettant à l&#x27;épreuve les mécanismes d&#x27;État de droit au moment où Bruxelles a besoin de l&#x27;accord de Budapest sur l&#x27;Ukraine et l&#x27;énergie. La question immédiate est celle du successeur et de son effet sur le comportement de veto hongrois au Conseil. Les investisseurs exposés à l&#x27;UE doivent suivre l&#x27;article 7 et les fonds de cohésion.">An EU member state has just removed a head of state by parliamentary vote, testing the bloc&#x27;s rule-of-law machinery at a moment when Brussels needs Budapest&#x27;s consent on Ukraine and energy files. The immediate question is who fills the office and what it does to Hungary&#x27;s veto behaviour in Council. EU-exposed investors should watch the Article 7 and cohesion-funds track closely.</p>
       </div>
     </div>
     <div class="pdb-item">
       <div class="pdb-rank">22</div>
       <div class="pdb-content">
-        <span class="pdb-tag" data-en="HUMANITARIAN" data-fr="HUMANITAIRE">HUMANITARIAN</span>
-        <a class="pdb-headline" href="https://news.un.org/" target="_blank" rel="noopener" data-en="More than 70 civilians killed in Ukraine in less than a week" data-fr="Plus de 70 civils tués en Ukraine en moins d&#x27;une semaine">More than 70 civilians killed in Ukraine in less than a week</a>
-        <span class="pdb-source">UN News · un.org</span>
-        <p class="pdb-bluf" data-en="Civilian casualty pace inside Ukraine has accelerated even before the May 9 strike window. The UN&#x27;s documented numbers will shape the next sanctions debate, the European Parliament procurement vote, and the political tolerance for Ukraine aid in Washington." data-fr="Le rythme des pertes civiles en Ukraine s&#x27;est accéléré même avant la fenêtre de frappe du 9 mai. Les chiffres documentés de l&#x27;ONU façonneront le prochain débat sur les sanctions, le vote d&#x27;achat du Parlement européen et la tolérance politique pour l&#x27;aide à l&#x27;Ukraine à Washington.">Civilian casualty pace inside Ukraine has accelerated even before the May 9 strike window. The UN&#x27;s documented numbers will shape the next sanctions debate, the European Parliament procurement vote, and the political tolerance for Ukraine aid in Washington.</p>
+        <span class="pdb-tag" data-en="CHINA" data-fr="CHINE">CHINA</span>
+        <h2 class="pdb-headline"><a href="https://news.google.com/rss/search?q=site:reuters.com+China+urges+Europe+South+China+Sea+ruling&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" target="_blank" rel="noopener" data-en="China urges Europe to stop backing the &#x27;illegal&#x27; South China Sea ruling" data-fr="La Chine exhorte l&#x27;Europe à cesser de soutenir la décision « illégale » sur la mer de Chine méridionale">China urges Europe to stop backing the &#x27;illegal&#x27; South China Sea ruling</a></h2>
+        <div class="pdb-source">Reuters · reuters.com</div>
+        <p class="pdb-bluf" data-en="Beijing is applying pressure on Europe over maritime law precisely while the West is preoccupied with Hormuz — a test of whether EU capitals defend the same freedom-of-navigation principle in two theatres. Any European softening here is a template Beijing will reuse on Taiwan. Trade-dependent EU states will feel the leverage first." data-fr="Pékin fait pression sur l&#x27;Europe en matière de droit maritime au moment précis où l&#x27;Occident est absorbé par Ormuz — un test sur la défense du même principe de liberté de navigation dans deux théâtres. Tout fléchissement européen fournirait à Pékin un précédent réutilisable sur Taïwan. Les États européens dépendants du commerce en subiront le levier en premier.">Beijing is applying pressure on Europe over maritime law precisely while the West is preoccupied with Hormuz — a test of whether EU capitals defend the same freedom-of-navigation principle in two theatres. Any European softening here is a template Beijing will reuse on Taiwan. Trade-dependent EU states will feel the leverage first.</p>
       </div>
     </div>
     <div class="pdb-item">
       <div class="pdb-rank">23</div>
       <div class="pdb-content">
-        <span class="pdb-tag" data-en="MARKETS" data-fr="MARCHÉS">MARKETS</span>
-        <a class="pdb-headline" href="https://www.wsj.com/" target="_blank" rel="noopener" data-en="Whirlpool profit crushed by Iran war, higher consumer prices coming" data-fr="Le bénéfice de Whirlpool écrasé par la guerre en Iran, hausse des prix à la consommation à venir">Whirlpool profit crushed by Iran war, higher consumer prices coming</a>
-        <span class="pdb-source">WSJ · wsj.com</span>
-        <p class="pdb-bluf" data-en="Durable goods producers are confirming the Gulf shock is now passing through to North American shelf prices. CPI prints for the next two months will run hotter than current Fed projections — re-rate Fed terminal rate expectations accordingly." data-fr="Les producteurs de biens durables confirment que le choc du Golfe se répercute déjà sur les prix de détail nord-américains. Les publications IPC des deux prochains mois seront plus élevées que les projections actuelles de la Fed — révisez en conséquence les anticipations de taux terminal de la Fed.">Durable goods producers are confirming the Gulf shock is now passing through to North American shelf prices. CPI prints for the next two months will run hotter than current Fed projections — re-rate Fed terminal rate expectations accordingly.</p>
+        <span class="pdb-tag" data-en="CANADA" data-fr="CANADA">CANADA</span>
+        <h2 class="pdb-headline"><a href="https://www.janes.com/" target="_blank" rel="noopener" data-en="Canada selects the Joint Strike Missile" data-fr="Le Canada choisit le Joint Strike Missile">Canada selects the Joint Strike Missile</a></h2>
+        <div class="pdb-source">Janes · janes.com</div>
+        <p class="pdb-bluf" data-en="Ottawa is buying a credible long-range anti-ship weapon at the exact moment maritime chokepoints have become the world&#x27;s decisive terrain. The selection binds Canada tighter to the Norwegian–US industrial base and signals that Arctic and Pacific sea denial is now a funded requirement, not a white-paper aspiration. Canadian defence suppliers should read this as the direction of the next procurement cycle." data-fr="Ottawa acquiert une arme antinavire longue portée crédible au moment même où les détroits deviennent le terrain décisif du monde. Ce choix arrime davantage le Canada à la base industrielle norvégo-américaine et indique que le déni maritime en Arctique et dans le Pacifique est désormais financé, et non plus un vœu de livre blanc. Les fournisseurs canadiens y liront l&#x27;orientation du prochain cycle d&#x27;achats.">Ottawa is buying a credible long-range anti-ship weapon at the exact moment maritime chokepoints have become the world&#x27;s decisive terrain. The selection binds Canada tighter to the Norwegian–US industrial base and signals that Arctic and Pacific sea denial is now a funded requirement, not a white-paper aspiration. Canadian defence suppliers should read this as the direction of the next procurement cycle.</p>
       </div>
     </div>
     <div class="pdb-item">
       <div class="pdb-rank">24</div>
       <div class="pdb-content">
-        <span class="pdb-tag" data-en="DEFENCE" data-fr="DÉFENSE">DEFENCE</span>
-        <a class="pdb-headline" href="https://breakingdefense.com/" target="_blank" rel="noopener" data-en="Space Force boosts Andromeda space monitoring contract ceiling to $6.2B" data-fr="La Space Force porte à 6,2 G$ le plafond contractuel de la surveillance spatiale Andromeda">Space Force boosts Andromeda space monitoring contract ceiling to $6.2B</a>
-        <span class="pdb-source">Breaking Defense · breakingdefense.com</span>
-        <p class="pdb-bluf" data-en="The US is materially expanding orbital surveillance funding inside this fiscal cycle. Space domain awareness contractors — L3Harris, Northrop, BAE — gain a multi-year revenue tailwind that diversifies away from terrestrial defence priorities." data-fr="Les États-Unis élargissent matériellement le financement de la surveillance orbitale dans le cycle budgétaire en cours. Les contractants de connaissance du domaine spatial — L3Harris, Northrop, BAE — bénéficient d&#x27;un vent porteur pluriannuel qui diversifie hors des priorités terrestres de défense.">The US is materially expanding orbital surveillance funding inside this fiscal cycle. Space domain awareness contractors — L3Harris, Northrop, BAE — gain a multi-year revenue tailwind that diversifies away from terrestrial defence priorities.</p>
+        <span class="pdb-tag" data-en="POLITICS" data-fr="POLITIQUE">POLITICS</span>
+        <h2 class="pdb-headline"><a href="https://nationalpost.com/news/world/ann-widdecombe-killing-investigation" target="_blank" rel="noopener" data-en="UK counterterrorism police take the lead in probe into a conservative politician&#x27;s killing" data-fr="L&#x27;antiterrorisme britannique prend la tête de l&#x27;enquête sur le meurtre d&#x27;une figure politique conservatrice">UK counterterrorism police take the lead in probe into a conservative politician&#x27;s killing</a></h2>
+        <div class="pdb-source">National Post · nationalpost.com</div>
+        <p class="pdb-bluf" data-en="Counterterrorism taking primacy reclassifies a murder as a political attack on the British state, with immediate consequences for MP security, party rhetoric and public order. Expect emergency protection measures and a hardening of the domestic debate on extremism heading into an already volatile UK political cycle. This raises UK political risk on the margin for markets already watching gilts." data-fr="La primauté de l&#x27;antiterrorisme requalifie un meurtre en attaque politique contre l&#x27;État britannique, avec des conséquences immédiates sur la sécurité des élus, le discours des partis et l&#x27;ordre public. Attendre des mesures de protection d&#x27;urgence et un durcissement du débat sur l&#x27;extrémisme dans un cycle politique déjà instable. Le risque politique britannique s&#x27;accroît pour des marchés déjà attentifs aux gilts.">Counterterrorism taking primacy reclassifies a murder as a political attack on the British state, with immediate consequences for MP security, party rhetoric and public order. Expect emergency protection measures and a hardening of the domestic debate on extremism heading into an already volatile UK political cycle. This raises UK political risk on the margin for markets already watching gilts.</p>
       </div>
     </div>
     <div class="pdb-item">
       <div class="pdb-rank">25</div>
       <div class="pdb-content">
-        <span class="pdb-tag" data-en="AFRICA" data-fr="AFRIQUE">AFRICA</span>
-        <a class="pdb-headline" href="https://news.un.org/" target="_blank" rel="noopener" data-en="UN warns of worsening human rights crisis in Mali after deadly attacks" data-fr="L&#x27;ONU alerte sur une crise des droits humains qui s&#x27;aggrave au Mali après des attaques meurtrières">UN warns of worsening human rights crisis in Mali after deadly attacks</a>
-        <span class="pdb-source">UN Security · un.org</span>
-        <p class="pdb-bluf" data-en="Mali&#x27;s deterioration accelerates the Sahel security collapse, increases migration pressure on the EU, and weakens Wagner-successor influence over a region France just abandoned. Strategic implications for Francophone investment, security contractors, and EU border policy are immediate." data-fr="La détérioration au Mali accélère l&#x27;effondrement sécuritaire au Sahel, accroît la pression migratoire sur l&#x27;UE et affaiblit l&#x27;influence des successeurs de Wagner sur une région que la France vient de quitter. Les implications stratégiques pour l&#x27;investissement francophone, les contractants de sécurité et la politique frontalière de l&#x27;UE sont immédiates.">Mali&#x27;s deterioration accelerates the Sahel security collapse, increases migration pressure on the EU, and weakens Wagner-successor influence over a region France just abandoned. Strategic implications for Francophone investment, security contractors, and EU border policy are immediate.</p>
+        <span class="pdb-tag" data-en="RUSSIA" data-fr="RUSSIE">RUSSIA</span>
+        <h2 class="pdb-headline"><a href="https://nationalpost.com/news/world/outspoken-putin-critic-with-plans-to-run-in-russias-fall-elections-arrested-as-foreign-agent" target="_blank" rel="noopener" data-en="Outspoken Putin critic planning an autumn election run arrested as a &#x27;foreign agent&#x27;" data-fr="Un critique de Poutine candidat aux élections d&#x27;automne arrêté comme « agent de l&#x27;étranger »">Outspoken Putin critic planning an autumn election run arrested as a &#x27;foreign agent&#x27;</a></h2>
+        <div class="pdb-source">National Post · nationalpost.com</div>
+        <p class="pdb-bluf" data-en="The Kremlin is clearing the ballot before the autumn vote, which tells you it expects wartime economic strain to show up politically. Pre-emptive arrests signal a regime managing risk from below while escalating abroad. Anyone modelling a negotiated settlement should note that Putin is buying domestic insulation, not preparing to sell concessions to voters." data-fr="Le Kremlin nettoie le scrutin avant l&#x27;automne, signe qu&#x27;il redoute une traduction politique des tensions économiques de guerre. Ces arrestations préventives révèlent un régime gérant le risque intérieur tout en escaladant à l&#x27;extérieur. Qui modélise un règlement négocié doit noter que Poutine s&#x27;achète une isolation intérieure, et non des concessions à vendre aux électeurs.">The Kremlin is clearing the ballot before the autumn vote, which tells you it expects wartime economic strain to show up politically. Pre-emptive arrests signal a regime managing risk from below while escalating abroad. Anyone modelling a negotiated settlement should note that Putin is buying domestic insulation, not preparing to sell concessions to voters.</p>
       </div>
     </div>
     <div class="pdb-item">
       <div class="pdb-rank">26</div>
       <div class="pdb-content">
-        <span class="pdb-tag" data-en="CHINA" data-fr="CHINE">CHINA</span>
-        <a class="pdb-headline" href="https://www.cgtn.com/" target="_blank" rel="noopener" data-en="Vietnam&#x27;s top leader To Lam arrives in Beijing for state visit" data-fr="Le numéro un vietnamien To Lam arrive à Pékin en visite d&#x27;État">Vietnam&#x27;s top leader To Lam arrives in Beijing for state visit</a>
-        <span class="pdb-source">CGTN · cgtn.com</span>
-        <p class="pdb-bluf" data-en="Hanoi accepting a state visit during the Hormuz crisis is a hedge — Vietnam balances US factory investment against Chinese supply chain dependency. Watch for joint statements on the South China Sea; any softening of Hanoi&#x27;s traditional position would shift the regional risk picture quickly." data-fr="Hanoï acceptant une visite d&#x27;État pendant la crise d&#x27;Ormuz est une couverture — le Vietnam équilibre les investissements industriels américains contre la dépendance chinoise des chaînes d&#x27;approvisionnement. Surveillez les déclarations communes sur la mer de Chine méridionale ; tout assouplissement de la position traditionnelle de Hanoï modifierait rapidement le tableau régional du risque.">Hanoi accepting a state visit during the Hormuz crisis is a hedge — Vietnam balances US factory investment against Chinese supply chain dependency. Watch for joint statements on the South China Sea; any softening of Hanoi&#x27;s traditional position would shift the regional risk picture quickly.</p>
+        <span class="pdb-tag" data-en="DEFENCE" data-fr="DÉFENSE">DEFENCE</span>
+        <h2 class="pdb-headline"><a href="https://breakingdefense.com/2026/07/pentagon-announces-immediate-suspension-of-cmmc-mandates/" target="_blank" rel="noopener" data-en="Pentagon announces &#x27;immediate suspension&#x27; of CMMC Phase II mandates" data-fr="Le Pentagone annonce la « suspension immédiate » des exigences CMMC de phase II">Pentagon announces &#x27;immediate suspension&#x27; of CMMC Phase II mandates</a></h2>
+        <div class="pdb-source">Breaking Defense · breakingdefense.com</div>
+        <p class="pdb-bluf" data-en="The Pentagon has just relieved its supply base of a cybersecurity compliance burden in the middle of an active shooting war — prioritising throughput over hardening. Contractors get relief on cost and timelines; the attack surface across the defence industrial base stays open. Expect this to be revisited fast if a supplier breach surfaces." data-fr="Le Pentagone allège la charge de conformité en cybersécurité de sa base industrielle en pleine guerre ouverte — privilégiant le débit à la protection. Les fournisseurs y gagnent en coûts et en délais ; la surface d&#x27;attaque de la base industrielle de défense reste ouverte. Décision qui sera vite réexaminée si une brèche fournisseur éclate.">The Pentagon has just relieved its supply base of a cybersecurity compliance burden in the middle of an active shooting war — prioritising throughput over hardening. Contractors get relief on cost and timelines; the attack surface across the defence industrial base stays open. Expect this to be revisited fast if a supplier breach surfaces.</p>
       </div>
     </div>
     <div class="pdb-item">
       <div class="pdb-rank">27</div>
       <div class="pdb-content">
-        <span class="pdb-tag" data-en="CANADA" data-fr="CANADA">CANADA</span>
-        <a class="pdb-headline" href="https://ici.radio-canada.ca/" target="_blank" rel="noopener" data-en="Does Mexico fare better than Canada with Trump?" data-fr="Le Mexique s&#x27;en sort-il mieux que le Canada avec Trump ?">Does Mexico fare better than Canada with Trump?</a>
-        <span class="pdb-source">Radio-Canada · ici.radio-canada.ca</span>
-        <p class="pdb-bluf" data-en="The bilateral comparison is becoming a Canadian political litmus test on USMCA renegotiation strategy. Boards with cross-border exposure should track this framing — public sentiment is shifting toward harder Canadian leverage tactics, which raises trade-disruption risk into the fall." data-fr="La comparaison bilatérale devient un test politique canadien sur la stratégie de renégociation de l&#x27;AEUMC. Les conseils ayant une exposition transfrontalière devraient suivre ce cadrage — l&#x27;opinion publique évolue vers des tactiques canadiennes plus dures, ce qui augmente le risque de perturbation commerciale d&#x27;ici l&#x27;automne.">The bilateral comparison is becoming a Canadian political litmus test on USMCA renegotiation strategy. Boards with cross-border exposure should track this framing — public sentiment is shifting toward harder Canadian leverage tactics, which raises trade-disruption risk into the fall.</p>
+        <span class="pdb-tag" data-en="DEFENCE" data-fr="DÉFENSE">DEFENCE</span>
+        <h2 class="pdb-headline"><a href="https://www.defensenews.com/news/pentagon-congress/2026/07/13/lawmakers-demand-pentagon-release-findings-from-probe-of-iran-school-strike/" target="_blank" rel="noopener" data-en="Lawmakers demand the Pentagon release findings from its Iran school strike probe" data-fr="Des parlementaires exigent la publication de l&#x27;enquête du Pentagone sur la frappe d&#x27;une école en Iran">Lawmakers demand the Pentagon release findings from its Iran school strike probe</a></h2>
+        <div class="pdb-source">Defense News · defensenews.com</div>
+        <p class="pdb-bluf" data-en="A contested civilian-casualty incident is now a congressional oversight fight, and it is the first real domestic constraint on the campaign&#x27;s freedom of action. Withholding the findings feeds both the legal exposure and Tehran&#x27;s information operation. How the Pentagon handles this sets the political ceiling on how long strikes can continue unexamined." data-fr="Un incident contesté de victimes civiles devient un bras de fer de contrôle parlementaire — la première contrainte intérieure réelle sur la liberté d&#x27;action de la campagne. Retenir les conclusions nourrit à la fois l&#x27;exposition juridique et l&#x27;opération informationnelle iranienne. La gestion de ce dossier fixera le plafond politique de la poursuite des frappes sans examen.">A contested civilian-casualty incident is now a congressional oversight fight, and it is the first real domestic constraint on the campaign&#x27;s freedom of action. Withholding the findings feeds both the legal exposure and Tehran&#x27;s information operation. How the Pentagon handles this sets the political ceiling on how long strikes can continue unexamined.</p>
       </div>
     </div>
     <div class="pdb-item">
       <div class="pdb-rank">28</div>
       <div class="pdb-content">
-        <span class="pdb-tag" data-en="ENERGY" data-fr="ÉNERGIE">ENERGY</span>
-        <a class="pdb-headline" href="https://oilprice.com/" target="_blank" rel="noopener" data-en="Oil crunch prompts plastics crisis in Asia" data-fr="La crise pétrolière déclenche une crise des plastiques en Asie">Oil crunch prompts plastics crisis in Asia</a>
-        <span class="pdb-source">OilPrice · oilprice.com</span>
-        <p class="pdb-bluf" data-en="Petrochemical feedstock disruption is bleeding into manufactured-goods supply chains across Asia. Expect Q3 input-cost inflation in consumer electronics, automotive interiors, and packaging — second-order Iran impact that has not yet shown up in equity guidance." data-fr="La perturbation des matières premières pétrochimiques se répercute sur les chaînes d&#x27;approvisionnement de biens manufacturés en Asie. Anticipez une inflation des coûts d&#x27;intrants au T3 dans l&#x27;électronique grand public, l&#x27;aménagement automobile et l&#x27;emballage — un impact iranien de second ordre encore absent des prévisions des sociétés cotées.">Petrochemical feedstock disruption is bleeding into manufactured-goods supply chains across Asia. Expect Q3 input-cost inflation in consumer electronics, automotive interiors, and packaging — second-order Iran impact that has not yet shown up in equity guidance.</p>
+        <span class="pdb-tag" data-en="INDIA" data-fr="INDE">INDIA</span>
+        <h2 class="pdb-headline"><a href="https://economictimes.indiatimes.com/news/economy/indicators/wpi-inflation-quickens-to-9-87-in-june-from-9-68-in-may/articleshow/132383131.cms" target="_blank" rel="noopener" data-en="India&#x27;s wholesale inflation quickens to 9.87% as food prices bite" data-fr="L&#x27;inflation de gros en Inde accélère à 9,87 % sous la pression des prix alimentaires">India&#x27;s wholesale inflation quickens to 9.87% as food prices bite</a></h2>
+        <div class="pdb-source">Economic Times · economictimes.indiatimes.com</div>
+        <p class="pdb-bluf" data-en="Near-double-digit wholesale inflation before the Hormuz oil shock has fully passed through means India&#x27;s price path is set to worsen, not stabilise. The RBI loses room to support growth, and a country importing over 80% of its crude is the most exposed large economy to a sustained $86 Brent. Rupee, fuel subsidies and Indian equity margins are all downstream of this number." data-fr="Une inflation de gros proche de deux chiffres avant même la répercussion complète du choc d&#x27;Ormuz signifie que la trajectoire des prix indiens va empirer, non se stabiliser. La RBI perd sa marge de soutien à la croissance, et un pays important plus de 80 % de son brut est la grande économie la plus exposée à un Brent durablement à 86 $. Roupie, subventions aux carburants et marges des entreprises indiennes en découlent.">Near-double-digit wholesale inflation before the Hormuz oil shock has fully passed through means India&#x27;s price path is set to worsen, not stabilise. The RBI loses room to support growth, and a country importing over 80% of its crude is the most exposed large economy to a sustained $86 Brent. Rupee, fuel subsidies and Indian equity margins are all downstream of this number.</p>
       </div>
     </div>
     <div class="pdb-item">
       <div class="pdb-rank">29</div>
       <div class="pdb-content">
-        <span class="pdb-tag" data-en="TECHNOLOGY" data-fr="TECHNOLOGIE">TECHNOLOGY</span>
-        <a class="pdb-headline" href="https://techcrunch.com/" target="_blank" rel="noopener" data-en="Five architects of the AI economy explain where the wheels are coming off" data-fr="Cinq architectes de l&#x27;économie IA expliquent où les choses dérapent">Five architects of the AI economy explain where the wheels are coming off</a>
-        <span class="pdb-source">TechCrunch · techcrunch.com</span>
-        <p class="pdb-bluf" data-en="Insiders are now publicly questioning AI capex sustainability while hyperscaler equity multiples remain at peak. Asset allocators should pressure-test concentration risk in mega-cap tech before the next earnings season exposes the financing model strains." data-fr="Des initiés remettent désormais publiquement en question la soutenabilité des dépenses en IA alors que les multiples actions des hyperscalers restent au sommet. Les répartiteurs d&#x27;actifs devraient stress-tester le risque de concentration dans les méga-caps technologiques avant que la prochaine saison de résultats expose les tensions du modèle de financement.">Insiders are now publicly questioning AI capex sustainability while hyperscaler equity multiples remain at peak. Asset allocators should pressure-test concentration risk in mega-cap tech before the next earnings season exposes the financing model strains.</p>
+        <span class="pdb-tag" data-en="MACRO" data-fr="MACRO">MACRO</span>
+        <h2 class="pdb-headline"><a href="https://financialpost.com/pmn/business-pmn/rathbones-cut-gilt-exposure-in-case-burnham-does-a-truss" target="_blank" rel="noopener" data-en="Rathbones cuts gilt exposure in case Burnham &#x27;does a Truss&#x27;" data-fr="Rathbones réduit son exposition aux gilts par crainte d&#x27;un « effet Truss » avec Burnham">Rathbones cuts gilt exposure in case Burnham &#x27;does a Truss&#x27;</a></h2>
+        <div class="pdb-source">Financial Post · financialpost.com</div>
+        <p class="pdb-bluf" data-en="Institutional money is pre-positioning against a UK fiscal accident before it happens — the same reflex that made 2022 self-fulfilling. Gilt risk premia rising into an oil shock and a hawkish BoE repricing is a dangerous combination for UK borrowing costs. Anyone with sterling liabilities or UK duration should be watching the long end, not the headlines." data-fr="Les investisseurs institutionnels se positionnent contre un accident budgétaire britannique avant qu&#x27;il ne survienne — le réflexe même qui a rendu 2022 auto-réalisateur. Une prime de risque sur les gilts en hausse, conjuguée à un choc pétrolier et à un durcissement de la BoE, est explosive pour le coût d&#x27;emprunt britannique. Toute exposition en sterling doit surveiller la partie longue de la courbe.">Institutional money is pre-positioning against a UK fiscal accident before it happens — the same reflex that made 2022 self-fulfilling. Gilt risk premia rising into an oil shock and a hawkish BoE repricing is a dangerous combination for UK borrowing costs. Anyone with sterling liabilities or UK duration should be watching the long end, not the headlines.</p>
       </div>
     </div>
     <div class="pdb-item">
       <div class="pdb-rank">30</div>
       <div class="pdb-content">
-        <span class="pdb-tag" data-en="DEFENCE" data-fr="DÉFENSE">DEFENCE</span>
-        <a class="pdb-headline" href="https://warontherocks.com/" target="_blank" rel="noopener" data-en="The Pentagon needs a playbook for munitions surge production" data-fr="Le Pentagone a besoin d&#x27;un plan de production accélérée de munitions">The Pentagon needs a playbook for munitions surge production</a>
-        <span class="pdb-source">War on the Rocks · warontherocks.com</span>
-        <p class="pdb-bluf" data-en="US munitions stockpiles are still drawing down faster than they can be replenished, and a two-front Iran-Ukraine demand profile exposes that gap. Defence prime contractors with surge capacity in PGMs and air defence interceptors are the most likely beneficiaries of supplemental appropriations within 90 days." data-fr="Les stocks de munitions américains diminuent encore plus vite qu&#x27;ils ne sont reconstitués, et un profil de demande à deux fronts Iran-Ukraine expose cet écart. Les principaux contractants de défense avec capacité de production accélérée en munitions guidées et intercepteurs antiaériens sont les principaux bénéficiaires probables de crédits supplémentaires dans les 90 jours.">US munitions stockpiles are still drawing down faster than they can be replenished, and a two-front Iran-Ukraine demand profile exposes that gap. Defence prime contractors with surge capacity in PGMs and air defence interceptors are the most likely beneficiaries of supplemental appropriations within 90 days.</p>
+        <span class="pdb-tag" data-en="EU" data-fr="UE">EU</span>
+        <h2 class="pdb-headline"><a href="https://euobserver.com/227149/secrecy-tracker-commission-buries-gaza-audits-as-eu-top-court-faces-transparency-backlash/" target="_blank" rel="noopener" data-en="Commission buries Gaza audits as the EU&#x27;s top court faces a transparency backlash" data-fr="La Commission enterre les audits sur Gaza tandis que la Cour de l&#x27;UE affronte une fronde sur la transparence">Commission buries Gaza audits as the EU&#x27;s top court faces a transparency backlash</a></h2>
+        <div class="pdb-source">EUobserver · euobserver.com</div>
+        <p class="pdb-bluf" data-en="Withholding audits of EU spending in Gaza hands ammunition to critics of Brussels&#x27; legitimacy at a moment when the bloc is asking members for more money and more unity. Transparency fights of this kind become the wedge that populist parties use in national campaigns. The credibility cost lands squarely on the Commission&#x27;s next budget ask." data-fr="Retenir les audits des dépenses de l&#x27;UE à Gaza fournit des munitions aux contempteurs de la légitimité bruxelloise, alors même que l&#x27;Union réclame plus d&#x27;argent et plus d&#x27;unité à ses membres. Ce type de bataille sur la transparence devient le coin qu&#x27;exploitent les partis populistes dans les campagnes nationales. Le coût de crédibilité pèsera sur la prochaine demande budgétaire de la Commission.">Withholding audits of EU spending in Gaza hands ammunition to critics of Brussels&#x27; legitimacy at a moment when the bloc is asking members for more money and more unity. Transparency fights of this kind become the wedge that populist parties use in national campaigns. The credibility cost lands squarely on the Commission&#x27;s next budget ask.</p>
       </div>
     </div>
-  </div>
+    <div class="pdb-item">
+      <div class="pdb-rank">31</div>
+      <div class="pdb-content">
+        <span class="pdb-tag" data-en="HUMANITARIAN" data-fr="HUMANITAIRE">HUMANITARIAN</span>
+        <h2 class="pdb-headline"><a href="https://news.un.org/en/story/2026/07/1167930" target="_blank" rel="noopener" data-en="UN: Aid deliveries to Gaza restricted; agencies brace for El Niño response" data-fr="ONU : livraisons d&#x27;aide restreintes à Gaza ; les agences se préparent à une réponse El Niño">UN: Aid deliveries to Gaza restricted; agencies brace for El Niño response</a></h2>
+        <div class="pdb-source">UN News · news.un.org</div>
+        <p class="pdb-bluf" data-en="Restricted access to Gaza keeps a legal and diplomatic liability live for every state supporting the campaign, and it will resurface in ICC and ICJ proceedings. Simultaneously, El Niño planning signals a coming food-security shock that will collide with $86 oil and elevated freight. The humanitarian financing system is about to be asked to absorb both at once." data-fr="L&#x27;accès restreint à Gaza maintient un passif juridique et diplomatique pour chaque État soutenant la campagne, et ressurgira devant la CPI et la CIJ. Parallèlement, la préparation à El Niño annonce un choc de sécurité alimentaire qui percutera un pétrole à 86 $ et un fret élevé. Le système de financement humanitaire devra absorber les deux simultanément.">Restricted access to Gaza keeps a legal and diplomatic liability live for every state supporting the campaign, and it will resurface in ICC and ICJ proceedings. Simultaneously, El Niño planning signals a coming food-security shock that will collide with $86 oil and elevated freight. The humanitarian financing system is about to be asked to absorb both at once.</p>
+      </div>
+    </div>
+    <div class="pdb-item">
+      <div class="pdb-rank">32</div>
+      <div class="pdb-content">
+        <span class="pdb-tag" data-en="AFRICA" data-fr="AFRIQUE">AFRICA</span>
+        <h2 class="pdb-headline"><a href="https://www.foreignaffairs.com/senegal/senegal-brink" target="_blank" rel="noopener" data-en="Senegal is on the brink" data-fr="Le Sénégal au bord du gouffre">Senegal is on the brink</a></h2>
+        <div class="pdb-source">Foreign Affairs · foreignaffairs.com</div>
+        <p class="pdb-bluf" data-en="Senegal has been West Africa&#x27;s last uninterrupted democracy and the anchor state for Western engagement in a region already lost to coups. Its destabilisation would complete the Sahel&#x27;s strategic flip and hand Russia and China an open field on the Atlantic coast. Energy, migration and counterterrorism policy for Europe all run through Dakar&#x27;s stability." data-fr="Le Sénégal est la dernière démocratie ininterrompue d&#x27;Afrique de l&#x27;Ouest et le point d&#x27;ancrage de l&#x27;engagement occidental dans une région déjà livrée aux putschs. Sa déstabilisation achèverait le basculement stratégique du Sahel et ouvrirait à la Russie et à la Chine un boulevard sur la côte atlantique. Énergie, migration et lutte antiterroriste européennes passent toutes par la stabilité de Dakar.">Senegal has been West Africa&#x27;s last uninterrupted democracy and the anchor state for Western engagement in a region already lost to coups. Its destabilisation would complete the Sahel&#x27;s strategic flip and hand Russia and China an open field on the Atlantic coast. Energy, migration and counterterrorism policy for Europe all run through Dakar&#x27;s stability.</p>
+      </div>
+    </div>
+    <div class="pdb-item">
+      <div class="pdb-rank">33</div>
+      <div class="pdb-content">
+        <span class="pdb-tag" data-en="INTL LAW" data-fr="DROIT INTL">INTL LAW</span>
+        <h2 class="pdb-headline"><a href="http://opiniojuris.org/2026/07/13/accountability-as-instrument-the-death-sentence-against-sheikh-hasina-and-the-weaponisation-of-bangladeshs-international-crimes-tribunal/" target="_blank" rel="noopener" data-en="Bangladesh&#x27;s death sentence against Sheikh Hasina and the weaponisation of its crimes tribunal" data-fr="La condamnation à mort de Sheikh Hasina et l&#x27;instrumentalisation du tribunal bangladais">Bangladesh&#x27;s death sentence against Sheikh Hasina and the weaponisation of its crimes tribunal</a></h2>
+        <div class="pdb-source">Opinio Juris · opiniojuris.org</div>
+        <p class="pdb-bluf" data-en="A capital sentence against a former prime minister via a tribunal built for international crimes converts transitional justice into political elimination. It sets a precedent that every successor government in South Asia will now weigh, and it complicates Western engagement with Dhaka on trade and migration. India&#x27;s posture toward Bangladesh is the variable to watch." data-fr="Une condamnation à mort visant une ancienne première ministre, prononcée par un tribunal conçu pour les crimes internationaux, transforme la justice transitionnelle en élimination politique. Le précédent pèsera sur tout gouvernement successeur en Asie du Sud et complique l&#x27;engagement occidental avec Dacca sur le commerce et les migrations. La posture indienne envers le Bangladesh est la variable à suivre.">A capital sentence against a former prime minister via a tribunal built for international crimes converts transitional justice into political elimination. It sets a precedent that every successor government in South Asia will now weigh, and it complicates Western engagement with Dhaka on trade and migration. India&#x27;s posture toward Bangladesh is the variable to watch.</p>
+      </div>
+    </div>
+    <div class="pdb-item">
+      <div class="pdb-rank">34</div>
+      <div class="pdb-content">
+        <span class="pdb-tag" data-en="TECHNOLOGY" data-fr="TECHNOLOGIE">TECHNOLOGY</span>
+        <h2 class="pdb-headline"><a href="https://www.justsecurity.org/146544/civilian-protection-military-ai-congress/" target="_blank" rel="noopener" data-en="Civilian protection in the age of military AI: what Congress&#x27;s new proposals reveal" data-fr="Protection des civils à l&#x27;ère de l&#x27;IA militaire : ce que révèlent les nouvelles propositions du Congrès">Civilian protection in the age of military AI: what Congress&#x27;s new proposals reveal</a></h2>
+        <div class="pdb-source">Just Security · justsecurity.org</div>
+        <p class="pdb-bluf" data-en="Congress is legislating AI targeting safeguards in the same week the US fielded autonomous sea drones in combat — law chasing capability in real time. The rules written now will govern liability, export control and procurement for a decade. Defence-tech firms and their investors should read the draft language as the compliance regime they will actually be sold under." data-fr="Le Congrès légifère sur les garde-fous du ciblage par IA la semaine même où les États-Unis engagent des drones marins autonomes au combat — le droit courant après la capacité. Les règles écrites aujourd&#x27;hui régiront responsabilité, contrôle des exportations et achats pour une décennie. Les entreprises de défense technologique et leurs investisseurs doivent y lire le régime de conformité auquel elles seront soumises.">Congress is legislating AI targeting safeguards in the same week the US fielded autonomous sea drones in combat — law chasing capability in real time. The rules written now will govern liability, export control and procurement for a decade. Defence-tech firms and their investors should read the draft language as the compliance regime they will actually be sold under.</p>
+      </div>
+    </div>
 </main>
 <footer>
-  <div class="wrap" data-en="© Joseph Soares · IBPROM Corp · Sources cited inline" data-fr="© Joseph Soares · IBPROM Corp · Sources citées en ligne">© Joseph Soares · IBPROM Corp · Sources cited inline</div>
+  <span data-en="Curated from 48 international sources. Ranked by consequence, not category." data-fr="Sélection issue de 48 sources internationales. Classement par conséquence, non par thème.">Curated from 48 international sources. Ranked by consequence, not category.</span>
 </footer>
 <script>
-  function setLang(lang) {
-    document.documentElement.setAttribute('data-lang', lang);
-    document.querySelectorAll('[data-en]').forEach(el => {
-      const v = el.getAttribute('data-' + lang);
-      if (v) {
-        if (el.tagName === 'A') el.textContent = v;
-        else if (el.children.length === 0) el.textContent = v;
-        else el.firstChild && (el.firstChild.nodeType === 3) && (el.firstChild.nodeValue = v);
-        // simple replacement: rewrite text content if no element children
-        if (el.children.length === 0) el.textContent = v;
-      }
-    });
-    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
-    document.getElementById('btn-fr').classList.toggle('active', lang === 'fr');
-  }
+function setLang(l){
+  document.querySelectorAll('[data-en]').forEach(function(n){
+    var v=n.getAttribute('data-'+l); if(v) n.textContent=v;
+  });
+  document.getElementById('btn-en').classList.toggle('active',l==='en');
+  document.getElementById('btn-fr').classList.toggle('active',l==='fr');
+  document.documentElement.lang=l;
+}
 </script>
 </body>
 </html>
