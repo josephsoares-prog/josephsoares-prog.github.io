@@ -72,28 +72,34 @@
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
     <style>
         :root {
-            --navy: #0b1a2e;
-            --navy-mid: #0f2240;
-            --navy-light: #132d54;
-            --gold: #c9a84c;
-            --gold-light: #dfc07a;
-            --gold-muted: rgba(201, 168, 76, 0.12);
-            --cream: #f5f1eb;
+            /* Flag-blue palette (unified with site kit) */
+            --ink: #0A3161;
+            --panel: #0E3A70;
+            --panel2: #072244;
+            --bone: #F2EFE9;
+            --line: rgba(242,239,233,.12);
+            --navy: #0A3161;
+            --navy-mid: #0E3A70;
+            --navy-light: #103a70;
+            --gold: #D4AF37;
+            --gold-light: #E6C860;
+            --gold-muted: rgba(212, 175, 55, 0.12);
+            --cream: #F2EFE9;
             --white: #ffffff;
-            --text-dark: #1a1a2e;
+            --text-dark: #0b2344;
             --text-mid: #4a4a5a;
-            --text-light: rgba(255,255,255,0.75);
-            --border-light: rgba(201, 168, 76, 0.2);
+            --text-light: rgba(242,239,233,0.80);
+            --border-light: rgba(212, 175, 55, 0.22);
             --red-muted: #8b3a3a;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
         body {
-            font-family: 'Source Sans 3', -apple-system, sans-serif;
+            font-family: 'EB Garamond', -apple-system, sans-serif;
             color: var(--text-dark);
             background: var(--white);
             -webkit-font-smoothing: antialiased;
@@ -119,13 +125,13 @@
         .btn-subscribe {
             background: transparent; color: rgba(255,255,255,0.5);
             border: 1px solid rgba(255,255,255,0.2);
-            font-family: 'Source Sans 3', sans-serif; font-size: 11px; font-weight: 600;
+            font-family: 'EB Garamond', sans-serif; font-size: 11px; font-weight: 600;
             letter-spacing: 0.06em; padding: 4px 12px; text-decoration: none; transition: all 0.3s;
         }
         .btn-subscribe:hover { color: var(--gold); border-color: var(--gold); }
         .lang-bar button {
             background: none; border: none; cursor: pointer;
-            font-family: 'Source Sans 3', sans-serif; font-size: 11px; font-weight: 600;
+            font-family: 'EB Garamond', sans-serif; font-size: 11px; font-weight: 600;
             letter-spacing: 1.5px; text-transform: uppercase;
             color: rgba(255,255,255,0.35); padding: 4px 6px; transition: color 0.3s;
         }
@@ -145,7 +151,7 @@
             display: flex; justify-content: space-between; align-items: center; height: 64px;
         }
         .nav-name {
-            font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 700;
+            font-family: 'Oswald', serif; font-size: 22px; font-weight: 700;
             color: var(--white); text-decoration: none; letter-spacing: 0.02em;
         }
         .nav-name span { color: var(--gold); }
@@ -201,7 +207,7 @@
             color: var(--gold); font-weight: 600;
         }
         .hero h1 {
-            font-family: 'Cormorant Garamond', serif;
+            font-family: 'Oswald', serif;
             font-size: clamp(2.8rem, 5.5vw, 4.4rem); font-weight: 700;
             color: var(--white); line-height: 1.1; max-width: 850px;
             margin-bottom: 28px; animation: fadeUp 0.85s ease both;
@@ -217,14 +223,14 @@
         }
         .btn-primary {
             display: inline-block; background: var(--gold); color: var(--navy);
-            font-family: 'Source Sans 3', sans-serif; font-size: 13px; font-weight: 700;
+            font-family: 'EB Garamond', sans-serif; font-size: 13px; font-weight: 700;
             letter-spacing: 0.08em; text-transform: uppercase;
             padding: 14px 32px; text-decoration: none; transition: all 0.3s;
         }
         .btn-primary:hover { background: var(--gold-light); }
         .btn-ghost {
             display: inline-block; color: var(--gold); border: 1px solid rgba(201, 168, 76, 0.3);
-            font-family: 'Source Sans 3', sans-serif; font-size: 13px; font-weight: 600;
+            font-family: 'EB Garamond', sans-serif; font-size: 13px; font-weight: 600;
             letter-spacing: 0.08em; text-transform: uppercase;
             padding: 13px 28px; text-decoration: none; transition: all 0.3s;
         }
@@ -258,7 +264,7 @@
             text-transform: uppercase; letter-spacing: 2.5px; margin-bottom: 20px;
         }
         .problem h2 {
-            font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem, 3vw, 2.6rem);
+            font-family: 'Oswald', serif; font-size: clamp(1.8rem, 3vw, 2.6rem);
             font-weight: 700; color: var(--navy); line-height: 1.2; margin-bottom: 28px;
         }
         .problem p {
@@ -273,7 +279,7 @@
             text-align: center; padding: 20px 12px;
         }
         .problem-stat-number {
-            font-family: 'Cormorant Garamond', serif; font-size: 36px;
+            font-family: 'Oswald', serif; font-size: 36px;
             font-weight: 700; color: var(--red-muted); margin-bottom: 6px;
         }
         .problem-stat-label {
@@ -290,7 +296,7 @@
             text-transform: uppercase; letter-spacing: 2.5px; margin-bottom: 20px;
         }
         .authority h2 {
-            font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem, 3vw, 2.6rem);
+            font-family: 'Oswald', serif; font-size: clamp(1.8rem, 3vw, 2.6rem);
             font-weight: 700; color: var(--white); line-height: 1.2; margin-bottom: 32px;
         }
         .authority-text {
@@ -309,7 +315,7 @@
             text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px;
         }
         .authority-cred-title {
-            font-family: 'Cormorant Garamond', serif; font-size: 20px;
+            font-family: 'Oswald', serif; font-size: 20px;
             font-weight: 700; color: var(--white); margin-bottom: 8px; line-height: 1.3;
         }
         .authority-cred-detail {
@@ -326,7 +332,7 @@
             text-transform: uppercase; letter-spacing: 2.5px; margin-bottom: 20px;
         }
         .opportunity h2 {
-            font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem, 3vw, 2.6rem);
+            font-family: 'Oswald', serif; font-size: clamp(1.8rem, 3vw, 2.6rem);
             font-weight: 700; color: var(--navy); line-height: 1.2; margin-bottom: 28px;
         }
         .opportunity p {
@@ -344,7 +350,7 @@
             background: rgba(201, 168, 76, 0.06); border-left: 3px solid var(--gold);
         }
         .contrast-col h3 {
-            font-family: 'Source Sans 3', sans-serif; font-size: 14px; font-weight: 700;
+            font-family: 'EB Garamond', sans-serif; font-size: 14px; font-weight: 700;
             text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 14px;
         }
         .contrast-col.reactive h3 { color: var(--red-muted); }
@@ -364,7 +370,7 @@
             text-transform: uppercase; letter-spacing: 2.5px; margin-bottom: 20px;
         }
         .offer h2 {
-            font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem, 3vw, 2.6rem);
+            font-family: 'Oswald', serif; font-size: clamp(1.8rem, 3vw, 2.6rem);
             font-weight: 700; color: var(--white); line-height: 1.2; margin-bottom: 28px;
         }
         .offer-text {
@@ -384,7 +390,7 @@
             text-transform: uppercase; letter-spacing: 2px; margin-bottom: 12px;
         }
         .offer-detail-title {
-            font-family: 'Cormorant Garamond', serif; font-size: 20px;
+            font-family: 'Oswald', serif; font-size: 20px;
             font-weight: 700; color: var(--white); margin-bottom: 8px;
         }
         .offer-detail-desc {
@@ -403,7 +409,7 @@
         }
         .filter-inner { max-width: 700px; margin: 0 auto; text-align: center; }
         .filter h2 {
-            font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem, 3vw, 2.4rem);
+            font-family: 'Oswald', serif; font-size: clamp(1.8rem, 3vw, 2.4rem);
             font-weight: 700; color: var(--navy); line-height: 1.2; margin-bottom: 24px;
         }
         .filter p {
@@ -429,7 +435,7 @@
         }
         .final-cta-inner { max-width: 700px; margin: 0 auto; }
         .final-cta h2 {
-            font-family: 'Cormorant Garamond', serif;
+            font-family: 'Oswald', serif;
             font-size: clamp(2rem, 3.5vw, 2.8rem);
             font-weight: 700; color: var(--white); line-height: 1.2; margin-bottom: 24px;
         }
@@ -446,7 +452,7 @@
             background: var(--cream); padding: 60px 40px; text-align: center;
         }
         .substack-capture h3 {
-            font-family: 'Cormorant Garamond', serif; font-size: 22px;
+            font-family: 'Oswald', serif; font-size: 22px;
             font-weight: 700; color: var(--navy); margin-bottom: 10px;
         }
         .substack-capture p {
@@ -507,6 +513,27 @@
         @media (max-width: 768px) {
             footer > div:first-child { grid-template-columns: 1fr !important; gap: 28px !important; }
         }
+
+        /* ===== Standard site kit: nav + footer ===== */
+        .wrap{max-width:1120px;margin:0 auto;padding:0 30px}
+        nav{position:sticky;top:0;left:auto;right:auto;z-index:20;padding:0;
+            background:rgba(7,34,68,.90);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+        nav .wrap{display:flex;align-items:center;justify-content:space-between;height:66px}
+        .brand{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.2em;font-weight:600;font-size:16px;color:var(--bone)}
+        .brand span{color:var(--gold)}
+        .navlinks{display:flex;gap:30px;align-items:center}
+        .navlinks a{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.12em;
+            font-size:13px;font-weight:500;text-decoration:none;color:var(--text-light)}
+        .navlinks a:hover{color:var(--gold)}
+        .navlinks a.cta{color:var(--bone);border:1px solid var(--line);padding:9px 16px;border-radius:2px}
+        .navlinks a.cta:hover{border-color:var(--gold);color:var(--gold)}
+        footer.site-footer{background:var(--ink);border-top:1px solid var(--line);padding:48px 0 64px;color:var(--text-light);font-size:16px}
+        footer.site-footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:22px;align-items:flex-start}
+        footer.site-footer a{color:var(--text-light);text-decoration:none}
+        footer.site-footer .soc a{margin-left:22px}
+        footer.site-footer a:hover{color:var(--gold)}
+        footer.site-footer .disc{max-width:50ch;font-style:italic;font-size:15px;line-height:1.55}
+        @media(max-width:768px){.navlinks{display:none}}
     </style>
   <!-- Apollo.io website visitor tracking -->
   <script>function initApollo(){var n=Math.random().toString(36).substring(7),o=document.createElement("script");
@@ -516,45 +543,17 @@ document.head.appendChild(o)}initApollo();</script>
 </head>
 <body>
 
-    <!-- ===== TOP BAR ===== -->
-    <div class="lang-bar">
-        <div class="lang-bar-left">
-            <a href="https://www.linkedin.com/in/soaresjoseph/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
-                <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-            </a>
-            <a href="https://x.com/JosephSoares" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="X (Twitter)">
-                <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.514l-5.106-6.694-5.848 6.694h-3.308l7.73-8.835L.424 2.25h6.679l4.632 6.124L17.77 2.25h.474zm-1.161 17.52h1.833L7.084 4.126H5.117l12.926 15.644z"/></svg>
-            </a>
-            <a href="https://corridorintelligence.substack.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Substack">
-                <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg>
-            </a>
-            <a href="https://www.youtube.com/@corridorintelligence" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="YouTube">
-                <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-            </a>
-        </div>
-        <div class="lang-bar-right">
-            <a href="https://corridorintelligence.substack.com/subscribe" target="_blank" rel="noopener noreferrer" class="btn-subscribe" data-fr="S'abonner">Subscribe</a>
-            <div class="lang-buttons">
-                <button onclick="setLang('en')" class="active">EN</button>
-                <span class="lang-sep">|</span>
-                <button onclick="setLang('fr')">FR</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- ===== NAV ===== -->
+    <!-- ===== NAV (standard site kit) ===== -->
     <nav>
-        <div class="nav-inner">
-            <a href="#" class="nav-name">Joseph <span>Soares</span></a>
-            <button class="mobile-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">
-                <span></span><span></span><span></span>
-            </button>
-            <div class="nav-links">
-                <a href="advisory.html" data-fr="Services consultatifs">Advisory</a>
-                <a href="intelligence.html" data-fr="Renseignement">Intelligence</a>
-                <a href="podcast.html" data-fr="Balado">Podcast</a>
-                <a href="writing.html" data-fr="Publications">Writing</a>
-                <a href="/call.html" class="nav-cta" data-fr="Accès consultatif">Advisory Access</a>
+        <div class="wrap">
+            <div class="brand">Joseph <span>Soares</span></div>
+            <div class="navlinks">
+                <a href="/advisory.html">Advisory</a>
+                <a href="/intelligence.html">Intelligence</a>
+                <a href="/podcast.html">Podcast</a>
+                <a href="/writing.html">Writing</a>
+                <a href="/book.html">Book</a>
+                <a class="cta" href="/call.html">Book a Call</a>
             </div>
         </div>
     </nav>
@@ -642,7 +641,7 @@ document.head.appendChild(o)}initApollo();</script>
                 <div class="authority-cred">
                     <div class="authority-cred-label" data-fr="Crise financière de 2008">2008 Financial Crisis</div>
                     <div class="authority-cred-title" data-fr="Cabinet du Premier ministre du Canada">Prime Minister's Office</div>
-                    <div class="authority-cred-detail" data-fr="Conseiller sur la gestion des enjeux au Cabinet du Premier ministre du Canada pendant la pire crise financière mondiale depuis la Grande Dépression. Quand le monde tremblait, j'étais dans la salle.">Served as an advisor to the Prime Minister of Canada on issues management during the worst global financial crisis since the Great Depression. When the world was shaking, I was in the room.</div>
+                    <div class="authority-cred-detail" data-fr="Conseiller sur la gestion des enjeux au Cabinet du Premier ministre du Canada pendant la pire crise financière mondiale depuis la Grande Dépression. Quand le monde tremblait, j'étais dans la salle.">Served in the Prime Minister's Office of Canada on issues management during the worst global financial crisis since the Great Depression. When the world was shaking, I was in the room.</div>
                 </div>
                 <div class="authority-cred">
                     <div class="authority-cred-label" data-fr="Pandémie de 2020">2020 Pandemic</div>
@@ -758,7 +757,7 @@ document.head.appendChild(o)}initApollo();</script>
     <!-- ===== SUBSTACK CAPTURE ===== -->
     <section class="substack-capture">
         <div style="max-width: 600px; margin: 0 auto;">
-            <h3 data-fr="Pas encore prêt ? Restez dans le Corridor.">Not Ready to Talk? Stay in The Corridor.</h3>
+            <h3 data-fr="Pas encore prêt ? Restez dans le Corridor.">Not Ready to Talk? Stay in Corridor Intelligence.</h3>
             <p data-fr="Corridor Intelligence — renseignement politique et stratégique quotidien pour les décideurs. Gratuit.">Corridor Intelligence — daily political and strategic intelligence for decision-makers. Free.</p>
             <a href="https://corridorintelligence.substack.com/subscribe" target="_blank" rel="noopener" class="btn-primary" style="display: inline-block;" data-fr="S'abonner gratuitement">Subscribe Free</a>
             <p class="note" data-fr="Renseignement quotidien. Pas de pourriel. Désabonnement à tout moment.">Daily intelligence. No spam. Unsubscribe anytime.</p>
@@ -785,42 +784,20 @@ document.head.appendChild(o)}initApollo();</script>
         <a href="/call.html" data-fr="Accès consultatif">Advisory Access</a>
     </div>
 
-    <!-- ===== FOOTER ===== -->
-    <footer style="background: #06101e; padding: 60px 40px 40px; border-top: 1px solid rgba(201, 168, 76, 0.1);">
-        <div style="max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 40px;">
-            <div>
-                <h4 style="font-family: 'Cormorant Garamond', serif; font-size: 16px; font-weight: 700; color: #c9a84c; margin-bottom: 14px;" data-fr="À propos">About</h4>
-                <p style="font-size: 13px; color: rgba(255,255,255,0.55); line-height: 1.7;" data-fr="Joseph Soares est un conseiller stratégique privé pour les entrepreneurs, les dirigeants d'entreprise et les particuliers fortunés. Ancien conseiller du Premier ministre du Canada. Chef de cabinet au Sénat. Publié dans Forbes et Newsweek.">Joseph Soares is a private strategic advisor to entrepreneurs, business leaders, and high-net-worth individuals. Former advisor in Canada's Prime Minister's Office. Senate Chief of Staff. Published in Forbes and Newsweek.</p>
+    <!-- ===== FOOTER (standard site kit) ===== -->
+    <footer class="site-footer">
+        <div class="wrap">
+            <div class="disc">
+                <div class="brand" style="font-size:15px;margin-bottom:10px">Joseph <span style="color:var(--gold)">Soares</span> &amp; Company</div>
+                <em>Senior advisor to entrepreneurs and high-net-worth leaders. Confidential by default. &copy; 2026 Joseph Soares &amp; Company.</em>
             </div>
-            <div>
-                <h4 style="font-family: 'Cormorant Garamond', serif; font-size: 16px; font-weight: 700; color: #c9a84c; margin-bottom: 14px;" data-fr="Liens rapides">Quick Links</h4>
-                <ul style="list-style: none; padding: 0; margin: 0;">
-                    <li style="margin-bottom: 8px;"><a href="/" style="color: rgba(255,255,255,0.55); text-decoration: none; font-size: 13px; transition: color 0.3s;" onmouseover="this.style.color='#c9a84c'" onmouseout="this.style.color='rgba(255,255,255,0.55)'" data-fr="Accueil">Home</a></li>
-                    <li style="margin-bottom: 8px;"><a href="/advisory.html" style="color: rgba(255,255,255,0.55); text-decoration: none; font-size: 13px; transition: color 0.3s;" onmouseover="this.style.color='#c9a84c'" onmouseout="this.style.color='rgba(255,255,255,0.55)'" data-fr="Services consultatifs">Advisory</a></li>
-                    <li style="margin-bottom: 8px;"><a href="/intelligence.html" style="color: rgba(255,255,255,0.55); text-decoration: none; font-size: 13px; transition: color 0.3s;" onmouseover="this.style.color='#c9a84c'" onmouseout="this.style.color='rgba(255,255,255,0.55)'" data-fr="Renseignement">Intelligence</a></li>
-                    <li style="margin-bottom: 8px;"><a href="/podcast.html" style="color: rgba(255,255,255,0.55); text-decoration: none; font-size: 13px; transition: color 0.3s;" onmouseover="this.style.color='#c9a84c'" onmouseout="this.style.color='rgba(255,255,255,0.55)'" data-fr="Balado">Podcast</a></li>
-                    <li style="margin-bottom: 8px;"><a href="/writing.html" style="color: rgba(255,255,255,0.55); text-decoration: none; font-size: 13px; transition: color 0.3s;" onmouseover="this.style.color='#c9a84c'" onmouseout="this.style.color='rgba(255,255,255,0.55)'" data-fr="Publications">Writing</a></li>
-                    <li style="margin-bottom: 8px;"><a href="/call.html" style="color: rgba(255,255,255,0.55); text-decoration: none; font-size: 13px; transition: color 0.3s;" onmouseover="this.style.color='#c9a84c'" onmouseout="this.style.color='rgba(255,255,255,0.55)'" data-fr="Accès consultatif">Advisory Access</a></li>
-                </ul>
+            <div class="soc">
+                <a href="/advisory.html">Advisory</a>
+                <a href="/book.html" style="margin-left:22px">Book</a>
+                <a href="https://www.linkedin.com/in/soaresjoseph/">LinkedIn</a>
+                <a href="https://x.com/JosephSoares">X</a>
+                <a href="https://www.youtube.com/@corridorintelligence">YouTube</a>
             </div>
-            <div>
-                <h4 style="font-family: 'Cormorant Garamond', serif; font-size: 16px; font-weight: 700; color: #c9a84c; margin-bottom: 14px;">Contact</h4>
-                <p style="font-size: 13px; color: rgba(255,255,255,0.55); line-height: 2;"><a href="mailto:info@josephsoares.com" style="color: rgba(255,255,255,0.55); text-decoration: none;" onmouseover="this.style.color='#c9a84c'" onmouseout="this.style.color='rgba(255,255,255,0.55)'">info@josephsoares.com</a></p>
-                <p style="font-size: 13px; color: rgba(255,255,255,0.55); line-height: 2;"><a href="https://www.linkedin.com/in/soaresjoseph/" target="_blank" rel="noopener" style="color: rgba(255,255,255,0.55); text-decoration: none;" onmouseover="this.style.color='#c9a84c'" onmouseout="this.style.color='rgba(255,255,255,0.55)'">LinkedIn</a></p>
-                <p style="font-size: 13px; color: rgba(255,255,255,0.55); line-height: 2;"><a href="https://x.com/JosephSoares" target="_blank" rel="noopener" style="color: rgba(255,255,255,0.55); text-decoration: none;" onmouseover="this.style.color='#c9a84c'" onmouseout="this.style.color='rgba(255,255,255,0.55)'">X (Twitter)</a></p>
-                <p style="font-size: 13px; color: rgba(255,255,255,0.55); line-height: 2;"><a href="https://corridorintelligence.substack.com" target="_blank" rel="noopener" style="color: rgba(255,255,255,0.55); text-decoration: none;" onmouseover="this.style.color='#c9a84c'" onmouseout="this.style.color='rgba(255,255,255,0.55)'">Substack</a></p>
-                <p style="font-size: 13px; color: rgba(255,255,255,0.55); line-height: 2;"><a href="https://www.youtube.com/@corridorintelligence" target="_blank" rel="noopener" style="color: rgba(255,255,255,0.55); text-decoration: none;" onmouseover="this.style.color='#c9a84c'" onmouseout="this.style.color='rgba(255,255,255,0.55)'">YouTube</a></p>
-                <p style="margin-top: 12px; font-size: 13px; color: rgba(255,255,255,0.7); font-weight: 600;">Joseph Soares, MBA, Adm.A., PMP</p>
-                <p style="font-size: 12px; color: rgba(255,255,255,0.4);"><a href="https://ibprom.com" target="_blank" rel="noopener" style="color: rgba(255,255,255,0.4); text-decoration: none;" onmouseover="this.style.color='#c9a84c'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">IBPROM Corp.</a></p>
-            </div>
-        </div>
-        <div style="max-width: 1000px; margin: 32px auto 0; padding-top: 24px; border-top: 1px solid rgba(201, 168, 76, 0.08); text-align: center;">
-            <p style="font-size: 12px; color: rgba(255,255,255,0.3); margin-bottom: 8px;">
-                <a href="/privacy.html" style="color: rgba(255,255,255,0.3); text-decoration: none; margin: 0 8px;" onmouseover="this.style.color='rgba(255,255,255,0.6)'" onmouseout="this.style.color='rgba(255,255,255,0.3)'">Privacy Policy</a> |
-                <a href="/terms.html" style="color: rgba(255,255,255,0.3); text-decoration: none; margin: 0 8px;" onmouseover="this.style.color='rgba(255,255,255,0.6)'" onmouseout="this.style.color='rgba(255,255,255,0.3)'">Terms of Service</a> |
-                <a href="/cookies.html" style="color: rgba(255,255,255,0.3); text-decoration: none; margin: 0 8px;" onmouseover="this.style.color='rgba(255,255,255,0.6)'" onmouseout="this.style.color='rgba(255,255,255,0.3)'">Cookie Policy</a>
-            </p>
-            <p style="font-size: 11px; color: rgba(255,255,255,0.2);">&copy; 2026 IBPROM Corp. All rights reserved.</p>
         </div>
     </footer>
 

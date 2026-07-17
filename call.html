@@ -16,10 +16,6 @@
     <link rel="apple-touch-icon" href="/favicon.ico">
     <title>Advisory Access | Joseph Soares — Senior Advisor</title>
     <meta name="description" content="Book a 30-minute introductory call with Joseph Soares. No pitch, no obligation — a confidential conversation to see if we're a fit.">
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
     {
@@ -36,242 +32,155 @@
       }
     }
     </script>
-    <style>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0A3161; --panel:#0E3A70; --panel2:#072244;
+    --bone:#F2EFE9; --muted:#9A948A; --gold:#D4AF37; --line:rgba(242,239,233,.12);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth;overflow-x:hidden}
+  body{background:var(--ink);color:var(--bone);font-family:'EB Garamond',Georgia,serif;
+    font-size:19px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden;max-width:100vw;
+    background-image:radial-gradient(ellipse 120% 70% at 50% -8%, rgba(201,162,39,.07), rgba(0,0,0,0));}
+  img,iframe{max-width:100%}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 30px}
+  .eyebrow{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.3em;
+    font-size:13px;font-weight:500;color:var(--gold)}
+  a{color:inherit}
+  .btn{display:inline-block;font-family:'Oswald',sans-serif;text-transform:uppercase;
+    letter-spacing:.14em;font-weight:600;font-size:15px;text-decoration:none;cursor:pointer;
+    padding:18px 34px;border-radius:2px;transition:.2s;border:1px solid transparent}
+  .btn-gold{background:var(--gold);color:#0E3A70}
+  .btn-gold:hover{background:#E6C860}
+  .btn-ghost{background:transparent;color:var(--bone);border-color:var(--line)}
+  .btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+  .disp{font-family:'Oswald',sans-serif;text-transform:uppercase}
+
+  nav{position:sticky;top:0;z-index:20;background:rgba(7,34,68,.90);
+    backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:66px}
+  .brand{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.2em;font-weight:600;font-size:16px}
+  .brand span{color:var(--gold)}
+  .navlinks{display:flex;gap:30px;align-items:center}
+  .navlinks a{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.12em;
+    font-size:13px;font-weight:500;text-decoration:none;color:var(--muted)}
+  .navlinks a:hover{color:var(--gold)}
+  .navlinks a.cta{color:var(--bone);border:1px solid var(--line);padding:9px 16px;border-radius:2px}
+  .navlinks a.cta:hover{border-color:var(--gold);color:var(--gold)}
+  .menutoggle{display:none}
+
+  .hero{padding:96px 0 70px;position:relative}
+  .hero .eyebrow{margin-bottom:26px}
+  .hero h1{font-family:'Oswald',sans-serif;text-transform:uppercase;font-weight:600;
+    font-size:62px;line-height:1.04;letter-spacing:.005em;max-width:17ch;margin-bottom:30px}
+  .hero h1 .g{color:var(--gold)}
+  .hero h1 .i{font-family:'EB Garamond',serif;font-style:italic;text-transform:none;font-weight:400;color:var(--bone)}
+  .hero .lede{font-size:21px;color:var(--muted);max-width:60ch;margin-bottom:34px}
+  .hero .lede b{color:var(--bone);font-weight:500}
+  .ctar{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+
+  .authbar{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--panel);padding:24px 0}
+  .authbar .wrap{display:flex;flex-wrap:wrap;gap:14px 44px;align-items:center;justify-content:center;
+    font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.18em;font-size:15px;color:var(--muted)}
+  .authbar .lab{font-size:11px;letter-spacing:.24em;color:var(--gold);width:100%;text-align:center;margin-bottom:2px}
+  .authbar b{color:var(--bone);font-weight:500}
+
+  section.blk{padding:82px 0}
+  .quote{border-left:2px solid var(--gold);padding-left:34px;max-width:60ch}
+  .quote p{font-family:'EB Garamond',serif;font-size:30px;line-height:1.4;color:var(--bone)}
+  .quote p .m{color:var(--muted)}
+  .h2{font-family:'Oswald',sans-serif;text-transform:uppercase;font-weight:600;font-size:38px;line-height:1.08;margin-bottom:10px}
+  .sub{color:var(--muted);font-size:20px;max-width:60ch}
+  .klabel{margin-bottom:14px}
+
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:44px}
+  .card{background:var(--panel2);border:1px solid var(--line);border-radius:3px;padding:30px 28px}
+  .card h3{font-family:'Oswald',sans-serif;text-transform:uppercase;font-weight:500;letter-spacing:.05em;font-size:19px;margin-bottom:12px}
+  .card h3 .n{color:var(--gold);margin-right:10px}
+  .card p{font-size:17px;color:var(--muted);line-height:1.55}
+
+  .who{display:grid;grid-template-columns:1fr 1fr;gap:20px 40px;margin-top:40px;max-width:960px}
+  .who .row{display:flex;gap:16px;align-items:flex-start;padding:16px 0;border-top:1px solid var(--line)}
+  .who .mk{color:var(--gold);font-family:'Oswald',sans-serif;font-weight:600;font-size:18px;flex:0 0 auto;margin-top:2px}
+  .who .row p{font-size:18px;color:var(--bone)}
+
+  .paths{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:44px}
+  .path{background:var(--panel2);border:1px solid var(--line);border-radius:3px;padding:32px 30px;display:flex;flex-direction:column}
+  .path .tier{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.2em;font-size:12px;color:var(--gold);margin-bottom:12px}
+  .path h3{font-family:'Oswald',sans-serif;text-transform:uppercase;font-weight:600;font-size:24px;margin-bottom:10px}
+  .path p{font-size:17px;color:var(--muted);margin-bottom:18px;flex:1}
+  .path .price{font-family:'EB Garamond',serif;font-style:italic;color:var(--bone);font-size:17px;margin-bottom:18px}
+  .path a.go{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.12em;font-size:14px;font-weight:600;color:var(--bone);text-decoration:none}
+  .path a.go:hover{color:var(--gold)}
+  .path.feat{border-color:rgba(201,162,39,.5)}
+
+  .bookband{background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .bookband .wrap{display:grid;grid-template-columns:290px 1fr;gap:48px;align-items:center;padding:64px 30px}
+  .bookframe{background:#fff;padding:22px;border-radius:4px;box-shadow:0 34px 80px rgba(0,0,0,.55);line-height:0;justify-self:start}
+  .bookband img{width:230px;border-radius:2px;display:block}
+  .bookband .h2{font-size:34px}
+  .bookband .subt{font-style:italic;color:var(--bone);font-size:20px;margin-bottom:16px}
+
+  .corridor .wrap{display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap}
+
+  .finalcta{text-align:center;padding:92px 0}
+  .finalcta .h2{font-size:44px;max-width:20ch;margin:0 auto 24px}
+
+  footer{border-top:1px solid var(--line);padding:48px 0 64px;color:var(--muted);font-size:16px}
+  footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:22px;align-items:flex-start}
+  footer a{color:var(--muted);text-decoration:none}
+  footer .soc a{margin-left:22px}
+  footer a:hover{color:var(--gold)}
+  .disc{max-width:50ch;font-style:italic;font-size:15px;line-height:1.55}
+
+  @media(max-width:880px){
+    .navlinks{display:none}
+    .hero{padding:60px 0 44px}
+    .hero h1{font-size:40px;max-width:100%}
+    .hero .lede{max-width:100%}
+    .grid3{grid-template-columns:1fr}
+    .who{grid-template-columns:1fr}
+    .paths{grid-template-columns:1fr}
+    .bookband .wrap{grid-template-columns:1fr;justify-items:center;text-align:center;gap:28px}
+    .quote p{font-size:24px}
+    .h2{font-size:30px}
+    .finalcta .h2{font-size:32px}
+    .authbar .wrap{gap:10px 22px;font-size:13px;letter-spacing:.1em}
+  }
+</style>
+<style>
+        /* ===== PAGE-SPECIFIC — re-skinned to flag-blue palette ===== */
         :root {
-            --navy: #0b1a2e;
-            --navy-mid: #0f2240;
-            --navy-light: #132d54;
-            --gold: #c9a84c;
-            --gold-light: #dfc07a;
-            --gold-muted: rgba(201, 168, 76, 0.12);
-            --cream: #f5f1eb;
-            --white: #ffffff;
-            --text-dark: #1a1a2e;
-            --text-mid: #4a4a5a;
-            --text-light: rgba(255,255,255,0.75);
-            --border-light: rgba(201, 168, 76, 0.2);
+            --navy: #0A3161;
+            --navy-mid: #0E3A70;
+            --navy-light: #072244;
+            --gold: #D4AF37;
+            --gold-light: #E6C860;
+            --cream: #F2EFE9;
+            --white: #F2EFE9;
+            --text-dark: #F2EFE9;
+            --text-mid: #9A948A;
+            --text-light: #9A948A;
+            --border-light: rgba(242,239,233,0.12);
         }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        body {
-            font-family: 'Source Sans 3', -apple-system, sans-serif;
-            color: var(--text-dark);
-            background: var(--white);
-            -webkit-font-smoothing: antialiased;
-        }
-
-        /* ===== LANG SWITCHER ===== */
-        .lang-bar {
-            position: fixed;
-            top: 0; left: 0; right: 0;
-            z-index: 200;
-            background: #06101e;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 40px;
-            height: 36px;
-            border-bottom: 1px solid rgba(201, 168, 76, 0.08);
-        }
-        .lang-bar button {
-            background: none; border: none; cursor: pointer;
-            font-family: 'Source Sans 3', sans-serif;
-            font-size: 11px; font-weight: 600;
-            letter-spacing: 1.5px; text-transform: uppercase;
-            color: rgba(255,255,255,0.35);
-            padding: 6px 12px; transition: color 0.3s;
-        }
-        .lang-bar button:hover { color: var(--gold-light); }
-        .lang-bar button.active { color: var(--gold); }
-        .lang-bar .lang-sep { color: rgba(255,255,255,0.12); font-size: 11px; }
-
-        /* ===== TOP BAR ADDITIONS ===== */
-        .lang-bar-left {
-            display: flex;
-            gap: 12px;
-            align-items: center;
-        }
-        .lang-bar-left .social-link {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 24px;
-            height: 24px;
-            color: rgba(255,255,255,0.4);
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        .lang-bar-left .social-link:hover { color: #c9a84c; }
-        .lang-bar-left .social-icon { width: 14px; height: 14px; }
-        .lang-bar-right {
-            display: flex;
-            gap: 12px;
-            align-items: center;
-        }
-        .btn-advisory-brief {
-            background: #c9a84c;
-            color: #0b1a2e;
-            border: none;
-            font-family: 'Source Sans 3', sans-serif;
-            font-size: 11px;
-            font-weight: 700;
-            letter-spacing: 0.06em;
-            padding: 5px 14px;
-            cursor: pointer;
-            transition: all 0.3s;
-            white-space: nowrap;
-        }
-        .btn-advisory-brief:hover { background: #dfc07a; }
-        .btn-subscribe {
-            background: transparent;
-            color: rgba(255,255,255,0.5);
-            border: 1px solid rgba(255,255,255,0.2);
-            font-family: 'Source Sans 3', sans-serif;
-            font-size: 11px;
-            font-weight: 600;
-            letter-spacing: 0.06em;
-            padding: 4px 12px;
-            text-decoration: none;
-            transition: all 0.3s;
-            white-space: nowrap;
-        }
-        .btn-subscribe:hover { color: #c9a84c; border-color: #c9a84c; }
-        .lang-buttons {
-            display: flex;
-            align-items: center;
-            gap: 2px;
-            margin-left: 4px;
-        }
-
-        /* ===== EMAIL CAPTURE POPUP ===== */
-        .popup-overlay {
-            display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
-            background-color: rgba(0,0,0,0.6); z-index: 9999;
-            align-items: center; justify-content: center;
-            animation: popupFadeIn 0.3s ease;
-        }
-        .popup-overlay.active { display: flex; }
-        @keyframes popupFadeIn { from { opacity: 0; } to { opacity: 1; } }
-        .popup-card {
-            background: #ffffff; border-radius: 6px; max-width: 460px; width: 100%;
-            padding: 40px; position: relative;
-            box-shadow: 0 8px 40px rgba(0,0,0,0.3);
-            animation: popupSlideUp 0.3s ease;
-        }
-        @keyframes popupSlideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-        .popup-close {
-            position: absolute; top: 14px; right: 14px; width: 30px; height: 30px;
-            background: none; border: none; font-size: 26px; color: #999;
-            cursor: pointer; display: flex; align-items: center; justify-content: center;
-            transition: color 0.3s;
-        }
-        .popup-close:hover { color: #0b1a2e; }
-        .popup-label {
-            font-size: 11px; font-weight: 700; color: #c9a84c;
-            margin: 0 0 8px 0; text-transform: uppercase; letter-spacing: 1.5px;
-        }
-        .popup-heading {
-            font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 700;
-            color: #0b1a2e; margin: 0 0 12px 0; line-height: 1.2;
-        }
-        .popup-subtext {
-            font-family: 'Source Sans 3', sans-serif; font-size: 14px; color: #666;
-            line-height: 1.6; margin: 0 0 24px 0;
-        }
-        .popup-form { display: flex; flex-direction: column; gap: 10px; margin-bottom: 16px; }
-        .popup-form .form-input {
-            font-family: 'Source Sans 3', sans-serif; font-size: 14px; padding: 11px 14px;
-            border: 1px solid #ddd; border-radius: 4px; background: #f8f8f8; color: #0b1a2e;
-            transition: border-color 0.3s;
-        }
-        .popup-form .form-input:focus { outline: none; border-color: #c9a84c; background: #ffffff; }
-        .popup-form .form-input::placeholder { color: #999; }
-        .btn-popup-submit {
-            background: #0b1a2e; color: #ffffff; border: none;
-            font-family: 'Source Sans 3', sans-serif; font-size: 13px; font-weight: 700;
-            letter-spacing: 0.5px; padding: 12px 20px; cursor: pointer; border-radius: 4px;
-            margin-top: 4px; transition: all 0.3s;
-        }
-        .btn-popup-submit:hover { background: #162540; }
-        .popup-privacy { font-size: 11px; color: #999; line-height: 1.5; margin: 0; }
-        .popup-privacy a { color: #c9a84c; text-decoration: none; }
-        .popup-privacy a:hover { text-decoration: underline; }
-        .popup-success { text-align: center; }
-        .popup-success .success-heading {
-            font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 700;
-            color: #0b1a2e; margin: 0 0 10px 0;
-        }
-        .popup-success .success-text {
-            font-family: 'Source Sans 3', sans-serif; font-size: 14px; color: #666;
-            line-height: 1.6; margin: 0 0 20px 0;
-        }
-        .btn-popup-download {
-            display: inline-block; background: #c9a84c; color: #0b1a2e;
-            font-family: 'Source Sans 3', sans-serif; font-size: 13px; font-weight: 700;
-            padding: 12px 28px; border-radius: 4px; text-decoration: none; transition: all 0.3s;
-        }
-        .btn-popup-download:hover { background: #dfc07a; }
-
-        /* ===== NAV ===== */
-        nav {
-            position: fixed;
-            top: 36px; left: 0; right: 0;
-            z-index: 100;
-            background: rgba(11, 26, 46, 0.96);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(201, 168, 76, 0.1);
-            padding: 0 40px;
-        }
-        .nav-inner {
-            max-width: 1200px; margin: 0 auto;
-            display: flex; justify-content: space-between; align-items: center;
-            height: 64px;
-        }
-        .nav-name {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 22px; font-weight: 700;
-            color: var(--white); text-decoration: none;
-            letter-spacing: 0.02em;
-        }
-        .nav-name span { color: var(--gold); }
-        .nav-links { display: flex; gap: 28px; align-items: center; }
-        .nav-links a {
-            color: rgba(255,255,255,0.6); text-decoration: none;
-            font-size: 13px; font-weight: 500;
-            letter-spacing: 0.04em; transition: color 0.3s;
-        }
-        .nav-links a:hover { color: var(--gold); }
-        .nav-cta {
-            background: var(--gold) !important;
-            color: var(--navy) !important;
-            padding: 9px 22px !important;
-            border-radius: 3px;
-            font-weight: 700 !important;
-            font-size: 11px !important;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-        }
-        .nav-cta:hover { background: var(--gold-light) !important; color: var(--navy) !important; }
-        .mobile-toggle {
-            display: none; background: none; border: none;
-            cursor: pointer; flex-direction: column; gap: 5px; padding: 4px;
-        }
-        .mobile-toggle span { display: block; width: 24px; height: 2px; background: var(--white); transition: all 0.3s; }
 
         /* ===== PAGE LAYOUT ===== */
         .page-wrap {
             min-height: 100vh;
-            background: linear-gradient(155deg, var(--navy) 0%, var(--navy-mid) 55%, #0d2848 100%);
-            padding: 150px 40px 80px;
+            background: linear-gradient(155deg, var(--navy) 0%, var(--navy-mid) 55%, #072244 100%);
+            padding: 80px 40px 80px;
             position: relative;
             overflow: hidden;
         }
         .page-wrap::before {
             content: '';
             position: absolute; inset: 0;
-            background: radial-gradient(ellipse at 10% 90%, rgba(201, 168, 76, 0.06) 0%, transparent 55%),
-                        radial-gradient(ellipse at 90% 15%, rgba(91, 143, 217, 0.04) 0%, transparent 45%);
+            background: radial-gradient(ellipse at 10% 90%, rgba(212, 175, 55, 0.06) 0%, transparent 55%),
+                        radial-gradient(ellipse at 90% 15%, rgba(212, 175, 55, 0.04) 0%, transparent 45%);
             pointer-events: none;
         }
 
@@ -298,27 +207,28 @@
         }
         .call-eyebrow-line { width: 40px; height: 1px; background: var(--gold); opacity: 0.6; }
         .call-eyebrow-text {
+            font-family: 'Oswald', sans-serif;
             font-size: 11px; letter-spacing: 3px; text-transform: uppercase;
             color: var(--gold); font-weight: 600;
         }
 
         .call-context h1 {
-            font-family: 'Cormorant Garamond', serif;
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
             font-size: clamp(2rem, 4vw, 2.8rem);
-            font-weight: 700;
-            color: var(--white);
+            font-weight: 600;
+            color: var(--bone);
             line-height: 1.15;
             margin-bottom: 24px;
             animation: fadeUp 0.85s ease both;
         }
-        .call-context h1 em { font-style: italic; color: var(--gold); }
+        .call-context h1 em { font-style: italic; text-transform: none; color: var(--gold); }
 
         .call-description {
-            font-size: 17px;
-            color: var(--text-light);
-            line-height: 1.8;
+            font-size: 18px;
+            color: var(--muted);
+            line-height: 1.75;
             margin-bottom: 40px;
-            font-weight: 300;
             animation: fadeUp 0.95s ease both;
         }
 
@@ -327,13 +237,13 @@
             animation: fadeUp 1s ease both;
         }
         .expect-list li {
-            font-size: 15px;
-            color: rgba(255,255,255,0.8);
+            font-size: 16px;
+            color: rgba(242,239,233,0.85);
             line-height: 1.7;
             padding: 12px 0;
             padding-left: 28px;
             position: relative;
-            border-bottom: 1px solid rgba(201, 168, 76, 0.08);
+            border-bottom: 1px solid var(--border-light);
         }
         .expect-list li:last-child { border-bottom: none; }
         .expect-list li::before {
@@ -345,6 +255,7 @@
             border-radius: 50%;
         }
         .expect-label {
+            font-family: 'Oswald', sans-serif;
             display: block;
             font-size: 11px;
             letter-spacing: 2px;
@@ -354,10 +265,10 @@
             margin-bottom: 16px;
         }
 
-        /* Right column — calendar embed */
+        /* Right column — booking */
         .call-booking {
             background: rgba(255,255,255,0.04);
-            border: 1px solid rgba(201, 168, 76, 0.12);
+            border: 1px solid var(--border-light);
             border-radius: 8px;
             padding: 40px 32px;
             animation: fadeUp 1.1s ease both;
@@ -369,17 +280,17 @@
         }
 
         .booking-header h2 {
-            font-family: 'Cormorant Garamond', serif;
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
             font-size: 24px;
-            font-weight: 700;
-            color: var(--white);
+            font-weight: 600;
+            color: var(--bone);
             margin-bottom: 8px;
         }
 
         .booking-meta {
-            font-size: 14px;
-            color: var(--text-light);
-            font-weight: 300;
+            font-size: 15px;
+            color: var(--muted);
         }
 
         .booking-cta {
@@ -390,7 +301,7 @@
             padding: 18px 24px;
             border: none;
             border-radius: 3px;
-            font-family: 'Source Sans 3', sans-serif;
+            font-family: 'Oswald', sans-serif;
             font-size: 14px;
             font-weight: 700;
             letter-spacing: 0.08em;
@@ -399,13 +310,13 @@
             cursor: pointer;
             transition: all 0.3s;
             text-align: center;
-            box-shadow: 0 4px 28px rgba(201, 168, 76, 0.28);
+            box-shadow: 0 4px 28px rgba(212, 175, 55, 0.28);
             margin-bottom: 20px;
         }
         .booking-cta:hover {
             background: var(--gold-light);
             transform: translateY(-2px);
-            box-shadow: 0 8px 36px rgba(201, 168, 76, 0.38);
+            box-shadow: 0 8px 36px rgba(212, 175, 55, 0.38);
         }
 
         .booking-detail {
@@ -413,7 +324,7 @@
             align-items: center;
             gap: 12px;
             padding: 14px 0;
-            border-bottom: 1px solid rgba(201, 168, 76, 0.06);
+            border-bottom: 1px solid var(--border-light);
         }
         .booking-detail:last-child { border-bottom: none; }
         .booking-detail-icon {
@@ -424,20 +335,20 @@
             flex-shrink: 0;
         }
         .booking-detail-text {
-            font-size: 14px;
-            color: rgba(255,255,255,0.7);
+            font-size: 15px;
+            color: rgba(242,239,233,0.75);
             line-height: 1.5;
         }
 
         .booking-trust {
             margin-top: 24px;
             padding-top: 20px;
-            border-top: 1px solid rgba(201, 168, 76, 0.1);
+            border-top: 1px solid var(--border-light);
             text-align: center;
         }
         .booking-trust p {
-            font-size: 12px;
-            color: rgba(255,255,255,0.4);
+            font-size: 13px;
+            color: var(--muted);
             line-height: 1.6;
             font-style: italic;
         }
@@ -452,71 +363,19 @@
             animation: fadeUp 1.2s ease both;
         }
         .proof-label {
+            font-family: 'Oswald', sans-serif;
             font-size: 10px;
             letter-spacing: 2px;
             text-transform: uppercase;
-            color: rgba(255,255,255,0.3);
+            color: var(--muted);
             margin-bottom: 16px;
         }
         .proof-outlets {
-            font-size: 13px;
-            color: rgba(255,255,255,0.35);
-            font-weight: 300;
+            font-size: 14px;
+            color: var(--muted);
             letter-spacing: 0.02em;
         }
         .proof-outlets span { margin: 0 12px; }
-
-        /* ===== FOOTER ===== */
-        footer {
-            background: var(--navy);
-            padding: 48px 40px;
-            text-align: center;
-            color: rgba(255,255,255,0.7);
-            font-size: 13px;
-            border-top: 1px solid rgba(201, 168, 76, 0.15);
-        }
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 28px;
-            margin-bottom: 20px;
-            flex-wrap: wrap;
-        }
-        .footer-links a {
-            color: rgba(255,255,255,0.6);
-            text-decoration: none;
-            font-size: 13px;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        .footer-links a:hover { color: var(--gold); }
-        .footer-legal {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-bottom: 16px;
-            font-size: 12px;
-        }
-        .footer-legal a {
-            color: rgba(255,255,255,0.5);
-            text-decoration: none;
-        }
-        .footer-legal a:hover {
-            color: rgba(255,255,255,0.8);
-            text-decoration: underline;
-        }
-        .footer-firm {
-            font-size: 12px;
-            color: rgba(255,255,255,0.55);
-            margin-bottom: 8px;
-            letter-spacing: 0.04em;
-        }
-        .footer-attribution {
-            font-size: 11px;
-            color: rgba(255,255,255,0.35);
-            margin-top: 12px;
-            letter-spacing: 0.03em;
-        }
 
         /* ===== ANIMATIONS ===== */
         @keyframes fadeUp {
@@ -527,23 +386,8 @@
         /* ===== RESPONSIVE ===== */
         @media (max-width: 768px) {
             .page-inner { grid-template-columns: 1fr; gap: 40px; }
-            .page-wrap, footer { padding-left: 24px; padding-right: 24px; }
-            .lang-bar, nav { padding: 0 20px; }
-            .nav-links { display: none; }
-            .mobile-toggle { display: flex; }
-            .nav-links.open {
-                display: flex; flex-direction: column;
-                position: absolute; top: 64px; left: 0; right: 0;
-                background: var(--navy); padding: 24px;
-                border-bottom: 1px solid var(--border-light); gap: 18px;
-            }
+            .page-wrap { padding-left: 24px; padding-right: 24px; }
             .call-booking { padding: 28px 20px; }
-            .footer-links { flex-direction: column; gap: 16px; }
-            .footer-legal { gap: 12px; }
-        }
-    
-        @media (max-width: 768px) {
-            footer > div:first-child { grid-template-columns: 1fr !important; gap: 28px !important; }
         }
     </style>
     <link rel="canonical" href="https://josephsoares.com/call.html">
@@ -565,49 +409,19 @@ o.onload=function(){window.trackingFunctions.onLoad({appId:"69b933d5574de0002181
 document.head.appendChild(o)}initApollo();</script>
 </head>
 <body>
-    <!-- Lang Switcher -->
-    <div class="lang-bar">
-        <div class="lang-bar-left">
-            <a href="https://www.linkedin.com/in/soaresjoseph/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
-                <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-            </a>
-            <a href="https://x.com/JosephSoares" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="X (Twitter)">
-                <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.514l-5.106-6.694-5.848 6.694h-3.308l7.73-8.835L.424 2.25h6.679l4.632 6.124L17.77 2.25h.474zm-1.161 17.52h1.833L7.084 4.126H5.117l12.926 15.644z"/></svg>
-            </a>
-            <a href="https://www.youtube.com/@corridorintelligence" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="YouTube">
-                <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-            </a>
-            <a href="https://www.instagram.com/soaresjoseph/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
-                <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
-            </a>
-        </div>
-        <div class="lang-bar-right">
-            <button class="btn-advisory-brief" id="advisoryBriefBtn">Advisory Brief</button>
-            <a href="https://corridorintelligence.substack.com/subscribe" target="_blank" rel="noopener noreferrer" class="btn-subscribe">Subscribe</a>
-            <div class="lang-buttons">
-                <button class="active">EN</button>
-                <span class="lang-sep">|</span>
-                <button>FR</button>
-            </div>
-        </div>
+<nav>
+  <div class="wrap">
+    <div class="brand">Joseph <span>Soares</span></div>
+    <div class="navlinks">
+      <a href="/advisory.html">Advisory</a>
+      <a href="/intelligence.html">Intelligence</a>
+      <a href="/podcast.html">Podcast</a>
+      <a href="/writing.html">Writing</a>
+      <a href="/book.html">Book</a>
+      <a class="cta" href="/call.html">Book a Call</a>
     </div>
-
-    <!-- Navigation -->
-    <nav>
-        <div class="nav-inner">
-            <a href="/" class="nav-name">Joseph <span>Soares</span></a>
-            <button class="mobile-toggle">
-                <span></span><span></span><span></span>
-            </button>
-            <div class="nav-links">
-                <a href="/advisory.html" data-fr="Services consultatifs">Advisory</a>
-                <a href="/intelligence.html" data-fr="Renseignement">Intelligence</a>
-                <a href="/podcast.html" data-fr="Balado">Podcast</a>
-                <a href="index.html#about" data-fr="À propos">About</a>
-                <a href="/call.html" class="nav-cta active" data-fr="Accès consultatif">Advisory Access</a>
-            </div>
-        </div>
-    </nav>
+  </div>
+</nav>
 
     <!-- Main Content -->
     <div class="page-wrap">
@@ -657,7 +471,7 @@ document.head.appendChild(o)}initApollo();</script>
                 </div>
 
                 <div class="booking-trust">
-                    <p>I served as an advisor to the Prime Minister of Canada during the 2008 financial crisis. As Chief of Staff at the Senate of Canada during the 2020 pandemic. Featured in Forbes, Newsweek, the National Post, the Globe and Mail, and media globally. This is the same mind — available to you.</p>
+                    <p>I served in the Prime Minister's Office during the 2008 financial crisis. As Chief of Staff at the Senate of Canada during the 2020 pandemic. Featured in Forbes, Newsweek, the National Post, the Globe and Mail, and media globally. This is the same mind — available to you.</p>
                 </div>
             </div>
         </div>
@@ -671,62 +485,21 @@ document.head.appendChild(o)}initApollo();</script>
         </div>
     </div>
 
-    <!-- Footer -->
-    <footer style="background: #06101e; padding: 60px 40px 40px; border-top: 1px solid rgba(201, 168, 76, 0.1);">
-        <div style="max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 40px;">
-            <div>
-                <h4 style="font-family: 'Cormorant Garamond', serif; font-size: 16px; font-weight: 700; color: #c9a84c; margin-bottom: 14px;" data-fr="À propos">About</h4>
-                <p style="font-size: 13px; color: rgba(255,255,255,0.55); line-height: 1.7;" data-fr="Joseph Soares est un conseiller stratégique privé pour les entrepreneurs, les dirigeants d'entreprise et les particuliers fortunés. Ancien conseiller du Premier ministre du Canada. Chef de cabinet au Sénat. Publié dans Forbes et Newsweek.">Joseph Soares is a private strategic advisor to entrepreneurs, business leaders, and high-net-worth individuals. Former advisor in Canada's Prime Minister's Office. Senate Chief of Staff. Published in Forbes and Newsweek.</p>
-            </div>
-            <div>
-                <h4 style="font-family: 'Cormorant Garamond', serif; font-size: 16px; font-weight: 700; color: #c9a84c; margin-bottom: 14px;" data-fr="Liens rapides">Quick Links</h4>
-                <ul style="list-style: none; padding: 0; margin: 0;">
-                    <li style="margin-bottom: 8px;"><a href="/" style="color: rgba(255,255,255,0.55); text-decoration: none; font-size: 13px; transition: color 0.3s;" onmouseover="this.style.color='#c9a84c'" onmouseout="this.style.color='rgba(255,255,255,0.55)'" data-fr="Accueil">Home</a></li>
-                    <li style="margin-bottom: 8px;"><a href="/advisory.html" style="color: rgba(255,255,255,0.55); text-decoration: none; font-size: 13px; transition: color 0.3s;" onmouseover="this.style.color='#c9a84c'" onmouseout="this.style.color='rgba(255,255,255,0.55)'" data-fr="Services consultatifs">Advisory</a></li>
-                    <li style="margin-bottom: 8px;"><a href="/intelligence.html" style="color: rgba(255,255,255,0.55); text-decoration: none; font-size: 13px; transition: color 0.3s;" onmouseover="this.style.color='#c9a84c'" onmouseout="this.style.color='rgba(255,255,255,0.55)'" data-fr="Renseignement">Intelligence</a></li>
-                    <li style="margin-bottom: 8px;"><a href="/podcast.html" style="color: rgba(255,255,255,0.55); text-decoration: none; font-size: 13px; transition: color 0.3s;" onmouseover="this.style.color='#c9a84c'" onmouseout="this.style.color='rgba(255,255,255,0.55)'" data-fr="Balado">Podcast</a></li>
-                    <li style="margin-bottom: 8px;"><a href="/writing.html" style="color: rgba(255,255,255,0.55); text-decoration: none; font-size: 13px; transition: color 0.3s;" onmouseover="this.style.color='#c9a84c'" onmouseout="this.style.color='rgba(255,255,255,0.55)'" data-fr="Publications">Writing</a></li>
-                    <li style="margin-bottom: 8px;"><a href="/call.html" style="color: rgba(255,255,255,0.55); text-decoration: none; font-size: 13px; transition: color 0.3s;" onmouseover="this.style.color='#c9a84c'" onmouseout="this.style.color='rgba(255,255,255,0.55)'" data-fr="Accès consultatif">Advisory Access</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 style="font-family: 'Cormorant Garamond', serif; font-size: 16px; font-weight: 700; color: #c9a84c; margin-bottom: 14px;">Contact</h4>
-                <p style="font-size: 13px; color: rgba(255,255,255,0.55); line-height: 2;"><a href="mailto:info@josephsoares.com" style="color: rgba(255,255,255,0.55); text-decoration: none;" onmouseover="this.style.color='#c9a84c'" onmouseout="this.style.color='rgba(255,255,255,0.55)'">info@josephsoares.com</a></p>
-                <p style="font-size: 13px; color: rgba(255,255,255,0.55); line-height: 2;"><a href="https://www.linkedin.com/in/soaresjoseph/" target="_blank" rel="noopener" style="color: rgba(255,255,255,0.55); text-decoration: none;" onmouseover="this.style.color='#c9a84c'" onmouseout="this.style.color='rgba(255,255,255,0.55)'">LinkedIn</a></p>
-                <p style="font-size: 13px; color: rgba(255,255,255,0.55); line-height: 2;"><a href="https://x.com/JosephSoares" target="_blank" rel="noopener" style="color: rgba(255,255,255,0.55); text-decoration: none;" onmouseover="this.style.color='#c9a84c'" onmouseout="this.style.color='rgba(255,255,255,0.55)'">X (Twitter)</a></p>
-                <p style="font-size: 13px; color: rgba(255,255,255,0.55); line-height: 2;"><a href="https://corridorintelligence.substack.com" target="_blank" rel="noopener" style="color: rgba(255,255,255,0.55); text-decoration: none;" onmouseover="this.style.color='#c9a84c'" onmouseout="this.style.color='rgba(255,255,255,0.55)'">Substack</a></p>
-                <p style="font-size: 13px; color: rgba(255,255,255,0.55); line-height: 2;"><a href="https://www.youtube.com/@corridorintelligence" target="_blank" rel="noopener" style="color: rgba(255,255,255,0.55); text-decoration: none;" onmouseover="this.style.color='#c9a84c'" onmouseout="this.style.color='rgba(255,255,255,0.55)'">YouTube</a></p>
-                <p style="margin-top: 12px; font-size: 13px; color: rgba(255,255,255,0.7); font-weight: 600;">Joseph Soares, MBA, Adm.A., PMP</p>
-                <p style="font-size: 12px; color: rgba(255,255,255,0.4);"><a href="https://ibprom.com" target="_blank" rel="noopener" style="color: rgba(255,255,255,0.4); text-decoration: none;" onmouseover="this.style.color='#c9a84c'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">IBPROM Corp.</a></p>
-            </div>
-        </div>
-        <div style="max-width: 1000px; margin: 32px auto 0; padding-top: 24px; border-top: 1px solid rgba(201, 168, 76, 0.08); text-align: center;">
-            <p style="font-size: 12px; color: rgba(255,255,255,0.3); margin-bottom: 8px;">
-                <a href="/privacy.html" style="color: rgba(255,255,255,0.3); text-decoration: none; margin: 0 8px;" onmouseover="this.style.color='rgba(255,255,255,0.6)'" onmouseout="this.style.color='rgba(255,255,255,0.3)'">Privacy Policy</a> |
-                <a href="/terms.html" style="color: rgba(255,255,255,0.3); text-decoration: none; margin: 0 8px;" onmouseover="this.style.color='rgba(255,255,255,0.6)'" onmouseout="this.style.color='rgba(255,255,255,0.3)'">Terms of Service</a> |
-                <a href="/cookies.html" style="color: rgba(255,255,255,0.3); text-decoration: none; margin: 0 8px;" onmouseover="this.style.color='rgba(255,255,255,0.6)'" onmouseout="this.style.color='rgba(255,255,255,0.3)'">Cookie Policy</a>
-            </p>
-            <p style="font-size: 11px; color: rgba(255,255,255,0.2);">&copy; 2026 IBPROM Corp. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script>
-        // Mobile menu toggle
-        const toggle = document.querySelector('.mobile-toggle');
-        const links = document.querySelector('.nav-links');
-        toggle.addEventListener('click', () => links.classList.toggle('open'));
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => links.classList.remove('open'));
-        });
-
-        // Language switcher
-        document.querySelectorAll('.lang-buttons button').forEach(btn => {
-            btn.addEventListener('click', function() {
-                document.querySelectorAll('.lang-buttons button').forEach(b => b.classList.remove('active'));
-                this.classList.add('active');
-            });
-        });
-    </script>
+<footer>
+  <div class="wrap">
+    <div class="disc">
+      <div class="brand" style="font-size:15px;margin-bottom:10px">Joseph <span style="color:var(--gold)">Soares</span> &amp; Company</div>
+      <em>Senior advisor to entrepreneurs and high-net-worth leaders. Confidential by default. &copy; 2026 Joseph Soares &amp; Company.</em>
+    </div>
+    <div class="soc">
+      <a href="/advisory.html">Advisory</a>
+      <a href="/book.html" style="margin-left:22px">Book</a>
+      <a href="https://www.linkedin.com/in/soaresjoseph/">LinkedIn</a>
+      <a href="https://x.com/JosephSoares">X</a>
+      <a href="https://www.youtube.com/@corridorintelligence">YouTube</a>
+    </div>
+  </div>
+</footer>
 
     <!-- UTM Capture and Attribution Tracking -->
     <script>
@@ -744,7 +517,7 @@ document.head.appendChild(o)}initApollo();</script>
         // Persist UTMs across page interactions
         try { sessionStorage.setItem('utmData', JSON.stringify(utmData)); } catch(e) { /* silent */ }
 
-        // Expose for email form submission handler
+        // Expose for downstream handlers
         window.__utmData = utmData;
 
         // Make.com attribution webhook — swap placeholder with real URL when ready
@@ -790,77 +563,6 @@ document.head.appendChild(o)}initApollo();</script>
                 utm_content: utmData.utm_content
             });
         }
-    })();
-    </script>
-
-    <!-- EMAIL CAPTURE POPUP -->
-    <div class="popup-overlay" id="popupOverlay">
-        <div class="popup-card">
-            <button class="popup-close" id="popupClose" aria-label="Close popup">&times;</button>
-            <div class="popup-content" id="popupContent">
-                <p class="popup-label">Get Instant Access</p>
-                <h2 class="popup-heading">The SPARK Advisory Brief</h2>
-                <p class="popup-subtext">Everything you need to know about working with a crisis-tested senior advisor. The framework. The investment. What to expect.</p>
-                <form class="popup-form" id="emailCaptureForm">
-                    <input type="text" name="firstName" placeholder="First Name" required class="form-input">
-                    <input type="email" name="email" placeholder="Email Address" required class="form-input">
-                    <button type="submit" class="btn-popup-submit">GET THE BRIEF &rarr;</button>
-                </form>
-                <p class="popup-privacy">Your privacy is protected. We collect and process your data in accordance with our <a href="/privacy.html">Privacy Policy</a>.</p>
-            </div>
-            <div class="popup-success" id="popupSuccess" style="display: none;">
-                <p class="success-heading">Check your inbox!</p>
-                <p class="success-text">Your SPARK Advisory Brief is on the way. In the meantime, you can download it here:</p>
-                <a href="/assets/spark-advisory-brief.pdf" class="btn-popup-download" download>Download PDF</a>
-            </div>
-        </div>
-    </div>
-
-    <script>
-    (function() {
-        var advisoryBtn = document.getElementById('advisoryBriefBtn');
-        var popupOverlay = document.getElementById('popupOverlay');
-        var popupClose = document.getElementById('popupClose');
-        var emailForm = document.getElementById('emailCaptureForm');
-        var popupContent = document.getElementById('popupContent');
-        var popupSuccess = document.getElementById('popupSuccess');
-        var MAKE_WEBHOOK_URL = 'MAKE_WEBHOOK_URL';
-
-        function openPopup() {
-            popupOverlay.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-        function closePopup() {
-            popupOverlay.classList.remove('active');
-            document.body.style.overflow = '';
-            setTimeout(function() {
-                if (emailForm) emailForm.reset();
-                popupContent.style.display = 'block';
-                popupSuccess.style.display = 'none';
-            }, 300);
-        }
-        if (advisoryBtn) advisoryBtn.addEventListener('click', openPopup);
-        if (popupClose) popupClose.addEventListener('click', closePopup);
-        popupOverlay.addEventListener('click', function(e) { if (e.target === popupOverlay) closePopup(); });
-        document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && popupOverlay.classList.contains('active')) closePopup(); });
-        emailForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            var firstName = emailForm.querySelector('input[name="firstName"]').value;
-            var email = emailForm.querySelector('input[name="email"]').value;
-            var utmData = window.__utmData || {};
-            if (MAKE_WEBHOOK_URL === 'MAKE_WEBHOOK_URL') { popupContent.style.display = 'none'; popupSuccess.style.display = 'block'; return; }
-            var payload = Object.assign({
-                event_type: 'email_capture',
-                firstName: firstName,
-                email: email,
-                timestamp: new Date().toISOString(),
-                page_url: window.location.href,
-                referrer: document.referrer || '(direct)'
-            }, utmData);
-            fetch(MAKE_WEBHOOK_URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) })
-            .then(function(r) { if (r.ok) { popupContent.style.display = 'none'; popupSuccess.style.display = 'block'; } else { alert('Something went wrong. Please try again.'); } })
-            .catch(function() { popupContent.style.display = 'none'; popupSuccess.style.display = 'block'; });
-        });
     })();
     </script>
 </body>

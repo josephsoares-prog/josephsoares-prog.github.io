@@ -15,12 +15,12 @@
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="apple-touch-icon" href="/favicon.ico">
     <title>Corridor Intelligence | Political Intelligence for Decision-Makers</title>
-    <meta name="description" content="The Corridor — Daily political intelligence for decision-makers. Strategic commentary on what's happening in Quebec City, Ottawa, Washington, and capitals around the world. By Joseph Soares.">
+    <meta name="description" content="Corridor Intelligence — Daily political intelligence for decision-makers. Strategic commentary on what's happening in Quebec City, Ottawa, Washington, and capitals around the world. By Joseph Soares.">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebPage",
-      "name": "The Corridor — Political Intelligence for Business Leaders",
+      "name": "Corridor Intelligence — Political Analysis for Business Leaders",
       "url": "https://josephsoares.com/corridor",
       "description": "Bilingual EN/FR political news commentary and strategic analysis for decision-makers in business, government, and public life. Published by Joseph Soares.",
       "inLanguage": ["en", "fr"],
@@ -31,8 +31,8 @@
       },
       "publisher": {
         "@type": "Organization",
-        "name": "IBPROM Corp.",
-        "url": "https://ibprom.com"
+        "name": "Joseph Soares & Company",
+        "url": "https://josephsoares.com"
       },
       "isPartOf": {
         "@type": "WebSite",
@@ -41,225 +41,157 @@
       }
     }
     </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0A3161; --panel:#0E3A70; --panel2:#072244;
+    --bone:#F2EFE9; --muted:#9A948A; --gold:#D4AF37; --line:rgba(242,239,233,.12);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth;overflow-x:hidden}
+  body{background:var(--ink);color:var(--bone);font-family:'EB Garamond',Georgia,serif;
+    font-size:19px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden;max-width:100vw;
+    background-image:radial-gradient(ellipse 120% 70% at 50% -8%, rgba(201,162,39,.07), rgba(0,0,0,0));}
+  img,iframe{max-width:100%}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 30px}
+  .eyebrow{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.3em;
+    font-size:13px;font-weight:500;color:var(--gold)}
+  a{color:inherit}
+  .btn{display:inline-block;font-family:'Oswald',sans-serif;text-transform:uppercase;
+    letter-spacing:.14em;font-weight:600;font-size:15px;text-decoration:none;cursor:pointer;
+    padding:18px 34px;border-radius:2px;transition:.2s;border:1px solid transparent}
+  .btn-gold{background:var(--gold);color:#0E3A70}
+  .btn-gold:hover{background:#E6C860}
+  .btn-ghost{background:transparent;color:var(--bone);border-color:var(--line)}
+  .btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+  .disp{font-family:'Oswald',sans-serif;text-transform:uppercase}
+
+  nav{position:sticky;top:0;z-index:20;background:rgba(7,34,68,.90);
+    backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:66px}
+  .brand{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.2em;font-weight:600;font-size:16px}
+  .brand span{color:var(--gold)}
+  .navlinks{display:flex;gap:30px;align-items:center}
+  .navlinks a{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.12em;
+    font-size:13px;font-weight:500;text-decoration:none;color:var(--muted)}
+  .navlinks a:hover{color:var(--gold)}
+  .navlinks a.cta{color:var(--bone);border:1px solid var(--line);padding:9px 16px;border-radius:2px}
+  .navlinks a.cta:hover{border-color:var(--gold);color:var(--gold)}
+  .menutoggle{display:none}
+
+  .hero{padding:96px 0 70px;position:relative}
+  .hero .eyebrow{margin-bottom:26px}
+  .hero h1{font-family:'Oswald',sans-serif;text-transform:uppercase;font-weight:600;
+    font-size:62px;line-height:1.04;letter-spacing:.005em;max-width:17ch;margin-bottom:30px}
+  .hero h1 .g{color:var(--gold)}
+  .hero h1 .i{font-family:'EB Garamond',serif;font-style:italic;text-transform:none;font-weight:400;color:var(--bone)}
+  .hero .lede{font-size:21px;color:var(--muted);max-width:60ch;margin-bottom:34px}
+  .hero .lede b{color:var(--bone);font-weight:500}
+  .ctar{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+
+  .authbar{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--panel);padding:24px 0}
+  .authbar .wrap{display:flex;flex-wrap:wrap;gap:14px 44px;align-items:center;justify-content:center;
+    font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.18em;font-size:15px;color:var(--muted)}
+  .authbar .lab{font-size:11px;letter-spacing:.24em;color:var(--gold);width:100%;text-align:center;margin-bottom:2px}
+  .authbar b{color:var(--bone);font-weight:500}
+
+  section.blk{padding:82px 0}
+  .quote{border-left:2px solid var(--gold);padding-left:34px;max-width:60ch}
+  .quote p{font-family:'EB Garamond',serif;font-size:30px;line-height:1.4;color:var(--bone)}
+  .quote p .m{color:var(--muted)}
+  .h2{font-family:'Oswald',sans-serif;text-transform:uppercase;font-weight:600;font-size:38px;line-height:1.08;margin-bottom:10px}
+  .sub{color:var(--muted);font-size:20px;max-width:60ch}
+  .klabel{margin-bottom:14px}
+
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:44px}
+  .card{background:var(--panel2);border:1px solid var(--line);border-radius:3px;padding:30px 28px}
+  .card h3{font-family:'Oswald',sans-serif;text-transform:uppercase;font-weight:500;letter-spacing:.05em;font-size:19px;margin-bottom:12px}
+  .card h3 .n{color:var(--gold);margin-right:10px}
+  .card p{font-size:17px;color:var(--muted);line-height:1.55}
+
+  .who{display:grid;grid-template-columns:1fr 1fr;gap:20px 40px;margin-top:40px;max-width:960px}
+  .who .row{display:flex;gap:16px;align-items:flex-start;padding:16px 0;border-top:1px solid var(--line)}
+  .who .mk{color:var(--gold);font-family:'Oswald',sans-serif;font-weight:600;font-size:18px;flex:0 0 auto;margin-top:2px}
+  .who .row p{font-size:18px;color:var(--bone)}
+
+  .paths{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:44px}
+  .path{background:var(--panel2);border:1px solid var(--line);border-radius:3px;padding:32px 30px;display:flex;flex-direction:column}
+  .path .tier{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.2em;font-size:12px;color:var(--gold);margin-bottom:12px}
+  .path h3{font-family:'Oswald',sans-serif;text-transform:uppercase;font-weight:600;font-size:24px;margin-bottom:10px}
+  .path p{font-size:17px;color:var(--muted);margin-bottom:18px;flex:1}
+  .path .price{font-family:'EB Garamond',serif;font-style:italic;color:var(--bone);font-size:17px;margin-bottom:18px}
+  .path a.go{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.12em;font-size:14px;font-weight:600;color:var(--bone);text-decoration:none}
+  .path a.go:hover{color:var(--gold)}
+  .path.feat{border-color:rgba(201,162,39,.5)}
+
+  .bookband{background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .bookband .wrap{display:grid;grid-template-columns:290px 1fr;gap:48px;align-items:center;padding:64px 30px}
+  .bookframe{background:#fff;padding:22px;border-radius:4px;box-shadow:0 34px 80px rgba(0,0,0,.55);line-height:0;justify-self:start}
+  .bookband img{width:230px;border-radius:2px;display:block}
+  .bookband .h2{font-size:34px}
+  .bookband .subt{font-style:italic;color:var(--bone);font-size:20px;margin-bottom:16px}
+
+  .corridor .wrap{display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap}
+
+  .finalcta{text-align:center;padding:92px 0}
+  .finalcta .h2{font-size:44px;max-width:20ch;margin:0 auto 24px}
+
+  footer{border-top:1px solid var(--line);padding:48px 0 64px;color:var(--muted);font-size:16px}
+  footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:22px;align-items:flex-start}
+  footer a{color:var(--muted);text-decoration:none}
+  footer .soc a{margin-left:22px}
+  footer a:hover{color:var(--gold)}
+  .disc{max-width:50ch;font-style:italic;font-size:15px;line-height:1.55}
+
+  @media(max-width:880px){
+    .navlinks{display:none}
+    .hero{padding:60px 0 44px}
+    .hero h1{font-size:40px;max-width:100%}
+    .hero .lede{max-width:100%}
+    .grid3{grid-template-columns:1fr}
+    .who{grid-template-columns:1fr}
+    .paths{grid-template-columns:1fr}
+    .bookband .wrap{grid-template-columns:1fr;justify-items:center;text-align:center;gap:28px}
+    .quote p{font-size:24px}
+    .h2{font-size:30px}
+    .finalcta .h2{font-size:32px}
+    .authbar .wrap{gap:10px 22px;font-size:13px;letter-spacing:.1em}
+  }
+</style>
     <style>
         :root {
-            --navy: #0b1a2e;
-            --navy-mid: #0f2240;
-            --navy-light: #132d54;
-            --gold: #c9a84c;
-            --gold-light: #dfc07a;
-            --gold-muted: rgba(201, 168, 76, 0.12);
-            --cream: #f5f1eb;
-            --white: #ffffff;
-            --text-dark: #1a1a2e;
-            --text-mid: #4a4a5a;
-            --text-light: rgba(255,255,255,0.75);
-            --border-light: rgba(201, 168, 76, 0.2);
-            --corridor-accent: #2a5c8a;
+            --navy: #0A3161;
+            --navy-mid: #0E3A70;
+            --navy-light: #072244;
+            --gold: #D4AF37;
+            --gold-light: #E6C860;
+            --gold-muted: rgba(212, 175, 55, 0.14);
+            --cream: #0E3A70;
+            --white: #F2EFE9;
+            --bone: #F2EFE9;
+            --muted: #9A948A;
+            --ink: #0A3161;
+            --panel: #0E3A70;
+            --panel2: #072244;
+            --text-dark: #F2EFE9;
+            --text-mid: #9A948A;
+            --text-light: rgba(242,239,233,0.75);
+            --border-light: rgba(242,239,233,0.12);
+            --corridor-accent: #6FA0D0;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
 
-        body {
-            font-family: 'Source Sans 3', -apple-system, sans-serif;
-            color: var(--text-dark);
-            background: var(--white);
-            -webkit-font-smoothing: antialiased;
-        }
-
-        /* ===== LANG SWITCHER ===== */
-        .lang-bar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 200;
-            background: #06101e;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 40px;
-            height: 36px;
-            border-bottom: 1px solid rgba(201, 168, 76, 0.08);
-        }
-
-        .lang-bar-left {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-        }
-        .social-link {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 20px;
-            height: 20px;
-            color: rgba(255,255,255,0.5);
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        .social-link:hover {
-            color: var(--gold);
-        }
-        .social-icon {
-            width: 16px;
-            height: 16px;
-        }
-        .lang-bar-right {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-        .btn-advisory-brief {
-            background: none;
-            border: 1px solid var(--gold);
-            color: var(--gold);
-            padding: 6px 14px;
-            border-radius: 3px;
-            font-family: 'Source Sans 3', sans-serif;
-            font-size: 11px;
-            font-weight: 600;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-        .btn-advisory-brief:hover {
-            background: var(--gold);
-            color: #06101e;
-        }
-        .btn-subscribe {
-            color: rgba(255,255,255,0.6);
-            text-decoration: none;
-            font-size: 11px;
-            font-weight: 600;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            transition: color 0.3s;
-        }
-        .btn-subscribe:hover {
-            color: var(--gold);
-        }
-        .lang-buttons {
-            display: flex;
-            align-items: center;
-            gap: 0;
-        }
-
-        .lang-bar button {
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-family: 'Source Sans 3', sans-serif;
-            font-size: 11px;
-            font-weight: 600;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            color: rgba(255,255,255,0.35);
-            padding: 6px 12px;
-            transition: color 0.3s;
-        }
-
-        .lang-bar button:hover { color: var(--gold-light); }
-        .lang-bar button.active { color: var(--gold); }
-        .lang-bar .lang-sep { color: rgba(255,255,255,0.12); font-size: 11px; }
-
-        /* ===== NAV ===== */
-        nav {
-            position: fixed;
-            top: 36px;
-            left: 0;
-            right: 0;
-            z-index: 100;
-            background: rgba(11, 26, 46, 0.96);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(201, 168, 76, 0.1);
-            padding: 0 40px;
-        }
-
-        .nav-inner {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 64px;
-        }
-
-        .nav-name {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 22px;
-            font-weight: 700;
-            color: var(--white);
-            text-decoration: none;
-            letter-spacing: 0.02em;
-        }
-
-        .nav-name span { color: var(--gold); }
-
-        .nav-links {
-            display: flex;
-            gap: 28px;
-            align-items: center;
-        }
-
-        .nav-links a {
-            color: rgba(255,255,255,0.6);
-            text-decoration: none;
-            font-size: 13px;
-            font-weight: 500;
-            letter-spacing: 0.04em;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover { color: var(--gold); }
-        .nav-links a.nav-active { color: var(--gold); }
-
-        .nav-cta {
-            background: var(--gold) !important;
-            color: var(--navy) !important;
-            padding: 9px 22px !important;
-            border-radius: 3px;
-            font-weight: 700 !important;
-            font-size: 11px !important;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-        }
-
-        .nav-cta:hover {
-            background: var(--gold-light) !important;
-            color: var(--navy) !important;
-        }
-
-        .mobile-toggle {
-            display: none;
-            background: none;
-            border: none;
-            cursor: pointer;
-            flex-direction: column;
-            gap: 5px;
-            padding: 4px;
-        }
-
-        .mobile-toggle span {
-            display: block;
-            width: 24px;
-            height: 2px;
-            background: var(--white);
-            transition: all 0.3s;
-        }
-
         /* ===== HERO ===== */
         .hero {
-            min-height: 70vh;
-            background: linear-gradient(155deg, var(--navy) 0%, var(--navy-mid) 55%, #0d2848 100%);
+            min-height: 60vh;
+            background: linear-gradient(155deg, var(--navy) 0%, var(--navy-mid) 55%, #072244 100%);
             display: flex;
             align-items: center;
-            padding: 150px 40px 80px;
+            padding: 90px 40px 80px;
             position: relative;
             overflow: hidden;
         }
@@ -311,7 +243,7 @@
         }
 
         .hero h1 {
-            font-family: 'Cormorant Garamond', serif;
+            font-family: 'Oswald', sans-serif;
             font-size: clamp(2.8rem, 5.5vw, 4.2rem);
             font-weight: 700;
             color: var(--white);
@@ -363,7 +295,7 @@
         }
 
         .concept-text h2 {
-            font-family: 'Cormorant Garamond', serif;
+            font-family: 'Oswald', sans-serif;
             font-size: clamp(1.8rem, 3vw, 2.4rem);
             font-weight: 700;
             color: var(--text-dark);
@@ -412,7 +344,7 @@
         }
 
         .pillar-title {
-            font-family: 'Cormorant Garamond', serif;
+            font-family: 'Oswald', sans-serif;
             font-size: 20px;
             font-weight: 700;
             color: var(--text-dark);
@@ -443,7 +375,7 @@
         }
 
         .commentary-header h2 {
-            font-family: 'Cormorant Garamond', serif;
+            font-family: 'Oswald', sans-serif;
             font-size: clamp(1.8rem, 3vw, 2.4rem);
             font-weight: 700;
             color: var(--text-dark);
@@ -502,7 +434,7 @@
         }
 
         .commentary-headline {
-            font-family: 'Cormorant Garamond', serif;
+            font-family: 'Oswald', sans-serif;
             font-size: 24px;
             font-weight: 700;
             color: var(--text-dark);
@@ -642,7 +574,7 @@
         }
 
         .wire-header h2 {
-            font-family: 'Cormorant Garamond', serif;
+            font-family: 'Oswald', sans-serif;
             font-size: clamp(1.6rem, 2.5vw, 2rem);
             font-weight: 700;
             color: var(--text-dark);
@@ -733,7 +665,7 @@
         .region-markets { color: #1a5c3a; background: rgba(26, 92, 58, 0.08); }
 
         .wire-card-headline {
-            font-family: 'Source Sans 3', sans-serif;
+            font-family: 'EB Garamond', Georgia, serif;
             font-size: 17px;
             font-weight: 600;
             line-height: 1.35;
@@ -827,7 +759,7 @@
         }
 
         .wire-headline a {
-            font-family: 'Source Sans 3', sans-serif;
+            font-family: 'EB Garamond', Georgia, serif;
             font-size: 14px;
             font-weight: 500;
             color: var(--text-dark);
@@ -894,7 +826,7 @@
         }
 
         .launch-notice h2 {
-            font-family: 'Cormorant Garamond', serif;
+            font-family: 'Oswald', sans-serif;
             font-size: clamp(1.8rem, 3vw, 2.4rem);
             font-weight: 700;
             color: var(--white);
@@ -949,7 +881,7 @@
         }
 
         .editor h2 {
-            font-family: 'Cormorant Garamond', serif;
+            font-family: 'Oswald', sans-serif;
             font-size: 28px;
             font-weight: 700;
             color: var(--text-dark);
@@ -995,7 +927,7 @@
         }
 
         .cta h2 {
-            font-family: 'Cormorant Garamond', serif;
+            font-family: 'Oswald', sans-serif;
             font-size: clamp(1.8rem, 3.5vw, 2.6rem);
             font-weight: 700;
             color: var(--white);
@@ -1052,37 +984,6 @@
             background: rgba(201, 168, 76, 0.06);
         }
 
-        /* ===== FOOTER ===== */
-        footer {
-            padding: 40px;
-            background: #06101e;
-            text-align: center;
-            color: rgba(255,255,255,0.7);
-        }
-
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 28px;
-            margin-bottom: 16px;
-        }
-
-        .footer-links a {
-            color: rgba(255,255,255,0.6);
-            text-decoration: none;
-            font-size: 13px;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        .footer-links a:hover { color: var(--gold); }
-
-        .footer-firm {
-            font-size: 12px;
-            color: rgba(255,255,255,0.55);
-            margin-bottom: 6px;
-        }
-
         /* ===== ANIMATIONS ===== */
         @keyframes fadeUp {
             from { opacity: 0; transform: translateY(20px); }
@@ -1096,26 +997,7 @@
 
         /* ===== RESPONSIVE ===== */
         @media (max-width: 768px) {
-            .lang-bar { padding: 0 20px; }
-            nav { padding: 0 20px; }
-            .mobile-toggle { display: flex; }
-
-            .nav-links {
-                display: none;
-                position: absolute;
-                top: 64px;
-                left: 0;
-                right: 0;
-                background: rgba(11, 26, 46, 0.98);
-                flex-direction: column;
-                padding: 20px;
-                gap: 16px;
-                border-bottom: 1px solid rgba(201, 168, 76, 0.1);
-            }
-
-            .nav-links.open { display: flex; }
-
-            .hero { padding: 130px 20px 60px; min-height: 60vh; }
+            .hero { padding: 70px 20px 60px; min-height: 56vh; }
             .hero h1 { font-size: 2.2rem; }
             .hero-sub { font-size: 16px; }
 
@@ -1142,161 +1024,38 @@
             .btn-secondary { margin-left: 0; margin-top: 12px; }
         }
 
-        /* ===== EMAIL CAPTURE POPUP ===== */
-        .popup-overlay {
-            position: fixed;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(0, 0, 0, 0.5);
-            display: none;
-            align-items: center;
-            justify-content: center;
-            z-index: 9999;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        .popup-overlay.active {
-            display: flex;
-            opacity: 1;
-        }
-        .popup-card {
-            background: var(--navy);
-            border: 1px solid rgba(201, 168, 76, 0.2);
-            border-radius: 8px;
-            padding: 40px;
-            max-width: 420px;
-            width: 90%;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-            position: relative;
-            animation: popupSlide 0.4s ease;
-        }
-        @keyframes popupSlide {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .popup-close {
-            position: absolute;
-            top: 16px;
-            right: 16px;
-            background: none;
-            border: none;
-            color: rgba(255,255,255,0.5);
-            font-size: 24px;
-            cursor: pointer;
-            transition: color 0.3s;
-            width: 32px;
-            height: 32px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .popup-close:hover {
-            color: var(--gold);
-        }
-        .popup-header {
-            margin-bottom: 28px;
-        }
-        .popup-header h2 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 24px;
-            font-weight: 700;
-            color: var(--white);
-            margin-bottom: 8px;
-        }
-        .popup-header p {
-            font-size: 14px;
-            color: rgba(255,255,255,0.6);
-            line-height: 1.6;
-        }
-        .popup-form {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-        }
-        .popup-input {
-            background: rgba(255,255,255,0.08);
-            border: 1px solid rgba(201, 168, 76, 0.2);
-            border-radius: 4px;
-            padding: 12px 16px;
-            font-family: 'Source Sans 3', sans-serif;
-            font-size: 14px;
-            color: var(--white);
-            transition: border-color 0.3s;
-        }
-        .popup-input::placeholder {
-            color: rgba(255,255,255,0.4);
-        }
-        .popup-input:focus {
-            outline: none;
-            border-color: var(--gold);
-            background: rgba(255,255,255,0.12);
-        }
-        .popup-submit {
-            background: var(--gold);
-            color: var(--navy);
-            border: none;
-            padding: 12px 24px;
-            border-radius: 4px;
-            font-family: 'Source Sans 3', sans-serif;
-            font-size: 13px;
-            font-weight: 700;
-            letter-spacing: 0.08em;
+        /* ===== REBUILD: flag-blue re-skin overrides ===== */
+        .hero h1,
+        .concept-text h2,
+        .commentary-header h2,
+        .editor h2,
+        .cta h2,
+        .launch-notice h2,
+        .cb-head h2 {
+            font-family: 'Oswald', sans-serif;
             text-transform: uppercase;
-            cursor: pointer;
-            transition: all 0.3s;
-            margin-top: 8px;
+            letter-spacing: 0.01em;
         }
-        .popup-submit:hover {
-            background: var(--gold-light);
-            transform: translateY(-2px);
+        .commentary-headline,
+        .wire-card-headline,
+        .pillar-title { font-family: 'Oswald', sans-serif; }
+        .commentary { background: var(--navy); }
+        .commentary-item { border-bottom: 1px solid var(--border-light); }
+        .pillar-card { background: var(--navy-light); }
+        .editor-cred { background: var(--navy-light); color: var(--bone); }
+        .wire { background: var(--navy-light); border-top: 1px solid var(--border-light); }
+        .wire-card { background: var(--navy-light); }
+        .region-usa,.region-canada,.region-quebec,.region-world,.region-markets{
+            color: var(--gold); background: rgba(212,175,55,.10);
         }
-        .popup-success {
-            display: none;
-            text-align: center;
-        }
-        .popup-success.active {
-            display: block;
-        }
-        .popup-success h3 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 22px;
-            font-weight: 700;
-            color: var(--white);
-            margin-bottom: 16px;
-        }
-        .popup-success p {
-            font-size: 14px;
-            color: rgba(255,255,255,0.6);
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-        .popup-pdf-link {
-            display: inline-block;
-            background: var(--gold);
-            color: var(--navy);
-            padding: 10px 20px;
-            border-radius: 4px;
-            text-decoration: none;
-            font-size: 12px;
-            font-weight: 700;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            transition: all 0.3s;
-        }
-        .popup-pdf-link:hover {
-            background: var(--gold-light);
-            transform: translateY(-2px);
-        }
-    
-        @media (max-width: 768px) {
-            footer > div:first-child { grid-template-columns: 1fr !important; gap: 28px !important; }
-        }
+        .cb-fav { background: #F2EFE9; }
     </style>
     <link rel="canonical" href="https://josephsoares.com/intelligence.html">
     <meta property="og:title" content="Corridor Intelligence | Political Intelligence for Decision-Makers">
-    <meta property="og:description" content="The Corridor — Daily political intelligence for decision-makers. Strategic commentary on what's happening in Quebec City, Ottawa, Washington, and capitals around the world. By Joseph Soares.">
+    <meta property="og:description" content="Corridor Intelligence — Daily political intelligence for decision-makers. Strategic commentary on what's happening in Quebec City, Ottawa, Washington, and capitals around the world. By Joseph Soares.">
     <meta property="og:type" content="website">
     <meta name="twitter:title" content="Corridor Intelligence | Political Intelligence for Decision-Makers">
-    <meta name="twitter:description" content="The Corridor — Daily political intelligence for decision-makers. Strategic commentary on what's happening in Quebec City, Ottawa, Washington, and capitals around the world. By Joseph Soares.">
+    <meta name="twitter:description" content="Corridor Intelligence — Daily political intelligence for decision-makers. Strategic commentary on what's happening in Quebec City, Ottawa, Washington, and capitals around the world. By Joseph Soares.">
     <meta property="og:image" content="https://josephsoares.com/assets/og-default.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -1312,51 +1071,19 @@ document.head.appendChild(o)}initApollo();</script>
 </head>
 <body>
 
-    <!-- LANG BAR -->
-    <div class="lang-bar">
-        <div class="lang-bar-left">
-            <a href="https://www.linkedin.com/in/soaresjoseph/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
-                <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-            </a>
-            <a href="https://x.com/JosephSoares" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="X (Twitter)">
-                <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.514l-5.106-6.694-5.848 6.694h-3.308l7.73-8.835L.424 2.25h6.679l4.632 6.124L17.77 2.25h.474zm-1.161 17.52h1.833L7.084 4.126H5.117l12.926 15.644z"/></svg>
-            </a>
-            <a href="https://www.youtube.com/@corridorintelligence" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="YouTube">
-                <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-            </a>
-            <a href="https://www.instagram.com/soaresjoseph/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
-                <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
-            </a>
-        </div>
-        <div class="lang-bar-right">
-            <button class="btn-advisory-brief" id="advisoryBriefBtn">Advisory Brief</button>
-            <a href="https://corridorintelligence.substack.com/subscribe" target="_blank" rel="noopener noreferrer" class="btn-subscribe">Subscribe</a>
-            <div class="lang-buttons">
-                <button class="active" onclick="setLang('en')">EN</button>
-                <span class="lang-sep">·</span>
-                <button onclick="setLang('fr')">FR</button>
-            </div>
-        </div>
+<nav>
+  <div class="wrap">
+    <div class="brand">Joseph <span>Soares</span></div>
+    <div class="navlinks">
+      <a href="/advisory.html">Advisory</a>
+      <a href="/intelligence.html">Intelligence</a>
+      <a href="/podcast.html">Podcast</a>
+      <a href="/writing.html">Writing</a>
+      <a href="/book.html">Book</a>
+      <a class="cta" href="/call.html">Book a Call</a>
     </div>
-
-    <!-- NAV -->
-    <nav>
-        <div class="nav-inner">
-            <a href="index.html" class="nav-name">Joseph <span>Soares</span></a>
-            <button class="mobile-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <div class="nav-links">
-                <a href="/advisory.html" data-fr="Services consultatifs">Advisory</a>
-                <a href="/intelligence.html" class="nav-active" data-fr="Renseignement">Intelligence</a>
-                <a href="/podcast.html" data-fr="Balado">Podcast</a>
-                <a href="index.html#about" data-fr="À propos">About</a>
-                <a href="/call.html" class="nav-cta" data-fr="Accès consultatif">Advisory Access</a>
-            </div>
-        </div>
-    </nav>
+  </div>
+</nav>
 
     <!-- HERO -->
     <section class="hero">
@@ -1375,9 +1102,9 @@ document.head.appendChild(o)}initApollo();</script>
     <section class="concept">
         <div class="concept-inner">
             <div class="concept-text">
-                <h2 data-fr="Pourquoi <em>Le Corridor</em>">Why <em>The Corridor</em></h2>
+                <h2 data-fr="Pourquoi <em>Le Corridor</em>">Why <em>Corridor Intelligence</em></h2>
                 <p data-fr="La politique façonne les marchés, les politiques publiques et les carrières. Les réglementations créent et détruisent des industries. Les élections déplacent des capitaux et redéfinissent les priorités. Pourtant, la plupart des décideurs lisent les nouvelles politiques comme des spectateurs — pas comme des opérateurs.">Politics shapes markets, public policy, and careers. Regulations create and destroy industries. Elections move capital and reset priorities. Yet most decision-makers read political news as spectators — not operators.</p>
-                <p data-fr="<strong>Le Corridor</strong> comble cette lacune. Chaque jour, je sélectionne ce qui compte et j'ajoute le contexte stratégique qu'on n'obtient qu'en ayant œuvré dans les couloirs du pouvoir."><strong>The Corridor</strong> closes that gap. Every day, I curate what matters and add the strategic context you only get from having worked inside the corridors of power.</p>
+                <p data-fr="<strong>Le Corridor</strong> comble cette lacune. Chaque jour, je sélectionne ce qui compte et j'ajoute le contexte stratégique qu'on n'obtient qu'en ayant œuvré dans les couloirs du pouvoir."><strong>Corridor Intelligence</strong> closes that gap. Every day, I curate what matters and add the strategic context you only get from having worked inside the corridors of power.</p>
                 <p data-fr="Le nom est délibéré. C'est dans les corridors — pas dans les salles de réunion — que les véritables décisions se prennent. J'y ai été. Maintenant, je vous y donne accès.">The name is deliberate. It's in the corridors — not the boardrooms — where the real decisions get made. I've been there. Now I'm giving you access.</p>
             </div>
             <div class="concept-pillars">
@@ -1389,7 +1116,7 @@ document.head.appendChild(o)}initApollo();</script>
                 <div class="pillar-card">
                     <div class="pillar-icon" data-fr="Commentaire">Commentary</div>
                     <div class="pillar-title" data-fr="Contexte du terrain">Context from the inside</div>
-                    <div class="pillar-desc" data-fr="Analyse originale d'un ancien conseiller du Premier ministre du Canada et chef de cabinet au Sénat du Canada. Pas de la spéculation — de l'expérience.">Original analysis from a former advisor to the Prime Minister of Canada and Senate Chief of Staff. Not speculation — experience.</div>
+                    <div class="pillar-desc" data-fr="Analyse originale de quelqu'un qui a œuvré au sein du Cabinet du Premier ministre du Canada et comme chef de cabinet au Sénat du Canada. Pas de la spéculation — de l'expérience.">Original analysis from someone who served in the Prime Minister's Office of Canada and as Senate Chief of Staff. Not speculation — experience.</div>
                 </div>
                 <div class="pillar-card">
                     <div class="pillar-icon" data-fr="Bilingue">Bilingual</div>
@@ -2356,9 +2083,9 @@ document.head.appendChild(o)}initApollo();</script>
         <div class="editor-inner">
             <div class="editor-label" data-fr="L'éditeur">The Editor</div>
             <h2 data-fr="Joseph Soares">Joseph Soares</h2>
-            <p data-fr="J'ai œuvré comme conseiller du Premier ministre du Canada pendant la crise financière de 2008. Chef de cabinet au Sénat du Canada pendant la pandémie de 2020. Publié dans Forbes, Newsweek, le National Post, le Globe and Mail, et des médias à travers le monde. Je lis les nouvelles politiques comme un opérateur — parce que c'est ce que j'ai toujours été.">I served as an advisor to the Prime Minister of Canada during the 2008 financial crisis. As Chief of Staff at the Senate of Canada during the 2020 pandemic. I've been featured in Forbes, Newsweek, the National Post, the Globe and Mail, and media globally. I read political news as an operator — because that's what I've always been.</p>
+            <p data-fr="J'ai œuvré au sein du Cabinet du Premier ministre du Canada pendant la crise financière de 2008. Chef de cabinet au Sénat du Canada pendant la pandémie de 2020. Publié dans Forbes, Newsweek, le National Post, le Globe and Mail, et des médias à travers le monde. Je lis les nouvelles politiques comme un opérateur — parce que c'est ce que j'ai toujours été.">I served in the Prime Minister's Office of Canada during the 2008 financial crisis. As Chief of Staff at the Senate of Canada during the 2020 pandemic. I've been featured in Forbes, Newsweek, the National Post, the Globe and Mail, and media globally. I read political news as an operator — because that's what I've always been.</p>
             <div class="editor-creds">
-                <span class="editor-cred" data-fr="Conseiller du Premier ministre">Advisor to the Prime Minister</span>
+                <span class="editor-cred" data-fr="Cabinet du Premier ministre">Prime Minister's Office</span>
                 <span class="editor-cred" data-fr="Sénat du Canada">Senate of Canada</span>
                 <span class="editor-cred">Forbes</span>
                 <span class="editor-cred">Newsweek</span>
@@ -2371,168 +2098,28 @@ document.head.appendChild(o)}initApollo();</script>
     <section class="cta">
         <div class="cta-inner">
             <h2 data-fr="Vous voulez la <em>conversation complète ?</em>">Want the <em>full conversation?</em></h2>
-            <p data-fr="Le Corridor vous donne le renseignement. Le conseil stratégique vous donne l'avantage. Si vous êtes prêt à passer de lecteur à décideur — parlons.">The Corridor gives you the intelligence. Strategic advisory gives you the edge. If you're ready to move from reader to decision-maker — let's talk.</p>
+            <p data-fr="Le Corridor vous donne le renseignement. Le conseil stratégique vous donne l'avantage. Si vous êtes prêt à passer de lecteur à décideur — parlons.">Corridor Intelligence gives you the intelligence. Strategic advisory gives you the edge. If you're ready to move from reader to decision-maker — let's talk.</p>
             <a href="https://calendar.app.google/pEyrPMvGY2TuEndcA" class="btn-primary" data-fr="Prendre rendez-vous — 30 minutes">Book 30 Minutes</a>
             <a href="index.html" class="btn-secondary" data-fr="En savoir plus sur le conseil stratégique">Learn About Advisory</a>
         </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer style="background: #06101e; padding: 60px 40px 40px; border-top: 1px solid rgba(201, 168, 76, 0.1);">
-        <div style="max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 40px;">
-            <div>
-                <h4 style="font-family: 'Cormorant Garamond', serif; font-size: 16px; font-weight: 700; color: #c9a84c; margin-bottom: 14px;" data-fr="À propos">About</h4>
-                <p style="font-size: 13px; color: rgba(255,255,255,0.55); line-height: 1.7;" data-fr="Joseph Soares est un conseiller stratégique privé pour les entrepreneurs, les dirigeants d'entreprise et les particuliers fortunés. Ancien conseiller du Premier ministre du Canada. Chef de cabinet au Sénat. Publié dans Forbes et Newsweek.">Joseph Soares is a private strategic advisor to entrepreneurs, business leaders, and high-net-worth individuals. Former advisor in Canada's Prime Minister's Office. Senate Chief of Staff. Published in Forbes and Newsweek.</p>
-            </div>
-            <div>
-                <h4 style="font-family: 'Cormorant Garamond', serif; font-size: 16px; font-weight: 700; color: #c9a84c; margin-bottom: 14px;" data-fr="Liens rapides">Quick Links</h4>
-                <ul style="list-style: none; padding: 0; margin: 0;">
-                    <li style="margin-bottom: 8px;"><a href="/" style="color: rgba(255,255,255,0.55); text-decoration: none; font-size: 13px; transition: color 0.3s;" onmouseover="this.style.color='#c9a84c'" onmouseout="this.style.color='rgba(255,255,255,0.55)'" data-fr="Accueil">Home</a></li>
-                    <li style="margin-bottom: 8px;"><a href="/advisory.html" style="color: rgba(255,255,255,0.55); text-decoration: none; font-size: 13px; transition: color 0.3s;" onmouseover="this.style.color='#c9a84c'" onmouseout="this.style.color='rgba(255,255,255,0.55)'" data-fr="Services consultatifs">Advisory</a></li>
-                    <li style="margin-bottom: 8px;"><a href="/intelligence.html" style="color: rgba(255,255,255,0.55); text-decoration: none; font-size: 13px; transition: color 0.3s;" onmouseover="this.style.color='#c9a84c'" onmouseout="this.style.color='rgba(255,255,255,0.55)'" data-fr="Renseignement">Intelligence</a></li>
-                    <li style="margin-bottom: 8px;"><a href="/podcast.html" style="color: rgba(255,255,255,0.55); text-decoration: none; font-size: 13px; transition: color 0.3s;" onmouseover="this.style.color='#c9a84c'" onmouseout="this.style.color='rgba(255,255,255,0.55)'" data-fr="Balado">Podcast</a></li>
-                    <li style="margin-bottom: 8px;"><a href="/writing.html" style="color: rgba(255,255,255,0.55); text-decoration: none; font-size: 13px; transition: color 0.3s;" onmouseover="this.style.color='#c9a84c'" onmouseout="this.style.color='rgba(255,255,255,0.55)'" data-fr="Publications">Writing</a></li>
-                    <li style="margin-bottom: 8px;"><a href="/call.html" style="color: rgba(255,255,255,0.55); text-decoration: none; font-size: 13px; transition: color 0.3s;" onmouseover="this.style.color='#c9a84c'" onmouseout="this.style.color='rgba(255,255,255,0.55)'" data-fr="Accès consultatif">Advisory Access</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 style="font-family: 'Cormorant Garamond', serif; font-size: 16px; font-weight: 700; color: #c9a84c; margin-bottom: 14px;">Contact</h4>
-                <p style="font-size: 13px; color: rgba(255,255,255,0.55); line-height: 2;"><a href="mailto:info@josephsoares.com" style="color: rgba(255,255,255,0.55); text-decoration: none;" onmouseover="this.style.color='#c9a84c'" onmouseout="this.style.color='rgba(255,255,255,0.55)'">info@josephsoares.com</a></p>
-                <p style="font-size: 13px; color: rgba(255,255,255,0.55); line-height: 2;"><a href="https://www.linkedin.com/in/soaresjoseph/" target="_blank" rel="noopener" style="color: rgba(255,255,255,0.55); text-decoration: none;" onmouseover="this.style.color='#c9a84c'" onmouseout="this.style.color='rgba(255,255,255,0.55)'">LinkedIn</a></p>
-                <p style="font-size: 13px; color: rgba(255,255,255,0.55); line-height: 2;"><a href="https://x.com/JosephSoares" target="_blank" rel="noopener" style="color: rgba(255,255,255,0.55); text-decoration: none;" onmouseover="this.style.color='#c9a84c'" onmouseout="this.style.color='rgba(255,255,255,0.55)'">X (Twitter)</a></p>
-                <p style="font-size: 13px; color: rgba(255,255,255,0.55); line-height: 2;"><a href="https://corridorintelligence.substack.com" target="_blank" rel="noopener" style="color: rgba(255,255,255,0.55); text-decoration: none;" onmouseover="this.style.color='#c9a84c'" onmouseout="this.style.color='rgba(255,255,255,0.55)'">Substack</a></p>
-                <p style="font-size: 13px; color: rgba(255,255,255,0.55); line-height: 2;"><a href="https://www.youtube.com/@corridorintelligence" target="_blank" rel="noopener" style="color: rgba(255,255,255,0.55); text-decoration: none;" onmouseover="this.style.color='#c9a84c'" onmouseout="this.style.color='rgba(255,255,255,0.55)'">YouTube</a></p>
-                <p style="margin-top: 12px; font-size: 13px; color: rgba(255,255,255,0.7); font-weight: 600;">Joseph Soares, MBA, Adm.A., PMP</p>
-                <p style="font-size: 12px; color: rgba(255,255,255,0.4);"><a href="https://ibprom.com" target="_blank" rel="noopener" style="color: rgba(255,255,255,0.4); text-decoration: none;" onmouseover="this.style.color='#c9a84c'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">IBPROM Corp.</a></p>
-            </div>
-        </div>
-        <div style="max-width: 1000px; margin: 32px auto 0; padding-top: 24px; border-top: 1px solid rgba(201, 168, 76, 0.08); text-align: center;">
-            <p style="font-size: 12px; color: rgba(255,255,255,0.3); margin-bottom: 8px;">
-                <a href="/privacy.html" style="color: rgba(255,255,255,0.3); text-decoration: none; margin: 0 8px;" onmouseover="this.style.color='rgba(255,255,255,0.6)'" onmouseout="this.style.color='rgba(255,255,255,0.3)'">Privacy Policy</a> |
-                <a href="/terms.html" style="color: rgba(255,255,255,0.3); text-decoration: none; margin: 0 8px;" onmouseover="this.style.color='rgba(255,255,255,0.6)'" onmouseout="this.style.color='rgba(255,255,255,0.3)'">Terms of Service</a> |
-                <a href="/cookies.html" style="color: rgba(255,255,255,0.3); text-decoration: none; margin: 0 8px;" onmouseover="this.style.color='rgba(255,255,255,0.6)'" onmouseout="this.style.color='rgba(255,255,255,0.3)'">Cookie Policy</a>
-            </p>
-            <p style="font-size: 11px; color: rgba(255,255,255,0.2);">&copy; 2026 IBPROM Corp. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <!-- Email Capture Popup -->
-    <div class="popup-overlay" id="popupOverlay">
-        <div class="popup-card">
-            <button class="popup-close" id="popupClose">&times;</button>
-            <div class="popup-form-container">
-                <div class="popup-header">
-                    <h2>Get the Advisory Brief</h2>
-                    <p>Insights on decision-making, delivered weekly.</p>
-                </div>
-                <form class="popup-form" id="popupForm">
-                    <input type="text" class="popup-input" id="firstName" placeholder="First name" required>
-                    <input type="email" class="popup-input" id="email" placeholder="Email address" required>
-                    <button type="submit" class="popup-submit">Send Brief</button>
-                </form>
-            </div>
-            <div class="popup-success" id="popupSuccess">
-                <h3>Got it.</h3>
-                <p>Check your email for the Advisory Brief. It's on the way.</p>
-                <a href="#" class="popup-pdf-link" download>Download PDF</a>
-            </div>
-        </div>
+<footer>
+  <div class="wrap">
+    <div class="disc">
+      <div class="brand" style="font-size:15px;margin-bottom:10px">Joseph <span style="color:var(--gold)">Soares</span> &amp; Company</div>
+      <em>Senior advisor to entrepreneurs and high-net-worth leaders. Confidential by default. &copy; 2026 Joseph Soares &amp; Company.</em>
     </div>
+    <div class="soc">
+      <a href="/advisory.html">Advisory</a>
+      <a href="/book.html" style="margin-left:22px">Book</a>
+      <a href="https://www.linkedin.com/in/soaresjoseph/">LinkedIn</a>
+      <a href="https://x.com/JosephSoares">X</a>
+      <a href="https://www.youtube.com/@corridorintelligence">YouTube</a>
+    </div>
+  </div>
+</footer>
 
-    <script>
-        (function() {
-            let currentLang = 'en';
-            window.setLang = function(lang) {
-                currentLang = lang;
-                document.documentElement.lang = lang === 'fr' ? 'fr' : 'en';
-                document.querySelectorAll('.lang-buttons button').forEach(btn => {
-                    btn.classList.toggle('active', btn.textContent.trim().toLowerCase() === lang);
-                });
-                document.querySelectorAll('[data-' + lang + ']').forEach(el => {
-                    const translation = el.getAttribute('data-' + lang);
-                    if (translation) {
-                        el.innerHTML = translation;
-                    }
-                });
-                const titles = {
-                    en: 'Corridor Intelligence | Political Intelligence for Decision-Makers',
-                    fr: 'Le Corridor | Veille politique pour dirigeants d\'entreprise'
-                };
-                document.title = titles[lang] || titles.en;
-                const descriptions = {
-                    en: 'The Corridor — Bilingual political news and strategic commentary for decision-makers. By Joseph Soares.',
-                    fr: 'Le Corridor — Veille politique bilingue et commentaire stratégique pour décideurs. Par Joseph Soares.'
-                };
-                const metaDesc = document.querySelector('meta[name="description"]');
-                if (metaDesc) metaDesc.setAttribute('content', descriptions[lang] || descriptions.en);
-                try {
-                    localStorage.setItem('js-lang', lang);
-                } catch(e) {}
-            };
-            document.addEventListener('DOMContentLoaded', function() {
-                document.querySelectorAll('[data-fr]').forEach(el => {
-                    if (!el.hasAttribute('data-en')) {
-                        el.setAttribute('data-en', el.innerHTML);
-                    }
-                });
-                let savedLang = null;
-                try {
-                    savedLang = localStorage.getItem('js-lang');
-                } catch(e) {}
-                if (savedLang && ['en', 'fr'].includes(savedLang)) {
-                    setLang(savedLang);
-                }
-            });
-        })();
-
-        // Email popup handler
-        (function() {
-            const overlay = document.getElementById('popupOverlay');
-            const closeBtn = document.getElementById('popupClose');
-            const advisoryBtn = document.getElementById('advisoryBriefBtn');
-            const form = document.getElementById('popupForm');
-            const successScreen = document.getElementById('popupSuccess');
-            const formContainer = document.querySelector('.popup-form-container');
-
-            advisoryBtn.addEventListener('click', () => {
-                overlay.classList.add('active');
-            });
-
-            closeBtn.addEventListener('click', () => {
-                overlay.classList.remove('active');
-            });
-
-            overlay.addEventListener('click', (e) => {
-                if (e.target === overlay) {
-                    overlay.classList.remove('active');
-                }
-            });
-
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape') {
-                    overlay.classList.remove('active');
-                }
-            });
-
-            form.addEventListener('submit', (e) => {
-                e.preventDefault();
-                const firstName = document.getElementById('firstName').value;
-                const email = document.getElementById('email').value;
-
-                fetch('MAKE_WEBHOOK_URL', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ firstName, email })
-                }).then(() => {
-                    formContainer.style.display = 'none';
-                    successScreen.classList.add('active');
-                }).catch(() => {
-                    formContainer.style.display = 'none';
-                    successScreen.classList.add('active');
-                });
-            });
-        })();
-    </script>
 </body>
 </html>
 
