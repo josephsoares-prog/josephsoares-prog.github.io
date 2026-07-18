@@ -1102,6 +1102,13 @@ document.head.appendChild(o)}initApollo();</script>
  .navdrop-menu a{padding:12px 30px 12px 54px !important;font-size:14px;opacity:.82}
 }
 </style>
+<style id="ci-capture-css">
+.ci-capture-form{display:flex;gap:10px;max-width:460px;margin:0 auto;flex-wrap:wrap;justify-content:center}
+.ci-capture-input{flex:1;min-width:220px;background:rgba(255,255,255,.06);border:1px solid rgba(242,239,233,.28);border-radius:3px;padding:12px 15px;color:#F2EFE9;font-size:15px;font-family:'Inter',Arial,sans-serif}
+.ci-capture-input::placeholder{color:rgba(242,239,233,.5)}
+.ci-capture-input:focus{outline:none;border-color:#D4AF37}
+.ci-capture-msg{font-family:'Inter',Arial,sans-serif;font-size:14px;color:#D4AF37;margin:14px 0 0;min-height:1em;text-align:center}
+</style>
 </head>
 
 <body>
@@ -1155,20 +1162,16 @@ document.head.appendChild(o)}initApollo();</script>
                 <p data-fr="Analyse stratégique des nouvelles politiques qui touchent les décideurs">Strategic analysis of the news that affects decision-makers</p>
             </div>
 
-            <!-- SUBSTACK CTA -->
-            <div style="background:rgba(207,181,59,0.06); border:1px solid rgba(207,181,59,0.25); border-radius:4px; padding:2rem; margin-bottom:2rem; text-align:center;">
-                <p style="font-family:'Inter',sans-serif; font-size:0.65rem; letter-spacing:3px; text-transform:uppercase; color:var(--gold); margin-bottom:0.75rem;" data-fr="Abonnez-vous &agrave; Corridor Intelligence">Subscribe to Corridor Intelligence</p>
-                <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:1.5rem; margin-bottom:1.25rem;">
-                    <div style="flex:1; min-width:200px; max-width:280px; padding:1rem; background:rgba(255,255,255,0.03); border:1px solid rgba(207,181,59,0.15); border-radius:3px;">
-                        <p style="font-family:'Inter',sans-serif; font-size:0.7rem; letter-spacing:2px; text-transform:uppercase; color:var(--gold); margin-bottom:0.5rem;" data-fr="Gratuit">Free</p>
-                        <p style="font-family:'Inter',sans-serif; font-size:0.85rem; color:var(--text-mid); line-height:1.6;" data-fr="Titres du briefing quotidien + commentaire quotidien">Daily Brief headlines + daily reports</p>
-                    </div>
-                    <div style="flex:1; min-width:200px; max-width:280px; padding:1rem; background:rgba(207,181,59,0.08); border:1px solid rgba(207,181,59,0.3); border-radius:3px;">
-                        <p style="font-family:'Inter',sans-serif; font-size:0.7rem; letter-spacing:2px; text-transform:uppercase; color:var(--gold); margin-bottom:0.5rem;" data-fr="Premium &mdash; 39$/mois">Premium &mdash; $39/month</p>
-                        <p style="font-family:'Inter',sans-serif; font-size:0.85rem; color:var(--text-mid); line-height:1.6;" data-fr="L&#8217;ensemble complet du renseignement">Full intelligence package</p>
-                    </div>
-                </div>
-                <a href="https://corridorintelligence.substack.com" target="_blank" rel="noopener" class="btn-primary" style="display:inline-block; padding:0.75rem 2rem; font-size:0.8rem;" data-fr="S&#8217;abonner">Subscribe</a>
+                        <!-- KIT CAPTURE -->
+            <div class="ci-capture-card" style="background:rgba(207,181,59,0.06); border:1px solid rgba(207,181,59,0.3); border-radius:4px; padding:2rem; margin-bottom:2rem; text-align:center;">
+                <p style="font-family:'Inter',sans-serif; font-size:0.65rem; letter-spacing:3px; text-transform:uppercase; color:var(--gold); margin-bottom:0.6rem;" data-fr="Abonnez-vous \u00e0 Corridor Intelligence">Subscribe to Corridor Intelligence</p>
+                <p style="font-family:'EB Garamond',Georgia,serif; font-size:1.05rem; color:var(--bone,#F2EFE9); margin-bottom:1.1rem;" data-fr="Renseignement strat\u00e9gique quotidien, directement dans votre bo\u00eete de r\u00e9ception.">Daily strategic intelligence, straight to your inbox.</p>
+                <form class="ci-capture-form" action="https://app.kit.com/forms/f30ff33b6f/subscriptions" method="post">
+                    <input class="ci-capture-input" type="email" name="email_address" placeholder="Your email address" aria-label="Email" required>
+                    <button class="btn-primary" type="submit" style="padding:0.7rem 1.6rem; font-size:0.8rem; border:0; cursor:pointer;" data-fr="S'abonner">Subscribe</button>
+                </form>
+                <p class="ci-capture-msg" role="status" aria-live="polite"></p>
+                <p style="font-family:'Inter',sans-serif; margin-top:0.75rem; font-size:0.7rem; opacity:0.55;" data-fr="Renseignement quotidien. Pas de pourriel. D\u00e9sabonnement en un clic.">Daily intelligence. No spam. Unsubscribe anytime.</p>
             </div>
 
                         <!-- ENTRY: July 8, 2026 — Allied Hub Series -->
@@ -1721,5 +1724,8 @@ document.head.appendChild(o)}initApollo();</script>
 </footer>
 
 
+<script id="ci-capture-js">
+document.addEventListener('submit',function(e){var f=e.target;if(!(f.classList&&f.classList.contains('ci-capture-form')))return;e.preventDefault();var msg=f.parentNode.querySelector('.ci-capture-msg'),btn=f.querySelector('button');var done=f.getAttribute('data-msg')||'Thank you \u2014 check your inbox to confirm your subscription.';if(btn){btn.disabled=true;btn.dataset.t=btn.textContent;btn.textContent='\u2026';}fetch(f.action,{method:'POST',body:new FormData(f),headers:{'Accept':'application/json'}}).then(function(r){return r.ok?r.json().catch(function(){return{};}):Promise.reject();}).then(function(){if(msg)msg.textContent=done;f.reset();if(btn){btn.disabled=false;btn.textContent=btn.dataset.t||'Subscribe';}}).catch(function(){f.submit();});});
+</script>
 </body>
 </html>
