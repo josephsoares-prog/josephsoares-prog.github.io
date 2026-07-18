@@ -1,6 +1,6 @@
 # josephsoares.com — robots.txt
 # Senior Strategic Advisory | Joseph Soares | IBPROM Corp.
-# Last updated: 2026-04-14
+# Last updated: 2026-07-18
 
 User-agent: *
 Allow: /
@@ -20,6 +20,9 @@ Allow: /
 User-agent: ChatGPT-User
 Allow: /
 
+User-agent: OAI-SearchBot
+Allow: /
+
 User-agent: Google-Extended
 Allow: /
 
@@ -29,10 +32,16 @@ Allow: /
 User-agent: anthropic-ai
 Allow: /
 
+User-agent: ClaudeBot
+Allow: /
+
 User-agent: Claude-Web
 Allow: /
 
 User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
 Allow: /
 
 User-agent: Applebot
@@ -51,4 +60,10 @@ User-agent: Twitterbot
 Allow: /
 
 User-agent: LinkedInBot
+Allow: /
+
+# Bytespider (ByteDance/TikTok). Allowed to preserve the site's maximum-
+# discoverability posture; switch to "Disallow: /" if aggressive crawling
+# or low citation value becomes a concern.
+User-agent: Bytespider
 Allow: /
