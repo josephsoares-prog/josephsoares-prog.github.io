@@ -165,6 +165,19 @@ document.head.appendChild(o)}initApollo();</script>
   .navlinks a.cta{align-self:center;width:auto;max-width:calc(100% - 44px);margin:12px auto;padding:12px 28px;text-align:center}
 }
 </style>
+<style id="navdrop-css">
+.navdrop{position:relative}
+.navdrop>a::after{content:"\25BE";font-size:.62em;margin-left:6px;vertical-align:middle;opacity:.65}
+.navdrop-menu{display:none;position:absolute;top:100%;left:0;background:#072244;border:1px solid rgba(242,239,233,.14);border-radius:2px;padding:6px 0;min-width:158px;z-index:90;box-shadow:0 12px 34px rgba(0,0,0,.4)}
+.navdrop:hover .navdrop-menu,.navdrop:focus-within .navdrop-menu{display:block}
+.navdrop-menu a{display:block !important;width:auto !important;padding:11px 20px !important}
+@media(max-width:880px){
+ .navdrop{width:100%}
+ .navdrop>a::after{display:none}
+ .navdrop-menu{display:block;position:static;border:0;box-shadow:none;padding:0;background:transparent;min-width:0}
+ .navdrop-menu a{padding:12px 30px 12px 54px !important;font-size:14px;opacity:.82}
+}
+</style>
 </head>
 <body>
 
@@ -174,7 +187,7 @@ document.head.appendChild(o)}initApollo();</script>
     <button class="menutoggle" aria-label="Menu" onclick="this.closest('nav').querySelector('.navlinks').classList.toggle('open')"><span></span><span></span><span></span></button>
       <div class="navlinks">
       <a href="/advisory.html">Advisory</a>
-      <a href="/intelligence.html">Intelligence</a>
+      <div class="navdrop"><a href="/intelligence.html">Intelligence</a><div class="navdrop-menu"><a href="/brief/">Briefs</a><a href="/dispatch.html">Dispatches</a></div></div>
       <a href="/podcast.html">Podcast</a>
       <a href="/writing.html">Writing</a>
       <a href="/book.html">Book</a>
