@@ -761,7 +761,7 @@
         /* ===== RESPONSIVE ===== */
         @media (max-width: 960px) {
             .pricing-grid {
-                grid-template-columns: 1fr;
+                grid-template-columns: 1fr !important;
             }
             .outcomes-grid {
                 grid-template-columns: 1fr;
@@ -776,6 +776,7 @@
         }
 
         @media (max-width: 700px) {
+            .pricing-price { font-size: 32px; overflow-wrap: anywhere; }
             .hero, .relationship, .pricing, .outcomes, .faq, .qualification {
                 padding-left: 24px;
                 padding-right: 24px;
@@ -814,7 +815,7 @@ document.head.appendChild(o)}initApollo();</script>
   nav .wrap{position:relative}
   .menutoggle{display:flex !important}
   .navlinks{display:none !important;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;
-    background:rgba(7,34,68,.98);backdrop-filter:blur(10px);border-top:1px solid rgba(242,239,233,.12);
+    background:#072244;backdrop-filter:blur(10px);border-top:1px solid rgba(242,239,233,.12);
     border-bottom:1px solid rgba(242,239,233,.12);padding:6px 0;z-index:60;align-items:stretch}
   .navlinks.open{display:flex !important}
   .navlinks a{padding:15px 30px;width:100%;font-size:15px}
