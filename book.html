@@ -66,7 +66,7 @@
     box-shadow:0 44px 90px rgba(0,0,0,.6);
     transform:perspective(1500px) rotateY(-10deg) rotateX(2deg)}
   .coverwrap img{width:300px;max-width:100%;border-radius:2px;display:block}
-  .pubtag{position:absolute;top:-14px;left:-14px;background:var(--gold);color:#0E3A70;
+  .pubtag{position:absolute;z-index:20;top:-12px;left:-12px;background:var(--gold);color:#0E3A70;
     font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.1em;
     font-weight:600;font-size:12px;padding:8px 12px;border-radius:2px;
     box-shadow:0 8px 24px rgba(0,0,0,.5)}
@@ -109,8 +109,9 @@
     .hero{padding:48px 0 20px}
     .hero h1{font-size:46px}
     .coverwrap{order:-1}
-    .coverwrap img{width:230px}
-    .bookframe{transform:none}
+    .coverwrap img{width:208px}
+    .bookframe{transform:none;padding:16px}
+    .pubtag{top:-10px;left:0;font-size:11px;padding:7px 11px}
     .grid3{grid-template-columns:1fr}
     .split{grid-template-columns:1fr}
     .capture{padding:34px 24px}
@@ -191,7 +192,7 @@
       <div class="microcopy">Publishing October&nbsp;6,&nbsp;2026. The launch list gets the opening chapter now &mdash; and first access on release day.</div>
     </div>
     <div class="coverwrap">
-      <div class="pubtag" style="position:relative;z-index:30">New &middot; Oct 6, 2026</div>
+      <div class="pubtag" style="z-index:30">New &middot; Oct 6, 2026</div>
       <div class="bookframe"><img src="/images/leadership-under-fire-cover.jpg" width="300" height="480" alt="Leadership Under Fire — The SPARK Framework, by Joseph Soares"></div>
     </div>
   </div>
