@@ -155,13 +155,30 @@
 o.src="https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache="+n,o.async=!0,o.defer=!0,
 o.onload=function(){window.trackingFunctions.onLoad({appId:"69b933d5574de0002181290e"})},
 document.head.appendChild(o)}initApollo();</script>
+
+<style>
+/* Mobile hamburger menu fix (site-wide) */
+.menutoggle{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:10px 6px}
+.menutoggle span{display:block;width:24px;height:2px;background:var(--bone,#F2EFE9);transition:.2s}
+@media(max-width:880px){
+  nav .wrap{position:relative}
+  .menutoggle{display:flex !important}
+  .navlinks{display:none !important;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;
+    background:rgba(7,34,68,.98);backdrop-filter:blur(10px);border-top:1px solid rgba(242,239,233,.12);
+    border-bottom:1px solid rgba(242,239,233,.12);padding:6px 0;z-index:60;align-items:stretch}
+  .navlinks.open{display:flex !important}
+  .navlinks a{padding:15px 30px;width:100%;font-size:15px}
+  .navlinks a.cta{margin:8px 30px;text-align:center}
+}
+</style>
 </head>
 <body>
 
 <nav>
   <div class="wrap">
     <div class="brand">Joseph <span>Soares</span></div>
-    <div class="navlinks">
+    <button class="menutoggle" aria-label="Menu" onclick="this.closest('nav').querySelector('.navlinks').classList.toggle('open')"><span></span><span></span><span></span></button>
+      <div class="navlinks">
       <a href="/advisory.html">Advisory</a>
       <a href="/intelligence.html">Intelligence</a>
       <a href="/podcast.html">Podcast</a>
