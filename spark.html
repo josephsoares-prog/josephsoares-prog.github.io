@@ -104,7 +104,7 @@
   .form .fnote{font-size:14px;color:var(--muted);font-style:italic;margin-top:18px}
   .embslot{margin-top:22px;border:1px dashed rgba(201,162,39,.4);border-radius:3px;padding:22px;color:var(--muted);font-size:15px;font-style:italic;text-align:center}
   .scar{display:inline-block;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.14em;font-size:13px;font-weight:600;color:var(--gold);border:1px solid rgba(201,162,39,.5);border-radius:2px;padding:8px 16px;margin-bottom:20px}
-  .subs{margin-top:20px;border-radius:3px;overflow:hidden;background:#fff}
+  .subs{margin-top:20px;background:transparent}
   .subs iframe{width:100%;height:150px;border:0;background:#fff}
   footer{border-top:1px solid var(--line);padding:48px 0 64px;color:var(--muted);font-size:16px;margin-top:40px}
   footer .wrap{max-width:1120px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:22px;align-items:flex-start}
@@ -168,6 +168,15 @@
  .navdrop-menu a{padding:12px 30px 12px 54px !important;font-size:14px;opacity:.82}
 }
 </style>
+<style id="ci-capture-css">
+.ci-capture-form{display:flex;gap:10px;max-width:460px;margin:14px auto 0;flex-wrap:wrap;justify-content:center}
+.ci-capture-input{flex:1;min-width:220px;background:rgba(255,255,255,.06);border:1px solid rgba(242,239,233,.28);border-radius:3px;padding:13px 15px;color:#F2EFE9;font-size:15px;font-family:'Inter',Arial,sans-serif}
+.ci-capture-input::placeholder{color:rgba(242,239,233,.5)}
+.ci-capture-input:focus{outline:none;border-color:#D4AF37}
+.ci-capture-btn{background:#D4AF37;color:#0A3161;border:0;border-radius:3px;padding:13px 26px;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.12em;font-size:14px;font-weight:600;cursor:pointer}
+.ci-capture-btn:hover{background:#E6C860}
+.ci-capture-msg{font-family:'Inter',Arial,sans-serif;font-size:14px;color:#D4AF37;margin:12px 0 0;min-height:1em;text-align:center}
+</style>
 </head>
 <body>
 <nav><div class="wrap">
@@ -201,7 +210,7 @@
     <div class="eyebrow klabel">Your profile is ready</div>
     <div class="h2" style="font-size:26px">Where should I send the full read?</div>
     <p class="sub">Enter your email to unlock your written SPARK profile &mdash; and I&rsquo;ll include the opening chapter of <i>Leadership Under Fire</i>. Your scores are below either way.</p>
-    <div class="subs"><iframe src="https://corridorintelligence.substack.com/embed" scrolling="no" title="Unlock your profile"></iframe></div>
+    <div class="subs"><form class="ci-capture-form" action="https://app.kit.com/forms/f30ff33b6f/subscriptions" method="post"><input class="ci-capture-input" type="email" name="email_address" placeholder="Your email address" aria-label="Email" required><button class="ci-capture-btn" type="submit">Subscribe</button></form><p class="ci-capture-msg" role="status" aria-live="polite"></p></div>
   </div>
 
   <div id="results">
@@ -275,5 +284,8 @@ function grade(){
   setTimeout(()=>{document.querySelectorAll('.fill').forEach(f=>f.style.width=f.dataset.w+'%');},80);
   document.getElementById('gate').scrollIntoView({behavior:'smooth'});
 }
+</script>
+<script id="ci-capture-js">
+document.addEventListener('submit',function(e){var f=e.target;if(!(f.classList&&f.classList.contains('ci-capture-form')))return;e.preventDefault();var msg=f.parentNode.querySelector('.ci-capture-msg'),btn=f.querySelector('button');var done=f.getAttribute('data-msg')||'Thank you \u2014 check your inbox to confirm your subscription.';if(btn){btn.disabled=true;btn.dataset.t=btn.textContent;btn.textContent='\u2026';}fetch(f.action,{method:'POST',body:new FormData(f),headers:{'Accept':'application/json'}}).then(function(r){return r.ok?r.json().catch(function(){return{};}):Promise.reject();}).then(function(){if(msg)msg.textContent=done;f.reset();if(btn){btn.disabled=false;btn.textContent=btn.dataset.t||'Subscribe';}}).catch(function(){f.submit();});});
 </script>
 </body></html>

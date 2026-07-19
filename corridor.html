@@ -15,10 +15,10 @@
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="apple-touch-icon" href="/favicon.ico">
     <title>Corridor Intelligence | For Decision-Makers — Joseph Soares</title>
-    <meta name="description" content="Corridor Intelligence — Joseph Soares's body of work on power, decision-making, and influence. Daily strategic intelligence, the upcoming podcast on leaders tested under pressure, and the Substack newsletter for serious operators.">
+    <meta name="description" content="Corridor Intelligence — Joseph Soares's body of work on power, decision-making, and influence. Daily strategic intelligence, the upcoming podcast on leaders tested under pressure, and the newsletter for serious operators.">
     <link rel="canonical" href="https://josephsoares.com/corridor.html">
     <meta property="og:title" content="Corridor Intelligence | For Decision-Makers — Joseph Soares">
-    <meta property="og:description" content="Corridor Intelligence — Joseph Soares's body of work on power, decision-making, and influence. Daily strategic intelligence, the upcoming podcast on leaders tested under pressure, and the Substack newsletter for serious operators.">
+    <meta property="og:description" content="Corridor Intelligence — Joseph Soares's body of work on power, decision-making, and influence. Daily strategic intelligence, the upcoming podcast on leaders tested under pressure, and the newsletter for serious operators.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://josephsoares.com/corridor.html">
     <meta property="og:image" content="https://josephsoares.com/assets/og-default.png">
@@ -26,7 +26,7 @@
     <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Corridor Intelligence | For Decision-Makers — Joseph Soares">
-    <meta name="twitter:description" content="Daily strategic intelligence, the upcoming podcast on leaders tested under pressure, and the Substack newsletter for serious operators.">
+    <meta name="twitter:description" content="Daily strategic intelligence, the upcoming podcast on leaders tested under pressure, and the newsletter for serious operators.">
     <meta name="twitter:image" content="https://josephsoares.com/assets/og-default.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,7 +37,7 @@
       "@context": "https://schema.org",
       "@type": "WebPage",
       "name": "Corridor Intelligence — For Decision-Makers",
-      "description": "Corridor Intelligence is Joseph Soares's body of work on power, decision-making, and influence — published daily as strategic intelligence, on Substack as long-form analysis, and in the upcoming podcast.",
+      "description": "Corridor Intelligence is Joseph Soares's body of work on power, decision-making, and influence — published daily as strategic intelligence, as long-form analysis, and in the upcoming podcast.",
       "url": "https://josephsoares.com/corridor.html",
       "isPartOf": {
         "@type": "WebSite",
@@ -53,7 +53,7 @@
       "hasPart": [
         {"@type": "WebPage", "name": "Corridor Intelligence (daily)", "url": "https://josephsoares.com/intelligence.html"},
         {"@type": "PodcastSeries", "name": "Corridor Intelligence Podcast", "url": "https://josephsoares.com/podcast.html"},
-        {"@type": "WebSite", "name": "Corridor Intelligence on Substack", "url": "https://corridorintelligence.substack.com"}
+        {"@type": "WebSite", "name": "Corridor Intelligence", "url": "https://josephsoares.com/intelligence.html"}
       ]
     }
     </script>
@@ -167,6 +167,15 @@
  .navdrop-menu a{padding:12px 30px 12px 54px !important;font-size:14px;opacity:.82}
 }
 </style>
+<style id="ci-capture-css">
+.ci-capture-form{display:flex;gap:10px;max-width:460px;margin:14px auto 0;flex-wrap:wrap;justify-content:center}
+.ci-capture-input{flex:1;min-width:220px;background:rgba(255,255,255,.06);border:1px solid rgba(242,239,233,.28);border-radius:3px;padding:13px 15px;color:#F2EFE9;font-size:15px;font-family:'Inter',Arial,sans-serif}
+.ci-capture-input::placeholder{color:rgba(242,239,233,.5)}
+.ci-capture-input:focus{outline:none;border-color:#D4AF37}
+.ci-capture-btn{background:#D4AF37;color:#0A3161;border:0;border-radius:3px;padding:13px 26px;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.12em;font-size:14px;font-weight:600;cursor:pointer}
+.ci-capture-btn:hover{background:#E6C860}
+.ci-capture-msg{font-family:'Inter',Arial,sans-serif;font-size:14px;color:#D4AF37;margin:12px 0 0;min-height:1em;text-align:center}
+</style>
 </head>
 <body>
 
@@ -189,7 +198,7 @@
       <div class="wrap">
         <div class="eyebrow">Corridor Intelligence</div>
         <h1>Where decisions actually get made.</h1>
-        <p class="subhead">Daily strategic intelligence, the upcoming podcast on leaders tested under pressure, and a Substack of long-form analysis for operators who do not have time for noise.</p>
+        <p class="subhead">Daily strategic intelligence, the upcoming podcast on leaders tested under pressure, and long-form analysis for operators who do not have time for noise.</p>
         <div class="author">By Joseph Soares</div>
       </div>
     </section>
@@ -213,9 +222,9 @@
           </div>
           <div class="surface-card">
             <div class="label">Long-Form</div>
-            <h3>Substack Newsletter</h3>
+            <h3>The Newsletter</h3>
             <p>Weekly analysis on power, succession, and decision-making for leaders. Delivered straight to your inbox. Free to subscribe.</p>
-            <a href="https://corridorintelligence.substack.com/subscribe?utm_source=josephsoares&amp;utm_medium=corridor_landing&amp;utm_campaign=corridor_2026" target="_blank" rel="noopener" class="cta">Subscribe on Substack &rarr;</a>
+            <form class="ci-capture-form" action="https://app.kit.com/forms/f30ff33b6f/subscriptions" method="post"><input class="ci-capture-input" type="email" name="email_address" placeholder="Your email address" aria-label="Email" required><button class="ci-capture-btn" type="submit">Subscribe</button></form><p class="ci-capture-msg" role="status" aria-live="polite"></p>
           </div>
           <div class="surface-card">
             <div class="label">Podcast (2026)</div>
@@ -255,5 +264,8 @@
   </div>
 </footer>
 
+<script id="ci-capture-js">
+document.addEventListener('submit',function(e){var f=e.target;if(!(f.classList&&f.classList.contains('ci-capture-form')))return;e.preventDefault();var msg=f.parentNode.querySelector('.ci-capture-msg'),btn=f.querySelector('button');var done=f.getAttribute('data-msg')||'Thank you \u2014 check your inbox to confirm your subscription.';if(btn){btn.disabled=true;btn.dataset.t=btn.textContent;btn.textContent='\u2026';}fetch(f.action,{method:'POST',body:new FormData(f),headers:{'Accept':'application/json'}}).then(function(r){return r.ok?r.json().catch(function(){return{};}):Promise.reject();}).then(function(){if(msg)msg.textContent=done;f.reset();if(btn){btn.disabled=false;btn.textContent=btn.dataset.t||'Subscribe';}}).catch(function(){f.submit();});});
+</script>
 </body>
 </html>
