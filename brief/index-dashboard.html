@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Corridor Index — What shaped the period | Joseph Soares</title>
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HNRCLZN3PK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-HNRCLZN3PK');
+</script>
+<meta name="description" content="The Corridor Index — a data snapshot of the forces that shaped a period, built from every Corridor Brief. Top stories, dominant themes, and source mix by month, quarter, and year.">
+<link rel="canonical" href="https://josephsoares.com/brief/index-dashboard.html">
+<link rel="icon" href="/favicon.svg">
+<meta property="og:title" content="The Corridor Index — What shaped the period">
+<meta property="og:description" content="A data snapshot of the forces that shaped a period, built from every Corridor Brief.">
+<meta property="og:url" content="https://josephsoares.com/brief/index-dashboard.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0A3161;--panel:#0E3A70;--panel2:#072244;--bone:#F2EFE9;--muted:#A9A39A;--gold:#D4AF37;--gold-light:#E6C860;--line:rgba(242,239,233,.12);--text-light:rgba(242,239,233,.75)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--ink);color:var(--bone);font-family:'EB Garamond',Georgia,serif;font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased;background-image:radial-gradient(ellipse 120% 70% at 50% -8%, rgba(201,162,39,.07), rgba(0,0,0,0))}
+a{color:inherit}
+nav{position:sticky;top:0;z-index:20;background:rgba(7,34,68,.90);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{max-width:1120px;margin:0 auto;padding:0 30px;display:flex;align-items:center;justify-content:space-between;height:66px}
+.brand{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.2em;font-weight:600;font-size:16px;text-decoration:none;color:var(--bone)}
+.brand span{color:var(--gold)}
+.navlinks{display:flex;gap:30px;align-items:center}
+.navlinks a{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.12em;font-size:13px;font-weight:500;text-decoration:none;color:var(--muted)}
+.navlinks a:hover{color:var(--gold)}
+.navlinks a.cta{color:var(--bone);border:1px solid var(--line);padding:9px 16px;border-radius:2px}
+.navlinks a.cta:hover{border-color:var(--gold);color:var(--gold)}
+.navdrop{position:relative}
+.navdrop>a::after{content:"\25BE";font-size:.62em;margin-left:6px;vertical-align:middle;opacity:.65}
+.navdrop-menu{display:none;position:absolute;top:100%;left:0;background:#072244;border:1px solid rgba(242,239,233,.14);border-radius:2px;padding:6px 0;min-width:158px;z-index:90;box-shadow:0 12px 34px rgba(0,0,0,.4)}
+.navdrop:hover .navdrop-menu,.navdrop:focus-within .navdrop-menu{display:block}
+.navdrop-menu a{display:block;padding:11px 20px}
+.menutoggle{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:10px 6px}
+.menutoggle span{display:block;width:24px;height:2px;background:var(--bone);transition:.2s}
+.lang-buttons{display:flex;gap:6px;margin-left:6px}
+.lang-buttons button{background:transparent;border:1px solid var(--line);color:var(--muted);padding:5px 12px;font-size:12px;border-radius:3px;cursor:pointer;font-family:'Oswald',sans-serif;letter-spacing:.1em}
+.lang-buttons button.active{border-color:var(--gold);color:var(--gold)}
+main{max-width:1080px;margin:0 auto;padding:48px 30px 80px}
+.crumb{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.14em;font-size:12px;color:var(--muted);margin-bottom:22px}
+.crumb a{color:var(--gold);text-decoration:none}
+.cb-eyebrow{font-family:'Oswald',sans-serif;letter-spacing:.3em;font-size:12px;font-weight:600;color:var(--gold);text-transform:uppercase}
+h1{font-family:'Oswald',sans-serif;text-transform:uppercase;font-weight:600;margin:12px 0 8px;font-size:46px;line-height:1.05;letter-spacing:.01em}
+.sub{color:var(--muted);font-size:18px;max-width:640px;margin-bottom:26px}
+.periods{display:flex;gap:0;max-width:460px;border:1px solid rgba(212,175,55,.45);border-radius:999px;overflow:hidden;margin-bottom:10px}
+.periods button{flex:1;text-align:center;padding:11px 8px;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.12em;font-size:12px;font-weight:600;color:var(--muted);background:transparent;border:0;cursor:pointer;transition:.2s}
+.periods button.active{background:var(--gold);color:var(--ink)}
+.periods button:not(.active):hover{color:var(--gold)}
+.range{font-size:13px;color:var(--text-light);margin-bottom:28px;font-style:italic}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:40px}
+.kpi{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:20px 22px}
+.kpi .n{font-family:'Oswald',sans-serif;font-size:38px;font-weight:600;color:var(--gold);line-height:1;font-variant-numeric:tabular-nums}
+.kpi .l{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.12em;font-size:11px;color:var(--muted);margin-top:8px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:36px;margin-bottom:8px}
+section.block{margin-bottom:44px}
+h2.sec{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.06em;font-size:15px;font-weight:600;color:var(--bone);border-bottom:1px solid var(--line);padding-bottom:12px;margin-bottom:20px}
+h2.sec span{color:var(--muted);font-weight:400;letter-spacing:.04em;font-size:12px;margin-left:8px}
+.lead-item{display:flex;gap:16px;padding:14px 0;border-bottom:1px solid rgba(201,168,76,.12)}
+.lead-rank{flex:0 0 30px;font-family:'Oswald',sans-serif;font-weight:700;color:var(--gold);font-variant-numeric:tabular-nums;opacity:.85;font-size:16px}
+.lead-body{flex:1;min-width:0}
+.lead-meta{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.1em;font-size:10.5px;color:var(--muted);margin-bottom:4px}
+.lead-tag{color:var(--ink);background:var(--gold);padding:2px 7px;border-radius:3px;font-weight:600;margin-right:8px}
+.lead-hl{font-family:'Oswald',sans-serif;text-transform:uppercase;font-size:15px;line-height:1.3;font-weight:500}
+.lead-hl a{color:var(--bone);text-decoration:none;border-bottom:1px solid rgba(201,168,76,.4)}
+.lead-hl a:hover{color:var(--gold-light)}
+.lead-src{font-size:12px;color:var(--gold);opacity:.85;margin-top:3px}
+.bar-row{display:flex;align-items:center;gap:12px;margin:9px 0}
+.bar-label{flex:0 0 150px;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.06em;font-size:11.5px;color:var(--text-light);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.bar-track{flex:1;background:rgba(242,239,233,.07);border-radius:3px;height:20px}
+.bar-fill{height:100%;background:linear-gradient(90deg,var(--gold),var(--gold-light));border-radius:3px;min-width:2px;transition:width .4s ease}
+.bar-val{flex:0 0 34px;text-align:right;font-variant-numeric:tabular-nums;font-size:13px;color:var(--muted)}
+.cols{display:flex;align-items:flex-end;gap:5px;height:180px;padding-top:10px;border-bottom:1px solid var(--line)}
+.colwrap{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;min-width:0}
+.col{width:70%;max-width:40px;background:linear-gradient(180deg,var(--gold-light),var(--gold));border-radius:3px 3px 0 0;position:relative;min-height:2px;transition:height .4s ease}
+.col .cv{position:absolute;top:-18px;left:50%;transform:translateX(-50%);font-size:11px;color:var(--muted);font-variant-numeric:tabular-nums}
+.collabel{font-size:10px;color:var(--muted);margin-top:7px;white-space:nowrap;font-variant-numeric:tabular-nums}
+.foot-note{color:var(--muted);font-size:13px;border-top:1px solid var(--line);padding-top:20px;margin-top:20px}
+.foot-note a{color:var(--gold);text-decoration:none}
+.loading{color:var(--muted);padding:40px 0;font-style:italic}
+@media(max-width:820px){.kpis{grid-template-columns:repeat(2,1fr)}.grid2{grid-template-columns:1fr;gap:24px}h1{font-size:32px}
+  .navlinks{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:#0a2c58;border-bottom:1px solid var(--line);padding:8px 0}
+  .navlinks.open{display:flex}nav .wrap{position:relative}.menutoggle{display:flex}.navdrop{width:100%}.navdrop>a::after{display:none}
+  .navdrop-menu{display:block;position:static;border:0;box-shadow:none;padding:0;background:transparent}.bar-label{flex:0 0 110px}}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+  <a href="/" class="brand">Joseph <span>Soares</span></a>
+  <button class="menutoggle" aria-label="Menu" onclick="this.closest('nav').querySelector('.navlinks').classList.toggle('open')"><span></span><span></span><span></span></button>
+  <div class="navlinks">
+    <a href="/advisory.html" data-en="Advisory" data-fr="Services consultatifs">Advisory</a>
+    <div class="navdrop"><a href="/intelligence.html" data-en="Intelligence" data-fr="Renseignement">Intelligence</a><div class="navdrop-menu"><a href="/brief/" data-en="Briefs" data-fr="Briefs">Briefs</a><a href="/brief/index-dashboard.html" data-en="Corridor Index" data-fr="Indice Corridor">Corridor Index</a><a href="/dispatch.html" data-en="Dispatches" data-fr="Dépêches">Dispatches</a></div></div>
+    <a href="/podcast.html" data-en="Podcast" data-fr="Balado">Podcast</a>
+    <a href="/writing.html" data-en="Writing" data-fr="Écrits">Writing</a>
+    <a href="/book.html" data-en="Book" data-fr="Livre">Book</a>
+    <a href="/call.html" class="cta" data-en="Book a Call" data-fr="Prendre rendez-vous">Book a Call</a>
+    <span class="lang-buttons"><button class="active" onclick="setLang('en')">EN</button><button onclick="setLang('fr')">FR</button></span>
+  </div>
+</div></nav>
+<main>
+  <div class="crumb"><a href="/intelligence.html">Corridor Intelligence</a> › <a href="/brief/" data-en="Brief Archive" data-fr="Archives du Brief">Brief Archive</a> › <span data-en="The Corridor Index" data-fr="L&#x27;Indice Corridor">The Corridor Index</span></div>
+  <div class="cb-eyebrow" data-en="The Corridor Index" data-fr="L&#x27;Indice Corridor">The Corridor Index</div>
+  <h1 data-en="What shaped the period" data-fr="Ce qui a façonné la période">What shaped the period</h1>
+  <p class="sub" data-en="A data snapshot of the forces that moved markets, policy, and power — built from every Corridor Brief. Pick a window; read the environment at a glance." data-fr="Un instantané chiffré des forces qui ont fait bouger les marchés, les politiques et le pouvoir — bâti à partir de chaque Brief Corridor. Choisissez une période; lisez l&#x27;environnement d&#x27;un coup d&#x27;œil.">A data snapshot of the forces that moved markets, policy, and power — built from every Corridor Brief. Pick a window; read the environment at a glance.</p>
+  <div class="periods">
+    <button data-p="month" onclick="setPeriod('month')" data-en="This Month" data-fr="Ce mois">This Month</button>
+    <button data-p="quarter" onclick="setPeriod('quarter')" data-en="This Quarter" data-fr="Ce trimestre">This Quarter</button>
+    <button data-p="year" onclick="setPeriod('year')" data-en="This Year" data-fr="Cette année">This Year</button>
+    <button data-p="all" class="active" onclick="setPeriod('all')" data-en="All Time" data-fr="Depuis le début">All Time</button>
+  </div>
+  <div class="range" id="range"></div>
+  <div id="dash"><div class="loading" data-en="Loading the archive…" data-fr="Chargement de l&#x27;archive…">Loading the archive…</div></div>
+  <div class="foot-note" data-en="Built live from the Corridor Brief archive. Source data: the daily Brief, ranked by decision impact. Raw feed: <a href='/brief/archive-data/stories.csv'>stories.csv</a>." data-fr="Généré en direct à partir de l&#x27;archive du Brief Corridor. Données sources : le Brief quotidien, classé par impact décisionnel. Flux brut : <a href='/brief/archive-data/stories.csv'>stories.csv</a>.">Built live from the Corridor Brief archive. Source data: the daily Brief, ranked by decision impact. Raw feed: <a href="/brief/archive-data/stories.csv">stories.csv</a>.</div>
+</main>
+<script>
+var LANG='en', PERIOD='all', STORIES=[], EDITIONS=[];
+var T={
+  leads:{en:'Lead stories of the period',fr:'Les têtes d’affiche de la période'},
+  leadsSub:{en:'each day’s highest-impact items',fr:'les items à plus fort impact de chaque jour'},
+  themes:{en:'Dominant themes',fr:'Thèmes dominants'},
+  themesSub:{en:'stories by tag',fr:'articles par thème'},
+  sources:{en:'Source mix',fr:'Répartition des sources'},
+  sourcesSub:{en:'stories by outlet',fr:'articles par média'},
+  momentum:{en:'Daily momentum',fr:'Momentum quotidien'},
+  momentumSub:{en:'stories per edition',fr:'articles par édition'},
+  kEditions:{en:'Editions',fr:'Éditions'},kStories:{en:'Stories',fr:'Articles'},
+  kSources:{en:'Sources',fr:'Sources'},kTheme:{en:'Top theme',fr:'Thème vedette'},
+  empty:{en:'No editions in this window yet.',fr:'Aucune édition dans cette période pour l’instant.'},
+  rangeAll:{en:'All editions since launch',fr:'Toutes les éditions depuis le lancement'}
+};
+var MON={en:['January','February','March','April','May','June','July','August','September','October','November','December'],
+         fr:['janvier','février','mars','avril','mai','juin','juillet','août','septembre','octobre','novembre','décembre']};
+function esc(s){return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function inPeriod(dateStr){
+  if(PERIOD==='all') return true;
+  var d=new Date(dateStr+'T12:00:00'), now=new Date();
+  if(PERIOD==='year') return d.getFullYear()===now.getFullYear();
+  if(PERIOD==='month') return d.getFullYear()===now.getFullYear() && d.getMonth()===now.getMonth();
+  if(PERIOD==='quarter') return d.getFullYear()===now.getFullYear() && Math.floor(d.getMonth()/3)===Math.floor(now.getMonth()/3);
+  return true;
+}
+function fmtDate(ds){var d=new Date(ds+'T12:00:00');return d.getDate()+' '+MON[LANG][d.getMonth()];}
+function setPeriod(p){PERIOD=p;document.querySelectorAll('.periods button').forEach(function(b){b.classList.toggle('active',b.getAttribute('data-p')===p);});render();}
+function bars(counts, max, n){
+  var keys=Object.keys(counts).sort(function(a,b){return counts[b]-counts[a];}).slice(0,n);
+  var mx=Math.max.apply(null,keys.map(function(k){return counts[k];}).concat([1]));
+  return keys.map(function(k){
+    var w=Math.round(counts[k]/mx*100);
+    return '<div class="bar-row"><div class="bar-label" title="'+esc(k)+'">'+esc(k)+'</div><div class="bar-track"><div class="bar-fill" style="width:'+w+'%"></div></div><div class="bar-val">'+counts[k]+'</div></div>';
+  }).join('');
+}
+function render(){
+  var rows=STORIES.filter(function(s){return inPeriod(s.date);});
+  var dates={};rows.forEach(function(s){dates[s.date]=1;});
+  var eds=Object.keys(dates).sort();
+  var rangeEl=document.getElementById('range');
+  if(PERIOD==='all'){rangeEl.textContent=T.rangeAll[LANG]+' · '+(eds[0]?fmtDate(eds[0])+' – '+fmtDate(eds[eds.length-1]):'');}
+  else{rangeEl.textContent=eds.length?(fmtDate(eds[0])+' – '+fmtDate(eds[eds.length-1])):'';}
+  var dash=document.getElementById('dash');
+  if(!rows.length){dash.innerHTML='<div class="loading">'+T.empty[LANG]+'</div>';return;}
+  // KPIs
+  var srcSet={};rows.forEach(function(s){if(s.domain)srcSet[s.domain]=1;});
+  var tagC={};rows.forEach(function(s){var t=LANG==='fr'?(s.tag_fr||s.tag_en):s.tag_en;if(t)tagC[t]=(tagC[t]||0)+1;});
+  var topTag=Object.keys(tagC).sort(function(a,b){return tagC[b]-tagC[a];})[0]||'—';
+  var kpis='<div class="kpis">'
+    +'<div class="kpi"><div class="n">'+eds.length+'</div><div class="l">'+T.kEditions[LANG]+'</div></div>'
+    +'<div class="kpi"><div class="n">'+rows.length+'</div><div class="l">'+T.kStories[LANG]+'</div></div>'
+    +'<div class="kpi"><div class="n">'+Object.keys(srcSet).length+'</div><div class="l">'+T.kSources[LANG]+'</div></div>'
+    +'<div class="kpi"><div class="n" style="font-size:22px;padding-top:8px">'+esc(topTag)+'</div><div class="l">'+T.kTheme[LANG]+'</div></div>'
+    +'</div>';
+  // Lead stories: rank asc, then date desc; top 12
+  var leads=rows.slice().sort(function(a,b){return a.rank-b.rank || (a.date<b.date?1:-1);}).slice(0,12);
+  var leadHtml='<section class="block"><h2 class="sec">'+T.leads[LANG]+'<span>'+T.leadsSub[LANG]+'</span></h2>';
+  leads.forEach(function(s){
+    var hl=LANG==='fr'?(s.headline_fr||s.headline_en):s.headline_en;
+    var tg=LANG==='fr'?(s.tag_fr||s.tag_en):s.tag_en;
+    leadHtml+='<div class="lead-item"><div class="lead-rank">#'+s.rank+'</div><div class="lead-body">'
+      +'<div class="lead-meta"><span class="lead-tag">'+esc(tg)+'</span>'+fmtDate(s.date)+'</div>'
+      +'<div class="lead-hl"><a href="'+esc(s.url)+'" target="_blank" rel="noopener">'+esc(hl)+'</a></div>'
+      +'<div class="lead-src">'+esc(s.outlet)+' · '+esc(s.domain)+'</div></div></div>';
+  });
+  leadHtml+='</section>';
+  // Themes + Sources
+  var srcC={};rows.forEach(function(s){if(s.outlet)srcC[s.outlet]=(srcC[s.outlet]||0)+1;});
+  var mid='<div class="grid2">'
+    +'<section class="block"><h2 class="sec">'+T.themes[LANG]+'<span>'+T.themesSub[LANG]+'</span></h2>'+bars(tagC,0,9)+'</section>'
+    +'<section class="block"><h2 class="sec">'+T.sources[LANG]+'<span>'+T.sourcesSub[LANG]+'</span></h2>'+bars(srcC,0,9)+'</section>'
+    +'</div>';
+  // Momentum columns (per edition)
+  var perDay={};rows.forEach(function(s){perDay[s.date]=(perDay[s.date]||0)+1;});
+  var dk=Object.keys(perDay).sort();
+  var mxd=Math.max.apply(null,dk.map(function(d){return perDay[d];}).concat([1]));
+  var cols='<section class="block"><h2 class="sec">'+T.momentum[LANG]+'<span>'+T.momentumSub[LANG]+'</span></h2><div class="cols">';
+  dk.forEach(function(d){
+    var h=Math.round(perDay[d]/mxd*150)+10;
+    cols+='<div class="colwrap"><div class="col" style="height:'+h+'px"><span class="cv">'+perDay[d]+'</span></div><div class="collabel">'+fmtDate(d)+'</div></div>';
+  });
+  cols+='</div></section>';
+  dash.innerHTML=kpis+leadHtml+mid+cols;
+}
+function setLang(l){LANG=l;document.documentElement.lang=l;
+  document.querySelectorAll('[data-'+l+']').forEach(function(n){var v=n.getAttribute('data-'+l);if(v)n.innerHTML=v;});
+  document.querySelectorAll('.lang-buttons button').forEach(function(b){b.classList.toggle('active',b.textContent.trim().toLowerCase()===l);});
+  try{localStorage.setItem('js-lang',l);}catch(e){}
+  if(STORIES.length)render();
+}
+fetch('/brief/archive-data/stories.json').then(function(r){return r.json();}).then(function(d){
+  STORIES=d;
+  try{var s=localStorage.getItem('js-lang');if(s==='fr')setLang('fr');}catch(e){}
+  render();
+}).catch(function(){
+  document.getElementById('dash').innerHTML='<div class="loading">Archive unavailable — view the <a href="/brief/" style="color:var(--gold)">Brief archive</a>.</div>';
+});
+</script>
+</body></html>
