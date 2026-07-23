@@ -139,7 +139,7 @@
 
   <url>
     <loc>https://josephsoares.com/brief/</loc>
-    <lastmod>2026-07-22</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -180,6 +180,10 @@
   <url>
     <loc>https://josephsoares.com/brief/2026-07-22.html</loc>
     <lastmod>2026-07-22</lastmod>
+  </url>
+  <url>
+    <loc>https://josephsoares.com/brief/2026-07-23.html</loc>
+    <lastmod>2026-07-23</lastmod>
   </url>
 
   <!-- Allied Hub Series — Corridor Intelligence long-form (added 2026-07-14) -->
