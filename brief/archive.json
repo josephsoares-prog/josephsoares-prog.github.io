@@ -1,5 +1,14 @@
 [
  {
+  "date": "2026-07-23",
+  "long_en": "Thursday, 23 July 2026",
+  "long_fr": "jeudi 23 juillet 2026",
+  "count": 22,
+  "lead_en": "Trump vows to destroy an Iranian bridge or power plant for every ship Iran hits in Hormuz",
+  "lead_fr": "Trump promet de détruire un pont ou une centrale iranienne pour chaque navire touché par l'Iran dans le détroit d'Ormuz",
+  "url": "/brief/2026-07-23.html"
+ },
+ {
   "date": "2026-07-22",
   "long_en": "Wednesday, 22 July 2026",
   "long_fr": "mercredi 22 juillet 2026",
@@ -52,14 +61,5 @@
   "lead_en": "US strikes bridges and naval bases inside Iran to choke Hormuz supply routes",
   "lead_fr": "Les États-Unis frappent ponts et bases navales en Iran pour asphyxier les routes d’Ormuz",
   "url": "/brief/2026-07-17.html"
- },
- {
-  "date": "2026-07-16",
-  "long_en": "Thursday, 16 July 2026",
-  "long_fr": "jeudi 16 juillet 2026",
-  "count": 13,
-  "lead_en": "TSMC posts a record Q2 profit and pledges an extra $100B for Arizona",
-  "lead_fr": "TSMC affiche un bénéfice trimestriel record et engage 100 G$ de plus pour l’Arizona",
-  "url": "/brief/2026-07-16.html"
  }
 ]
