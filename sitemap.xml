@@ -285,4 +285,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://josephsoares.com/corridor-files.html</loc>
+    <lastmod>2026-07-23</lastmod>
+  </url>
+  <url>
+    <loc>https://josephsoares.com/files/2026-07-23-cpc-001.html</loc>
+    <lastmod>2026-07-23</lastmod>
+  </url>
 </urlset>
