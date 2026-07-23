@@ -1,6 +1,6 @@
 # The Corridor Files — Data Spine
 
-**The rule that makes this product:** every person is a structured record from first entry. The annual book is an export of these files, not a writing project.
+**The founding rule of The Corridor Files:** every person is a structured record from first entry. The annual book is an export of these files, not a writing project.
 
 ## Record format
 One markdown file per person: `files/data/records/{lastname-firstname}.md`. YAML front-matter carries the structured fields; the body carries sourced narrative notes only.
@@ -17,5 +17,5 @@ Add a term only by editing this README in the same commit — the vocabulary is 
 2. **Roles and relationships, not character.** Character claims appear only as attributed quotes from published sources.
 3. **Directors and above**, or anyone who has publicly placed themselves in a political fight. Junior staff are not public figures and do not get records.
 4. **Non-partisan in construction.** Party is a data field, never a judgment.
-5. **No dossiers on private individuals.** Not a public actor in politics → not in this product.
+5. **Private citizens are not covered.** The Corridor Files documents public actors in public life — no one else.
 6. `last_verified` is updated every time a record is re-checked; stale records (>6 months) are flagged by the review pipeline before book export.
