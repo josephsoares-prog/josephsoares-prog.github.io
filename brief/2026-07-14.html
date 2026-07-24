@@ -79,6 +79,15 @@ h1{font-family:'Oswald',sans-serif;text-transform:uppercase;font-weight:600;marg
 
 @media(max-width:880px){.navlinks{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:#0a2c58;border-bottom:1px solid var(--border-light);padding:8px 0}.navlinks.open{display:flex}.nav-inner{position:relative}.menutoggle{display:flex}.navdrop{width:100%}.navdrop>a::after{display:none}.navdrop-menu{display:block;position:static;border:0;box-shadow:none;padding:0;background:transparent}.navdrop-menu a{padding:12px 30px 12px 54px;opacity:.82}}
 </style>
+<style id="ci-capture-css">
+.ci-capture-form{display:flex;gap:10px;max-width:460px;margin:14px auto 0;flex-wrap:wrap;justify-content:center}
+.ci-capture-input{flex:1;min-width:220px;background:rgba(255,255,255,.06);border:1px solid rgba(242,239,233,.28);border-radius:3px;padding:13px 15px;color:#F2EFE9;font-size:15px;font-family:'Inter',Arial,sans-serif}
+.ci-capture-input::placeholder{color:rgba(242,239,233,.5)}
+.ci-capture-input:focus{outline:none;border-color:#D4AF37}
+.ci-capture-btn{background:#D4AF37;color:#0A3161;border:0;border-radius:3px;padding:13px 26px;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.12em;font-size:14px;font-weight:600;cursor:pointer}
+.ci-capture-btn:hover{background:#E6C860}
+.ci-capture-msg{font-family:'Inter',Arial,sans-serif;font-size:14px;color:#D4AF37;margin:12px 0 0;min-height:1em;text-align:center}
+</style>
 </head>
 <body>
 <nav><div class="nav-inner">
@@ -409,6 +418,11 @@ h1{font-family:'Oswald',sans-serif;text-transform:uppercase;font-weight:600;marg
     <p data-en="The Corridor Brief lands at 5 AM, every day. Get it before the news cycle catches up." data-fr="Le Brief Corridor paraît à 5 h, tous les jours. Recevez-le avant que le cycle médiatique ne rattrape son retard.">The Corridor Brief lands at 5 AM, every day. Get it before the news cycle catches up.</p>
     <a class="cb-cta" href="/intelligence.html#email" data-en="Get the Brief →" data-fr="Recevoir le Brief →">Get the Brief →</a>
   </div>
+<section class="ci-capture" style="max-width:720px;margin:36px auto;text-align:center;padding:28px 22px;background:#072244;border:1px solid rgba(212,175,55,.25);border-radius:6px">
+<h2 style="font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.05em;font-size:22px;color:#E6C860;margin:0 0 8px">Get the Brief before the market opens</h2>
+<p style="color:rgba(242,239,233,.78);margin:0 0 16px;font-size:16px">The Corridor Brief, in your inbox every morning — the day ranked by consequence, five minutes flat. Free.</p>
+<form class="ci-capture-form" action="https://app.kit.com/forms/f30ff33b6f/subscriptions" method="post"><input class="ci-capture-input" type="email" name="email_address" placeholder="Your email address" aria-label="Email" required><button class="ci-capture-btn" type="submit">Send me the Brief</button></form><p class="ci-capture-msg" role="status" aria-live="polite"></p>
+</section>
 </main>
 <script>
 function setLang(l){document.documentElement.lang=l;
@@ -416,5 +430,8 @@ function setLang(l){document.documentElement.lang=l;
  document.querySelectorAll('.lang-buttons button').forEach(function(b){b.classList.toggle('active',b.textContent.trim().toLowerCase()===l);});
  try{localStorage.setItem('js-lang',l);}catch(e){}}
 try{var s=localStorage.getItem('js-lang');if(s==='fr')setLang('fr');}catch(e){}
+</script>
+<script id="ci-capture-js">
+document.addEventListener('submit',function(e){var f=e.target;if(!(f.classList&&f.classList.contains('ci-capture-form')))return;e.preventDefault();var msg=f.parentNode.querySelector('.ci-capture-msg'),btn=f.querySelector('button');var done=f.getAttribute('data-msg')||'Thank you \u2014 check your inbox to confirm your subscription.';if(btn){btn.disabled=true;btn.dataset.t=btn.textContent;btn.textContent='\u2026';}fetch(f.action,{method:'POST',body:new FormData(f),headers:{'Accept':'application/json'}}).then(function(r){return r.ok?r.json().catch(function(){return{};}):Promise.reject();}).then(function(){if(msg)msg.textContent=done;f.reset();if(btn){btn.disabled=false;btn.textContent=btn.dataset.t||'Subscribe';}}).catch(function(){f.submit();});});
 </script>
 </body></html>
