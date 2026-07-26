@@ -1,5 +1,14 @@
 [
  {
+  "date": "2026-07-26",
+  "long_en": "Sunday, 26 July 2026",
+  "long_fr": "dimanche 26 juillet 2026",
+  "count": 19,
+  "lead_en": "The US-Iran war grinds into a third week as Washington strikes Iran again, Tehran hits Gulf bases, and Trump threatens to bomb Iranian infrastructure over Hormuz",
+  "lead_fr": "La guerre américano-iranienne entre dans sa troisième semaine : Washington frappe de nouveau l'Iran, Téhéran vise des bases du Golfe et Trump menace de bombarder les infrastructures iraniennes à propos d'Ormuz",
+  "url": "/brief/2026-07-26.html"
+ },
+ {
   "date": "2026-07-25",
   "long_en": "Saturday, 25 July 2026",
   "long_fr": "samedi 25 juillet 2026",
@@ -52,14 +61,5 @@
   "lead_en": "US launches a ninth night of strikes on Iran as American troop deaths reach 17",
   "lead_fr": "Les États-Unis lancent une neuvième nuit de frappes sur l’Iran; 17 militaires américains tués",
   "url": "/brief/2026-07-20.html"
- },
- {
-  "date": "2026-07-19",
-  "long_en": "Sunday, 19 July 2026",
-  "long_fr": "dimanche 19 juillet 2026",
-  "count": 10,
-  "lead_en": "US launches a ninth straight night of strikes on Iran as the US death toll reaches 17",
-  "lead_fr": "Les États-Unis lancent une neuvième nuit consécutive de frappes sur l’Iran; le bilan américain atteint 17 morts",
-  "url": "/brief/2026-07-19.html"
  }
 ]
