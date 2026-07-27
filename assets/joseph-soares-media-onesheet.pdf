@@ -1,1 +1,276 @@
-JVBERi0xLjQKJZOMi54gUmVwb3J0TGFiIEdlbmVyYXRlZCBQREYgZG9jdW1lbnQgKG9wZW5zb3VyY2UpCjEgMCBvYmoKPDwKL0YxIDIgMCBSIC9GMiAzIDAgUiAvRjMgNCAwIFIgL0Y0IDUgMCBSCj4+CmVuZG9iagoyIDAgb2JqCjw8Ci9CYXNlРm9udCAvSGVsdmV0aWNhIC9FbmNvZGluZyAvV2luQW5zaUVuY29kaW5nIC9OYW1lIC9GMSAvU3VidHlwZSAvVHlwZTEgL1R5cGUgL0ZvbnQKPj4KZW5kb2JqCjMgMCBvYmoKPDwKL0Jhc2VGb250IC9IZWx2ZXRpY2EtQm9sZCAvRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZyAvTmFtZSAvRjIgL1N1YnR5cGUgL1R5cGUxIC9UeXBlIC9Gb250Cj4+CmVuZG9iago0IDAgb2JqCjw8Ci9CYXNlRm9udCAvWmFwZkRpbmdiYXRzIC9OYW1lIC9GMyAvU3VidHlwZSAvVHlwZTEgL1R5cGUgL0ZvbnQKPj4KZW5kb2JqCjUgMCBvYmoKPDwKL0Jhc2VGb250IC9IZWx2ZXRpY2EtT2JsaXF1ZSAvRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZyAvTmFtZSAvRjQgL1N1YnR5cGUgL1R5cGUxIC9UeXBlIC9Gb250Cj4+CmVuZG9iago2IDAgb2JqCjw8Ci9Db250ZW50cyAxMCAwIFIgL01lZGlhQm94IFsgMCAwIDYxMiA3OTIgXSAvUGFyZW50IDkgMCBSIC9SZXNvdXJjZXMgPDwKL0ZvbnQgMSAwIFIgL1Byb2NTZXQgWyAvUERGIC9UZXh0IC9JbWFnZUIgL0ltYWdlQyAvSW1hZ2VJIF0KPj4gL1JvdGF0ZSAwIC9UcmFucyA8PAoKPj4gCiAgL1R5cGUgL1BhZ2UKPj4KZW5kb2JqCjcgMCBvYmoKPDwKL1BhZ2VNb2RlIC9Vc2VOb25lIC9QYWdlcyA5IDAgUiAvVHlwZSAvQ2F0YWxvZwo+PgplbmRvYmoKOCAwIG9iago8PAovQXV0aG9yIChhbm9ueW1vdXMpIC9DcmVhdGlvbkRhdGUgKEQ6MjAyNjA3MjcwODEzMTItMDQnMDAnKSAvQ3JlYXRvciAoYW5vbnltb3VzKSAvS2V5d29yZHMgKCkgL01vZERhdGUgKEQ6MjAyNjA3MjcwODEzMTItMDQnMDAnKSAvUHJvZHVjZXIgKFJlcG9ydExhYiBQREYgTGlicmFyeSAtIFwob3BlbnNvdXJjZVwpKSAKICAvU3ViamVjdCAodW5zcGVjaWZpZWQpIC9UaXRsZSAodW50aXRsZWQpIC9UcmFwcGVkIC9GYWxzZQo+PgplbmRvYmoKOSAwIG9iago8PAovQ291bnQgMSAvS2lkcyBbIDYgMCBSIF0gL1R5cGUgL1BhZ2VzCj4+CmVuZG9iagoxMCAwIG9iago8PAovRmlsdGVyIFsgL0FTQ0lJODVEZWNvZGUgL0ZsYXRlRGVjb2RlIF0gL0xlbmd0aCAyMDQxCj4+CnN0cmVhbQpHYXVITD8kIyFgJ1JlPDJcNTBgRFBQK2UsZCYuTEs1MiZfPSFjPWhrcV1fITdDMkFnTkVnWkxOcFcwV0hrcTRnN0NkVmZETjI6bWlkNWI7Jj1ydDZMbzojXG42JCwjX082N1IwNTBbMGlLaGIyMTpHZVo4MyxVRz5dcEtjTVFSRiIpa2FQcE1YXFZQXzojKDxbO2lHRj1ocyQ/YVsvMGQ/a20oT1YiUVtOImZNPF0zMEdAZy5TLmRyN2hwISRsIjRubzUmMHVeWC4wSW5EMGlPT15IalgqbD1WLyZeaUUqNDomQG1UVCNudD9BLz8mPTdBMl4jYyckVmNAZ1tYVmxSZj50Tm1pKmc1aihiLTA/MzxEV0hqQUYwWTJmM3AyY0NRYyZcVEYjKnJnPT4sbDZtKSQuN2dHciphYi8qbWFSJGE3J25eQEdFSklDdD90ajNWSS5FNyNiaHRcKyJhOV9bKTw1MlpoKDdBIkFOdS0lR2hrPGReKjJPc3NddFdAW2EqbWB1QGUtaEtRVCpdYTInUkpsVDIqdCxkc2JmT3NoKzBaQFFUWlRWKTUlcUFKPmE6YllIYm0wK00zPms7XmBPcUdJVlouOS1objQxVypCJWlKS0huLXBsNS5uYEInVClgQUNxW1BoPlA1PClUOCJYKil1dWI5WzBiXytXJVs8JFkrL1EpSSk+M0cyIWZXX0A1dDYwaGMuZkUmNS0/XnU2OygzTG9xPzwlLCRHTCJEKGpMMl90TE9rLkA/dFdRKU1xZDRfbnJKMkA4XGFeIVlhcl5AaWFOMy1qKChFYShGTG9NNzcoLS02L1Bjbi4jTDB0QzJcMF5TTidxYDUkN141TzpPRyM/ciktcSQuPGBqV3Q+aWQpV2FkIXJxWSFIWTs4cFAsbW1FIVUoZT5xblwxYT5DKmNiUUVeXzNSWjZjOFdYW0teOyM1XiRZQkktOE9WTG1uTThWUypgZDNvWlVLbUNgJjBjTyxmImglVFcmXjVKK0BJLSMoUj9JNShDRUBBJFMvMmAyUEdXWFZickc7OydDMVRZcVNOTiFXWiZMM1AtViNJUyNOSl5YV0M1V0lqQ090P2w8ZSokPS1OS2UuUUJYSk1VOmRGOiEyXzE9Wkp1PGpeZXRVZVNQRDc/dVA7NEk5ZyFtNSFIPllJOXRZZnBPQGE/dHBrSGg8RDBtZ0BZQzpXOmFLdT4xJ2xXciEtX1tyQ0dPV0srYyFxamQpQ2M7K2ZXXXEnPUwySk48Nkw4Rmc5Y2tDYSxKJmluJTY2J2ZYZEVjJU83KUdLLUtfNDMjXlZPOjAnV0RwSDhmPV4qJCNvZVpaYVpkVDRnc0YnTzZZRUtIJSFTRidnRzNeYT9TSUldQTJPXzc9czFZKkZGV28zTidjI1s5QzJSczlQOVIyMDMxNiJkPG9zbV4/c004amxtWmUiKFNsN2ZDbnAtVi8sLT5Ock45Mz1HUkJTajgiaUY8Wjk3YmZNJ1E6LHU5WiZaQGo+VVZKLkwmcFknUjVcJj07YF8zUyUnPDpOcT5xUEBYT21FZEZEYCQ2dXBVPUszOyVBPEdLLWo/JEdqWiwoJFAwIV5ES1VLLmJQNT08X0xdJUFJRC9IblFPKUtOWylaTlMoYW4wPSlIVEF0ZXFQIVxIaVYoaFZJJGhxNi4lXEdJUi9bSGJqKkMtSldGIkUhcV9eI1lMOCxzWSo1UCZYNUMyJjg7VmMhbV0rVlNmMHNYb01dbVpBaVgvU150NCR0R2Q/ck1laFNsRkkyK0g9N0k2Sj9fTU5QPVRvaEVkTm8oOnBxTkcnV1NOQCFCRWI4bmIwT0RabTM2ZUBYWFosQktQSSQ1QkEyIUFxXVxEMj84RFZecmw/V3U4M2hBI2h1PjJGPWIqRFc8LjBaO3JGPC9gXSdFLSRELC5EaFBncWU9LVE8L0pZLkNyJlZhMEs7LGk+bDNFUDQ6amtzS2pEJ1pgTyssJE06aztOPj1DMEQ8KlteIltQczIjV1p1Oz5bVTEzNkltcDY9WE5TYihsa0deRFExPGdRZ1FoPGhpN0V1OW4kLzdGUlNuPWhDam5dIktvLixZLCMmZ24qbTYoJlg/WGAjMFVjZVFaUmRTXGpxR1VcQTlhM0ddUG1bMG00UGhsVjFWYnAxbiQrKl8hTChqMi1VQWBHODNGVTpeOl03KVoia240N0FSVkY6N0xhYyE6YCwncCw/VXBrakhlMF1SLyhnbVJSMSxxTjt1UjIsbkZuZ1VvJVtdcm8kZklMYTRfLmAiX0snLiQ+aVNBLTIuazk5UkAiNXVxS2xTbTBobHQ1UF8hVWRQMjooajs2XmguQGRpK20jMj8lZlhZNkJaJFRTIkhpZE1IaGFqXCcma3JqK1hMPENLXihicThETUZJUDZDaURdLkVMbi9mSms6TTJIR2lsTTh1IjRuSldGJF0jOE03RisqMnNLYzJLdVhdSylFYEhdR0JnOjpMQCNyW29zPyNhPVpBZEhyQjstXnEtNk91RixudVFRSFwjSlNyNUk0JTFtN0I2LldWUm5FKS5ZYSk0ZmtIWGlXb1ZlWmNANFBET01hN3BxOW5XSVtLUTsjM2xUPnNlamBFPCpMVG9JZGdlSzRAQS05KFBUa2ZOWT9uXF9GLTM4WDJCNFZxSGdmSitvLy8xM1ZPYz5OPzIrZUEpa1RQVEA9bnRWYWAtZ3NLIS1pWDFWOyY4c34+ZW5kc3RyZWFtCmVuZG9iagp4cmVmCjAgMTEKMDAwMDAwMDAwMCA2NTUzNSBmIAowMDAwMDAwMDYxIDAwMDAwIG4gCjAwMDAwMDAxMjIgMDAwMDAgbiAKMDAwMDAwMDIyOSAwMDAwMCBuIAowMDAwMDAwMzQxIDAwMDAwIG4gCjAwMDAwMDA0MjQgMDAwMDAgbiAKMDAwMDAwMDUzOSAwMDAwMCBuIAowMDAwMDAwNzMzIDAwMDAwIG4gCjAwMDAwMDA4MDEgMDAwMDAgbiAKMDAwMDAwMTA2MiAwMDAwMCBuIAowMDAwMDAxMTIxIDAwMDAwIG4gCnRyYWlsZXIKPDwKL0lEIApbPDk2ZjYyMzFiOWMxMTczOGVhMmQ2MzQ2ZGJmOGUwOTMyPjw5NmY2MjMxYjljMTE3MzhlYTJkNjM0NmRiZjhlMDkzMj5dCiUgUmVwb3J0TGFiIGdlbmVyYXRlZCBQREYgZG9jdW1lbnQgLS0gZGlnZXN0IChvcGVuc291cmNlKQoKL0luZm8gOCAwIFIKL1Jvb3QgNyAwIFIKL1NpemUgMTEKPj4Kc3RhcnR4cmVmCjMyNTQKJSVFT0YK
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 5 0 R /F2 6 0 R /F4 7 0 R >> >> /Contents 4 0 R >>
+endobj
+4 0 obj
+<< /Length 4468 >>
+stream
+0.039 0.192 0.380 rg
+0.0 709.0 612.0 83.0 re f
+0.831 0.686 0.216 rg
+0.0 704.0 612.0 5.0 re f
+BT
+0.949 0.937 0.914 rg
+/F2 26 Tf
+1 0 0 1 50.0 740.0 Tm
+(JOSEPH  SOARES) Tj
+ET
+BT
+0.831 0.686 0.216 rg
+/F2 10 Tf
+1 0 0 1 50.0 720.0 Tm
+(PRESS  &  MEDIA  -  ONE-SHEET) Tj
+ET
+BT
+0.660 0.640 0.600 rg
+/F1 9 Tf
+1 0 0 1 372.0 748.0 Tm
+(info@josephsoares.com) Tj
+ET
+BT
+0.660 0.640 0.600 rg
+/F1 9 Tf
+1 0 0 1 372.0 734.0 Tm
+(josephsoares.com/media.html) Tj
+ET
+BT
+0.660 0.640 0.600 rg
+/F1 9 Tf
+1 0 0 1 372.0 720.0 Tm
+(Interviews in EN / FR / PT) Tj
+ET
+BT
+0.039 0.192 0.380 rg
+/F2 13 Tf
+1 0 0 1 50.0 674.0 Tm
+(Strategic advisor, author, and commentator on crisis leadership and) Tj
+ET
+BT
+0.039 0.192 0.380 rg
+/F2 13 Tf
+1 0 0 1 50.0 657.0 Tm
+(global business risk.) Tj
+ET
+BT
+0.831 0.686 0.216 rg
+/F2 11 Tf
+1 0 0 1 50.0 633.0 Tm
+(BIOGRAPHY) Tj
+ET
+0.79 0.76 0.72 RG 0.6 w
+50 628.0 m 562 628.0 l S
+BT
+0.133 0.188 0.247 rg
+/F1 10 Tf
+1 0 0 1 50.0 613.0 Tm
+(Joseph Soares served in the Prime Minister's Office of Canada during the 2008 financial crisis and as) Tj
+ET
+BT
+0.133 0.188 0.247 rg
+/F1 10 Tf
+1 0 0 1 50.0 600.0 Tm
+(Chief of Staff in the Senate of Canada through the pandemic - two of the highest-pressure rooms in the) Tj
+ET
+BT
+0.133 0.188 0.247 rg
+/F1 10 Tf
+1 0 0 1 50.0 587.0 Tm
+(country, in two of its hardest years. His commentary has been published in Forbes and Newsweek. His) Tj
+ET
+BT
+0.133 0.188 0.247 rg
+/F1 10 Tf
+1 0 0 1 50.0 574.0 Tm
+(first book, Leadership Under Fire: Forged in the Rooms of Power, arrives October 6, 2026. He is trilingual) Tj
+ET
+BT
+0.133 0.188 0.247 rg
+/F1 10 Tf
+1 0 0 1 50.0 561.0 Tm
+(in English, French, and Portuguese and gives interviews in all three. Based in Ottawa-Gatineau, Canada.) Tj
+ET
+BT
+0.831 0.686 0.216 rg
+/F2 11 Tf
+1 0 0 1 50.0 536.0 Tm
+(THE BOOK - OCTOBER 6, 2026) Tj
+ET
+0.79 0.76 0.72 RG 0.6 w
+50 531.0 m 562 531.0 l S
+BT
+0.133 0.188 0.247 rg
+/F1 10 Tf
+1 0 0 1 50.0 516.0 Tm
+(Leadership Under Fire: Forged in the Rooms of Power - a field manual for the decisions that don't allow) Tj
+ET
+BT
+0.133 0.188 0.247 rg
+/F1 10 Tf
+1 0 0 1 50.0 503.0 Tm
+(a second draft. Review copies and interview requests welcome ahead of launch.) Tj
+ET
+BT
+0.831 0.686 0.216 rg
+/F2 11 Tf
+1 0 0 1 50.0 478.0 Tm
+(INTERVIEW TOPICS) Tj
+ET
+0.79 0.76 0.72 RG 0.6 w
+50 473.0 m 562 473.0 l S
+BT
+0.831 0.686 0.216 rg
+/F2 10 Tf
+1 0 0 1 50.0 458.0 Tm
+(-) Tj
+ET
+BT
+0.133 0.188 0.247 rg
+/F1 10 Tf
+1 0 0 1 64.0 458.0 Tm
+(Leadership under fire - deciding when the stakes are national) Tj
+ET
+BT
+0.831 0.686 0.216 rg
+/F2 10 Tf
+1 0 0 1 50.0 443.0 Tm
+(-) Tj
+ET
+BT
+0.133 0.188 0.247 rg
+/F1 10 Tf
+1 0 0 1 64.0 443.0 Tm
+(Crisis leadership & institutional decision-making) Tj
+ET
+BT
+0.831 0.686 0.216 rg
+/F2 10 Tf
+1 0 0 1 50.0 428.0 Tm
+(-) Tj
+ET
+BT
+0.133 0.188 0.247 rg
+/F1 10 Tf
+1 0 0 1 64.0 428.0 Tm
+(Geopolitical risk & the global economy - how power, capital, and resources move) Tj
+ET
+BT
+0.831 0.686 0.216 rg
+/F2 10 Tf
+1 0 0 1 50.0 413.0 Tm
+(-) Tj
+ET
+BT
+0.133 0.188 0.247 rg
+/F1 10 Tf
+1 0 0 1 64.0 413.0 Tm
+(The Canada-US corridor: trade, energy, critical minerals \(analyst, non-partisan\)) Tj
+ET
+BT
+0.831 0.686 0.216 rg
+/F2 10 Tf
+1 0 0 1 50.0 398.0 Tm
+(-) Tj
+ET
+BT
+0.133 0.188 0.247 rg
+/F1 10 Tf
+1 0 0 1 64.0 398.0 Tm
+(AI as a leadership problem, not a technology one) Tj
+ET
+BT
+0.831 0.686 0.216 rg
+/F2 10 Tf
+1 0 0 1 50.0 383.0 Tm
+(-) Tj
+ET
+BT
+0.133 0.188 0.247 rg
+/F1 10 Tf
+1 0 0 1 64.0 383.0 Tm
+(Portugal, the Azores & the Lusophone world \(available in Portuguese\)) Tj
+ET
+BT
+0.831 0.686 0.216 rg
+/F2 11 Tf
+1 0 0 1 50.0 360.0 Tm
+(PRESS) Tj
+ET
+0.79 0.76 0.72 RG 0.6 w
+50 355.0 m 562 355.0 l S
+BT
+0.133 0.188 0.247 rg
+/F2 10 Tf
+1 0 0 1 50.0 340.0 Tm
+(Bylined & published in:) Tj
+ET
+BT
+0.133 0.188 0.247 rg
+/F1 10 Tf
+1 0 0 1 190.0 340.0 Tm
+(Forbes  -  Newsweek  -  Acoriano Oriental) Tj
+ET
+BT
+0.133 0.188 0.247 rg
+/F2 10 Tf
+1 0 0 1 50.0 325.0 Tm
+(Featured & covered in:) Tj
+ET
+BT
+0.133 0.188 0.247 rg
+/F1 10 Tf
+1 0 0 1 50.0 312.0 Tm
+(The Globe and Mail - National Post - Maclean's - Huffington Post - Le Devoir - La Presse - Le Soleil) Tj
+ET
+BT
+0.290 0.340 0.400 rg
+/F4 9 Tf
+1 0 0 1 50.0 291.0 Tm
+(MBA - PMP - Adm.A. - ACC     Host, Corridor Intelligence \(youtube.com/@corridorintelligence\)) Tj
+ET
+0.027 0.133 0.267 rg
+0.0 0.0 612.0 44.0 re f
+BT
+0.831 0.686 0.216 rg
+/F2 10 Tf
+1 0 0 1 50.0 17.0 Tm
+(MEDIA CONTACT) Tj
+ET
+BT
+0.949 0.937 0.914 rg
+/F1 9 Tf
+1 0 0 1 150.0 17.0 Tm
+(info@josephsoares.com   -   josephsoares.com/media.html   -   linkedin.com/in/soaresjoseph) Tj
+ET
+
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+7 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Oblique /Encoding /WinAnsiEncoding >>
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000261 00000 n 
+0000004780 00000 n 
+0000004877 00000 n 
+0000004979 00000 n 
+trailer
+<< /Size 8 /Root 1 0 R >>
+startxref
+5084
+%%EOF
