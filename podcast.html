@@ -905,8 +905,8 @@ document.head.appendChild(o)}initApollo();</script>
         <span class="hero-label">The Podcast</span>
         <h1>Corridor Intelligence</h1>
         <p>You built something real. The decisions that got you here weren't in any playbook. This podcast exists because those stories deserve more than a LinkedIn post — and the leaders who lived them deserve a conversation that matches the weight of what they've done.</p>
-        <a href="#apply" class="hero-cta">Be a Guest on Season 1 &rarr;</a>
-        <div><span class="launch-badge">Launching May 2026 &mdash; Now Booking Season 1 Guests</span></div>
+        <a href="#apply" class="hero-cta" data-fr="Devenez invit&eacute; de Corridor Intelligence &rarr;">Be a Guest on Corridor Intelligence &rarr;</a>
+        <div><span class="launch-badge" data-fr="Sur candidature et sur invitation">By application and invitation</span></div>
     </div>
 </section>
 
@@ -1135,44 +1135,73 @@ document.head.appendChild(o)}initApollo();</script>
 <!-- GUEST APPLICATION -->
 <section class="apply-section" id="apply">
     <div class="container">
-        <span class="section-label">Season 1 Guest Application</span>
-        <h2>Is this conversation for you?</h2>
-        <p class="apply-intro">We don't book guests based on follower counts or media profiles. We book leaders who have been genuinely tested — people whose decisions carried real weight and whose stories will resonate with an audience of peers.</p>
-
-        <div class="apply-criteria">
-            <div class="criteria-item">
-                <span class="criteria-check">&#10003;</span>
-                <span class="criteria-text">You've built or led a business, organization, or team through a high-stakes moment</span>
+        <span class="section-label" data-fr="Devenir invit&eacute;">Be a Guest</span>
+        <h2 data-fr="Cette conversation est-elle pour vous&nbsp;?">Is this conversation for you?</h2>
+        <p class="apply-intro" data-fr="Nous ne choisissons pas nos invit&eacute;s selon le nombre d&rsquo;abonn&eacute;s ou la notori&eacute;t&eacute; m&eacute;diatique. Nous invitons des dirigeants r&eacute;ellement mis &agrave; l&rsquo;&eacute;preuve &mdash; dont les d&eacute;cisions ont eu un poids r&eacute;el. Si c&rsquo;est votre parcours, parlez-nous-en.">We don&rsquo;t choose guests by follower counts or media profiles. We invite leaders who have been genuinely tested &mdash; whose decisions carried real weight. If that&rsquo;s your story, we&rsquo;d like to hear it.</p>
+        <form id="guest-application" novalidate style="max-width:640px; margin:8px auto 0; text-align:left;">
+            <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute; left:-9999px; width:1px; height:1px; opacity:0;">
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:16px 20px;">
+                <div style="display:flex; flex-direction:column;">
+                    <label for="ga-name" style="font-family:'Oswald',sans-serif; text-transform:uppercase; letter-spacing:0.1em; font-size:0.72rem; color:var(--navy); margin-bottom:6px;" data-fr="Nom">Name</label>
+                    <input id="ga-name" name="name" type="text" required style="width:100%; padding:12px 14px; border:1px solid rgba(10,49,97,0.25); border-radius:4px; background:#fff; color:var(--navy); font-family:'EB Garamond',serif; font-size:1rem; box-sizing:border-box;">
+                </div>
+                <div style="display:flex; flex-direction:column;">
+                    <label for="ga-email" style="font-family:'Oswald',sans-serif; text-transform:uppercase; letter-spacing:0.1em; font-size:0.72rem; color:var(--navy); margin-bottom:6px;" data-fr="Courriel">Email</label>
+                    <input id="ga-email" name="email" type="email" required style="width:100%; padding:12px 14px; border:1px solid rgba(10,49,97,0.25); border-radius:4px; background:#fff; color:var(--navy); font-family:'EB Garamond',serif; font-size:1rem; box-sizing:border-box;">
+                </div>
+                <div style="display:flex; flex-direction:column;">
+                    <label for="ga-role" style="font-family:'Oswald',sans-serif; text-transform:uppercase; letter-spacing:0.1em; font-size:0.72rem; color:var(--navy); margin-bottom:6px;" data-fr="R&ocirc;le ou titre">Role or title</label>
+                    <input id="ga-role" name="role" type="text" style="width:100%; padding:12px 14px; border:1px solid rgba(10,49,97,0.25); border-radius:4px; background:#fff; color:var(--navy); font-family:'EB Garamond',serif; font-size:1rem; box-sizing:border-box;">
+                </div>
+                <div style="display:flex; flex-direction:column;">
+                    <label for="ga-org" style="font-family:'Oswald',sans-serif; text-transform:uppercase; letter-spacing:0.1em; font-size:0.72rem; color:var(--navy); margin-bottom:6px;" data-fr="Organisation">Organization</label>
+                    <input id="ga-org" name="organization" type="text" style="width:100%; padding:12px 14px; border:1px solid rgba(10,49,97,0.25); border-radius:4px; background:#fff; color:var(--navy); font-family:'EB Garamond',serif; font-size:1rem; box-sizing:border-box;">
+                </div>
             </div>
-            <div class="criteria-item">
-                <span class="criteria-check">&#10003;</span>
-                <span class="criteria-text">You've made a decision under pressure that shaped who you are today</span>
+            <div style="display:flex; flex-direction:column; margin-top:16px;">
+                <label for="ga-link" style="font-family:'Oswald',sans-serif; text-transform:uppercase; letter-spacing:0.1em; font-size:0.72rem; color:var(--navy); margin-bottom:6px;" data-fr="LinkedIn ou lien pertinent">LinkedIn or a relevant link</label>
+                <input id="ga-link" name="link" type="text" style="width:100%; padding:12px 14px; border:1px solid rgba(10,49,97,0.25); border-radius:4px; background:#fff; color:var(--navy); font-family:'EB Garamond',serif; font-size:1rem; box-sizing:border-box;">
             </div>
-            <div class="criteria-item">
-                <span class="criteria-check">&#10003;</span>
-                <span class="criteria-text">You're willing to go beyond the highlight reel and share the real story</span>
+            <div style="display:flex; flex-direction:column; margin-top:16px;">
+                <label for="ga-story" style="font-family:'Oswald',sans-serif; text-transform:uppercase; letter-spacing:0.1em; font-size:0.72rem; color:var(--navy); margin-bottom:6px;" data-fr="Pourquoi vous seriez un bon invit&eacute; &mdash; et ce qui vous a mis &agrave; l&rsquo;&eacute;preuve">Why you&rsquo;d be a strong guest &mdash; and what tested you</label>
+                <textarea id="ga-story" name="story" rows="5" required style="width:100%; padding:12px 14px; border:1px solid rgba(10,49,97,0.25); border-radius:4px; background:#fff; color:var(--navy); font-family:'EB Garamond',serif; font-size:1rem; box-sizing:border-box; resize:vertical;"></textarea>
             </div>
-            <div class="criteria-item">
-                <span class="criteria-check">&#10003;</span>
-                <span class="criteria-text">You want your experience to serve others who face similar challenges</span>
+            <div style="margin-top:24px;">
+                <button type="submit" class="hero-cta" style="border:none; cursor:pointer;" data-fr="Envoyer ma candidature">Submit application</button>
             </div>
-        </div>
-
-        <div class="apply-actions">
-            <a href="https://calendar.app.google/pEyrPMvGY2TuEndcA" class="apply-primary">Book a Pre-Interview Call &rarr;</a>
-            <span class="apply-alt">or email <a href="mailto:info@josephsoares.com?subject=Podcast%20Guest%20Application%20%E2%80%94%20The%20Corridor">info@josephsoares.com</a></span>
+            <p style="font-family:'EB Garamond',serif; font-size:0.85rem; color:var(--text-mid); margin-top:14px;" data-fr="Vos coordonn&eacute;es servent uniquement &agrave; &eacute;valuer votre candidature. Pas d&rsquo;infolettre, pas de partage.">Your details are used only to consider your application. No newsletter, no sharing.</p>
+        </form>
+        <div id="guest-application-success" style="display:none; max-width:640px; margin:8px auto 0; padding:28px; background:#fff; border:1px solid rgba(212,175,55,0.4); border-radius:6px; text-align:left;">
+            <h3 style="font-family:'Oswald',sans-serif; color:var(--navy); margin:0 0 10px;" data-fr="Merci.">Thank you.</h3>
+            <p style="font-family:'EB Garamond',serif; color:var(--text-mid); margin:0; line-height:1.6;" data-fr="Votre candidature nous est parvenue. Nous les lisons toutes et r&eacute;pondons lorsqu&rsquo;il y a une ad&eacute;quation.">Your application is in. We read every one, and we reply when there&rsquo;s a fit.</p>
         </div>
     </div>
+    <script>
+    (function(){
+        var f=document.getElementById('guest-application');
+        if(!f) return;
+        f.addEventListener('submit', function(e){
+            e.preventDefault();
+            var hp=f.elements['website']; if(hp && hp.value){ return; }
+            var btn=f.querySelector('button[type=submit]');
+            var g=function(n){ return f.elements[n] ? f.elements[n].value : ''; };
+            var payload={ name:g('name'), email:g('email'), role:g('role'), organization:g('organization'), link:g('link'), story:g('story'), source:'podcast.html — guest application', submitted_at:new Date().toISOString() };
+            if(btn){ btn.disabled=true; btn.textContent='Sending…'; }
+            fetch('https://hook.us2.make.com/eh1g1vsa6rdrfrg13o1lx6l8k18zyeme', { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(payload) })
+            .then(function(){ f.style.display='none'; var s=document.getElementById('guest-application-success'); if(s){ s.style.display='block'; s.scrollIntoView({behavior:'smooth', block:'center'}); } })
+            .catch(function(){ if(btn){ btn.disabled=false; btn.textContent='Submit application'; } alert('Something went wrong sending your application. Please try again in a moment.'); });
+        });
+    })();
+    </script>
 </section>
 
 <!-- CTA -->
 <section class="cta-section">
     <div class="container">
-        <h2>Your story deserves this conversation.</h2>
-        <p>Season 1 launches May 2026. We're booking a limited number of guests who have been genuinely tested. If that's you, let's talk.</p>
+        <h2 data-fr="Votre parcours m&eacute;rite cette conversation.">Your story deserves this conversation.</h2>
+        <p data-fr="Nous invitons un petit nombre de dirigeants r&eacute;ellement mis &agrave; l&rsquo;&eacute;preuve. Si c&rsquo;est votre parcours, parlez-nous-en.">We interview a small number of leaders who have been genuinely tested. If that&rsquo;s your story, tell us about it.</p>
         <div class="cta-buttons">
-            <a href="https://calendar.app.google/pEyrPMvGY2TuEndcA" class="cta-primary">Book a Pre-Interview Call &rarr;</a>
-            <a href="mailto:info@josephsoares.com?subject=Podcast%20Guest%20Inquiry%20%E2%80%94%20The%20Corridor" class="cta-secondary">Email Joseph Directly</a>
+            <a href="#apply" class="hero-cta" data-fr="Devenez invit&eacute; de Corridor Intelligence &rarr;">Be a Guest on Corridor Intelligence &rarr;</a>
         </div>
     </div>
 </section>
