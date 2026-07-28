@@ -109,7 +109,7 @@ h1{font-family:'Oswald',sans-serif;text-transform:uppercase;font-weight:600;marg
   <div class="crumb"><a href="/intelligence.html">Corridor Intelligence</a> › <span data-en="Brief Archive" data-fr="Archives du Brief">Brief Archive</span></div>
   <div class="cb-eyebrow" data-en="Corridor Brief" data-fr="Brief Corridor">Corridor Brief</div>
   <h1 data-en="The Archive" data-fr="Les Archives">The Archive</h1>
-  <div class="cb-meta" data-en="15 editions · 299 stories since launch · latest 7 below" data-fr="15 éditions · 299 articles depuis le lancement · les 7 plus récentes ci-dessous">15 editions · 299 stories since launch · latest 7 below</div>
+  <div class="cb-meta" data-en="15 editions · 297 stories since launch · latest 7 below" data-fr="15 éditions · 297 articles depuis le lancement · les 7 plus récentes ci-dessous">15 editions · 297 stories since launch · latest 7 below</div>
   <div class="int-tabs">
     <a class="int-tab active" href="/brief/" data-en="Briefs" data-fr="Briefs">Briefs</a>
     <a class="int-tab" href="/brief/index-dashboard.html" data-en="Index" data-fr="Indice">Index</a>
@@ -118,8 +118,8 @@ h1{font-family:'Oswald',sans-serif;text-transform:uppercase;font-weight:600;marg
   <p class="cb-intro" data-en="The Brief is the daily read — the stories that will move markets, policy, and decisions, ranked by consequence and cut to a single line each. Five minutes, every morning." data-fr="Le Brief, c'est la lecture quotidienne — les nouvelles qui font bouger les marchés, les politiques et les décisions, classées par conséquence et réduites à une seule ligne. Cinq minutes, chaque matin.">The Brief is the daily read — the stories that will move markets, policy, and decisions, ranked by consequence and cut to a single line each. Five minutes, every morning.</p>
     <div class="arch-row">
       <a class="arch-date" href="/brief/2026-07-28.html" data-en="Tuesday, 28 July 2026" data-fr="mardi 28 juillet 2026">Tuesday, 28 July 2026</a>
-      <div class="arch-lead" data-en="The US-Iran pause holds a third day but Iran denies talks as Netanyahu heads to the White House; oil slides toward $86 and Wall Street braces for the Fed and four Big Tech reports in one week" data-fr="La trêve américano-iranienne tient un troisième jour mais l&#x27;Iran nie les pourparlers alors que Netanyahou gagne la Maison-Blanche ; le pétrole glisse vers 86 $ et Wall Street se prépare à la Fed et à quatre résultats des géants technologiques en une semaine">The US-Iran pause holds a third day but Iran denies talks as Netanyahu heads to the White House; oil slides toward $86 and Wall Street braces for the Fed and four Big Tech reports in one week</div>
-      <div class="arch-count" data-en="26 items" data-fr="26 articles">26 items</div>
+      <div class="arch-lead" data-en="A global chip rout deepens — Korea&#x27;s Kospi sinks 10% and SK Hynix plunges ~15% — as AI-financing fears crack the year&#x27;s biggest trade" data-fr="La déroute mondiale des puces s&#x27;aggrave — le Kospi coréen plonge de 10 % et SK Hynix chute d&#x27;environ 15 % — les craintes sur le financement de l&#x27;IA fissurant la plus grande tendance de l&#x27;année">A global chip rout deepens — Korea&#x27;s Kospi sinks 10% and SK Hynix plunges ~15% — as AI-financing fears crack the year&#x27;s biggest trade</div>
+      <div class="arch-count" data-en="24 items" data-fr="24 articles">24 items</div>
     </div>
     <div class="arch-row">
       <a class="arch-date" href="/brief/2026-07-27.html" data-en="Monday, 27 July 2026" data-fr="lundi 27 juillet 2026">Monday, 27 July 2026</a>
@@ -164,6 +164,6 @@ function setLang(l){document.documentElement.lang=l;
 try{var s=localStorage.getItem('js-lang');if(s==='fr')setLang('fr');}catch(e){}
 </script>
 <script id="ci-capture-js">
-document.addEventListener('submit',function(e){var f=e.target;if(!(f.classList&&f.classList.contains('ci-capture-form')))return;e.preventDefault();var msg=f.parentNode.querySelector('.ci-capture-msg'),btn=f.querySelector('button');var done=f.getAttribute('data-msg')||'Thank you — check your inbox to confirm your subscription.';if(btn){btn.disabled=true;btn.dataset.t=btn.textContent;btn.textContent='…';}fetch(f.action,{method:'POST',body:new FormData(f),headers:{'Accept':'application/json'}}).then(function(r){return r.ok?r.json().catch(function(){return{};}):Promise.reject();}).then(function(){if(msg)msg.textContent=done;f.reset();if(btn){btn.disabled=false;btn.textContent=btn.dataset.t||'Subscribe';}}).catch(function(){f.submit();});});
+document.addEventListener('submit',function(e){var f=e.target;if(!(f.classList&&f.classList.contains('ci-capture-form')))return;e.preventDefault();var msg=f.parentNode.querySelector('.ci-capture-msg'),btn=f.querySelector('button');var done=f.getAttribute('data-msg')||'Thank you \u2014 check your inbox to confirm your subscription.';if(btn){btn.disabled=true;btn.dataset.t=btn.textContent;btn.textContent='\u2026';}fetch(f.action,{method:'POST',body:new FormData(f),headers:{'Accept':'application/json'}}).then(function(r){return r.ok?r.json().catch(function(){return{};}):Promise.reject();}).then(function(){if(msg)msg.textContent=done;f.reset();if(btn){btn.disabled=false;btn.textContent=btn.dataset.t||'Subscribe';}}).catch(function(){f.submit();});});
 </script>
 </body></html>
