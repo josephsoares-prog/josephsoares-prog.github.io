@@ -146,6 +146,7 @@ function esc(s){return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replac
 function inPeriod(dateStr){
   if(PERIOD==='all') return true;
   var d=new Date(dateStr+'T12:00:00'), now=new Date();
+  if(PERIOD==='week'){var mon=new Date(now);mon.setHours(0,0,0,0);mon.setDate(mon.getDate()-((mon.getDay()+6)%7));var sun=new Date(mon);sun.setDate(mon.getDate()+7);return d>=mon&&d<sun;}
   if(PERIOD==='year') return d.getFullYear()===now.getFullYear();
   if(PERIOD==='month') return d.getFullYear()===now.getFullYear() && d.getMonth()===now.getMonth();
   if(PERIOD==='quarter') return d.getFullYear()===now.getFullYear() && Math.floor(d.getMonth()/3)===Math.floor(now.getMonth()/3);
