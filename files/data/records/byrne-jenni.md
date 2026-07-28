@@ -14,10 +14,11 @@ connections:
   - {person_id: teneycke-kory, relationship_type: rival, source_url: "https://en.wikipedia.org/wiki/Kory_Teneycke"}
 languages: [en]
 first_recorded: 2026-07-23
-last_verified: 2026-07-23
+last_verified: 2026-07-24
 sources:
   - {claim: "Ran the Conservatives' 2025 federal campaign; publicly criticized by Kory Teneycke for the campaign's handling of the Trump/trade-war shift", url: "https://en.wikipedia.org/wiki/Kory_Teneycke", publication: "Wikipedia (citing contemporaneous reporting)", date: "2025"}
+  - {claim: "Publicly stands by the 2025 decision not to pivot Poilievre to Trump-era messaging; confirms she will not run the next federal election campaign", url: "https://www.cbc.ca/lite/story/1.7604245", publication: "CBC News", date: "2026-07"}
 status: active
-notes: "The Teneycke–Byrne relationship (longtime allies turned public critics post-2025) is the connective tissue between the OLO story and the external operative cluster."
+notes: "The Teneycke–Byrne relationship (longtime allies turned public critics post-2025) is the connective tissue between the OLO story and the external operative cluster. By mid-2026 Byrne has stepped back from the next-campaign role while defending her 2025 strategy — the succession that put Steve Outhouse in as campaign manager now looks settled from her side."
 ---
 Harper-era campaign operative and manager of the Conservatives' 2025 federal campaign, whose conduct of that race drew public criticism from former ally Kory Teneycke — the visible edge of the operative-class split this inventory tracks.
