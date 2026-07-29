@@ -1,11 +1,20 @@
 [
  {
+  "date": "2026-07-29",
+  "long_en": "Wednesday, 29 July 2026",
+  "long_fr": "mercredi 29 juillet 2026",
+  "count": 21,
+  "lead_en": "The Fed decides today and is widely expected to hold at 3.50-3.75% for a fifth straight meeting — with the statement's language, not the level, the market's real signal",
+  "lead_fr": "La Fed tranche aujourd'hui et devrait, selon un large consensus, maintenir à 3,50-3,75 % pour une cinquième réunion d'affilée — le libellé du communiqué, non le niveau, étant le vrai signal pour le marché",
+  "url": "/brief/2026-07-29.html"
+ },
+ {
   "date": "2026-07-28",
   "long_en": "Tuesday, 28 July 2026",
   "long_fr": "mardi 28 juillet 2026",
-  "count": 24,
-  "lead_en": "A global chip rout deepens — Korea's Kospi sinks 10% and SK Hynix plunges ~15% — as AI-financing fears crack the year's biggest trade",
-  "lead_fr": "La déroute mondiale des puces s'aggrave — le Kospi coréen plonge de 10 % et SK Hynix chute d'environ 15 % — les craintes sur le financement de l'IA fissurant la plus grande tendance de l'année",
+  "count": 26,
+  "lead_en": "US-Iran fighting stays paused for a third day, but Tehran calls the talks 'fabricated' as Netanyahu heads to the White House to plot the next phase",
+  "lead_fr": "Les combats américano-iraniens restent suspendus pour un troisième jour, mais Téhéran qualifie les pourparlers de « fabriqués » tandis que Netanyahou gagne la Maison-Blanche pour planifier la suite",
   "url": "/brief/2026-07-28.html"
  },
  {

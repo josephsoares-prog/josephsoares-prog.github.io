@@ -1,5 +1,14 @@
 [
  {
+  "date": "2026-07-29",
+  "long_en": "Wednesday, 29 July 2026",
+  "long_fr": "mercredi 29 juillet 2026",
+  "count": 21,
+  "lead_en": "The Fed decides today and is widely expected to hold at 3.50-3.75% for a fifth straight meeting — with the statement's language, not the level, the market's real signal",
+  "lead_fr": "La Fed tranche aujourd'hui et devrait, selon un large consensus, maintenir à 3,50-3,75 % pour une cinquième réunion d'affilée — le libellé du communiqué, non le niveau, étant le vrai signal pour le marché",
+  "url": "/brief/2026-07-29.html"
+ },
+ {
   "date": "2026-07-28",
   "long_en": "Tuesday, 28 July 2026",
   "long_fr": "mardi 28 juillet 2026",
@@ -52,23 +61,5 @@
   "lead_en": "Trump vows to destroy an Iranian bridge or power plant for every ship Iran hits in Hormuz",
   "lead_fr": "Trump promet de détruire un pont ou une centrale iranienne pour chaque navire touché par l'Iran dans le détroit d'Ormuz",
   "url": "/brief/2026-07-23.html"
- },
- {
-  "date": "2026-07-22",
-  "long_en": "Wednesday, 22 July 2026",
-  "long_fr": "mercredi 22 juillet 2026",
-  "count": 20,
-  "lead_en": "US strikes Iran again as a tanker is hit in Hormuz; a 10-day ceasefire moves into focus",
-  "lead_fr": "Nouvelles frappes américaines sur l'Iran; un pétrolier touché dans le détroit d'Ormuz; un cessez-le-feu de 10 jours se dessine",
-  "url": "/brief/2026-07-22.html"
- },
- {
-  "date": "2026-07-21",
-  "long_en": "Tuesday, 21 July 2026",
-  "long_fr": "mardi 21 juillet 2026",
-  "count": 20,
-  "lead_en": "US strikes Iran again as a tanker is hit in Hormuz; a 10-day ceasefire moves into focus",
-  "lead_fr": "Nouvelles frappes américaines sur l'Iran; un pétrolier touché dans le détroit d'Ormuz; un cessez-le-feu de 10 jours se dessine",
-  "url": "/brief/2026-07-21.html"
  }
 ]
