@@ -1,5 +1,14 @@
 [
  {
+  "date": "2026-08-01",
+  "long_en": "Saturday, 1 August 2026",
+  "long_fr": "samedi 1er août 2026",
+  "count": 20,
+  "lead_en": "Deadline day: Trump's threatened 35% tariff on Canada takes hold as talks run to the wire — but CUSMA-compliant goods, close to 90% of exports, stay exempt",
+  "lead_fr": "Jour d'échéance : le tarif de 35 % dont Trump menace le Canada entre en vigueur alors que les pourparlers filent jusqu'au bout — mais les biens conformes à l'ACEUM, près de 90 % des exportations, restent exemptés",
+  "url": "/brief/2026-08-01.html"
+ },
+ {
   "date": "2026-07-31",
   "long_en": "Friday, 31 July 2026",
   "long_fr": "vendredi 31 juillet 2026",
@@ -52,14 +61,5 @@
   "lead_en": "The US-Iran war grinds into a third week as Washington strikes Iran again, Tehran hits Gulf bases, and Trump threatens to bomb Iranian infrastructure over Hormuz",
   "lead_fr": "La guerre américano-iranienne entre dans sa troisième semaine : Washington frappe de nouveau l'Iran, Téhéran vise des bases du Golfe et Trump menace de bombarder les infrastructures iraniennes à propos d'Ormuz",
   "url": "/brief/2026-07-26.html"
- },
- {
-  "date": "2026-07-25",
-  "long_en": "Saturday, 25 July 2026",
-  "long_fr": "samedi 25 juillet 2026",
-  "count": 21,
-  "lead_en": "The US carries out a 13th straight night of strikes on Iran as Tehran hits US targets in Bahrain, Kuwait and Jordan and rejects a ceasefire",
-  "lead_fr": "Les États-Unis mènent une treizième nuit consécutive de frappes sur l'Iran, tandis que Téhéran vise des cibles américaines à Bahreïn, au Koweït et en Jordanie et rejette un cessez-le-feu",
-  "url": "/brief/2026-07-25.html"
  }
 ]
