@@ -17,17 +17,18 @@
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="apple-touch-icon" href="/favicon.ico">
     <title>Issues Focus | Corridor Intelligence</title>
-    <meta name="description" content="Issues Focus — six written segments, kept current: the Iran war, the Russia-Ukraine war, the Israel-Lebanon-Palestine-Syria conflict zone, Africa, Europe, and Türkiye's regional resurgence. By Joseph Soares.">
+    <meta name="description" content="Issues Focus — six tracked segments, each with its own dedicated page: the Iran war, the Russia-Ukraine war, the Israel-Lebanon-Palestine-Syria conflict zone, Africa, Europe, and Türkiye's regional resurgence. By Joseph Soares.">
+    <link rel="canonical" href="https://josephsoares.com/issues-focus.html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "WebPage",
+      "@type": "CollectionPage",
       "name": "Issues Focus — Corridor Intelligence",
       "url": "https://josephsoares.com/issues-focus.html",
-      "description": "Six written monitor segments, kept current: the Iran war, the Russia-Ukraine war, the Israel-Lebanon-Palestine-Syria conflict zone, Africa, Europe, and Türkiye's regional resurgence.",
+      "description": "Six tracked segments, each with its own dedicated page: the Iran war, the Russia-Ukraine war, the Israel-Lebanon-Palestine-Syria conflict zone, Africa, Europe, and Türkiye's regional resurgence.",
       "inLanguage": ["en"],
       "author": {
         "@type": "Person",
@@ -56,13 +57,6 @@
   .eyebrow{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.3em;
     font-size:13px;font-weight:500;color:var(--gold)}
   a{color:inherit}
-  .btn{display:inline-block;font-family:'Oswald',sans-serif;text-transform:uppercase;
-    letter-spacing:.14em;font-weight:600;font-size:15px;text-decoration:none;cursor:pointer;
-    padding:18px 34px;border-radius:2px;transition:.2s;border:1px solid transparent}
-  .btn-gold{background:var(--gold);color:#0E3A70}
-  .btn-gold:hover{background:#E6C860}
-  .btn-ghost{background:transparent;color:var(--bone);border-color:var(--line)}
-  .btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
 
   nav{position:sticky;top:0;z-index:20;background:rgba(7,34,68,.90);
     backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
@@ -95,20 +89,19 @@
   .blk{padding:36px 0}
   .h2{font-family:'Oswald',sans-serif;text-transform:uppercase;font-weight:600;font-size:30px;margin-bottom:22px}
 
-  .lead-grid{display:grid;grid-template-columns:1fr;gap:32px;max-width:840px}
-  .lead-card{background:var(--panel2);border:1px solid var(--line);border-radius:3px;padding:32px 30px}
-  .lead-card .tag{display:inline-block;font-family:'Oswald',sans-serif;text-transform:uppercase;
-    letter-spacing:.16em;font-size:11.5px;font-weight:600;color:var(--gold);border:1px solid rgba(212,175,55,.4);
-    border-radius:100px;padding:5px 14px;margin-bottom:16px}
-  .lead-card h3{font-family:'Oswald',sans-serif;text-transform:uppercase;font-weight:600;font-size:24px;margin-bottom:14px}
-  .lead-card h4{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.12em;
-    font-size:13px;font-weight:600;color:var(--gold);margin:22px 0 10px}
-  .lead-card h4:first-of-type{margin-top:4px}
-  .lead-card p{font-size:17px;color:var(--bone);margin-bottom:14px}
-  .lead-card p b{color:var(--gold);font-weight:600}
-  .lead-card .src{font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:.04em;color:var(--muted);line-height:1.7;margin-top:8px}
-  .lead-card .src a{color:var(--muted);text-decoration:underline}
-  .lead-card .src a:hover{color:var(--gold)}
+  .teaser-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px}
+  .teaser-card{background:var(--panel2);border:1px solid var(--line);border-radius:3px;padding:28px 26px;
+    display:flex;flex-direction:column}
+  .teaser-card .tag{display:inline-block;font-family:'Oswald',sans-serif;text-transform:uppercase;
+    letter-spacing:.16em;font-size:11px;font-weight:600;color:var(--gold);border:1px solid rgba(212,175,55,.4);
+    border-radius:100px;padding:4px 12px;margin-bottom:14px;align-self:flex-start}
+  .teaser-card h3{font-family:'Oswald',sans-serif;text-transform:uppercase;font-weight:600;font-size:22px;margin-bottom:10px}
+  .teaser-card h3 a{color:var(--bone);text-decoration:none}
+  .teaser-card h3 a:hover{color:var(--gold)}
+  .teaser-card p{font-size:16.5px;color:var(--muted);line-height:1.6;margin-bottom:18px;flex:1}
+  .teaser-card .go{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.12em;font-size:13px;
+    font-weight:600;color:var(--bone);text-decoration:none}
+  .teaser-card .go:hover{color:var(--gold)}
 
   .method{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--panel);padding:28px 0;margin-top:10px}
   .method p{font-size:15.5px;color:var(--muted);font-style:italic;max-width:80ch}
@@ -134,12 +127,11 @@
     .hero{padding:60px 0 40px}
     .hero h1{font-size:38px;max-width:100%}
     .hero .lede{max-width:100%}
-    .lead-grid{grid-template-columns:1fr}
+    .teaser-grid{grid-template-columns:1fr}
   }
 </style>
 </head>
 <body>
-
 <nav>
   <div class="wrap">
     <a href="/index.html" class="brand" style="text-decoration:none;color:inherit">Joseph <span>Soares</span></a>
@@ -159,116 +151,55 @@
   <div class="wrap">
     <div class="eyebrow">Corridor Intelligence — Issues Focus</div>
     <h1>Issues <span class="i">Focus</span></h1>
-    <p class="lede">Six written segments, kept current: two active wars — <b>Iran</b> and <b>Russia-Ukraine</b> — the interlocking <b>Israel-Lebanon-Palestine-Syria</b> conflict zone, two structural watches, <b>Africa</b> and <b>Europe</b>, and one rising-power watch, <b>Türkiye</b>. Each is read the same way: where things stand, what's actually being decided, who holds the leverage, and what to watch next.</p>
-    <p class="updated">Last updated: <b>August 3, 2026</b> · Reviewed and improved in place, not re-published as a new post</p>
+    <p class="lede">Six tracked segments, each with its own dedicated page: two active wars — <b>Iran</b> and <b>Russia-Ukraine</b> — the interlocking <b>Israel-Lebanon-Palestine-Syria</b> conflict zone, two structural watches, <b>Africa</b> and <b>Europe</b>, and one rising-power watch, <b>Türkiye</b>. Each brief is read the same way: where things stand, what's actually being decided, who holds the leverage, and what to watch next.</p>
+    <p class="updated">Last updated: <b>August 3, 2026</b> &middot; Reviewed and improved in place, not re-published as a new post</p>
   </div>
 </section>
 
 <section class="blk">
   <div class="wrap">
     <div class="h2">Issue Monitor</div>
-    <div class="lead-grid">
-
-      <div class="lead-card">
+    <div class="teaser-grid">
+      <div class="teaser-card">
         <span class="tag">Active war</span>
-        <h3>Iran</h3>
-        <p><b>Where things stand.</b> The 2026 Iran war forced a leadership transition in real time. A US-Israeli strike killed Supreme Leader Ali Khamenei on February 28. The Assembly of Experts named his son, Mojtaba Khamenei, as successor eight days later, on March 8 — a succession decided inside an active war, not through the normal process. Iran retaliated by closing the Strait of Hormuz, the passage for roughly a fifth of the world's seaborne oil and LNG; the closure triggered one of the largest disruptions to global energy supply in decades. Five months on, the strait is still not fully open: Tehran now collects tolls on permitted transits rather than restoring normal passage.</p>
-
-        <h4>The decision points</h4>
-        <p>Two things are unresolved right now. First, whether Tehran's August 2 statement is a real break or a negotiating posture: Foreign Ministry spokesperson Esmaeil Baqaei publicly denied that talks with Washington are resuming, in the same window that Washington paused a planned strike. Second, whether a new Iran-Oman agreement on a separately negotiated maritime route becomes the basis for a wider reopening, or stays a narrow carve-out alongside continued closure elsewhere. Baqaei was explicit on this point: the agreement "does not mean the waterway reopens."</p>
-
-        <h4>Who holds the leverage</h4>
-        <p>Mojtaba Khamenei's government has chosen confrontation over accommodation so far. The Assembly of Experts selected him within a week of his father's death, guided by the elder Khamenei's own standard that Iran's leader should be "hated by the enemy" rather than praised by it — that gives Tehran domestic cover to hold its position. But the war has hit Iran's economy hard: a state-linked think tank now projects 45% of Iranians below the poverty line, up from 30% five years ago, and trade with China, Iran's largest partner, fell roughly 75% in the spring. Oil revenue is running well behind Iran's full-year target under the reimposed naval blockade. Washington and Israel hold military and economic pressure; Gulf producers that declared force majeure on their own exports have an independent interest in de-escalation; China's exposure gives it a quiet stake in a settlement, without it acting as mediator.</p>
-
-        <h4>What to watch</h4>
-        <p>An IAEA report on June 5 found "no major changes" to Iran's nuclear program despite months of strikes, and that Iran has not accounted for enriched uranium missing since strikes on its facilities — Iran still holds material enriched to roughly 60%, a short step from weapons-grade. That verification gap is a harder check on Tehran's real position than any public statement. So is the conflict's geography: a Houthi blockade near Bab al-Mandeb and a reported Ukrainian strike on an Iranian vessel in the Caspian both show the war expanding rather than narrowing, which cuts against any near-term full reopening of Hormuz.</p>
-
-        <div class="src">Sources: <a href="https://www.aljazeera.com/news/2026/2/28/irans-supreme-leader-ali-khamenei-killed-in-us-israeli-attacks-reports" target="_blank">Al Jazeera, Feb 28</a> · <a href="https://www.aljazeera.com/news/2026/3/8/iran-names-khameneis-son-as-new-supreme-leader-after-fathers-killing-2" target="_blank">Al Jazeera, Mar 8</a> · <a href="https://www.washingtonpost.com/world/2026/08/02/trump-cancels-iran-attack-citing-progress-deal-tehran-israel-alert/" target="_blank">Washington Post, Aug 2</a> · <a href="https://www.globalsecurity.org/wmd/library/news/iran/2026/08/iran-260802-irna04.htm" target="_blank">IRNA via GlobalSecurity, Aug 2</a> · <a href="https://www.aljazeera.com/news/2026/7/26/what-lies-ahead-for-iran-as-scope-of-us-war-grows-beyond-hormuz" target="_blank">Al Jazeera, Jul 26</a> · <a href="https://www.koreatimes.co.kr/amp/world/20260605/iaea-finds-little-change-in-iran-nuclear-program-after-war" target="_blank">Korea Times, Jun 5</a> · <a href="https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis" target="_blank">Wikipedia, 2026 Strait of Hormuz crisis</a></div>
+        <h3><a href="/issues-focus-iran.html">Iran</a></h3>
+        <p>A US-Israeli strike killed Iran's Supreme Leader in February, forcing an in-war succession and a Strait of Hormuz closure that, five months on, is still not fully resolved.</p>
+        <a class="go" href="/issues-focus-iran.html">Read the full brief &rarr;</a>
       </div>
 
-      <div class="lead-card">
+      <div class="teaser-card">
         <span class="tag">Attritional war</span>
-        <h3>Russia–Ukraine</h3>
-        <p><b>Where things stand.</b> Now past its fourth year, the war has settled into a pattern the International Crisis Group's 2026 assessment describes bluntly: Russian forces keep gaining ground at heavy cost, and the front line has not decisively broken. Moscow has taken ground around Pokrovsk, Siversk, Huliaipole and Kupiansk, and pushed into Dnipropetrovsk and Sumy. Kyiv still holds roughly a fifth of Donetsk plus large parts of Kherson and Zaporizhzhia, and keeps striking Russian oil infrastructure and Black Sea shipping.</p>
-
-        <h4>The decision point</h4>
-        <p>The live decision sits in Washington, not on the battlefield. The Trump administration told the UN Security Council on July 31 that Russia and Ukraine "must negotiate a ceasefire and durable peace" by August 8 — five days from today — and that the US is "prepared to implement additional measures to secure peace" if the deadline passes. Ukraine has already accepted the administration's proposed ceasefire terms. Russia has not. Deputy Security Council chair Dmitry Medvedev called the deadline itself "a threat and a step towards war," rejecting the ultimatum outright.</p>
-
-        <h4>Who holds the leverage</h4>
-        <p>Washington's stated leverage is economic: tariffs directly on Russia, plus secondary tariffs on countries still buying Russian oil and gas, chiefly China and India. Trump has undercut that leverage in the same breath, saying of Putin, "I don't know that sanctions bother him" — a signal Moscow can read as easily as anyone. Russia's own posture, per analysts, is to make no further concessions and to treat envoy Steve Witkoff's Moscow visit as a chance to negotiate the sanctions threat away rather than end the war. Europe carries a separate and growing share of the load: with US financial aid to Kyiv severed, NATO's European members are funding the defense largely alone, even as Washington presses them on their own spending at the same time.</p>
-
-        <h4>What to watch</h4>
-        <p>Whether August 8 produces real, implemented measures or becomes another deadline that slides is the clearest signal of how much leverage Washington actually intends to use — deadlines have moved before in this diplomacy. Beneath that, watch whether any eventual terms include real sovereignty guarantees for Ukraine, or the outcome Crisis Group flags as the deeper risk: a settlement that leaves Kyiv "shorn of strong deterrent" against a future Russian move.</p>
-
-        <div class="src">Sources: <a href="https://www.crisisgroup.org/visual-explainers/ten-conflicts-2026/" target="_blank">International Crisis Group, "Ten Conflicts to Watch 2026"</a> · <a href="https://www.globalsecurity.org/military/world/war/russo-ukraine-2026-08-01.htm" target="_blank">GlobalSecurity, Aug 1</a> · <a href="https://kyivindependent.com/trump-sets-aug-8-deadline-for-ukraine-peace-deal-us-tells-un/" target="_blank">Kyiv Independent</a> · <a href="https://www.rferl.org/a/ukraine-war-russia-threat-sanctions-trump/33491994.html" target="_blank">RFE/RL</a></div>
+        <h3><a href="/issues-focus-russia-ukraine.html">Russia–Ukraine</a></h3>
+        <p>Past its fourth year, the front line holds while a Washington-set August 8 deadline for a ceasefire tests how much leverage the US is actually prepared to use.</p>
+        <a class="go" href="/issues-focus-russia-ukraine.html">Read the full brief &rarr;</a>
       </div>
 
-      <div class="lead-card">
+      <div class="teaser-card">
         <span class="tag">Interlocking wars</span>
-        <h3>Israel–Lebanon–Palestine–Syria</h3>
-        <p><b>Where things stand.</b> Four theaters, one zone. In Gaza, an October 2025 ceasefire ended the heaviest fighting, but its second phase — Hamas disarmament, a governance handover, and reconstruction — has stalled; hundreds have been killed since the ceasefire took hold, and Israel's cabinet approved an International Stabilization Force in late July, open only to states with normalized or peaceful ties to Israel. In Lebanon, a new war opened on March 2, days after the strike that killed Iran's Supreme Leader, and by June Israeli forces had pushed past the Litani River and occupied roughly a fifth of the country; Lebanon's currency has collapsed by nearly 98% and its economy has shrunk from $52 billion to about $18 billion. In Syria, the post-Assad government under Ahmed al-Sharaa is pursuing a security arrangement with Israel while still asserting Syria's claim to the Golan Heights.</p>
-
-        <h4>The decision points</h4>
-        <p>Three things are unresolved. First, whether Gaza's planned "National Committee for the Administration of Gaza" becomes a real governing body or stays, as one July analysis put it, something that "exists only in Cairo." Second, whether Israel's expanding footprint across Gaza, Lebanon, and Syria — described by one Carnegie Endowment panel as a "ring of buffer zones" spanning roughly 1,000 square kilometers — consolidates into a lasting security architecture or gets negotiated back. Third, whether Syria can secure a formal arrangement with Israel without conceding its Golan claim.</p>
-
-        <h4>Who holds the leverage</h4>
-        <p>Israel holds the clearest military leverage across all three fronts, including a buffer position in southern Lebanon reported to sit near Lebanon's most valuable untapped gas field. Lebanon's state has almost none: its IMF program remains stalled pending bank-restructuring legislation, and Hezbollah's own capacity has been degraded by what Israel says are hundreds of strikes since the 2024 truce. Syria's government is threading a narrow path — seeking sanctions relief (the US repealed the Caesar Act in December 2025) while avoiding the appearance of ceding ground on Golan or Lebanon. The US, as guarantor of both the Gaza ceasefire and Syria's sanctions relief, holds outsized leverage over how all three tracks move.</p>
-
-        <h4>What to watch</h4>
-        <p>Water is the underdiscussed layer beneath the visible conflict. Jordan draws on the Yarmouk basin under a 1956 allocation sharply reduced in practice, and the Golan Heights sit over aquifers that matter to Israel, Syria, and Jordan alike — but current reporting documents this far less rigorously than the territorial and political dimensions, so treat resource control as the connective thesis worth testing over time, not yet a fully documented fact. More immediately verifiable: whether Gaza's humanitarian numbers (roughly 70% of the population still lacking adequate shelter, per July reporting) keep improving, and whether Lebanon sees any real reconstruction financing before its currency crisis deepens further.</p>
-
-        <div class="src">Sources: <a href="https://jstreet.org/nine-months-in-assessing-the-status-of-the-gaza-ceasefire/" target="_blank">J Street, Jul 20</a> · <a href="https://www.jpost.com/middle-east/article-903836" target="_blank">Jerusalem Post, Jul 27</a> · <a href="https://www.aljazeera.com/news/2026/5/31/israeli-forces-push-past-lebanons-litani-river-how-significant-is-it" target="_blank">Al Jazeera, May 31</a> · <a href="https://www.timesofisrael.com/lebanon-says-hezbollah-disarmed-in-south-israel-efforts-encouraging-but-insufficient/" target="_blank">Times of Israel, Jan 8</a> · <a href="https://themiddleeastinsider.com/2026/04/28/lebanon-currency-collapse-april-2026-update/" target="_blank">Middle East Insider, Apr 28</a> · <a href="https://www.aljazeera.com/news/2026/7/26/president-ahmed-al-sharaa-syria-seeking-security-deal-with-israel" target="_blank">Al Jazeera, Jul 26</a> · <a href="https://carnegieendowment.org/middle-east/events/2026/05/israels-encroachment-on-lebanon-and-syria" target="_blank">Carnegie Endowment, Jun 4</a></div>
+        <h3><a href="/issues-focus-israel-lebanon-palestine-syria.html">Israel–Lebanon–Palestine–Syria</a></h3>
+        <p>Four theaters, one zone: a stalled Gaza ceasefire, a new war in Lebanon, and a post-Assad Syria threading talks with Israel while still claiming the Golan.</p>
+        <a class="go" href="/issues-focus-israel-lebanon-palestine-syria.html">Read the full brief &rarr;</a>
       </div>
 
-      <div class="lead-card">
+      <div class="teaser-card">
         <span class="tag">Continental watch</span>
-        <h3>Africa</h3>
-        <p><b>Where things stand.</b> Africa is usually counted as 55 states by the African Union, which includes Western Sahara, or 54 by the UN, which does not — split along colonial-linguistic lines that still shape trade and diplomacy today: a Francophone bloc anchored by the CFA franc zone across West and Central Africa, a larger Anglophone bloc across East and Southern Africa, a five-country Lusophone bloc (Angola, Mozambique, Guinea-Bissau, Cape Verde, São Tomé and Príncipe), and a single Hispanophone enclave, Equatorial Guinea. These aren't just linguistic labels: the CFA franc is still pegged to the euro through a reserve arrangement with the French Treasury, and a 2019 plan to replace it with a new "Eco" currency remains unimplemented six years on.</p>
-
-        <h4>The decision point</h4>
-        <p>The sharpest current break isn't along the old colonial lines but a new one. Mali, Niger, and Burkina Faso — formerly ECOWAS's Francophone core — formed their own confederation in mid-2024, formally exited ECOWAS in January 2025, and by the end of 2025 had launched a joint 5,000-strong military force, a shared investment bank, and withdrawn from the ICC. Whether that bloc holds together, or fractures under the jihadist pressure it was partly built to resist, is one of the continent's live tests.</p>
-
-        <h4>Who holds the leverage</h4>
-        <p>Outside powers are competing directly for what's under African ground. The US signed a strategic minerals partnership with the Democratic Republic of Congo in December 2025, paired with a US-mediated DRC-Rwanda peace deal — the DRC holds more than 70% of the world's cobalt reserves. Guinea, Morocco, and Rwanda signed related cooperation agreements at a February 2026 US Critical Minerals Ministerial, though DRC's own lawyers have challenged the deal for bypassing parliamentary ratification. China's Africa engagement is reportedly leaning harder into critical minerals as Western attention fragments across other crises. Meanwhile in Mali specifically, the jihadist group JNIM has run a fuel and trade blockade on the capital since September 2025 — a reminder that in the Sahel, armed groups hold real leverage on the ground even as governments sign resource deals in the capitals.</p>
-
-        <h4>What to watch</h4>
-        <p>The demographic numbers are the biggest under-covered story on the continent. Africa's population passed 1.5 billion in 2024 and is projected to reach 2.5 billion by 2050 — 28% of the world's population, up from 10% in 1960 — with some 620 million people projected to enter the labor force over that period. The UN's own Economic Commission for Africa is explicit that "a demographic dividend is by no means guaranteed": roughly 10 million young Africans enter the labor market every year against only about 3 million new formal jobs, and more than 100 million employed young Africans already live in extreme working poverty. Whether this generation becomes the growth engine the raw numbers suggest, or a destabilizing pressure, depends far more on governance and job creation than on demographics alone.</p>
-
-        <div class="src">Sources: <a href="https://saxafimedia.com/un-says-africa-has-54-countries-while-au-says-its-55/" target="_blank">Saxafi Media</a> · <a href="https://www.imf.org/en/News/Articles/2019/12/21/pr19487-md-statement-on-the-reform-of-west-africa-cfa-franc" target="_blank">IMF Press Release 19/487</a> · <a href="https://en.wikipedia.org/wiki/Alliance_of_Sahel_States" target="_blank">Wikipedia, Alliance of Sahel States</a> · <a href="https://www.crisisgroup.org/cmt/global/10-conflicts-watch-2026" target="_blank">Crisis Group, "Ten Conflicts to Watch 2026"</a> · <a href="https://news.mongabay.com/2026/02/scrutiny-grows-over-drc-us-minerals-deal-even-as-other-african-nations-sign-up/" target="_blank">Mongabay, Feb 12</a> · <a href="https://www.uneca.org/stories/(blog)-as-africa%E2%80%99s-population-crosses-1.5-billion,-the-demographic-window-is-opening-getting" target="_blank">UNECA</a> · <a href="https://www.worldbank.org/en/news/press-release/2026/04/08/sub-saharan-africa-s-growth-holds-but-downside-risks-mount" target="_blank">World Bank, Africa's Pulse</a> · <a href="https://mastercardfdn.org/en/our-research/africa-youth-employment-outlook-2026/" target="_blank">Mastercard Foundation</a></div>
+        <h3><a href="/issues-focus-africa.html">Africa</a></h3>
+        <p>55 countries split along colonial-linguistic lines, a new Sahel bloc breaking from ECOWAS, and a demographic surge that world powers are competing to secure the resources beneath.</p>
+        <a class="go" href="/issues-focus-africa.html">Read the full brief &rarr;</a>
       </div>
 
-      <div class="lead-card">
+      <div class="teaser-card">
         <span class="tag">Demographic watch</span>
-        <h3>Europe</h3>
-        <p><b>Where things stand.</b> The EU's fertility rate fell to 1.34 births per woman in 2024, the lowest since EU-wide records began in 2001, with births down 3.3% year over year; Malta (1.01) and Spain (1.10) sit at the bottom. Eurostat's own 2026 projection has the EU's population peaking at 453 million in 2029, then declining nearly 12% by 2100, as the share aged 80+ triples from 6% to 16%. The paradox: the EU's total population still grew slightly through 2024-25 — but almost entirely through immigration into Spain, France, and Germany, not births, so this is a fertility and aging story more than a shrinking-headcount one, at least for now.</p>
-
-        <h4>The decision point</h4>
-        <p>Whether the EU closes its own documented competitiveness gap before demographic aging compounds it. A January 2026 progress check on the Draghi competitiveness report found only 15% of its recommendations fully implemented and 24% partially implemented — with internal EU market fragmentation still acting, by the report's own estimate, like a 44% tariff on goods and 110% on services trade between member states. The report itself warns its credibility erodes by 2027 without faster implementation, against a backdrop it names explicitly: "demographic aging, low productivity, geopolitical pressures."</p>
-
-        <h4>Who holds the leverage — the "one exception" tested</h4>
-        <p>Poland is a genuine economic outperformer: 3.6% GDP growth in 2025, the EU's fourth-highest, and GDP per capita (PPP) hit a record 81% of the EU average. But the data complicates rather than confirms a clean "one exception" story. Poland's fertility rate hit a record low of 1.068 in 2025 — among the lowest in the world, below Japan, Germany, the UK, and France — and Poland posted the EU's largest absolute population loss two years running, with roughly 168,000 more deaths than births in 2025 alone. Ireland (12.3% growth, though widely flagged as distorted by multinational tax accounting), Malta, and Cyprus all posted higher headline growth than Poland in 2025. So Poland isn't uniquely exceptional on growth, and on demographics specifically it is arguably worse-positioned than the EU average, not better.</p>
-
-        <h4>What to watch</h4>
-        <p>European defense spending rose 14% in 2025 to €864 billion — the sharpest annual increase since the Cold War's end — with 22 of 29 European NATO members now meeting the 2% GDP threshold. That's a real and fast response to the security environment, but it runs in parallel with the demographic and competitiveness pressures above, not a solution to them. Whether the spending surge translates into the institutional and market reform the Draghi report calls for, or simply adds another fiscal load onto a shrinking, aging tax base, is the harder question underneath the headline numbers.</p>
-
-        <div class="src">Sources: <a href="https://ec.europa.eu/eurostat/web/products-eurostat-news/w/ddn-20260306-1" target="_blank">Eurostat, Mar 6</a> · <a href="https://ec.europa.eu/eurostat/web/products-eurostat-news/w/ddn-20260416-1" target="_blank">Eurostat, Apr 16</a> · <a href="https://www.caixabankresearch.com/en/economics-markets/public-sector/how-far-has-eu-progressed-competitiveness-compass" target="_blank">CaixaBank Research</a> · <a href="https://think.ing.com/snaps/polish-economy-grows-3-point-6-percent-and-more-strength-ahead/" target="_blank">ING THINK</a> · <a href="https://notesfrompoland.com/2026/05/28/polands-fertility-rate-fell-to-new-low-in-2025/" target="_blank">Notes From Poland, May 28</a> · <a href="https://notesfrompoland.com/2026/02/01/polands-population-decline-accelerated-in-2025-with-168000-more-deaths-than-births/" target="_blank">Notes From Poland, Feb 1</a> · <a href="https://www.sipri.org/media/press-release/2026/global-military-spending-rise-continues-european-and-asian-expenditures-surge" target="_blank">SIPRI</a> · <a href="https://www.euronews.com/business/2026/05/04/irish-economic-miracle-explained-why-all-that-glitter-isnt-gold" target="_blank">Euronews, May 4</a></div>
+        <h3><a href="/issues-focus-europe.html">Europe</a></h3>
+        <p>Record-low fertility, a population set to peak by 2029, and a stalled competitiveness agenda — tested against the claim that Poland is the one exception.</p>
+        <a class="go" href="/issues-focus-europe.html">Read the full brief &rarr;</a>
       </div>
 
-      <div class="lead-card">
+      <div class="teaser-card">
         <span class="tag">Rising-power watch</span>
-        <h3>Türkiye</h3>
-        <p><b>Where things stand.</b> Ankara moved fast to fill the vacuum left by Assad's fall, and the fastest-moving front is Syria. Erdoğan and Ahmed al-Sharaa met in February 2025 to discuss a defense pact and Turkish use of Homs-province air bases; by August 2025 their defense ministries had signed a training-and-equipment MOU covering Syria's rebuilt army — a real security relationship, though short of the formal basing rights still under separate negotiation. Turkish firms are positioned as lead players in Syria's reconstruction, forecast to exceed $20 billion in exports by 2028. At the same time, Turkey and Israel opened a genuine deconfliction channel over Syrian airspace from April 2025, modeled on existing Israel-Russia and Israel-US mechanisms — the Stimson Center's 2026 assessment reads this as managed rivalry, not resolution. Domestically, the PKK's May 2025 dissolution announcement, July 2025 weapons-burning ceremony, and October 2025 full withdrawal to northern Iraq closed a 40-year internal front, though analysts note this frees Ankara's hand against Kurdish forces in Syria and Iraq rather than signaling any Turkish pullback there.</p>
-
-        <h4>The decision points</h4>
-        <p>Four things are unresolved. First, whether the Syria relationship formalizes into actual Turkish basing rights or stays at the training-and-equipment level. Second, whether Israel-Turkey deconfliction holds as both states compete for influence in the same space, or breaks down under that competition. Third, whether the Zangezur Corridor — the long-discussed transport link through Armenia that would connect Turkey to Azerbaijan and the wider Turkic world — actually breaks ground; as of mid-2026 it remains unresolved, majority-US-owned (74%, versus Armenia's 26%), and behind the schedule Baku has repeatedly announced. Fourth, whether Erdoğan's coalition — which Al-Monitor reports holds enough seats to trigger an early election — moves toward a constitutional path for him to run again past his current term limit.</p>
-
-        <h4>Who holds the leverage</h4>
-        <p>Turkey's leverage is real and spans several domains at once: Baykar's drone exports hit $2.2 billion in 2025 (the Bayraktar TB2 alone sold to 36 countries), Turkey chairs an informal "Montreux Plus" regime that has restricted both Russian and NATO naval movement in the Black Sea since 2022, and Ankara hosted NATO's 2026 Leaders' Summit in July — only the second NATO summit Turkey has ever hosted. But two things cap that leverage rather than extend it. The economy is a constraint, not a springboard: the central bank held its policy rate at 37% through four straight 2026 meetings, the lira hit a record low near 47.5 to the dollar, and official annual inflation of 31.75% in July sits well below the 50.49% independent economists at ENAG calculate — a credibility gap that itself signals fragility. And Turkey's EU accession bid remains formally frozen, with the European Parliament's foreign affairs committee voting in April 2026 that talks "cannot resume" absent reversal of democratic backsliding — a judgment sharpened by the prosecution of Istanbul's opposition mayor, Ekrem İmamoğlu, across three simultaneous cases that Human Rights Watch has called politically motivated.</p>
-
-        <h4>What to watch — the "Ottoman revenge" thesis, tested</h4>
-        <p>The framing holds up cleanly in one domain: soft power, where the numbers are real and structural. Turkish TV drama exports passed $1 billion in 2025, reaching an estimated 1 billion viewers across roughly 170 countries, while the Diyanet religious authority runs a $3.7 billion budget and 644 staff abroad targeting 2.1 million people, concentrated in the Balkans, Central Asia, and Africa. It holds up more ambiguously in hard power — real gains in Syria, drone diplomacy, and Caucasus alliance-building sit alongside a widely repeated but independently unverified claim that Turkey fields "NATO's second-largest army," and a Zangezur corridor that is still more announcement than fact. It does not hold up in the economic and democratic dimensions: a central bank still fighting inflation, a currency at record lows, and a government spending political capital on prosecuting its most popular rival rather than consolidating a stronger claim to regional leadership. Read the thesis as directionally real in influence-projection — not yet backed by the fiscal or institutional foundations of an established regional power.</p>
-
-        <div class="src">Sources: <a href="https://www.timesofisrael.com/syrian-leader-sharaa-to-discuss-defense-pact-with-turkeys-erdogan-in-ankara/" target="_blank">Times of Israel, Feb 4 2025</a> · <a href="https://www.middleeasteye.net/news/turkey-syria-defence-deal-covers-training-weapons-supply" target="_blank">Middle East Eye, Aug 2025</a> · <a href="https://www.timesofisrael.com/israel-and-turkey-hold-syria-deconfliction-talks-to-avoid-military-clash/" target="_blank">Times of Israel, Apr 10 2025</a> · <a href="https://www.aljazeera.com/news/2025/10/26/kurdish-pkk-announces-its-withdrawing-fighters-from-turkiye-to-iraq" target="_blank">Al Jazeera, Oct 26 2025</a> · <a href="https://defensehere.com/en/baykar-posts-2-2-billion-in-drone-exports-in-2025-retains-global-lead/" target="_blank">Defensehere, Feb 2 2026</a> · <a href="https://www.nato.int/en/news-and-events/events/2026/07/overview---2026-nato-summit-in-ankara-" target="_blank">NATO, 2026 Ankara Summit</a> · <a href="https://armenianweekly.com/2026/07/16/diplomatic-and-operational-power-struggles-shape-tripp/" target="_blank">Armenian Weekly, Jul 16 2026</a> · <a href="https://www.turkishminute.com/2026/08/03/turkeys-annual-inflation-slowed-to-31-75-percent-in-july-official-data-show/" target="_blank">Turkish Minute, Aug 3 2026</a> · <a href="https://www.eunews.it/en/2026/04/15/turkey-lacks-eu-accession-momentum-due-to-democratic-backsliding/" target="_blank">EUnews, Apr 15 2026</a> · <a href="https://www.hrw.org/news/2026/03/03/turkiye-leading-opponent-of-erdogan-on-trial" target="_blank">Human Rights Watch, Mar 3 2026</a> · <a href="https://english.news.cn/20260109/3d44f4db21d041a4a66213192046c505/c.html" target="_blank">Xinhua, Jan 9 2026</a> · <a href="https://nordicmonitor.com/2025/02/erdogans-notorious-religious-authority-eyes-global-expansion-aiming-to-reach-2-1-million-abroad-in-2025/" target="_blank">Nordic Monitor, Feb 11 2025</a></div>
+        <h3><a href="/issues-focus-turkiye.html">Türkiye</a></h3>
+        <p>Real gains in Syria, drone exports, and soft power sit against a constrained economy and frozen EU accession — the "Ottoman revenge" thesis, tested.</p>
+        <a class="go" href="/issues-focus-turkiye.html">Read the full brief &rarr;</a>
       </div>
 
     </div>
