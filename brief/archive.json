@@ -1,5 +1,14 @@
 [
  {
+  "date": "2026-08-03",
+  "long_en": "Monday, 3 August 2026",
+  "long_fr": "lundi 3 août 2026",
+  "count": 17,
+  "lead_en": "AstraZeneca and Bristol Myers Squibb are in early talks on a roughly $400 billion merger that would create one of the world's largest drugmakers",
+  "lead_fr": "AstraZeneca et Bristol Myers Squibb mènent des pourparlers préliminaires en vue d'une fusion d'environ 400 milliards $ qui créerait l'un des plus grands laboratoires pharmaceutiques du monde",
+  "url": "/brief/2026-08-03.html"
+ },
+ {
   "date": "2026-08-02",
   "long_en": "Sunday, 2 August 2026",
   "long_fr": "dimanche 2 août 2026",
@@ -52,14 +61,5 @@
   "lead_en": "The US-Iran pause holds a third day but Iran denies talks as Netanyahu heads to the White House; oil slides toward $86 and Wall Street braces for the Fed and four Big Tech reports in one week",
   "lead_fr": "La trêve américano-iranienne tient un troisième jour mais l'Iran nie les pourparlers alors que Netanyahou gagne la Maison-Blanche ; le pétrole glisse vers 86 $ et Wall Street se prépare à la Fed et à quatre résultats des géants technologiques en une semaine",
   "url": "/brief/2026-07-28.html"
- },
- {
-  "date": "2026-07-27",
-  "long_en": "Monday, 27 July 2026",
-  "long_fr": "lundi 27 juillet 2026",
-  "count": 20,
-  "lead_en": "The US-Iran war goes quiet for a second straight day as Oman brokers talks and a Hormuz shipping compromise takes shape",
-  "lead_fr": "La guerre américano-iranienne fait silence pour un deuxième jour d'affilée, Oman négociant un accord tandis qu'un compromis sur la navigation dans le détroit d'Ormuz prend forme",
-  "url": "/brief/2026-07-27.html"
  }
 ]
