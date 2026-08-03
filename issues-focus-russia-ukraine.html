@@ -16,19 +16,32 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="apple-touch-icon" href="/favicon.ico">
-    <title>Issues Focus | Corridor Intelligence</title>
-    <meta name="description" content="Issues Focus — six tracked segments, each with its own dedicated page: the Iran war, the Russia-Ukraine war, the Israel-Lebanon-Palestine-Syria conflict zone, Africa, Europe, and Türkiye's regional resurgence. By Joseph Soares.">
-    <link rel="canonical" href="https://josephsoares.com/issues-focus.html">
+    <title>Russia–Ukraine — Issues Focus | Corridor Intelligence</title>
+    <meta name="description" content="Past its fourth year, the front line holds while a Washington-set August 8 deadline for a ceasefire tests how much leverage the US is actually prepared to use. By Joseph Soares.">
+    <link rel="canonical" href="https://josephsoares.com/issues-focus-russia-ukraine.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Joseph Soares & Co.">
+    <meta property="og:url" content="https://josephsoares.com/issues-focus-russia-ukraine.html">
+    <meta property="og:title" content="Russia–Ukraine — Issues Focus | Corridor Intelligence">
+    <meta property="og:description" content="Past its fourth year, the front line holds while a Washington-set August 8 deadline for a ceasefire tests how much leverage the US is actually prepared to use. By Joseph Soares.">
+    <meta property="og:image" content="https://josephsoares.com/assets/og-default.png">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "CollectionPage",
-      "name": "Issues Focus — Corridor Intelligence",
-      "url": "https://josephsoares.com/issues-focus.html",
-      "description": "Six tracked segments, each with its own dedicated page: the Iran war, the Russia-Ukraine war, the Israel-Lebanon-Palestine-Syria conflict zone, Africa, Europe, and Türkiye's regional resurgence.",
+      "@type": "WebPage",
+      "name": "Russia–Ukraine — Issues Focus | Corridor Intelligence",
+      "url": "https://josephsoares.com/issues-focus-russia-ukraine.html",
+      "description": "Past its fourth year, the front line holds while a Washington-set August 8 deadline for a ceasefire tests how much leverage the US is actually prepared to use. By Joseph Soares.",
+      "dateModified": "2026-08-03",
+      "isPartOf": {
+        "@type": "WebPage",
+        "name": "Issues Focus — Corridor Intelligence",
+        "url": "https://josephsoares.com/issues-focus.html"
+      },
       "inLanguage": ["en"],
       "author": {
         "@type": "Person",
@@ -57,6 +70,13 @@
   .eyebrow{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.3em;
     font-size:13px;font-weight:500;color:var(--gold)}
   a{color:inherit}
+  .btn{display:inline-block;font-family:'Oswald',sans-serif;text-transform:uppercase;
+    letter-spacing:.14em;font-weight:600;font-size:15px;text-decoration:none;cursor:pointer;
+    padding:18px 34px;border-radius:2px;transition:.2s;border:1px solid transparent}
+  .btn-gold{background:var(--gold);color:#0E3A70}
+  .btn-gold:hover{background:#E6C860}
+  .btn-ghost{background:transparent;color:var(--bone);border-color:var(--line)}
+  .btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
 
   nav{position:sticky;top:0;z-index:20;background:rgba(7,34,68,.90);
     backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
@@ -76,35 +96,47 @@
   .navdrop:hover .navdrop-menu,.navdrop:focus-within .navdrop-menu{display:block}
   .navdrop-menu a{display:block;padding:8px 18px;white-space:nowrap}
 
-  .hero{padding:96px 0 60px;position:relative}
-  .hero .eyebrow{margin-bottom:26px}
+  .back{padding:26px 0 0}
+  .back a{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.12em;font-size:12px;
+    font-weight:600;color:var(--muted);text-decoration:none}
+  .back a:hover{color:var(--gold)}
+
+  .hero{padding:22px 0 44px;position:relative}
+  .hero .tag{display:inline-block;font-family:'Oswald',sans-serif;text-transform:uppercase;
+    letter-spacing:.16em;font-size:11.5px;font-weight:600;color:var(--gold);border:1px solid rgba(212,175,55,.4);
+    border-radius:100px;padding:5px 14px;margin-bottom:18px}
   .hero h1{font-family:'Oswald',sans-serif;text-transform:uppercase;font-weight:600;
-    font-size:58px;line-height:1.04;letter-spacing:.005em;max-width:20ch;margin-bottom:26px}
-  .hero h1 .i{font-family:'EB Garamond',serif;font-style:italic;text-transform:none;font-weight:400;color:var(--bone)}
-  .hero .lede{font-size:21px;color:var(--muted);max-width:64ch;margin-bottom:14px}
-  .hero .lede b{color:var(--bone);font-weight:500}
+    font-size:52px;line-height:1.05;letter-spacing:.005em;max-width:20ch;margin-bottom:16px}
   .updated{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.12em;font-size:12px;color:var(--muted)}
   .updated b{color:var(--gold)}
 
-  .blk{padding:36px 0}
-  .h2{font-family:'Oswald',sans-serif;text-transform:uppercase;font-weight:600;font-size:30px;margin-bottom:22px}
+  .blk{padding:10px 0 60px}
+  .article p{font-size:18px;color:var(--bone);margin-bottom:16px;max-width:760px}
+  .article p b{color:var(--gold);font-weight:600}
+  .article h4{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.12em;
+    font-size:13px;font-weight:600;color:var(--gold);margin:28px 0 12px}
+  .article h4:first-of-type{margin-top:8px}
+  .src{font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:.04em;color:var(--muted);line-height:1.8;margin-top:20px;max-width:760px;
+    border-top:1px solid var(--line);padding-top:18px}
+  .src a{color:var(--muted);text-decoration:underline}
+  .src a:hover{color:var(--gold)}
 
-  .teaser-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px}
+  .method{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--panel);padding:28px 0;margin-top:20px}
+  .method p{font-size:15.5px;color:var(--muted);font-style:italic;max-width:80ch}
+
+  .teaser-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px;margin-top:10px}
   .teaser-card{background:var(--panel2);border:1px solid var(--line);border-radius:3px;padding:28px 26px;
     display:flex;flex-direction:column}
   .teaser-card .tag{display:inline-block;font-family:'Oswald',sans-serif;text-transform:uppercase;
     letter-spacing:.16em;font-size:11px;font-weight:600;color:var(--gold);border:1px solid rgba(212,175,55,.4);
     border-radius:100px;padding:4px 12px;margin-bottom:14px;align-self:flex-start}
-  .teaser-card h3{font-family:'Oswald',sans-serif;text-transform:uppercase;font-weight:600;font-size:22px;margin-bottom:10px}
+  .teaser-card h3{font-family:'Oswald',sans-serif;text-transform:uppercase;font-weight:600;font-size:21px;margin-bottom:10px}
   .teaser-card h3 a{color:var(--bone);text-decoration:none}
   .teaser-card h3 a:hover{color:var(--gold)}
-  .teaser-card p{font-size:16.5px;color:var(--muted);line-height:1.6;margin-bottom:18px;flex:1}
+  .teaser-card p{font-size:16px;color:var(--muted);line-height:1.6;margin-bottom:16px;flex:1}
   .teaser-card .go{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.12em;font-size:13px;
     font-weight:600;color:var(--bone);text-decoration:none}
   .teaser-card .go:hover{color:var(--gold)}
-
-  .method{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--panel);padding:28px 0;margin-top:10px}
-  .method p{font-size:15.5px;color:var(--muted);font-style:italic;max-width:80ch}
 
   footer{border-top:1px solid var(--line);padding:48px 0 64px;color:var(--muted);font-size:16px}
   footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:22px;align-items:flex-start}
@@ -124,14 +156,13 @@
     .navdrop{width:100%}
     .navdrop-menu{display:block;position:static;border:0;box-shadow:none;padding:0;background:transparent}
     .navdrop-menu a{text-align:center}
-    .hero{padding:60px 0 40px}
-    .hero h1{font-size:38px;max-width:100%}
-    .hero .lede{max-width:100%}
+    .hero h1{font-size:34px;max-width:100%}
     .teaser-grid{grid-template-columns:1fr}
   }
 </style>
 </head>
 <body>
+
 <nav>
   <div class="wrap">
     <a href="/index.html" class="brand" style="text-decoration:none;color:inherit">Joseph <span>Soares</span></a>
@@ -147,68 +178,38 @@
   </div>
 </nav>
 
+<section class="back">
+  <div class="wrap"><a href="/issues-focus.html">&larr; Back to Issues Focus</a></div>
+</section>
+
 <section class="hero">
   <div class="wrap">
-    <div class="eyebrow">Corridor Intelligence — Issues Focus</div>
-    <h1>Issues <span class="i">Focus</span></h1>
-    <p class="lede">Six tracked segments, each with its own dedicated page: two active wars — <b>Iran</b> and <b>Russia-Ukraine</b> — the interlocking <b>Israel-Lebanon-Palestine-Syria</b> conflict zone, two structural watches, <b>Africa</b> and <b>Europe</b>, and one rising-power watch, <b>Türkiye</b>. Each brief is read the same way: where things stand, what's actually being decided, who holds the leverage, and what to watch next.</p>
+    <span class="tag">Attritional war</span>
+    <h1>Russia–Ukraine</h1>
     <p class="updated">Last updated: <b>August 3, 2026</b> &middot; Reviewed and improved in place, not re-published as a new post</p>
   </div>
 </section>
 
 <section class="blk">
-  <div class="wrap">
-    <div class="h2">Issue Monitor</div>
-    <div class="teaser-grid">
-      <div class="teaser-card">
-        <span class="tag">Active war</span>
-        <h3><a href="/issues-focus-iran.html">Iran</a></h3>
-        <p>A US-Israeli strike killed Iran's Supreme Leader in February, forcing an in-war succession and a Strait of Hormuz closure that, five months on, is still not fully resolved.</p>
-        <a class="go" href="/issues-focus-iran.html">Read the full brief &rarr;</a>
-      </div>
+  <div class="wrap article">
+    <p><b>Where things stand.</b> Now past its fourth year, the war has settled into a pattern the International Crisis Group's 2026 assessment describes bluntly: Russian forces keep gaining ground at heavy cost, and the front line has not decisively broken. Moscow has taken ground around Pokrovsk, Siversk, Huliaipole and Kupiansk, and pushed into Dnipropetrovsk and Sumy. Kyiv still holds roughly a fifth of Donetsk plus large parts of Kherson and Zaporizhzhia, and keeps striking Russian oil infrastructure and Black Sea shipping.</p>
 
-      <div class="teaser-card">
-        <span class="tag">Attritional war</span>
-        <h3><a href="/issues-focus-russia-ukraine.html">Russia–Ukraine</a></h3>
-        <p>Past its fourth year, the front line holds while a Washington-set August 8 deadline for a ceasefire tests how much leverage the US is actually prepared to use.</p>
-        <a class="go" href="/issues-focus-russia-ukraine.html">Read the full brief &rarr;</a>
-      </div>
+        <h4>The decision point</h4>
+        <p>The live decision sits in Washington, not on the battlefield. The Trump administration told the UN Security Council on July 31 that Russia and Ukraine "must negotiate a ceasefire and durable peace" by August 8 — five days from today — and that the US is "prepared to implement additional measures to secure peace" if the deadline passes. Ukraine has already accepted the administration's proposed ceasefire terms. Russia has not. Deputy Security Council chair Dmitry Medvedev called the deadline itself "a threat and a step towards war," rejecting the ultimatum outright.</p>
 
-      <div class="teaser-card">
-        <span class="tag">Interlocking wars</span>
-        <h3><a href="/issues-focus-israel-lebanon-palestine-syria.html">Israel–Lebanon–Palestine–Syria</a></h3>
-        <p>Four theaters, one zone: a stalled Gaza ceasefire, a new war in Lebanon, and a post-Assad Syria threading talks with Israel while still claiming the Golan.</p>
-        <a class="go" href="/issues-focus-israel-lebanon-palestine-syria.html">Read the full brief &rarr;</a>
-      </div>
+        <h4>Who holds the leverage</h4>
+        <p>Washington's stated leverage is economic: tariffs directly on Russia, plus secondary tariffs on countries still buying Russian oil and gas, chiefly China and India. Trump has undercut that leverage in the same breath, saying of Putin, "I don't know that sanctions bother him" — a signal Moscow can read as easily as anyone. Russia's own posture, per analysts, is to make no further concessions and to treat envoy Steve Witkoff's Moscow visit as a chance to negotiate the sanctions threat away rather than end the war. Europe carries a separate and growing share of the load: with US financial aid to Kyiv severed, NATO's European members are funding the defense largely alone, even as Washington presses them on their own spending at the same time.</p>
 
-      <div class="teaser-card">
-        <span class="tag">Continental watch</span>
-        <h3><a href="/issues-focus-africa.html">Africa</a></h3>
-        <p>55 countries split along colonial-linguistic lines, a new Sahel bloc breaking from ECOWAS, and a demographic surge that world powers are competing to secure the resources beneath.</p>
-        <a class="go" href="/issues-focus-africa.html">Read the full brief &rarr;</a>
-      </div>
+        <h4>What to watch</h4>
+        <p>Whether August 8 produces real, implemented measures or becomes another deadline that slides is the clearest signal of how much leverage Washington actually intends to use — deadlines have moved before in this diplomacy. Beneath that, watch whether any eventual terms include real sovereignty guarantees for Ukraine, or the outcome Crisis Group flags as the deeper risk: a settlement that leaves Kyiv "shorn of strong deterrent" against a future Russian move.</p>
 
-      <div class="teaser-card">
-        <span class="tag">Demographic watch</span>
-        <h3><a href="/issues-focus-europe.html">Europe</a></h3>
-        <p>Record-low fertility, a population set to peak by 2029, and a stalled competitiveness agenda — tested against the claim that Poland is the one exception.</p>
-        <a class="go" href="/issues-focus-europe.html">Read the full brief &rarr;</a>
-      </div>
-
-      <div class="teaser-card">
-        <span class="tag">Rising-power watch</span>
-        <h3><a href="/issues-focus-turkiye.html">Türkiye</a></h3>
-        <p>Real gains in Syria, drone exports, and soft power sit against a constrained economy and frozen EU accession — the "Ottoman revenge" thesis, tested.</p>
-        <a class="go" href="/issues-focus-turkiye.html">Read the full brief &rarr;</a>
-      </div>
-
-    </div>
+    <div class="src">Sources: <a href="https://www.crisisgroup.org/visual-explainers/ten-conflicts-2026/" target="_blank">International Crisis Group, "Ten Conflicts to Watch 2026"</a> · <a href="https://www.globalsecurity.org/military/world/war/russo-ukraine-2026-08-01.htm" target="_blank">GlobalSecurity, Aug 1</a> · <a href="https://kyivindependent.com/trump-sets-aug-8-deadline-for-ukraine-peace-deal-us-tells-un/" target="_blank">Kyiv Independent</a> · <a href="https://www.rferl.org/a/ukraine-war-russia-threat-sanctions-trump/33491994.html" target="_blank">RFE/RL</a></div>
   </div>
 </section>
 
 <section class="method">
   <div class="wrap">
-    <p>Issues Focus is compiled from primary official statements and institutional research, cross-checked against reputable reporting — never the reverse. It describes how power, capital, and institutions are moving; it does not take a side. Entries are corrected and improved in place as the picture changes, rather than re-published as new posts.</p>
+    <p>Issues Focus is compiled from primary official statements and institutional research, cross-checked against reputable reporting &mdash; never the reverse. It describes how power, capital, and institutions are moving; it does not take a side. Entries are corrected and improved in place as the picture changes, rather than re-published as new posts. &mdash; <a href="/issues-focus.html" style="color:var(--gold);text-decoration:underline">See all Issues Focus segments</a></p>
   </div>
 </section>
 
