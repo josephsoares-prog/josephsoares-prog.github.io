@@ -1,5 +1,14 @@
 [
  {
+  "date": "2026-08-08",
+  "long_en": "Saturday, 8 August 2026",
+  "long_fr": "samedi 8 août 2026",
+  "count": 21,
+  "lead_en": "US employers shed 23,000 jobs in July against forecasts of an 80,000 gain, with unemployment easing to 4.1% and labour-force participation at a five-year low of 61.4%",
+  "lead_fr": "Les employeurs américains ont supprimé 23 000 emplois en juillet, alors qu'on attendait 80 000 créations, le chômage refluant à 4,1 % et le taux d'activité tombant à un creux de cinq ans de 61,4 %",
+  "url": "/brief/2026-08-08.html"
+ },
+ {
   "date": "2026-08-07",
   "long_en": "Friday, 7 August 2026",
   "long_fr": "vendredi 7 août 2026",
@@ -52,14 +61,5 @@
   "lead_en": "Canada's 35% US tariff is now in force after the August 1 deadline passed with no deal — but CUSMA-compliant goods, close to 90% of exports, remain exempt",
   "lead_fr": "Le tarif américain de 35 % sur le Canada est désormais en vigueur, l'échéance du 1er août étant passée sans accord — mais les biens conformes à l'ACEUM, près de 90 % des exportations, restent exemptés",
   "url": "/brief/2026-08-02.html"
- },
- {
-  "date": "2026-08-01",
-  "long_en": "Saturday, 1 August 2026",
-  "long_fr": "samedi 1er août 2026",
-  "count": 20,
-  "lead_en": "Deadline day: Trump's threatened 35% tariff on Canada takes hold as talks run to the wire — but CUSMA-compliant goods, close to 90% of exports, stay exempt",
-  "lead_fr": "Jour d'échéance : le tarif de 35 % dont Trump menace le Canada entre en vigueur alors que les pourparlers filent jusqu'au bout — mais les biens conformes à l'ACEUM, près de 90 % des exportations, restent exemptés",
-  "url": "/brief/2026-08-01.html"
  }
 ]
