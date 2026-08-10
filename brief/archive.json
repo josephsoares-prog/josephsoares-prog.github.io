@@ -1,5 +1,14 @@
 [
  {
+  "date": "2026-08-10",
+  "long_en": "Monday, 10 August 2026",
+  "long_fr": "lundi 10 août 2026",
+  "count": 21,
+  "lead_en": "An Iranian missile hits an ADNOC tanker in the Strait of Hormuz — the 16th strike on the state carrier's fleet since the war began — as the UAE and Qatar demand Tehran reopen the strait unconditionally",
+  "lead_fr": "Un missile iranien frappe un pétrolier de l'ADNOC dans le détroit d'Ormuz — la 16e attaque contre la flotte du transporteur d'État depuis le début de la guerre — alors que les Émirats et le Qatar exigent que Téhéran rouvre le détroit sans condition",
+  "url": "/brief/2026-08-10.html"
+ },
+ {
   "date": "2026-08-09",
   "long_en": "Sunday, 9 August 2026",
   "long_fr": "dimanche 9 août 2026",
@@ -52,23 +61,5 @@
   "lead_en": "Palantir detonates its Q2 — revenue up 93% to $1.94 billion, guidance raised to about $8.15 billion, and the stock jumps ~13% after hours",
   "lead_fr": "Palantir fait exploser son T2 — chiffre d’affaires en hausse de 93 % à 1,94 milliard $, prévisions relevées à environ 8,15 milliards $, et le titre bondit d’environ 13 % après la clôture",
   "url": "/brief/2026-08-04.html"
- },
- {
-  "date": "2026-08-03",
-  "long_en": "Monday, 3 August 2026",
-  "long_fr": "lundi 3 août 2026",
-  "count": 17,
-  "lead_en": "AstraZeneca and Bristol Myers Squibb are in early talks on a roughly $400 billion merger that would create one of the world's largest drugmakers",
-  "lead_fr": "AstraZeneca et Bristol Myers Squibb mènent des pourparlers préliminaires en vue d'une fusion d'environ 400 milliards $ qui créerait l'un des plus grands laboratoires pharmaceutiques du monde",
-  "url": "/brief/2026-08-03.html"
- },
- {
-  "date": "2026-08-02",
-  "long_en": "Sunday, 2 August 2026",
-  "long_fr": "dimanche 2 août 2026",
-  "count": 18,
-  "lead_en": "Canada's 35% US tariff is now in force after the August 1 deadline passed with no deal — but CUSMA-compliant goods, close to 90% of exports, remain exempt",
-  "lead_fr": "Le tarif américain de 35 % sur le Canada est désormais en vigueur, l'échéance du 1er août étant passée sans accord — mais les biens conformes à l'ACEUM, près de 90 % des exportations, restent exemptés",
-  "url": "/brief/2026-08-02.html"
  }
 ]
