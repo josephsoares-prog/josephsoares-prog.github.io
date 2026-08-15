@@ -1,5 +1,14 @@
 [
  {
+  "date": "2026-08-15",
+  "long_en": "Saturday, 15 August 2026",
+  "long_fr": "samedi 15 août 2026",
+  "count": 33,
+  "lead_en": "UAE tankers hit and a carrier group inbound: the Hormuz war escalates as Trump vows to declare the strait US territory",
+  "lead_fr": "Pétroliers émiratis frappés et porte-avions en route : la guerre d'Ormuz s'intensifie alors que Trump promet de déclarer le détroit territoire américain",
+  "url": "/brief/2026-08-15.html"
+ },
+ {
   "date": "2026-08-13",
   "long_en": "Thursday, 13 August 2026",
   "long_fr": "jeudi 13 août 2026",
@@ -52,14 +61,5 @@
   "lead_en": "US employers shed 23,000 jobs in July against forecasts of an 80,000 gain, with unemployment easing to 4.1% and labour-force participation at a five-year low of 61.4%",
   "lead_fr": "Les employeurs américains ont supprimé 23 000 emplois en juillet, alors qu'on attendait 80 000 créations, le chômage refluant à 4,1 % et le taux d'activité tombant à un creux de cinq ans de 61,4 %",
   "url": "/brief/2026-08-08.html"
- },
- {
-  "date": "2026-08-07",
-  "long_en": "Friday, 7 August 2026",
-  "long_fr": "vendredi 7 août 2026",
-  "count": 20,
-  "lead_en": "Wall Street braces for the July jobs report, the day's one scheduled catalyst, with hiring seen rebounding to about 120,000 but unemployment ticking up to 4.3%",
-  "lead_fr": "Wall Street se prépare au rapport américain de l'emploi de juillet, seul catalyseur programmé du jour, l'embauche devant rebondir à environ 120 000 mais le chômage grimpant à 4,3 %",
-  "url": "/brief/2026-08-07.html"
  }
 ]
