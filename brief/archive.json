@@ -1,5 +1,14 @@
 [
  {
+  "date": "2026-08-16",
+  "long_en": "Sunday, 16 August 2026",
+  "long_fr": "dimanche 16 août 2026",
+  "count": 21,
+  "lead_en": "Canada's 50% tariff deadline is three days out as US negotiators offer Carney and Trump 'options' — not a deal",
+  "lead_fr": "L'échéance du tarif de 50 % du Canada n'est plus qu'à trois jours : les négociateurs américains proposent des « options » à Carney et Trump — pas un accord",
+  "url": "/brief/2026-08-16.html"
+ },
+ {
   "date": "2026-08-15",
   "long_en": "Saturday, 15 August 2026",
   "long_fr": "samedi 15 août 2026",
@@ -52,14 +61,5 @@
   "lead_en": "Iran's Supreme National Security Council sets sweeping new conditions for reopening the Strait of Hormuz — a full US withdrawal, war reparations and a lifted blockade — as the UAE accuses Tehran of striking another tanker, Fed rate-cut odds snap back after a weak July jobs miss, and Ottawa races Washington's August 19 tariff deadline",
   "lead_fr": "Le Conseil suprême de sécurité nationale iranien pose de vastes nouvelles conditions à la réouverture du détroit d'Ormuz — retrait américain complet, réparations de guerre et levée du blocus — alors que les Émirats accusent Téhéran d'avoir frappé un autre pétrolier, que les probabilités de baisse de taux de la Fed rebondissent après un rapport d'emploi décevant en juillet, et qu'Ottawa court contre l'échéance tarifaire du 19 août imposée par Washington",
   "url": "/brief/2026-08-09.html"
- },
- {
-  "date": "2026-08-08",
-  "long_en": "Saturday, 8 August 2026",
-  "long_fr": "samedi 8 août 2026",
-  "count": 21,
-  "lead_en": "US employers shed 23,000 jobs in July against forecasts of an 80,000 gain, with unemployment easing to 4.1% and labour-force participation at a five-year low of 61.4%",
-  "lead_fr": "Les employeurs américains ont supprimé 23 000 emplois en juillet, alors qu'on attendait 80 000 créations, le chômage refluant à 4,1 % et le taux d'activité tombant à un creux de cinq ans de 61,4 %",
-  "url": "/brief/2026-08-08.html"
  }
 ]

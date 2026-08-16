@@ -1,11 +1,29 @@
 [
  {
+  "date": "2026-08-16",
+  "long_en": "Sunday, 16 August 2026",
+  "long_fr": "dimanche 16 août 2026",
+  "count": 21,
+  "lead_en": "Canada's 50% tariff deadline is three days out as US negotiators offer Carney and Trump 'options' — not a deal",
+  "lead_fr": "L'échéance du tarif de 50 % du Canada n'est plus qu'à trois jours : les négociateurs américains proposent des « options » à Carney et Trump — pas un accord",
+  "url": "/brief/2026-08-16.html"
+ },
+ {
+  "date": "2026-08-15",
+  "long_en": "Saturday, 15 August 2026",
+  "long_fr": "samedi 15 août 2026",
+  "count": 33,
+  "lead_en": "UAE tankers hit and a carrier group inbound: the Hormuz war escalates as Trump vows to declare the strait US territory",
+  "lead_fr": "Pétroliers émiratis frappés et porte-avions en route : la guerre d'Ormuz s'intensifie alors que Trump promet de déclarer le détroit territoire américain",
+  "url": "/brief/2026-08-15.html"
+ },
+ {
   "date": "2026-08-13",
   "long_en": "Thursday, 13 August 2026",
   "long_fr": "jeudi 13 août 2026",
-  "count": 19,
-  "lead_en": "Trump insists the US controls the Strait of Hormuz as Iran warns it could 'prolong' the war",
-  "lead_fr": "Trump affirme que les États-Unis contrôlent le détroit d’Ormuz, l’Iran prévient qu’il pourrait « prolonger » la guerre",
+  "count": 29,
+  "lead_en": "Trump insists the US controls the Strait of Hormuz as shipping traffic sinks to a three-month low",
+  "lead_fr": "Trump insiste sur un controle americain du detroit d'Ormuz alors que le trafic maritime tombe a son plus bas en trois mois",
   "url": "/brief/2026-08-13.html"
  },
  {
