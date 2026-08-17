@@ -139,7 +139,7 @@
 
   <url>
     <loc>https://josephsoares.com/brief/</loc>
-    <lastmod>2026-08-15</lastmod>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -399,4 +399,6 @@
     <loc>https://josephsoares.com/one-reserve-two-wars-interceptor-math-august-2026.html</loc>
     <lastmod>2026-08-06</lastmod>
   </url>
+  <url><loc>https://josephsoares.com/brief/2026-08-17.html</loc><lastmod>2026-08-17</lastmod></url>
+  <url><loc>https://josephsoares.com/brief/2026-08-16.html</loc><lastmod>2026-08-16</lastmod></url>
 </urlset>
