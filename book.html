@@ -295,5 +295,22 @@
 
 
 <script defer src="https://cdn.jsdelivr.net/ghost/portal@~2.69/umd/portal.min.js" data-ghost="https://brief.josephsoares.com/" data-api="https://brief.josephsoares.com/ghost/api/content/" data-key="ece73de31b60c5a2769ba56ee4" crossorigin="anonymous"></script>
+<!-- GA4 conversion events (delegated) -->
+<script>
+(function(){
+  function ev(n,p){try{window.gtag&&gtag('event',n,p||{});}catch(e){}}
+  document.addEventListener('click',function(e){
+    var a=e.target.closest('a');if(!a)return;
+    var h=a.getAttribute('href')||'';
+    if(a.hasAttribute('data-portal')){ev('subscribe_click',{link_url:h,page:location.pathname});return;}
+    if(h.indexOf('calendar.app.google')>-1){ev('booking_click',{page:location.pathname});return;}
+    if(h.indexOf('/call.html')>-1){ev('call_page_click',{page:location.pathname});return;}
+    if(h.indexOf('tel:')===0){ev('phone_click',{page:location.pathname});return;}
+    if(h.indexOf('/book.html')>-1){ev('book_page_click',{page:location.pathname});return;}
+    if(h.indexOf('youtube.com')>-1){ev('outbound_youtube',{page:location.pathname});return;}
+    if(h.indexOf('http')===0&&h.indexOf('josephsoares.com')===-1){ev('outbound_click',{link_url:h,page:location.pathname});}
+  },true);
+})();
+</script>
 </body>
 </html>
