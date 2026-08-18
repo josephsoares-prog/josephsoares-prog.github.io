@@ -139,7 +139,7 @@
 
   <url>
     <loc>https://josephsoares.com/brief/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -401,4 +401,5 @@
   </url>
   <url><loc>https://josephsoares.com/brief/2026-08-17.html</loc><lastmod>2026-08-17</lastmod></url>
   <url><loc>https://josephsoares.com/brief/2026-08-16.html</loc><lastmod>2026-08-16</lastmod></url>
+  <url><loc>https://josephsoares.com/brief/2026-08-18.html</loc><lastmod>2026-08-18</lastmod></url>
 </urlset>
