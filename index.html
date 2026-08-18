@@ -160,6 +160,8 @@
   @keyframes heroDrift{from{transform:scale(1)}to{transform:scale(1.055)}}
   .hero .heroportrait{overflow:hidden}
   .hero .heroportrait img{animation:heroDrift 20s ease-in-out infinite alternate;will-change:transform}
+  .hero .heroportrait video{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 25%;display:block;border:1px solid var(--line);background:var(--panel2)}
+  .hero .heroportrait.haslooop img{display:none}
   @media(prefers-reduced-motion:reduce){.hero .heroportrait img{animation:none}}
 
   .finalcta{text-align:center;padding:92px 0}
