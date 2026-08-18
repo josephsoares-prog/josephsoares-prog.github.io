@@ -72,15 +72,24 @@
   .navlinks a.cta:hover{border-color:var(--gold);color:var(--gold)}
   .menutoggle{display:none}
 
-  .hero{padding:96px 0 70px;position:relative}
-  .hero .eyebrow{margin-bottom:26px}
+  .hero{padding:clamp(38px,7vw,96px) 0 clamp(40px,5vw,70px);position:relative}
+  .hero .wrap{display:flex;flex-wrap:wrap;gap:clamp(30px,4vw,56px);align-items:center}
+  .hero .herotext{flex:7 1 min(560px,100%)}
+  .hero .heroportrait{flex:5 1 min(260px,100%)}
+  .hero .heroportrait img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 25%;display:block;border:1px solid var(--line)}
+  .hero .eyebrow{margin-bottom:24px}
   .hero h1{font-family:'Oswald',sans-serif;text-transform:uppercase;font-weight:600;
-    font-size:62px;line-height:1.04;letter-spacing:.005em;max-width:17ch;margin-bottom:30px}
+    font-size:clamp(30px,4.3vw,58px);line-height:1.07;letter-spacing:.005em;max-width:18ch;margin-bottom:22px;text-wrap:balance}
   .hero h1 .g{color:var(--gold)}
   .hero h1 .i{font-family:'EB Garamond',serif;font-style:italic;text-transform:none;font-weight:400;color:var(--bone)}
-  .hero .lede{font-size:21px;color:var(--muted);max-width:60ch;margin-bottom:34px}
+  .hero .lede{font-size:clamp(17px,4.4vw,21px);line-height:1.58;color:rgba(242,239,233,.82);max-width:56ch;margin-bottom:30px;text-wrap:pretty}
   .hero .lede b{color:var(--bone);font-weight:500}
-  .ctar{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+  .ctar{display:flex;gap:18px 22px;flex-wrap:wrap;align-items:center}
+  .ctar .quiet{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.14em;font-weight:500;
+    font-size:13px;text-decoration:none;color:rgba(242,239,233,.82);border:1px solid rgba(242,239,233,.2);
+    border-radius:2px;padding:17px 22px;flex:1 1 240px;text-align:center}
+  .ctar .quiet:hover{border-color:var(--gold);color:var(--gold)}
+  .ctar .btn{flex:1 1 240px;text-align:center}
 
   .authbar{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--panel);padding:24px 0}
   .authbar .wrap{display:flex;flex-wrap:wrap;gap:14px 44px;align-items:center;justify-content:center;
