@@ -112,11 +112,11 @@
   .sub{color:rgba(242,239,233,.8);font-size:clamp(17px,4.4vw,19px);max-width:60ch;text-wrap:pretty}
   .klabel{margin-bottom:14px}
 
-  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:44px}
-  .card{background:var(--panel2);border:1px solid var(--line);border-radius:3px;padding:30px 28px}
-  .card h3{font-family:'Oswald',sans-serif;text-transform:uppercase;font-weight:500;letter-spacing:.05em;font-size:19px;margin-bottom:12px}
+  .grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:clamp(26px,3vw,34px);margin-top:clamp(32px,4vw,44px)}
+  .card{border-top:1px solid rgba(242,239,233,.22);padding:22px 0 0}
+  .card h3{font-family:'Oswald',sans-serif;text-transform:uppercase;font-weight:500;letter-spacing:.06em;font-size:19px;margin-bottom:12px}
   .card h3 .n{color:var(--gold);margin-right:10px}
-  .card p{font-size:17px;color:var(--muted);line-height:1.55}
+  .card p{font-size:17px;color:rgba(242,239,233,.78);line-height:1.55;text-wrap:pretty}
 
   .who{display:grid;grid-template-columns:1fr 1fr;gap:20px 40px;margin-top:40px;max-width:960px}
   .who .row{display:flex;gap:16px;align-items:flex-start;padding:16px 0;border-top:1px solid var(--line)}
