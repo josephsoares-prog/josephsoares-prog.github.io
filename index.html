@@ -16,6 +16,8 @@
 </script>
 <meta name="description" content="Joseph Soares — crisis-tested advisor to entrepreneurs and leaders. Served in Canada's Prime Minister's Office and as Chief of Staff in the Senate of Canada.">
 <link rel="canonical" href="https://josephsoares.com/">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Joseph Soares & Co.">
 <meta property="og:locale" content="en_US">
@@ -144,9 +146,12 @@
     .navdrop{width:100%}
     .navdrop-menu{display:block;position:static;border:0;box-shadow:none;padding:0;background:transparent}
     .navdrop-menu a{text-align:center}
-    .hero{padding:60px 0 44px}
-    .hero h1{font-size:32px;line-height:1.16;letter-spacing:0;max-width:100%;margin-bottom:22px}
-    .hero .lede{max-width:100%}
+    .hero{padding:48px 0 40px}
+    .hero h1{font-size:31px;line-height:1.16;letter-spacing:0;max-width:100%;margin-bottom:18px}
+    .hero .lede{max-width:100%;font-size:18px;margin-bottom:26px}
+    .hero .ctar a:nth-child(3){display:none}
+    .hero .ctar{gap:10px}
+    .hero .ctar .btn{flex:1 1 100%;text-align:center;padding:16px 20px}
     .grid3{grid-template-columns:1fr}
     .who{grid-template-columns:1fr}
     .paths{grid-template-columns:1fr}
@@ -385,7 +390,7 @@
       <div class="path">
         <div class="tier">Start Free</div>
         <h3>The SPARK Assessment</h3>
-        <p>Eleven minutes. A clear read on where your leadership is aligned and where it is exposed &mdash; results sent straight to your inbox.</p>
+        <p>Eleven minutes. A clear read on where your leadership is aligned and where it is exposed &mdash; with a written profile sent to your inbox.</p>
         <a class="go" href="/spark.html">Take the assessment &rarr;</a>
       </div>
       <div class="path">
@@ -400,7 +405,7 @@
 
 <div class="bookband">
   <div class="wrap">
-    <div class="bookframe"><img src="/images/leadership-under-fire-cover.jpg?v=20260719" width="230" height="368" alt="Leadership Under Fire — The SPARK Framework, by Joseph Soares"></div>
+    <div class="bookframe"><img src="/images/leadership-under-fire-cover.jpg?v=20260719" width="230" height="368" loading="lazy" decoding="async" alt="Leadership Under Fire — The SPARK Framework, by Joseph Soares"></div>
     <div>
       <div class="eyebrow klabel">New &middot; October 6, 2026</div>
       <div class="h2">Leadership Under Fire</div>
@@ -456,4 +461,23 @@
 
 
 <script defer src="https://cdn.jsdelivr.net/ghost/portal@~2.69/umd/portal.min.js" data-ghost="https://brief.josephsoares.com/" data-api="https://brief.josephsoares.com/ghost/api/content/" data-key="ece73de31b60c5a2769ba56ee4" crossorigin="anonymous"></script>
+<!-- GA4 conversion events (delegated) -->
+<script>
+(function(){
+  function ev(n,p){try{window.gtag&&gtag('event',n,p||{});}catch(e){}}
+  document.addEventListener('click',function(e){
+    var a=e.target.closest('a');if(!a)return;
+    var h=a.getAttribute('href')||'';
+    if(a.hasAttribute('data-portal')){ev('subscribe_click',{link_url:h,page:location.pathname});return;}
+    if(h.indexOf('calendar.app.google')>-1){ev('booking_click',{page:location.pathname});return;}
+    if(h.indexOf('/call.html')>-1){ev('call_page_click',{page:location.pathname});return;}
+    if(h.indexOf('tel:')===0){ev('phone_click',{page:location.pathname});return;}
+    if(h.indexOf('/book.html')>-1){ev('book_page_click',{page:location.pathname});return;}
+    if(h.indexOf('youtube.com')>-1){ev('outbound_youtube',{page:location.pathname});return;}
+    if(h.indexOf('http')===0&&h.indexOf('josephsoares.com')===-1){ev('outbound_click',{link_url:h,page:location.pathname});}
+  },true);
+})();
+</script>
+
 </body>
+</html>
