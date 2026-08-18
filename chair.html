@@ -2,6 +2,8 @@
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>The Chair — Private Advisory | Joseph Soares</title>
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <!-- Google Analytics (GA4) -->
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{ad_storage:'denied',analytics_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',wait_for_update:500});</script>
 <script defer src="/consent.js"></script>
@@ -240,7 +242,7 @@
       <label>Timeline</label>
       <select name="timeline"><option>Immediate &mdash; this is live now</option><option>Within the next 90 days</option><option>This year</option><option>Exploring / planning ahead</option></select>
       <div style="margin-top:26px"><button class="btn btn-gold" type="submit">Request a conversation &rarr;</button></div>
-      <p class="fnote">Held in strict confidence. You&rsquo;ll be taken to my private calendar to choose a time.</p>
+      <p class="fnote">Held in strict confidence. Your message comes directly to me, and you&rsquo;ll be taken to my private calendar to choose a time.</p>
     </form>
   </div>
 </div></section>
@@ -261,9 +263,44 @@
 </div></footer>
 <script>
 function chairSubmit(e){e.preventDefault();
-  // No backend on a static page: route to the existing booking page.
-  // To capture the full form, replace this with your Tally/Typeform action or Calendly prefill.
-  window.location.href='/call.html';
+  var f=e.target,btn=f.querySelector('button[type=submit]');
+  var u=null;try{u=JSON.parse(sessionStorage.getItem('utmData'))}catch(err){}
+  var p={form_type:'chair_request',
+    name:(f.name&&f.name.value)||'',email:(f.email&&f.email.value)||'',
+    company:(f.company&&f.company.value)||'',situation:(f.situation&&f.situation.value)||'',
+    timeline:(f.timeline&&f.timeline.value)||'',
+    page_url:location.href,referrer:document.referrer||'(direct)',
+    utm_source:(u&&u.utm_source)||'direct',utm_medium:(u&&u.utm_medium)||'direct',
+    utm_campaign:(u&&u.utm_campaign)||'(none)',utm_content:(u&&u.utm_content)||'(none)',
+    utm_term:(u&&u.utm_term)||'(none)',submitted_at:new Date().toISOString()};
+  if(btn){btn.disabled=true;btn.textContent='Sending\u2026';}
+  try{window.gtag&&gtag('event','chair_submit',{page:location.pathname});}catch(err){}
+  fetch('https://hook.us2.make.com/zrq4t9rdqj4v59sfxuofq0c3a4tvx8k1',{method:'POST',headers:{'Content-Type':'application/json'},
+    body:JSON.stringify(p),keepalive:true}).catch(function(){});
+  setTimeout(function(){window.location.href='/call.html';},400);
   return false;}
+</script>
+<!-- GA4 conversion events (delegated) -->
+<script>
+(function(){
+  function ev(n,p){try{window.gtag&&gtag('event',n,p||{});}catch(e){}}
+  document.addEventListener('click',function(e){
+    var a=e.target.closest('a');if(!a)return;
+    var h=a.getAttribute('href')||'';
+    if(a.hasAttribute('data-portal')){ev('subscribe_click',{link_url:h,page:location.pathname});return;}
+    if(h.indexOf('calendar.app.google')>-1){ev('booking_click',{page:location.pathname});return;}
+    if(h.indexOf('/call.html')>-1){ev('call_page_click',{page:location.pathname});return;}
+    if(h.indexOf('tel:')===0){ev('phone_click',{page:location.pathname});return;}
+    if(h.indexOf('/book.html')>-1){ev('book_page_click',{page:location.pathname});return;}
+    if(h.indexOf('youtube.com')>-1){ev('outbound_youtube',{page:location.pathname});return;}
+    if(h.indexOf('http')===0&&h.indexOf('josephsoares.com')===-1){ev('outbound_click',{link_url:h,page:location.pathname});}
+  },true);
+})();
+</script>
+
+<script>
+(function(){try{var q=new URLSearchParams(location.search);
+if(q.get('utm_source')&&!sessionStorage.getItem('utmData')){
+sessionStorage.setItem('utmData',JSON.stringify({utm_source:q.get('utm_source')||'direct',utm_medium:q.get('utm_medium')||'direct',utm_campaign:q.get('utm_campaign')||'(none)',utm_content:q.get('utm_content')||'(none)',utm_term:q.get('utm_term')||'(none)'}));}}catch(e){}})();
 </script>
 </body></html>

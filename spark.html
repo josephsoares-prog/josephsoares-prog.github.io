@@ -2,6 +2,8 @@
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>The SPARK Assessment — Free 11-Minute Leadership Read | Joseph Soares</title>
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <!-- Google Analytics (GA4) -->
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{ad_storage:'denied',analytics_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',wait_for_update:500});</script>
 <script defer src="/consent.js"></script>
@@ -211,8 +213,15 @@
   <div class="gate" id="gate">
     <div class="eyebrow klabel">Your profile is ready</div>
     <div class="h2" style="font-size:26px">Where should I send the full read?</div>
-    <p class="sub">Enter your email to unlock your written SPARK profile &mdash; and I&rsquo;ll include the opening chapter of <i>Leadership Under Fire</i>. Your scores are below either way.</p>
-    <div class="subs"><div style="text-align:center;margin:14px auto 0"><a href="#/portal/signup" data-portal="signup" style="display:inline-block;font-family:'Inter',sans-serif;font-size:0.8rem;font-weight:600;letter-spacing:0.5px;text-transform:uppercase;background:#D4AF37;color:#0A3161;padding:0.7rem 1.4rem;border-radius:3px;text-decoration:none;">Subscribe free</a></div></div>
+    <p class="sub">Enter your email and I&rsquo;ll send your written SPARK profile &mdash; with the opening chapter of <i>Leadership Under Fire</i>. Your scores are below either way.</p>
+    <div class="subs">
+      <form id="sparkform" onsubmit="return sparkSend(event)" style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin:14px auto 0;max-width:520px">
+        <input type="email" id="sparkemail" required placeholder="you@company.com" autocomplete="email" style="flex:1 1 260px;min-width:220px;font-family:'EB Garamond',serif;font-size:17px;padding:13px 16px;border-radius:2px;border:1px solid rgba(242,239,233,.25);background:#072244;color:#F2EFE9">
+        <button type="submit" class="btn btn-gold" style="padding:13px 26px;font-size:14px">Send my profile &rarr;</button>
+      </form>
+      <p id="sparkok" style="display:none;text-align:center;margin-top:12px;color:#D4AF37;font-style:italic">Done &mdash; your profile is on its way. Watch your inbox.</p>
+      <div style="text-align:center;margin:14px auto 0"><a href="#/portal/signup" data-portal="signup" style="display:inline-block;font-family:'Oswald',sans-serif;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);text-decoration:underline;text-underline-offset:3px;background:none;padding:0">Or just subscribe to Corridor Intelligence free</a></div>
+    </div>
   </div>
 
   <div id="results">
@@ -284,9 +293,43 @@ function grade(){
   const rec={S:["/sprint.html","Run a Sprint on your single most important objective"],P:["/chair.html","Talk through the seat that's holding you back"],A:["/book.html","The AI-first operator chapter is written for exactly this"],R:["/chair.html","A conversation about trust, rooms, and influence"],K:["/sprint.html","Put your stuck decision through a 30-Day Sprint"]}[lowest];
   document.getElementById('reco').innerHTML=`<h3 style="color:var(--bone)"><span class="n">&raquo;</span>Your exposed pillar: ${PILLAR[lowest]}</h3><p style="margin-bottom:18px">This is the flank most likely to give under pressure. The fastest way to close it: <b style="color:var(--bone)">${rec[1]}.</b></p><a class="btn btn-gold" href="${rec[0]}">Take the next step &rarr;</a>`;
   setTimeout(()=>{document.querySelectorAll('.fill').forEach(f=>f.style.width=f.dataset.w+'%');},80);
+  window.__spark={scores:pct,overall:avg,exposed:PILLAR[lowest]};
+  try{window.gtag&&gtag('event','spark_complete',{overall:avg,exposed:PILLAR[lowest]});}catch(e){}
   document.getElementById('gate').scrollIntoView({behavior:'smooth'});
 }
+function sparkSend(e){e.preventDefault();
+  var em=document.getElementById('sparkemail').value,sp=window.__spark||{};
+  var u=null;try{u=JSON.parse(sessionStorage.getItem('utmData'))}catch(err){}
+  var p={form_type:'spark_profile',name:'',email:em,company:'',situation:'',timeline:'',
+    spark_scores:JSON.stringify(sp.scores||{})+' | overall '+(sp.overall||'?')+'%',
+    spark_exposed:sp.exposed||'',page_url:location.href,referrer:document.referrer||'(direct)',
+    utm_source:(u&&u.utm_source)||'direct',utm_medium:(u&&u.utm_medium)||'direct',
+    utm_campaign:(u&&u.utm_campaign)||'(none)',utm_content:(u&&u.utm_content)||'(none)',
+    utm_term:(u&&u.utm_term)||'(none)',submitted_at:new Date().toISOString()};
+  try{window.gtag&&gtag('event','spark_email_submit',{exposed:sp.exposed||''});}catch(err){}
+  fetch('https://hook.us2.make.com/zrq4t9rdqj4v59sfxuofq0c3a4tvx8k1',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(p),keepalive:true}).catch(function(){});
+  document.getElementById('sparkform').style.display='none';
+  document.getElementById('sparkok').style.display='block';
+  return false;}
 </script>
 
 <script defer src="https://cdn.jsdelivr.net/ghost/portal@~2.69/umd/portal.min.js" data-ghost="https://brief.josephsoares.com/" data-api="https://brief.josephsoares.com/ghost/api/content/" data-key="ece73de31b60c5a2769ba56ee4" crossorigin="anonymous"></script>
+<!-- GA4 conversion events (delegated) -->
+<script>
+(function(){
+  function ev(n,p){try{window.gtag&&gtag('event',n,p||{});}catch(e){}}
+  document.addEventListener('click',function(e){
+    var a=e.target.closest('a');if(!a)return;
+    var h=a.getAttribute('href')||'';
+    if(a.hasAttribute('data-portal')){ev('subscribe_click',{link_url:h,page:location.pathname});return;}
+    if(h.indexOf('calendar.app.google')>-1){ev('booking_click',{page:location.pathname});return;}
+    if(h.indexOf('/call.html')>-1){ev('call_page_click',{page:location.pathname});return;}
+    if(h.indexOf('tel:')===0){ev('phone_click',{page:location.pathname});return;}
+    if(h.indexOf('/book.html')>-1){ev('book_page_click',{page:location.pathname});return;}
+    if(h.indexOf('youtube.com')>-1){ev('outbound_youtube',{page:location.pathname});return;}
+    if(h.indexOf('http')===0&&h.indexOf('josephsoares.com')===-1){ev('outbound_click',{link_url:h,page:location.pathname});}
+  },true);
+})();
+</script>
+
 </body></html>
