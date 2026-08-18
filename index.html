@@ -72,35 +72,51 @@
   .navlinks a.cta:hover{border-color:var(--gold);color:var(--gold)}
   .menutoggle{display:none}
 
-  .hero{padding:96px 0 70px;position:relative}
-  .hero .eyebrow{margin-bottom:26px}
+  .hero{padding:clamp(38px,7vw,96px) 0 clamp(40px,5vw,70px);position:relative}
+  .hero .wrap{display:flex;flex-wrap:wrap;gap:clamp(30px,4vw,56px);align-items:center}
+  .hero .herotext{flex:7 1 min(560px,100%)}
+  .hero .heroportrait{flex:5 1 min(260px,100%)}
+  .hero .heroportrait img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 25%;display:block;border:1px solid var(--line)}
+  .hero .eyebrow{margin-bottom:24px}
   .hero h1{font-family:'Oswald',sans-serif;text-transform:uppercase;font-weight:600;
-    font-size:62px;line-height:1.04;letter-spacing:.005em;max-width:17ch;margin-bottom:30px}
+    font-size:clamp(30px,4.3vw,58px);line-height:1.07;letter-spacing:.005em;max-width:18ch;margin-bottom:22px;text-wrap:balance}
   .hero h1 .g{color:var(--gold)}
   .hero h1 .i{font-family:'EB Garamond',serif;font-style:italic;text-transform:none;font-weight:400;color:var(--bone)}
-  .hero .lede{font-size:21px;color:var(--muted);max-width:60ch;margin-bottom:34px}
+  .hero .lede{font-size:clamp(17px,4.4vw,21px);line-height:1.58;color:rgba(242,239,233,.82);max-width:56ch;margin-bottom:30px;text-wrap:pretty}
   .hero .lede b{color:var(--bone);font-weight:500}
-  .ctar{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+  .ctar{display:flex;gap:18px 22px;flex-wrap:wrap;align-items:center}
+  .ctar .quiet{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.14em;font-weight:500;
+    font-size:13px;text-decoration:none;color:rgba(242,239,233,.82);border:1px solid rgba(242,239,233,.2);
+    border-radius:2px;padding:17px 22px;flex:1 1 240px;text-align:center}
+  .ctar .quiet:hover{border-color:var(--gold);color:var(--gold)}
+  .ctar .btn{flex:1 1 240px;text-align:center}
 
-  .authbar{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--panel);padding:24px 0}
-  .authbar .wrap{display:flex;flex-wrap:wrap;gap:14px 44px;align-items:center;justify-content:center;
-    font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.18em;font-size:15px;color:var(--muted)}
-  .authbar .lab{font-size:11px;letter-spacing:.24em;color:var(--gold);width:100%;text-align:center;margin-bottom:2px}
-  .authbar b{color:var(--bone);font-weight:500}
+  .authbar{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--panel);padding:26px 0}
+  .authbar .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:20px clamp(30px,5vw,64px);
+    font-family:'Oswald',sans-serif;text-transform:uppercase}
+  .authbar .lab{font-size:11px;letter-spacing:.28em;color:var(--gold);margin-bottom:10px}
+  .authbar .lab.sec{color:var(--muted)}
+  .authbar .names{display:flex;flex-wrap:wrap;gap:8px clamp(18px,3vw,30px);align-items:baseline}
+  .authbar .names b{font-size:clamp(15px,4vw,18px);letter-spacing:.14em;color:var(--bone);font-weight:500}
+  .authbar .cov{border-left:1px solid var(--line);padding-left:clamp(0px,3vw,34px)}
+  .authbar .cov .names span{font-size:clamp(13px,3.4vw,14px);letter-spacing:.14em;color:rgba(242,239,233,.86)}
+  .authbar .scope{font-family:'EB Garamond',serif;text-transform:none;letter-spacing:0;font-size:15px;
+    line-height:1.5;color:rgba(242,239,233,.72);margin-top:12px;max-width:46ch}
+  .authbar .scope a{color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(212,175,55,.4)}
 
-  section.blk{padding:82px 0}
-  .quote{border-left:2px solid var(--gold);padding-left:34px;max-width:60ch}
-  .quote p{font-family:'EB Garamond',serif;font-size:30px;line-height:1.4;color:var(--bone)}
-  .quote p .m{color:var(--muted)}
-  .h2{font-family:'Oswald',sans-serif;text-transform:uppercase;font-weight:600;font-size:38px;line-height:1.08;margin-bottom:10px}
-  .sub{color:var(--muted);font-size:20px;max-width:60ch}
+  section.blk{padding:clamp(52px,8vw,110px) 0}
+  .quote{border-left:2px solid var(--gold);padding-left:clamp(18px,4vw,34px);max-width:58ch}
+  .quote p{font-family:'EB Garamond',serif;font-size:clamp(21px,5.4vw,30px);line-height:1.38;color:var(--bone);text-wrap:pretty}
+  .quote p .m{color:rgba(242,239,233,.62)}
+  .h2{font-family:'Oswald',sans-serif;text-transform:uppercase;font-weight:600;font-size:clamp(25px,6.4vw,38px);line-height:1.1;margin-bottom:10px;text-wrap:balance}
+  .sub{color:rgba(242,239,233,.8);font-size:clamp(17px,4.4vw,19px);max-width:60ch;text-wrap:pretty}
   .klabel{margin-bottom:14px}
 
-  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:44px}
-  .card{background:var(--panel2);border:1px solid var(--line);border-radius:3px;padding:30px 28px}
-  .card h3{font-family:'Oswald',sans-serif;text-transform:uppercase;font-weight:500;letter-spacing:.05em;font-size:19px;margin-bottom:12px}
+  .grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:clamp(26px,3vw,34px);margin-top:clamp(32px,4vw,44px)}
+  .card{border-top:1px solid rgba(242,239,233,.22);padding:22px 0 0}
+  .card h3{font-family:'Oswald',sans-serif;text-transform:uppercase;font-weight:500;letter-spacing:.06em;font-size:19px;margin-bottom:12px}
   .card h3 .n{color:var(--gold);margin-right:10px}
-  .card p{font-size:17px;color:var(--muted);line-height:1.55}
+  .card p{font-size:17px;color:rgba(242,239,233,.78);line-height:1.55;text-wrap:pretty}
 
   .who{display:grid;grid-template-columns:1fr 1fr;gap:20px 40px;margin-top:40px;max-width:960px}
   .who .row{display:flex;gap:16px;align-items:flex-start;padding:16px 0;border-top:1px solid var(--line)}
@@ -146,12 +162,11 @@
     .navdrop{width:100%}
     .navdrop-menu{display:block;position:static;border:0;box-shadow:none;padding:0;background:transparent}
     .navdrop-menu a{text-align:center}
-    .hero{padding:48px 0 40px}
-    .hero h1{font-size:31px;line-height:1.16;letter-spacing:0;max-width:100%;margin-bottom:18px}
-    .hero .lede{max-width:100%;font-size:18px;margin-bottom:26px}
-    .hero .ctar a:nth-child(3){display:none}
-    .hero .ctar{gap:10px}
-    .hero .ctar .btn{flex:1 1 100%;text-align:center;padding:16px 20px}
+    .hero{padding:38px 0 40px}
+    .hero h1{max-width:100%}
+    .hero .lede{max-width:100%}
+    .hero .ctar{gap:12px}
+    .hero .ctar .btn,.hero .ctar .quiet{flex:1 1 100%;text-align:center;padding:17px 20px}
     .grid3{grid-template-columns:1fr}
     .who{grid-template-columns:1fr}
     .paths{grid-template-columns:1fr}
@@ -299,30 +314,32 @@
 
 <header class="hero">
   <div class="wrap">
+    <div class="herotext">
     <div class="eyebrow">Senior Advisor &middot; Crisis-Tested &middot; Trusted at the Top</div>
     <h1>I served in the <span class="g">Prime&nbsp;Minister&rsquo;s Office</span> during a <span class="i">global financial crisis.</span> Now I advise <span class="i">leaders like you.</span></h1>
     <p class="lede"><b>Joseph Soares</b> served in the Prime Minister&rsquo;s Office of Canada during the 2008 financial crisis and as Chief of Staff in the Senate of Canada through the pandemic &mdash; two of the highest-pressure rooms in the country, in two of its hardest years. He advises a select group of leaders on the decisions that don&rsquo;t allow a second draft.</p>
     <div class="ctar">
       <a href="#/portal/signup" data-portal="signup" class="btn btn-gold">Subscribe &mdash; Corridor Intelligence</a>
-      <a href="/call.html" class="btn btn-ghost">Book a private call</a>
-      <a href="/book.html" class="btn btn-ghost">Read the book</a>
+      <a href="/call.html" class="quiet">Book a private call</a>
+    </div>
+    </div>
+    <div class="heroportrait">
+      <img src="/images/joseph-soares-portrait.jpg" alt="Joseph Soares" width="800" height="1000" loading="eager">
     </div>
   </div>
 </header>
 
 <div class="authbar">
   <div class="wrap">
-    <span class="lab">As Seen In</span>
-    <span><b>Forbes</b></span>
-    <span><b>Newsweek</b></span>
-    <span><b>The Globe and Mail</b></span>
-    <span><b>National Post</b></span>
-    <span><b>Maclean&rsquo;s</b></span>
-    <span><b>Huffington Post</b></span>
-    <span><b>Le Devoir</b></span>
-    <span><b>La Presse</b></span>
-    <span><b>Le Soleil</b></span>
-    <span><b>Açoriano Oriental</b></span>
+    <div>
+      <div class="lab">Bylines in</div>
+      <div class="names"><b>Forbes</b><b>Newsweek</b><b>Huffington Post</b></div>
+    </div>
+    <div class="cov">
+      <div class="lab sec">Covered in</div>
+      <div class="names"><span>The Globe and Mail</span><span>La Presse</span><span>Le Devoir</span><span>National Post</span><span>Calgary Herald</span><span>Maclean&rsquo;s</span></div>
+      <p class="scope">and in the English, French, and Portuguese-language press across Canada, the United States, and Europe. <a href="/media.html">Full press record &rarr;</a></p>
+    </div>
   </div>
 </div>
 
@@ -405,7 +422,7 @@
 
 <div class="bookband">
   <div class="wrap">
-    <div class="bookframe"><img src="/images/leadership-under-fire-cover.jpg?v=20260719" width="230" height="368" loading="lazy" decoding="async" alt="Leadership Under Fire — The SPARK Framework, by Joseph Soares"></div>
+    <div class="bookframe"><img src="/images/leadership-under-fire-cover.jpg?v=20260818" width="230" height="368" loading="lazy" decoding="async" alt="Leadership Under Fire — The SPARK Framework, by Joseph Soares"></div>
     <div>
       <div class="eyebrow klabel">New &middot; October 6, 2026</div>
       <div class="h2">Leadership Under Fire</div>
