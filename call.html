@@ -15,7 +15,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="apple-touch-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
     <title>Advisory Access | Joseph Soares — Senior Advisor</title>
     <meta name="description" content="Book a 30-minute introductory call with Joseph Soares. No pitch, no obligation — a confidential conversation to see if we're a fit.">
     <!-- JSON-LD Structured Data -->
@@ -395,7 +396,10 @@
 
         /* ===== RESPONSIVE ===== */
         @media (max-width: 768px) {
-            .page-inner { grid-template-columns: 1fr; gap: 40px; }
+            .page-inner { grid-template-columns: 1fr; gap: 40px; display: flex; flex-direction: column; }
+            .call-booking { order: 1; }
+            .call-context { order: 2; }
+            .sticky-cta { display: block; }
             .page-wrap { padding-left: 24px; padding-right: 24px; }
             .call-booking { padding: 28px 20px; }
         }
@@ -416,7 +420,12 @@
   <script>function initApollo(){var n=Math.random().toString(36).substring(7),o=document.createElement("script");
 o.src="https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache="+n,o.async=!0,o.defer=!0,
 o.onload=function(){window.trackingFunctions.onLoad({appId:"69b933d5574de0002181290e"})},
-document.head.appendChild(o)}initApollo();</script>
+document.head.appendChild(o)}
+/* Law 25: load Apollo only after the visitor grants consent (same gate as GA4) */
+(function(){try{if(localStorage.getItem('ci_consent_v1')==='granted'){initApollo();return;}}catch(e){}
+window.addEventListener('storage',function(ev){if(ev.key==='ci_consent_v1'&&ev.newValue==='granted')initApollo();});
+document.addEventListener('click',function(ev){if(ev.target&&ev.target.className==='ci-accept')setTimeout(function(){try{if(localStorage.getItem('ci_consent_v1')==='granted')initApollo();}catch(e){}},300);},true);
+})();</script>
 
 <style>
 /* Mobile hamburger menu fix (site-wide) */
@@ -445,6 +454,10 @@ document.head.appendChild(o)}initApollo();</script>
  .navdrop-menu{display:block;position:static;border:0;box-shadow:none;padding:4px 0;background:rgba(7,34,68,.5);min-width:0;border-top:1px solid rgba(242,239,233,.08);border-bottom:1px solid rgba(242,239,233,.08)}
  .navdrop-menu a{padding:12px 30px 12px 54px !important;font-size:14px;opacity:.82;text-align:left !important;background:rgba(212,175,55,.05)}
 }
+</style>
+<style>
+.sticky-cta{display:none;position:fixed;left:0;right:0;bottom:0;z-index:50;background:rgba(11,21,36,.94);backdrop-filter:blur(8px);border-top:1px solid rgba(212,175,55,.4);padding:10px 16px calc(10px + env(safe-area-inset-bottom))}
+.sticky-cta a{display:block;text-align:center;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.12em;font-weight:600;font-size:15px;background:#D4AF37;color:#0A3161;text-decoration:none;padding:14px;border-radius:2px}
 </style>
 </head>
 <body>
@@ -511,7 +524,7 @@ document.head.appendChild(o)}initApollo();</script>
                 </div>
 
                 <div class="booking-trust">
-                    <p>I served in the Prime Minister's Office during the 2008 financial crisis. As Chief of Staff at the Senate of Canada during the 2020 pandemic. Featured in Forbes, Newsweek, the National Post, the Globe and Mail, and media globally. This is the same mind — available to you.</p>
+                    <p>I served in the Prime Minister's Office during the 2008 financial crisis. As Chief of Staff in the Senate of Canada during the 2020 pandemic. Featured in Forbes, Newsweek, the National Post, the Globe and Mail, and media globally. This is the same mind — available to you.</p>
                 </div>
             </div>
         </div>
@@ -561,39 +574,11 @@ document.head.appendChild(o)}initApollo();</script>
         // Expose for downstream handlers
         window.__utmData = utmData;
 
-        // Make.com attribution webhook — swap placeholder with real URL when ready
-        var ATTRIBUTION_WEBHOOK_URL = 'ATTRIBUTION_WEBHOOK_URL';
-
-        function fireAttributionEvent(eventType, extra) {
-            if (ATTRIBUTION_WEBHOOK_URL === 'ATTRIBUTION_WEBHOOK_URL') return;
-            var payload = Object.assign({
-                event_type: eventType,
-                timestamp: new Date().toISOString(),
-                page_url: window.location.href,
-                referrer: document.referrer || '(direct)',
-                user_agent: navigator.userAgent
-            }, utmData, extra || {});
-            try {
-                fetch(ATTRIBUTION_WEBHOOK_URL, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(payload),
-                    keepalive: true
-                }).catch(function() { /* silent */ });
-            } catch(e) { /* silent */ }
-        }
 
         // Log page_view with UTM context
-        fireAttributionEvent('page_view');
 
         // Log booking_click when user clicks "Choose a Time"
-        var bookingCta = document.querySelector('.booking-cta');
-        if (bookingCta) {
-            bookingCta.addEventListener('click', function() {
-                fireAttributionEvent('booking_click');
-                // Proceed to Google Calendar booking as normal — no delay
-            });
-        }
+        // booking_click is tracked by the delegated GA4 events snippet below.
 
         // Also forward UTMs to GA4 as custom event parameters for cross-checking
         if (typeof gtag === 'function') {
@@ -606,5 +591,24 @@ document.head.appendChild(o)}initApollo();</script>
         }
     })();
     </script>
+<!-- GA4 conversion events (delegated) -->
+<script>
+(function(){
+  function ev(n,p){try{window.gtag&&gtag('event',n,p||{});}catch(e){}}
+  document.addEventListener('click',function(e){
+    var a=e.target.closest('a');if(!a)return;
+    var h=a.getAttribute('href')||'';
+    if(a.hasAttribute('data-portal')){ev('subscribe_click',{link_url:h,page:location.pathname});return;}
+    if(h.indexOf('calendar.app.google')>-1){ev('booking_click',{page:location.pathname});return;}
+    if(h.indexOf('/call.html')>-1){ev('call_page_click',{page:location.pathname});return;}
+    if(h.indexOf('tel:')===0){ev('phone_click',{page:location.pathname});return;}
+    if(h.indexOf('/book.html')>-1){ev('book_page_click',{page:location.pathname});return;}
+    if(h.indexOf('youtube.com')>-1){ev('outbound_youtube',{page:location.pathname});return;}
+    if(h.indexOf('http')===0&&h.indexOf('josephsoares.com')===-1){ev('outbound_click',{link_url:h,page:location.pathname});}
+  },true);
+})();
+</script>
+
+<div class="sticky-cta"><a href="https://calendar.app.google/pEyrPMvGY2TuEndcA">Choose a Time &rarr;</a></div>
 </body>
 </html>
