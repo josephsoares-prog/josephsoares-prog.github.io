@@ -61,3 +61,64 @@
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", build);
   else build();
 })();
+
+/* ---------------------------------------------------------------------------
+   Ghost capture shim — added 2026-08-19.
+
+   WHY THIS EXISTS: the daily Brief publisher on the Ghost droplet still emits a
+   capture form posting to app.kit.com. Kit was retired site-wide; Ghost is the
+   only list. Every published Brief page already loads /consent.js, so this shim
+   repoints those forms to Ghost without editing any auto-published /brief/ output.
+
+   REMOVE THIS BLOCK once the publisher template on the droplet emits Ghost
+   markup directly. It is a bridge, not the fix.
+   --------------------------------------------------------------------------- */
+(function () {
+  "use strict";
+  var GHOST = "https://brief.josephsoares.com/members/api/send-magic-link/";
+
+  function isStrayCapture(form) {
+    if (!form || form.tagName !== "FORM") return false;
+    var action = (form.getAttribute("action") || "").toLowerCase();
+    return action.indexOf("kit.com") > -1 || action.indexOf("convertkit") > -1 || action.indexOf("substack") > -1;
+  }
+
+  function say(form, text) {
+    var msg = form.parentNode && form.parentNode.querySelector(".ci-capture-msg");
+    if (msg) msg.textContent = text;
+  }
+
+  document.addEventListener("submit", function (e) {
+    var form = e.target;
+    if (!isStrayCapture(form)) return;
+
+    e.preventDefault();
+    e.stopImmediatePropagation();
+
+    var field = form.querySelector('input[type="email"]');
+    var email = field && field.value && field.value.trim();
+    if (!email) { say(form, "Please enter your email address."); return; }
+
+    var btn = form.querySelector("button");
+    if (btn) { btn.disabled = true; }
+    say(form, "Sending…");
+
+    fetch(GHOST, {
+      method: "POST",
+      headers: { "Content-Type": "application/json;charset=UTF-8" },
+      body: JSON.stringify({ email: email, emailType: "subscribe", labels: [] })
+    }).then(function (res) {
+      if (res.ok) {
+        say(form, "Check your inbox to confirm your subscription.");
+        form.reset();
+        if (window.gtag) { window.gtag("event", "subscribe_submit", { page: location.pathname, source: "brief_capture" }); }
+      } else {
+        say(form, "That did not go through. Please try again, or subscribe at josephsoares.com/subscribe.html");
+      }
+    }).catch(function () {
+      say(form, "That did not go through. Please try again, or subscribe at josephsoares.com/subscribe.html");
+    }).then(function () {
+      if (btn) { btn.disabled = false; }
+    });
+  }, true);
+})();
