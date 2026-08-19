@@ -1,0 +1,67 @@
+/* josephsoares.com — shared corrections layer
+   Added 2026-08-19 (audit items 7, 13, and the mobile dimension).
+   Loaded LAST in <head> so it wins over each page's inline <style>.
+   Brand tokens only: navy #0A3161 / panel #0E3A70 / deep #072244 /
+   gold #D4AF37 / hover #E6C860 / cream #F2EFE9. No new colours, no new fonts. */
+
+/* 1 — Body-copy contrast.
+   --muted #A9A39A on #0A3161 measures ~4.3:1, under AA at 15-19px.
+   Raised to a cream tint that clears AA while staying a secondary tone.
+   Labels and eyebrows keep the old value via --muted-label. */
+:root{
+  --muted:#C9C4BC;
+  --muted-label:#A9A39A;
+}
+
+/* 2 — Keyboard focus. Was present on index.html only. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+[tabindex]:focus-visible{
+  outline:2px solid #D4AF37;
+  outline-offset:3px;
+  border-radius:1px;
+}
+
+/* 3 — Reduced motion. Was honoured on index.html only. */
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{
+    animation-duration:.001ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:.001ms !important;
+    scroll-behavior:auto !important;
+  }
+}
+
+/* 4 — Mobile type scale.
+   13 of 24 pages declared no @media query at all, so fixed 62px / 58px / 56px
+   heroes rendered at full size on a 390px screen. Scoped to small screens only
+   so desktop composition is untouched. */
+@media (max-width: 768px){
+  h1{ font-size:clamp(30px, 8.2vw, 44px) !important; line-height:1.08 !important; }
+  h2{ font-size:clamp(22px, 5.8vw, 32px) !important; line-height:1.14 !important; }
+  h3{ font-size:clamp(18px, 4.6vw, 24px) !important; line-height:1.2 !important; }
+
+  /* Nothing below the readable floor on a phone. */
+  body{ font-size:17px; }
+  p, li{ font-size:clamp(16px, 4.2vw, 19px); line-height:1.6; }
+
+  /* Tap targets. 44px minimum on anything that acts like a button. */
+  a[class*="btn"], a[class*="cta"], button, input[type="submit"],
+  .booking-cta, .btn-primary, .btn-subscribe, .service-cta, .cta-primary{
+    min-height:44px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding-block:10px;
+  }
+
+  /* Any fixed multi-column grid collapses to one column. */
+  [style*="grid-template-columns"]{ grid-template-columns:1fr !important; }
+}
+
+/* 5 — No horizontal overflow at any width. */
+html, body{ max-width:100%; overflow-x:hidden; }
+img, video, iframe, table{ max-width:100%; }
