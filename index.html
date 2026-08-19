@@ -350,31 +350,6 @@
     </div>
   </div>
 </header>
-<script>
-/* Moving portrait: swap the still for a muted 6s loop, but only where it is cheap and welcome.
-   Phones keep the still (2.4MB is not worth it on cellular), as does reduce-motion and Save-Data. */
-(function(){
-  try{
-    var slot = document.querySelector('.hero .heroportrait');
-    if(!slot) return;
-    if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    if(window.innerWidth < 900) return;
-    var c = navigator.connection || {};
-    if(c.saveData) return;
-    if(c.effectiveType && /2g|3g/.test(c.effectiveType)) return;
-    var img = slot.querySelector('img');
-    var v = document.createElement('video');
-    v.src = '/assets/Hero%20loop.mp4';
-    v.poster = '/images/joseph-soares-portrait.jpg';
-    v.muted = true; v.defaultMuted = true; v.loop = true; v.autoplay = true;
-    v.playsInline = true; v.setAttribute('playsinline',''); v.preload = 'metadata';
-    v.setAttribute('aria-label','Joseph Soares');
-    v.addEventListener('loadeddata', function(){ if(img) img.style.display='none'; slot.classList.add('haslooop'); });
-    slot.appendChild(v);
-    var p = v.play(); if(p && p.catch) p.catch(function(){ v.remove(); if(img) img.style.display=''; });
-  }catch(e){}
-})();
-</script>
 
 <div class="authbar">
   <div class="wrap">
