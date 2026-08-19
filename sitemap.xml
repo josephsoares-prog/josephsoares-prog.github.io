@@ -26,6 +26,12 @@
   </url>
 
   <url>
+    <loc>https://josephsoares.com/accueil.html</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
     <loc>https://josephsoares.com/abonnement.html</loc>
     <lastmod>2026-08-19</lastmod>
     <changefreq>monthly</changefreq>
