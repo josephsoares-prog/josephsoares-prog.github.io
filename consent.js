@@ -74,7 +74,11 @@
    --------------------------------------------------------------------------- */
 (function () {
   "use strict";
-  if (location.pathname.replace(/^\/+/, "") === "book.html") return;
+  var PATH = location.pathname.replace(/^\/+/, "");
+  if (PATH === "book.html" || PATH === "livre.html") return;
+
+  var LANG = (document.documentElement.getAttribute("lang") || "en").toLowerCase();
+  var IS_FR = LANG.indexOf("fr") === 0;
 
   var NAV_HTML =
     '<div class="navdrop"><a href="/intelligence.html">Intelligence</a><div class="navdrop-menu">' +
@@ -87,6 +91,18 @@
     '<a href="/media.html">Media</a>' +
     '<a href="/book.html">Book</a>' +
     '<a class="cta" href="/subscribe.html">Subscribe</a>';
+
+  var NAV_HTML_FR =
+    '<div class="navdrop"><a href="/intelligence.html">Intelligence</a><div class="navdrop-menu">' +
+    '<a href="/brief/">Synth&egrave;ses</a><a href="/dispatch.html">D&eacute;p&ecirc;ches</a>' +
+    '<a href="/corridor-files.html">Dossiers</a><a href="/brief/index-dashboard.html">Index</a>' +
+    '<a href="/issues-focus.html">Dossiers th&eacute;matiques</a></div></div>' +
+    '<a href="/podcast.html">Balado</a>' +
+    '<a href="/writing.html">R&eacute;daction</a>' +
+    '<a href="/conferences.html">Conf&eacute;rences</a>' +
+    '<a href="/media.html">M&eacute;dias</a>' +
+    '<a href="/livre.html">Livre</a>' +
+    '<a class="cta" href="/abonnement.html">S&rsquo;abonner</a>';
 
   var FOOTER_HTML =
     '<div class="wrap">' +
@@ -103,13 +119,50 @@
     '<a href="https://www.youtube.com/@corridorintelligence?sub_confirmation=1">YouTube</a>' +
     '</div></div>';
 
+  var FOOTER_HTML_FR =
+    '<div class="wrap">' +
+    '<div class="disc"><div class="brand" style="font-size:15px;margin-bottom:10px">Joseph <span style="color:var(--gold)">Soares</span> &amp; Co.</div>' +
+    '<span style="display:block;margin-top:10px;font-style:normal;font-size:14px;letter-spacing:.02em;opacity:.8">&copy; 2026 Joseph Soares &amp; Co.</span></div>' +
+    '<div class="soc">' +
+    '<a href="/livre.html">Livre</a>' +
+    '<a href="/abonnement.html">S&rsquo;abonner</a>' +
+    '<a href="/appel.html">Planifier un appel</a>' +
+    '<a href="/privacy.html" style="margin-left:22px">Confidentialit&eacute;</a>' +
+    '<a href="/terms.html">Conditions</a>' +
+    '<a href="https://www.linkedin.com/in/soaresjoseph/" style="margin-left:22px">LinkedIn</a>' +
+    '<a href="https://x.com/JosephSoares">X</a>' +
+    '<a href="https://www.youtube.com/@corridorintelligence?sub_confirmation=1">YouTube</a>' +
+    '</div></div>';
+
+  /* Language toggle. Derived from the hreflang alternates already in <head>,
+     so any page that declares a twin gets the toggle with no per-page edit.
+     Renders nothing when the page has no counterpart. */
+  function altPath(hl) {
+    var l = document.querySelector('link[rel="alternate"][hreflang="' + hl + '"]');
+    if (!l) return null;
+    var href = l.getAttribute("href") || "";
+    if (!href) return null;
+    var p;
+    try { p = new URL(href, location.origin).pathname; } catch (e) { return null; }
+    return p.replace(/^\/+/, "") === PATH ? null : p;
+  }
+
+  function toggleHTML() {
+    var target = IS_FR ? altPath("en") : (altPath("fr-CA") || altPath("fr"));
+    if (!target) return "";
+    var label = IS_FR ? "EN" : "FR";
+    var title = IS_FR ? "Read this page in English" : "Lire cette page en fran&ccedil;ais";
+    return '<a class="lang" href="' + target + '" hreflang="' + (IS_FR ? "en" : "fr-CA") +
+           '" title="' + title + '" aria-label="' + title + '">' + label + '</a>';
+  }
+
   function run() {
     var navlinks = document.querySelector(".navlinks");
-    if (navlinks) { navlinks.innerHTML = NAV_HTML; }
+    if (navlinks) { navlinks.innerHTML = (IS_FR ? NAV_HTML_FR : NAV_HTML) + toggleHTML(); }
 
     var footers = document.querySelectorAll("footer");
     var footer = footers.length ? footers[footers.length - 1] : null;
-    if (footer) { footer.innerHTML = FOOTER_HTML; }
+    if (footer) { footer.innerHTML = IS_FR ? FOOTER_HTML_FR : FOOTER_HTML; }
   }
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", run);
