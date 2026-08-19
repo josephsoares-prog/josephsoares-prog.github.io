@@ -172,6 +172,13 @@ function setLang(l){document.documentElement.lang=l;
  try{localStorage.setItem('js-lang',l);}catch(e){}}
 try{var s=localStorage.getItem('js-lang');if(s==='fr')setLang('fr');}catch(e){}
 </script>
+<section class="ci-capture" style="max-width:720px;margin:36px auto;text-align:center;padding:28px 22px;background:#072244;border:1px solid rgba(242,239,233,.12)">
+<div style="font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.3em;font-size:11px;color:#D4AF37;margin-bottom:10px">Corridor Intelligence</div>
+<h2 style="font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.04em;font-size:26px;margin:0 0 10px;color:#F2EFE9">The Brief, every morning</h2>
+<p style="color:rgba(242,239,233,.80);margin:0 auto 4px;max-width:52ch">Compiled daily from international sources and ranked by decision impact. Free.</p>
+<a href="/subscribe.html" style="display:inline-flex;align-items:center;justify-content:center;min-height:44px;margin-top:18px;padding:13px 30px;background:#D4AF37;color:#0A3161;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.12em;font-size:13px;font-weight:500;text-decoration:none;border-radius:3px">Subscribe free</a>
+</section>
+
 <script id="ci-capture-js">
 document.addEventListener('submit',function(e){var f=e.target;if(!(f.classList&&f.classList.contains('ci-capture-form')))return;e.preventDefault();var msg=f.parentNode.querySelector('.ci-capture-msg'),btn=f.querySelector('button');var done=f.getAttribute('data-msg')||'Thank you &#x2014; check your inbox to confirm your subscription.';if(btn){btn.disabled=true;btn.dataset.t=btn.textContent;btn.textContent='&#x2026;';}fetch(f.action,{method:'POST',body:new FormData(f),headers:{'Accept':'application/json'}}).then(function(r){return r.ok?r.json().catch(function(){return{};}):Promise.reject();}).then(function(){if(msg)msg.textContent=done;f.reset();if(btn){btn.disabled=false;btn.textContent=btn.dataset.t||'Subscribe';}}).catch(function(){f.submit();});});
 </script>
