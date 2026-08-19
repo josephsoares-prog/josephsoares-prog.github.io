@@ -1277,56 +1277,8 @@ document.head.appendChild(o)}initApollo();</script>
 
 <!-- Advisory Brief capture popup removed 2026-08-19: advisory is dormant. -->
 
-<script>
-    // Email popup handler
-    (function() {
-        const overlay = document.getElementById('popupOverlay');
-        const closeBtn = document.getElementById('popupClose');
-        const advisoryBtn = document.getElementById('advisoryBriefBtn');
-        const form = document.getElementById('popupForm');
-        const successScreen = document.getElementById('popupSuccess');
-        const formContainer = document.querySelector('.popup-form-container');
-
-        advisoryBtn.addEventListener('click', () => {
-            overlay.classList.add('active');
-        });
-
-        closeBtn.addEventListener('click', () => {
-            overlay.classList.remove('active');
-        });
-
-        overlay.addEventListener('click', (e) => {
-            if (e.target === overlay) {
-                overlay.classList.remove('active');
-            }
-        });
-
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                overlay.classList.remove('active');
-            }
-        });
-
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const firstName = document.getElementById('firstName').value;
-            const email = document.getElementById('email').value;
-
-            fetch('MAKE_WEBHOOK_URL', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ firstName, email })
-            }).then(() => {
-                formContainer.style.display = 'none';
-                successScreen.classList.add('active');
-            }).catch(() => {
-                formContainer.style.display = 'none';
-                successScreen.classList.add('active');
-            });
-        });
-    })();
-
-</script>
+<!-- Advisory popup handler removed 2026-08-19 with its markup. The setLang() stub that
+     lived here is superseded by the hreflang-derived EN/FR toggle in /consent.js. -->
 
 <script>
 /* Click-to-play facades. No YouTube iframe loads until the visitor asks for one.
