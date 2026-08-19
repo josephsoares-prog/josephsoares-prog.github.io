@@ -63,6 +63,60 @@
 })();
 
 /* ---------------------------------------------------------------------------
+   Nav + footer unification — added 2026-08-19 (audit item 10).
+
+   One canonical nav, one canonical footer, applied at runtime to every page
+   that loads this script. Rewrites .navlinks in place (structure already
+   consistent site-wide) and the last <footer> on the page. Skips book.html,
+   whose 2-link nav is deliberate (RoD-2026-08-18 do-not-touch), and any page
+   with no .navlinks / <footer> (redirects, the imprint/welcome/French pages,
+   which carry their own minimal chrome by design).
+   --------------------------------------------------------------------------- */
+(function () {
+  "use strict";
+  if (location.pathname.replace(/^\/+/, "") === "book.html") return;
+
+  var NAV_HTML =
+    '<div class="navdrop"><a href="/intelligence.html">Intelligence</a><div class="navdrop-menu">' +
+    '<a href="/brief/">Briefs</a><a href="/dispatch.html">Dispatches</a>' +
+    '<a href="/corridor-files.html">Files</a><a href="/brief/index-dashboard.html">Index</a>' +
+    '<a href="/issues-focus.html">Issues Focus</a></div></div>' +
+    '<a href="/podcast.html">Podcast</a>' +
+    '<a href="/writing.html">Writing</a>' +
+    '<a href="/stewardship.html">Stewardship</a>' +
+    '<a href="/media.html">Media</a>' +
+    '<a href="/book.html">Book</a>' +
+    '<a class="cta" href="/subscribe.html">Subscribe</a>';
+
+  var FOOTER_HTML =
+    '<div class="wrap">' +
+    '<div class="disc"><div class="brand" style="font-size:15px;margin-bottom:10px">Joseph <span style="color:var(--gold)">Soares</span> &amp; Co.</div>' +
+    '<span style="display:block;margin-top:10px;font-style:normal;font-size:14px;letter-spacing:.02em;opacity:.8">&copy; 2026 Joseph Soares &amp; Co.</span></div>' +
+    '<div class="soc">' +
+    '<a href="/book.html">Book</a>' +
+    '<a href="/subscribe.html">Subscribe</a>' +
+    '<a href="/call.html">Book a Call</a>' +
+    '<a href="/privacy.html" style="margin-left:22px">Privacy</a>' +
+    '<a href="/terms.html">Terms</a>' +
+    '<a href="https://www.linkedin.com/in/soaresjoseph/" style="margin-left:22px">LinkedIn</a>' +
+    '<a href="https://x.com/JosephSoares">X</a>' +
+    '<a href="https://www.youtube.com/@corridorintelligence?sub_confirmation=1">YouTube</a>' +
+    '</div></div>';
+
+  function run() {
+    var navlinks = document.querySelector(".navlinks");
+    if (navlinks) { navlinks.innerHTML = NAV_HTML; }
+
+    var footers = document.querySelectorAll("footer");
+    var footer = footers.length ? footers[footers.length - 1] : null;
+    if (footer) { footer.innerHTML = FOOTER_HTML; }
+  }
+
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", run);
+  else run();
+})();
+
+/* ---------------------------------------------------------------------------
    Ghost capture shim — added 2026-08-19.
 
    WHY THIS EXISTS: the daily Brief publisher on the Ghost droplet still emits a
