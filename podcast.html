@@ -873,8 +873,7 @@ document.head.appendChild(o)}initApollo();</script>
             </a>
         </div>
         <div class="lang-bar-right">
-            <button class="btn-advisory-brief" id="advisoryBriefBtn" hidden style="display:none" aria-hidden="true" tabindex="-1">Advisory Brief</button>
-            <a href="/subscribe.html" class="btn-subscribe">Subscribe</a>
+                        <a href="/subscribe.html" class="btn-subscribe">Subscribe</a>
             <div class="lang-buttons">
                 <button class="active" onclick="setLang('en')">EN</button>
                 <span class="lang-sep">·</span>
@@ -1276,28 +1275,7 @@ document.head.appendChild(o)}initApollo();</script>
   </div>
 </footer>
 
-<!-- Email Capture Popup -->
-<div class="popup-overlay" id="popupOverlay">
-    <div class="popup-card">
-        <button class="popup-close" id="popupClose">&times;</button>
-        <div class="popup-form-container">
-            <div class="popup-header">
-                <h2>Get the Advisory Brief</h2>
-                <p>Insights on decision-making, delivered weekly.</p>
-            </div>
-            <form class="popup-form" id="popupForm">
-                <input type="text" class="popup-input" id="firstName" placeholder="First name" required>
-                <input type="email" class="popup-input" id="email" placeholder="Email address" required>
-                <button type="submit" class="popup-submit">Send Brief</button>
-            </form>
-        </div>
-        <div class="popup-success" id="popupSuccess">
-            <h3>Got it.</h3>
-            <p>Check your email for the Advisory Brief. It's on the way.</p>
-            <a href="#" class="popup-pdf-link" download>Download PDF</a>
-        </div>
-    </div>
-</div>
+<!-- Advisory Brief capture popup removed 2026-08-19: advisory is dormant. -->
 
 <script>
     // Email popup handler
@@ -1348,10 +1326,6 @@ document.head.appendChild(o)}initApollo();</script>
         });
     })();
 
-    // Language switcher function (stub for external script)
-    function setLang(lang) {
-        // External language switching logic
-    }
 </script>
 
 <script>
