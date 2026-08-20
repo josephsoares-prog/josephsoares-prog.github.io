@@ -152,35 +152,7 @@
     .likert label{min-width:60px}.likert .opt{font-size:10px}
   }
 </style>
-<style>
-/* Mobile hamburger menu fix (site-wide) */
-.menutoggle{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:10px 6px}
-.menutoggle span{display:block;width:24px;height:2px;background:var(--bone,#F2EFE9);transition:.2s}
-@media(max-width:880px){
-  nav .wrap{position:relative}
-  .menutoggle{display:flex !important}
-  .navlinks{display:none !important;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;
-    background:#072244;backdrop-filter:blur(10px);border-top:1px solid rgba(242,239,233,.12);
-    border-bottom:1px solid rgba(242,239,233,.12);padding:6px 0;z-index:60;align-items:stretch}
-  .navlinks.open{display:flex !important}
-  .navlinks a{padding:15px 30px;width:100%;font-size:15px}
-  .navlinks a.cta{align-self:center;width:auto;max-width:calc(100% - 44px);margin:12px auto;padding:12px 28px;text-align:center}
-}
-</style>
-<style id="navdrop-css">
-.navdrop{position:relative}
-.navdrop>a::after{content:"\25BE";font-size:.62em;margin-left:6px;vertical-align:middle;opacity:.65}
-.navdrop-menu{display:none;position:absolute;top:100%;left:0;background:#072244;border:1px solid rgba(242,239,233,.14);border-radius:2px;padding:6px 0;min-width:158px;z-index:90;box-shadow:0 12px 34px rgba(0,0,0,.4)}
-.navdrop:hover .navdrop-menu,.navdrop:focus-within .navdrop-menu{display:block}
-.navdrop-menu a{display:block !important;width:auto !important;padding:11px 20px !important}
-@media(max-width:880px){
- .navdrop{width:100%}
- .navdrop>a::after{display:none}
- .navdrop-menu{display:block;position:static;border:0;box-shadow:none;padding:4px 0;background:rgba(7,34,68,.5);min-width:0;border-top:1px solid rgba(242,239,233,.08);border-bottom:1px solid rgba(242,239,233,.08)}
- .navdrop-menu a{padding:12px 30px 12px 54px !important;font-size:14px;opacity:.82;text-align:left !important;background:rgba(212,175,55,.05)}
-}
-</style>
-
+<link rel="stylesheet" href="/pages.css">
 <link rel="stylesheet" href="/site.css">
 </head>
 <body>
