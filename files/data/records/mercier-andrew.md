@@ -12,10 +12,11 @@ prior_roles:
   - {role: "Minister of State for Workforce Development; Minister of State for Sustainable Forestry Innovation; Parliamentary Secretary for Skills Training", org: "Government of British Columbia", start: "2022", end: "2024", source_url: "https://news.gov.bc.ca/releases/2026PREM0048-000851"}
   - {role: "Executive Director, BC Building Trades", org: "BC Building Trades", start: "", end: "", source_url: "https://news.gov.bc.ca/releases/2026PREM0048-000851"}
   - {role: "Labour and employment lawyer", org: "private practice", start: "", end: "2020", source_url: "https://www.canadianlawyermag.com/practice-areas/labour-and-employment/labour-lawyer-andrew-mercier-appointed-bc-premier-david-ebys-chief-of-staff/394407"}
-connections: []
+connections:
+  - {person_id: oates-cheryl, relationship_type: succeeded, source_url: "https://news.gov.bc.ca/releases/2026PREM0048-000851"}
 languages: [en]
 first_recorded: 2026-07-28
-last_verified: 2026-07-28
+last_verified: 2026-08-21
 sources:
   - {claim: "Appointed to fill the role of chief of staff to Premier David Eby while the substantive chief of staff, Jim Rutkowski, is on extended medical leave; the prior interim chief of staff Cheryl Oates (appointed January 2026, pending Rutkowski's expected August return) concluded her term appointment as Rutkowski's treatment continued", url: "https://news.gov.bc.ca/releases/2026PREM0048-000851", publication: "Government of British Columbia (news release 2026PREM0048-000851)", date: "2026-07-20"}
   - {claim: "Former Langley MLA (2020–2024) and minister of state; labour lawyer, appointed BC Premier's chief of staff", url: "https://www.canadianlawyermag.com/practice-areas/labour-and-employment/labour-lawyer-andrew-mercier-appointed-bc-premier-david-ebys-chief-of-staff/394407", publication: "Canadian Lawyer", date: "2026-07"}
