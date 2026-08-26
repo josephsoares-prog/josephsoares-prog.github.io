@@ -65,7 +65,7 @@
   <!-- Tier 2 — the authority surfaces -->
   <url>
     <loc>https://josephsoares.com/brief/</loc>
-    <lastmod>2026-08-25</lastmod>
+    <lastmod>2026-08-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
@@ -249,4 +249,5 @@
   <url><loc>https://josephsoares.com/brief/2026-08-21.html</loc><lastmod>2026-08-21</lastmod></url>
   <url><loc>https://josephsoares.com/brief/2026-08-22.html</loc><lastmod>2026-08-22</lastmod></url>
   <url><loc>https://josephsoares.com/brief/2026-08-25.html</loc><lastmod>2026-08-25</lastmod></url>
+  <url><loc>https://josephsoares.com/brief/2026-08-26.html</loc><lastmod>2026-08-26</lastmod></url>
 </urlset>
