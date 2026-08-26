@@ -13,7 +13,8 @@ prior_roles:
   - {role: "Director of Staff, Ministry of Immigration (under Minister Fréchette)", org: "Government of Quebec", start: "", end: "", source_url: "https://www.ledevoir.com/politique/quebec/972986/nouvelle-premiere-ministre-nouvelle-garde-sommet-etat"}
   - {role: "Director of Staff, Ministry of Family", org: "Government of Quebec", start: "", end: "", source_url: "https://www.ledevoir.com/politique/quebec/972986/nouvelle-premiere-ministre-nouvelle-garde-sommet-etat"}
   - {role: "Political adviser to Parti Québécois MNAs Véronique Hivon, Alexandre Cloutier, Jean-François Lisée", org: "Parti Québécois", start: "2012", end: "2018", source_url: "https://www.ledevoir.com/politique/quebec/972986/nouvelle-premiere-ministre-nouvelle-garde-sommet-etat"}
-connections: []
+connections:
+  - {person_id: belisle-genevieve, relationship_type: same_firm, source_url: "https://www.ledevoir.com/politique/quebec/972986/nouvelle-premiere-ministre-nouvelle-garde-sommet-etat"}
 languages: [fr]
 first_recorded: 2026-08-04
 last_verified: 2026-08-04
