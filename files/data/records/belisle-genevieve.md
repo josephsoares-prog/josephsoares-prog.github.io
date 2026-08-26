@@ -1,0 +1,28 @@
+---
+id: belisle-genevieve
+full_name: Geneviève Bélisle
+current_role: Directrice de cabinet (Chief of Staff) to the Premier of Quebec, Christine Fréchette
+organization: Cabinet du premier ministre (Québec)
+party: Coalition Avenir Québec
+jurisdiction: Quebec
+order_of_government: provincial
+capital: Quebec City
+prior_roles:
+  - {role: "Directrice des politiques (Policy Director), Office of Premier François Legault", org: "Cabinet du premier ministre (Québec)", start: "2025", end: "2026-04", source_url: "https://www.lapresse.ca/actualites/politique/cabinets-politiques-a-quebec/nouvelle-vague-de-femmes-aux-commandes/2026-05-02/des-cpe-au-cabinet-de-la-premiere-ministre.php"}
+  - {role: "Cheffe de cabinet to Sonia LeBel, President of the Treasury Board", org: "Government of Quebec", start: "", end: "2025", source_url: "https://www.lapresse.ca/actualites/politique/cabinets-politiques-a-quebec/nouvelle-vague-de-femmes-aux-commandes/2026-05-02/des-cpe-au-cabinet-de-la-premiere-ministre.php"}
+  - {role: "Cheffe de cabinet to Geneviève Guilbault, Minister of Transport", org: "Government of Quebec", start: "", end: "", source_url: "https://www.lapresse.ca/actualites/politique/cabinets-politiques-a-quebec/nouvelle-vague-de-femmes-aux-commandes/2026-05-02/des-cpe-au-cabinet-de-la-premiere-ministre.php"}
+  - {role: "Cheffe de cabinet to André Lamontagne, Minister of Agriculture", org: "Government of Quebec", start: "2022", end: "", source_url: "https://www.lapresse.ca/actualites/politique/cabinets-politiques-a-quebec/nouvelle-vague-de-femmes-aux-commandes/2026-05-02/des-cpe-au-cabinet-de-la-premiere-ministre.php"}
+  - {role: "Directrice générale, Association québécoise des centres de la petite enfance (AQCPE)", org: "AQCPE", start: "2018", end: "2022", source_url: "https://www.lapresse.ca/actualites/politique/cabinets-politiques-a-quebec/nouvelle-vague-de-femmes-aux-commandes/2026-05-02/des-cpe-au-cabinet-de-la-premiere-ministre.php"}
+connections:
+  - {person_id: perreault-alex, relationship_type: same_firm, source_url: "https://www.ledevoir.com/politique/quebec/972986/nouvelle-premiere-ministre-nouvelle-garde-sommet-etat"}
+languages: [fr]
+first_recorded: 2026-08-26
+last_verified: 2026-08-26
+sources:
+  - {claim: "Named directrice de cabinet to Christine Fréchette on her becoming leader of the Coalition Avenir Québec and Premier of Quebec in April 2026; part of the new inner circle at the summit of the Quebec state reported alongside deputy chief of staff Alex Perreault", url: "https://www.ledevoir.com/politique/quebec/972986/nouvelle-premiere-ministre-nouvelle-garde-sommet-etat", publication: "Le Devoir", date: "2026-04"}
+  - {claim: "Profile of Bélisle as directrice de cabinet to the Premier: a specialized educator by training who was directrice générale of the Association québécoise des centres de la petite enfance from 2018 to 2022, then served in ministerial cabinets at Agriculture (André Lamontagne), Transport (Geneviève Guilbault) and the Treasury Board (Sonia LeBel) after entering government in 2022, before being brought into Premier François Legault's office in 2025 as policy director", url: "https://www.lapresse.ca/actualites/politique/cabinets-politiques-a-quebec/nouvelle-vague-de-femmes-aux-commandes/2026-05-02/des-cpe-au-cabinet-de-la-premiere-ministre.php", publication: "La Presse", date: "2026-05-02"}
+  - {claim: "Fréchette confirmed the appointment in her own words: 'Je me considère chanceuse de pouvoir compter sur Geneviève Bélisle comme directrice de cabinet, une gestionnaire de cœur, droite et ambitieuse.'", url: "https://x.com/CFrechette/status/2050615577073303991", publication: "Christine Fréchette (@CFrechette), X — primary source", date: "2026"}
+status: active
+notes: "Quebec provincial sweep, ahead of the October 5, 2026 general election. Completes the CAQ side of the Quebec cluster: the registry already carried Alex Perreault (deputy chief of staff, Office of the Premier) with an empty connections list and no record for the person he reports to. Bélisle is the top political staff post in the Quebec government — the provincial analogue to Marc-André Blanchard in the federal PMO. Note the career shape: an association executive (AQCPE) who moved into ministerial cabinets in 2022 and reached the Premier's office in three years, mirroring Marie-Pier Richard's association-to-leader's-office path at the PLQ. Direct fetch of the Le Devoir and La Presse pages is blocked by their paywalls; both are named-outlet reports surfaced in full-text search, and the appointment itself is independently confirmed by the Premier's own public statement."
+---
+Geneviève Bélisle is chief of staff to Quebec Premier Christine Fréchette, appointed when Fréchette took the CAQ leadership and the premiership in April 2026 ([Le Devoir](https://www.ledevoir.com/politique/quebec/972986/nouvelle-premiere-ministre-nouvelle-garde-sommet-etat)). A specialized educator by training, she was directrice générale of the Association québécoise des centres de la petite enfance from 2018 to 2022, then ran ministerial cabinets for André Lamontagne at Agriculture, Geneviève Guilbault at Transport and Sonia LeBel at the Treasury Board, before joining Premier François Legault's office in 2025 as policy director ([La Presse](https://www.lapresse.ca/actualites/politique/cabinets-politiques-a-quebec/nouvelle-vague-de-femmes-aux-commandes/2026-05-02/des-cpe-au-cabinet-de-la-premiere-ministre.php)). Fréchette announced the appointment publicly, calling her "une gestionnaire de cœur, droite et ambitieuse" ([@CFrechette](https://x.com/CFrechette/status/2050615577073303991)). She serves alongside deputy chief of staff Alex Perreault, who directed Fréchette's leadership campaign.
