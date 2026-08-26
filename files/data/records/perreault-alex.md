@@ -17,7 +17,7 @@ connections:
   - {person_id: belisle-genevieve, relationship_type: same_firm, source_url: "https://www.ledevoir.com/politique/quebec/972986/nouvelle-premiere-ministre-nouvelle-garde-sommet-etat"}
 languages: [fr]
 first_recorded: 2026-08-04
-last_verified: 2026-08-04
+last_verified: 2026-08-26
 sources:
   - {claim: "Followed Christine Fréchette as chief/director of staff across the Family, Immigration, and Economy-Energy portfolios, then served as campaign director for her CAQ leadership bid, and became her deputy chief of staff in the Premier's office after she won the leadership and was sworn in as Premier in April 2026", url: "https://www.ledevoir.com/politique/quebec/972986/nouvelle-premiere-ministre-nouvelle-garde-sommet-etat", publication: "Le Devoir", date: "2026-04"}
   - {claim: "Named among the 'new guard' in Premier Fréchette's cabinet office", url: "https://ici.radio-canada.ca/nouvelle/2247996/cabinet-frechette-visages-connus-recrues", publication: "Radio-Canada", date: "2026-04"}
