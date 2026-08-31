@@ -1,0 +1,10 @@
+{
+  "branch": "hero-brazzaville",
+  "jobs": [
+    {
+      "src": "assets/tmp-brazzaville-raw.jpg",
+      "dest": "assets/grand-livre-brazzaville-aout-2026.jpg",
+      "remove_src": true
+    }
+  ]
+}
