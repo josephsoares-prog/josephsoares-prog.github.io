@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Analytics (GA4) -->
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{ad_storage:'denied',analytics_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',wait_for_update:500});</script>
+<script defer src="/consent.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HNRCLZN3PK"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-HNRCLZN3PK');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/favicon.ico">
+    <title>The Brazzaville Ledger — Joseph Soares</title>
+    <meta name="description" content="The state of Congo-Brazzaville's public finances, built from IMF, World Bank, EITI and official records. Every figure carries its source.">
+    <link rel="canonical" href="https://josephsoares.com/brazzaville-ledger.html">
+    <meta property="og:title" content="The Brazzaville Ledger">
+    <meta property="og:description" content="A budget surplus and a country in debt distress — both true at once. Congo-Brazzaville's public finances, every figure sourced to the IMF, World Bank and EITI.">
+    <meta property="og:image" content="https://josephsoares.com/assets/og-default.png">
+    <meta property="og:url" content="https://josephsoares.com/brazzaville-ledger.html">
+    <meta property="og:type" content="article">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The Brazzaville Ledger">
+    <meta name="twitter:description" content="A budget surplus and a country in debt distress — both true at once. Every figure sourced to the IMF, World Bank and EITI.">
+    <meta name="twitter:image" content="https://josephsoares.com/assets/og-default.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "The Brazzaville Ledger",
+      "description": "The state of Congo-Brazzaville's public finances, built from IMF, World Bank, EITI and official records.",
+      "image": "https://josephsoares.com/assets/og-default.png",
+      "datePublished": "2026-08-31",
+      "dateModified": "2026-08-31",
+      "author": {
+        "@type": "Person",
+        "name": "Joseph Soares",
+        "url": "https://josephsoares.com"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Joseph Soares & Co.",
+        "url": "https://josephsoares.com"
+      },
+      "inLanguage": "en"
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+
+    <style>
+  :root{
+    --ink:#0A3161; --panel:#0E3A70; --panel2:#072244;
+    --bone:#F2EFE9; --muted:#A9A39A; --gold:#D4AF37; --line:rgba(242,239,233,.12);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth;overflow-x:hidden}
+  body{background:var(--ink);color:var(--bone);font-family:'EB Garamond',Georgia,serif;
+    font-size:19px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden;max-width:100vw;
+    background-image:radial-gradient(ellipse 120% 70% at 50% -8%, rgba(201,162,39,.07), rgba(0,0,0,0));}
+  img,iframe{max-width:100%}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 30px}
+  .eyebrow{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.3em;
+    font-size:13px;font-weight:500;color:var(--gold)}
+  a{color:inherit}
+  .btn{display:inline-block;font-family:'Oswald',sans-serif;text-transform:uppercase;
+    letter-spacing:.14em;font-weight:600;font-size:15px;text-decoration:none;cursor:pointer;
+    padding:18px 34px;border-radius:2px;transition:.2s;border:1px solid transparent}
+  .btn-gold{background:var(--gold);color:#0E3A70}
+  .btn-gold:hover{background:#E6C860}
+  .btn-ghost{background:transparent;color:var(--bone);border-color:var(--line)}
+  .btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+  .disp{font-family:'Oswald',sans-serif;text-transform:uppercase}
+
+  nav{position:sticky;top:0;z-index:20;background:rgba(7,34,68,.90);
+    backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:66px}
+  .brand{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.2em;font-weight:600;font-size:16px}
+  .brand span{color:var(--gold)}
+  .navlinks{display:flex;gap:30px;align-items:center}
+  .navlinks a{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.12em;
+    font-size:13px;font-weight:500;text-decoration:none;color:var(--muted)}
+  .navlinks a:hover{color:var(--gold)}
+  .navlinks a.cta{color:var(--bone);border:1px solid var(--line);padding:9px 16px;border-radius:2px}
+  .navlinks a.cta:hover{border-color:var(--gold);color:var(--gold)}
+  .menutoggle{display:none}
+
+  section.blk{padding:82px 0}
+
+  footer{border-top:1px solid var(--line);padding:48px 0 64px;color:var(--muted);font-size:16px}
+  footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:22px;align-items:flex-start}
+  footer a{color:var(--muted);text-decoration:none}
+  footer .soc a{margin-left:22px}
+  footer a:hover{color:var(--gold)}
+  .disc{max-width:50ch;font-style:italic;font-size:15px;line-height:1.55}
+
+  /* ===== ARTICLE PROSE (retuned to flag-blue palette) ===== */
+  .article-hero{padding:70px 0 38px;border-bottom:1px solid var(--line)}
+  .article-header{max-width:820px;margin:0 auto;padding:0 30px}
+  .article-meta{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-bottom:22px;
+    font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.18em;font-size:12px;color:var(--muted)}
+  .article-meta-item{padding:5px 12px;background:var(--panel2);border:1px solid var(--line);border-radius:2px;font-weight:500}
+  .article-date{color:var(--gold);font-weight:600}
+  .article-headline{font-family:'Oswald',sans-serif;text-transform:uppercase;font-weight:600;
+    font-size:46px;line-height:1.08;letter-spacing:.005em;color:var(--bone);margin-bottom:22px}
+  .article-subheading{font-family:'EB Garamond',serif;font-style:italic;font-size:22px;line-height:1.5;color:var(--muted);max-width:60ch}
+  .article-body{max-width:720px;margin:0 auto;padding:48px 30px 70px;font-family:'EB Garamond',serif;
+    font-size:20px;line-height:1.75;color:var(--bone)}
+  .article-body p{margin-bottom:24px;color:rgba(242,239,233,.86)}
+  .article-body strong{color:var(--bone);font-weight:600}
+  .article-body em{color:var(--gold);font-style:italic}
+  .article-body h2{font-family:'Oswald',sans-serif;text-transform:uppercase;font-weight:600;
+    font-size:30px;line-height:1.12;color:var(--bone);margin:46px 0 20px}
+  .article-body h3{font-family:'Oswald',sans-serif;text-transform:uppercase;font-weight:500;letter-spacing:.02em;
+    font-size:23px;line-height:1.2;color:var(--bone);margin:40px 0 18px}
+  .article-body a{color:var(--gold);text-decoration:none;border-bottom:1px solid var(--line)}
+  .article-body a:hover{color:#E6C860;border-bottom-color:var(--gold)}
+  .article-body blockquote{border-left:2px solid var(--gold);padding-left:26px;margin:32px 0;font-style:italic;color:var(--bone)}
+  .article-body sup{font-size:.62em;line-height:0}
+  .article-body sup a{border-bottom:none;font-family:'Oswald',sans-serif;letter-spacing:.04em}
+  .tablewrap{overflow-x:auto;margin:6px 0 30px}
+  .article-body table{width:100%;border-collapse:collapse;font-size:16px}
+  .article-body th{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.1em;font-size:12px;
+    color:var(--gold);text-align:left;border-bottom:1px solid var(--gold);padding:8px 12px 8px 0;font-weight:500}
+  .article-body td{border-bottom:1px solid var(--line);padding:10px 12px 10px 0;color:rgba(242,239,233,.86);vertical-align:top}
+  .article-body td.fig{font-family:'Oswald',sans-serif;font-size:15px;letter-spacing:.02em;white-space:nowrap}
+  .scopenote{border-top:1px solid var(--line);margin-top:44px;padding-top:26px;font-size:17px;color:var(--muted)}
+  .article-divider{max-width:720px;margin:8px auto 40px;padding:0 30px;text-align:center;color:var(--gold);font-size:22px;letter-spacing:.3em}
+  .article-signature{max-width:720px;margin:0 auto 34px;padding:0 30px;font-family:'EB Garamond',serif;font-style:italic;font-size:20px;color:var(--gold)}
+  .article-cta{max-width:720px;margin:0 auto 48px;padding:0 30px}
+  .cta-text{font-size:18px;line-height:1.65;color:var(--muted);margin-bottom:14px}
+  .cta-link{color:var(--gold);text-decoration:none;font-weight:600;border-bottom:1px solid var(--gold)}
+  .cta-link:hover{color:#E6C860}
+  .substack-cta{max-width:720px;margin:0 auto 46px;padding:0 30px}
+  .substack-card{background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:34px 30px;text-align:center}
+  .substack-card h4{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.06em;font-size:22px;color:var(--bone);margin-bottom:10px;font-weight:600}
+  .substack-card p{font-size:17px;color:var(--muted);margin-bottom:20px}
+  .article-back{max-width:720px;margin:0 auto;padding:0 30px 60px}
+  .back-link{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.12em;font-size:13px;font-weight:600;color:var(--muted);text-decoration:none}
+  .back-link:hover{color:var(--gold)}
+  @media(max-width:768px){
+    .article-headline{font-size:32px}
+    .article-body{font-size:18px;padding:36px 22px 50px}
+    .article-header,.article-divider,.article-signature,.article-cta,.substack-cta,.article-back{padding-left:22px;padding-right:22px}
+  }
+
+  /* ===== MARKETING MODULES (book banner + related) ===== */
+  .ci-modwrap{max-width:820px;margin:0 auto;padding:0 30px}
+  .ci-bookbanner{display:flex;align-items:center;gap:26px;background:linear-gradient(120deg,var(--panel) 0%,var(--panel2) 100%);border:1px solid rgba(212,175,55,.3);border-radius:6px;padding:22px 28px;margin:38px 0}
+  .ci-bb-frame{flex:0 0 auto;background:#fff;padding:9px;border-radius:3px;line-height:0;box-shadow:0 14px 34px rgba(0,0,0,.55)}
+  .ci-bb-cover{width:70px;display:block;border-radius:1px}
+  .ci-bb-text{flex:1;min-width:0}
+  .ci-bb-kicker{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.2em;font-size:11px;color:var(--gold);margin-bottom:5px}
+  .ci-bb-title{font-family:'Oswald',sans-serif;text-transform:uppercase;font-weight:600;font-size:22px;color:var(--bone);margin:0 0 5px;line-height:1.1}
+  .ci-bb-sub{font-size:16px;color:var(--muted);margin:0;line-height:1.45}
+  .ci-bb-cta{flex:0 0 auto;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.1em;font-weight:600;font-size:14px;text-decoration:none;background:var(--gold);color:var(--ink);padding:14px 24px;border-radius:2px;transition:.2s;white-space:nowrap}
+  .ci-bb-cta:hover{background:#E6C860}
+  .ci-related{margin:52px 0 10px;border-top:1px solid var(--line);padding-top:36px}
+  .ci-related-head{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.2em;font-size:14px;font-weight:600;color:var(--gold);margin-bottom:22px}
+  .ci-related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .ci-rel-card{display:block;text-decoration:none;background:var(--panel2);border:1px solid var(--line);border-radius:4px;overflow:hidden;transition:.2s}
+  .ci-rel-card:hover{border-color:rgba(212,175,55,.5);transform:translateY(-2px)}
+  .ci-rel-card img{width:100%;height:120px;object-fit:cover;display:block}
+  .ci-rel-t{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.01em;font-size:14px;line-height:1.3;font-weight:500;color:var(--bone);padding:14px 16px 18px}
+  @media(max-width:760px){.ci-bookbanner{flex-direction:column;text-align:center}.ci-bb-cta{width:100%;text-align:center}.ci-related-grid{grid-template-columns:1fr}.ci-rel-card img{height:160px}}
+</style>
+  <!-- Apollo.io website visitor tracking -->
+  <script>function initApollo(){var n=Math.random().toString(36).substring(7),o=document.createElement("script");
+o.src="https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache="+n,o.async=!0,o.defer=!0,
+o.onload=function(){window.trackingFunctions.onLoad({appId:"69b933d5574de0002181290e"})},
+document.head.appendChild(o)}initApollo();</script>
+
+<style>
+/* Mobile hamburger menu fix (site-wide) */
+.menutoggle{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:10px 6px}
+.menutoggle span{display:block;width:24px;height:2px;background:var(--bone,#F2EFE9);transition:.2s}
+@media(max-width:880px){
+  nav .wrap{position:relative}
+  .menutoggle{display:flex !important}
+  .navlinks{display:none !important;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;
+    background:#072244;backdrop-filter:blur(10px);border-top:1px solid rgba(242,239,233,.12);
+    border-bottom:1px solid rgba(242,239,233,.12);padding:6px 0;z-index:60;align-items:stretch}
+  .navlinks.open{display:flex !important}
+  .navlinks a{padding:15px 30px;width:100%;font-size:15px}
+  .navlinks a.cta{align-self:center;width:auto;max-width:calc(100% - 44px);margin:12px auto;padding:12px 28px;text-align:center}
+}
+</style>
+<style id="navdrop-css">
+.navdrop{position:relative}
+.navdrop>a::after{content:"\25BE";font-size:.62em;margin-left:6px;vertical-align:middle;opacity:.65}
+.navdrop-menu{display:none;position:absolute;top:100%;left:0;background:#072244;border:1px solid rgba(242,239,233,.14);border-radius:2px;padding:6px 0;min-width:158px;z-index:90;box-shadow:0 12px 34px rgba(0,0,0,.4)}
+.navdrop:hover .navdrop-menu,.navdrop:focus-within .navdrop-menu{display:block}
+.navdrop-menu a{display:block !important;width:auto !important;padding:11px 20px !important}
+@media(max-width:880px){
+ .navdrop{width:100%}
+ .navdrop>a::after{display:none}
+ .navdrop-menu{display:block;position:static;border:0;box-shadow:none;padding:4px 0;background:rgba(7,34,68,.5);min-width:0;border-top:1px solid rgba(242,239,233,.08);border-bottom:1px solid rgba(242,239,233,.08)}
+ .navdrop-menu a{padding:12px 30px 12px 54px !important;font-size:14px;opacity:.82;text-align:left !important;background:rgba(212,175,55,.05)}
+}
+</style>
+
+</head>
+<body>
+    <nav>
+  <div class="wrap">
+    <a href="/index.html" class="brand" style="text-decoration:none;color:inherit">Joseph <span>Soares</span></a>
+    <button class="menutoggle" aria-label="Menu" onclick="this.closest('nav').querySelector('.navlinks').classList.toggle('open')"><span></span><span></span><span></span></button>
+      <div class="navlinks">
+      <a href="/advisory.html">Advisory</a>
+      <div class="navdrop"><a href="/intelligence.html">Intelligence</a><div class="navdrop-menu"><a href="/brief/">Briefs</a><a href="/dispatch.html">Dispatches</a><a href="/corridor-files.html">Files</a><a href="/brief/index-dashboard.html">Index</a><a href="/issues-focus.html">Issues Focus</a></div></div>
+      <a href="/podcast.html">Podcast</a>
+      <a href="/writing.html">Writing</a>
+      <a href="/book.html">Book</a>
+      <a class="cta" href="/subscribe.html">Subscribe</a>
+    </div>
+  </div>
+</nav>
+
+    <!-- ARTICLE HERO -->
+    <div class="article-hero">
+        <div class="article-header">
+            <div class="article-meta">
+                <span class="article-meta-item">Congo-Brazzaville</span>
+                <span class="article-meta-item">Public Finance</span>
+                <span class="article-meta-item">Dossier · 1/2</span>
+                <span class="article-date">August 31, 2026</span>
+            </div>
+            <h1 class="article-headline">The Brazzaville Ledger</h1>
+            <p class="article-subheading">A budget surplus on paper, a country “in debt distress” in fact — the state of Congo-Brazzaville's public finances, built exclusively from IMF, World Bank, EITI and official records. Every figure carries its source.</p>
+        </div>
+    </div>
+
+    <!-- BOOK BANNER -->
+    <div class="ci-modwrap"><div class="ci-bookbanner">
+        <div class="ci-bb-frame"><img class="ci-bb-cover" src="/images/leadership-under-fire-cover.jpg?v=20260719" alt="Leadership Under Fire — the book by Joseph Soares"></div>
+        <div class="ci-bb-text">
+            <div class="ci-bb-kicker">The Book · Out October 6</div>
+            <div class="ci-bb-title">Leadership Under Fire</div>
+            <p class="ci-bb-sub">The playbook from inside the rooms where the highest-stakes calls get made.</p>
+        </div>
+        <a class="ci-bb-cta" href="/book.html">Reserve your copy →</a>
+    </div></div>
+
+    <!-- ARTICLE BODY -->
+    <article class="article-body">
+<p><strong>The conclusion first.</strong> Congo-Brazzaville runs a headline budget surplus and is, at the same time, classified by the IMF and World Bank as a country <em>in debt distress</em>. Both facts are true at once, and the gap between them is the story: oil pays the bills on paper, while the state's unpaid obligations — to suppliers, pensioners and civil servants — stood at US$3.38&nbsp;billion, 23.6% of GDP, at end-2024 <sup><a href="https://documents1.worldbank.org/curated/en/099043026130520983/pdf/BOSIB-52d0f9c7-5920-4e5e-88c2-367debb0de2b.pdf">[DSA 2026]</a></sup>. Public debt reached an estimated 97.2% of GDP at end-2025 <sup><a href="https://www.imf.org/en/news/articles/2026/03/16/pr26079-imf-executive-board-concludes-2026-post-financing-assessment-with-the-republic-of-congo">[IMF 2026]</a></sup>, fiscal discipline slipped in 2025, and new arrears accumulated even as older ones were being repaid.</p>
+<p>The evidence examined covers 2023–2026 and comes from the ten institutional or official sources linked throughout. Where those sources disagree, both figures are shown. Nothing here is drawn from opposition claims or social media.</p>
+
+<h3>Key figures</h3>
+<div class="tablewrap"><table>
+  <thead><tr><th>Indicator</th><th>Figure</th><th>Year</th><th>Source</th></tr></thead>
+  <tbody>
+    <tr><td>Public debt</td><td class="fig">97.2% of GDP</td><td>end-2025</td><td>IMF</td></tr>
+    <tr><td>Debt classification</td><td class="fig">In debt distress</td><td>Mar 2026</td><td>Joint IMF–World Bank DSA</td></tr>
+    <tr><td>Total arrears</td><td class="fig">US$3.38bn · 23.6% of GDP</td><td>end-2024</td><td>Joint DSA</td></tr>
+    <tr><td>Non-oil primary deficit</td><td class="fig">8.7% of non-oil GDP</td><td>2025</td><td>IMF</td></tr>
+    <tr><td>Overall budget balance</td><td class="fig">+0.9% of GDP</td><td>2025</td><td>World Bank</td></tr>
+    <tr><td>Real GDP growth</td><td class="fig">2.4% (IMF) – 3.1% (WB)</td><td>2025</td><td>IMF · World Bank</td></tr>
+    <tr><td>Oil in the economy</td><td class="fig">≈½ of GDP · 80% of exports</td><td>2025</td><td>World Bank</td></tr>
+    <tr><td>Poverty ($3.00/day, 2021 PPP)</td><td class="fig">51.7%</td><td>2025</td><td>World Bank</td></tr>
+    <tr><td>Sovereign rating</td><td class="fig">CCC+ (Fitch) · CCC+/C (S&amp;P)</td><td>Feb 2026 (Fitch)</td><td>Fitch · S&amp;P</td></tr>
+  </tbody>
+</table></div>
+
+<h2>I. An Oil State, Before Anything Else</h2>
+<p>Oil is the foundation of every other number in this report. The sector represents about half of Congo's GDP and 80% of its exports; the country is the third-largest oil producer in Sub-Saharan Africa <sup><a href="https://www.worldbank.org/ext/en/country/congo">[WB]</a></sup>. On the revenue side, the extractive sector contributed 67% of total government revenue in 2019, the most recent share published through Congo's EITI reporting <sup><a href="https://eiti.org/countries/republic-congo">[EITI]</a></sup>. The same EITI process produced the most consequential transparency finding on record: the 2017 report showed that only 10% of oil sale proceeds flowed to the treasury, with the remainder channelled to the repayment of loans and pre-financing agreements — the oil-backed debt that has shaped the country's finances since <sup><a href="https://eiti.org/countries/republic-congo">[EITI]</a></sup>.</p>
+
+<h2>II. The Paradox: A Surplus on Paper, Arrears in Practice</h2>
+<p>On the headline measure, Congo's budget is in surplus: +0.9% of GDP in 2025, narrowed by lower oil prices <sup><a href="https://www.worldbank.org/ext/en/country/congo">[WB]</a></sup>. The 2026 budget law is built the same way — revenue of 2,550.5&nbsp;billion FCFA against expenditure of 2,270.2&nbsp;billion, a budget surplus of 280.4&nbsp;billion FCFA <sup><a href="https://www.journaldebrazza.com/congo-budget-de-letat-2026-un-budget-de-2550-milliards-fcfa-adopte/">[JdB]</a></sup>.</p>
+<p>Strip out oil and the picture reverses. The non-hydrocarbon primary deficit widened to 8.7% of non-hydrocarbon GDP in 2025 <sup><a href="https://www.imf.org/en/news/articles/2026/03/16/pr26079-imf-executive-board-concludes-2026-post-financing-assessment-with-the-republic-of-congo">[IMF 2026]</a></sup>; the World Bank puts the non-oil fiscal deficit at 6.8% of GDP the same year <sup><a href="https://www.worldbank.org/ext/en/country/congo">[WB]</a></sup>. And the same 2026 budget that shows a surplus also shows a treasury deficit of 921.9&nbsp;billion FCFA <sup><a href="https://www.journaldebrazza.com/congo-budget-de-letat-2026-un-budget-de-2550-milliards-fcfa-adopte/">[JdB]</a></sup> — the gap between what the state owes in cash during the year, debt amortization and arrears included, and what it collects.</p>
+<p>The IMF's 2026 assessment states plainly what happened to discipline: spending on goods and services surged unexpectedly in 2025, crowding out capital expenditure and transfers, while lower oil prices compressed revenue <sup><a href="https://www.imf.org/en/news/articles/2026/03/16/pr26079-imf-executive-board-concludes-2026-post-financing-assessment-with-the-republic-of-congo">[IMF 2026]</a></sup>.</p>
+
+<h2>III. Debt: 97% of GDP, Classified “In Distress”</h2>
+<p>The IMF estimates total public debt at 97.2% of GDP at end-2025; the World Bank's figure is 97.4%. Fitch publishes a lower estimate, roughly 87% — the sources differ and do not reconcile their perimeters publicly, so all three are reported as published <sup><a href="https://www.investing.com/news/world-news/fitch-affirms-republic-of-congo-rating-at-ccc-on-debt-concerns-93CH-4517350">[Fitch]</a></sup>.</p>
+<p>The March 2026 joint IMF–World Bank debt sustainability analysis rates Congo <strong>in debt distress</strong> on both external and overall debt, while judging the debt “sustainable” under a granular assessment — with high risks. Domestic debt makes up roughly 58–59% of the total and external debt 38–39%. Among creditors at end-2024: China at 11.1% of GDP, the largest bilateral lender; multilateral institutions at 12.0% of GDP; and oil traders at 1.6% of GDP, down from 3.9% in 2023. Gross financing needs spiked to 27.2% of GDP in 2025 <sup><a href="https://documents1.worldbank.org/curated/en/099043026130520983/pdf/BOSIB-52d0f9c7-5920-4e5e-88c2-367debb0de2b.pdf">[DSA 2026]</a></sup>.</p>
+<p>Financing that need runs through two channels. Regionally, Congolese treasuries are absorbed by CEMAC banks — the “sovereign-bank nexus” the IMF flags as a vulnerability <sup><a href="https://www.imf.org/en/news/articles/2026/03/16/pr26079-imf-executive-board-concludes-2026-post-financing-assessment-with-the-republic-of-congo">[IMF 2026]</a></sup>. Internationally, the government issued three Eurobonds totalling US$1.63&nbsp;billion between November 2025 and February 2026 <sup><a href="https://www.worldbank.org/ext/en/country/congo">[WB]</a></sup> — Fitch details US$930&nbsp;million placed privately in late 2025 with a further US$700&nbsp;million planned for early February 2026 <sup><a href="https://www.investing.com/news/world-news/fitch-affirms-republic-of-congo-rating-at-ccc-on-debt-concerns-93CH-4517350">[Fitch]</a></sup>.</p>
+
+<h2>IV. Arrears: The Ledger of Unpaid Obligations</h2>
+<p>Arrears are where public finance stops being abstract. At end-2024 the stock stood at US$3.38&nbsp;billion — 23.6% of GDP — of which US$2.81&nbsp;billion domestic and US$568&nbsp;million external <sup><a href="https://documents1.worldbank.org/curated/en/099043026130520983/pdf/BOSIB-52d0f9c7-5920-4e5e-88c2-367debb0de2b.pdf">[DSA 2026]</a></sup>. The IMF's July 2024 country report broke the domestic stock down: roughly two-thirds commercial arrears — unpaid supplier bills — and one-third <em>social</em> arrears: wages, pensions and bursaries. The state's debt to the pension system alone was put at 269&nbsp;billion FCFA <sup><a href="https://www.imf.org/-/media/files/publications/cr/2024/english/1cogea2024003-print-pdf.pdf">[IMF 2024]</a></sup>.</p>
+<p>The authorities have a repayment strategy extending to the early 2030s; the IMF calculated that clearing the stock on that horizon requires at least 2% of GDP per year, and noted that arrears accumulated in 2021–2023 — provisionally about 2% of GDP — remained unaudited <sup><a href="https://www.imf.org/-/media/files/publications/cr/2024/english/1cogea2024003-print-pdf.pdf">[IMF 2024]</a></sup>. Repayment and accumulation run in parallel: new arrears appeared in 2025 even as older ones were cleared, with Fitch estimating domestic arrears at about 13% of GDP at end-2025 <sup><a href="https://www.investing.com/news/world-news/fitch-affirms-republic-of-congo-rating-at-ccc-on-debt-concerns-93CH-4517350">[Fitch]</a></sup>.</p>
+<p>On the ground, the social third of that ledger is counted month by month by those affected. In November 2025, three retirees' organisations presented the Senate with their tally for the civil-servant pension fund: 50 months of unpaid pensions accumulated since 2016 <sup><a href="https://fr.allafrica.com/stories/202511080154.html">[allAfrica]</a></sup>. That count is the retirees' own, delivered to Parliament and reported by the press; no institutional source publishes a months-unpaid figure, and it is included here as testimony before the Senate, not as an audited statistic.</p>
+
+<h2>V. Growth, Prices and Poverty</h2>
+<p>The economy grew 2.1% in 2024 on the IMF's estimate; the World Bank's September 2025 update recorded 2.6% <sup><a href="https://www.worldbank.org/en/news/press-release/2025/09/23/republic-of-congo-improving-the-management-of-produced-human-and-natural-capital-to-raise-living-standards">[WB 2025]</a></sup>. For 2025 the estimates range from 2.4% (IMF) through 3.0% (Fitch) to 3.1% (World Bank). Inflation stayed moderate — 2.6% per the IMF, 2.9% per the World Bank. The current account moved into deficit; the IMF reports 5.8% of GDP in 2025, the World Bank 2.5% — a large discrepancy neither institution reconciles publicly.</p>
+<p>Two facts frame what growth has and has not delivered. Poverty stood at 51.7% of the population in 2025 at the US$3.00-a-day line (2021 PPP) <sup><a href="https://www.worldbank.org/ext/en/country/congo">[WB]</a></sup>, and the World Bank notes that 2024 brought the first per-capita income increase since 2016 — without yet a significant reduction in poverty <sup><a href="https://www.worldbank.org/en/news/press-release/2025/09/23/republic-of-congo-improving-the-management-of-produced-human-and-natural-capital-to-raise-living-standards">[WB 2025]</a></sup>. Ahead, Fitch expects new LNG production to begin in 2026, extending the hydrocarbon base the state depends on <sup><a href="https://www.investing.com/news/world-news/fitch-affirms-republic-of-congo-rating-at-ccc-on-debt-concerns-93CH-4517350">[Fitch]</a></sup>.</p>
+
+<h2>VI. The 2026 Budget and the Reform Agenda</h2>
+<p>Parliament adopted the 2026 budget on December 23, 2025: revenue of 2,550.5&nbsp;billion FCFA, expenditure of 2,270.2&nbsp;billion, and the 921.9&nbsp;billion FCFA treasury deficit noted above. The law introduces a Single Treasury Account and program-based budgeting <sup><a href="https://www.journaldebrazza.com/congo-budget-de-letat-2026-un-budget-de-2550-milliards-fcfa-adopte/">[JdB]</a></sup>. The IMF reads the budget as “a renewed commitment to fiscal consolidation,” and its Board pressed for the reforms that would make the numbers hold: broadening the tax base, streamlining exemptions, completing the SIGFIP financial-management system, better planning of debt service and arrears clearance, and reliance on concessional financing <sup><a href="https://www.imf.org/en/news/articles/2026/03/16/pr26079-imf-executive-board-concludes-2026-post-financing-assessment-with-the-republic-of-congo">[IMF 2026]</a></sup>.</p>
+<p>The rating agencies' view is that the starting point remains fragile: Fitch affirmed Congo at CCC+ in February 2026, citing weak public financial management, high debt, high oil dependence and tight regional market access <sup><a href="https://www.investing.com/news/world-news/fitch-affirms-republic-of-congo-rating-at-ccc-on-debt-concerns-93CH-4517350">[Fitch]</a></sup>; S&amp;P rates the sovereign CCC+/C <sup><a href="https://www.spglobal.com/ratings/en/regulatory/article/-/view/sourceId/101668173">[S&amp;P]</a></sup>.</p>
+
+<h2>VII. What to Watch</h2>
+<p>Five observable variables will decide whether the 2026 consolidation holds. The oil price, which sets the headline balance directly. The appetite of CEMAC banks for Congolese treasuries. The audit of the 2021–2023 arrears, still outstanding. The execution — not the announcement — of the Single Treasury Account and SIGFIP. And the LNG ramp-up from 2026, which adds revenue and deepens the dependence the World Bank urges the country to diversify away from.</p>
+
+<h2>1991, In the Same Rooms of Power</h2>
+<p>This dossier has a second part. On December 13, 1991, President George H.&nbsp;W.&nbsp;Bush received Congo's transitional prime minister, André Milongo, at the White House — a senior official who had come through the World Bank, chosen by the Sovereign National Conference to lead the country to multiparty elections. The official memorandum of that meeting is held in the National Security Council records at the George H.&nbsp;W.&nbsp;Bush Presidential Library <sup><a href="https://www.bush41library.gov/digital-research-room/finding-aid/records-national-security-council-george-h-w-bush-administration?naid=428082077">[Bush Library]</a></sup>. The next dispatch will read that document line by line, against the 2026 figures you have just read.</p>
+<p>What connects the two snapshots is the question at the heart of my book: leadership is not judged by the means at hand, but by how power is exercised, accounted for, and handed over. That is the argument of <em>Leadership Under Fire: Forged in the Rooms of Power</em>, out October 6, 2026.</p>
+
+<div class="scopenote">
+<p><strong>Scope of evidence.</strong> This report examines ten institutional and official sources dated July 2024 to August 2026: two IMF publications, the joint IMF–World Bank debt sustainability analysis, two World Bank publications, EITI country reporting, one Fitch rating action (with S&amp;P's rating page), and press reports of the 2026 budget law's adoption and of testimony to the Senate. Conclusions are limited to what these documents state. Where institutions publish different figures for the same indicator, each figure is attributed and none is averaged. Press items are used only as the route to primary acts, never as analysis. This is an analytical description of public finances; it passes judgment on no person and no party.</p>
+</div>
+    </article>
+
+    <!-- DIVIDER -->
+    <div class="article-divider">— ∼ —</div>
+
+    <!-- SIGNATURE -->
+    <div class="article-signature">— J. Soares</div>
+
+    <!-- CTA -->
+    <div class="article-cta">
+        <p class="cta-text">I served in the Prime Minister's Office during the 2008 financial crisis and was Chief of Staff in the Senate of Canada. <em>Leadership Under Fire</em> draws from those rooms the method this dossier applies: documents first, judgment second. <a href="/book.html?ref=dispatch-brazzaville" class="cta-link">Learn about the book — out October 6.</a></p>
+    </div>
+
+    <!-- SUBSCRIBE CTA -->
+    <div class="substack-cta">
+        <div class="substack-card">
+            <h4>Subscribe for Intelligence</h4>
+            <p>Get the next dossier installments and strategic intelligence, sent directly to your inbox.</p>
+            <div style="text-align:center;margin:14px auto 0"><a href="#/portal/signup" data-portal="signup" style="display:inline-block;font-family:'Inter',sans-serif;font-size:0.8rem;font-weight:600;letter-spacing:0.5px;text-transform:uppercase;background:#D4AF37;color:#0A3161;padding:0.7rem 1.4rem;border-radius:3px;text-decoration:none;">Subscribe free</a></div>
+        </div>
+    </div>
+
+    <!-- YOU MAY ALSO LIKE -->
+    <div class="ci-modwrap"><div class="ci-related">
+        <div class="ci-related-head">You may also like</div>
+        <div class="ci-related-grid">
+            <a class="ci-rel-card" href="/two-gates-hormuz-bab-el-mandeb-july-2026.html"><img src="/assets/two-gates-hormuz-bab-el-mandeb-july-2026.jpg" alt=""><div class="ci-rel-t">Two Gates: Hormuz and Bab el-Mandeb</div></a>
+            <a class="ci-rel-card" href="/sovereign-wealth-fund-canada-april-2026.html"><img src="/assets/sovereign-wealth-fund-guilloche-april-2026.jpg" alt=""><div class="ci-rel-t">A Sovereign Wealth Fund for Canada</div></a>
+            <a class="ci-rel-card" href="/helium-fertilizer-oil-april-2026.html"><img src="/assets/commodity-nexus-april-2026.jpg" alt=""><div class="ci-rel-t">Helium, Fertilizer, and Oil: The Three Crises No One Is Connecting</div></a>
+        </div>
+    </div></div>
+
+    <!-- BACK LINK -->
+    <div class="article-back">
+        <a href="/dispatch.html" class="back-link">← Back to Dispatches</a>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+  <div class="wrap">
+    <div class="disc">
+      <div class="brand" style="font-size:15px;margin-bottom:10px">Joseph <span style="color:var(--gold)">Soares</span> &amp; Co.</div>
+      <span class="copyr" style="display:block;margin-top:10px;font-style:normal;font-size:14px;letter-spacing:.02em;opacity:.8">&copy; 2026 Joseph Soares &amp; Co.</span>
+    </div>
+    <div class="soc">
+      <a href="/advisory.html">Advisory</a>
+      <a href="/book.html" style="margin-left:22px">Book</a>
+      <a href="/subscribe.html">Subscribe</a>
+      <a href="https://www.linkedin.com/in/soaresjoseph/">LinkedIn</a>
+      <a href="https://x.com/JosephSoares">X</a>
+      <a href="https://www.youtube.com/@corridorintelligence?sub_confirmation=1">YouTube</a>
+    </div>
+  </div>
+</footer>
+
+<script defer src="https://cdn.jsdelivr.net/ghost/portal@~2.69/umd/portal.min.js" data-ghost="https://brief.josephsoares.com/" data-api="https://brief.josephsoares.com/ghost/api/content/" data-key="ece73de31b60c5a2769ba56ee4" crossorigin="anonymous"></script>
+</body>
+</html>
