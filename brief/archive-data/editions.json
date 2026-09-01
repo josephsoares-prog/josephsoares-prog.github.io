@@ -1,5 +1,131 @@
 [
  {
+  "date": "2026-09-01",
+  "long_en": "Tuesday, 1 September 2026",
+  "long_fr": "mardi 1er septembre 2026",
+  "count": 21,
+  "lead_en": "Iran retaliates against Jordan and the UAE after US strikes on Hormuz, ending a month-long lull",
+  "lead_fr": "L'Iran riposte contre la Jordanie et les Émirats après des frappes américaines sur Ormuz, mettant fin à un mois d'accalmie",
+  "url": "/brief/2026-09-01.html"
+ },
+ {
+  "date": "2026-08-31",
+  "long_en": "Monday, 31 August 2026",
+  "long_fr": "lundi 31 août 2026",
+  "count": 28,
+  "lead_en": "US strikes Iranian rocket launchers preparing to mine the Strait of Hormuz, first military action in weeks",
+  "lead_fr": "Les États-Unis frappent des lance-roquettes iraniens qui préparaient un minage du détroit d'Ormuz, première action militaire depuis des semaines",
+  "url": "/brief/2026-08-31.html"
+ },
+ {
+  "date": "2026-08-30",
+  "long_en": "Sunday, 30 August 2026",
+  "long_fr": "dimanche 30 août 2026",
+  "count": 25,
+  "lead_en": "Nepal-China flood death toll surges to roughly 750 with nearly 3,000 still missing",
+  "lead_fr": "Le bilan des inondations Népal-Chine grimpe à environ 750 morts, près de 3 000 personnes toujours disparues",
+  "url": "/brief/2026-08-30.html"
+ },
+ {
+  "date": "2026-08-29",
+  "long_en": "Saturday, 29 August 2026",
+  "long_fr": "samedi 29 août 2026",
+  "count": 26,
+  "lead_en": "Oil slides as Iran-Oman corridor talks advance and Hormuz risk is repriced",
+  "lead_fr": "Le pétrole recule alors que le corridor Iran-Oman avance et qu'Ormuz est reévalué",
+  "url": "/brief/2026-08-29.html"
+ },
+ {
+  "date": "2026-08-28",
+  "long_en": "Friday, 28 August 2026",
+  "long_fr": "vendredi 28 août 2026",
+  "count": 33,
+  "lead_en": "Iran says diplomacy is not impossible but ties Hormuz to ending every Mideast war",
+  "lead_fr": "L Iran dit la diplomatie non impossible mais lie Ormuz à la fin de toutes les guerres au Moyen-Orient",
+  "url": "/brief/2026-08-28.html"
+ },
+ {
+  "date": "2026-08-27",
+  "long_en": "Thursday, 27 August 2026",
+  "long_fr": "jeudi 27 août 2026",
+  "count": 30,
+  "lead_en": "Another tanker struck off Oman as Hormuz transits collapse and Qatar pushes new talks",
+  "lead_fr": "Un autre pétrolier frappé au large d'Oman alors que les transits d'Ormuz s'effondrent et que le Qatar relance les pourparlers",
+  "url": "/brief/2026-08-27.html"
+ },
+ {
+  "date": "2026-08-26",
+  "long_en": "Wednesday, 26 August 2026",
+  "long_fr": "mercredi 26 août 2026",
+  "count": 32,
+  "lead_en": "Iran and Oman prepare a Hormuz management deal as Washington holds back secondary sanctions",
+  "lead_fr": "L'Iran et Oman préparent un accord de gestion d'Ormuz alors que Washington retient ses sanctions secondaires",
+  "url": "/brief/2026-08-26.html"
+ },
+ {
+  "date": "2026-08-25",
+  "long_en": "Tuesday, 25 August 2026",
+  "long_fr": "mardi 25 août 2026",
+  "count": 32,
+  "lead_en": "Ottawa unveils its domestic tariff response: loans, tax deferrals and export support",
+  "lead_fr": "Ottawa dévoile sa réponse tarifaire intérieure : prêts, reports d'impôt et soutien à l'exportation",
+  "url": "/brief/2026-08-25.html"
+ },
+ {
+  "date": "2026-08-22",
+  "long_en": "Saturday, 22 August 2026",
+  "long_fr": "samedi 22 août 2026",
+  "count": 30,
+  "lead_en": "US-Canada trade talks collapse at the deadline and the 50% tariff takes effect",
+  "lead_fr": "Les négociations commerciales Canada-États-Unis échouent à l'échéance et le tarif de 50 % entre en vigueur",
+  "url": "/brief/2026-08-22.html"
+ },
+ {
+  "date": "2026-08-21",
+  "long_en": "Friday, 21 August 2026",
+  "long_fr": "vendredi 21 août 2026",
+  "count": 30,
+  "lead_en": "Three-day tariff pause on Canadian goods runs out today with paperwork unfinished",
+  "lead_fr": "La pause tarifaire de trois jours sur les produits canadiens expire aujourd hui, documents inachevés",
+  "url": "/brief/2026-08-21.html"
+ },
+ {
+  "date": "2026-08-20",
+  "long_en": "Thursday, 20 August 2026",
+  "long_fr": "jeudi 20 août 2026",
+  "count": 30,
+  "lead_en": "Carney asks provinces to end bans on US alcohol sales as part of the trade deal",
+  "lead_fr": "Carney demande aux provinces de lever les interdictions de vente d alcool américain dans le cadre de l accord commercial",
+  "url": "/brief/2026-08-20.html"
+ },
+ {
+  "date": "2026-08-19",
+  "long_en": "Wednesday, 19 August 2026",
+  "long_fr": "mercredi 19 août 2026",
+  "count": 30,
+  "lead_en": "Trump pauses the 50% tariff on Canadian goods for three days and announces a deal with Ottawa",
+  "lead_fr": "Trump suspend trois jours le tarif de 50 % sur les produits canadiens et annonce un accord avec Ottawa",
+  "url": "/brief/2026-08-19.html"
+ },
+ {
+  "date": "2026-08-18",
+  "long_en": "Tuesday, 18 August 2026",
+  "long_fr": "mardi 18 août 2026",
+  "count": 30,
+  "lead_en": "Washington's 50% tariff on Canadian goods lands tomorrow and small exporters say it could halve their sales",
+  "lead_fr": "Le tarif de 50 % de Washington sur les produits canadiens entre en vigueur demain et de petits exportateurs disent qu'il pourrait réduire leurs ventes de moitié",
+  "url": "/brief/2026-08-18.html"
+ },
+ {
+  "date": "2026-08-17",
+  "long_en": "Monday, 17 August 2026",
+  "long_fr": "lundi 17 août 2026",
+  "count": 30,
+  "lead_en": "Strait of Hormuz shipping grinds to a halt as the US-Iran ceasefire expires with no deal in sight",
+  "lead_fr": "Le trafic maritime dans le détroit d'Ormuz s'arrête net alors que le cessez-le-feu américano-iranien expire sans accord en vue",
+  "url": "/brief/2026-08-17.html"
+ },
+ {
   "date": "2026-08-16",
   "long_en": "Sunday, 16 August 2026",
   "long_fr": "dimanche 16 août 2026",
