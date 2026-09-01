@@ -77,6 +77,17 @@
     border-radius:4px;padding:34px 32px}
   .capture .ghost-embed{min-height:52px}
   .capture .note{font-size:14px;color:var(--muted);margin-top:16px;font-style:italic}
+  .fr-signup .fr-fields{display:flex;gap:10px;margin-bottom:14px}
+  .fr-signup input{flex:1;background:rgba(242,239,233,.06);border:1px solid var(--line);border-radius:2px;color:var(--bone);font-family:'EB Garamond',Georgia,serif;font-size:17px;padding:14px 16px;outline:none;min-width:0}
+  .fr-signup input::placeholder{color:var(--muted)}
+  .fr-signup input:focus{border-color:var(--gold)}
+  .fr-signup button{width:100%}
+  .fr-msg{display:none;margin-top:14px;font-size:16px}
+  .fr-signup.loading .fr-msg-loading{display:block;color:var(--muted)}
+  .fr-signup.success .fr-msg-success{display:block;color:var(--gold)}
+  .fr-signup.error .fr-msg-error{display:block;color:#E08A7A}
+  .fr-signup.success .fr-fields,.fr-signup.success button{display:none}
+  @media(max-width:560px){.fr-signup .fr-fields{flex-direction:column}}
 
   .pillars{max-width:900px;margin:70px auto 0;display:grid;grid-template-columns:repeat(3,1fr);gap:22px;text-align:left}
   .pillars .p{background:var(--panel2);border:1px solid var(--line);border-radius:3px;padding:24px 24px}
@@ -130,7 +141,16 @@
     <p class="lede"><b>Corridor Intelligence</b> propose une analyse stratégique pour entrepreneurs et dirigeants &mdash; le signal plutôt que le bruit, par quelqu'un qui a siégé dans les officines du pouvoir. Géopolitique, capitaux, ressources, et les décisions qui les font bouger.</p>
 
     <div class="capture">
-      <a href="#/portal/signup" data-portal="signup" class="btn btn-gold">S'abonner gratuitement</a>
+      <form data-members-form="signup" class="fr-signup">
+        <div class="fr-fields">
+          <input data-members-name type="text" placeholder="Prénom (facultatif)" aria-label="Prénom">
+          <input data-members-email type="email" required placeholder="votre@courriel.com" aria-label="Courriel">
+        </div>
+        <button class="btn btn-gold" type="submit">S'abonner gratuitement</button>
+        <div class="fr-msg fr-msg-loading">Un instant&hellip;</div>
+        <div class="fr-msg fr-msg-success">C'est presque fait &mdash; vérifiez votre boîte de réception et cliquez le lien de confirmation.</div>
+        <div class="fr-msg fr-msg-error">Une erreur est survenue. Vérifiez l'adresse et réessayez.</div>
+      </form>
       <p class="note">Gratuit. Aucun pourriel. Désabonnement en tout temps. Vous recevrez un courriel de confirmation &mdash; cliquez pour confirmer.</p>
     </div>
 
