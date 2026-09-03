@@ -82,7 +82,7 @@
 
   var NAV_HTML =
     '<div class="navdrop"><a href="/intelligence.html">Intelligence</a><div class="navdrop-menu">' +
-    '<a href="/brief/">Briefs</a><a href="/dispatch.html">Dispatches</a>' +
+    '<a href="/brief/">Corridor Brief</a><a href="/dispatch.html">Dispatches</a>' +
     '<a href="/corridor-files.html">Files</a><a href="/brief/index-dashboard.html">Index</a>' +
     '<a href="/issues-focus.html">Issues Focus</a></div></div>' +
     '<a href="/podcast.html">Podcast</a>' +
@@ -94,13 +94,13 @@
 
   var NAV_HTML_FR =
     '<div class="navdrop"><a href="/intelligence.html">Intelligence</a><div class="navdrop-menu">' +
-    '<a href="/brief/">Synth&egrave;ses</a><a href="/dispatch.html">D&eacute;p&ecirc;ches</a>' +
+    '<a href="/brief/">Breffage Corridor</a><a href="/dispatch.html">D&eacute;p&ecirc;ches</a>' +
     '<a href="/corridor-files.html">Dossiers</a><a href="/brief/index-dashboard.html">Index</a>' +
     '<a href="/issues-focus.html">Dossiers th&eacute;matiques</a></div></div>' +
     '<a href="/podcast.html">Balado</a>' +
-    '<a href="/writing.html">R&eacute;daction</a>' +
+    '<a href="/writing.html">&Eacute;crits</a>' +
     '<a href="/conferences.html">Conf&eacute;rences</a>' +
-    '<a href="/media.html">M&eacute;dias</a>' +
+    '<a href="/media-fr.html">M&eacute;dias</a>' +
     '<a href="/livre.html">Livre</a>' +
     '<a class="cta" href="/abonnement.html">S&rsquo;abonner</a>';
 
@@ -114,9 +114,11 @@
     '<a href="/call.html">Book a Call</a>' +
     '<a href="/privacy.html" style="margin-left:22px">Privacy</a>' +
     '<a href="/terms.html">Terms</a>' +
-    '<a href="https://www.linkedin.com/in/soaresjoseph/" style="margin-left:22px">LinkedIn</a>' +
+    '<a href="https://www.youtube.com/@corridorintelligence?sub_confirmation=1" style="margin-left:22px" title="Corridor Intelligence &mdash; English channel">YouTube (EN)</a>' +
+    '<a href="https://www.youtube.com/@LeCorridorIntelligence?sub_confirmation=1" title="Le Corridor Intelligence &mdash; cha&icirc;ne fran&ccedil;aise">YouTube (FR)</a>' +
+    '<a href="https://www.linkedin.com/in/soaresjoseph/">LinkedIn</a>' +
     '<a href="https://x.com/JosephSoares">X</a>' +
-    '<a href="https://www.youtube.com/@corridorintelligence?sub_confirmation=1">YouTube</a>' +
+    '<a href="https://www.instagram.com/soaresjoseph/">Instagram</a>' +
     '</div></div>';
 
   var FOOTER_HTML_FR =
@@ -129,9 +131,11 @@
     '<a href="/appel.html">Planifier un appel</a>' +
     '<a href="/privacy.html" style="margin-left:22px">Confidentialit&eacute;</a>' +
     '<a href="/terms.html">Conditions</a>' +
-    '<a href="https://www.linkedin.com/in/soaresjoseph/" style="margin-left:22px">LinkedIn</a>' +
+    '<a href="https://www.youtube.com/@LeCorridorIntelligence?sub_confirmation=1" style="margin-left:22px" title="Le Corridor Intelligence &mdash; cha&icirc;ne fran&ccedil;aise">YouTube (fran&ccedil;ais)</a>' +
+    '<a href="https://www.youtube.com/@corridorintelligence?sub_confirmation=1" title="Corridor Intelligence &mdash; English channel">YouTube (anglais)</a>' +
+    '<a href="https://www.linkedin.com/in/soaresjoseph/">LinkedIn</a>' +
     '<a href="https://x.com/JosephSoares">X</a>' +
-    '<a href="https://www.youtube.com/@corridorintelligence?sub_confirmation=1">YouTube</a>' +
+    '<a href="https://www.instagram.com/soaresjoseph/">Instagram</a>' +
     '</div></div>';
 
   /* Language toggle. Derived from the hreflang alternates already in <head>,
