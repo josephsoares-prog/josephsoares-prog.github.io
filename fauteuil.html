@@ -237,7 +237,7 @@ function fauteuilSubmit(e){e.preventDefault();
     utm_source:(u&&u.utm_source)||'direct',utm_medium:(u&&u.utm_medium)||'direct',
     utm_campaign:(u&&u.utm_campaign)||'(none)',utm_content:(u&&u.utm_content)||'(none)',
     utm_term:(u&&u.utm_term)||'(none)',submitted_at:new Date().toISOString()};
-  if(btn){btn.disabled=true;btn.textContent='Envoi…';}
+  if(btn){btn.disabled=true;btn.textContent='Envoi\u2026';}
   try{window.gtag&&gtag('event','chair_submit',{page:location.pathname});}catch(err){}
   fetch('https://hook.us2.make.com/zrq4t9rdqj4v59sfxuofq0c3a4tvx8k1',{method:'POST',headers:{'Content-Type':'application/json'},
     body:JSON.stringify(p),keepalive:true}).catch(function(){});
