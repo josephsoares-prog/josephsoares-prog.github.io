@@ -491,7 +491,7 @@ document.head.appendChild(o)}initApollo();</script>
       navigator.clipboard.writeText(text).then(() => {
         const btn = document.getElementById(id).parentElement.querySelector('.bio-copy-btn');
         btn.textContent = 'Copi\u00e9!';
-        setTimeout(() => btn.textContent = id === 'shortBioText' ? 'Copier la biographie courte' : 'Copier la biographie complu00e8te', 2000);
+        setTimeout(() => btn.textContent = id === 'shortBioText' ? 'Copier la biographie courte' : 'Copier la biographie compl\u00e8te', 2000);
       });
     }
     function toggleQA(el) {
