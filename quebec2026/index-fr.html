@@ -1,0 +1,87 @@
+<!doctype html><html lang=fr><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Québec 2026 — projection quotidienne Corridor</title><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=EB+Garamond:wght@400;600&display=swap" rel=stylesheet><style>
+*{box-sizing:border-box}body{margin:0 auto;padding:18px;background:#072244;color:#F2EFE9;max-width:860px;font:16px/1.6 'EB Garamond',Georgia,serif}
+h1{font-family:Oswald,Impact,sans-serif;font-weight:600;font-size:22px;margin:0 0 2px;letter-spacing:-.3px}.top{display:flex;justify-content:space-between;gap:12px}
+.sub{color:#A9A39A;font-size:13px;margin-bottom:18px}
+.lng{border:1px solid rgba(242,239,233,.25);border-radius:6px;padding:5px 11px;color:#D4AF37;text-decoration:none;font-size:12.5px;white-space:nowrap;height:fit-content}
+.card{background:#0E3A70;border:1px solid rgba(242,239,233,.12);border-radius:10px;padding:16px;margin-bottom:14px}
+h2{font-family:Oswald,Impact,sans-serif;font-size:12px;text-transform:uppercase;letter-spacing:1.1px;color:#A9A39A;margin:0 0 12px;font-weight:600}
+.row{display:flex;align-items:center;gap:9px;margin-bottom:7px}.lbl{width:42px;font-weight:700;font-size:13px}
+.track{flex:1;background:rgba(7,34,68,.55);height:22px;border-radius:4px;overflow:hidden}.fill{height:100%;border-radius:4px}
+.num{width:36px;text-align:right;font-weight:700;font-variant-numeric:tabular-nums}
+.ci{width:58px;text-align:right;color:#A9A39A;font-size:12px;font-variant-numeric:tabular-nums}
+.big{font-family:Oswald,Impact,sans-serif;font-size:31px;font-weight:700;letter-spacing:-1px;line-height:1.15}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.k{color:#A9A39A;font-size:11.5px;text-transform:uppercase;letter-spacing:.8px}
+table{width:100%;border-collapse:collapse;font-size:12.5px}
+th{text-align:left;color:#A9A39A;font-weight:600;padding:5px 3px;border-bottom:1px solid rgba(242,239,233,.18);font-size:10.5px;text-transform:uppercase}
+td{padding:6px 3px;border-bottom:1px solid rgba(242,239,233,.10);font-variant-numeric:tabular-nums}
+.rn{font-weight:600;font-size:12px}.sm{display:block;color:#A9A39A;font-size:10px;font-weight:400}.fl{color:#D4AF37;text-align:center}
+.warn{background:#0A3161;border-color:#D4AF37}.warn h2{color:#D4AF37}
+.foot{color:#A9A39A;font-size:11.5px;line-height:1.65}
+select{width:100%;padding:12px;background:#0A3161;color:#F2EFE9;border:1px solid rgba(242,239,233,.25);border-radius:8px;font-size:16px;-webkit-appearance:none;appearance:none}
+#out{margin-top:15px;display:none}#out.on{display:block}
+.rt{font-size:18px;font-weight:700}.rr{color:#A9A39A;font-size:12.5px;margin-bottom:4px}
+.tag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.7px;padding:3px 8px;border-radius:4px;margin-bottom:12px}
+.hold{background:#0A3161;color:#8FD19E;border:1px solid rgba(143,209,158,.4)}.gain{background:#0A3161;color:#D4AF37;border:1px solid rgba(212,175,55,.5)}
+.sec{border-top:1px solid rgba(242,239,233,.12);margin-top:14px;padding-top:12px}
+.mt{display:flex;gap:16px;flex-wrap:wrap;margin-top:9px}.mt div{font-size:11.5px;color:#A9A39A}.mt b{color:#F2EFE9;display:block;font-size:14px}
+.maj{position:relative}.majl{position:absolute;top:26px;bottom:14px;width:2px;background:#D4AF37;opacity:.9}
+</style><div class=top><div><div style="font-family:Oswald,sans-serif;font-size:11px;letter-spacing:2px;color:#D4AF37;margin-bottom:6px"><a href="/" style="color:#D4AF37;text-decoration:none">JOSEPHSOARES.COM</a> · CORRIDOR INTELLIGENCE</div><h1>Québec 2026 — projection quotidienne Corridor</h1><div class=sub id=asof>Chargement…</div></div><a class=lng href="index-en.html">English</a></div>
+<div class="card maj"><h2>Sièges projetés <span style="color:#D4AF37">│ majorité</span></h2><div class=majl id=majl></div><div id=seatbars></div></div>
+<div class=card><h2>Vote agrégé</h2><div id=votebars></div><div class=foot style="margin-top:10px">Nombre effectif de partis : <b style="color:#F2EFE9" id=enep>—</b> — plus élevé que dans chacune des onze élections historiques de la série comparative.</div></div>
+<div class=card><h2 id=simh>Simulation</h2><div class=grid><div><div class=k>Plus de sièges</div><div class=big id=ms>—</div><div class=foot id=ms2></div></div><div><div class=k>Parlement minoritaire</div><div class=big style="color:#D4AF37" id=pm>—</div><div class=foot id=pm2></div></div></div><div class=foot style="margin-top:12px" id=unc></div></div>
+<div class=card><h2>Trouvez votre circonscription</h2><div class=foot style="margin-bottom:11px" id=fs>Les 127 circonscriptions de la carte officielle de 2026.</div><select id=sel onchange=go()><option value="">— choisir une circonscription —</option></select><div id=out><div class=rt id=rn></div><div class=rr id=rr></div><span class=tag id=tg></span><div class=k>Projection 2026</div><div id=pb></div><div class=sec><div class=k>Résultat de 2022 (officiel)</div><div id=hb></div><div class=mt id=mt></div></div></div></div>
+<div class=card><h2>Par région administrative</h2><table id=regt></table><div class=foot style="margin-top:10px">● Léger &nbsp; ○ transfert depuis la base de 2022</div></div>
+<div class="card warn"><h2>⚠ Test rétrospectif</h2><div class=foot id=bt></div></div>
+<div class=card><h2>Sondages dans l'agrégat</h2><table id=pollt></table><div class=foot style="margin-top:10px">Poids = √n × e^(−âge/10) × facteur de maison.</div></div>
+<div class=foot>Base : résultats officiels d'Élections Québec pour les 125 circonscriptions de l'élection générale de 2022, tirés des données ouvertes de dgeq.org, appariés aux 127 circonscriptions officielles de la carte de 2026. Sept régions portent des niveaux actuels tirés du sondage régional Léger (n = 11 305) ; les dix autres sont projetées à partir de leur base de 2022 par transfert provincial et sont marquées ○.</div>
+<script>var P=[],RG=[],D={},L='fr';
+var T={nod:"Données indisponibles",hold:"CONSERVÉE",gain:"CHANGE DE MAINS",win:"vainqueur projeté",ovr:"devant",mrg:"écart",trn:"participation",elc:"électeurs",newr:"Nouvelle circonscription — aucun prédécesseur. La projection reprend le niveau régional."};
+var C={"PQ":"#2b5fb3","CAQ":"#12a5e0","PLQ":"#d8322f","PCQ":"#12305e","QS":"#f07f13"};
+function esc(s){return String(s).replace(/[&<>]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;'}[c]})}
+function nb(x){return String(x).replace(/\B(?=(\d{3})+(?!\d))/g,'\u00a0')}
+function bar(v,mx,ci){var h='',ks=Object.keys(v).sort(function(a,b){return v[b]-v[a]});
+ks.forEach(function(p){h+='<div class=row><div class=lbl>'+p+'</div><div class=track><div class=fill style="width:'+(v[p]/mx*100)+'%;background:'+C[p]+'"></div></div><div class=num>'+(ci?v[p]:v[p].toFixed(1).replace('.',',')+' %')+'</div><div class=ci>'+(ci&&ci[p]?ci[p][0]+'–'+ci[p][2]:'')+'</div></div>'});return h}
+function obj(a){var o={};P.forEach(function(p,i){o[p]=a[i]});return o}
+function go(){var n=document.getElementById('sel').value,o=document.getElementById('out');
+if(!n){o.className='';return}var r=D[n];o.className='on';
+document.getElementById('rn').textContent=n;
+document.getElementById('rr').textContent=RG[r[1]][2];
+var pr=obj(r[2]),win=P[r[3]],sec=P[r[4]],b=r[6];
+var chg=b&&P[b[1]]!=win,tg=document.getElementById('tg');
+tg.className='tag '+(chg?'gain':'hold');tg.textContent=chg?T.gain+' → '+win:T.hold+' · '+win;
+document.getElementById('pb').innerHTML=bar(pr,Math.max.apply(0,r[2]))+'<div class=foot style="margin-top:6px">'+T.win+' : <b style="color:'+C[win]+'">'+win+'</b> '+T.ovr+' '+sec+', '+T.mrg+' '+String(r[5]).replace('.',',')+' pts</div>';
+if(b){document.getElementById('hb').innerHTML=bar(obj(b[0]),Math.max.apply(0,b[0]));
+document.getElementById('mt').innerHTML='<div>'+T.mrg+'<b>'+String(b[3]).replace('.',',')+' pts</b></div><div>&nbsp;<b>'+nb(b[4])+'</b></div><div>'+T.trn+'<b>'+String(b[5]).replace('.',',')+' %</b></div><div>'+T.elc+'<b>'+nb(b[6])+'</b></div>'}
+else{document.getElementById('hb').innerHTML='<div class=foot>'+T.newr+'</div>';document.getElementById('mt').innerHTML=''}}
+function render(j){P=j.P;RG=j.R;
+document.getElementById('asof').textContent=j.asof+' · '+j.dl+' jours du scrutin · 127 circonscriptions · 64 pour la majorité';
+var mx=Math.max.apply(0,P.map(function(p){return j.s[p]}));
+document.getElementById('majl').style.left='calc(51px + (100% - 32px - 51px - 94px) * '+(64/mx)+')';
+document.getElementById('seatbars').innerHTML=bar(j.s,mx,j.sim.seat_ci);
+document.getElementById('votebars').innerHTML=bar(j.v,Math.max.apply(0,P.map(function(p){return j.v[p]})));
+document.getElementById('enep').textContent=String(j.enep).replace('.',',');
+document.getElementById('simh').textContent='Simulation · '+nb(j.sim.runs)+' tirages';
+var ord=P.slice().sort(function(a,b){return j.sim.most_seats[b]-j.sim.most_seats[a]});
+var e=document.getElementById('ms');e.innerHTML=ord[0]+'&nbsp;'+String(j.sim.most_seats[ord[0]]).replace('.',',')+' %';e.style.color=C[ord[0]];
+document.getElementById('ms2').textContent=ord.slice(1,4).map(function(p){return p+' '+String(j.sim.most_seats[p]).replace('.',',')+' %'}).join(' · ');
+document.getElementById('pm').textContent=String(j.sim.p_minority).replace('.',',')+' %';
+var mo=P.slice().sort(function(a,b){return j.sim.majority[b]-j.sim.majority[a]});
+document.getElementById('pm2').textContent=mo.slice(0,2).map(function(p){return p+' majorité '+String(j.sim.majority[p]).replace('.',',')+' %'}).join(' · ');
+document.getElementById('unc').textContent='σ = '+String(j.sim.sd_used).replace('.',',')+' points par parti — erreur historique des derniers sondages plus dérive de campagne sur '+j.dl+' jours.';
+var flips=0;j.ri.forEach(function(r){if(r[6]&&r[6][1]!=r[3])flips++});
+document.getElementById('fs').textContent='Les 127 circonscriptions de la carte officielle de 2026. '+flips+' devraient changer de mains.';
+var h='<tr><th>Région</th><th>Sièges</th><th>En tête</th>'+P.map(function(p){return '<th>'+p+'</th>'}).join('')+'<th>Source</th></tr>';
+RG.forEach(function(rg,i){var r=j.reg[i];if(!r)return;
+h+='<tr><td class=rn>'+esc(rg[0].slice(0,2)+' '+rg[2])+'</td><td>'+r.n+'</td><td><b style="color:'+C[P[r.l]]+'">'+P[r.l]+'</b></td>';
+P.forEach(function(p,k){h+='<td>'+(r.s[k]||'')+'<span class=sm>'+Math.round(r.v[k])+' %</span></td>'});
+h+='<td class=fl>'+(r.src=='SOURCED'?'●':'○')+'</td></tr>'});
+document.getElementById('regt').innerHTML=h;
+var b=j.bt;document.getElementById('bt').innerHTML='Six tests rétrospectifs sur les élections générales de 2012, 2014, 2018 et 2022 (résultats officiels d\'Élections Québec). <b>Erreur absolue moyenne : '+String(b.mean_mae).replace('.',',')+' sièges par parti</b> (étendue '+String(b.lo).replace('.',',')+' à '+String(b.hi).replace('.',',')+').<br><br><b>La mise en garde importante.</b> Deux méthodes de transfert ont été testées et aucune n’est mesurablement meilleure. Sur les chiffres actuels, elles divergent de six sièges et ne s’entendent pas sur l’ordre PQ–CAQ. <b>Cet ordre est donc présenté comme indéterminé.</b> Ce qui tient sous les deux méthodes : aucune majorité, un écart PQ–CAQ de quelques sièges, et neuf sièges au PCQ — les mêmes neuf.';
+var ph='<tr><th>Source</th><th>n</th><th>Âge</th><th>Poids</th></tr>';
+j.polls.forEach(function(u){ph+='<tr><td>'+esc(u.src)+'</td><td>'+nb(u.n)+'</td><td>'+u.age+' j</td><td>'+String(u.weight).replace('.',',')+'</td></tr>'});
+document.getElementById('pollt').innerHTML=ph;
+var sel=document.getElementById('sel');
+j.ri.forEach(function(r){D[r[0]]=r});
+Object.keys(D).sort(function(a,b){return a.localeCompare(b,'fr')}).forEach(function(n){var op=document.createElement('option');op.value=n;op.textContent=n;sel.appendChild(op)})}
+fetch('data.json?v='+Date.now()).then(function(r){return r.json()}).then(render).catch(function(){document.getElementById('asof').textContent=T.nod;var s=document.getElementById('sel');s.disabled=true;s.innerHTML='<option>'+T.nod+'</option>'});
+</script></html>
