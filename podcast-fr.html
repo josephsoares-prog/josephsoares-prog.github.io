@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+
+<html lang="fr-CA">
+<head>
+<!-- Google Analytics (GA4) -->
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{ad_storage:'denied',analytics_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',wait_for_update:500});</script>
+<script defer="" src="/consent.js"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-HNRCLZN3PK"></script>
+<script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-HNRCLZN3PK');
+    </script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<link href="/favicon.ico" rel="apple-touch-icon"/>
+<title>Corridor Intelligence | Le balado avec Joseph Soares</title>
+<meta content="Corridor Intelligence — Comment les décideurs gèrent les moments décisifs. Un balado sous forme d’entrevues animé par Joseph Soares, mettant en vedette des leaders du monde des affaires, du gouvernement et de la vie publique qui ont dû faire face à des situations de forte pression." name="description"/>
+<meta content="Corridor Intelligence | Le balado avec Joseph Soares" property="og:title"/>
+<meta content="https://josephsoares.com/podcast" property="og:url"/>
+<meta content="Comment les décideurs gèrent les moments décisifs. Des témoignages authentiques de dirigeants du monde des affaires, du gouvernement et de la vie publique qui ont dû faire face à des situations difficiles sous pression." property="og:description"/>
+<meta content="website" property="og:type"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&amp;family=EB+Garamond:ital,wght@0,400;0,500;1,400&amp;display=swap" rel="stylesheet"/>
+<style>
+        :root {
+            /* Dark flag-blue premium standard.
+               NOTE: several names are intentionally re-valued away from their
+               literal meaning so that automation-inserted episode cards
+               (which reference --white for card bg, --navy for title text,
+               --text-mid for body, --border-light for border) recolor to dark.
+               --navy is therefore a LIGHT title color; static dark backgrounds
+               and dark-on-gold button text use explicit hex below. */
+            --navy: #F2EFE9;            /* card/heading TEXT on dark (was a dark bg) */
+            --navy-mid: #0E3A70;        /* raised panel */
+            --navy-light: #072244;      /* deep */
+            --gold: #D4AF37;
+            --gold-light: #E6C860;
+            --gold-muted: rgba(212, 175, 55, 0.12);
+            --cream: #0A3161;           /* section backgrounds -> flag blue */
+            --white: #0E3A70;           /* card/panel background (was #fff) */
+            --text-dark: #F2EFE9;       /* default body text -> bone */
+            --text-mid: #A9A39A;        /* muted body text */
+            --text-light: rgba(242,239,233,0.72);
+            --border-light: rgba(212, 175, 55, 0.22);
+            /* dark tones used explicitly where a real dark surface is needed */
+            --ink: #0A3161;
+            --panel: #0E3A70;
+            --deep: #072244;
+            --bone: #F2EFE9;
+            --muted: #A9A39A;
+            --line: rgba(242,239,233,.12);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'EB Garamond', Georgia, serif;
+            font-size: 18px;
+            line-height: 1.65;
+            color: var(--bone);
+            background: var(--ink);
+            background-image: radial-gradient(ellipse 120% 70% at 50% -8%, rgba(212,175,55,.07), rgba(0,0,0,0));
+            -webkit-font-smoothing: antialiased;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Oswald', sans-serif;
+            font-weight: 600;
+        }
+        .section-label, .hero-label, .format-label, .format-number,
+        .credential, .footer-firm, .nav-name, .brand, .btn-advisory-brief,
+        .btn-subscribe, .lang-bar button {
+            font-family: 'Oswald', sans-serif;
+        }
+
+        /* ===== UTILITY STRIP (formerly fixed lang bar; now in normal flow) ===== */
+        .lang-bar {
+            position: relative;
+            z-index: 30;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 30px;
+            height: 40px;
+            background: var(--deep);
+            border-bottom: 1px solid var(--line, rgba(242,239,233,.12));
+        }
+        .lang-bar-left {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            height: 20px;
+            color: rgba(242,239,233,0.5);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .social-link:hover {
+            color: var(--gold);
+        }
+        .social-icon {
+            width: 16px;
+            height: 16px;
+        }
+        .lang-bar-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .btn-advisory-brief {
+            background: none;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            padding: 6px 14px;
+            border-radius: 2px;
+            font-family: 'Oswald', sans-serif;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .btn-advisory-brief:hover {
+            background: var(--gold);
+            color: #0E3A70;
+        }
+        .btn-subscribe {
+            color: rgba(242,239,233,0.6);
+            text-decoration: none;
+            font-family: 'Oswald', sans-serif;
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+        .btn-subscribe:hover {
+            color: var(--gold);
+        }
+        .lang-buttons {
+            display: flex;
+            align-items: center;
+            gap: 0;
+        }
+        .lang-bar button {
+            background: none;
+            border: none;
+            color: rgba(242,239,233,0.4);
+            cursor: pointer;
+            font-family: 'Oswald', sans-serif;
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 0.12em;
+            padding: 6px 12px;
+            transition: color 0.3s;
+        }
+        .lang-bar button:hover { color: var(--gold-light); }
+        .lang-bar button.active { color: var(--gold); }
+        .lang-sep { color: rgba(242,239,233,0.2); font-size: 10px; }
+
+        /* ===== STANDARD UNIFIED NAV (matches index.html) ===== */
+        .wrap { max-width: 1120px; margin: 0 auto; padding: 0 30px; }
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 20;
+            background: rgba(7, 34, 68, .86);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(242,239,233,.12);
+        }
+        nav .wrap {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 66px;
+        }
+        .brand {
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: .2em;
+            font-weight: 600;
+            font-size: 16px;
+            color: var(--bone);
+        }
+        .brand span { color: var(--gold); }
+        .navlinks { display: flex; gap: 30px; align-items: center; }
+        .navlinks a {
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: .12em;
+            font-size: 13px;
+            font-weight: 500;
+            text-decoration: none;
+            color: var(--muted, #A9A39A);
+        }
+        .navlinks a:hover { color: var(--gold); }
+        .navlinks a.active { color: var(--gold); }
+        .navlinks a.cta {
+            color: var(--bone);
+            border: 1px solid rgba(242,239,233,.12);
+            padding: 9px 16px;
+            border-radius: 2px;
+        }
+        .navlinks a.cta:hover { border-color: var(--gold); color: var(--gold); }
+
+        /* ===== HERO ===== */
+        .hero {
+            background: linear-gradient(135deg, #0A3161 0%, #0E3A70 50%, #072244 100%);
+            padding: 84px 20px 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(ellipse at 30% 20%, rgba(212,175,55,0.10) 0%, transparent 60%);
+        }
+        .hero-content { position: relative; z-index: 1; max-width: 800px; margin: 0 auto; }
+        .hero-label {
+            display: inline-block;
+            font-family: 'Oswald', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 20px;
+            padding: 6px 18px;
+            border: 1px solid rgba(212,175,55,0.3);
+            border-radius: 20px;
+        }
+        .hero h1 {
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            font-size: clamp(2.2rem, 5vw, 3.6rem);
+            font-weight: 600;
+            color: var(--bone);
+            line-height: 1.06;
+            letter-spacing: 0.01em;
+            margin-bottom: 22px;
+        }
+        .hero h1 span { color: var(--gold); }
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            line-height: 1.6;
+            max-width: 640px;
+            margin: 0 auto 32px;
+        }
+        .hero-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 36px;
+            background: var(--gold);
+            color: #0E3A70;
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            border-radius: 2px;
+            transition: all 0.3s;
+        }
+        .hero-cta:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(212,175,55,0.3); }
+
+        .launch-badge {
+            display: inline-block;
+            margin-top: 24px;
+            padding: 8px 20px;
+            background: rgba(212,175,55,0.12);
+            border: 1px solid rgba(212,175,55,0.25);
+            border-radius: 20px;
+            color: var(--gold-light);
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        /* ===== SECTIONS ===== */
+        section { padding: 80px 20px; }
+        .container { max-width: 900px; margin: 0 auto; }
+
+        .section-label {
+            display: inline-block;
+            font-family: 'Oswald', sans-serif;
+            font-size: 0.72rem;
+            font-weight: 500;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 14px;
+        }
+
+        h2 {
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.01em;
+            font-size: clamp(1.6rem, 3vw, 2.3rem);
+            font-weight: 600;
+            color: var(--bone);
+            line-height: 1.12;
+            margin-bottom: 20px;
+        }
+
+        .section-intro {
+            font-size: 1.05rem;
+            color: var(--text-mid);
+            line-height: 1.7;
+            max-width: 700px;
+            margin-bottom: 40px;
+        }
+
+        /* ===== ABOUT THE SHOW ===== */
+        .about-section { background: var(--cream); }
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            margin-top: 40px;
+        }
+        .about-card {
+            background: var(--panel);
+            padding: 28px;
+            border-radius: 3px;
+            border: 1px solid var(--line);
+            border-left: 3px solid var(--gold);
+        }
+        .about-card h3 {
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            font-size: 1.05rem;
+            font-weight: 500;
+            color: var(--bone);
+            margin-bottom: 8px;
+        }
+        .about-card p {
+            font-size: 0.92rem;
+            color: var(--text-mid);
+            line-height: 1.6;
+        }
+
+        /* ===== FORMAT ===== */
+        .format-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 40px;
+        }
+        .format-item {
+            text-align: center;
+            padding: 32px 20px;
+            background: var(--panel2, #072244);
+            border: 1px solid var(--line);
+            border-radius: 3px;
+        }
+        .format-number {
+            font-family: 'Oswald', sans-serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--gold);
+            margin-bottom: 4px;
+        }
+        .format-label {
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--bone);
+            margin-bottom: 4px;
+        }
+        .format-desc {
+            font-size: 0.82rem;
+            color: var(--text-mid);
+        }
+
+        /* ===== HOST ===== */
+        .host-section { background: var(--deep); color: var(--bone); }
+        .host-section h2 { color: var(--bone); }
+        .host-section .section-intro { color: var(--text-light); }
+        .host-credentials {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-top: 28px;
+        }
+        .credential {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 18px;
+            background: rgba(201,168,76,0.1);
+            border: 1px solid rgba(201,168,76,0.2);
+            border-radius: 6px;
+            font-size: 0.88rem;
+            color: var(--gold-light);
+        }
+        .credential-icon { font-size: 1.1rem; }
+
+        /* ===== GUEST BENEFITS ===== */
+        .benefits-list {
+            list-style: none;
+            margin-top: 32px;
+        }
+        .benefits-list li {
+            display: flex;
+            gap: 16px;
+            padding: 20px 0;
+            border-bottom: 1px solid var(--line);
+        }
+        .benefit-check {
+            flex-shrink: 0;
+            width: 28px;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--gold-muted);
+            color: var(--gold);
+            border-radius: 50%;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+        .benefit-text h4 {
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+            font-size: 1.02rem;
+            font-weight: 500;
+            color: var(--bone);
+            margin-bottom: 4px;
+        }
+        .benefit-text p {
+            font-size: 0.92rem;
+            color: var(--text-mid);
+            line-height: 1.5;
+        }
+
+        /* ===== TOPICS ===== */
+        .topics-section { background: var(--cream); }
+        .topics-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin-top: 32px;
+        }
+        .topic-tag {
+            padding: 14px 20px;
+            background: var(--panel);
+            border: 1px solid var(--line);
+            border-radius: 3px;
+            font-size: 0.98rem;
+            color: var(--bone);
+            font-weight: 500;
+            border-left: 3px solid var(--gold);
+        }
+
+        /* ===== APPLY ===== */
+        .apply-section { background: var(--cream); }
+        .apply-intro { font-size: 1.05rem; color: var(--text-mid); line-height: 1.7; max-width: 700px; margin-bottom: 32px; }
+        .apply-criteria {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 40px;
+        }
+        .criteria-item {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+            padding: 16px 20px;
+            background: var(--panel);
+            border: 1px solid var(--line);
+            border-radius: 3px;
+            border-left: 3px solid var(--gold);
+        }
+        .criteria-check {
+            flex-shrink: 0;
+            color: var(--gold);
+            font-weight: 700;
+            font-size: 1.1rem;
+            line-height: 1.4;
+        }
+        .criteria-text {
+            font-size: 0.92rem;
+            color: var(--text-mid);
+            line-height: 1.5;
+        }
+        .apply-actions {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .apply-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 36px;
+            background: var(--gold);
+            color: #0E3A70;
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            border-radius: 2px;
+            transition: all 0.3s;
+        }
+        .apply-primary:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(212,175,55,0.3); }
+        .apply-alt {
+            font-size: 0.92rem;
+            color: var(--text-mid);
+        }
+        .apply-alt a {
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .apply-alt a:hover { text-decoration: underline; }
+
+        /* ===== CTA ===== */
+        .cta-section {
+            background: linear-gradient(135deg, #0A3161 0%, #072244 100%);
+            text-align: center;
+            padding: 80px 20px;
+        }
+        .cta-section h2 { color: var(--bone); margin-bottom: 12px; }
+        .cta-section p { color: var(--text-light); font-size: 1.05rem; max-width: 560px; margin: 0 auto 32px; line-height: 1.6; }
+        .cta-buttons { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+        .cta-primary {
+            padding: 16px 36px;
+            background: var(--gold);
+            color: #0E3A70;
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            border-radius: 2px;
+            transition: all 0.3s;
+        }
+        .cta-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+        .cta-secondary {
+            padding: 16px 36px;
+            background: transparent;
+            color: var(--gold);
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            border: 1px solid rgba(212,175,55,0.4);
+            border-radius: 2px;
+            transition: all 0.3s;
+        }
+        .cta-secondary:hover { border-color: var(--gold); background: rgba(212,175,55,0.08); }
+
+        /* ===== FOOTER (standard) ===== */
+        footer {
+            background: var(--deep);
+            border-top: 1px solid var(--line);
+            padding: 48px 0 64px;
+            color: var(--muted);
+            font-size: 16px;
+        }
+        footer .wrap {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 22px;
+            align-items: flex-start;
+        }
+        footer a { color: var(--muted); text-decoration: none; }
+        footer a:hover { color: var(--gold); }
+        footer .soc a { margin-left: 22px; }
+        .disc { max-width: 50ch; font-style: italic; font-size: 15px; line-height: 1.55; }
+        .footer-legal {
+            width: 100%;
+            display: flex;
+            gap: 20px;
+            margin-top: 22px;
+            font-size: 13px;
+        }
+        .footer-legal a {
+            color: rgba(242,239,233,0.5);
+            text-decoration: none;
+        }
+        .footer-legal a:hover {
+            color: var(--gold);
+            text-decoration: underline;
+        }
+        .footer-firm {
+            font-size: 12px;
+            color: rgba(242,239,233,0.55);
+            margin-bottom: 8px;
+            letter-spacing: 0.04em;
+        }
+        .footer-attribution {
+            width: 100%;
+            font-size: 11px;
+            color: rgba(242,239,233,0.35);
+            margin-top: 12px;
+            letter-spacing: 0.03em;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 880px) {
+            .navlinks { display: none; }
+        }
+        @media (max-width: 768px) {
+            .lang-bar { padding: 0 16px; gap: 10px; flex-wrap: wrap; height: auto; }
+            .about-grid, .format-grid, .topics-grid, .apply-criteria { grid-template-columns: 1fr; }
+            .host-credentials { flex-direction: column; }
+        }
+
+        @media (max-width: 768px) {
+            footer > div:first-child { grid-template-columns: 1fr !important; gap: 28px !important; }
+        }
+    </style>
+<link href="https://josephsoares.com/podcast-fr.html" rel="canonical"/><link href="https://josephsoares.com/podcast.html" hreflang="en" rel="alternate"/><link href="https://josephsoares.com/podcast-fr.html" hreflang="fr-CA" rel="alternate"/><link href="https://josephsoares.com/podcast.html" hreflang="x-default" rel="alternate"/>
+<meta content="https://josephsoares.com/assets/og-default.png" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Corridor Intelligence | Le balado avec Joseph Soares" name="twitter:title"/>
+<meta content="https://josephsoares.com/assets/og-default.png" name="twitter:image"/>
+<script type="application/ld+json">{
+      "@context": "https://schema.org",
+      "@type": "PodcastSeries",
+      "name": "Corridor Intelligence",
+      "alternateName": "Corridor Intelligence Podcast",
+      "description": "Comment les décideurs gèrent les moments décisifs. Un balado sous forme d’entrevues animé par Joseph Soares, mettant en vedette des leaders du monde des affaires, du gouvernement et de la vie publique qui ont dû faire face à des situations de pression.",
+      "url": "https://josephsoares.com/podcast-fr.html",
+      "image": "https://josephsoares.com/assets/og-default.png",
+      "author": {
+            "@type": "Person",
+            "name": "Joseph Soares",
+            "jobTitle": "Senior Advisor",
+            "url": "https://josephsoares.com/",
+            "sameAs": [
+                  "https://www.linkedin.com/in/jsoares/"
+            ]
+      },
+      "publisher": {
+            "@type": "Organization",
+            "name": "IBPROM Corp",
+            "url": "https://josephsoares.com/"
+      },
+      "inLanguage": "en-US"
+}</script>
+<!-- Apollo.io website visitor tracking -->
+<script>function initApollo(){var n=Math.random().toString(36).substring(7),o=document.createElement("script");
+o.src="https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache="+n,o.async=!0,o.defer=!0,
+o.onload=function(){window.trackingFunctions.onLoad({appId:"69b933d5574de0002181290e"})},
+document.head.appendChild(o)}initApollo();</script>
+<!-- Mobile nav styles moved to /pages.css (2026-08-19) -->
+<!-- Dropdown styles moved to /pages.css (2026-08-19) -->
+<link href="/pages.css" rel="stylesheet"/>
+<link href="/site.css" rel="stylesheet"/>
+</head>
+<body>
+<!-- LANG BAR -->
+<div class="lang-bar">
+<div class="lang-bar-left">
+<a aria-label="LinkedIn" class="social-link" href="https://www.linkedin.com/in/soaresjoseph/" rel="noopener noreferrer" target="_blank">
+<svg class="social-icon" fill="currentColor" viewbox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+</a>
+<a aria-label="X (Twitter)" class="social-link" href="https://x.com/JosephSoares" rel="noopener noreferrer" target="_blank">
+<svg class="social-icon" fill="currentColor" viewbox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.514l-5.106-6.694-5.848 6.694h-3.308l7.73-8.835L.424 2.25h6.679l4.632 6.124L17.77 2.25h.474zm-1.161 17.52h1.833L7.084 4.126H5.117l12.926 15.644z"></path></svg>
+</a>
+<a aria-label="YouTube" class="social-link" href="https://www.youtube.com/@corridorintelligence?sub_confirmation=1" rel="noopener noreferrer" target="_blank">
+<svg class="social-icon" fill="currentColor" viewbox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path></svg>
+</a>
+<a aria-label="Instagram" class="social-link" href="https://www.instagram.com/soaresjoseph/" rel="noopener noreferrer" target="_blank">
+<svg class="social-icon" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"></path></svg>
+</a>
+</div>
+<div class="lang-bar-right">
+<a class="btn-subscribe" data-fr="S’abonner" href="/subscribe.html">S’abonner</a>
+</div>
+</div>
+<!-- NAV (standard unified nav) -->
+<nav>
+<div class="wrap">
+<a class="brand" href="/index.html" style="text-decoration:none;color:inherit">Joseph <span>Soares</span></a>
+<button aria-label="Menu" class="menutoggle" onclick="this.closest('nav').querySelector('.navlinks').classList.toggle('open')"><span></span><span></span><span></span></button>
+<div class="navlinks" translate="no"><div class="navdrop"><a href="/intelligence.html">Intelligence</a><div class="navdrop-menu"><a href="/brief/">Breffage Corridor</a><a href="/dispatch.html">Dépêches</a><a href="/corridor-files.html">Dossiers</a><a href="/brief/index-dashboard.html">Index</a><a href="/issues-focus.html">Dossiers thématiques</a></div></div><a href="/podcast.html">Balado</a><a href="/writing.html">Écrits</a><a href="/conferences.html">Conférences</a><a href="/media-fr.html">Médias</a><a href="/livre.html">Livre</a><a class="cta" href="/abonnement.html">S’abonner</a></div>
+</div>
+</nav>
+<!-- ELECTION STRIP - time-limited. DELETE this whole block after 5 Oct 2026. -->
+<style>
+  .qcstrip{display:block;background:#D4AF37;color:#072244;text-decoration:none;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.11em;font-size:12px;font-weight:500;text-align:center;padding:11px 16px;line-height:1.45}
+  .qcstrip:hover{background:#E6C860}
+  .qcstrip b{font-weight:600}
+  .qcstrip .sep{opacity:.55;padding:0 6px}
+  @media(max-width:560px){.qcstrip{font-size:11px;letter-spacing:.08em;padding:10px 12px}.qcstrip .hide-s{display:none}}
+</style>
+<a class="qcstrip" href="/quebec2026/index-en.html" translate="no"><b>Québec 2026</b><span class="sep">·</span>Daily seat projection<span class="sep hide-s">·</span><span class="hide-s">Projection quotidienne</span><span class="sep">·</span>5 Oct →</a>
+<!-- /ELECTION STRIP -->
+<!-- HERO -->
+<section class="hero">
+<div class="hero-content">
+<span class="hero-label" data-fr="Le balado">Le balado</span>
+<h1>Corridor Intelligence</h1>
+<p data-fr="Vous avez bâti quelque chose de réel. Les décisions qui vous ont mené ici ne figuraient dans aucun manuel. Ce balado existe parce que ces parcours méritent plus qu’une publication LinkedIn — et que les dirigeants qui les ont vécus méritent une conversation à la hauteur de ce qu’ils ont accompli.">Vous avez bâti quelque chose de concret. Les décisions qui vous ont mené jusqu’ici ne figuraient dans aucun manuel. Ce balado existe parce que ces histoires méritent mieux qu’une simple publication sur LinkedIn — et que les leaders qui les ont vécues méritent une conversation à la hauteur de ce qu’ils ont accompli.</p>
+<a class="hero-cta" data-fr="Devenez invité de Corridor Intelligence →" href="#apply">Devenez invité de Corridor Intelligence →</a>
+<div></div>
+</div>
+</section>
+<!-- LATEST EPISODES -->
+<section id="episodes" style="background: var(--cream); padding: 60px 20px;">
+<div class="container">
+<span class="section-label" data-fr="Épisodes récents">Derniers épisodes</span>
+<h2 data-fr="Corridor Intelligence — le balado">Corridor Intelligence — Le balado</h2>
+<p class="section-intro" data-fr="Analyse géopolitique et renseignement stratégique par Joseph Soares. De nouveaux épisodes chaque semaine.">Analyse géopolitique et renseignement stratégique par Joseph Soares. De nouveaux épisodes chaque semaine.</p>
+<div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap:24px; margin-top:32px;">
+<!-- AUTOMATION_INSERT_POINT -->
+<!-- Dispatch: The 13-Month Swing (Sep 3 2026) -->
+<div style="background:var(--white); border-radius:8px; overflow:hidden; border:1px solid var(--border-light); box-shadow:0 2px 12px rgba(0,0,0,0.06);">
+<div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden;">
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" data-src="https://www.youtube-nocookie.com/embed/czgUBzWKB1E?rel=0&amp;modestbranding=1" loading="lazy" style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;"></iframe>
+</div>
+<div style="padding:20px;">
+<div data-fr="3 septembre 2026 · Dépêche" style="font-size:0.75rem; font-weight:600; color:var(--gold); letter-spacing:1px; text-transform:uppercase; margin-bottom:8px;">3 septembre 2026 · Dossier</div>
+<h3 data-fr="Le basculement de treize mois : pourquoi la politique québécoise est plus volatile qu’on le croit" style="font-size:1.1rem; color:var(--navy); margin-bottom:8px; line-height:1.3;">Le revirement en 13 mois : pourquoi la politique québécoise est plus instable que vous ne le pensez</h3>
+<p data-fr="Une course à trois est devenue un raz-de-marée en treize mois, dans la même circonscription québécoise, sous les mêmes règles. Chaque chiffre provient directement d’Élections Canada." style="font-size:0.88rem; color:var(--text-mid); line-height:1.5;">Une course à trois qui s’annonçait serrée s’est transformée en victoire écrasante en treize mois, dans la même circonscription québécoise, selon les mêmes règles. Toutes les données proviennent directement d’Élections Canada.</p>
+</div>
+</div>
+<!-- Dispatch: The $131.2B Bet (Aug 28 2026) -->
+<div style="background:var(--white); border-radius:8px; overflow:hidden; border:1px solid var(--border-light); box-shadow:0 2px 12px rgba(0,0,0,0.06);">
+<div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden;">
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" data-src="https://www.youtube-nocookie.com/embed/CVcOLs3EWLc?rel=0&amp;modestbranding=1" loading="lazy" style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;"></iframe>
+</div>
+<div style="padding:20px;">
+<div data-fr="28 août 2026 · Dépêche" style="font-size:0.75rem; font-weight:600; color:var(--gold); letter-spacing:1px; text-transform:uppercase; margin-bottom:8px;">28 août 2026 · Dossier</div>
+<h3 data-fr="Le pari de 131,2 G$ : pourquoi l’avenir n’est pas celui que vous croyez" style="font-size:1.1rem; color:var(--navy); margin-bottom:8px; line-height:1.3;">Le pari de 131,2 milliards de dollars : pourquoi l’avenir n’est pas ce que vous croyez</h3>
+<p data-fr="Cinq navires ont franchi le détroit d’Ormuz mardi, contre une moyenne de quinze sur dix jours — et le brut a tout de même reculé. Les signaux de prix se sont assouplis pendant que les faits physiques et les échéances, eux, se durcissaient." style="font-size:0.88rem; color:var(--text-mid); line-height:1.5;">Cinq navires ont transité par le détroit d’Ormuz mardi, contre une moyenne de quinze sur dix jours — et le prix du brut a tout de même chuté. Les signaux de prix se sont adoucis tandis que les réalités physiques et calendaires se sont durcies.</p>
+</div>
+</div>
+<!-- Dispatch: The Plumbing Repriced (Aug 21 2026) -->
+<div style="background:var(--white); border-radius:8px; overflow:hidden; border:1px solid var(--border-light); box-shadow:0 2px 12px rgba(0,0,0,0.06);">
+<div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden;">
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" data-src="https://www.youtube-nocookie.com/embed/ANsvaudOwsA?rel=0&amp;modestbranding=1" loading="lazy" style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;"></iframe>
+</div>
+<div style="padding:20px;">
+<div data-fr="21 août 2026 · Dépêche" style="font-size:0.75rem; font-weight:600; color:var(--gold); letter-spacing:1px; text-transform:uppercase; margin-bottom:8px;">21 août 2026 · Dépêche</div>
+<h3 data-fr="Ce que font les gouvernements quand ils ne peuvent pas régler le vrai problème." style="font-size:1.1rem; color:var(--navy); margin-bottom:8px; line-height:1.3;">Ce que font les gouvernements lorsqu’ils ne peuvent pas régler le vrai problème.</h3>
+<p data-fr="Washington a suspendu un droit de douane de 50 % sur les produits canadiens quelques heures avant son entrée en vigueur, et a parlé d’une entente. Ottawa n’a confirmé qu’un report. Rien n’a été publié de part et d’autre." style="font-size:0.88rem; color:var(--text-mid); line-height:1.5;">Washington a suspendu un droit de douane de 50 % sur les produits canadiens quelques heures avant son entrée en vigueur, et a qualifié cela d’entente. Ottawa a confirmé qu’il ne s’agissait que d’un report. Aucune information n’a été publiée par l’une ou l’autre des parties.</p>
+</div>
+</div>
+<!-- Dispatch: One Reserve, Two Wars (Aug 6 2026) -->
+<div style="background:var(--white); border-radius:8px; overflow:hidden; border:1px solid var(--border-light); box-shadow:0 2px 12px rgba(0,0,0,0.06);">
+<div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden;">
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" data-src="https://www.youtube-nocookie.com/embed/PAMO0G_UF1o?rel=0&amp;modestbranding=1" loading="lazy" style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;"></iframe>
+</div>
+<div style="padding:20px;">
+<div data-fr="6 août 2026 · Dépêche" style="font-size:0.75rem; font-weight:600; color:var(--gold); letter-spacing:1px; text-transform:uppercase; margin-bottom:8px;">6 août 2026 · Dépêche</div>
+<h3 data-fr="28 missiles, zéro défense : le schéma qui épuise les réserves militaires américaines" style="font-size:1.1rem; color:var(--navy); margin-bottom:8px; line-height:1.3;">28 missiles, aucune défense : la tendance qui épuise les réserves militaires américaines</h3>
+<p data-fr="Vingt-huit missiles ont frappé l’Ukraine mercredi soir ; aucun n’a été intercepté. Quarante-huit heures plus tard, Washington disait à Kyiv qu’il n’y avait plus d’intercepteurs Patriot — le Moyen-Orient puise dans la même réserve." style="font-size:0.88rem; color:var(--text-mid); line-height:1.5;">Vingt-huit missiles ont frappé l’Ukraine mercredi soir. Aucun n’a été intercepté. Quarante-huit heures plus tard, Washington a informé Kiev qu’il n’avait plus d’intercepteurs Patriot — car le Moyen-Orient puise dans la même réserve.</p>
+</div>
+</div>
+<!-- Dispatch: Five-Twenty (Jul 31 2026) -->
+<div style="background:var(--white); border-radius:8px; overflow:hidden; border:1px solid var(--border-light); box-shadow:0 2px 12px rgba(0,0,0,0.06);">
+<div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden;">
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" data-src="https://www.youtube-nocookie.com/embed/Mn4SuQUus9Y?rel=0&amp;modestbranding=1" loading="lazy" style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;"></iframe>
+</div>
+<div style="padding:20px;">
+<div data-fr="31 juillet 2026 · Dépêche" style="font-size:0.75rem; font-weight:600; color:var(--gold); letter-spacing:1px; text-transform:uppercase; margin-bottom:8px;">31 juillet 2026 · Dépêche</div>
+<h3 data-fr="Cinq-vingt : la Fed vient de déjouer deux paris en 48 heures." style="font-size:1.1rem; color:var(--navy); margin-bottom:8px; line-height:1.3;">Cinq-vingt : la Fed vient de déjouer deux paris en 48 heures.</h3>
+<p data-fr="Le 30 ans américain a atteint 5,20 % — un sommet en 19 ans — et presque personne n’en a fait la une. Voici ce qu’un taux long au-dessus de 5 % réévalue." style="font-size:0.88rem; color:var(--text-mid); line-height:1.5;">Le rendement des obligations du Trésor à 30 ans a atteint 5,20 % — son plus haut niveau depuis 19 ans — et presque personne n’en a fait la une. Voici ce qu’implique un taux à long terme supérieur à cinq.</p>
+</div>
+</div>
+<!-- Latest: Pillar 03 — The Decision That Saved Canada -->
+<div style="background:var(--white); border-radius:8px; overflow:hidden; border:1px solid var(--border-light); box-shadow:0 2px 12px rgba(0,0,0,0.06);">
+<div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden;">
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" data-src="https://www.youtube-nocookie.com/embed/h31DI8N6_Gg?rel=0&amp;modestbranding=1" loading="lazy" style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;"></iframe>
+</div>
+<div style="padding:20px;">
+<div data-fr="30 juillet 2026 · Prise de décision" style="font-size:0.75rem; font-weight:600; color:var(--gold); letter-spacing:1px; text-transform:uppercase; margin-bottom:8px;">30 juillet 2026 · Prise de décision</div>
+<h3 data-fr="La décision qui a sauvé le Canada en 2008 a été prise en 1991" style="font-size:1.1rem; color:var(--navy); margin-bottom:8px; line-height:1.3;">La décision qui a sauvé le Canada en 2008 a été prise en 1991</h3>
+<p data-fr="Comment les gouvernements décident réellement sous pression — la réponse du Canada à la crise comme étude de cas, chaque affirmation appuyée sur les documents originaux." style="font-size:0.88rem; color:var(--text-mid); line-height:1.5;">Comment les gouvernements prennent réellement leurs décisions sous pression — la réponse du Canada à la crise comme exemple concret, chaque affirmation étayée par les documents originaux.</p>
+</div>
+</div>
+<!-- Dispatch #1: Two Gates, One Week -->
+<div style="background:var(--white); border-radius:8px; overflow:hidden; border:1px solid var(--border-light); box-shadow:0 2px 12px rgba(0,0,0,0.06);">
+<div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden;">
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" data-src="https://www.youtube-nocookie.com/embed/A-RQ9kewK9c?rel=0&amp;modestbranding=1" loading="lazy" style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;"></iframe>
+</div>
+<div style="padding:20px;">
+<div data-fr="24 juillet 2026 · Dépêche" style="font-size:0.75rem; font-weight:600; color:var(--gold); letter-spacing:1px; text-transform:uppercase; margin-bottom:8px;">24 juillet 2026 · Dépêche</div>
+<h3 data-fr="« Deux portes, une semaine » — la Dépêche" style="font-size:1.1rem; color:var(--navy); margin-bottom:8px; line-height:1.3;">« Deux portes, une semaine »</h3>
+<p data-fr="La première Dépêche hebdomadaire de Corridor Intelligence — les mouvements les plus déterminants de la semaine : pouvoir, capital, ressources." style="font-size:0.88rem; color:var(--text-mid); line-height:1.5;">Le premier « Corridor Dispatch » hebdomadaire — les mouvements les plus marquants de la semaine en matière de pouvoir, de capital et de ressources.</p>
+</div>
+</div>
+<!-- Latest: Iran Deal Framework Emerges -->
+<div style="background:var(--white); border-radius:8px; overflow:hidden; border:1px solid var(--border-light); box-shadow:0 2px 12px rgba(0,0,0,0.06);">
+<div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden;">
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" data-src="https://www.youtube-nocookie.com/embed/fQZxxkZi8Bo?rel=0&amp;modestbranding=1" loading="lazy" style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;"></iframe>
+</div>
+<div style="padding:20px;">
+<div data-fr="18 avril 2026 · Ormuz" style="font-size:0.75rem; font-weight:600; color:var(--gold); letter-spacing:1px; text-transform:uppercase; margin-bottom:8px;">18 avril 2026 · Ormuz</div>
+<h3 data-fr="Virage historique au Moyen-Orient : un cadre d’accord avec l’Iran émerge après le blocus naval américain" style="font-size:1.1rem; color:var(--navy); margin-bottom:8px; line-height:1.3;">Changement historique au Moyen-Orient : un cadre d’entente avec l’Iran voit le jour après le blocus de la Marine américaine</h3>
+<p data-fr="Le blocus a tenu. Les négociations ont redémarré. Ce qu’il faut retenir pour les décideurs — et ce qui vient ensuite." style="font-size:0.88rem; color:var(--text-mid); line-height:1.5;">Le blocus a tenu. Les pourparlers ont repris. Ce que les décideurs doivent en retenir — et ce qui va suivre.</p>
+</div>
+</div>
+<!-- Iran Ports Sealed -->
+<div style="background:var(--white); border-radius:8px; overflow:hidden; border:1px solid var(--border-light); box-shadow:0 2px 12px rgba(0,0,0,0.06);">
+<div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden;">
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" data-src="https://www.youtube-nocookie.com/embed/8lt0DNtRYbQ?rel=0&amp;modestbranding=1" loading="lazy" style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;"></iframe>
+</div>
+<div style="padding:20px;">
+<div data-fr="18 avril 2026 · Énergie" style="font-size:0.75rem; font-weight:600; color:var(--gold); letter-spacing:1px; text-transform:uppercase; margin-bottom:8px;">18 avril 2026 · Énergie</div>
+<h3 data-fr="Les ports iraniens scellés : ce qui se passe quand vous coupez 90 % du commerce" style="font-size:1.1rem; color:var(--navy); margin-bottom:8px; line-height:1.3;">Les ports iraniens fermés : que se passe-t-il lorsque 90 % des échanges commerciaux sont interrompus?</h3>
+<p data-fr="Les circuits commerciaux de l’Iran se tarissent. Un scénario d’étranglement que les marchés n’ont pas encore intégré." style="font-size:0.88rem; color:var(--text-mid); line-height:1.5;">Les voies commerciales de l’Iran se tarissent. Un scénario de goulot d’étranglement que les marchés n’ont pas encore pris en compte.</p>
+</div>
+</div>
+<!-- Europe Missed This Moment -->
+<div style="background:var(--white); border-radius:8px; overflow:hidden; border:1px solid var(--border-light); box-shadow:0 2px 12px rgba(0,0,0,0.06);">
+<div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden;">
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" data-src="https://www.youtube-nocookie.com/embed/EzwYpJNaZg0?rel=0&amp;modestbranding=1" loading="lazy" style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;"></iframe>
+</div>
+<div style="padding:20px;">
+<div data-fr="18 avril 2026 · Europe" style="font-size:0.75rem; font-weight:600; color:var(--gold); letter-spacing:1px; text-transform:uppercase; margin-bottom:8px;">18 avril 2026 · Europe</div>
+<h3 data-fr="Pourquoi l’Europe a raté ce moment sur l’Iran" style="font-size:1.1rem; color:var(--navy); margin-bottom:8px; line-height:1.3;">Pourquoi l’Europe a raté le coche avec l’Iran</h3>
+<p data-fr="Bruxelles a choisi le silence. Washington a agi. La leçon stratégique que les dirigeants européens ne peuvent plus ignorer." style="font-size:0.88rem; color:var(--text-mid); line-height:1.5;">Bruxelles a choisi le silence. Washington a agi. La leçon stratégique que les dirigeants européens ne peuvent plus ignorer.</p>
+</div>
+</div>
+<!-- Trump Walks Away / Blockade Begins -->
+<div style="background:var(--white); border-radius:8px; overflow:hidden; border:1px solid var(--border-light); box-shadow:0 2px 12px rgba(0,0,0,0.06);">
+<div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden;">
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" data-src="https://www.youtube-nocookie.com/embed/IMUfpnAbMlg?rel=0&amp;modestbranding=1" loading="lazy" style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;"></iframe>
+</div>
+<div style="padding:20px;">
+<div data-fr="18 avril 2026 · Géopolitique" style="font-size:0.75rem; font-weight:600; color:var(--gold); letter-spacing:1px; text-transform:uppercase; margin-bottom:8px;">18 avril 2026 · Géopolitique</div>
+<h3 data-fr="Trump quitte les négociations avec l’Iran — le blocus commence maintenant" style="font-size:1.1rem; color:var(--navy); margin-bottom:8px; line-height:1.3;">Trump se retire des pourparlers avec l’Iran — le blocus commence MAINTENANT</h3>
+<p data-fr="Vingt et une heures de négociations à Islamabad, puis l’ordre : blocus complet. Pourquoi ce moment fait pivoter la politique américaine au Moyen-Orient." style="font-size:0.88rem; color:var(--text-mid); line-height:1.5;">Vingt et une heures de négociations à Islamabad, puis l’ordre : blocus total. Pourquoi ce moment marque un tournant dans la politique américaine au Moyen-Orient.</p>
+</div>
+</div>
+</div>
+<div style="text-align:center; margin-top:32px;">
+<a data-fr="S’abonner sur YouTube →" href="https://youtube.com/@corridorintelligence" onmouseout="this.style.background='var(--gold)';this.style.transform='none'" onmouseover="this.style.background='var(--gold-light)';this.style.transform='translateY(-2px)'" rel="noopener" style="display:inline-flex; align-items:center; gap:8px; padding:12px 28px; background:var(--gold); color:#0E3A70; font-family:'Oswald',sans-serif; text-transform:uppercase; letter-spacing:0.14em; font-weight:600; font-size:0.9rem; text-decoration:none; border-radius:2px; transition:all 0.3s;" target="_blank">Abonnez-vous sur YouTube →</a>
+</div>
+</div>
+</section>
+<!-- ABOUT THE SHOW -->
+<section class="about-section">
+<div class="container">
+<span class="section-label" data-fr="À propos de l’émission">À propos de l’émission</span>
+<h2 data-fr="La conversation que vous n’avez jamais l’occasion d’avoir">La conversation que vous n’avez jamais l’occasion d’avoir</h2>
+<p class="section-intro" data-fr="La plupart des gens autour de vous ne mesurent pas ce qu’il a fallu pour bâtir ce que vous avez bâti. Les risques que vous avez absorbés seul. Les décisions que vous avez prises quand tout le monde autour de vous devinait. Cet espace est fait pour cette conversation — avec un animateur qui a vu se prendre des décisions aux enjeux nationaux, et non théoriques.">La plupart des gens dans votre entourage ne comprennent pas ce qu’il vous a fallu pour bâtir ce que vous avez bâti. Les risques que vous avez assumés seul. Les décisions que vous avez prises alors que tout le monde autour de vous n’en savait rien. Cet espace est dédié à cette conversation — avec un animateur qui a siégé dans des salles où les enjeux étaient nationaux, et non théoriques.</p>
+<div class="about-grid">
+<div class="about-card">
+<h3 data-fr="Un pair de l’autre côté de la table">Un pair de l’autre côté de la table</h3>
+<p data-fr="Votre animateur a servi au Cabinet du premier ministre du Canada pendant la crise financière de 2008 et a été chef de cabinet au Sénat du Canada pendant la pandémie de 2020. Il a été publié dans Forbes, Newsweek, le National Post, le Globe and Mail et des médias du monde entier. Il ne pose pas de questions de surface — il pose celles que seule une personne mise à l’épreuve sait poser.">Votre animateur a travaillé au Cabinet du premier ministre du Canada pendant la crise financière de 2008 et a occupé le poste de chef de cabinet au Sénat du Canada pendant la pandémie de 2020. Il a fait l’objet d’articles dans Forbes, Newsweek, le National Post, le Globe and Mail et dans des médias du monde entier. Il ne pose pas de questions superficielles — il pose celles que seul quelqu’un qui a été mis à l’épreuve saurait poser.</p>
+</div>
+<div class="about-card">
+<h3 data-fr="Votre parcours, raconté avec gravité">Votre histoire, racontée avec sérieux</h3>
+<p data-fr="Pas de montage de faits saillants. Pas d’argumentaire préparé. Une conversation franche, entre pairs, sur les décisions qui ont réellement façonné votre carrière — celles qui vous ont empêché de dormir et qui ont fait de vous qui vous êtes.">Pas de moments forts mis en scène. Pas de discours préparés. Il s’agit d’une conversation franche, d’égal à égal, sur les décisions qui ont réellement façonné votre carrière — celles qui vous ont tenu éveillé la nuit et qui ont fait de vous ce que vous êtes.</p>
+</div>
+<div class="about-card">
+<h3 data-fr="Un auditoire qui agit">Un public qui passe à l’action</h3>
+<p data-fr="Nos auditeurs sont des décideurs du monde des affaires, du gouvernement et de la vie publique — des gens qui entendent un récit et en font quelque chose. Vos mots atteignent des personnes qui comptent.">Nos auditeurs sont des décideurs issus du monde des affaires, du gouvernement et de la vie publique — le genre de personnes qui, lorsqu’elles entendent une histoire, agissent en conséquence. Vos paroles rejoignent des personnes qui comptent.</p>
+</div>
+<div class="about-card">
+<h3 data-fr="Une portée multiplateforme">Une portée multiplateforme</h3>
+<p data-fr="Chaque épisode produit de 10 à 15 courts extraits diffusés sur LinkedIn, YouTube, Instagram, TikTok et X. Une conversation devient un actif d’autorité permanent sur chaque grande plateforme.">Chaque épisode donne lieu à 10 à 15 extraits courts diffusés sur LinkedIn, YouTube, Instagram, TikTok et X. Une seule conversation devient un atout de référence permanent sur toutes les principales plateformes.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- FORMAT -->
+<section>
+<div class="container">
+<span class="section-label" data-fr="Format de l’épisode">Format des épisodes</span>
+<h2 data-fr="Simple et respectueux de votre temps">Simple et respectueux de votre temps</h2>
+<p class="section-intro" data-fr="Nous avons conçu le format pour des dirigeants occupés. Pas de production sur plusieurs jours. Pas de devoirs. Vous vous présentez, vous avez une excellente conversation, et nous nous occupons du reste.">Nous avons conçu ce format pour les dirigeants très occupés. Pas de tournages de plusieurs jours. Pas de travail préparatoire. Venez, ayez une conversation enrichissante, et nous nous occupons du reste.</p>
+<div class="format-grid">
+<div class="format-item">
+<div class="format-number">30 à 45</div>
+<div class="format-label" data-fr="Minutes">minutes</div>
+<div class="format-desc" data-fr="Durée de l’entrevue">Durée de l’entrevue</div>
+</div>
+<div class="format-item">
+<div class="format-number">0</div>
+<div class="format-label" data-fr="Préparation requise">Préparation requise</div>
+<div class="format-desc" data-fr="Appel préparatoire facultatif de 10 minutes">Pré-appel facultatif de 10 minutes</div>
+</div>
+<div class="format-item">
+<div class="format-number">10 à 15</div>
+<div class="format-label" data-fr="Extraits produits">Extraits produits</div>
+<div class="format-desc" data-fr="Par épisode, toutes plateformes">Par épisode, toutes plateformes confondues</div>
+</div>
+<div class="format-item">
+<div class="format-number" data-fr="100 %">100</div>
+<div class="format-label" data-fr="À distance">À distance</div>
+<div class="format-desc" data-fr="Enregistrement par visioconférence">Enregistrement par appel vidéo</div>
+</div>
+<div class="format-item">
+<div class="format-number" data-fr="Complète">Entièrement</div>
+<div class="format-label" data-fr="Production">Production</div>
+<div class="format-desc" data-fr="Nous montons, produisons et diffusons">Nous montons, produisons et diffusons</div>
+</div>
+<div class="format-item">
+<div class="format-number">∞</div>
+<div class="format-label" data-fr="Pérenne">Intemporel</div>
+<div class="format-desc" data-fr="Votre épisode reste en ligne pour toujours">Votre épisode restera à jamais</div>
+</div>
+</div>
+</div>
+</section>
+<!-- TOPICS WE EXPLORE -->
+<section class="topics-section">
+<div class="container">
+<span class="section-label" data-fr="Ce que nous explorons">Ce que nous explorons</span>
+<h2 data-fr="Les conversations qui comptent">Les conversations qui comptent</h2>
+<p class="section-intro" data-fr="Chaque épisode tourne autour de la même question : quand la pression était à son comble, qu’avez-vous fait — et qu’en avez-vous appris ?">Chaque épisode s’articule autour de la même question : au moment où la pression était à son comble, qu’avez-vous fait — et qu’est-ce que cela vous a appris?</p>
+<div class="topics-grid">
+<div class="topic-tag" data-fr="La décision qui a tout changé">La décision qui a tout changé</div>
+<div class="topic-tag" data-fr="Bâtir une entreprise à partir de rien">Bâtir une entreprise à partir de rien</div>
+<div class="topic-tag" data-fr="Diriger dans la crise et l’incertitude">Diriger en période de crise et d’incertitude</div>
+<div class="topic-tag" data-fr="Confiance, réputation et influence méritée">La confiance, la réputation et l’influence acquise</div>
+<div class="topic-tag" data-fr="La transaction qui a failli vous briser">La transaction qui a failli vous briser</div>
+<div class="topic-tag" data-fr="Relève, héritage et ce qui vient ensuite">La relève, l’héritage et ce qui vient ensuite</div>
+<div class="topic-tag" data-fr="Les dures leçons de l’échec et du redressement">Les dures leçons tirées de l’échec et du redressement</div>
+<div class="topic-tag" data-fr="Quand tout dépend d’une seule décision">Quand tout dépend d’un seul appel</div>
+</div>
+</div>
+</section>
+<!-- YOUR HOST -->
+<section class="host-section">
+<div class="container">
+<span class="section-label" data-fr="Votre animateur">Votre animateur</span>
+<h2>Joseph Soares</h2>
+<p class="section-intro" data-fr="Joseph Soares a servi au Cabinet du premier ministre du Canada pendant la crise financière de 2008 et a été chef de cabinet au Sénat du Canada pendant la pandémie de 2020. Il a été publié dans Forbes, Newsweek, le National Post, le Globe and Mail et des médias du monde entier. Il conseille aujourd’hui un nombre restreint de dirigeants qui veulent un esprit chevronné à leurs côtés quand les enjeux sont élevés.">Joseph a travaillé au Cabinet du premier ministre du Canada pendant la crise financière de 2008. Il a également occupé le poste de chef de cabinet au Sénat du Canada pendant la pandémie de 2020. Il a fait l’objet d’articles dans Forbes, Newsweek, le National Post, le Globe and Mail et d’autres médias à l’échelle mondiale. Il conseille aujourd’hui un groupe restreint de dirigeants qui souhaitent pouvoir compter sur l’expertise d’un expert chevronné lorsque les enjeux sont importants.</p>
+<p class="section-intro" data-fr="Il a créé ce balado parce que les leçons les plus précieuses en affaires sont rarement partagées publiquement — et que les dirigeants qui les ont acquises méritent une tribune qui traite leur parcours avec la gravité qu’il mérite." style="margin-top: -24px;">Il a créé ce balado parce que les leçons les plus précieuses en affaires sont rarement partagées publiquement — et que les dirigeants qui les ont acquises méritent une tribune qui traite leurs récits avec le sérieux qu’ils méritent.</p>
+<div class="host-credentials">
+<div class="credential" data-fr="&lt;span class='credential-icon'&gt;★&lt;/span&gt; Cabinet du premier ministre (crise financière de 2008)"><span class="credential-icon">★</span> A occupé des fonctions au sein du Cabinet du premier ministre (crise de 2008)</div>
+<div class="credential" data-fr="&lt;span class='credential-icon'&gt;★&lt;/span&gt; Chef de cabinet, Sénat du Canada (pandémie de 2020)"><span class="credential-icon">★</span> Chef de cabinet du Sénat du Canada (COVID-19)</div>
+<div class="credential" data-fr="&lt;span class='credential-icon'&gt;★&lt;/span&gt; Publié dans Forbes et Newsweek"><span class="credential-icon">★</span> Publié dans Forbes et Newsweek</div>
+</div>
+</div>
+</section>
+<!-- GUEST BENEFITS -->
+<section>
+<div class="container">
+<span class="section-label" data-fr="Pour les invités potentiels">À l’intention des invités potentiels</span>
+<h2 data-fr="Pourquoi les dirigeants disent oui">Pourquoi les leaders acceptent-ils?</h2>
+<p class="section-intro" data-fr="Ce n’est pas un argumentaire de vente. C’est une invitation à partager votre parcours avec un auditoire qui gagnera réellement à l’entendre.">Ce n’est pas un argumentaire de vente. C’est une invitation à partager votre histoire avec un public qui tirera un réel bénéfice à l’entendre.</p>
+<ul class="benefits-list">
+<li>
+<span class="benefit-check">✓</span>
+<div class="benefit-text">
+<h4 data-fr="Racontez votre parcours à un auditoire qualifié">Partagez votre histoire avec un auditoire ciblé</h4>
+<p data-fr="Nos auditeurs sont des décideurs du monde des affaires, du gouvernement et de la vie publique — des gens qui agissent sur les idées au lieu de simplement les consommer.">Nos auditeurs sont des décideurs issus du monde des affaires, du gouvernement et de la vie publique — des gens qui mettent les idées en pratique, plutôt que de simplement les consommer.</p>
+</div>
+</li>
+<li>
+<span class="benefit-check">✓</span>
+<div class="benefit-text">
+<h4 data-fr="Une conversation entre pairs, pas une séance de questions-réponses superficielle">Une conversation entre pairs, pas une simple séance de questions-réponses superficielle</h4>
+<p data-fr="Joseph a exercé aux plus hauts niveaux du gouvernement et des affaires. Il pose les questions que les autres intervieweurs ne savent pas poser.">Joseph a évolué aux plus hauts échelons du gouvernement et du monde des affaires. Il pose les questions que les autres intervieweurs ne savent pas poser.</p>
+</div>
+</li>
+<li>
+<span class="benefit-check">✓</span>
+<div class="benefit-text">
+<h4 data-fr="Une production professionnelle, aucun effort de votre part">Une production professionnelle, sans effort de votre part</h4>
+<p data-fr="Nous nous occupons de toute la production, du montage et de la diffusion. Vous vous présentez, vous avez une conversation, et vous recevez votre épisode terminé ainsi que les extraits.">Nous nous occupons de toute la production, du montage et de la distribution. Vous n’avez qu’à vous présenter, avoir une conversation, puis vous recevrez votre épisode finalisé ainsi que des extraits.</p>
+</div>
+</li>
+<li>
+<span class="benefit-check">✓</span>
+<div class="benefit-text">
+<h4 data-fr="Diffusion et amplification multiplateformes">Diffusion et amplification multiplateformes</h4>
+<p data-fr="Chaque épisode est diffusé sur Apple Podcasts, Spotify, YouTube et toutes les grandes plateformes — plus 10 à 15 courts extraits sur LinkedIn, Instagram, TikTok et X.">Chaque épisode est diffusé sur Apple Podcasts, Spotify, YouTube et toutes les principales plateformes — ainsi que 10 à 15 extraits courts sur LinkedIn, Instagram, TikTok et X.</p>
+</div>
+</li>
+<li>
+<span class="benefit-check">✓</span>
+<div class="benefit-text">
+<h4 data-fr="Un actif d’autorité permanent">Un atout d’autorité durable</h4>
+<p data-fr="Votre épisode demeure en ligne pour toujours, sous forme de contenu consultable et partageable qui renforce votre autorité et élargit votre portée longtemps après l’enregistrement.">Votre épisode reste accessible indéfiniment sous forme de contenu consultable et partageable qui renforce votre crédibilité et élargit votre portée bien au-delà de l’enregistrement.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<!-- GUEST APPLICATION -->
+<section class="apply-section" id="apply">
+<div class="container">
+<span class="section-label" data-fr="Devenir invité">Devenez invité</span>
+<h2 data-fr="Cette conversation est-elle pour vous ?">Cette conversation vous intéresse-t-elle?</h2>
+<p class="apply-intro" data-fr="Nous ne choisissons pas nos invités selon le nombre d’abonnés ou la notoriété médiatique. Nous invitons des dirigeants réellement mis à l’épreuve — dont les décisions ont eu un poids réel. Si c’est votre parcours, parlez-nous-en.">Nous ne choisissons pas nos invités en fonction du nombre d’abonnés ou de leur présence dans les médias. Nous invitons des leaders qui ont fait leurs preuves — dont les décisions ont eu un poids réel. Si c’est votre cas, nous aimerions entendre votre histoire.</p>
+<form id="guest-application" novalidate="" style="max-width:640px; margin:8px auto 0; text-align:left;">
+<input aria-hidden="true" autocomplete="off" name="website" style="position:absolute; left:-9999px; width:1px; height:1px; opacity:0;" tabindex="-1" type="text"/>
+<div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:16px 20px;">
+<div style="display:flex; flex-direction:column;">
+<label data-fr="Nom" for="ga-name" style="font-family:'Oswald',sans-serif; text-transform:uppercase; letter-spacing:0.1em; font-size:0.72rem; color:var(--navy); margin-bottom:6px;">Nom</label>
+<input id="ga-name" name="name" required="" style="width:100%; padding:12px 14px; border:1px solid rgba(10,49,97,0.25); border-radius:4px; background:#fff; color:var(--navy); font-family:'EB Garamond',serif; font-size:1rem; box-sizing:border-box;" type="text"/>
+</div>
+<div style="display:flex; flex-direction:column;">
+<label data-fr="Courriel" for="ga-email" style="font-family:'Oswald',sans-serif; text-transform:uppercase; letter-spacing:0.1em; font-size:0.72rem; color:var(--navy); margin-bottom:6px;">Courriel</label>
+<input id="ga-email" name="email" required="" style="width:100%; padding:12px 14px; border:1px solid rgba(10,49,97,0.25); border-radius:4px; background:#fff; color:var(--navy); font-family:'EB Garamond',serif; font-size:1rem; box-sizing:border-box;" type="email"/>
+</div>
+<div style="display:flex; flex-direction:column;">
+<label data-fr="Rôle ou titre" for="ga-role" style="font-family:'Oswald',sans-serif; text-transform:uppercase; letter-spacing:0.1em; font-size:0.72rem; color:var(--navy); margin-bottom:6px;">Fonction ou titre</label>
+<input id="ga-role" name="role" style="width:100%; padding:12px 14px; border:1px solid rgba(10,49,97,0.25); border-radius:4px; background:#fff; color:var(--navy); font-family:'EB Garamond',serif; font-size:1rem; box-sizing:border-box;" type="text"/>
+</div>
+<div style="display:flex; flex-direction:column;">
+<label data-fr="Organisation" for="ga-org" style="font-family:'Oswald',sans-serif; text-transform:uppercase; letter-spacing:0.1em; font-size:0.72rem; color:var(--navy); margin-bottom:6px;">Organisation</label>
+<input id="ga-org" name="organization" style="width:100%; padding:12px 14px; border:1px solid rgba(10,49,97,0.25); border-radius:4px; background:#fff; color:var(--navy); font-family:'EB Garamond',serif; font-size:1rem; box-sizing:border-box;" type="text"/>
+</div>
+</div>
+<div style="display:flex; flex-direction:column; margin-top:16px;">
+<label data-fr="LinkedIn ou lien pertinent" for="ga-link" style="font-family:'Oswald',sans-serif; text-transform:uppercase; letter-spacing:0.1em; font-size:0.72rem; color:var(--navy); margin-bottom:6px;">LinkedIn ou un lien pertinent</label>
+<input id="ga-link" name="link" style="width:100%; padding:12px 14px; border:1px solid rgba(10,49,97,0.25); border-radius:4px; background:#fff; color:var(--navy); font-family:'EB Garamond',serif; font-size:1rem; box-sizing:border-box;" type="text"/>
+</div>
+<div style="display:flex; flex-direction:column; margin-top:16px;">
+<label data-fr="Pourquoi vous seriez un bon invité — et ce qui vous a mis à l’épreuve" for="ga-story" style="font-family:'Oswald',sans-serif; text-transform:uppercase; letter-spacing:0.1em; font-size:0.72rem; color:var(--navy); margin-bottom:6px;">Pourquoi vous feriez un excellent invité — et ce qui vous a mis à l’épreuve</label>
+<textarea id="ga-story" name="story" required="" rows="5" style="width:100%; padding:12px 14px; border:1px solid rgba(10,49,97,0.25); border-radius:4px; background:#fff; color:var(--navy); font-family:'EB Garamond',serif; font-size:1rem; box-sizing:border-box; resize:vertical;"></textarea>
+</div>
+<div style="margin-top:24px;">
+<button class="hero-cta" data-fr="Envoyer ma candidature" style="border:none; cursor:pointer;" type="submit">Soumettre la candidature</button>
+</div>
+<p data-fr="Vos coordonnées servent uniquement à évaluer votre candidature. Pas d’infolettre, pas de partage." style="font-family:'EB Garamond',serif; font-size:0.85rem; color:var(--text-mid); margin-top:14px;">Vos renseignements ne seront utilisés que pour l’évaluation de votre candidature. Aucune infolettre, aucun partage.</p>
+</form>
+<div id="guest-application-success" style="display:none; max-width:640px; margin:8px auto 0; padding:28px; background:#fff; border:1px solid rgba(212,175,55,0.4); border-radius:6px; text-align:left;">
+<h3 data-fr="Merci." style="font-family:'Oswald',sans-serif; color:var(--navy); margin:0 0 10px;">Merci.</h3>
+<p data-fr="Votre candidature nous est parvenue. Nous les lisons toutes et répondons lorsque le profil correspond." style="font-family:'EB Garamond',serif; color:var(--text-mid); margin:0; line-height:1.6;">Votre candidature a été reçue. Nous les lisons toutes et nous vous répondons si votre profil correspond à nos besoins.</p>
+</div>
+</div>
+<script>
+    (function(){
+        var f=document.getElementById('guest-application');
+        if(!f) return;
+        f.addEventListener('submit', function(e){
+            e.preventDefault();
+            var hp=f.elements['website']; if(hp && hp.value){ return; }
+            var btn=f.querySelector('button[type=submit]');
+            var g=function(n){ return f.elements[n] ? f.elements[n].value : ''; };
+            var payload={ name:g('name'), email:g('email'), role:g('role'), organization:g('organization'), link:g('link'), story:g('story'), source:'podcast.html — guest application', submitted_at:new Date().toISOString() };
+            if(btn){ btn.disabled=true; btn.textContent='Sending…'; }
+            fetch('https://hook.us2.make.com/eh1g1vsa6rdrfrg13o1lx6l8k18zyeme', { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(payload) })
+            .then(function(){ f.style.display='none'; var s=document.getElementById('guest-application-success'); if(s){ s.style.display='block'; s.scrollIntoView({behavior:'smooth', block:'center'}); } })
+            .catch(function(){ if(btn){ btn.disabled=false; btn.textContent='Submit application'; } alert('Something went wrong sending your application. Please try again in a moment.'); });
+        });
+    })();
+    </script>
+</section>
+<!-- CTA -->
+<section class="cta-section">
+<div class="container">
+<h2 data-fr="Votre parcours mérite cette conversation.">Votre parcours mérite cette conversation.</h2>
+<p data-fr="Nous recevons en entrevue un petit nombre de dirigeants réellement mis à l’épreuve. Si c’est votre parcours, parlez-nous-en.">Nous interviewons un petit nombre de leaders qui ont été véritablement mis à l’épreuve. Si c’est votre cas, racontez-nous votre histoire.</p>
+<div class="cta-buttons">
+<a class="hero-cta" data-fr="Devenez invité de Corridor Intelligence →" href="#apply">Soyez invité sur Corridor Intelligence →</a>
+</div>
+</div>
+</section>
+<!-- FOOTER (standard) -->
+<footer translate="no"><div class="wrap"><div class="disc"><div class="brand" style="font-size:15px;margin-bottom:10px">Joseph <span style="color:var(--gold)">Soares</span> &amp; Co.</div><span style="display:block;margin-top:10px;font-style:normal;font-size:14px;letter-spacing:.02em;opacity:.8">© 2026 Joseph Soares &amp; Co.</span></div><div class="soc"><a href="/livre.html">Livre</a><a href="/abonnement.html">S’abonner</a><a href="/appel.html">Planifier un appel</a><a href="/privacy.html" style="margin-left:22px">Confidentialité</a><a href="/terms.html">Conditions</a><a href="https://www.youtube.com/@LeCorridorIntelligence?sub_confirmation=1" style="margin-left:22px" title="Le Corridor Intelligence — chaîne française">YouTube (français)</a><a href="https://www.youtube.com/@corridorintelligence?sub_confirmation=1" title="Corridor Intelligence — English channel">YouTube (anglais)</a><a href="https://www.linkedin.com/in/soaresjoseph/">LinkedIn</a><a href="https://x.com/JosephSoares">X</a><a href="https://www.instagram.com/soaresjoseph/">Instagram</a></div></div></footer>
+<!-- Advisory Brief capture popup removed 2026-08-19: advisory is dormant. -->
+<!-- Advisory popup handler removed 2026-08-19 with its markup. The setLang() stub that
+     lived here is superseded by the hreflang-derived EN/FR toggle in /consent.js. -->
+<script>
+/* Click-to-play facades. No YouTube iframe loads until the visitor asks for one.
+   Applies the decision locked for the homepage band (RoD-2026-08-18-06) to the podcast page. */
+(function(){
+  var frames = document.querySelectorAll('iframe[data-src]');
+  Array.prototype.forEach.call(frames, function(f){
+    var box = f.parentNode;
+    if (window.getComputedStyle(box).position === 'static') { box.style.position = 'relative'; }
+    var vid = (f.getAttribute('data-src').match(/\/embed\/([a-zA-Z0-9_-]+)/) || [])[1];
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.setAttribute('aria-label', 'Play this episode');
+    b.style.cssText = 'position:absolute;top:0;left:0;width:100%;height:100%;border:0;padding:0;cursor:pointer;display:flex;align-items:center;justify-content:center;background:#072244' + (vid ? (';background-image:linear-gradient(rgba(7,34,68,.35),rgba(7,34,68,.55)),url(https://i.ytimg.com/vi/' + vid + '/hqdefault.jpg);background-size:cover;background-position:center') : '');
+    b.innerHTML = '<span style="display:block;width:72px;height:72px;border:2px solid #D4AF37;border-radius:50%;position:relative;background:rgba(7,34,68,.55)"><span style="position:absolute;top:50%;left:56%;transform:translate(-50%,-50%);border-style:solid;border-width:13px 0 13px 21px;border-color:transparent transparent transparent #D4AF37"></span></span>';
+    b.addEventListener('click', function(){
+      f.src = f.getAttribute('data-src') + '&autoplay=1';
+      if (b.parentNode) { b.parentNode.removeChild(b); }
+      if (window.gtag) { window.gtag('event', 'episode_play', { page: location.pathname }); }
+    });
+    box.appendChild(b);
+  });
+})();
+</script>
+</body>
+</html>
