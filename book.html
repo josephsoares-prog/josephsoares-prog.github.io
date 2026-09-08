@@ -180,9 +180,33 @@
 </head>
 <body>
 
+<style>
+  nav .navlinks{display:flex;gap:22px;align-items:center}
+  nav .navlinks a{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.12em;font-size:12px;font-weight:500;text-decoration:none;color:var(--muted)}
+  nav .navlinks a:hover{color:var(--bone,#F2EFE9)}
+  nav .bkburger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:12px 4px;margin-left:auto}
+  nav .bkburger span{display:block;width:22px;height:2px;background:currentColor;opacity:.85}
+  @media(max-width:860px){
+    nav .wrap{flex-wrap:wrap;height:auto;min-height:64px;padding-top:8px;padding-bottom:8px}
+    nav .bkburger{display:flex}
+    nav .navlinks{display:none;flex-basis:100%;flex-direction:column;align-items:stretch;gap:0;padding-bottom:6px}
+    nav .navlinks.open{display:flex}
+    nav .navlinks a{text-align:center;padding:13px 10px;border-top:1px solid var(--line)}
+    nav .navcta{order:2}
+  }
+</style>
 <nav>
   <div class="wrap">
     <a class="brand" href="/" style="text-decoration:none">Joseph <span>Soares</span></a>
+    <button class="bkburger" aria-label="Menu" onclick="document.getElementById('bknav').classList.toggle('open')"><span></span><span></span><span></span></button>
+    <div class="navlinks" id="bknav">
+      <a href="/intelligence.html">Intelligence</a>
+      <a href="/podcast.html">Podcast</a>
+      <a href="/writing.html">Writing</a>
+      <a href="/media.html">Media</a>
+      <a href="/quebec2026/index-en.html" style="color:#D4AF37">Qu&eacute;bec 2026</a>
+      <a href="/subscribe.html">Subscribe</a>
+    </div>
     <a class="navcta" href="#reserve">Reserve the book &rarr;</a>
   </div>
 </nav>
