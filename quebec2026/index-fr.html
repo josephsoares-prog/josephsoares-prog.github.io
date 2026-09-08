@@ -83,7 +83,7 @@ if(b){document.getElementById('hb').innerHTML=bar(obj(b[0]),Math.max.apply(0,b[0
 document.getElementById('mt').innerHTML='<div>'+T.mrg+'<b>'+String(b[3]).replace('.',',')+' pts</b></div><div>&nbsp;<b>'+nb(b[4])+'</b></div><div>'+T.trn+'<b>'+String(b[5]).replace('.',',')+' %</b></div><div>'+T.elc+'<b>'+nb(b[6])+'</b></div>'}
 else{document.getElementById('hb').innerHTML='<div class=foot>'+T.newr+'</div>';document.getElementById('mt').innerHTML=''}}
 function render(j){P=j.P;RG=j.R;
-document.getElementById('asof').textContent=j.asof+' · '+j.dl+' jours du scrutin · 127 circonscriptions · 64 pour la majorité';
+document.getElementById('asof').textContent=(function(i){var M=['janvier','février','mars','avril','mai','juin','juillet','août','septembre','octobre','novembre','décembre'],p=i.split('-');return (p[2]*1)+' '+M[p[1]*1-1]+' '+p[0]})(j.asof)+' · à '+j.dl+' jours du scrutin · 127 circonscriptions · 64 pour la majorité';
 var mx=Math.max(75,Math.max.apply(0,P.map(function(p){return j.sim.seat_ci[p][2]})));
 document.getElementById('majl').style.left='calc(51px + (100% - 32px - 51px - 94px) * '+(64/mx)+')';
 document.getElementById('seatbars').innerHTML=bar(j.s,mx,j.sim.seat_ci);
