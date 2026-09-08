@@ -26,7 +26,7 @@ HW = {"Leger": 1.0, "Leger-regional": 1.0, "Liaison": .75, "Pallas": .85,
       "Mainstreet": .85, "Angus Reid": .9, "Ipsos": .9, "CROP": .9}
 TAU = 10.0
 POLL_ERR = 2.2
-DRIFT = 0.11
+DRIFT = 0.075
 PROV22 = {"PQ": 14.61, "CAQ": 40.98, "PLQ": 14.37, "PCQ": 12.91, "QS": 15.43}
 
 
