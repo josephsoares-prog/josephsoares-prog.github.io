@@ -906,4 +906,294 @@
             font-size: 28px;
             font-weight: 700;
             color: var(--text-dark);
-            marg@@DISPATCHCHUNKMARK@@
+            margin-bottom: 20px;
+        }
+
+        .editor p {
+            font-size: 16px;
+            color: var(--text-mid);
+            line-height: 1.8;
+            font-weight: 300;
+            margin-bottom: 16px;
+        }
+
+        .editor-creds {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 24px;
+        }
+
+        .editor-cred {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--text-dark);
+            background: var(--white);
+            padding: 6px 16px;
+            border-radius: 20px;
+            border: 1px solid rgba(201, 168, 76, 0.2);
+        }
+
+        /* ===== CTA ===== */
+        .cta {
+            padding: 80px 40px;
+            background: linear-gradient(155deg, var(--navy) 0%, var(--navy-mid) 100%);
+            text-align: center;
+        }
+
+        .cta-inner {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .cta h2 {
+            font-family: 'Oswald', sans-serif;
+            font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+            font-weight: 700;
+            color: var(--white);
+            line-height: 1.2;
+            margin-bottom: 16px;
+        }
+
+        .cta h2 em {
+            font-style: italic;
+            color: var(--gold);
+        }
+
+        .cta p {
+            font-size: 16px;
+            color: var(--text-light);
+            line-height: 1.75;
+            font-weight: 300;
+            margin-bottom: 32px;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--navy);
+            padding: 14px 36px;
+            border-radius: 3px;
+            font-weight: 700;
+            font-size: 13px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .btn-primary:hover { background: var(--gold-light); }
+
+        .btn-secondary {
+            display: inline-block;
+            color: var(--gold);
+            padding: 14px 36px;
+            border: 1px solid rgba(201, 168, 76, 0.3);
+            border-radius: 3px;
+            font-weight: 600;
+            font-size: 13px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: all 0.3s;
+            margin-left: 12px;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--gold);
+            background: rgba(201, 168, 76, 0.06);
+        }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .hero { padding: 70px 20px 60px; min-height: 56vh; }
+            .hero h1 { font-size: 2.2rem; }
+            .hero-sub { font-size: 16px; }
+
+            .concept { padding: 60px 20px; }
+            .concept-inner { grid-template-columns: 1fr; gap: 40px; }
+
+            .commentary { padding: 60px 20px; }
+            .commentary-headline { font-size: 20px; }
+
+            .wire { padding: 60px 20px; }
+            .wire-featured { grid-template-columns: 1fr; }
+            .wire-region-grid { grid-template-columns: 1fr; }
+            .wire-item:nth-child(odd) { border-right: none; padding-right: 0; }
+            .wire-item:nth-child(even) { padding-left: 0; }
+            .wire-item { flex-wrap: nowrap; gap: 10px; }
+            .wire-source { font-size: 11px; }
+
+            .launch-notice { padding: 60px 20px; }
+            .editor { padding: 60px 20px; }
+            .cta { padding: 60px 20px; }
+
+            .editor-creds { gap: 6px; }
+
+            .btn-secondary { margin-left: 0; margin-top: 12px; }
+        }
+
+        /* ===== REBUILD: flag-blue re-skin overrides ===== */
+        .hero h1,
+        .concept-text h2,
+        .commentary-header h2,
+        .editor h2,
+        .cta h2,
+        .launch-notice h2,
+        .cb-head h2 {
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.01em;
+        }
+        .commentary-headline,
+        .wire-card-headline,
+        .pillar-title { font-family: 'Oswald', sans-serif; }
+        .commentary { background: var(--navy); }
+        .commentary-item { border-bottom: 1px solid var(--border-light); }
+        .pillar-card { background: var(--navy-light); }
+        .editor-cred { background: var(--navy-light); color: var(--bone); }
+        .wire { background: var(--navy-light); border-top: 1px solid var(--border-light); }
+        .wire-card { background: var(--navy-light); }
+        .region-usa,.region-canada,.region-quebec,.region-world,.region-markets{
+            color: var(--gold); background: rgba(212,175,55,.10);
+        }
+        .cb-fav { background: #F2EFE9; }
+    </style>
+<link href="https://josephsoares.com/dispatch-fr.html" rel="canonical"/><link href="https://josephsoares.com/dispatch.html" hreflang="en" rel="alternate"/><link href="https://josephsoares.com/dispatch-fr.html" hreflang="fr-CA" rel="alternate"/><link href="https://josephsoares.com/dispatch.html" hreflang="x-default" rel="alternate"/>
+<meta content="Dépêches Corridor Intelligence | Analyse approfondie par Joseph Soares" property="og:title"/>
+<meta content="Les Dépêches Corridor Intelligence — une analyse stratégique approfondie des enjeux qui comptent, rédigée depuis l’intérieur même des cercles où se prennent les décisions." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="Dépêches Corridor Intelligence | Analyse approfondie par Joseph Soares" name="twitter:title"/>
+<meta content="Les Dépêches Corridor Intelligence — une analyse stratégique approfondie des enjeux qui comptent, rédigée depuis l’intérieur même des cercles où se prennent les décisions." name="twitter:description"/>
+<meta content="https://josephsoares.com/assets/og-default.png" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://josephsoares.com/assets/og-default.png" name="twitter:image"/>
+<meta content="https://josephsoares.com/dispatch-fr.html" property="og:url"/>
+<!-- Apollo.io website visitor tracking -->
+<script>function initApollo(){var n=Math.random().toString(36).substring(7),o=document.createElement("script");
+o.src="https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache="+n,o.async=!0,o.defer=!0,
+o.onload=function(){window.trackingFunctions.onLoad({appId:"69b933d5574de0002181290e"})},
+document.head.appendChild(o)}initApollo();</script>
+<script id="cb-jsonld" type="application/ld+json">{
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Dépêches Corridor Intelligence",
+      "inLanguage": [
+            "en",
+            "fr"
+      ],
+      "url": "https://josephsoares.com/dispatch-fr.html",
+      "description": "Une analyse stratégique approfondie des enjeux qui comptent — les Dépêches Corridor Intelligence, par Joseph Soares.",
+      "author": {
+            "@type": "Person",
+            "name": "Joseph Soares",
+            "url": "https://josephsoares.com/"
+      },
+      "publisher": {
+            "@type": "Organization",
+            "name": "Joseph Soares & Co."
+      }
+}</script>
+<style>
+/* Mobile hamburger menu fix (site-wide) */
+.menutoggle{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:10px 6px}
+.menutoggle span{display:block;width:24px;height:2px;background:var(--bone,#F2EFE9);transition:.2s}
+@media(max-width:880px){
+  nav .wrap{position:relative}
+  .menutoggle{display:flex !important}
+  .navlinks{display:none !important;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;
+    background:#072244;backdrop-filter:blur(10px);border-top:1px solid rgba(242,239,233,.12);
+    border-bottom:1px solid rgba(242,239,233,.12);padding:6px 0;z-index:60;align-items:stretch}
+  .navlinks.open{display:flex !important}
+  .navlinks a{padding:15px 30px;width:100%;font-size:15px}
+  .navlinks a.cta{align-self:center;width:auto;max-width:calc(100% - 44px);margin:12px auto;padding:12px 28px;text-align:center}
+}
+</style>
+<style id="navdrop-css">
+.navdrop{position:relative}
+.navdrop>a::after{content:"▾";font-size:.62em;margin-left:6px;vertical-align:middle;opacity:.65}
+.navdrop-menu{display:none;position:absolute;top:100%;left:0;background:#072244;border:1px solid rgba(242,239,233,.14);border-radius:2px;padding:6px 0;min-width:158px;z-index:90;box-shadow:0 12px 34px rgba(0,0,0,.4)}
+.navdrop:hover .navdrop-menu,.navdrop:focus-within .navdrop-menu{display:block}
+.navdrop-menu a{display:block !important;width:auto !important;padding:11px 20px !important}
+@media(max-width:880px){
+ .navdrop{width:100%}
+ .navdrop>a::after{display:none}
+ .navdrop-menu{display:block;position:static;border:0;box-shadow:none;padding:4px 0;background:rgba(7,34,68,.5);min-width:0;border-top:1px solid rgba(242,239,233,.08);border-bottom:1px solid rgba(242,239,233,.08)}
+ .navdrop-menu a{padding:12px 30px 12px 54px !important;font-size:14px;opacity:.82;text-align:left !important;background:rgba(212,175,55,.05)}
+}
+</style>
+<link href="/site.css" rel="stylesheet"/>
+</head>
+<body>
+<nav>
+<div class="wrap">
+<a class="brand" href="/index.html" style="text-decoration:none;color:inherit">Joseph <span>Soares</span></a>
+<button aria-label="Menu" class="menutoggle" onclick="this.closest('nav').querySelector('.navlinks').classList.toggle('open')"><span></span><span></span><span></span></button>
+<div class="navlinks" translate="no"><div class="navdrop"><a href="/intelligence.html">Intelligence</a><div class="navdrop-menu"><a href="/brief/">Breffage Corridor</a><a href="/dispatch.html">Dépêches</a><a href="/corridor-files.html">Dossiers</a><a href="/brief/index-dashboard.html">Index</a><a href="/issues-focus.html">Dossiers thématiques</a></div></div><a href="/podcast.html">Balado</a><a href="/writing.html">Écrits</a><a href="/conferences.html">Conférences</a><a href="/media-fr.html">Médias</a><a href="/livre.html">Livre</a><a class="cta" href="/abonnement.html">S’abonner</a></div>
+</div>
+</nav>
+<!-- ELECTION STRIP - time-limited. DELETE this whole block after 5 Oct 2026. -->
+<style>
+  .qcstrip{display:block;background:#D4AF37;color:#072244;text-decoration:none;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.11em;font-size:12px;font-weight:500;text-align:center;padding:11px 16px;line-height:1.45}
+  .qcstrip:hover{background:#E6C860}
+  .qcstrip b{font-weight:600}
+  .qcstrip .sep{opacity:.55;padding:0 6px}
+  @media(max-width:560px){.qcstrip{font-size:11px;letter-spacing:.08em;padding:10px 12px}.qcstrip .hide-s{display:none}}
+</style>
+<a class="qcstrip" href="/quebec2026/index-en.html" translate="no"><b>Québec 2026</b><span class="sep">·</span>Daily seat projection<span class="sep hide-s">·</span><span class="hide-s">Projection quotidienne</span><span class="sep">·</span>5 Oct →</a>
+<!-- /ELECTION STRIP -->
+<!-- HERO -->
+<section class="hero">
+<div class="hero-inner">
+<div class="hero-badge">
+<div class="hero-badge-dot"></div>
+<span class="hero-badge-text" data-fr="Dépêches Corridor Intelligence">Dépêches Corridor Intelligence</span>
+</div>
+<h1 data-fr="Corridor Intelligence &lt;em&gt;Dépêches&lt;/em&gt;">Corridor Intelligence <em>Dépêches</em></h1>
+<p class="hero-sub" data-fr="Des analyses de fond sur les mouvements qui comptent.">Des analyses de fond sur les mouvements qui comptent.</p>
+</div>
+</section>
+<!-- LEAD INTRO -->
+<div style="max-width:720px;margin:0 auto;padding:40px 40px 0;text-align:center;">
+<p data-fr="Les Dépêches sont la lecture approfondie — des analyses de fond sur les mouvements qui comptent, écrites par quelqu’un qui a vu ces décisions se prendre de l’intérieur. Moins nombreuses, plus longues, conçues pour changer votre façon d’agir, pas seulement ce que vous savez." style="font-family:'EB Garamond',Georgia,serif;font-size:20px;line-height:1.7;color:var(--bone);">Les Dépêches sont la lecture approfondie — des analyses de fond sur les mouvements qui comptent, écrites par quelqu’un qui a vu ces décisions se prendre de l’intérieur. Moins nombreuses, plus longues, conçues pour changer votre façon d’agir, pas seulement ce que vous savez.</p>
+</div>
+<!-- BRIEFS | DISPATCH TOGGLE -->
+<div style="padding:26px 20px 0">
+<div class="int-tabs">
+<a class="int-tab" data-fr="Breffage Corridor" href="/brief/">Breffage Corridor</a>
+<a class="int-tab active" data-fr="Dépêches" href="/dispatch.html">Dépêches</a>
+</div>
+</div>
+<!-- LATEST DISPATCHES -->
+<section class="commentary">
+<div class="commentary-inner">
+<div class="commentary-header">
+<h2 data-fr="Dernières dépêches">Dernières dépêches</h2>
+<p data-fr="Analyse stratégique des nouvelles politiques qui touchent les décideurs">Analyse stratégique des nouvelles politiques qui touchent les décideurs</p>
+</div>
+<!-- KIT CAPTURE -->
+<div class="capture-card" style="background:rgba(207,181,59,0.06); border:1px solid rgba(207,181,59,0.3); border-radius:4px; padding:2rem; margin-bottom:2rem; text-align:center;">
+<p data-fr="Abonnez-vous à Corridor Intelligence" style="font-family:'Inter',sans-serif; font-size:0.65rem; letter-spacing:3px; text-transform:uppercase; color:var(--gold); margin-bottom:0.6rem;">Abonnez-vous à Corridor Intelligence</p>
+<p data-fr="Renseignement stratégique quotidien, directement dans votre boîte de réception." style="font-family:'EB Garamond',Georgia,serif; font-size:1.05rem; color:var(--bone,#F2EFE9); margin-bottom:1.1rem;">Renseignement stratégique quotidien, directement dans votre boîte de réception.</p>
+<div style="text-align:center;margin:14px auto 0"><a data-fr="S’abonner gratuitement" data-portal="signup" href="#/portal/signup" style="display:inline-block;font-family:'Inter',sans-serif;font-size:0.8rem;font-weight:600;letter-spacing:0.5px;text-transform:uppercase;background:#D4AF37;color:#0A3161;padding:0.7rem 1.4rem;border-radius:3px;text-decoration:none;">S’abonner gratuitement</a></div>
+<p data-fr="Renseignement quotidien. Pas de pourriel. Désabonnement à tout moment." style="font-family:'Inter',sans-serif; margin-top:0.75rem; font-size:0.7rem; opacity:0.55;">Renseignement quotidien. Pas de pourriel. Désabonnement à tout moment.</p>
+</div>
+<!-- ============================================================
+               DISPATCH CARD — paste as the NEWEST (first) entry inside the
+               commentary list in dispatch.html, ABOVE the existing July 31
+               "Five-Twenty" card. Newest-first. EN default + FR data-fr attributes.
+               Hero image: replace /assets/one-reserve-two-wars-august-202@@DISPATCHCHUNKMARK@@
