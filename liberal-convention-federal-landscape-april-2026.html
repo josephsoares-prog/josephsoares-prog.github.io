@@ -487,10 +487,7 @@ document.head.appendChild(o)}initApollo();</script>
             this.classList.add('active');
         });
     });
-    function openEmailPopup() { document.getElementById('emailPopupOverlay').classList.add('active'); }
-    function closeEmailPopup() { document.getElementById('emailPopupOverlay').classList.remove('active'); }
-    function handleEmailSubmit(e) { e.preventDefault(); alert('Thank you for subscribing!'); closeEmailPopup(); }
-    document.querySelectorAll('.btn-advisory-brief, .nav-cta').forEach(btn => { btn.addEventListener('click', function(e) { e.preventDefault(); openEmailPopup(); }); });
+    document.querySelectorAll('.btn-advisory-brief, .nav-cta').forEach(btn => { btn.addEventListener('click', function(e) { e.preventDefault(); window.location.href = '/subscribe.html?ref=article'; }); });
 </script>
 
 </body>
