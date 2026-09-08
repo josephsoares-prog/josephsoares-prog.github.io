@@ -114,7 +114,13 @@ def sim(sh, days, n=4000):
     dist = {p: [] for p in P}
     snap = [(list(r[2]), r[3], r[4], r[5]) for r in d["ri"]]
     for _ in range(n):
-        dr = {p: max(1., sh[p] + random.gauss(0, sd)) for p in P}
+        # Polling error is correlated, not independent: if one party is
+        # overstated the others are understated. Draw per-party errors, then
+        # centre them so they sum to zero. Without this the errors compound
+        # through renormalisation and the intervals blow out.
+        e = [random.gauss(0, sd) for _ in P]
+        m = sum(e) / len(e)
+        dr = {p: max(1., sh[p] + e[i] - m) for i, p in enumerate(P)}
         t = sum(dr.values())
         dr = {p: dr[p] / t * 100 for p in P}
         s, _ = project(dr)
