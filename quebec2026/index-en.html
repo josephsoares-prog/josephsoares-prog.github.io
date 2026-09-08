@@ -65,7 +65,7 @@ select{width:100%;padding:12px;background:#0A3161;color:#F2EFE9;border:1px solid
 <div class=foot>Baseline: official Élections Québec returns for all 125 ridings of the 2022 general election, from the dgeq.org open-data archive, mapped onto the 127 official ridings of the 2026 electoral map. Seven regions carry current vote levels from the Léger regional survey (n=11,305); the other ten are projected from their 2022 base by provincial swing and are marked ○. Method, source registry and declared falsification tests: see the methodology document.</div>
 <script>var P=[],RG=[],D={},L='en',J=null;
 var T={nod:"Data unavailable",hold:"HOLD",gain:"CHANGES HANDS",win:"projected winner",ovr:"over",mrg:"margin",trn:"turnout",elc:"electors",newr:"New riding — no predecessor. Projection takes the regional level."};
-var C={"PQ":"#2b5fb3","CAQ":"#12a5e0","PLQ":"#d8322f","PCQ":"#12305e","QS":"#f07f13"};
+var C={"PQ":"#2b5fb3","CAQ":"#12a5e0","PLQ":"#d8322f","PCQ":"#5B8FD6","QS":"#f07f13"};
 function esc(s){return String(s).replace(/[&<>]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;'}[c]})}
 function bar(v,mx,ci){var h='',ks=Object.keys(v).sort(function(a,b){return v[b]-v[a]});
 ks.forEach(function(p){h+='<div class=row><div class=lbl>'+p+'</div><div class=track><div class=fill style="width:'+(v[p]/mx*100)+'%;background:'+C[p]+'"></div></div><div class=num>'+(ci?v[p]:v[p].toFixed(1)+'%')+'</div><div class=ci>'+(ci&&ci[p]?ci[p][0]+'–'+ci[p][2]:'')+'</div></div>'});return h}
