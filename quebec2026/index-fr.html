@@ -112,5 +112,22 @@ document.getElementById('pollt').innerHTML=ph;
 var sel=document.getElementById('sel');
 j.ri.forEach(function(r){D[r[0]]=r});
 Object.keys(D).sort(function(a,b){return a.localeCompare(b,'fr')}).forEach(function(n){var op=document.createElement('option');op.value=n;op.textContent=n;sel.appendChild(op)})}
-fetch('data.json?v='+Date.now()).then(function(r){return r.json()}).then(render).catch(function(){document.getElementById('asof').textContent=T.nod;var s=document.getElementById('sel');s.disabled=true;s.innerHTML='<option>'+T.nod+'</option>'});
+fetch('data.json?v='+Date.now()).then(function(r){return r.json()}).then(function(d){
+  // Recalcul du jour dans le navigateur : la page n'est jamais périmée et
+  // n'a besoin d'aucune tâche planifiée. Voie rapide d'abord (~4 ms) pour
+  // afficher les sièges et la date; la simulation suit et remplit les
+  // intervalles.
+  try{
+    var T0=new Date(),TODAY=Date.UTC(T0.getFullYear(),T0.getMonth(),T0.getDate());
+    if(window.CorridorRecompute){
+      window.CorridorRecompute(d,TODAY,{skipSim:true});
+      render(d);
+      setTimeout(function(){
+        try{window.CorridorRecompute(d,TODAY);render(d);}catch(e){}
+      },30);
+      return;
+    }
+  }catch(e){}
+  render(d);
+}).catch(function(){document.getElementById('asof').textContent=T.nod;var s=document.getElementById('sel');s.disabled=true;s.innerHTML='<option>'+T.nod+'</option>'});
 </script></html>
