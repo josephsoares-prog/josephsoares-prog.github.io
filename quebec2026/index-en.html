@@ -107,7 +107,12 @@ h+='<tr><td class=rn>'+esc(rg[0].slice(0,2)+' '+rg[L=='fr'?2:1])+'</td><td>'+r.n
 P.forEach(function(p,k){h+='<td>'+(r.s[k]||'')+'<span class=sm>'+Math.round(r.v[k])+'%</span></td>'});
 h+='<td class=fl>'+(r.src=='SOURCED'?'●':'○')+'</td></tr>'});
 document.getElementById('regt').innerHTML=h;
-var b=j.bt;try{document.getElementById('bt').innerHTML='Six back-tests across the 2012, 2014, 2018 and 2022 general elections (official Elections Quebec returns). <b>Mean absolute error: '+b.mean_mae+' seats per party</b> (range '+b.lo+' to '+b.hi+').<br><br><b>The caution that matters.</b> Two swing methods were tested and neither is measurably better. On the current numbers they diverge by six seats and disagree on the PQ&ndash;CAQ order. That order is reported as unresolved. What holds under both methods: no majority, a PQ&ndash;CAQ gap of a few seats, and nine seats for the PCQ &mdash; the same nine.';}catch(e){}
+var b=j.bt;try{
+var _c3=0,_c5=0;j.ri.forEach(function(r){if(r[5]<3)_c3++;if(r[5]<5)_c5++});
+var _pq=j.sim.seat_ci.PQ,_cq=j.sim.seat_ci.CAQ;
+document.getElementById('cw').innerHTML='The PQ range is '+_pq[0]+'–'+_pq[2]+' seats and the CAQ range '+_cq[0]+'–'+_cq[2]+'. That width is a result, not noise in the model.<br><br><b>'+_c3+' of '+j.ri.length+' ridings are within 3 points today, and '+_c5+' within 5.</b> On a map that tight, a polling error of three points — well inside normal — moves twenty to thirty seats between the PQ and the CAQ. Narrowing the range would hide the finding rather than report it.<br><br>This is what five-way fragmentation does to a seat count: it makes the vote easy to measure and the outcome hard to call.';
+}catch(e){}
+try{document.getElementById('bt').innerHTML='Six back-tests across the 2012, 2014, 2018 and 2022 general elections (official Elections Quebec returns). <b>Mean absolute error: '+b.mean_mae+' seats per party</b> (range '+b.lo+' to '+b.hi+').<br><br><b>The caution that matters.</b> Two swing methods were tested and neither is measurably better. On the current numbers they diverge by six seats and disagree on the PQ&ndash;CAQ order. That order is reported as unresolved. What holds under both methods: no majority, a PQ&ndash;CAQ gap of a few seats, and nine seats for the PCQ &mdash; the same nine.';}catch(e){}
 var ph='<tr><th>Source</th><th>n</th><th>Age</th><th>Weight</th></tr>';
 j.polls.forEach(function(u){ph+='<tr><td>'+esc(u.src)+'</td><td>'+u.n.toLocaleString()+'</td><td>'+u.age+'d</td><td>'+u.weight+'</td></tr>'});
 document.getElementById('pollt').innerHTML=ph;
