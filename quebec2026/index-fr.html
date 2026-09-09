@@ -63,6 +63,7 @@ select{width:100%;padding:12px;background:#0A3161;color:#F2EFE9;border:1px solid
 <div class="card warn"><h2>⚠ Test rétrospectif</h2><div class=foot id=bt></div></div>
 <div class=card><h2>Sondages dans l'agrégat</h2><table id=pollt></table><div class=foot style="margin-top:10px">Poids = √n × e^(−âge/10) × facteur de maison.</div></div>
 <div class=foot>Base : résultats officiels d'Élections Québec pour les 125 circonscriptions de l'élection générale de 2022, tirés des données ouvertes de dgeq.org, appariés aux 127 circonscriptions officielles de la carte de 2026. Sept régions portent des niveaux actuels tirés du sondage régional Léger (n = 11 305) ; les dix autres sont projetées à partir de leur base de 2022 par transfert provincial et sont marquées ○.</div>
+<script src="recompute.js"></script>
 <script>var P=[],RG=[],D={},L='fr';
 var T={nod:"Données indisponibles",hold:"CONSERVÉE",gain:"CHANGE DE MAINS",win:"vainqueur projeté",ovr:"devant",mrg:"écart",trn:"participation",elc:"électeurs",newr:"Nouvelle circonscription — aucun prédécesseur. La projection reprend le niveau régional."};
 var C={"PQ":"#2b5fb3","CAQ":"#12a5e0","PLQ":"#d8322f","PCQ":"#5B8FD6","QS":"#f07f13"};
@@ -112,5 +113,22 @@ document.getElementById('pollt').innerHTML=ph;
 var sel=document.getElementById('sel');
 j.ri.forEach(function(r){D[r[0]]=r});
 Object.keys(D).sort(function(a,b){return a.localeCompare(b,'fr')}).forEach(function(n){var op=document.createElement('option');op.value=n;op.textContent=n;sel.appendChild(op)})}
-fetch('data.json?v='+Date.now()).then(function(r){return r.json()}).then(render).catch(function(){document.getElementById('asof').textContent=T.nod;var s=document.getElementById('sel');s.disabled=true;s.innerHTML='<option>'+T.nod+'</option>'});
+fetch('data.json?v='+Date.now()).then(function(r){return r.json()}).then(function(d){
+  // Recalcul du jour dans le navigateur : la page n'est jamais périmée et
+  // n'a besoin d'aucune tâche planifiée. Voie rapide d'abord (~4 ms) pour
+  // afficher les sièges et la date; la simulation suit et remplit les
+  // intervalles.
+  try{
+    var T0=new Date(),TODAY=Date.UTC(T0.getFullYear(),T0.getMonth(),T0.getDate());
+    if(window.CorridorRecompute){
+      window.CorridorRecompute(d,TODAY,{skipSim:true});
+      render(d);
+      setTimeout(function(){
+        try{window.CorridorRecompute(d,TODAY);render(d);}catch(e){}
+      },30);
+      return;
+    }
+  }catch(e){}
+  render(d);
+}).catch(function(){document.getElementById('asof').textContent=T.nod;var s=document.getElementById('sel');s.disabled=true;s.innerHTML='<option>'+T.nod+'</option>'});
 </script></html>
