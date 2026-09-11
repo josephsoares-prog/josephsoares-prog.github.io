@@ -1,0 +1,1182 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+    <!-- Google Analytics (GA4) -->
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{ad_storage:'denied',analytics_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',wait_for_update:500});</script>
+<script defer src="/consent.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HNRCLZN3PK"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-HNRCLZN3PK');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/favicon.ico">
+    <title>Corridor Intelligence | Le balado avec Joseph Soares</title>
+    <meta name="description" content="Corridor Intelligence — Comment les décideurs négocient les moments à haut risque. Un balado d'entrevues animé par Joseph Soares, avec des dirigeants du monde des affaires, du gouvernement et de la vie publique qui ont été mis à l'épreuve sous une pression réelle.">
+    <meta property="og:title" content="Corridor Intelligence | Le balado avec Joseph Soares">
+    <meta property="og:url" content="https://josephsoares.com/podcast-fr">
+    <meta property="og:description" content="Comment les décideurs négocient les moments à haut risque. Des histoires vécues de dirigeants du monde des affaires, du gouvernement et de la vie publique qui ont été mis à l'épreuve sous la pression.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_CA">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Dark flag-blue premium standard.
+               NOTE: several names are intentionally re-valued away from their
+               literal meaning so that automation-inserted episode cards
+               (which reference --white for card bg, --navy for title text,
+               --text-mid for body, --border-light for border) recolor to dark.
+               --navy is therefore a LIGHT title color; static dark backgrounds
+               and dark-on-gold button text use explicit hex below. */
+            --navy: #F2EFE9;            /* card/heading TEXT on dark (was a dark bg) */
+            --navy-mid: #0E3A70;        /* raised panel */
+            --navy-light: #072244;      /* deep */
+            --gold: #D4AF37;
+            --gold-light: #E6C860;
+            --gold-muted: rgba(212, 175, 55, 0.12);
+            --cream: #0A3161;           /* section backgrounds -> flag blue */
+            --white: #0E3A70;           /* card/panel background (was #fff) */
+            --text-dark: #F2EFE9;       /* default body text -> bone */
+            --text-mid: #A9A39A;        /* muted body text */
+            --text-light: rgba(242,239,233,0.72);
+            --border-light: rgba(212, 175, 55, 0.22);
+            /* dark tones used explicitly where a real dark surface is needed */
+            --ink: #0A3161;
+            --panel: #0E3A70;
+            --deep: #072244;
+            --bone: #F2EFE9;
+            --muted: #A9A39A;
+            --line: rgba(242,239,233,.12);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'EB Garamond', Georgia, serif;
+            font-size: 18px;
+            line-height: 1.65;
+            color: var(--bone);
+            background: var(--ink);
+            background-image: radial-gradient(ellipse 120% 70% at 50% -8%, rgba(212,175,55,.07), rgba(0,0,0,0));
+            -webkit-font-smoothing: antialiased;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Oswald', sans-serif;
+            font-weight: 600;
+        }
+        .section-label, .hero-label, .format-label, .format-number,
+        .credential, .footer-firm, .nav-name, .brand, .btn-advisory-brief,
+        .btn-subscribe, .lang-bar button {
+            font-family: 'Oswald', sans-serif;
+        }
+
+        /* ===== UTILITY STRIP (formerly fixed lang bar; now in normal flow) ===== */
+        .lang-bar {
+            position: relative;
+            z-index: 30;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 30px;
+            height: 40px;
+            background: var(--deep);
+            border-bottom: 1px solid var(--line, rgba(242,239,233,.12));
+        }
+        .lang-bar-left {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            height: 20px;
+            color: rgba(242,239,233,0.5);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .social-link:hover {
+            color: var(--gold);
+        }
+        .social-icon {
+            width: 16px;
+            height: 16px;
+        }
+        .lang-bar-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .btn-advisory-brief {
+            background: none;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            padding: 6px 14px;
+            border-radius: 2px;
+            font-family: 'Oswald', sans-serif;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .btn-advisory-brief:hover {
+            background: var(--gold);
+            color: #0E3A70;
+        }
+        .btn-subscribe {
+            color: rgba(242,239,233,0.6);
+            text-decoration: none;
+            font-family: 'Oswald', sans-serif;
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+        .btn-subscribe:hover {
+            color: var(--gold);
+        }
+        .lang-buttons {
+            display: flex;
+            align-items: center;
+            gap: 0;
+        }
+        .lang-bar button {
+            background: none;
+            border: none;
+            color: rgba(242,239,233,0.4);
+            cursor: pointer;
+            font-family: 'Oswald', sans-serif;
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 0.12em;
+            padding: 6px 12px;
+            transition: color 0.3s;
+        }
+        .lang-bar button:hover { color: var(--gold-light); }
+        .lang-bar button.active { color: var(--gold); }
+        .lang-sep { color: rgba(242,239,233,0.2); font-size: 10px; }
+
+        /* ===== STANDARD UNIFIED NAV (matches index.html) ===== */
+        .wrap { max-width: 1120px; margin: 0 auto; padding: 0 30px; }
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 20;
+            background: rgba(7, 34, 68, .86);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(242,239,233,.12);
+        }
+        nav .wrap {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 66px;
+        }
+        .brand {
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: .2em;
+            font-weight: 600;
+            font-size: 16px;
+            color: var(--bone);
+        }
+        .brand span { color: var(--gold); }
+        .navlinks { display: flex; gap: 30px; align-items: center; }
+        .navlinks a {
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: .12em;
+            font-size: 13px;
+            font-weight: 500;
+            text-decoration: none;
+            color: var(--muted, #A9A39A);
+        }
+        .navlinks a:hover { color: var(--gold); }
+        .navlinks a.active { color: var(--gold); }
+        .navlinks a.cta {
+            color: var(--bone);
+            border: 1px solid rgba(242,239,233,.12);
+            padding: 9px 16px;
+            border-radius: 2px;
+        }
+        .navlinks a.cta:hover { border-color: var(--gold); color: var(--gold); }
+
+        /* ===== HERO ===== */
+        .hero {
+            background: linear-gradient(135deg, #0A3161 0%, #0E3A70 50%, #072244 100%);
+            padding: 84px 20px 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(ellipse at 30% 20%, rgba(212,175,55,0.10) 0%, transparent 60%);
+        }
+        .hero-content { position: relative; z-index: 1; max-width: 800px; margin: 0 auto; }
+        .hero-label {
+            display: inline-block;
+            font-family: 'Oswald', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 20px;
+            padding: 6px 18px;
+            border: 1px solid rgba(212,175,55,0.3);
+            border-radius: 20px;
+        }
+        .hero h1 {
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            font-size: clamp(2.2rem, 5vw, 3.6rem);
+            font-weight: 600;
+            color: var(--bone);
+            line-height: 1.06;
+            letter-spacing: 0.01em;
+            margin-bottom: 22px;
+        }
+        .hero h1 span { color: var(--gold); }
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            line-height: 1.6;
+            max-width: 640px;
+            margin: 0 auto 32px;
+        }
+        .hero-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 36px;
+            background: var(--gold);
+            color: #0E3A70;
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            border-radius: 2px;
+            transition: all 0.3s;
+        }
+        .hero-cta:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(212,175,55,0.3); }
+
+        .launch-badge {
+            display: inline-block;
+            margin-top: 24px;
+            padding: 8px 20px;
+            background: rgba(212,175,55,0.12);
+            border: 1px solid rgba(212,175,55,0.25);
+            border-radius: 20px;
+            color: var(--gold-light);
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        /* ===== SECTIONS ===== */
+        section { padding: 80px 20px; }
+        .container { max-width: 900px; margin: 0 auto; }
+
+        .section-label {
+            display: inline-block;
+            font-family: 'Oswald', sans-serif;
+            font-size: 0.72rem;
+            font-weight: 500;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 14px;
+        }
+
+        h2 {
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.01em;
+            font-size: clamp(1.6rem, 3vw, 2.3rem);
+            font-weight: 600;
+            color: var(--bone);
+            line-height: 1.12;
+            margin-bottom: 20px;
+        }
+
+        .section-intro {
+            font-size: 1.05rem;
+            color: var(--text-mid);
+            line-height: 1.7;
+            max-width: 700px;
+            margin-bottom: 40px;
+        }
+
+        /* ===== ABOUT THE SHOW ===== */
+        .about-section { background: var(--cream); }
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            margin-top: 40px;
+        }
+        .about-card {
+            background: var(--panel);
+            padding: 28px;
+            border-radius: 3px;
+            border: 1px solid var(--line);
+            border-left: 3px solid var(--gold);
+        }
+        .about-card h3 {
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            font-size: 1.05rem;
+            font-weight: 500;
+            color: var(--bone);
+            margin-bottom: 8px;
+        }
+        .about-card p {
+            font-size: 0.92rem;
+            color: var(--text-mid);
+            line-height: 1.6;
+        }
+
+        /* ===== FORMAT ===== */
+        .format-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 40px;
+        }
+        .format-item {
+            text-align: center;
+            padding: 32px 20px;
+            background: var(--panel2, #072244);
+            border: 1px solid var(--line);
+            border-radius: 3px;
+        }
+        .format-number {
+            font-family: 'Oswald', sans-serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--gold);
+            margin-bottom: 4px;
+        }
+        .format-label {
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--bone);
+            margin-bottom: 4px;
+        }
+        .format-desc {
+            font-size: 0.82rem;
+            color: var(--text-mid);
+        }
+
+        /* ===== HOST ===== */
+        .host-section { background: var(--deep); color: var(--bone); }
+        .host-section h2 { color: var(--bone); }
+        .host-section .section-intro { color: var(--text-light); }
+        .host-credentials {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-top: 28px;
+        }
+        .credential {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 18px;
+            background: rgba(201,168,76,0.1);
+            border: 1px solid rgba(201,168,76,0.2);
+            border-radius: 6px;
+            font-size: 0.88rem;
+            color: var(--gold-light);
+        }
+        .credential-icon { font-size: 1.1rem; }
+
+        /* ===== GUEST BENEFITS ===== */
+        .benefits-list {
+            list-style: none;
+            margin-top: 32px;
+        }
+        .benefits-list li {
+            display: flex;
+            gap: 16px;
+            padding: 20px 0;
+            border-bottom: 1px solid var(--line);
+        }
+        .benefit-check {
+            flex-shrink: 0;
+            width: 28px;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--gold-muted);
+            color: var(--gold);
+            border-radius: 50%;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+        .benefit-text h4 {
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+            font-size: 1.02rem;
+            font-weight: 500;
+            color: var(--bone);
+            margin-bottom: 4px;
+        }
+        .benefit-text p {
+            font-size: 0.92rem;
+            color: var(--text-mid);
+            line-height: 1.5;
+        }
+
+        /* ===== TOPICS ===== */
+        .topics-section { background: var(--cream); }
+        .topics-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin-top: 32px;
+        }
+        .topic-tag {
+            padding: 14px 20px;
+            background: var(--panel);
+            border: 1px solid var(--line);
+            border-radius: 3px;
+            font-size: 0.98rem;
+            color: var(--bone);
+            font-weight: 500;
+            border-left: 3px solid var(--gold);
+        }
+
+        /* ===== APPLY ===== */
+        .apply-section { background: var(--cream); }
+        .apply-intro { font-size: 1.05rem; color: var(--text-mid); line-height: 1.7; max-width: 700px; margin-bottom: 32px; }
+        .apply-criteria {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 40px;
+        }
+        .criteria-item {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+            padding: 16px 20px;
+            background: var(--panel);
+            border: 1px solid var(--line);
+            border-radius: 3px;
+            border-left: 3px solid var(--gold);
+        }
+        .criteria-check {
+            flex-shrink: 0;
+            color: var(--gold);
+            font-weight: 700;
+            font-size: 1.1rem;
+            line-height: 1.4;
+        }
+        .criteria-text {
+            font-size: 0.92rem;
+            color: var(--text-mid);
+            line-height: 1.5;
+        }
+        .apply-actions {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .apply-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 36px;
+            background: var(--gold);
+            color: #0E3A70;
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            border-radius: 2px;
+            transition: all 0.3s;
+        }
+        .apply-primary:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(212,175,55,0.3); }
+        .apply-alt {
+            font-size: 0.92rem;
+            color: var(--text-mid);
+        }
+        .apply-alt a {
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .apply-alt a:hover { text-decoration: underline; }
+
+        /* ===== CTA ===== */
+        .cta-section {
+            background: linear-gradient(135deg, #0A3161 0%, #072244 100%);
+            text-align: center;
+            padding: 80px 20px;
+        }
+        .cta-section h2 { color: var(--bone); margin-bottom: 12px; }
+        .cta-section p { color: var(--text-light); font-size: 1.05rem; max-width: 560px; margin: 0 auto 32px; line-height: 1.6; }
+        .cta-buttons { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+        .cta-primary {
+            padding: 16px 36px;
+            background: var(--gold);
+            color: #0E3A70;
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            border-radius: 2px;
+            transition: all 0.3s;
+        }
+        .cta-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+        .cta-secondary {
+            padding: 16px 36px;
+            background: transparent;
+            color: var(--gold);
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            border: 1px solid rgba(212,175,55,0.4);
+            border-radius: 2px;
+            transition: all 0.3s;
+        }
+        .cta-secondary:hover { border-color: var(--gold); background: rgba(212,175,55,0.08); }
+
+        /* ===== FOOTER (standard) ===== */
+        footer {
+            background: var(--deep);
+            border-top: 1px solid var(--line);
+            padding: 48px 0 64px;
+            color: var(--muted);
+            font-size: 16px;
+        }
+        footer .wrap {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 22px;
+            align-items: flex-start;
+        }
+        footer a { color: var(--muted); text-decoration: none; }
+        footer a:hover { color: var(--gold); }
+        footer .soc a { margin-left: 22px; }
+        .disc { max-width: 50ch; font-style: italic; font-size: 15px; line-height: 1.55; }
+        .footer-legal {
+            width: 100%;
+            display: flex;
+            gap: 20px;
+            margin-top: 22px;
+            font-size: 13px;
+        }
+        .footer-legal a {
+            color: rgba(242,239,233,0.5);
+            text-decoration: none;
+        }
+        .footer-legal a:hover {
+            color: var(--gold);
+            text-decoration: underline;
+        }
+        .footer-firm {
+            font-size: 12px;
+            color: rgba(242,239,233,0.55);
+            margin-bottom: 8px;
+            letter-spacing: 0.04em;
+        }
+        .footer-attribution {
+            width: 100%;
+            font-size: 11px;
+            color: rgba(242,239,233,0.35);
+            margin-top: 12px;
+            letter-spacing: 0.03em;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 880px) {
+            .navlinks { display: none; }
+        }
+        @media (max-width: 768px) {
+            .lang-bar { padding: 0 16px; gap: 10px; flex-wrap: wrap; height: auto; }
+            .about-grid, .format-grid, .topics-grid, .apply-criteria { grid-template-columns: 1fr; }
+            .host-credentials { flex-direction: column; }
+        }
+
+        @media (max-width: 768px) {
+            footer > div:first-child { grid-template-columns: 1fr !important; gap: 28px !important; }
+        }
+    </style>
+    <link rel="canonical" href="https://josephsoares.com/podcast-fr.html">
+    <link rel="alternate" hreflang="en" href="https://josephsoares.com/podcast.html">
+    <link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/podcast-fr.html">
+    <link rel="alternate" hreflang="x-default" href="https://josephsoares.com/podcast.html">
+    <meta property="og:image" content="https://josephsoares.com/assets/og-default.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Corridor Intelligence | Le balado avec Joseph Soares">
+    <meta name="twitter:image" content="https://josephsoares.com/assets/og-default.png">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "PodcastSeries",
+      "name": "Corridor Intelligence",
+      "alternateName": "Le balado Corridor Intelligence",
+      "description": "Comment les décideurs négocient les moments à haut risque. Un balado d'entrevues animé par Joseph Soares, avec des dirigeants du monde des affaires, du gouvernement et de la vie publique qui ont été mis à l'épreuve sous la pression.",
+      "url": "https://josephsoares.com/podcast-fr.html",
+      "image": "https://josephsoares.com/assets/og-default.png",
+      "author": {
+        "@type": "Person",
+        "name": "Joseph Soares",
+        "jobTitle": "Conseiller principal",
+        "url": "https://josephsoares.com/",
+        "sameAs": [
+          "https://www.linkedin.com/in/jsoares/"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "IBPROM Corp",
+        "url": "https://josephsoares.com/"
+      },
+      "inLanguage": "fr-CA"
+    }
+    </script>
+  <!-- Apollo.io website visitor tracking -->
+  <script>function initApollo(){var n=Math.random().toString(36).substring(7),o=document.createElement("script");
+o.src="https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache="+n,o.async=!0,o.defer=!0,
+o.onload=function(){window.trackingFunctions.onLoad({appId:"69b933d5574de0002181290e"})},
+document.head.appendChild(o)}initApollo();</script>
+
+<!-- Mobile nav styles moved to /pages.css (2026-08-19) -->
+<!-- Dropdown styles moved to /pages.css (2026-08-19) -->
+<link rel="stylesheet" href="/pages.css">
+<link rel="stylesheet" href="/site.css">
+</head>
+<body>
+
+    <!-- LANG BAR -->
+    <div class="lang-bar">
+        <div class="lang-bar-left">
+            <a href="https://www.linkedin.com/in/soaresjoseph/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+                <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+            <a href="https://x.com/JosephSoares" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="X (Twitter)">
+                <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.514l-5.106-6.694-5.848 6.694h-3.308l7.73-8.835L.424 2.25h6.679l4.632 6.124L17.77 2.25h.474zm-1.161 17.52h1.833L7.084 4.126H5.117l12.926 15.644z"/></svg>
+            </a>
+            <a href="https://www.youtube.com/@LeCorridorIntelligence?sub_confirmation=1" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="YouTube">
+                <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/soaresjoseph/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+                <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+        </div>
+        <div class="lang-bar-right">
+                        <a href="/abonnement.html" class="btn-subscribe">S&rsquo;abonner</a>
+        </div>
+    </div>
+
+    <!-- NAV (standard unified nav) -->
+    <nav>
+  <div class="wrap">
+    <a href="/accueil.html" class="brand" style="text-decoration:none;color:inherit">Joseph <span>Soares</span></a>
+    <button class="menutoggle" aria-label="Menu" onclick="this.closest('nav').querySelector('.navlinks').classList.toggle('open')"><span></span><span></span><span></span></button>
+    <div class="navlinks">
+      <div class="navdrop"><a href="/intelligence-fr.html">Intelligence</a><div class="navdrop-menu"><a href="/brief/">Breffages</a><a href="/dispatch-fr.html">D&eacute;p&ecirc;ches</a><a href="/corridor-files-fr.html">Dossiers</a><a href="/brief/index-dashboard.html">Index</a><a href="/issues-focus-fr.html">Enjeux</a></div></div>
+      <a href="/podcast-fr.html">Balado</a>
+      <a href="/writing-fr.html">&Eacute;crits</a>
+      <a href="/stewardship-fr.html">Intendance</a>
+      <a href="/media-fr.html">M&eacute;dias</a>
+      <a href="/livre.html">Livre</a>
+      <a class="election" href="/quebec2026/index-fr.html">Qu&eacute;bec 2026</a>
+      <a class="cta" href="/abonnement.html">S&rsquo;abonner</a>
+    </div>
+  </div>
+</nav>
+<!-- ELECTION STRIP - time-limited. DELETE this whole block after 5 Oct 2026. -->
+<style>
+  .qcstrip{display:block;background:#D4AF37;color:#072244;text-decoration:none;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.11em;font-size:12px;font-weight:500;text-align:center;padding:11px 16px;line-height:1.45}
+  .qcstrip:hover{background:#E6C860}
+  .qcstrip b{font-weight:600}
+  .qcstrip .sep{opacity:.55;padding:0 6px}
+  @media(max-width:560px){.qcstrip{font-size:11px;letter-spacing:.08em;padding:10px 12px}.qcstrip .hide-s{display:none}}
+</style>
+<a class="qcstrip" href="/quebec2026/index-fr.html"><b>Qu&eacute;bec 2026</b><span class="sep">&middot;</span>Projection quotidienne<span class="sep hide-s">&middot;</span><span class="hide-s">Daily seat projection</span><span class="sep">&middot;</span>5 oct. &rarr;</a>
+<!-- /ELECTION STRIP -->
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-content">
+        <span class="hero-label">Le balado</span>
+        <h1>Corridor Intelligence</h1>
+        <p>Vous avez b&acirc;ti quelque chose de r&eacute;el. Les d&eacute;cisions qui vous ont men&eacute; ici ne figuraient dans aucun manuel. Ce balado existe parce que ces parcours m&eacute;ritent plus qu&rsquo;une publication LinkedIn &mdash; et que les dirigeants qui les ont v&eacute;cus m&eacute;ritent une conversation &agrave; la hauteur de ce qu&rsquo;ils ont accompli.</p>
+        <a href="#apply" class="hero-cta">Devenez invit&eacute; de Corridor Intelligence &rarr;</a>
+        <div></div>
+    </div>
+</section>
+
+<!-- LATEST EPISODES -->
+<section id="episodes" style="background: var(--cream); padding: 60px 20px;">
+    <div class="container">
+        <span class="section-label">&Eacute;pisodes r&eacute;cents</span>
+        <h2>Corridor Intelligence &mdash; le balado</h2>
+        <p class="section-intro">Analyse g&eacute;opolitique et renseignement strat&eacute;gique par Joseph Soares. De nouveaux &eacute;pisodes chaque semaine.</p>
+
+        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap:24px; margin-top:32px;">
+            <!-- AUTOMATION_INSERT_POINT -->
+
+            <!-- Dispatch: The 13-Month Swing (Sep 3 2026) -->
+            <div style="background:var(--white); border-radius:8px; overflow:hidden; border:1px solid var(--border-light); box-shadow:0 2px 12px rgba(0,0,0,0.06);">
+                <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden;">
+                    <iframe data-src="https://www.youtube-nocookie.com/embed/czgUBzWKB1E?rel=0&modestbranding=1" style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                </div>
+                <div style="padding:20px;">
+                    <div style="font-size:0.75rem; font-weight:600; color:var(--gold); letter-spacing:1px; text-transform:uppercase; margin-bottom:8px;">3 septembre 2026 &middot; D&eacute;p&ecirc;che</div>
+                    <h3 style="font-size:1.1rem; color:var(--navy); margin-bottom:8px; line-height:1.3;">Le basculement de treize mois&nbsp;: pourquoi la politique qu&eacute;b&eacute;coise est plus volatile qu&rsquo;on le croit</h3>
+                    <p style="font-size:0.88rem; color:var(--text-mid); line-height:1.5;">Une course &agrave; trois est devenue un raz-de-mar&eacute;e en treize mois, dans la m&ecirc;me circonscription qu&eacute;b&eacute;coise, sous les m&ecirc;mes r&egrave;gles. Chaque chiffre provient directement d&rsquo;&Eacute;lections Canada.</p>
+                </div>
+            </div>
+
+
+            <!-- Dispatch: The $131.2B Bet (Aug 28 2026) -->
+            <div style="background:var(--white); border-radius:8px; overflow:hidden; border:1px solid var(--border-light); box-shadow:0 2px 12px rgba(0,0,0,0.06);">
+                <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden;">
+                    <iframe data-src="https://www.youtube-nocookie.com/embed/CVcOLs3EWLc?rel=0&modestbranding=1" style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                </div>
+                <div style="padding:20px;">
+                    <div style="font-size:0.75rem; font-weight:600; color:var(--gold); letter-spacing:1px; text-transform:uppercase; margin-bottom:8px;">28 ao&#251;t 2026 &middot; D&eacute;p&ecirc;che</div>
+                    <h3 style="font-size:1.1rem; color:var(--navy); margin-bottom:8px; line-height:1.3;">Le pari de 131,2&nbsp;G&#36;&nbsp;: pourquoi l&rsquo;avenir n&rsquo;est pas celui que vous croyez</h3>
+                    <p style="font-size:0.88rem; color:var(--text-mid); line-height:1.5;">Cinq navires ont franchi le d&eacute;troit d&rsquo;Ormuz mardi, contre une moyenne de quinze sur dix jours &mdash; et le brut a tout de m&ecirc;me recul&eacute;. Les signaux de prix se sont assouplis pendant que les faits physiques et les &eacute;ch&eacute;ances, eux, se durcissaient.</p>
+                </div>
+            </div>
+
+
+            <!-- Dispatch: The Plumbing Repriced (Aug 21 2026) -->
+            <div style="background:var(--white); border-radius:8px; overflow:hidden; border:1px solid var(--border-light); box-shadow:0 2px 12px rgba(0,0,0,0.06);">
+                <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden;">
+                    <iframe data-src="https://www.youtube-nocookie.com/embed/ANsvaudOwsA?rel=0&modestbranding=1" style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                </div>
+                <div style="padding:20px;">
+                    <div style="font-size:0.75rem; font-weight:600; color:var(--gold); letter-spacing:1px; text-transform:uppercase; margin-bottom:8px;">21 ao&#251;t 2026 &middot; D&eacute;p&ecirc;che</div>
+                    <h3 style="font-size:1.1rem; color:var(--navy); margin-bottom:8px; line-height:1.3;">Ce que font les gouvernements quand ils ne peuvent pas r&eacute;gler le vrai probl&egrave;me.</h3>
+                    <p style="font-size:0.88rem; color:var(--text-mid); line-height:1.5;">Washington a suspendu un droit de douane de 50&nbsp;% sur les produits canadiens quelques heures avant son entr&eacute;e en vigueur, et a parl&eacute; d&rsquo;une entente. Ottawa n&rsquo;a confirm&eacute; qu&rsquo;un report. Rien n&rsquo;a &eacute;t&eacute; publi&eacute; de part et d&rsquo;autre.</p>
+                </div>
+            </div>
+
+
+            <!-- Dispatch: One Reserve, Two Wars (Aug 6 2026) -->
+            <div style="background:var(--white); border-radius:8px; overflow:hidden; border:1px solid var(--border-light); box-shadow:0 2px 12px rgba(0,0,0,0.06);">
+                <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden;">
+                    <iframe data-src="https://www.youtube-nocookie.com/embed/PAMO0G_UF1o?rel=0&modestbranding=1" style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                </div>
+                <div style="padding:20px;">
+                    <div style="font-size:0.75rem; font-weight:600; color:var(--gold); letter-spacing:1px; text-transform:uppercase; margin-bottom:8px;">6 ao&#251;t 2026 &middot; D&eacute;p&ecirc;che</div>
+                    <h3 style="font-size:1.1rem; color:var(--navy); margin-bottom:8px; line-height:1.3;">28 missiles, z&eacute;ro d&eacute;fense&nbsp;: le sch&eacute;ma qui &eacute;puise les r&eacute;serves militaires am&eacute;ricaines</h3>
+                    <p style="font-size:0.88rem; color:var(--text-mid); line-height:1.5;">Vingt-huit missiles ont frapp&eacute; l&rsquo;Ukraine mercredi soir&nbsp;; aucun n&rsquo;a &eacute;t&eacute; intercept&eacute;. Quarante-huit heures plus tard, Washington disait &agrave; Kyiv qu&rsquo;il n&rsquo;y avait plus d&rsquo;intercepteurs Patriot &mdash; le Moyen-Orient puise dans la m&ecirc;me r&eacute;serve.</p>
+                </div>
+            </div>
+
+            <!-- Dispatch: Five-Twenty (Jul 31 2026) -->
+            <div style="background:var(--white); border-radius:8px; overflow:hidden; border:1px solid var(--border-light); box-shadow:0 2px 12px rgba(0,0,0,0.06);">
+                <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden;">
+                    <iframe data-src="https://www.youtube-nocookie.com/embed/Mn4SuQUus9Y?rel=0&modestbranding=1" style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                </div>
+                <div style="padding:20px;">
+                    <div style="font-size:0.75rem; font-weight:600; color:var(--gold); letter-spacing:1px; text-transform:uppercase; margin-bottom:8px;">31 juillet 2026 &middot; D&eacute;p&ecirc;che</div>
+                    <h3 style="font-size:1.1rem; color:var(--navy); margin-bottom:8px; line-height:1.3;">Cinq-vingt&nbsp;: la Fed vient de d&eacute;jouer deux paris en 48 heures.</h3>
+                    <p style="font-size:0.88rem; color:var(--text-mid); line-height:1.5;">Le 30 ans am&eacute;ricain a atteint 5,20&nbsp;% &mdash; un sommet en 19 ans &mdash; et presque personne n&rsquo;en a fait la une. Voici ce qu&rsquo;un taux long au-dessus de 5&nbsp;% r&eacute;&eacute;value.</p>
+                </div>
+            </div>
+
+            <!-- Latest: Pillar 03 — The Decision That Saved Canada -->
+            <div style="background:var(--white); border-radius:8px; overflow:hidden; border:1px solid var(--border-light); box-shadow:0 2px 12px rgba(0,0,0,0.06);">
+                <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden;">
+                    <iframe data-src="https://www.youtube-nocookie.com/embed/h31DI8N6_Gg?rel=0&modestbranding=1" style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                </div>
+                <div style="padding:20px;">
+                    <div style="font-size:0.75rem; font-weight:600; color:var(--gold); letter-spacing:1px; text-transform:uppercase; margin-bottom:8px;">30 juillet 2026 &middot; Prise de d&eacute;cision</div>
+                    <h3 style="font-size:1.1rem; color:var(--navy); margin-bottom:8px; line-height:1.3;">La d&eacute;cision qui a sauv&eacute; le Canada en 2008 a &eacute;t&eacute; prise en 1991</h3>
+                    <p style="font-size:0.88rem; color:var(--text-mid); line-height:1.5;">Comment les gouvernements d&eacute;cident r&eacute;ellement sous pression &mdash; la r&eacute;ponse du Canada &agrave; la crise comme &eacute;tude de cas, chaque affirmation appuy&eacute;e sur les documents originaux.</p>
+                </div>
+            </div>
+
+            <!-- Dispatch #1: Two Gates, One Week -->
+            <div style="background:var(--white); border-radius:8px; overflow:hidden; border:1px solid var(--border-light); box-shadow:0 2px 12px rgba(0,0,0,0.06);">
+                <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden;">
+                    <iframe data-src="https://www.youtube-nocookie.com/embed/A-RQ9kewK9c?rel=0&modestbranding=1" style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                </div>
+                <div style="padding:20px;">
+                    <div style="font-size:0.75rem; font-weight:600; color:var(--gold); letter-spacing:1px; text-transform:uppercase; margin-bottom:8px;">24 juillet 2026 &middot; D&eacute;p&ecirc;che</div>
+                    <h3 style="font-size:1.1rem; color:var(--navy); margin-bottom:8px; line-height:1.3;">&laquo;&nbsp;Deux portes, une semaine&nbsp;&raquo; &mdash; la D&eacute;p&ecirc;che</h3>
+                    <p style="font-size:0.88rem; color:var(--text-mid); line-height:1.5;">La premi&egrave;re D&eacute;p&ecirc;che hebdomadaire de Corridor Intelligence &mdash; les mouvements les plus d&eacute;terminants de la semaine&nbsp;: pouvoir, capital, ressources.</p>
+                </div>
+            </div>
+
+            <!-- Latest: Iran Deal Framework Emerges -->
+            <div style="background:var(--white); border-radius:8px; overflow:hidden; border:1px solid var(--border-light); box-shadow:0 2px 12px rgba(0,0,0,0.06);">
+                <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden;">
+                    <iframe data-src="https://www.youtube-nocookie.com/embed/fQZxxkZi8Bo?rel=0&modestbranding=1" style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                </div>
+                <div style="padding:20px;">
+                    <div style="font-size:0.75rem; font-weight:600; color:var(--gold); letter-spacing:1px; text-transform:uppercase; margin-bottom:8px;">18 avril 2026 &middot; Ormuz</div>
+                    <h3 style="font-size:1.1rem; color:var(--navy); margin-bottom:8px; line-height:1.3;">Virage historique au Moyen-Orient&nbsp;: un cadre d&rsquo;accord avec l&rsquo;Iran &eacute;merge apr&egrave;s le blocus naval am&eacute;ricain</h3>
+                    <p style="font-size:0.88rem; color:var(--text-mid); line-height:1.5;">Le blocus a tenu. Les n&eacute;gociations ont red&eacute;marr&eacute;. Ce qu&rsquo;il faut retenir pour les d&eacute;cideurs &mdash; et ce qui vient ensuite.</p>
+                </div>
+            </div>
+
+            <!-- Iran Ports Sealed -->
+            <div style="background:var(--white); border-radius:8px; overflow:hidden; border:1px solid var(--border-light); box-shadow:0 2px 12px rgba(0,0,0,0.06);">
+                <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden;">
+                    <iframe data-src="https://www.youtube-nocookie.com/embed/8lt0DNtRYbQ?rel=0&modestbranding=1" style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                </div>
+                <div style="padding:20px;">
+                    <div style="font-size:0.75rem; font-weight:600; color:var(--gold); letter-spacing:1px; text-transform:uppercase; margin-bottom:8px;">18 avril 2026 &middot; &Eacute;nergie</div>
+                    <h3 style="font-size:1.1rem; color:var(--navy); margin-bottom:8px; line-height:1.3;">Les ports iraniens scell&eacute;s&nbsp;: ce qui se passe quand vous coupez 90&nbsp;% du commerce</h3>
+                    <p style="font-size:0.88rem; color:var(--text-mid); line-height:1.5;">Les circuits commerciaux de l&rsquo;Iran se tarissent. Un sc&eacute;nario d&rsquo;&eacute;tranglement que les march&eacute;s n&rsquo;ont pas encore int&eacute;gr&eacute;.</p>
+                </div>
+            </div>
+
+            <!-- Europe Missed This Moment -->
+            <div style="background:var(--white); border-radius:8px; overflow:hidden; border:1px solid var(--border-light); box-shadow:0 2px 12px rgba(0,0,0,0.06);">
+                <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden;">
+                    <iframe data-src="https://www.youtube-nocookie.com/embed/EzwYpJNaZg0?rel=0&modestbranding=1" style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                </div>
+                <div style="padding:20px;">
+                    <div style="font-size:0.75rem; font-weight:600; color:var(--gold); letter-spacing:1px; text-transform:uppercase; margin-bottom:8px;">18 avril 2026 &middot; Europe</div>
+                    <h3 style="font-size:1.1rem; color:var(--navy); margin-bottom:8px; line-height:1.3;">Pourquoi l&rsquo;Europe a rat&eacute; ce moment sur l&rsquo;Iran</h3>
+                    <p style="font-size:0.88rem; color:var(--text-mid); line-height:1.5;">Bruxelles a choisi le silence. Washington a agi. La le&ccedil;on strat&eacute;gique que les dirigeants europ&eacute;ens ne peuvent plus ignorer.</p>
+                </div>
+            </div>
+
+            <!-- Trump Walks Away / Blockade Begins -->
+            <div style="background:var(--white); border-radius:8px; overflow:hidden; border:1px solid var(--border-light); box-shadow:0 2px 12px rgba(0,0,0,0.06);">
+                <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden;">
+                    <iframe data-src="https://www.youtube-nocookie.com/embed/IMUfpnAbMlg?rel=0&modestbranding=1" style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                </div>
+                <div style="padding:20px;">
+                    <div style="font-size:0.75rem; font-weight:600; color:var(--gold); letter-spacing:1px; text-transform:uppercase; margin-bottom:8px;">18 avril 2026 &middot; G&eacute;opolitique</div>
+                    <h3 style="font-size:1.1rem; color:var(--navy); margin-bottom:8px; line-height:1.3;">Trump quitte les n&eacute;gociations avec l&rsquo;Iran &mdash; le blocus commence maintenant</h3>
+                    <p style="font-size:0.88rem; color:var(--text-mid); line-height:1.5;">Vingt et une heures de n&eacute;gociations &agrave; Islamabad, puis l&rsquo;ordre&nbsp;: blocus complet. Pourquoi ce moment fait pivoter la politique am&eacute;ricaine au Moyen-Orient.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div style="text-align:center; margin-top:32px;">
+            <a href="https://youtube.com/@LeCorridorIntelligence" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:8px; padding:12px 28px; background:var(--gold); color:#0E3A70; font-family:'Oswald',sans-serif; text-transform:uppercase; letter-spacing:0.14em; font-weight:600; font-size:0.9rem; text-decoration:none; border-radius:2px; transition:all 0.3s;" onmouseover="this.style.background='var(--gold-light)';this.style.transform='translateY(-2px)'" onmouseout="this.style.background='var(--gold)';this.style.transform='none'">S&rsquo;abonner sur YouTube &rarr;</a>
+        </div>
+    </div>
+</section>
+
+
+<!-- ABOUT THE SHOW -->
+<section class="about-section">
+    <div class="container">
+        <span class="section-label">&Agrave; propos de l&rsquo;&eacute;mission</span>
+        <h2>La conversation que vous n&rsquo;avez jamais l&rsquo;occasion d&rsquo;avoir</h2>
+        <p class="section-intro">La plupart des gens autour de vous ne mesurent pas ce qu&rsquo;il a fallu pour b&acirc;tir ce que vous avez b&acirc;ti. Les risques que vous avez absorb&eacute;s seul. Les d&eacute;cisions que vous avez prises quand tout le monde autour de vous devinait. Cet espace est fait pour cette conversation &mdash; avec un animateur qui a vu se prendre des d&eacute;cisions aux enjeux nationaux, et non th&eacute;oriques.</p>
+
+        <div class="about-grid">
+            <div class="about-card">
+                <h3>Un pair de l&rsquo;autre c&ocirc;t&eacute; de la table</h3>
+                <p>Votre animateur a &oelig;uvr&eacute; au Cabinet du premier ministre du Canada pendant la crise financi&egrave;re de 2008 et a &eacute;t&eacute; chef de cabinet au S&eacute;nat du Canada pendant la pand&eacute;mie de 2020. Il a &eacute;t&eacute; publi&eacute; dans Forbes, Newsweek, le National Post, le Globe and Mail et des m&eacute;dias du monde entier. Il ne pose pas de questions de surface &mdash; il pose celles que seule une personne mise &agrave; l&rsquo;&eacute;preuve sait poser.</p>
+            </div>
+            <div class="about-card">
+                <h3>Votre parcours, racont&eacute; avec gravit&eacute;</h3>
+                <p>Pas de montage de faits saillants. Pas d&rsquo;argumentaire pr&eacute;par&eacute;. Une conversation franche, entre pairs, sur les d&eacute;cisions qui ont r&eacute;ellement fa&ccedil;onn&eacute; votre carri&egrave;re &mdash; celles qui vous ont emp&ecirc;ch&eacute; de dormir et qui ont fait de vous qui vous &ecirc;tes.</p>
+            </div>
+            <div class="about-card">
+                <h3>Un auditoire qui agit</h3>
+                <p>Nos auditeurs sont des d&eacute;cideurs du monde des affaires, du gouvernement et de la vie publique &mdash; des gens qui entendent un r&eacute;cit et en font quelque chose. Vos mots atteignent des personnes qui comptent.</p>
+            </div>
+            <div class="about-card">
+                <h3>Une port&eacute;e multiplateforme</h3>
+                <p>Chaque &eacute;pisode produit de 10 &agrave; 15 courts extraits diffus&eacute;s sur LinkedIn, YouTube, Instagram, TikTok et X. Une conversation devient un actif d&rsquo;autorit&eacute; permanent sur chaque grande plateforme.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FORMAT -->
+<section>
+    <div class="container">
+        <span class="section-label">Format de l&rsquo;&eacute;pisode</span>
+        <h2>Simple et respectueux de votre temps</h2>
+        <p class="section-intro">Nous avons con&ccedil;u le format pour des dirigeants occup&eacute;s. Pas de production sur plusieurs jours. Pas de devoirs. Vous vous pr&eacute;sentez, vous avez une excellente conversation, et nous nous occupons du reste.</p>
+
+        <div class="format-grid">
+            <div class="format-item">
+                <div class="format-number">30–45</div>
+                <div class="format-label">Minutes</div>
+                <div class="format-desc">Dur&eacute;e de l&rsquo;entrevue</div>
+            </div>
+            <div class="format-item">
+                <div class="format-number">0</div>
+                <div class="format-label">Pr&eacute;paration requise</div>
+                <div class="format-desc">Appel pr&eacute;paratoire facultatif de 10 minutes</div>
+            </div>
+            <div class="format-item">
+                <div class="format-number">10–15</div>
+                <div class="format-label">Extraits produits</div>
+                <div class="format-desc">Par &eacute;pisode, toutes plateformes</div>
+            </div>
+            <div class="format-item">
+                <div class="format-number">100&nbsp;%</div>
+                <div class="format-label">&Agrave; distance</div>
+                <div class="format-desc">Enregistrement par visioconf&eacute;rence</div>
+            </div>
+            <div class="format-item">
+                <div class="format-number">Compl&egrave;te</div>
+                <div class="format-label">Production</div>
+                <div class="format-desc">Nous montons, produisons et diffusons</div>
+            </div>
+            <div class="format-item">
+                <div class="format-number">&infin;</div>
+                <div class="format-label">P&eacute;renne</div>
+                <div class="format-desc">Votre &eacute;pisode reste en ligne pour toujours</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TOPICS WE EXPLORE -->
+<section class="topics-section">
+    <div class="container">
+        <span class="section-label">Ce que nous explorons</span>
+        <h2>Les conversations qui comptent</h2>
+        <p class="section-intro">Chaque &eacute;pisode tourne autour de la m&ecirc;me question&nbsp;: quand la pression &eacute;tait &agrave; son comble, qu&rsquo;avez-vous fait &mdash; et qu&rsquo;en avez-vous appris&nbsp;?</p>
+
+        <div class="topics-grid">
+            <div class="topic-tag">La d&eacute;cision qui a tout chang&eacute;</div>
+            <div class="topic-tag">B&acirc;tir une entreprise &agrave; partir de rien</div>
+            <div class="topic-tag">Diriger dans la crise et l&rsquo;incertitude</div>
+            <div class="topic-tag">Confiance, r&eacute;putation et influence m&eacute;rit&eacute;e</div>
+            <div class="topic-tag">La transaction qui a failli vous briser</div>
+            <div class="topic-tag">Rel&egrave;ve, h&eacute;ritage et ce qui vient ensuite</div>
+            <div class="topic-tag">Les dures le&ccedil;ons de l&rsquo;&eacute;chec et du redressement</div>
+            <div class="topic-tag">Quand tout d&eacute;pend d&rsquo;une seule d&eacute;cision</div>
+        </div>
+    </div>
+</section>
+
+<!-- YOUR HOST -->
+<section class="host-section">
+    <div class="container">
+        <span class="section-label">Votre animateur</span>
+        <h2>Joseph Soares</h2>
+        <p class="section-intro">Joseph Soares a &oelig;uvr&eacute; au Cabinet du premier ministre du Canada pendant la crise financi&egrave;re de 2008 et a &eacute;t&eacute; chef de cabinet au S&eacute;nat du Canada pendant la pand&eacute;mie de 2020. Il a &eacute;t&eacute; publi&eacute; dans Forbes, Newsweek, le National Post, le Globe and Mail et des m&eacute;dias du monde entier. Il conseille aujourd&rsquo;hui un nombre restreint de dirigeants qui veulent un esprit chevronn&eacute; &agrave; leurs c&ocirc;t&eacute;s quand les enjeux sont &eacute;lev&eacute;s.</p>
+        <p class="section-intro" style="margin-top: -24px;">Il a cr&eacute;&eacute; ce balado parce que les le&ccedil;ons les plus pr&eacute;cieuses en affaires sont rarement partag&eacute;es publiquement &mdash; et que les dirigeants qui les ont acquises m&eacute;ritent une tribune qui traite leur parcours avec la gravit&eacute; qu&rsquo;il m&eacute;rite.</p>
+
+        <div class="host-credentials">
+            <div class="credential"><span class='credential-icon'>&#9733;</span> Cabinet du premier ministre (crise financi&egrave;re de 2008)</div>
+            <div class="credential"><span class='credential-icon'>&#9733;</span> Chef de cabinet, S&eacute;nat du Canada (pand&eacute;mie de 2020)</div>
+            <div class="credential"><span class='credential-icon'>&#9733;</span> Publi&eacute; dans Forbes et Newsweek</div>
+            
+        </div>
+    </div>
+</section>
+
+<!-- GUEST BENEFITS -->
+<section>
+    <div class="container">
+        <span class="section-label">Pour les invit&eacute;s potentiels</span>
+        <h2>Pourquoi les dirigeants disent oui</h2>
+        <p class="section-intro">Ce n&rsquo;est pas un argumentaire de vente. C&rsquo;est une invitation &agrave; partager votre parcours avec un auditoire qui gagnera r&eacute;ellement &agrave; l&rsquo;entendre.</p>
+
+        <ul class="benefits-list">
+            <li>
+                <span class="benefit-check">&#10003;</span>
+                <div class="benefit-text">
+                    <h4>Racontez votre parcours &agrave; un auditoire qualifi&eacute;</h4>
+                    <p>Nos auditeurs sont des d&eacute;cideurs du monde des affaires, du gouvernement et de la vie publique &mdash; des gens qui agissent sur les id&eacute;es au lieu de simplement les consommer.</p>
+                </div>
+            </li>
+            <li>
+                <span class="benefit-check">&#10003;</span>
+                <div class="benefit-text">
+                    <h4>Une conversation entre pairs, pas une s&eacute;ance de questions-r&eacute;ponses superficielle</h4>
+                    <p>Joseph a exerc&eacute; aux plus hauts niveaux du gouvernement et des affaires. Il pose les questions que les autres intervieweurs ne savent pas poser.</p>
+                </div>
+            </li>
+            <li>
+                <span class="benefit-check">&#10003;</span>
+                <div class="benefit-text">
+                    <h4>Une production professionnelle, aucun effort de votre part</h4>
+                    <p>Nous nous occupons de toute la production, du montage et de la diffusion. Vous vous pr&eacute;sentez, vous avez une conversation, et vous recevez votre &eacute;pisode termin&eacute; ainsi que les extraits.</p>
+                </div>
+            </li>
+            <li>
+                <span class="benefit-check">&#10003;</span>
+                <div class="benefit-text">
+                    <h4>Diffusion et amplification multiplateformes</h4>
+                    <p>Chaque &eacute;pisode est diffus&eacute; sur Apple Podcasts, Spotify, YouTube et toutes les grandes plateformes &mdash; plus 10 &agrave; 15 courts extraits sur LinkedIn, Instagram, TikTok et X.</p>
+                </div>
+            </li>
+            <li>
+                <span class="benefit-check">&#10003;</span>
+                <div class="benefit-text">
+                    <h4>Un actif d&rsquo;autorit&eacute; permanent</h4>
+                    <p>Votre &eacute;pisode demeure en ligne pour toujours, sous forme de contenu consultable et partageable qui renforce votre autorit&eacute; et &eacute;largit votre port&eacute;e longtemps apr&egrave;s l&rsquo;enregistrement.</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<!-- GUEST APPLICATION -->
+<section class="apply-section" id="apply">
+    <div class="container">
+        <span class="section-label">Devenir invit&eacute;</span>
+        <h2>Cette conversation est-elle pour vous&nbsp;?</h2>
+        <p class="apply-intro">Nous ne choisissons pas nos invit&eacute;s selon le nombre d&rsquo;abonn&eacute;s ou la notori&eacute;t&eacute; m&eacute;diatique. Nous invitons des dirigeants r&eacute;ellement mis &agrave; l&rsquo;&eacute;preuve &mdash; dont les d&eacute;cisions ont eu un poids r&eacute;el. Si c&rsquo;est votre parcours, parlez-nous-en.</p>
+        <form id="guest-application" novalidate style="max-width:640px; margin:8px auto 0; text-align:left;">
+            <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute; left:-9999px; width:1px; height:1px; opacity:0;">
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:16px 20px;">
+                <div style="display:flex; flex-direction:column;">
+                    <label for="ga-name" style="font-family:'Oswald',sans-serif; text-transform:uppercase; letter-spacing:0.1em; font-size:0.72rem; color:var(--navy); margin-bottom:6px;">Nom</label>
+                    <input id="ga-name" name="name" type="text" required style="width:100%; padding:12px 14px; border:1px solid rgba(10,49,97,0.25); border-radius:4px; background:#fff; color:var(--navy); font-family:'EB Garamond',serif; font-size:1rem; box-sizing:border-box;">
+                </div>
+                <div style="display:flex; flex-direction:column;">
+                    <label for="ga-email" style="font-family:'Oswald',sans-serif; text-transform:uppercase; letter-spacing:0.1em; font-size:0.72rem; color:var(--navy); margin-bottom:6px;">Courriel</label>
+                    <input id="ga-email" name="email" type="email" required style="width:100%; padding:12px 14px; border:1px solid rgba(10,49,97,0.25); border-radius:4px; background:#fff; color:var(--navy); font-family:'EB Garamond',serif; font-size:1rem; box-sizing:border-box;">
+                </div>
+                <div style="display:flex; flex-direction:column;">
+                    <label for="ga-role" style="font-family:'Oswald',sans-serif; text-transform:uppercase; letter-spacing:0.1em; font-size:0.72rem; color:var(--navy); margin-bottom:6px;">R&ocirc;le ou titre</label>
+                    <input id="ga-role" name="role" type="text" style="width:100%; padding:12px 14px; border:1px solid rgba(10,49,97,0.25); border-radius:4px; background:#fff; color:var(--navy); font-family:'EB Garamond',serif; font-size:1rem; box-sizing:border-box;">
+                </div>
+                <div style="display:flex; flex-direction:column;">
+                    <label for="ga-org" style="font-family:'Oswald',sans-serif; text-transform:uppercase; letter-spacing:0.1em; font-size:0.72rem; color:var(--navy); margin-bottom:6px;">Organisation</label>
+                    <input id="ga-org" name="organization" type="text" style="width:100%; padding:12px 14px; border:1px solid rgba(10,49,97,0.25); border-radius:4px; background:#fff; color:var(--navy); font-family:'EB Garamond',serif; font-size:1rem; box-sizing:border-box;">
+                </div>
+            </div>
+            <div style="display:flex; flex-direction:column; margin-top:16px;">
+                <label for="ga-link" style="font-family:'Oswald',sans-serif; text-transform:uppercase; letter-spacing:0.1em; font-size:0.72rem; color:var(--navy); margin-bottom:6px;">LinkedIn ou lien pertinent</label>
+                <input id="ga-link" name="link" type="text" style="width:100%; padding:12px 14px; border:1px solid rgba(10,49,97,0.25); border-radius:4px; background:#fff; color:var(--navy); font-family:'EB Garamond',serif; font-size:1rem; box-sizing:border-box;">
+            </div>
+            <div style="display:flex; flex-direction:column; margin-top:16px;">
+                <label for="ga-story" style="font-family:'Oswald',sans-serif; text-transform:uppercase; letter-spacing:0.1em; font-size:0.72rem; color:var(--navy); margin-bottom:6px;">Pourquoi vous seriez un bon invit&eacute; &mdash; et ce qui vous a mis &agrave; l&rsquo;&eacute;preuve</label>
+                <textarea id="ga-story" name="story" rows="5" required style="width:100%; padding:12px 14px; border:1px solid rgba(10,49,97,0.25); border-radius:4px; background:#fff; color:var(--navy); font-family:'EB Garamond',serif; font-size:1rem; box-sizing:border-box; resize:vertical;"></textarea>
+            </div>
+            <div style="margin-top:24px;">
+                <button type="submit" class="hero-cta" style="border:none; cursor:pointer;">Envoyer ma candidature</button>
+            </div>
+            <p style="font-family:'EB Garamond',serif; font-size:0.85rem; color:var(--text-mid); margin-top:14px;">Vos coordonn&eacute;es servent uniquement &agrave; &eacute;valuer votre candidature. Pas d&rsquo;infolettre, pas de partage.</p>
+        </form>
+        <div id="guest-application-success" style="display:none; max-width:640px; margin:8px auto 0; padding:28px; background:#fff; border:1px solid rgba(212,175,55,0.4); border-radius:6px; text-align:left;">
+            <h3 style="font-family:'Oswald',sans-serif; color:var(--navy); margin:0 0 10px;">Merci.</h3>
+            <p style="font-family:'EB Garamond',serif; color:var(--text-mid); margin:0; line-height:1.6;">Votre candidature nous est parvenue. Nous les lisons toutes et r&eacute;pondons lorsque le profil correspond.</p>
+        </div>
+    </div>
+    <script>
+    (function(){
+        var f=document.getElementById('guest-application');
+        if(!f) return;
+        f.addEventListener('submit', function(e){
+            e.preventDefault();
+            var hp=f.elements['website']; if(hp && hp.value){ return; }
+            var btn=f.querySelector('button[type=submit]');
+            var g=function(n){ return f.elements[n] ? f.elements[n].value : ''; };
+            var payload={ name:g('name'), email:g('email'), role:g('role'), organization:g('organization'), link:g('link'), story:g('story'), source:'podcast-fr.html — guest application', submitted_at:new Date().toISOString() };
+            if(btn){ btn.disabled=true; btn.textContent='Envoi en cours…'; }
+            fetch('https://hook.us2.make.com/eh1g1vsa6rdrfrg13o1lx6l8k18zyeme', { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(payload) })
+            .then(function(){ f.style.display='none'; var s=document.getElementById('guest-application-success'); if(s){ s.style.display='block'; s.scrollIntoView({behavior:'smooth', block:'center'}); } })
+            .catch(function(){ if(btn){ btn.disabled=false; btn.textContent='Envoyer ma candidature'; } alert('Une erreur est survenue lors de l\'envoi de votre candidature. Veuillez réessayer dans un instant.'); });
+        });
+    })();
+    </script>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+    <div class="container">
+        <h2>Votre parcours m&eacute;rite cette conversation.</h2>
+        <p>Nous recevons en entrevue un petit nombre de dirigeants r&eacute;ellement mis &agrave; l&rsquo;&eacute;preuve. Si c&rsquo;est votre parcours, parlez-nous-en.</p>
+        <div class="cta-buttons">
+            <a href="#apply" class="hero-cta">Devenez invit&eacute; de Corridor Intelligence &rarr;</a>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER (standard) -->
+<footer>
+  <div class="wrap">
+    <div class="disc">
+      <div class="brand" style="font-size:15px;margin-bottom:10px">Joseph <span style="color:var(--gold)">Soares</span> &amp; Co.</div>
+      <span class="copyr" style="display:block;margin-top:10px;font-style:normal;font-size:14px;letter-spacing:.02em;opacity:.8">&copy; 2026 Joseph Soares &amp; Co.</span>
+    </div>
+    <div class="soc">
+      <div class="socrow">
+        <a href="https://www.youtube.com/@corridorintelligence?sub_confirmation=1">YouTube (anglais)</a>
+        <a href="https://www.youtube.com/@LeCorridorIntelligence?sub_confirmation=1">YouTube (fran&ccedil;ais)</a>
+        <a href="https://www.linkedin.com/in/soaresjoseph/">LinkedIn</a>
+        <a href="https://x.com/JosephSoares">X</a>
+        <a href="https://www.instagram.com/soaresjoseph/">Instagram</a>
+      </div>
+      <div class="socrow socrow-legal">
+        <a href="/privacy-fr.html">Confidentialit&eacute;</a>
+        <a href="/terms-fr.html">Conditions</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Advisory Brief capture popup removed 2026-08-19: advisory is dormant. -->
+
+<!-- Advisory popup handler removed 2026-08-19 with its markup. The setLang() stub that
+     lived here is superseded by the hreflang-derived EN/FR toggle in /consent.js. -->
+
+<script>
+/* Click-to-play facades. No YouTube iframe loads until the visitor asks for one.
+   Applies the decision locked for the homepage band (RoD-2026-08-18-06) to the podcast page. */
+(function(){
+  var frames = document.querySelectorAll('iframe[data-src]');
+  Array.prototype.forEach.call(frames, function(f){
+    var box = f.parentNode;
+    if (window.getComputedStyle(box).position === 'static') { box.style.position = 'relative'; }
+    var vid = (f.getAttribute('data-src').match(/\/embed\/([a-zA-Z0-9_-]+)/) || [])[1];
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.setAttribute('aria-label', 'Lire cet épisode');
+    b.style.cssText = 'position:absolute;top:0;left:0;width:100%;height:100%;border:0;padding:0;cursor:pointer;display:flex;align-items:center;justify-content:center;background:#072244' + (vid ? (';background-image:linear-gradient(rgba(7,34,68,.35),rgba(7,34,68,.55)),url(https://i.ytimg.com/vi/' + vid + '/hqdefault.jpg);background-size:cover;background-position:center') : '');
+    b.innerHTML = '<span style="display:block;width:72px;height:72px;border:2px solid #D4AF37;border-radius:50%;position:relative;background:rgba(7,34,68,.55)"><span style="position:absolute;top:50%;left:56%;transform:translate(-50%,-50%);border-style:solid;border-width:13px 0 13px 21px;border-color:transparent transparent transparent #D4AF37"></span></span>';
+    b.addEventListener('click', function(){
+      f.src = f.getAttribute('data-src') + '&autoplay=1';
+      if (b.parentNode) { b.parentNode.removeChild(b); }
+      if (window.gtag) { window.gtag('event', 'episode_play', { page: location.pathname }); }
+    });
+    box.appendChild(b);
+  });
+})();
+</script>
+</body>
+</html>
