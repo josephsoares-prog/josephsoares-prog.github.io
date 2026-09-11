@@ -31,7 +31,7 @@ function recompute(d,todayMs,opts){
  d.ri.forEach(function(r){if(!r[6])return;var i=r[1];if(!RB[i]){RB[i]={w:0};P.forEach(function(p){RB[i][p]=0})}var w=r[6][6];RB[i].w+=w;P.forEach(function(p,k){RB[i][p]+=r[6][0][k]*w})});
  var BASE={};Object.keys(RB).forEach(function(i){BASE[i]={};P.forEach(function(p){BASE[i][p]=RB[i][p]/RB[i].w})});
  var LEGER={},ANCHOR={};
- Object.keys(d.reg).forEach(function(i){if(d.reg[i].src==="SOURCED")LEGER[i]=true;ANCHOR[i]=d.reg[i].v.slice()});
+ Object.keys(d.reg).forEach(function(i){if(d.reg[i].src==="SOURCED")LEGER[i]=true;ANCHOR[i]=(d.reg[i].a||d.reg[i].v).slice()});
  var AP=d.anchor_prov||(function(){var o={};Object.keys(d.v).forEach(function(k){o[k]=d.v[k]});return o})();
  function project(shx){
   var sw={},dr={};P.forEach(function(p){sw[p]=shx[p]-PROV22[p];dr[p]=shx[p]-AP[p]});
@@ -82,6 +82,7 @@ function recompute(d,todayMs,opts){
  if(!d.anchor_prov){d.anchor_prov={};P.forEach(function(p){d.anchor_prov[p]=d.v[p]})}
  Object.keys(d.reg).forEach(function(i){
   var t=c.tg[i];if(!t)return;
+  if(!d.reg[i].a)d.reg[i].a=d.reg[i].v.slice();
   d.reg[i].v=P.map(function(p){return _r1(t[p])});
   d.reg[i].s=P.map(function(p){return d.ri.filter(function(r){return String(r[1])===String(i)&&P[r[3]]===p}).length});
   var best=P[0];P.forEach(function(p){if(t[p]>t[best])best=p});
