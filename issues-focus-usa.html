@@ -127,4 +127,86 @@
   .teaser-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px;margin-top:10px}
   .teaser-card{background:var(--panel2);border:1px solid var(--line);border-radius:3px;padding:28px 26px;
     display:flex;flex-direction:column}
-<!--USASPLIT1-->
+  .teaser-card .tag{display:inline-block;font-family:'Oswald',sans-serif;text-transform:uppercase;
+    letter-spacing:.16em;font-size:11px;font-weight:600;color:var(--gold);border:1px solid rgba(212,175,55,.4);
+    border-radius:100px;padding:4px 12px;margin-bottom:14px;align-self:flex-start}
+  .teaser-card h3{font-family:'Oswald',sans-serif;text-transform:uppercase;font-weight:600;font-size:21px;margin-bottom:10px}
+  .teaser-card h3 a{color:var(--bone);text-decoration:none}
+  .teaser-card h3 a:hover{color:var(--gold)}
+  .teaser-card p{font-size:16px;color:var(--muted);line-height:1.6;margin-bottom:16px;flex:1}
+  .teaser-card .go{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.12em;font-size:13px;
+    font-weight:600;color:var(--bone);text-decoration:none}
+  .teaser-card .go:hover{color:var(--gold)}
+
+  footer{border-top:1px solid var(--line);padding:48px 0 64px;color:var(--muted);font-size:16px}
+  footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:22px;align-items:flex-start}
+  footer a{color:var(--muted);text-decoration:none}
+  footer .soc a{margin-left:22px}
+  footer a:hover{color:var(--gold)}
+  .disc{max-width:50ch;font-style:italic;font-size:15px;line-height:1.55}
+
+  @media(max-width:880px){
+    nav .wrap{position:relative}
+    .menutoggle{display:flex;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:10px 6px}
+    .menutoggle span{display:block;width:24px;height:2px;background:var(--bone)}
+    .navlinks{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;
+      align-items:stretch;gap:0;background:#0a2c58;border-bottom:1px solid var(--line);padding:8px 0}
+    .navlinks.open{display:flex}
+    .navlinks a{text-align:center;padding:14px 20px}
+    .navdrop{width:100%}
+    .navdrop-menu{display:block;position:static;border:0;box-shadow:none;padding:0;background:transparent}
+    .navdrop-menu a{text-align:center}
+    .hero h1{font-size:34px;max-width:100%}
+    .teaser-grid{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="/index.html" class="brand" style="text-decoration:none;color:inherit">Joseph <span>Soares</span></a>
+    <button class="menutoggle" aria-label="Menu" onclick="this.closest('nav').querySelector('.navlinks').classList.toggle('open')"><span></span><span></span><span></span></button>
+      <div class="navlinks">
+      <a href="/advisory.html">Advisory</a>
+      <div class="navdrop"><a href="/intelligence.html">Intelligence</a><div class="navdrop-menu"><a href="/brief/">Briefs</a><a href="/dispatch.html">Dispatches</a><a href="/corridor-files.html">Files</a><a href="/brief/index-dashboard.html">Index</a><a href="/issues-focus.html">Issues Focus</a></div></div>
+      <a href="/podcast.html">Podcast</a>
+      <a href="/writing.html">Writing</a>
+      <a href="/book.html">Book</a>
+      <a class="cta" href="/subscribe.html">Subscribe</a>
+    </div>
+  </div>
+</nav>
+<!-- ELECTION STRIP - time-limited. DELETE this whole block after 5 Oct 2026. -->
+<style>
+  .qcstrip{display:block;background:#D4AF37;color:#072244;text-decoration:none;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.11em;font-size:12px;font-weight:500;text-align:center;padding:11px 16px;line-height:1.45}
+  .qcstrip:hover{background:#E6C860}
+  .qcstrip b{font-weight:600}
+  .qcstrip .sep{opacity:.55;padding:0 6px}
+  @media(max-width:560px){.qcstrip{font-size:11px;letter-spacing:.08em;padding:10px 12px}.qcstrip .hide-s{display:none}}
+</style>
+<a class="qcstrip" href="/quebec2026/index-en.html"><b>Qu&eacute;bec 2026</b><span class="sep">&middot;</span>Daily seat projection<span class="sep hide-s">&middot;</span><span class="hide-s">Projection quotidienne</span><span class="sep">&middot;</span>5 Oct &rarr;</a>
+<!-- /ELECTION STRIP -->
+
+<section class="back">
+  <div class="wrap"><a href="/issues-focus.html">&larr; Back to Issues Focus</a></div>
+</section>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="tag">Superpower watch</span>
+    <h1>United States</h1>
+    <p class="updated">Last updated: <b>September 11, 2026</b> &middot; Reviewed and improved in place, not re-published as a new post</p>
+  </div>
+</section>
+
+<section class="blk">
+  <div class="wrap article">
+    <p><b>Where things stand.</b> Washington is using trade, finance and state ownership as instruments of national power under a doctrine it calls "America First." The 2025 National Security Strategy says "economic security is fundamental to national security" and names tariffs and reciprocal trade agreements as "powerful tools." On February 20 the Supreme Court closed one route: in <i>Learning Resources v. Trump</i> it held that the International Emergency Economic Powers Act (IEEPA) "does not authorize the President to impose tariffs." The White House said the same day that the "overall direction of travel" would not change, and it has rebuilt the tariff regime law by law. A 10% surcharge under Section 122 of the Trade Act, imposed for 150 days from February 24, was set to expire on July 24. On July 23 the US Trade Representative (USTR) imposed Section 301 duties of 10% or 12.5% on 60 economies, tied to bans on goods made with forced labor. Section 232 national-security duties keep widening: up to 100% on drones from September 3, and 15% on polysilicon derivatives from December 4. Under Section 338, 50% duties on nearly $20 billion of Canadian imports took effect on August 22. The state is also taking equity: on August 31 the White House announced a 35% Department of War stake in the parent of a private oil company holding 100-year concessions on 17 Venezuelan fields.</p>
+
+        <h4>The decision points</h4>
+        <p>First, Canada. USTR says Canada "walked away from a near-final trade deal"; Canada then placed retaliatory tariffs on about $20 billion of US exports. On September 8 the President imposed import bans on certain Canadian alcohol, dairy and other products, effective September 29. The USMCA, the North American trade agreement, was not renewed on July 1 but "remains in force." Second, the fiscal cost of the court ruling. The Congressional Budget Office (CBO) puts the effective tariff rate at 10%, against 2% in 2024. It expects most of the $166 billion collected under IEEPA to be refunded in fiscal 2026. Treasury recorded $125.2 billion in customs refunds in the eleven months to August, leaving net receipts of $167.3 billion. CBO projects that trade-policy changes through July 31 add $0.9 trillion to deficits over 2027–2036. Third, interest rates. On July 29 the Federal Reserve, chaired by Kevin Warsh, held its target range at 3.5% to 3.75%; three members dissented, preferring a rise. The minutes record that "many participants" judged tightening "would likely be necessary if inflation did not decline." The rate-setting committee meets again on September 15–16.</p>
+
+        <h4>Who holds the leverage</h4>
+        <p>The executive holds the initiative; USTR says the United States currently has 19 framework or reciprocal trade deals covering 32% of world output. Washington's stated case is a "$1.2 trillion trade deficit" and an industrial base "too atrophied to support our national security." Institutional research finds costs at home: New York Fed economists found that nearly 90% of the economic burden of the 2025 tariffs fell on US firms and consumers. In January, Pew found that 60% of Americans disapproved of the tariff increases. The courts are a further check: the Congressional Research Service notes that earlier Section 301 actions "typically addressed conduct by a single foreign country," and that challengers may call a 60-economy use "transformational." Congress also uses trade as a sanctions tool: on August 7 the Senate passed a Russia sanctions bill 86–11, after rejecting, 64–32, an amendment to strike its duties on countries that buy Russian crude oil or natural gas.</p>
+<!--USASPLIT2-->
