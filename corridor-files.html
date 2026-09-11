@@ -166,6 +166,16 @@ main a{color:#D4AF37}
 .cf-table{width:100%;border-collapse:collapse;font-size:16px}
 .cf-table th{font-family:'Oswald',sans-serif;text-transform:uppercase;font-size:12px;letter-spacing:.1em;color:#D4AF37;text-align:left;padding:10px 8px;border-bottom:1px solid rgba(212,175,55,.4)}
 .cf-table td{padding:10px 8px;border-bottom:1px solid rgba(242,239,233,.1);vertical-align:top}
+.cf-search-bar{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin:18px 0 14px;padding:14px 16px;background:rgba(14,58,112,.35);border:1px solid rgba(212,175,55,.25);border-radius:6px}
+.cf-search-label{font-family:'Oswald',sans-serif;text-transform:uppercase;font-size:11px;letter-spacing:.09em;color:#D4AF37;white-space:nowrap}
+.cf-search-input,.cf-search-select{background:#072244;color:#F2EFE9;border:1px solid rgba(242,239,233,.25);border-radius:4px;padding:7px 10px;font-size:15px;font-family:inherit}
+.cf-search-input{flex:1 1 220px;min-width:180px}
+.cf-search-select{flex:0 1 200px}
+.cf-search-input:focus,.cf-search-select:focus{outline:2px solid #D4AF37;outline-offset:1px}
+#cf-search-count{color:#A9A39A;font-size:13px;margin-left:auto}
+.cf-row-hidden{display:none}
+@media(max-width:560px){.cf-search-bar{flex-direction:column;align-items:stretch}.cf-search-select{flex:1 1 auto}#cf-search-count{margin-left:0}}
+
 .cf-note{font-size:15px;color:rgba(242,239,233,.7)}
 .cf-cta{display:inline-block;background:#D4AF37;color:#0A3161;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.1em;font-weight:600;padding:13px 26px;border-radius:2px;text-decoration:none;margin-top:8px}
 .cf-badge{display:inline-block;font-family:'Oswald',sans-serif;font-size:10px;letter-spacing:.14em;font-weight:600;color:#0A3161;background:#D4AF37;padding:3px 9px;border-radius:3px;text-transform:uppercase;margin-right:6px}
@@ -217,7 +227,16 @@ blockquote{border-left:3px solid #D4AF37;margin:18px 0;padding:4px 0 4px 18px;fo
 
 <h2>The Registry — launch records</h2>
 <p class="cf-note" id="cf-updated">Last updated: September 8, 2026</p>
-<table class="cf-table">
+<div class="cf-search-bar">
+  <label for="cf-search-input" class="cf-search-label">Search by name or role</label>
+  <input type="text" id="cf-search-input" class="cf-search-input" placeholder="e.g. “Byrne” or “Chief of Staff”" autocomplete="off">
+  <label for="cf-party-filter" class="cf-search-label">Party</label>
+  <select id="cf-party-filter" class="cf-search-select">
+    <option value="">All parties</option>
+  </select>
+  <span id="cf-search-count" class="cf-note" role="status" aria-live="polite"></span>
+</div>
+<table class="cf-table" id="cf-registry">
 <tr><th>Name</th><th>Current role</th><th>Party</th><th>Status</th></tr>
 <tr><td>Steve Outhouse</td><td>Chief of Staff, OLO; National Campaign Manager <a href="https://www.cbc.ca/news/politics/poilievre-chief-of-staff-9.7205323" rel="noopener">[CBC]</a></td><td>CPC</td><td>Active</td></tr>
 <tr><td>Kory Teneycke</td><td>Principal, Rubicon Strategy; campaign strategist <a href="https://www.nationalobserver.com/2026/07/09/news/bc-conservative-candidate-tells-poilievre-unite-not-divide-after-stampede-jab" rel="noopener">[National Observer]</a></td><td>CPC networks</td><td>Active</td></tr>
@@ -313,5 +332,53 @@ blockquote{border-left:3px solid #D4AF37;margin:18px 0;padding:4px 0 4px 18px;fo
 </footer>
 
 <script defer src="https://cdn.jsdelivr.net/ghost/portal@~2.69/umd/portal.min.js" data-ghost="https://brief.josephsoares.com/" data-api="https://brief.josephsoares.com/ghost/api/content/" data-key="ece73de31b60c5a2769ba56ee4" crossorigin="anonymous"></script>
+<script>
+(function(){
+  var table = document.getElementById('cf-registry');
+  if(!table) return;
+  var rows = Array.prototype.slice.call(table.querySelectorAll('tr')).slice(1); // skip header row
+  var searchInput = document.getElementById('cf-search-input');
+  var partySelect = document.getElementById('cf-party-filter');
+  var countEl = document.getElementById('cf-search-count');
+
+  // Populate party filter from the distinct values actually in the Party column (3rd cell)
+  var parties = [];
+  rows.forEach(function(row){
+    var cell = row.cells[2];
+    if(!cell) return;
+    var val = cell.textContent.trim();
+    if(val && parties.indexOf(val) === -1) parties.push(val);
+  });
+  parties.sort();
+  parties.forEach(function(p){
+    var opt = document.createElement('option');
+    opt.value = p; opt.textContent = p;
+    partySelect.appendChild(opt);
+  });
+
+  function normalize(s){ return (s || '').toLowerCase(); }
+
+  function applyFilter(){
+    var q = normalize(searchInput.value);
+    var party = partySelect.value;
+    var visible = 0;
+    rows.forEach(function(row){
+      var nameCell = normalize(row.cells[0] ? row.cells[0].textContent : '');
+      var roleCell = normalize(row.cells[1] ? row.cells[1].textContent : '');
+      var partyCell = row.cells[2] ? row.cells[2].textContent.trim() : '';
+      var matchesQuery = !q || nameCell.indexOf(q) !== -1 || roleCell.indexOf(q) !== -1;
+      var matchesParty = !party || partyCell === party;
+      var show = matchesQuery && matchesParty;
+      row.classList.toggle('cf-row-hidden', !show);
+      if(show) visible++;
+    });
+    countEl.textContent = visible + ' of ' + rows.length + ' shown';
+  }
+
+  searchInput.addEventListener('input', applyFilter);
+  partySelect.addEventListener('change', applyFilter);
+  applyFilter();
+})();
+</script>
 </body>
 </html>
