@@ -64,7 +64,9 @@ for r in d["ri"]:
 BASE = {i: {p: a[p] / a["w"] for p in P} for i, a in RB.items()}
 
 LEGER = {int(i): v for i, v in d["reg"].items() if v["src"] == "SOURCED"}
-ANCHOR = {int(i): list(v["v"]) for i, v in d["reg"].items()}
+# Regional anchors live in "a" and are never overwritten; "v" is output only.
+# (Reading anchors back from "v" double-counted drift on every re-run.)
+ANCHOR = {int(i): list(v.get("a") or v["v"]) for i, v in d["reg"].items()}
 # Provincial vote at the moment the Leger regional anchors were set. Sourced
 # regions move by drift from this, so simulated draws propagate into them.
 ANCHOR_PROV = d.get("anchor_prov") or dict(d["v"])
@@ -159,6 +161,7 @@ d["s"] = seats
 for i, v in d["reg"].items():
     t = tg.get(int(i))
     if t:
+        v.setdefault("a", list(v["v"]))
         v["v"] = [round(t[p], 1) for p in P]
         v["s"] = [sum(1 for r in d["ri"] if r[1] == int(i) and P[r[3]] == p) for p in P]
         v["l"] = P.index(max(P, key=lambda p: t[p]))
