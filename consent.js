@@ -108,34 +108,36 @@
     '<div class="wrap">' +
     '<div class="disc"><div class="brand" style="font-size:15px;margin-bottom:10px">Joseph <span style="color:var(--gold)">Soares</span> &amp; Co.</div>' +
     '<span style="display:block;margin-top:10px;font-style:normal;font-size:14px;letter-spacing:.02em;opacity:.8">&copy; 2026 Joseph Soares &amp; Co.</span></div>' +
-    '<div class="soc">' +
-    '<a href="/book.html">Book</a>' +
-    '<a href="/subscribe.html">Subscribe</a>' +
-    '<a href="/call.html">Book a Call</a>' +
-    '<a href="/privacy.html" style="margin-left:22px">Privacy</a>' +
-    '<a href="/terms.html">Terms</a>' +
-    '<a href="https://www.youtube.com/@corridorintelligence?sub_confirmation=1" style="margin-left:22px" title="Corridor Intelligence &mdash; English channel">YouTube (EN)</a>' +
+    '<div class="soc ci-soc">' +
+    '<div class="ci-socrow">' +
+    '<a href="https://www.youtube.com/@corridorintelligence?sub_confirmation=1" title="Corridor Intelligence &mdash; English channel">YouTube (EN)</a>' +
     '<a href="https://www.youtube.com/@LeCorridorIntelligence?sub_confirmation=1" title="Le Corridor Intelligence &mdash; cha&icirc;ne fran&ccedil;aise">YouTube (FR)</a>' +
     '<a href="https://www.linkedin.com/in/soaresjoseph/">LinkedIn</a>' +
     '<a href="https://x.com/JosephSoares">X</a>' +
     '<a href="https://www.instagram.com/soaresjoseph/">Instagram</a>' +
+    '</div>' +
+    '<div class="ci-socrow">' +
+    '<a href="/privacy.html">Privacy</a>' +
+    '<a href="/terms.html">Terms</a>' +
+    '</div>' +
     '</div></div>';
 
   var FOOTER_HTML_FR =
     '<div class="wrap">' +
     '<div class="disc"><div class="brand" style="font-size:15px;margin-bottom:10px">Joseph <span style="color:var(--gold)">Soares</span> &amp; Co.</div>' +
     '<span style="display:block;margin-top:10px;font-style:normal;font-size:14px;letter-spacing:.02em;opacity:.8">&copy; 2026 Joseph Soares &amp; Co.</span></div>' +
-    '<div class="soc">' +
-    '<a href="/livre.html">Livre</a>' +
-    '<a href="/abonnement.html">S&rsquo;abonner</a>' +
-    '<a href="/appel.html">Planifier un appel</a>' +
-    '<a href="/privacy.html" style="margin-left:22px">Confidentialit&eacute;</a>' +
-    '<a href="/terms.html">Conditions</a>' +
-    '<a href="https://www.youtube.com/@LeCorridorIntelligence?sub_confirmation=1" style="margin-left:22px" title="Le Corridor Intelligence &mdash; cha&icirc;ne fran&ccedil;aise">YouTube (fran&ccedil;ais)</a>' +
+    '<div class="soc ci-soc">' +
+    '<div class="ci-socrow">' +
+    '<a href="https://www.youtube.com/@LeCorridorIntelligence?sub_confirmation=1" title="Le Corridor Intelligence &mdash; cha&icirc;ne fran&ccedil;aise">YouTube (fran&ccedil;ais)</a>' +
     '<a href="https://www.youtube.com/@corridorintelligence?sub_confirmation=1" title="Corridor Intelligence &mdash; English channel">YouTube (anglais)</a>' +
     '<a href="https://www.linkedin.com/in/soaresjoseph/">LinkedIn</a>' +
     '<a href="https://x.com/JosephSoares">X</a>' +
     '<a href="https://www.instagram.com/soaresjoseph/">Instagram</a>' +
+    '</div>' +
+    '<div class="ci-socrow">' +
+    '<a href="/privacy.html">Confidentialit&eacute;</a>' +
+    '<a href="/terms.html">Conditions</a>' +
+    '</div>' +
     '</div></div>';
 
   /* Language toggle. Derived from the hreflang alternates already in <head>,
@@ -160,13 +162,29 @@
            '" title="' + title + '" aria-label="' + title + '">' + label + '</a>';
   }
 
+
+  /* Two-line footer link block. Injected here so every page picks it up
+     without a per-page CSS edit. */
+  function footerCSS() {
+    if (document.getElementById("ci-footcss")) return;
+    var st = document.createElement("style");
+    st.id = "ci-footcss";
+    st.textContent =
+      "footer .ci-soc{display:flex;flex-direction:column;align-items:flex-end;gap:12px}" +
+      "footer .ci-socrow{display:flex;flex-wrap:wrap;gap:22px;justify-content:flex-end}" +
+      "footer .ci-soc a{margin-left:0}" +
+      "@media(max-width:880px){footer .ci-soc{align-items:center;width:100%}" +
+      "footer .ci-socrow{justify-content:center;gap:18px}}";
+    document.head.appendChild(st);
+  }
+
   function run() {
     var navlinks = document.querySelector(".navlinks");
     if (navlinks) { navlinks.innerHTML = (IS_FR ? NAV_HTML_FR : NAV_HTML) + toggleHTML(); }
 
     var footers = document.querySelectorAll("footer");
     var footer = footers.length ? footers[footers.length - 1] : null;
-    if (footer) { footer.innerHTML = IS_FR ? FOOTER_HTML_FR : FOOTER_HTML; }
+    if (footer) { footerCSS(); footer.innerHTML = IS_FR ? FOOTER_HTML_FR : FOOTER_HTML; }
   }
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", run);
