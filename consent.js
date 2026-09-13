@@ -94,9 +94,9 @@
 
   var NAV_HTML_FR =
     '<div class="navdrop"><a href="/intelligence.html">Intelligence</a><div class="navdrop-menu">' +
-    '<a href="/brief/">Breffage Corridor</a><a href="/dispatch.html">D&eacute;p&ecirc;ches</a>' +
+    '<a href="/brief/">Breffages</a><a href="/dispatch.html">D&eacute;p&ecirc;ches</a>' +
     '<a href="/corridor-files.html">Dossiers</a><a href="/brief/index-dashboard.html">Index</a>' +
-    '<a href="/issues-focus.html">Dossiers th&eacute;matiques</a></div></div>' +
+    '<a href="/issues-focus-fr.html">Enjeux</a></div></div>' +
     '<a href="/podcast.html">Balado</a>' +
     '<a href="/writing.html">&Eacute;crits</a>' +
     '<a href="/stewardship-fr.html">Intendance</a>' +
