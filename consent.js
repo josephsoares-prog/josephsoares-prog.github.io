@@ -99,6 +99,7 @@
     '<a href="/issues-focus.html">Dossiers th&eacute;matiques</a></div></div>' +
     '<a href="/podcast.html">Balado</a>' +
     '<a href="/writing.html">&Eacute;crits</a>' +
+    '<a href="/stewardship-fr.html">Intendance</a>' +
     '<a href="/conferences.html">Conf&eacute;rences</a>' +
     '<a href="/media-fr.html">M&eacute;dias</a>' +
     '<a href="/livre.html">Livre</a>' +
