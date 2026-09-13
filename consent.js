@@ -192,7 +192,7 @@
 
   function run() {
     var navlinks = document.querySelector(".navlinks");
-    if (navlinks) { navlinks.innerHTML = (IS_FR ? NAV_HTML_FR : NAV_HTML) + toggleHTML(); }
+    if (navlinks) { navCSS(); navlinks.innerHTML = (IS_FR ? NAV_HTML_FR : NAV_HTML) + toggleHTML(); }
 
     var footers = document.querySelectorAll("footer");
     var footer = footers.length ? footers[footers.length - 1] : null;
