@@ -170,6 +170,18 @@
     var st = document.createElement("style");
     st.id = "ci-footcss";
     st.textContent =
+      /* Dropdown nav styling. The nav markup above is injected at runtime, so any page
+         that never carried .navdrop rules in its own inline <style> rendered the
+         Intelligence submenu inline and unstyled. Shipping the rules alongside the nav
+         that needs them keeps the two from drifting apart again. Added 2026-09-13. */
+      ".navdrop{position:relative}" +
+      ".navdrop-menu{display:none;position:absolute;top:100%;left:0;background:var(--panel2,#072244);" +
+      "border:1px solid var(--line,rgba(242,239,233,.12));border-radius:3px;padding:10px 0;min-width:150px;z-index:30}" +
+      ".navdrop:hover .navdrop-menu,.navdrop:focus-within .navdrop-menu{display:block}" +
+      ".navdrop-menu a{display:block;padding:8px 18px;white-space:nowrap}" +
+      "@media(max-width:880px){.navdrop{width:100%}" +
+      ".navdrop-menu{display:block;position:static;border:0;box-shadow:none;padding:0;background:transparent}" +
+      ".navdrop-menu a{text-align:center}}" +
       "footer .ci-soc{display:flex;flex-direction:column;align-items:flex-end;gap:12px}" +
       "footer .ci-socrow{display:flex;flex-wrap:wrap;gap:22px;justify-content:flex-end}" +
       "footer .ci-soc a{margin-left:0}" +
