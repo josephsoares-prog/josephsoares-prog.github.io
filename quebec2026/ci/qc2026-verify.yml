@@ -1,0 +1,88 @@
+name: qc2026-verify
+
+# Gate on the Quebec 2026 seat-projection tracker.
+#
+# STAGED, NOT ACTIVE. This file must live at .github/workflows/qc2026-verify.yml
+# to run. It is here because the automation's GitHub token lacks the 'workflow'
+# scope and cannot write into .github/workflows/. To arm it:
+#
+#   git mv quebec2026/ci/qc2026-verify.yml .github/workflows/qc2026-verify.yml
+#   git commit -m 'Arm the qc2026 CI gate' && git push
+#
+# The daily poll-update task is unattended: it finds a new poll, appends it to
+# quebec2026/data.json on a branch, opens a PR and merges it. This workflow is
+# what makes that safe. It is the check, not the task's own account of itself,
+# so a confused run cannot talk its way past it.
+#
+# Order matters: the diff-scope check runs before daily.py, because daily.py
+# rewrites data.json in the workspace.
+#
+# Uses the GITHUB_* environment variables Actions sets automatically rather
+# than expression syntax, so the file survives being written through tooling
+# that does its own template interpolation.
+
+on:
+  pull_request:
+    paths:
+      - 'quebec2026/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Diff touches nothing outside quebec2026/
+        run: |
+          if [ "$GITHUB_EVENT_NAME" != "pull_request" ]; then
+            echo "not a pull request; skipping diff scope check"
+            exit 0
+          fi
+          git fetch origin "$GITHUB_BASE_REF" --quiet
+          changed=$(git diff --name-only "origin/$GITHUB_BASE_REF...HEAD")
+          echo "changed files:"; echo "$changed"
+          outside=$(echo "$changed" | grep -v '^quebec2026/' | grep -v '^$' || true)
+          if [ -n "$outside" ]; then
+            echo "FAILED: this PR touches files outside quebec2026/:"
+            echo "$outside"
+            exit 1
+          fi
+
+      - name: Poll input checks
+        run: python3 quebec2026/check_polls.py
+
+      - name: Recompute projection
+        run: python3 quebec2026/daily.py
+
+      - name: Output checks
+        run: |
+          out=$(python3 quebec2026/verify.py)
+          echo "$out"
+          echo "$out" | grep -q 'checks passed' || {
+            echo "FAILED: verify.py did not report 'checks passed'"; exit 1; }
+
+      - name: Recompute is deterministic
+        run: |
+          # daily.py seeds its RNG, so a second run over the same input must
+          # land on the same seat numbers. If it does not, the projection is
+          # not reproducible and must not publish.
+          a=$(python3 quebec2026/verify.py)
+          python3 quebec2026/daily.py >/dev/null
+          b=$(python3 quebec2026/verify.py)
+          if [ "$a" != "$b" ]; then
+            echo "FAILED: projection is not reproducible"
+            echo "first:  $a"
+            echo "second: $b"
+            exit 1
+          fi
+          echo "reproducible: $b"
