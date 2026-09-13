@@ -163,9 +163,10 @@
   }
 
 
-  /* Two-line footer link block. Injected here so every page picks it up
-     without a per-page CSS edit. */
-  function footerCSS() {
+  /* CSS for the chrome this script injects — the dropdown nav and the two-line
+     footer link block. Injected here so every page picks it up without a
+     per-page CSS edit. Idempotent: guarded on its own element id. */
+  function navCSS() {
     if (document.getElementById("ci-footcss")) return;
     var st = document.createElement("style");
     st.id = "ci-footcss";
