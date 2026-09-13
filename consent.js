@@ -197,7 +197,7 @@
 
     var footers = document.querySelectorAll("footer");
     var footer = footers.length ? footers[footers.length - 1] : null;
-    if (footer) { footerCSS(); footer.innerHTML = IS_FR ? FOOTER_HTML_FR : FOOTER_HTML; }
+    if (footer) { navCSS(); footer.innerHTML = IS_FR ? FOOTER_HTML_FR : FOOTER_HTML; }
   }
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", run);
