@@ -209,9 +209,17 @@ function render(){
   var dk=Object.keys(perDay).sort();
   var mxd=Math.max.apply(null,dk.map(function(d){return perDay[d];}).concat([1]));
   var cols='<section class="block"><h2 class="sec">'+T.momentum[LANG]+'<span>'+T.momentumSub[LANG]+'</span></h2><div class="cols">';
-  dk.forEach(function(d){
+  // Axis labels thin out as the range grows. Up to a fortnight every edition is
+  // labelled; beyond that only the first edition of each month and the most recent
+  // one, so the labels stop overprinting each other. Every column still carries its
+  // full date and count in the hover tooltip, and the label band keeps a fixed
+  // height so labelled and unlabelled columns share the same baseline.
+  var labelAll=dk.length<=14, lastMo='';
+  dk.forEach(function(d,i){
     var h=Math.round(perDay[d]/mxd*150)+10;
-    cols+='<div class="colwrap"><div class="col" style="height:'+h+'px"><span class="cv">'+perDay[d]+'</span></div><div class="collabel">'+fmtDate(d)+'</div></div>';
+    var mo=d.slice(0,7), newMo=(mo!==lastMo); lastMo=mo;
+    var show=labelAll||newMo||i===dk.length-1;
+    cols+='<div class="colwrap" title="'+fmtDate(d)+' — '+perDay[d]+'"><div class="col" style="height:'+h+'px"><span class="cv">'+perDay[d]+'</span></div><div class="collabel">'+(show?fmtDate(d):'')+'</div></div>';
   });
   cols+='</div></section>';
   dash.innerHTML=kpis+leadHtml+mid+cols;
