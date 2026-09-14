@@ -426,7 +426,7 @@ document.head.appendChild(o)}initApollo();</script>
 <section class="author-bio">
     <div class="author-bio-title">About the Author</div>
     <div class="author-bio-text">
-        <p><strong>Joseph Soares</strong> is the Managing Partner of Joseph Soares &amp; Co. and a senior advisor on crisis leadership, political strategy, and government relations. He served in the Prime Minister's Office during the 2008 global financial crisis and served as Chief of Staff at the Senate of Canada during the COVID-19 pandemic. He has been published in <em>Forbes</em> and <em>Newsweek</em>.</p>
+        <p><strong>Joseph Soares</strong> is the Managing Partner of Joseph Soares &amp; Co. and a senior advisor on crisis leadership, political strategy, and government relations. He served in the Prime Minister's Office during the 2008 global financial crisis and served as Chief of Staff in the Senate of Canada during the COVID-19 pandemic. He has been published in <em>Forbes</em> and <em>Newsweek</em>.</p>
         <p>Follow his daily analysis at <a href="/intelligence.html">Corridor Intelligence</a> or <a href="/call.html">schedule a consultation</a>.</p>
     </div>
 </section>
@@ -482,7 +482,7 @@ document.head.appendChild(o)}initApollo();</script>
     });
     function openEmailPopup() { document.getElementById('emailPopupOverlay').classList.add('active'); }
     function closeEmailPopup() { document.getElementById('emailPopupOverlay').classList.remove('active'); }
-    function handleEmailSubmit(e) { e.preventDefault(); alert('Thank you for subscribing!'); closeEmailPopup(); }
+    function handleEmailSubmit(e) { e.preventDefault(); window.location.href='/subscribe.html'; }
     document.querySelectorAll('.btn-advisory-brief, .nav-cta').forEach(btn => { btn.addEventListener('click', function(e) { e.preventDefault(); openEmailPopup(); }); });
 </script>
 
