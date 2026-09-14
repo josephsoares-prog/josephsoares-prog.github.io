@@ -189,6 +189,22 @@
       "footer .ci-soc a{margin-left:0}" +
       "@media(max-width:880px){footer .ci-soc{align-items:center;width:100%}" +
       "footer .ci-socrow{justify-content:center;gap:18px}}" +
+      /* Mobile nav collapse — added 2026-09-14. The nav markup is injected at runtime, but the CSS
+         that collapses it behind the hamburger below 880px lived only in each page's own inline
+         <style>. Pages that never carried it rendered the full nav as a ~1300px flex row and blew
+         the page out sideways on every phone — sprint-30-jours.html overflowed by 978px,
+         media-fr.html by 732px. Shipping the rules with the nav that needs them is the same fix
+         as the dropdown CSS above, and it covers pages that do not exist yet. */
+      "@media(max-width:880px){" +
+      "nav .wrap{position:relative}" +
+      ".menutoggle{display:flex;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:10px 6px}" +
+      ".menutoggle span{display:block;width:24px;height:2px;background:var(--bone,#F2EFE9)}" +
+      ".navlinks{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;" +
+      "gap:0;background:var(--panel2,#0a2c58);border-bottom:1px solid var(--line,rgba(242,239,233,.12));padding:8px 0}" +
+      ".navlinks.open{display:flex}" +
+      ".navlinks a{text-align:center;padding:14px 20px}}" +
+      /* A table wider than the screen is the other common cause of sideways scroll. */
+      ".ci-tscroll{overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%}" +
       /* Mobile language pill — added 2026-09-14. The language toggle is rendered
          into .navlinks, which collapses behind the hamburger below 880px, so on a
          phone the FR/EN control was invisible until the reader opened the menu and
