@@ -251,13 +251,13 @@
     if (old && old.parentNode) old.parentNode.removeChild(old);
     var html = toggleHTML();
     if (!html) return;
-    navCSS();
+    langCSS();
     var holder = document.createElement("div");
     holder.innerHTML = html;
     var a = holder.firstChild;
     if (!a) return;
-    a.className = "lang ci-langmob";
-    var burger = wrap.querySelector(".menutoggle");
+    a.className = "lang ci-langmob" + (KEEP_OWN_CHROME ? " ci-langalways" : "");
+    var burger = wrap.querySelector(".menutoggle,.bkburger");
     if (burger) wrap.insertBefore(a, burger); else wrap.appendChild(a);
     if (document.body) document.body.className += " ci-langmob-on";
   }
@@ -270,6 +270,7 @@
       t = ts[i]; host = t.parentNode;
       if (!host || host.className === "ci-tscroll") continue;
       if (t.scrollWidth <= host.clientWidth + 2) continue;
+      langCSS();
       d = document.createElement("div"); d.className = "ci-tscroll";
       host.insertBefore(d, t); d.appendChild(t);
     }
@@ -277,14 +278,14 @@
 
   function run() {
     var navlinks = document.querySelector(".navlinks");
-    if (navlinks) { navCSS(); navlinks.innerHTML = (IS_FR ? NAV_HTML_FR : NAV_HTML) + toggleHTML(); }
+    if (navlinks && !KEEP_OWN_CHROME) { navCSS(); navlinks.innerHTML = (IS_FR ? NAV_HTML_FR : NAV_HTML) + toggleHTML(); }
 
     mountMobileToggle();
     wrapWideTables();
 
     var footers = document.querySelectorAll("footer");
     var footer = footers.length ? footers[footers.length - 1] : null;
-    if (footer) { navCSS(); footer.innerHTML = IS_FR ? FOOTER_HTML_FR : FOOTER_HTML; }
+    if (footer && !KEEP_OWN_CHROME) { navCSS(); footer.innerHTML = IS_FR ? FOOTER_HTML_FR : FOOTER_HTML; }
   }
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", run);
