@@ -205,6 +205,27 @@
     document.head.appendChild(st);
   }
 
+  /* Mounts a second copy of the language toggle as a direct child of nav .wrap,
+     ahead of the hamburger button, so it is visible on a phone without opening
+     the menu. The CSS above shows exactly one of the two at any width, and the
+     whole thing renders nothing on a page with no declared twin. */
+  function mountMobileToggle() {
+    var wrap = document.querySelector("nav .wrap");
+    if (!wrap) return;
+    var old = wrap.querySelector(".ci-langmob");
+    if (old && old.parentNode) old.parentNode.removeChild(old);
+    var html = toggleHTML();
+    if (!html) return;
+    navCSS();
+    var holder = document.createElement("div");
+    holder.innerHTML = html;
+    var a = holder.firstChild;
+    if (!a) return;
+    a.className = "lang ci-langmob";
+    var burger = wrap.querySelector(".menutoggle");
+    if (burger) wrap.insertBefore(a, burger); else wrap.appendChild(a);
+  }
+
   function run() {
     var navlinks = document.querySelector(".navlinks");
     if (navlinks) { navCSS(); navlinks.innerHTML = (IS_FR ? NAV_HTML_FR : NAV_HTML) + toggleHTML(); }
