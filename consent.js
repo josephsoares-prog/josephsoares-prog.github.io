@@ -245,7 +245,11 @@
      the menu. The CSS above shows exactly one of the two at any width, and the
      whole thing renders nothing on a page with no declared twin. */
   function mountMobileToggle() {
-    var wrap = document.querySelector("nav .wrap");
+    /* A few pages carry a <header> instead of a <nav>. The imprint pages are the pair that
+       matters: corridor-house.html and maison-corridor.html each declared the other and
+       still had no way to reach it, because there was no nav to hang the control on.
+       Fall back to the header's wrap so they get the control too. */
+    var wrap = document.querySelector("nav .wrap") || document.querySelector("header .wrap");
     if (!wrap) return;
     var old = wrap.querySelector(".ci-langmob");
     if (old && old.parentNode) old.parentNode.removeChild(old);
@@ -256,7 +260,10 @@
     holder.innerHTML = html;
     var a = holder.firstChild;
     if (!a) return;
-    a.className = "lang ci-langmob" + (KEEP_OWN_CHROME ? " ci-langalways" : "");
+    /* Show the pill at every width whenever this is the only copy of the toggle on the
+       page: a page that keeps its own nav, or one with no .navlinks menu to hold the other. */
+    var soleCopy = KEEP_OWN_CHROME || !document.querySelector(".navlinks");
+    a.className = "lang ci-langmob" + (soleCopy ? " ci-langalways" : "");
     var burger = wrap.querySelector(".menutoggle,.bkburger");
     if (burger) wrap.insertBefore(a, burger); else wrap.appendChild(a);
     if (document.body) document.body.className += " ci-langmob-on";
