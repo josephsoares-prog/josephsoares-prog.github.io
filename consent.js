@@ -224,6 +224,7 @@
     a.className = "lang ci-langmob";
     var burger = wrap.querySelector(".menutoggle");
     if (burger) wrap.insertBefore(a, burger); else wrap.appendChild(a);
+    if (document.body) document.body.className += " ci-langmob-on";
   }
 
   function run() {
