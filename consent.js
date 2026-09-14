@@ -75,7 +75,12 @@
 (function () {
   "use strict";
   var PATH = location.pathname.replace(/^\/+/, "");
-  if (PATH === "book.html" || PATH === "livre.html") return;
+  /* book.html / livre.html keep their own two-link nav and footer (RoD-2026-08-18,
+     do-not-touch). Until 2026-09-14 that was an outright return, which also skipped
+     the language toggle — so the one pair on the site that matters most commercially
+     was the only pair with no way to switch language. The flag now scopes the
+     exemption to the nav and footer rewrite, which is what the decision was about. */
+  var KEEP_OWN_CHROME = (PATH === "book.html" || PATH === "livre.html");
 
   var LANG = (document.documentElement.getAttribute("lang") || "en").toLowerCase();
   var IS_FR = LANG.indexOf("fr") === 0;
