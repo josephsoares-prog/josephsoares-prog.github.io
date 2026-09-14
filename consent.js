@@ -243,6 +243,19 @@
     if (document.body) document.body.className += " ci-langmob-on";
   }
 
+  /* A table wider than its container makes the whole page scroll sideways. Wrap it so the
+     table scrolls inside its own box instead. Idempotent: guarded on the wrapper's class. */
+  function wrapWideTables() {
+    var ts = document.querySelectorAll("table"), i, t, host, d;
+    for (i = 0; i < ts.length; i++) {
+      t = ts[i]; host = t.parentNode;
+      if (!host || host.className === "ci-tscroll") continue;
+      if (t.scrollWidth <= host.clientWidth + 2) continue;
+      d = document.createElement("div"); d.className = "ci-tscroll";
+      host.insertBefore(d, t); d.appendChild(t);
+    }
+  }
+
   function run() {
     var navlinks = document.querySelector(".navlinks");
     if (navlinks) { navCSS(); navlinks.innerHTML = (IS_FR ? NAV_HTML_FR : NAV_HTML) + toggleHTML(); }
