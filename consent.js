@@ -207,7 +207,19 @@
       ".navlinks{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;" +
       "gap:0;background:var(--panel2,#0a2c58);border-bottom:1px solid var(--line,rgba(242,239,233,.12));padding:8px 0}" +
       ".navlinks.open{display:flex}" +
-      ".navlinks a{text-align:center;padding:14px 20px}}" +
+      ".navlinks a{text-align:center;padding:14px 20px}}";
+    document.head.appendChild(st);
+    langCSS();
+  }
+
+  /* The language pill and the table wrapper are the only chrome a page needs when it
+     keeps its own nav and footer, so they live in their own style block. navCSS()
+     calls this too, so every other page is unchanged. Idempotent on its own id. */
+  function langCSS() {
+    if (document.getElementById("ci-langcss")) return;
+    var st = document.createElement("style");
+    st.id = "ci-langcss";
+    st.textContent =
       /* A table wider than the screen is the other common cause of sideways scroll. */
       ".ci-tscroll{overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%}" +
       /* Mobile language pill — added 2026-09-14. The language toggle is rendered
@@ -216,12 +228,14 @@
          scrolled past nine items to the last one. These rules surface a copy in the
          nav bar itself, beside the hamburger, and hide the in-menu copy so exactly
          one is shown at any width. */
-      ".ci-langmob{display:none}" +
-      "@media(max-width:880px){" +
-      ".ci-langmob{display:inline-flex;align-items:center;justify-content:center;margin-left:auto;margin-right:14px;" +
+      ".ci-langmob{display:none;align-items:center;justify-content:center;margin-left:auto;margin-right:14px;" +
       "padding:5px 11px;border:1px solid var(--gold,#D4AF37);border-radius:3px;color:var(--gold,#D4AF37);" +
       "font-family:'Oswald','Source Sans 3',system-ui,sans-serif;font-size:12px;font-weight:500;letter-spacing:.12em;" +
       "line-height:1;text-decoration:none}" +
+      /* A page that keeps its own nav gets no in-menu copy of the toggle, so its pill
+         is the only control and has to show at every width, not just on a phone. */
+      ".ci-langmob.ci-langalways{display:inline-flex}" +
+      "@media(max-width:880px){.ci-langmob{display:inline-flex}" +
       "body.ci-langmob-on .navlinks .lang{display:none}}";
     document.head.appendChild(st);
   }
