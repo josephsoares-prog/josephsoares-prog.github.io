@@ -245,7 +245,11 @@
      the menu. The CSS above shows exactly one of the two at any width, and the
      whole thing renders nothing on a page with no declared twin. */
   function mountMobileToggle() {
-    var wrap = document.querySelector("nav .wrap");
+    /* A few pages carry a <header> instead of a <nav>. The imprint pages are the pair that
+       matters: corridor-house.html and maison-corridor.html each declared the other and
+       still had no way to reach it, because there was no nav to hang the control on.
+       Fall back to the header's wrap so they get the control too. */
+    var wrap = document.querySelector("nav .wrap") || document.querySelector("header .wrap");
     if (!wrap) return;
     var old = wrap.querySelector(".ci-langmob");
     if (old && old.parentNode) old.parentNode.removeChild(old);
