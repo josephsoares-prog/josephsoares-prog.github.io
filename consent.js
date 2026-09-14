@@ -201,7 +201,7 @@
       "padding:5px 11px;border:1px solid var(--gold,#D4AF37);border-radius:3px;color:var(--gold,#D4AF37);" +
       "font-family:'Oswald','Source Sans 3',system-ui,sans-serif;font-size:12px;font-weight:500;letter-spacing:.12em;" +
       "line-height:1;text-decoration:none}" +
-      ".navlinks .lang{display:none}}";
+      "body.ci-langmob-on .navlinks .lang{display:none}}";
     document.head.appendChild(st);
   }
 
