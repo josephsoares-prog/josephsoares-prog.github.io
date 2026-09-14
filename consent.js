@@ -188,7 +188,20 @@
       "footer .ci-socrow{display:flex;flex-wrap:wrap;gap:22px;justify-content:flex-end}" +
       "footer .ci-soc a{margin-left:0}" +
       "@media(max-width:880px){footer .ci-soc{align-items:center;width:100%}" +
-      "footer .ci-socrow{justify-content:center;gap:18px}}";
+      "footer .ci-socrow{justify-content:center;gap:18px}}" +
+      /* Mobile language pill — added 2026-09-14. The language toggle is rendered
+         into .navlinks, which collapses behind the hamburger below 880px, so on a
+         phone the FR/EN control was invisible until the reader opened the menu and
+         scrolled past nine items to the last one. These rules surface a copy in the
+         nav bar itself, beside the hamburger, and hide the in-menu copy so exactly
+         one is shown at any width. */
+      ".ci-langmob{display:none}" +
+      "@media(max-width:880px){" +
+      ".ci-langmob{display:inline-flex;align-items:center;justify-content:center;margin-left:auto;margin-right:14px;" +
+      "padding:5px 11px;border:1px solid var(--gold,#D4AF37);border-radius:3px;color:var(--gold,#D4AF37);" +
+      "font-family:'Oswald','Source Sans 3',system-ui,sans-serif;font-size:12px;font-weight:500;letter-spacing:.12em;" +
+      "line-height:1;text-decoration:none}" +
+      ".navlinks .lang{display:none}}";
     document.head.appendChild(st);
   }
 
