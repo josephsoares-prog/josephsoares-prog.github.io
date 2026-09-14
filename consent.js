@@ -188,13 +188,50 @@
       "footer .ci-socrow{display:flex;flex-wrap:wrap;gap:22px;justify-content:flex-end}" +
       "footer .ci-soc a{margin-left:0}" +
       "@media(max-width:880px){footer .ci-soc{align-items:center;width:100%}" +
-      "footer .ci-socrow{justify-content:center;gap:18px}}";
+      "footer .ci-socrow{justify-content:center;gap:18px}}" +
+      /* Mobile language pill — added 2026-09-14. The language toggle is rendered
+         into .navlinks, which collapses behind the hamburger below 880px, so on a
+         phone the FR/EN control was invisible until the reader opened the menu and
+         scrolled past nine items to the last one. These rules surface a copy in the
+         nav bar itself, beside the hamburger, and hide the in-menu copy so exactly
+         one is shown at any width. */
+      ".ci-langmob{display:none}" +
+      "@media(max-width:880px){" +
+      ".ci-langmob{display:inline-flex;align-items:center;justify-content:center;margin-left:auto;margin-right:14px;" +
+      "padding:5px 11px;border:1px solid var(--gold,#D4AF37);border-radius:3px;color:var(--gold,#D4AF37);" +
+      "font-family:'Oswald','Source Sans 3',system-ui,sans-serif;font-size:12px;font-weight:500;letter-spacing:.12em;" +
+      "line-height:1;text-decoration:none}" +
+      "body.ci-langmob-on .navlinks .lang{display:none}}";
     document.head.appendChild(st);
+  }
+
+  /* Mounts a second copy of the language toggle as a direct child of nav .wrap,
+     ahead of the hamburger button, so it is visible on a phone without opening
+     the menu. The CSS above shows exactly one of the two at any width, and the
+     whole thing renders nothing on a page with no declared twin. */
+  function mountMobileToggle() {
+    var wrap = document.querySelector("nav .wrap");
+    if (!wrap) return;
+    var old = wrap.querySelector(".ci-langmob");
+    if (old && old.parentNode) old.parentNode.removeChild(old);
+    var html = toggleHTML();
+    if (!html) return;
+    navCSS();
+    var holder = document.createElement("div");
+    holder.innerHTML = html;
+    var a = holder.firstChild;
+    if (!a) return;
+    a.className = "lang ci-langmob";
+    var burger = wrap.querySelector(".menutoggle");
+    if (burger) wrap.insertBefore(a, burger); else wrap.appendChild(a);
+    if (document.body) document.body.className += " ci-langmob-on";
   }
 
   function run() {
     var navlinks = document.querySelector(".navlinks");
     if (navlinks) { navCSS(); navlinks.innerHTML = (IS_FR ? NAV_HTML_FR : NAV_HTML) + toggleHTML(); }
+
+    mountMobileToggle();
 
     var footers = document.querySelectorAll("footer");
     var footer = footers.length ? footers[footers.length - 1] : null;
