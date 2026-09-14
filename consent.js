@@ -260,7 +260,10 @@
     holder.innerHTML = html;
     var a = holder.firstChild;
     if (!a) return;
-    a.className = "lang ci-langmob" + (KEEP_OWN_CHROME ? " ci-langalways" : "");
+    /* Show the pill at every width whenever this is the only copy of the toggle on the
+       page: a page that keeps its own nav, or one with no .navlinks menu to hold the other. */
+    var soleCopy = KEEP_OWN_CHROME || !document.querySelector(".navlinks");
+    a.className = "lang ci-langmob" + (soleCopy ? " ci-langalways" : "");
     var burger = wrap.querySelector(".menutoggle,.bkburger");
     if (burger) wrap.insertBefore(a, burger); else wrap.appendChild(a);
     if (document.body) document.body.className += " ci-langmob-on";
