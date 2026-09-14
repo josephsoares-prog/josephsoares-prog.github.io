@@ -14,11 +14,12 @@ connections:
   - {person_id: teneycke-kory, relationship_type: rival, source_url: "https://en.wikipedia.org/wiki/Kory_Teneycke"}
 languages: [en]
 first_recorded: 2026-07-23
-last_verified: 2026-07-24
+last_verified: 2026-09-14
 sources:
   - {claim: "Ran the Conservatives' 2025 federal campaign; publicly criticized by Kory Teneycke for the campaign's handling of the Trump/trade-war shift", url: "https://en.wikipedia.org/wiki/Kory_Teneycke", publication: "Wikipedia (citing contemporaneous reporting)", date: "2025"}
   - {claim: "Publicly stands by the 2025 decision not to pivot Poilievre to Trump-era messaging; confirms she will not run the next federal election campaign", url: "https://www.cbc.ca/lite/story/1.7604245", publication: "CBC News", date: "2026-07"}
+  - {claim: "Publicly rebuked Conservative MP Matt Strauss after he said he had joined the Ontario Liberal Party to vote in its leadership race, amid a broader Canadian Press story on Conservative Party internal divisions", url: "https://energeticcity.ca/2026/09/09/as-the-trade-war-dominates-canadian-politics-conservatives-fight-among-themselves/", publication: "The Canadian Press (Sarah Ritchie), carried by Energeticcity.ca", date: "2026-09-09"}
 status: active
-notes: "The Teneycke–Byrne relationship (longtime allies turned public critics post-2025) is the connective tissue between the OLO story and the external operative cluster. By mid-2026 Byrne has stepped back from the next-campaign role while defending her 2025 strategy — the succession that put Steve Outhouse in as campaign manager now looks settled from her side."
+notes: "The Teneycke–Byrne relationship (longtime allies turned public critics post-2025) is the connective tissue between the OLO story and the external operative cluster. By mid-2026 Byrne has stepped back from the next-campaign role while defending her 2025 strategy — the succession that put Steve Outhouse in as campaign manager now looks settled from her side. UPDATE 2026-09-14: in the same September 9 CP wire story on CPC infighting, Byrne publicly rebuked MP Matt Strauss over his Ontario Liberal leadership vote — an active party-discipline enforcement role, not just a past-campaign retrospective."
 ---
-Harper-era campaign operative and manager of the Conservatives' 2025 federal campaign, whose conduct of that race drew public criticism from former ally Kory Teneycke — the visible edge of the operative-class split this inventory tracks.
+Harper-era campaign operative and manager of the Conservatives' 2025 federal campaign, whose conduct of that race drew public criticism from former ally Kory Teneycke — the visible edge of the operative-class split this inventory tracks. In September 2026 she publicly rebuked Conservative MP Matt Strauss for voting in the Ontario Liberal leadership race, amid a wider Canadian Press story on CPC internal divisions ([The Canadian Press via Energeticcity.ca, Sep 9, 2026](https://energeticcity.ca/2026/09/09/as-the-trade-war-dominates-canadian-politics-conservatives-fight-among-themselves/)).
