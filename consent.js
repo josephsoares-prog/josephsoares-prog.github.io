@@ -230,6 +230,8 @@
     var navlinks = document.querySelector(".navlinks");
     if (navlinks) { navCSS(); navlinks.innerHTML = (IS_FR ? NAV_HTML_FR : NAV_HTML) + toggleHTML(); }
 
+    mountMobileToggle();
+
     var footers = document.querySelectorAll("footer");
     var footer = footers.length ? footers[footers.length - 1] : null;
     if (footer) { navCSS(); footer.innerHTML = IS_FR ? FOOTER_HTML_FR : FOOTER_HTML; }
