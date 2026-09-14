@@ -265,3 +265,74 @@
     });
   }, true);
 })();
+
+/* ---------------------------------------------------------------------------
+   EN/FR switch for the Corridor Brief pages — added 2026-09-14.
+
+   WHY THIS EXISTS: the Brief publisher already writes every string twice, as
+   data-en / data-fr attributes, and already ships a working setLang(). What it
+   never emits is the .lang-buttons control that calls setLang — so the French
+   was sitting on the page with no way for a reader to reach it. The archive
+   index and every dated edition are machine-written each morning on the Ghost
+   droplet, so putting the control here rather than in that template covers
+   every past edition and every future one, with no change to the publisher.
+
+   Skips any page that ships its own .lang-buttons (the Corridor Index does),
+   and any page with nothing bilingual to switch. The choice is remembered in
+   the same localStorage key the Corridor Index uses, so a French reader stays
+   in French from one edition to the next.
+
+   REMOVE THIS BLOCK if the publisher template starts emitting the control
+   itself. It is a bridge, not the fix.
+   --------------------------------------------------------------------------- */
+(function () {
+  "use strict";
+  var KEY = "js-lang";
+
+  function build() {
+    if (typeof window.setLang !== "function") return;
+    if (document.querySelector(".lang-buttons")) return;
+    if (!document.querySelector("[data-fr]")) return;
+
+    var css = document.createElement("style");
+    css.textContent =
+      ".ci-langbar{display:flex;justify-content:flex-end;gap:6px;margin:0 0 20px}" +
+      ".ci-langbar button{background:transparent;border:1px solid rgba(242,239,233,.12);color:#A9A39A;" +
+      "padding:5px 12px;font-size:12px;border-radius:3px;cursor:pointer;" +
+      "font-family:'Oswald',sans-serif;letter-spacing:.1em}" +
+      ".ci-langbar button:hover{border-color:#D4AF37;color:#D4AF37}" +
+      ".ci-langbar button.active{border-color:#D4AF37;color:#D4AF37}";
+    document.head.appendChild(css);
+
+    var bar = document.createElement("div");
+    bar.className = "ci-langbar lang-buttons";
+    bar.setAttribute("role", "group");
+    bar.setAttribute("aria-label", "Language / Langue");
+    bar.innerHTML =
+      '<button type="button" lang="en" title="Read this edition in English">EN</button>' +
+      '<button type="button" lang="fr" title="Lire cette édition en français">FR</button>';
+
+    var crumb = document.querySelector(".crumb");
+    if (crumb && crumb.parentNode) {
+      crumb.parentNode.insertBefore(bar, crumb.nextSibling);
+    } else {
+      var host = document.querySelector("main") || document.body;
+      host.insertBefore(bar, host.firstChild);
+    }
+
+    function pick(l) {
+      try { localStorage.setItem(KEY, l); } catch (e) {}
+      window.setLang(l);
+    }
+    bar.children[0].addEventListener("click", function () { pick("en"); });
+    bar.children[1].addEventListener("click", function () { pick("fr"); });
+
+    var saved = null;
+    try { saved = localStorage.getItem(KEY); } catch (e) {}
+    if (saved === "fr") { window.setLang("fr"); }
+    else { bar.children[0].classList.add("active"); }
+  }
+
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", build);
+  else build();
+})();
