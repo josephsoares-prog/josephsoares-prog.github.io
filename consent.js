@@ -283,6 +283,95 @@
     }
   }
 
+
+  /* ------------------------------------------------------------------
+     BOOK PURCHASE PATH - single point of control.
+
+     Every buy button on the site renders from BOOK_BUY below. To put the
+     book on sale everywhere, fill in the two URLs and nothing else changes.
+
+     Amazon's rules, which decide what is possible before launch day:
+       - Kindle ebook CAN be put on pre-order. Doing so makes the Amazon
+         detail page live immediately with a "Pre-order" button, so the
+         ebook URL can be filled in before 6 October.
+       - Paperback CANNOT be pre-ordered. KDP keeps the detail page hidden
+         until the release date, so no paperback URL exists until 6 October.
+
+     Any page gets the buttons by carrying an empty <div data-book-buy></div>.
+     ------------------------------------------------------------------ */
+  var BOOK_BUY = {
+    ebook: "",        // Kindle URL - fill as soon as the pre-order is set up
+    paperback: "",    // Paperback URL - exists only from 6 October
+    launchISO: "2026-10-06",
+    isbnPaper: "978-0-9868758-2-3",
+    isbnEbook: "978-0-9868758-4-7"
+  };
+
+  function buyCSS() {
+    if (document.getElementById("ci-buycss")) return;
+    var st = document.createElement("style");
+    st.id = "ci-buycss";
+    st.textContent =
+      ".jsbuy{margin:22px 0 4px}" +
+      ".jsbuy-row{display:flex;flex-wrap:wrap;gap:12px}" +
+      ".jsbuy-btn{display:inline-block;font-family:'Oswald',sans-serif;font-size:14px;font-weight:600;" +
+      "letter-spacing:.12em;text-transform:uppercase;background:#D4AF37;color:#0A3161;" +
+      "padding:.75rem 1.5rem;border-radius:3px;text-decoration:none;border:1px solid #D4AF37}" +
+      ".jsbuy-btn:hover{filter:brightness(1.08)}" +
+      ".jsbuy-ghost{background:transparent;color:#D4AF37}" +
+      ".jsbuy-note{font-size:14px;opacity:.85;margin-top:12px;line-height:1.5}" +
+      ".jsbuy-isbn{font-size:12.5px;opacity:.6;margin-top:6px;letter-spacing:.02em}" +
+      "@media(max-width:560px){.jsbuy-row{flex-direction:column}.jsbuy-btn{text-align:center}}";
+    document.head.appendChild(st);
+  }
+
+  function bookBuy() {
+    var slots = document.querySelectorAll("[data-book-buy]");
+    if (!slots.length) return;
+    buyCSS();
+
+    var t = IS_FR ? {
+      paper: "Acheter le livre papier", ebook: "Acheter le livre num&eacute;rique",
+      pre: "Pr&eacute;commander le livre num&eacute;rique",
+      soon: "Livre papier et livre num&eacute;rique, en vente le 6 octobre 2026.",
+      paperSoon: "Le livre papier para&icirc;t le 6 octobre 2026.",
+      isbn: "ISBN &mdash; papier " + BOOK_BUY.isbnPaper + " &middot; num&eacute;rique " + BOOK_BUY.isbnEbook
+    } : {
+      paper: "Buy the paperback", ebook: "Buy the ebook",
+      pre: "Pre-order the ebook",
+      soon: "Paperback and ebook, on sale 6 October 2026.",
+      paperSoon: "The paperback is published on 6 October 2026.",
+      isbn: "ISBN &mdash; paperback " + BOOK_BUY.isbnPaper + " &middot; ebook " + BOOK_BUY.isbnEbook
+    };
+
+    var launched = new Date() >= new Date(BOOK_BUY.launchISO + "T00:00:00Z");
+    var btns = [], note = "";
+
+    if (BOOK_BUY.paperback) {
+      btns.push('<a class="jsbuy-btn" href="' + BOOK_BUY.paperback + '" rel="noopener" target="_blank">' + t.paper + "</a>");
+    }
+    if (BOOK_BUY.ebook) {
+      btns.push('<a class="jsbuy-btn' + (btns.length ? " jsbuy-ghost" : "") + '" href="' + BOOK_BUY.ebook +
+                '" rel="noopener" target="_blank">' + (launched ? t.ebook : t.pre) + "</a>");
+    }
+
+    if (!btns.length) note = t.soon;
+    else if (!BOOK_BUY.paperback) note = t.paperSoon;
+
+    var html = '<div class="jsbuy">' +
+      (btns.length ? '<div class="jsbuy-row">' + btns.join("") + "</div>" : "") +
+      (note ? '<div class="jsbuy-note">' + note + "</div>" : "") +
+      '<div class="jsbuy-isbn">' + t.isbn + "</div></div>";
+
+    for (var i = 0; i < slots.length; i++) slots[i].innerHTML = html;
+
+    document.addEventListener("click", function (e) {
+      var a = e.target.closest && e.target.closest(".jsbuy-btn");
+      if (!a) return;
+      try { window.gtag && gtag("event", "book_buy_click", { link_url: a.href, page: location.pathname }); } catch (err) {}
+    });
+  }
+
   function run() {
     var navlinks = document.querySelector(".navlinks");
     if (navlinks && !KEEP_OWN_CHROME) { navCSS(); navlinks.innerHTML = (IS_FR ? NAV_HTML_FR : NAV_HTML) + toggleHTML(); }
@@ -293,6 +382,8 @@
     var footers = document.querySelectorAll("footer");
     var footer = footers.length ? footers[footers.length - 1] : null;
     if (footer && !KEEP_OWN_CHROME) { navCSS(); footer.innerHTML = IS_FR ? FOOTER_HTML_FR : FOOTER_HTML; }
+
+    bookBuy();
   }
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", run);
