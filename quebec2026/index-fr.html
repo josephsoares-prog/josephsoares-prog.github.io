@@ -119,22 +119,30 @@ document.getElementById('pollt').innerHTML=ph;
 var sel=document.getElementById('sel');
 j.ri.forEach(function(r){D[r[0]]=r});
 Object.keys(D).sort(function(a,b){return a.localeCompare(b,'fr')}).forEach(function(n){var op=document.createElement('option');op.value=n;op.textContent=n;sel.appendChild(op)})}
+function unavailable(){
+  document.getElementById('asof').textContent=T.nod;
+  var s=document.getElementById('sel');s.disabled=true;s.innerHTML='<option>'+T.nod+'</option>';
+}
 fetch('data.json?v='+Date.now()).then(function(r){return r.json()}).then(function(d){
   // Recalcul du jour dans le navigateur : la page n'est jamais périmée et
   // n'a besoin d'aucune tâche planifiée. Voie rapide d'abord (~4 ms) pour
   // afficher les sièges et la date; la simulation suit et remplit les
   // intervalles.
-  try{
-    var T0=new Date(),TODAY=Date.UTC(T0.getFullYear(),T0.getMonth(),T0.getDate());
-    if(window.CorridorRecompute){
-      window.CorridorRecompute(d,TODAY,{skipSim:true});
-      render(d);
-      setTimeout(function(){
-        try{window.CorridorRecompute(d,TODAY);render(d);}catch(e){}
-      },30);
-      return;
-    }
-  }catch(e){}
+  //
+  // Les champs asof/dl/s/v/enep/sim stockés dans data.json sont un cache de
+  // construction, PAS des valeurs d'affichage, et ils se périment entre deux
+  // fusions. Seul un recalcul frais peut être affiché. Si le moteur est
+  // absent, échoue, ou n'aboutit pas à la date du jour, afficher
+  // « Données indisponibles » plutôt qu'une projection périmée sous une
+  // date périmée.
+  var T0=new Date(),TODAY=Date.UTC(T0.getFullYear(),T0.getMonth(),T0.getDate());
+  var iso=new Date(TODAY).toISOString().slice(0,10);
+  if(!window.CorridorRecompute){return unavailable()}
+  try{window.CorridorRecompute(d,TODAY,{skipSim:true})}catch(e){return unavailable()}
+  if(d.asof!==iso){return unavailable()}
   render(d);
-}).catch(function(){document.getElementById('asof').textContent=T.nod;var s=document.getElementById('sel');s.disabled=true;s.innerHTML='<option>'+T.nod+'</option>'});
+  setTimeout(function(){
+    try{window.CorridorRecompute(d,TODAY);render(d);}catch(e){}
+  },30);
+}).catch(unavailable);
 </script></html>
