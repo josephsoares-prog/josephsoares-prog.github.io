@@ -520,4 +520,17 @@
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", build);
   else build();
+  /* Corridor Intelligence promotion (/ci-banner.js), added 2026-09-16.
+     Loaded from here so it reaches every page that already loads consent.js,
+     rather than editing 155 files and missing some. It decides for itself
+     which pages it may appear on. */
+  (function loadBanner() {
+    if (document.getElementById("ci-banner-js")) return;
+    var s = document.createElement("script");
+    s.id = "ci-banner-js";
+    s.src = "/ci-banner.js?v=20260916";
+    s.defer = true;
+    document.head.appendChild(s);
+  })();
+
 })();
