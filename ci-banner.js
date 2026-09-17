@@ -40,6 +40,18 @@
 
   var FR = (document.documentElement.getAttribute("lang") || "en").toLowerCase().indexOf("fr") === 0;
 
+  /* A Corridor Brief edition (/brief/YYYY-MM-DD.html) already has its own
+     dated headline in the page body, so the sticky bar swaps its generic
+     evergreen line for a "Top stories for <date>" lead instead — still
+     bilingual off <html lang>, built from the date in the URL so nothing
+     here needs editing per edition. Brief editions also skip the inline
+     end-of-article block below: they hold 22+ <article class="cb-item">
+     nodes, so the generic endblock's document.querySelector("article")
+     would otherwise land inside story #1, and the page already carries two
+     subscribe CTAs of its own at the foot. */
+  var BRIEF_DATE = /^\/brief\/(\d{4})-(\d{2})-(\d{2})\.html$/.exec(location.pathname);
+  var IS_BRIEF = !!BRIEF_DATE;
+
   var COPY = FR ? {
     eyebrow: "Corridor Intelligence",
     barLead: "La plupart des gens suivent l'actualité. ",
@@ -64,6 +76,21 @@
     close:   "Dismiss"
   };
 
+  if (IS_BRIEF) {
+    var editionDate = new Date(+BRIEF_DATE[1], +BRIEF_DATE[2] - 1, +BRIEF_DATE[3]);
+    var longDate = editionDate.toLocaleDateString(FR ? "fr-FR" : "en-US",
+      { weekday: "long", day: "numeric", month: "long", year: "numeric" });
+    if (FR) {
+      COPY.barLead = "Les titres du jour — ";
+      COPY.barEm = longDate + ".";
+      COPY.barShort = "Les titres du " + longDate + ".";
+    } else {
+      COPY.barLead = "Top stories for ";
+      COPY.barEm = longDate + ".";
+      COPY.barShort = "Top stories for " + longDate + ".";
+    }
+  }
+
   var DEST = FR ? "/abonnement.html" : "/subscribe.html";
   function link(ref) {
     return DEST + "?utm_source=site&utm_medium=banner&utm_campaign=corridor-intelligence&ref=" + ref;
@@ -76,15 +103,19 @@
     s.textContent =
       /* --- sticky bar --- */
       "#ci-promo{background:#0E3A70;color:#F2EFE9;border-top:2px solid #D4AF37;" +
-        "display:flex;align-items:center;gap:16px;padding:11px 22px;font-family:'EB Garamond',Georgia,serif}" +
+        "display:flex;align-items:center;gap:16px;padding:11px 22px;margin-bottom:22px;" +
+        "font-family:'EB Garamond',Georgia,serif}" +
       "#ci-promo .ci-eyebrow{font-family:'Oswald',Arial,sans-serif;font-size:10px;letter-spacing:.17em;" +
         "text-transform:uppercase;color:#D4AF37;white-space:nowrap;font-weight:400}" +
       "#ci-promo p{margin:0;font-size:16px;line-height:1.35;flex:1}" +
       "#ci-promo p em{font-style:italic;color:#E4DCC9}" +
+      /* Red, not gold: gold is already the page's rank numbers, section
+         rules and headings, so a gold CTA here reads as decoration rather
+         than an action. Red is used nowhere else on the page. */
       "#ci-promo .ci-go{font-family:'Oswald',Arial,sans-serif;font-size:11px;letter-spacing:.12em;" +
-        "text-transform:uppercase;background:#D4AF37;color:#0A3161;padding:9px 17px;border-radius:2px;" +
+        "text-transform:uppercase;background:#C0392B;color:#F2EFE9;padding:9px 17px;border-radius:2px;" +
         "white-space:nowrap;text-decoration:none;font-weight:500}" +
-      "#ci-promo .ci-go:hover{background:#E0BE4E}" +
+      "#ci-promo .ci-go:hover{background:#A93226}" +
       "#ci-promo .ci-x{background:none;border:0;color:#8FA2C0;font:inherit;font-size:19px;line-height:1;" +
         "cursor:pointer;padding:4px 2px}" +
       "#ci-promo .ci-x:hover{color:#F2EFE9}" +
@@ -165,6 +196,7 @@
   }
 
   function endblock() {
+    if (IS_BRIEF) return;
     var art = document.querySelector("article");
     if (!art || document.querySelector(".ci-endblock")) return;
 

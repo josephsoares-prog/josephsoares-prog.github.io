@@ -417,14 +417,16 @@ h1{font-family:'Oswald',sans-serif;text-transform:uppercase;font-weight:600;marg
     <a class="cb-cta" href="/intelligence.html#email" data-en="Get the Brief &#x2192;" data-fr="Recevoir le Brief &#x2192;">Get the Brief &#x2192;</a>
   </div>
 <section class="ci-capture" style="max-width:720px;margin:36px auto;text-align:center;padding:28px 22px;background:#072244;border:1px solid rgba(212,175,55,.25);border-radius:6px">
-<h2 style="font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.05em;font-size:22px;color:#E6C860;margin:0 0 8px">Get the Brief before the market opens</h2>
-<p style="color:rgba(242,239,233,.78);margin:0 0 16px;font-size:16px">The Corridor Brief, in your inbox every morning &#x2014; the day ranked by consequence, five minutes flat. Free.</p>
-<form class="ci-capture-form" action="https://app.kit.com/forms/f30ff33b6f/subscriptions" method="post"><input class="ci-capture-input" type="email" name="email_address" placeholder="Your email address" aria-label="Email" required><button class="ci-capture-btn" type="submit">Send me the Brief</button></form><p class="ci-capture-msg" role="status" aria-live="polite"></p>
+<h2 style="font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.05em;font-size:22px;color:#E6C860;margin:0 0 8px" data-en="Get the Brief before the market opens" data-fr="Recevez le Brief avant l'ouverture des marchés">Get the Brief before the market opens</h2>
+<p style="color:rgba(242,239,233,.78);margin:0 0 16px;font-size:16px" data-en="The Corridor Brief, in your inbox every morning &#x2014; the day ranked by consequence, five minutes flat. Free." data-fr="Le Brief Corridor, dans votre bo&#xEE;te courriel chaque matin &#x2014; la journ&#xE9;e class&#xE9;e par cons&#xE9;quence, en cinq minutes. Gratuit.">The Corridor Brief, in your inbox every morning &#x2014; the day ranked by consequence, five minutes flat. Free.</p>
+<form class="ci-capture-form" action="https://app.kit.com/forms/f30ff33b6f/subscriptions" method="post"><input class="ci-capture-input" type="email" name="email_address" placeholder="Your email address" data-en-ph="Your email address" data-fr-ph="Votre adresse courriel" aria-label="Email" required><button class="ci-capture-btn" type="submit" data-en="Send me the Brief" data-fr="Envoyez-moi le Brief">Send me the Brief</button></form><p class="ci-capture-msg" role="status" aria-live="polite"></p>
 </section>
 </main>
 <script>
 function setLang(l){document.documentElement.lang=l;
  document.querySelectorAll('[data-'+l+']').forEach(function(n){var v=n.getAttribute('data-'+l);if(v)n.innerHTML=v;});
+ document.querySelectorAll('[data-'+l+'-ph]').forEach(function(n){var v=n.getAttribute('data-'+l+'-ph');if(v)n.setAttribute('placeholder',v);});
+ document.querySelectorAll('[data-'+l+'-href]').forEach(function(n){var v=n.getAttribute('data-'+l+'-href');if(v)n.setAttribute('href',v);});
  document.querySelectorAll('.lang-buttons button').forEach(function(b){b.classList.toggle('active',b.textContent.trim().toLowerCase()===l);});
  try{localStorage.setItem('js-lang',l);}catch(e){}}
 try{var s=localStorage.getItem('js-lang');if(s==='fr')setLang('fr');}catch(e){}

@@ -528,7 +528,7 @@
     if (document.getElementById("ci-banner-js")) return;
     var s = document.createElement("script");
     s.id = "ci-banner-js";
-    s.src = "/ci-banner.js?v=20260916";
+    s.src = "/ci-banner.js?v=20260917";
     s.defer = true;
     document.head.appendChild(s);
   })();
