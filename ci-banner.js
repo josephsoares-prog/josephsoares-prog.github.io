@@ -123,7 +123,7 @@
       "#ci-promo .ci-row{display:contents}" +
       /* Below 760px the single row cannot hold: stack it, use the short line,
          and lift the close out of reach of the button. Kept compact because
-         the Quebec strip already sits under this on the home page. */
+         the book strip already sits under this on the home page. */
       "@media(max-width:760px){" +
         "#ci-promo{flex-wrap:wrap;padding:9px 16px 11px;gap:8px 10px;align-items:center}" +
         "#ci-promo .ci-row{display:flex;align-items:center;justify-content:space-between;width:100%;gap:10px}" +
@@ -179,10 +179,10 @@
         '<span class="ci-short">' + COPY.barShort + '</span></p>' +
       '<a class="ci-go" href="' + link("ban-topbar") + '">' + COPY.cta + '</a>';
 
-    /* The Quebec 2026 strip is time-limited (to 5 October) and sits directly
-       under the nav. When it is present this goes below it, so the dated item
-       keeps the higher slot rather than being pushed down by a standing one. */
-    var anchor = document.querySelector(".qcstrip") || nav;
+    /* The book-launch strip (.bookstrip; formerly the Quebec 2026 .qcstrip)
+       sits directly under the nav. When present this goes below it, so the
+       dated item keeps the higher slot. */
+    var anchor = document.querySelector(".bookstrip,.qcstrip") || nav;
     if (anchor && anchor.parentNode) anchor.parentNode.insertBefore(el, anchor.nextSibling);
     else {
       var host = document.querySelector("main") || document.body;

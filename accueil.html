@@ -5,15 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Joseph Soares &mdash; Conseiller principal | &Eacute;prouv&eacute; en situation de crise.</title>
 <!-- Google Analytics (GA4) -->
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{ad_storage:'denied',analytics_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',wait_for_update:500});</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{ad_storage:'denied',analytics_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',wait_for_update:500});gtag('js',new Date());gtag('config','G-HNRCLZN3PK');</script>
 <script defer src="/consent.js?v=20260916d"></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-HNRCLZN3PK"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-HNRCLZN3PK');
-</script>
 <meta name="description" content="Joseph Soares, conseiller chevronn&eacute; aupr&egrave;s d&rsquo;entrepreneurs et de dirigeants, &eacute;prouv&eacute; en situation de crise. Il a œuvré au Cabinet du premier ministre du Canada et a &eacute;t&eacute; chef de cabinet au S&eacute;nat du Canada.">
 <link rel="canonical" href="https://josephsoares.com/accueil.html">
     <link rel="alternate" type="application/rss+xml" title="Corridor Intelligence — Joseph Soares" href="https://josephsoares.com/feed.xml">
@@ -99,7 +93,7 @@
   .authbar{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--panel);padding:26px 0}
   .authbar .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:20px clamp(30px,5vw,64px);
     font-family:'Oswald',sans-serif;text-transform:uppercase}
-  .authbar .lab{font-size:11px;letter-spacing:.28em;color:var(--gold);margin-bottom:10px}
+  .authbar .lab{font-size:12px;letter-spacing:.28em;color:var(--gold);margin-bottom:10px}
   .authbar .lab.sec{color:var(--muted)}
   .authbar .names{display:flex;flex-wrap:wrap;gap:8px clamp(18px,3vw,30px);align-items:baseline}
   .authbar .names b{font-size:clamp(15px,4vw,18px);letter-spacing:.14em;color:var(--bone);font-weight:500}
@@ -150,10 +144,11 @@
   .corridor .epwrap{flex:0 1 420px;max-width:420px}
   .epfacade{display:block;position:relative;width:100%;aspect-ratio:16/9;padding:0;border:1px solid var(--line);
     background:var(--panel2);background-image:repeating-linear-gradient(90deg, rgba(242,239,233,.07) 0 1px, transparent 1px 16px);cursor:pointer}
+  .epfacade{background-size:cover;background-position:center}.epfacade.hasthumb .epinner{background:linear-gradient(to top,rgba(7,34,68,.96) 55%,rgba(7,34,68,0))}
   .epfacade:hover{border-color:rgba(212,175,55,.7)}
   .epfacade:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
   .epfacade .epinner{position:absolute;left:0;right:0;bottom:0;padding:18px 20px;text-align:left;display:block}
-  .epfacade .eplab{display:block;font-family:'Oswald',sans-serif;text-transform:uppercase;font-size:9px;
+  .epfacade .eplab{display:block;font-family:'Oswald',sans-serif;text-transform:uppercase;font-size:12px;
     letter-spacing:.26em;color:var(--gold);margin-bottom:8px}
   .epfacade .eptitle{display:block;font-family:'Oswald',sans-serif;text-transform:uppercase;font-weight:600;
     font-size:24px;line-height:1.06;letter-spacing:.01em;color:var(--bone);margin-bottom:6px}
@@ -180,15 +175,6 @@
   .disc{max-width:50ch;font-style:italic;font-size:15px;line-height:1.55}
 
   @media(max-width:880px){
-    nav .wrap{position:relative}
-    .menutoggle{display:flex;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:10px 6px}
-    .menutoggle span{display:block;width:24px;height:2px;background:var(--bone)}
-    .navlinks{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:#0a2c58;border-bottom:1px solid var(--line);padding:8px 0}
-    .navlinks.open{display:flex}
-    .navlinks a{text-align:center;padding:14px 20px}
-    .navdrop{width:100%}
-    .navdrop-menu{display:block;position:static;border:0;box-shadow:none;padding:0;background:transparent}
-    .navdrop-menu a{text-align:center}
     .hero{padding:38px 0 40px}
     .hero h1{max-width:100%}
     .hero .lede{max-width:100%}
@@ -214,7 +200,7 @@
           "@id": "https://josephsoares.com/#joseph-soares",
           "name": "Joseph Soares",
           "url": "https://josephsoares.com/accueil.html",
-          "image": "https://josephsoares.com/assets/og-default.png",
+          "image": "https://josephsoares.com/images/joseph-soares-portrait.jpg",
           "jobTitle": "Conseiller stratégique principal",
           "email": "j@josephsoares.com",
           "description": "Conseiller stratégique principal auprès d’entrepreneurs et de dirigeants fortunés. Il a œuvré au Cabinet du premier ministre du Canada pendant la crise financière de 2008 et a été chef de cabinet au Sénat du Canada pendant la pandémie de 2020. Publié dans Forbes et Newsweek.",
@@ -248,20 +234,7 @@
     }
     </script>
 
-<!-- Mobile nav styles moved to /pages.css (2026-08-19) -->
-<style id="navdrop-css">
-.navdrop{position:relative}
-.navdrop>a::after{content:"\25BE";font-size:.62em;margin-left:6px;vertical-align:middle;opacity:.65}
-.navdrop-menu{display:none;position:absolute;top:100%;left:0;background:#072244;border:1px solid rgba(242,239,233,.14);border-radius:2px;padding:6px 0;min-width:178px;z-index:90;box-shadow:0 12px 34px rgba(0,0,0,.4)}
-.navdrop:hover .navdrop-menu,.navdrop:focus-within .navdrop-menu{display:block}
-.navdrop-menu a{display:block !important;width:auto !important;padding:11px 20px !important}
-@media(max-width:880px){
- .navdrop{width:100%;text-align:center}
- .navdrop>a::after{display:none}
- .navdrop-menu{display:block;position:static;border:0;box-shadow:none;padding:4px 0;background:rgba(7,34,68,.5);min-width:0;border-top:1px solid rgba(242,239,233,.08);border-bottom:1px solid rgba(242,239,233,.08)}
- .navdrop-menu a{padding:12px 30px 12px 54px !important;font-size:14px;opacity:.82;text-align:left !important;background:rgba(212,175,55,.05)}
-}
-</style>
+<!-- Nav dropdown + mobile nav CSS live in /pages.css -->
 
 <link rel="stylesheet" href="/pages.css">
 <link rel="stylesheet" href="/site.css">
@@ -271,43 +244,41 @@
 <nav>
   <div class="wrap">
     <a href="/accueil.html" class="brand" style="text-decoration:none;color:inherit">Joseph <span>Soares</span></a>
-    <button class="menutoggle" aria-label="Menu" onclick="this.closest('nav').querySelector('.navlinks').classList.toggle('open')"><span></span><span></span><span></span></button>
-      <div class="navlinks">
+    <button class="menutoggle" aria-label="Menu" aria-expanded="false" aria-controls="navlinks" onclick="var n=this.closest('nav').querySelector('.navlinks');n.classList.toggle('open');this.setAttribute('aria-expanded',n.classList.contains('open'))"><span></span><span></span><span></span></button>
+      <div class="navlinks" id="navlinks">
       <div class="navdrop"><a href="/intelligence.html">Intelligence</a><div class="navdrop-menu"><a href="/brief/">Breffage Corridor</a><a href="/dispatch.html">D&eacute;p&ecirc;ches</a><a href="/corridor-files.html">Dossiers</a><a href="/brief/index-dashboard.html">Index</a><a href="/issues-focus.html">Dossiers th&eacute;matiques</a></div></div>
       <a href="/podcast.html">Balado</a>
       <a href="/writing.html">&Eacute;crits</a>
-      <a href="/conferences.html">Conf&eacute;rences</a>
-      <a href="/media-fr.html">M&eacute;dias</a>
+      <div class="navdrop"><a href="/stewardship-fr.html">&Agrave; propos</a><div class="navdrop-menu"><a href="/stewardship-fr.html">Engagement</a><a href="/conferences.html">Conf&eacute;rences</a><a href="/media-fr.html">M&eacute;dias</a></div></div>
       <a href="/livre.html">Livre</a>
       <a class="cta" href="/abonnement.html">S&rsquo;abonner</a>
-      <a href="/index.html" style="color:var(--muted);letter-spacing:.12em">EN</a>
     </div>
   </div>
 </nav>
-<!-- ELECTION STRIP - time-limited. DELETE this whole block after 5 Oct 2026. -->
+<!-- BOOK LAUNCH STRIP — Leadership Under Fire, publishing 20 Oct 2026. Swap copy on launch day. -->
 <style>
-  .qcstrip{display:block;background:#D4AF37;color:#072244;text-decoration:none;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.11em;font-size:12px;font-weight:500;text-align:center;padding:11px 16px;line-height:1.45}
-  .qcstrip:hover{background:#E6C860}
-  .qcstrip b{font-weight:600}
-  .qcstrip .sep{opacity:.55;padding:0 6px}
-  @media(max-width:560px){.qcstrip{font-size:11px;letter-spacing:.08em;padding:10px 12px}.qcstrip .hide-s{display:none}}
+  .bookstrip{display:block;background:#D4AF37;color:#072244;text-decoration:none;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.11em;font-size:12px;font-weight:500;text-align:center;padding:11px 16px;line-height:1.45}
+  .bookstrip:hover{background:#E6C860}
+  .bookstrip b{font-weight:600}
+  .bookstrip .sep{opacity:.55;padding:0 6px}
+  @media(max-width:560px){.bookstrip{font-size:12px;letter-spacing:.08em;padding:10px 12px}.bookstrip .hide-s{display:none}}
 </style>
-<a class="qcstrip" href="/quebec2026/index-fr.html" hreflang="fr-CA"><b>Qu&eacute;bec 2026</b><span class="sep">&middot;</span>Projection quotidienne des si&egrave;ges<span class="sep">&middot;</span>Scrutin le 5&nbsp;oct. &rarr;</a>
-<!-- /ELECTION STRIP -->
+<a class="bookstrip" href="/livre.html" hreflang="fr-CA"><b>Leadership Under Fire</b><span class="sep">&middot;</span>Parution le 20&nbsp;octobre<span class="sep hide-s">&middot;</span><span class="hide-s">Le cadre SPARK, forg&eacute; dans les couloirs du pouvoir</span><span class="sep">&middot;</span>R&eacute;server votre exemplaire &rarr;</a>
+<!-- /BOOK LAUNCH STRIP -->
 
 <header class="hero">
   <div class="wrap">
     <div class="herotext">
     <div class="eyebrow">Conseiller principal &middot; &Eacute;prouv&eacute; en situation de crise &middot; La confiance des plus hauts dirigeants</div>
-    <h1>J&rsquo;ai œuvré au <span class="g">Cabinet du premier&nbsp;ministre</span> pendant une <span class="i">crise financi&egrave;re mondiale.</span> Aujourd&rsquo;hui, je conseille <span class="i">des dirigeants comme vous.</span></h1>
-    <p class="lede"><b>Joseph Soares</b> a œuvré au Cabinet du premier ministre du Canada pendant la crise financi&egrave;re de 2008 et a &eacute;t&eacute; chef de cabinet au S&eacute;nat du Canada pendant la pand&eacute;mie de 2020 &mdash; deux des milieux les plus exigeants du pays, au cours de deux de ses ann&eacute;es les plus difficiles. Il conseille un groupe restreint de dirigeants sur les d&eacute;cisions qui ne tol&egrave;rent pas de deuxi&egrave;me essai.</p>
+    <h1>Joseph Soares a œuvré au <span class="g">Cabinet du premier&nbsp;ministre</span> pendant une <span class="i">crise financi&egrave;re mondiale.</span> Aujourd&rsquo;hui, il conseille <span class="i">des dirigeants comme vous.</span></h1>
+    <p class="lede">Il a œuvré au <b>Cabinet du premier ministre du Canada</b> pendant la crise financi&egrave;re de 2008 et a &eacute;t&eacute; <b>chef de cabinet au S&eacute;nat du Canada</b> pendant la pand&eacute;mie de 2020 &mdash; deux des milieux les plus exigeants du pays, au cours de deux de ses ann&eacute;es les plus difficiles. Il conseille un groupe restreint de dirigeants sur les d&eacute;cisions qui ne tol&egrave;rent pas de deuxi&egrave;me essai.</p>
     <div class="ctar">
       <a href="#/portal/signup" data-portal="signup" class="btn btn-gold">S&rsquo;abonner &mdash; Corridor Intelligence</a>
       <a href="/appel.html" class="quiet">Planifier un appel priv&eacute;</a>
     </div>
     </div>
     <div class="heroportrait">
-      <img src="/images/joseph-soares-portrait.jpg?v=20260831" alt="Joseph Soares" width="800" height="667" loading="eager">
+      <img src="/images/joseph-soares-portrait.jpg?v=20260831" alt="Joseph Soares" width="800" height="1000" loading="eager">
     </div>
   </div>
 </header>
@@ -337,7 +308,7 @@
 <section class="blk" style="padding-top:0">
   <div class="wrap">
     <div class="eyebrow klabel">L&agrave; o&ugrave; il ajoute de la valeur</div>
-    <div class="h2">Trois ar&egrave;nes o&ugrave; l&rsquo;exp&eacute;rience fait la diff&eacute;rence.</div>
+    <h2 class="h2">Trois ar&egrave;nes o&ugrave; l&rsquo;exp&eacute;rience fait la diff&eacute;rence.</h2>
     <div class="grid3">
       <div class="card">
         <h3>D&eacute;cisions &agrave; enjeux &eacute;lev&eacute;s</h3>
@@ -358,7 +329,7 @@
 <section class="blk" style="padding-top:0">
   <div class="wrap">
     <div class="eyebrow klabel">&Agrave; qui cela s&rsquo;adresse</div>
-    <div class="h2">Vous avez b&acirc;ti quelque chose qui m&eacute;rite d&rsquo;&ecirc;tre prot&eacute;g&eacute;.</div>
+    <h2 class="h2">Vous avez b&acirc;ti quelque chose qui m&eacute;rite d&rsquo;&ecirc;tre prot&eacute;g&eacute;.</h2>
     <div class="who">
       <div class="row"><span class="mk">01</span><p>Propri&eacute;taires d&rsquo;entreprise dont la transition se profile dans un &agrave; cinq ans, avec des actifs r&eacute;els et des revenus r&eacute;els.</p></div>
       <div class="row"><span class="mk">02</span><p>Fondateurs et dirigeants qui franchissent des points d&rsquo;inflexion &agrave; forte croissance.</p></div>
@@ -371,9 +342,10 @@
 <section class="blk" style="padding-top:0" id="travailler">
   <div class="wrap">
     <div class="eyebrow klabel">Comment travailler ensemble</div>
-    <div class="h2">Quatre fa&ccedil;ons d&rsquo;entrer.</div>
-    <p class="sub">D&rsquo;une seule conversation &agrave; une place permanente &agrave; votre table &mdash; chacune est une v&eacute;ritable porte, pas un formulaire qui ne m&egrave;ne nulle part.</p>
+    <h2 class="h2">Par o&ugrave; commencer.</h2>
+    <p class="sub">Commencez par l&rsquo;&eacute;valuation ou par le livre &mdash; chacun est une v&eacute;ritable porte, pas un formulaire qui ne m&egrave;ne nulle part.</p>
     <div class="paths">
+      <!-- EN ATTENTE jusqu'à la revue du 15 oct. 2026. Retirer ce commentaire pour rétablir.
       <div class="path feat">
         <div class="tier">Le si&egrave;ge consultatif</div>
         <h3>Le Fauteuil</h3>
@@ -387,6 +359,7 @@
         <p>Un mandat cibl&eacute; et balis&eacute; qui applique le cadre SPARK &agrave; une seule d&eacute;cision ou transition &mdash; rapide, structur&eacute; et honn&ecirc;te quant &agrave; sa port&eacute;e.</p>
         <a class="go" href="/sprint-30-jours.html">Voir le sprint &rarr;</a>
       </div>
+      -->
       <div class="path">
         <div class="tier">Commencer gratuitement</div>
         <h3>L&rsquo;&eacute;valuation SPARK</h3>
@@ -396,7 +369,7 @@
       <div class="path">
         <div class="tier">Le livre</div>
         <h3>Diriger sous le feu (Leadership Under Fire)</h3>
-        <p>Le cadre SPARK au complet, forg&eacute; dans les couloirs du pouvoir. R&eacute;servez votre exemplaire avant le lancement du 6&nbsp;octobre.</p>
+        <p>Le cadre SPARK au complet, forg&eacute; dans les couloirs du pouvoir. R&eacute;servez votre exemplaire avant le lancement du 20&nbsp;octobre.</p>
         <a class="go" href="/livre.html">R&eacute;server votre exemplaire &rarr;</a>
       </div>
     </div>
@@ -407,8 +380,8 @@
   <div class="wrap">
     <div class="bookframe"><img src="/images/leadership-under-fire-cover.jpg?v=20260818" width="230" height="368" loading="lazy" decoding="async" alt="Diriger sous le feu (Leadership Under Fire) &mdash; le cadre SPARK, par Joseph Soares"></div>
     <div>
-      <div class="eyebrow klabel">Nouveau &middot; 6 octobre 2026</div>
-      <div class="h2">Diriger sous le feu</div>
+      <div class="eyebrow klabel">Nouveau &middot; 20 octobre 2026</div>
+      <h2 class="h2">Diriger sous le feu</h2>
       <div class="subt">Le cadre SPARK, forg&eacute; dans les couloirs du pouvoir.</div>
       <p class="sub" style="margin-bottom:26px">Un manuel de terrain pour les d&eacute;cisions qui ne tol&egrave;rent pas de deuxi&egrave;me essai. Inscrivez-vous &agrave; la liste de lancement et obtenez le premier chapitre d&egrave;s maintenant.</p>
       <a href="/livre.html" class="btn btn-gold">R&eacute;server votre exemplaire</a>
@@ -420,14 +393,14 @@
   <div class="wrap">
     <div class="corridortext">
       <div class="eyebrow klabel">Entre deux crises</div>
-      <div class="h2" style="font-size:30px">Corridor Intelligence</div>
+      <h2 class="h2" style="font-size:30px">Corridor Intelligence</h2>
       <p class="sub">Analyse strat&eacute;gique pour entrepreneurs et chefs d&rsquo;entreprise &mdash; le signal plut&ocirc;t que le bruit, par quelqu&rsquo;un qui a vu ces d&eacute;cisions se prendre de l&rsquo;int&eacute;rieur.</p>
       <div class="ctar" style="margin-top:26px">
         <a href="#/portal/signup" data-portal="signup" class="btn btn-gold">S&rsquo;abonner gratuitement</a>
         <a href="https://www.youtube.com/@corridorintelligence?sub_confirmation=1" class="quiet">Tous les &eacute;pisodes</a>
       </div>
     </div>
-    <div class="epwrap">
+    <div class="epwrap" data-latest-episode>
       <button class="epfacade" type="button" aria-label="Lire le dernier &eacute;pisode de Corridor Intelligence" onclick="var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/PAMO0G_UF1o?autoplay=1&amp;rel=0';f.title='Corridor Intelligence \u2014 dernier \u00e9pisode';f.allow='accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture';f.allowFullscreen=true;f.loading='lazy';this.replaceWith(f);">
         <span class="epinner">
           <span class="eplab">Dernier &eacute;pisode</span>
@@ -443,7 +416,7 @@
 <div class="finalcta">
   <div class="wrap">
     <div class="eyebrow klabel">Les d&eacute;cisions les plus solitaires sont celles qui comptent le plus</div>
-    <div class="h2">Certaines d&eacute;cisions ne peuvent attendre.</div>
+    <h2 class="h2">Certaines d&eacute;cisions ne peuvent attendre.</h2>
     <div class="ctar" style="justify-content:center">
       <a href="#/portal/signup" data-portal="signup" class="btn btn-gold">S&rsquo;abonner &agrave; Corridor Intelligence</a>
       <a href="/appel.html" class="btn btn-ghost">Planifier un appel priv&eacute;</a>
@@ -463,6 +436,7 @@
       <a href="/appel.html">Planifier un appel</a>
       <a href="/privacy.html">Confidentialit&eacute;</a>
       <a href="/terms.html">Conditions</a>
+      <a href="/cookies.html">T&eacute;moins</a>
       <a href="https://www.linkedin.com/in/soaresjoseph/">LinkedIn</a>
       <a href="https://x.com/JosephSoares">X</a>
       <a href="https://www.youtube.com/@corridorintelligence?sub_confirmation=1">YouTube (anglais)</a>
@@ -474,6 +448,7 @@
 
 
 <script defer src="https://cdn.jsdelivr.net/ghost/portal@~2.69/umd/portal.min.js" data-ghost="https://brief.josephsoares.com/" data-api="https://brief.josephsoares.com/ghost/api/content/" data-key="ece73de31b60c5a2769ba56ee4" crossorigin="anonymous"></script>
+<script defer src="/latest-episode.js?v=20260918"></script>
 <!-- GA4 conversion events (delegated) -->
 <script>
 (function(){

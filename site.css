@@ -63,21 +63,19 @@ select:focus-visible,
 }
 
 /* 6 — Language toggle. Injected into .navlinks by consent.js on any page that
-   declares an hreflang twin. Reads as a small gold pill, distinct from the nav
-   links but quieter than the Subscribe CTA. */
+   declares an hreflang twin. Plain gold text (2026-09-18: was a pill; three
+   bordered items in one nav competed with the Subscribe CTA). */
 .navlinks a.lang{
   color:#D4AF37;
-  border:1px solid rgba(212,175,55,.45);
-  border-radius:2px;
-  padding:7px 11px;
+  padding:7px 4px;
   margin-left:4px;
   letter-spacing:.14em;
   min-height:auto;
 }
 .navlinks a.lang:hover{
-  background:#D4AF37;
-  color:#0A3161;
-  border-color:#D4AF37;
+  color:#E6C860;
+  text-decoration:underline;
+  text-underline-offset:4px;
 }
 @media (max-width: 880px){
   .navlinks a.lang{

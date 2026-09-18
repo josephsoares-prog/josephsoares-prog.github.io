@@ -92,8 +92,8 @@
     '<a href="/issues-focus.html">Issues</a></div></div>' +
     '<a href="/podcast.html">Podcast</a>' +
     '<a href="/writing.html">Writing</a>' +
-    '<a href="/stewardship.html">Stewardship</a>' +
-    '<a href="/media.html">Media</a>' +
+    '<div class="navdrop"><a href="/stewardship.html">About</a><div class="navdrop-menu">' +
+    '<a href="/stewardship.html">Stewardship</a><a href="/media.html">Media</a></div></div>' +
     '<a href="/book.html">Book</a>' +
     '<a class="cta" href="/subscribe.html">Subscribe</a>';
 
@@ -104,9 +104,9 @@
     '<a href="/issues-focus-fr.html">Enjeux</a></div></div>' +
     '<a href="/podcast.html">Balado</a>' +
     '<a href="/writing.html">&Eacute;crits</a>' +
-    '<a href="/stewardship-fr.html">Engagement</a>' +
-    '<a href="/conferences.html">Conf&eacute;rences</a>' +
-    '<a href="/media-fr.html">M&eacute;dias</a>' +
+    '<div class="navdrop"><a href="/stewardship-fr.html">&Agrave; propos</a><div class="navdrop-menu">' +
+    '<a href="/stewardship-fr.html">Engagement</a><a href="/conferences.html">Conf&eacute;rences</a>' +
+    '<a href="/media-fr.html">M&eacute;dias</a></div></div>' +
     '<a href="/livre.html">Livre</a>' +
     '<a class="cta" href="/abonnement.html">S&rsquo;abonner</a>';
 
@@ -125,6 +125,7 @@
     '<div class="ci-socrow">' +
     '<a href="/privacy.html">Privacy</a>' +
     '<a href="/terms.html">Terms</a>' +
+    '<a href="/cookies.html">Cookies</a>' +
     '</div>' +
     '</div></div>';
 
@@ -143,6 +144,7 @@
     '<div class="ci-socrow">' +
     '<a href="/privacy.html">Confidentialit&eacute;</a>' +
     '<a href="/terms.html">Conditions</a>' +
+    '<a href="/cookies.html">T&eacute;moins</a>' +
     '</div>' +
     '</div></div>';
 
@@ -229,7 +231,7 @@
          nav bar itself, beside the hamburger, and hide the in-menu copy so exactly
          one is shown at any width. */
       ".ci-langmob{display:none;align-items:center;justify-content:center;margin-left:auto;margin-right:14px;" +
-      "padding:5px 11px;border:1px solid var(--gold,#D4AF37);border-radius:3px;color:var(--gold,#D4AF37);" +
+      "padding:5px 6px;border:0;color:var(--gold,#D4AF37);" +
       "font-family:'Oswald','Source Sans 3',system-ui,sans-serif;font-size:12px;font-weight:500;letter-spacing:.12em;" +
       "line-height:1;text-decoration:none}" +
       /* A page that keeps its own nav gets no in-menu copy of the toggle, so its pill
@@ -293,16 +295,16 @@
      Amazon's rules, which decide what is possible before launch day:
        - Kindle ebook CAN be put on pre-order. Doing so makes the Amazon
          detail page live immediately with a "Pre-order" button, so the
-         ebook URL can be filled in before 6 October.
+         ebook URL can be filled in before 20 October.
        - Paperback CANNOT be pre-ordered. KDP keeps the detail page hidden
-         until the release date, so no paperback URL exists until 6 October.
+         until the release date, so no paperback URL exists until 20 October.
 
      Any page gets the buttons by carrying an empty <div data-book-buy></div>.
      ------------------------------------------------------------------ */
   var BOOK_BUY = {
     ebook: "",        // Kindle URL - fill as soon as the pre-order is set up
-    paperback: "",    // Paperback URL - exists only from 6 October
-    launchISO: "2026-10-06",
+    paperback: "",    // Paperback URL - exists only from 20 October
+    launchISO: "2026-10-20",
     isbnPaper: "978-0-9868758-2-3",
     isbnEbook: "978-0-9868758-4-7"
   };
@@ -333,14 +335,14 @@
     var t = IS_FR ? {
       paper: "Acheter le livre papier", ebook: "Acheter le livre num&eacute;rique",
       pre: "Pr&eacute;commander le livre num&eacute;rique",
-      soon: "Livre papier et livre num&eacute;rique, en vente le 6 octobre 2026.",
-      paperSoon: "Le livre papier para&icirc;t le 6 octobre 2026.",
+      soon: "Livre papier et livre num&eacute;rique, en vente le 20 octobre 2026.",
+      paperSoon: "Le livre papier para&icirc;t le 20 octobre 2026.",
       isbn: "ISBN &mdash; papier " + BOOK_BUY.isbnPaper + " &middot; num&eacute;rique " + BOOK_BUY.isbnEbook
     } : {
       paper: "Buy the paperback", ebook: "Buy the ebook",
       pre: "Pre-order the ebook",
-      soon: "Paperback and ebook, on sale 6 October 2026.",
-      paperSoon: "The paperback is published on 6 October 2026.",
+      soon: "Paperback and ebook, on sale 20 October 2026.",
+      paperSoon: "The paperback is published on 20 October 2026.",
       isbn: "ISBN &mdash; paperback " + BOOK_BUY.isbnPaper + " &middot; ebook " + BOOK_BUY.isbnEbook
     };
 
@@ -528,7 +530,7 @@
     if (document.getElementById("ci-banner-js")) return;
     var s = document.createElement("script");
     s.id = "ci-banner-js";
-    s.src = "/ci-banner.js?v=20260917";
+    s.src = "/ci-banner.js?v=20260918";
     s.defer = true;
     document.head.appendChild(s);
   })();
