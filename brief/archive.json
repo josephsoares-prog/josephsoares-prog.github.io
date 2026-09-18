@@ -1,5 +1,14 @@
 [
   {
+    "date": "2026-09-18",
+    "long_en": "Friday, 18 September 2026",
+    "long_fr": "vendredi 18 septembre 2026",
+    "count": 21,
+    "lead_en": "Fed hikes to 3.75%-4.00%, first increase since 2023, unanimous under new Chair Warsh",
+    "lead_fr": "La Fed relève ses taux à 3,75-4,00 %, première hausse depuis 2023, vote unanime sous le nouveau président Warsh",
+    "url": "/brief/2026-09-18.html"
+  },
+  {
     "date": "2026-09-17",
     "long_en": "Thursday, 17 September 2026",
     "long_fr": "jeudi 17 septembre 2026",
@@ -52,14 +61,5 @@
     "lead_en": "US diesel hits record $6.05 a gallon as Brent crosses $105 on Hormuz disruption",
     "lead_fr": "Le diesel américain atteint un record de 6,05 $ le gallon alors que le Brent dépasse 105 $ à cause de la perturbation d’Ormuz",
     "url": "/brief/2026-09-12.html"
-  },
-  {
-    "date": "2026-09-11",
-    "long_en": "Friday, 11 September 2026",
-    "long_fr": "vendredi 11 septembre 2026",
-    "count": 24,
-    "lead_en": "The US destroys five Iranian tankers and Iran strikes a Jordanian air base as the Houthis seize Yemen's Mocha and open a second Gulf chokepoint, Brent crosses $104 and diesel hits an all-time record near $6 a gallon as Fed rate-hike odds surge to about 70% ahead of today's CPI print and the 10-year Treasury yield tops 4.9%, Trump bans Canadian alcohol, dairy whey and motorcycles and adds new 50% tariffs as Canada's own $27.6B counter-tariffs take full effect and StatCan confirms 42,000 August job losses, the IDF destroys a major Hezbollah tunnel complex and Russian strikes kill at least seven in Ukraine, Canada joins 11 allies pledging to ban trade in Israeli settlement goods, and Oracle's cloud backlog swells to $664B as the DOJ probes Nvidia's $20B Groq deal",
-    "lead_fr": "Les États-Unis détruisent cinq pétroliers iraniens et l'Iran frappe une base aérienne jordanienne alors que les Houthis s'emparent de Mocha, au Yémen, ouvrant un second point d'étranglement dans le Golfe, le Brent dépasse 104 $ et le diesel atteint un record historique près de 6 $ le gallon tandis que les probabilités de hausse de la Fed bondissent à environ 70 % avant l'IPC publié aujourd'hui et que le rendement du bon du Trésor à 10 ans dépasse 4,9 %, Trump interdit l'alcool, le lactosérum et les motos canadiens et ajoute de nouveaux tarifs de 50 % alors que les propres contre-tarifs canadiens de 27,6 G$ entrent pleinement en vigueur et que Statistique Canada confirme la perte de 42 000 emplois en août, l'armée israélienne détruit un important complexe souterrain du Hezbollah et des frappes russes tuent au moins sept personnes en Ukraine, le Canada se joint à 11 alliés pour promettre d'interdire le commerce des produits des colonies israéliennes, et le carnet de commandes infonuagique d'Oracle atteint 664 G$ alors que le DOJ examine l'accord de 20 G$ entre Nvidia et Groq",
-    "url": "/brief/2026-09-11.html"
   }
 ]
