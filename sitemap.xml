@@ -417,9 +417,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/hungary-orban-magyar-april-2026.html"/>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/hongrie-orban-magyar-avril-2026.html"/>
   </url>
-  <url><loc>https://josephsoares.com/islamabad-failed-blockade-april-2026.html</loc><lastmod>2026-04-14</lastmod><priority>0.65</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/islamabad-failed-blockade-april-2026.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/islamabad-echec-blocus-avril-2026.html"/>
+  <url><loc>https://josephsoares.com/islamabad-failed-blockade-april-2026.html</loc><lastmod>2026-04-12</lastmod><priority>0.65</priority>
   </url>
   <url><loc>https://josephsoares.com/ceasefire-that-isnt-april-2026.html</loc><lastmod>2026-04-14</lastmod><priority>0.65</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/ceasefire-that-isnt-april-2026.html"/>
@@ -480,8 +478,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/hungary-orban-magyar-april-2026.html"/>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/hongrie-orban-magyar-avril-2026.html"/>
   </url>
-  <url><loc>https://josephsoares.com/islamabad-echec-blocus-avril-2026.html</loc><lastmod>2026-04-14</lastmod><priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/islamabad-failed-blockade-april-2026.html"/>
+  <url><loc>https://josephsoares.com/islamabad-echec-blocus-avril-2026.html</loc><lastmod>2026-04-12</lastmod><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/islamabad-blockade-april-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/islamabad-echec-blocus-avril-2026.html"/>
+  </url>
+  <url><loc>https://josephsoares.com/islamabad-blockade-april-2026.html</loc><lastmod>2026-04-14</lastmod><priority>0.65</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/islamabad-blockade-april-2026.html"/>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/islamabad-echec-blocus-avril-2026.html"/>
   </url>
   <url><loc>https://josephsoares.com/congres-liberal-paysage-federal-avril-2026.html</loc><lastmod>2026-04-14</lastmod><priority>0.6</priority>
@@ -818,6 +820,30 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://josephsoares.com/brief/2026-09-17.html</loc>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://josephsoares.com/brief/2026-09-18.html</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://josephsoares.com/brief/2026-09-19.html</loc>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://josephsoares.com/brief/2026-09-20.html</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://josephsoares.com/issues-focus-angola.html</loc>
     <lastmod>2026-09-16</lastmod>
     <changefreq>monthly</changefreq>
@@ -862,5 +888,17 @@
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://josephsoares.com/quebec2026/index-en.html</loc>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://josephsoares.com/quebec2026/index-fr.html</loc>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>
