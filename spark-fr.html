@@ -209,13 +209,14 @@
   <div class="gate" id="gate">
     <div class="eyebrow klabel">Votre profil est prêt</div>
     <div class="h2" style="font-size:26px">Où dois-je vous envoyer l&rsquo;analyse complète&nbsp;?</div>
-    <p class="sub">Indiquez votre adresse courriel et je vous enverrai votre profil SPARK détaillé &mdash; avec le premier chapitre de <i>Leadership Under Fire</i>. Vos résultats apparaissent ci-dessous, dans tous les cas.</p>
+    <p class="sub">Indiquez votre adresse courriel et je vous enverrai votre profil SPARK détaillé &mdash; vos cinq résultats, le pilier exposé, et quoi faire ensuite. Vos résultats apparaissent ci-dessous, dans tous les cas.</p>
     <div class="subs">
       <form id="sparkform" onsubmit="return sparkSend(event)" style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin:14px auto 0;max-width:520px">
         <input type="email" id="sparkemail" required placeholder="vous@entreprise.com" autocomplete="email" style="flex:1 1 260px;min-width:220px;font-family:'EB Garamond',serif;font-size:17px;padding:13px 16px;border-radius:2px;border:1px solid rgba(242,239,233,.25);background:#072244;color:#F2EFE9">
         <button type="submit" class="btn btn-gold" style="padding:13px 26px;font-size:14px">Envoyer mon profil &rarr;</button>
+        <label style="flex:1 1 100%;text-align:center;font-size:14px;color:var(--muted);margin-top:4px"><input type="checkbox" id="sparkconsent" style="vertical-align:middle;margin-right:6px"> Envoyez-moi aussi Corridor Intelligence, gratuitement &mdash; de l&rsquo;intelligence stratégique pour les décisions qui ne peuvent pas attendre.</label>
       </form>
-      <p id="sparkok" style="display:none;text-align:center;margin-top:12px;color:#D4AF37;font-style:italic">C&rsquo;est fait &mdash; votre profil est en route. Surveillez votre boîte de réception.</p>
+      <p id="sparkok" style="display:none;text-align:center;margin-top:12px;color:#D4AF37;font-style:italic">Envoyé. Vérifiez votre boîte de réception &mdash; et si vous préférez ne pas attendre, la prochaine étape est ci-dessous.</p>
       <div style="text-align:center;margin:14px auto 0"><a href="#/portal/signup" data-portal="signup" style="display:inline-block;font-family:'Oswald',sans-serif;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);text-decoration:underline;text-underline-offset:3px;background:none;padding:0">Ou abonnez-vous gratuitement à Corridor Intelligence</a></div>
     </div>
   </div>
@@ -288,8 +289,8 @@ function grade(){
   document.getElementById('bars').innerHTML=bars;
   document.getElementById('overallhead').textContent=`Score global : ${avg}% — ${band(avg)}`;
   document.getElementById('overalltext').textContent=avg>=80?"Vous dirigez avec un alignement réel. La valeur, maintenant, c'est de protéger et de faire fructifier ce que vous avez bâti — et de refermer l'unique brèche ci-dessous avant qu'elle ne vous coûte cher.":avg>=55?"Vous avez de vraies forces, et au moins un flanc exposé. Sous une pression suffisante, c'est le pilier le plus faible qui cède le premier.":"Les fondations sont sous tension à plus d'un endroit. C'est réparable — et c'est précisément le travail à faire avant que la prochaine décision à haut risque ne vous prenne de court.";
-  const rec={S:["/sprint-30-jours.html","Faites un Sprint sur votre objectif le plus important"],P:["/fauteuil.html","Parlons du poste qui vous freine"],A:["/livre.html","Le chapitre sur l'opérateur IA-first a été écrit exactement pour ça"],R:["/fauteuil.html","Une conversation sur la confiance, les bonnes pièces, et l'influence"],K:["/sprint-30-jours.html","Faites passer votre décision bloquée par un Sprint de 30 jours"]}[lowest];
-  document.getElementById('reco').innerHTML=`<h3 style="color:var(--bone)"><span class="n">&raquo;</span>Votre pilier exposé : ${PILLAR[lowest]}</h3><p style="margin-bottom:18px">C'est le flanc le plus susceptible de céder sous pression. Le moyen le plus rapide de le renforcer : <b style="color:var(--bone)">${rec[1]}.</b></p><a class="btn btn-gold" href="${rec[0]}">Passer à l'étape suivante &rarr;</a>`;
+  const rec={S:["/fauteuil.html?ref=spark&about=sprint","Faites passer votre objectif le plus important par un Sprint de 30 jours"],P:["/fauteuil.html?ref=spark","Parlons du poste qui vous freine"],A:["/fauteuil.html?ref=spark","Parlons de la place réelle de la technologie et de l'automatisation dans votre façon d'opérer"],R:["/fauteuil.html?ref=spark","Une conversation sur la confiance, les bonnes pièces, et l'influence"],K:["/fauteuil.html?ref=spark&about=sprint","Faites passer votre décision bloquée par un Sprint de 30 jours"]}[lowest];
+  document.getElementById('reco').innerHTML=`<h3 style="color:var(--bone)"><span class="n">&raquo;</span>Votre pilier exposé : ${PILLAR[lowest]}</h3><p style="margin-bottom:18px">C'est le flanc le plus susceptible de céder sous pression. Le moyen le plus rapide de le renforcer : <b style="color:var(--bone)">${rec[1]}.</b></p><a class="btn btn-gold" id="applybtn" href="${rec[0]}">Poser ma candidature pour une conversation &rarr;</a><p class="fnote" style="margin-top:12px;font-size:14px;color:var(--muted);font-style:italic">Une seule porte : une courte candidature écrite. Je réponds par écrit dans les deux jours ouvrables. Le sprint SPARK de 30 jours est à 5 000 $ US; le Fauteuil est sur invitation.</p>`;
   setTimeout(()=>{document.querySelectorAll('.fill').forEach(f=>f.style.width=f.dataset.w+'%');},80);
   window.__spark={scores:pct,overall:avg,exposed:PILLAR[lowest]};
   try{window.gtag&&gtag('event','spark_complete',{overall:avg,exposed:PILLAR[lowest]});}catch(e){}
@@ -298,12 +299,17 @@ function grade(){
 function sparkSend(e){e.preventDefault();
   var em=document.getElementById('sparkemail').value,sp=window.__spark||{};
   var u=null;try{u=JSON.parse(sessionStorage.getItem('utmData'))}catch(err){}
-  var p={form_type:'spark_profile',name:'',email:em,company:'',situation:'',timeline:'',
+  var cb=document.getElementById('sparkconsent'),consent=(cb&&cb.checked)?'newsletter':'';
+  var q=null;try{q=new URLSearchParams(location.search)}catch(err){}
+  var ref=(q&&q.get('ref'))||'';
+  var p={form_type:'spark_profile',name:'',email:em,company:'',situation:'',timeline:'',consent:consent,ref:ref,lang:'fr-CA',
     spark_scores:JSON.stringify(sp.scores||{})+' | overall '+(sp.overall||'?')+'%',
+    spark_s:(sp.scores||{}).S||'',spark_p:(sp.scores||{}).P||'',spark_a:(sp.scores||{}).A||'',spark_r:(sp.scores||{}).R||'',spark_k:(sp.scores||{}).K||'',spark_overall:sp.overall||'',
     spark_exposed:sp.exposed||'',page_url:location.href,referrer:document.referrer||'(direct)',
-    utm_source:(u&&u.utm_source)||'direct',utm_medium:(u&&u.utm_medium)||'direct',
+    utm_source:(u&&u.utm_source)||ref||'direct',utm_medium:(u&&u.utm_medium)||(ref?'site':'direct'),
     utm_campaign:(u&&u.utm_campaign)||'(none)',utm_content:(u&&u.utm_content)||'(none)',
     utm_term:(u&&u.utm_term)||'(none)',submitted_at:new Date().toISOString()};
+  try{var ab=document.getElementById('applybtn');if(ab){ab.href=ab.getAttribute('href')+'&e='+encodeURIComponent(em);}}catch(err){}
   try{window.gtag&&gtag('event','spark_email_submit',{exposed:sp.exposed||''});}catch(err){}
   fetch('https://hook.us2.make.com/zrq4t9rdqj4v59sfxuofq0c3a4tvx8k1',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(p),keepalive:true}).catch(function(){});
   document.getElementById('sparkform').style.display='none';
