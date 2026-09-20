@@ -1,5 +1,14 @@
 [
   {
+    "date": "2026-09-20",
+    "long_en": "Sunday, 20 September 2026",
+    "long_fr": "dimanche 20 septembre 2026",
+    "count": 18,
+    "lead_en": "Bessent and China's He Lifeng open all-day trade talks in Manhattan ahead of Trump-Xi summit",
+    "lead_fr": "Bessent et le vice-premier ministre chinois He Lifeng ouvrent une journée de négociations commerciales à Manhattan avant le sommet Trump-Xi",
+    "url": "/brief/2026-09-20.html"
+  },
+  {
     "date": "2026-09-19",
     "long_en": "Saturday, 19 September 2026",
     "long_fr": "samedi 19 septembre 2026",
@@ -52,14 +61,5 @@
     "lead_en": "Saudi Arabia shuts its 1,200km East-West pipeline after a drone attack from Iraq, pushing Brent past $104",
     "lead_fr": "L'Arabie saoudite ferme son oléoduc Est-Ouest de 1 200 km après une attaque de drones depuis l'Irak, portant le Brent au-delà de 104 $",
     "url": "/brief/2026-09-14.html"
-  },
-  {
-    "date": "2026-09-13",
-    "long_en": "Sunday, 13 September 2026",
-    "long_fr": "dimanche 13 septembre 2026",
-    "count": 19,
-    "lead_en": "US inflation holds at 3.4% in August, pushing Fed hike odds for the September 16 decision to nearly 80%",
-    "lead_fr": "L'inflation américaine se maintient à 3,4 % en août, portant à près de 80 % les probabilités d'une hausse de la Fed le 16 septembre",
-    "url": "/brief/2026-09-13.html"
   }
 ]
