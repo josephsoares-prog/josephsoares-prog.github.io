@@ -201,20 +201,23 @@
 </div></section>
 
 <section class="blk"><div class="wrap">
-  <div class="eyebrow klabel">Request a conversation</div>
+  <div class="eyebrow klabel">Apply for a conversation</div>
   <div class="h2">Start here.</div>
-  <p class="sub">Tell me what&rsquo;s on your desk. If it&rsquo;s a fit, we&rsquo;ll book a private, confidential call. If it isn&rsquo;t, I&rsquo;ll tell you that too &mdash; and point you somewhere better.</p>
+  <p class="sub">Tell me what&rsquo;s on your desk. I read every application myself and reply in writing within two business days. If it&rsquo;s a fit, that reply carries a private link to choose a time. If it isn&rsquo;t, I&rsquo;ll say so &mdash; and point you somewhere better.</p>
   <div class="form">
-    <form onsubmit="return chairSubmit(event)">
+    <form id="chairform" onsubmit="return chairSubmit(event)">
       <label>Name</label><input required type="text" name="name" autocomplete="name">
       <label>Email</label><input required type="email" name="email" autocomplete="email">
       <label>Company / role</label><input type="text" name="company">
       <label>What decision or situation is in front of you?</label><textarea name="situation" rows="3"></textarea>
+      <label>What are you applying about?</label>
+      <select name="about"><option value="sprint">The 30-Day SPARK Sprint &mdash; US$5,000</option><option value="chair">The Chair &mdash; standing advisory, by invitation</option><option value="unsure" selected>Not sure yet &mdash; tell me what fits</option></select>
       <label>Timeline</label>
       <select name="timeline"><option>Immediate &mdash; this is live now</option><option>Within the next 90 days</option><option>This year</option><option>Exploring / planning ahead</option></select>
-      <div style="margin-top:26px"><button class="btn btn-gold" type="submit">Request a conversation &rarr;</button></div>
-      <p class="fnote">Held in strict confidence. Your message comes directly to me, and you&rsquo;ll be taken to my private calendar to choose a time.</p>
+      <div style="margin-top:26px"><button class="btn btn-gold" type="submit">Apply &rarr;</button></div>
+      <p class="fnote">Held in strict confidence. Your application comes directly to me. You will hear from me in writing within two business days.</p>
     </form>
+    <div id="chairok" style="display:none"><div class="h2" style="font-size:26px">Received.</div><p class="sub">Thank you. I read every application myself. You will hear from me in writing within two business days &mdash; watch your inbox, including the folder your mail client hides things in.</p><p class="fnote">Meanwhile, <a href="/book.html" style="color:var(--gold)">the book</a> lays out the whole SPARK method, and <a href="/subscribe.html" style="color:var(--gold)">Corridor Intelligence</a> is free.</p></div>
   </div>
 </div></section>
 
@@ -238,20 +241,26 @@
 function chairSubmit(e){e.preventDefault();
   var f=e.target,btn=f.querySelector('button[type=submit]');
   var u=null;try{u=JSON.parse(sessionStorage.getItem('utmData'))}catch(err){}
-  var p={form_type:'chair_request',
+  var q=null;try{q=new URLSearchParams(location.search)}catch(err){}
+  var ref=(q&&q.get('ref'))||'';
+  var p={form_type:'application',
     name:(f.name&&f.name.value)||'',email:(f.email&&f.email.value)||'',
     company:(f.company&&f.company.value)||'',situation:(f.situation&&f.situation.value)||'',
-    timeline:(f.timeline&&f.timeline.value)||'',
+    timeline:(f.timeline&&f.timeline.value)||'',about:(f.about&&f.about.value)||'',ref:ref,
     page_url:location.href,referrer:document.referrer||'(direct)',
-    utm_source:(u&&u.utm_source)||'direct',utm_medium:(u&&u.utm_medium)||'direct',
+    utm_source:(u&&u.utm_source)||ref||'direct',utm_medium:(u&&u.utm_medium)||(ref?'site':'direct'),
     utm_campaign:(u&&u.utm_campaign)||'(none)',utm_content:(u&&u.utm_content)||'(none)',
     utm_term:(u&&u.utm_term)||'(none)',submitted_at:new Date().toISOString()};
   if(btn){btn.disabled=true;btn.textContent='Sending\u2026';}
-  try{window.gtag&&gtag('event','chair_submit',{page:location.pathname});}catch(err){}
+  try{window.gtag&&gtag('event','application_submit',{page:location.pathname,about:p.about,ref:ref});}catch(err){}
   fetch('https://hook.us2.make.com/zrq4t9rdqj4v59sfxuofq0c3a4tvx8k1',{method:'POST',headers:{'Content-Type':'application/json'},
     body:JSON.stringify(p),keepalive:true}).catch(function(){});
-  setTimeout(function(){window.location.href='/call.html';},400);
+  setTimeout(function(){f.style.display='none';var ok=document.getElementById('chairok');if(ok){ok.style.display='block';ok.scrollIntoView({behavior:'smooth',block:'center'});}},300);
   return false;}
+(function(){try{var q=new URLSearchParams(location.search),f=document.getElementById('chairform');if(!f)return;
+  var e=q.get('e');if(e&&f.email)f.email.value=e;
+  var a=q.get('about');if(a&&f.about){for(var i=0;i<f.about.options.length;i++){if(f.about.options[i].value===a){f.about.selectedIndex=i;break;}}}
+  if(e&&f.name){f.name.focus();}}catch(err){}})();
 </script>
 <!-- GA4 conversion events (delegated) -->
 <script>
