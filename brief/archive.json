@@ -1,5 +1,14 @@
 [
   {
+    "date": "2026-09-23",
+    "long_en": "Wednesday, 23 September 2026",
+    "long_fr": "mercredi 23 septembre 2026",
+    "count": 17,
+    "lead_en": "Bessent calls US–China AI and trade talks ‘very successful’ two days before the Trump-Xi summit",
+    "lead_fr": "Bessent qualifie de « très fructueuses » les discussions commerciales et sur l’IA entre les États-Unis et la Chine, deux jours avant le sommet Trump-Xi",
+    "url": "/brief/2026-09-23.html"
+  },
+  {
     "date": "2026-09-22",
     "long_en": "Tuesday, 22 September 2026",
     "long_fr": "mardi 22 septembre 2026",
@@ -52,14 +61,5 @@
     "lead_en": "Fed hikes to 3.75%-4% under Warsh, pencils in no cuts through 2027 as Trump attacks his own pick",
     "lead_fr": "La Fed relève ses taux à 3,75-4 % sous Warsh, n'envisage aucune baisse avant 2027, alors que Trump attaque son propre choix",
     "url": "/brief/2026-09-17.html"
-  },
-  {
-    "date": "2026-09-16",
-    "long_en": "Wednesday, 16 September 2026",
-    "long_fr": "mercredi 16 septembre 2026",
-    "count": 18,
-    "lead_en": "Fed meets today under Chair Warsh with markets pricing a first rate hike since 2023",
-    "lead_fr": "La Fed se réunit aujourd’hui sous le président Warsh, les marchés anticipant une première hausse depuis 2023",
-    "url": "/brief/2026-09-16.html"
   }
 ]
