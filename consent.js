@@ -123,6 +123,7 @@
     '<a href="https://www.instagram.com/soaresjoseph/">Instagram</a>' +
     '</div>' +
     '<div class="ci-socrow">' +
+    '<a href="mailto:info@josephsoares.com">info@josephsoares.com</a>' +
     '<a href="/privacy.html">Privacy</a>' +
     '<a href="/terms.html">Terms</a>' +
     '<a href="/cookies.html">Cookies</a>' +
@@ -142,6 +143,7 @@
     '<a href="https://www.instagram.com/soaresjoseph/">Instagram</a>' +
     '</div>' +
     '<div class="ci-socrow">' +
+    '<a href="mailto:info@josephsoares.com">info@josephsoares.com</a>' +
     '<a href="/privacy.html">Confidentialit&eacute;</a>' +
     '<a href="/terms.html">Conditions</a>' +
     '<a href="/cookies.html">T&eacute;moins</a>' +
