@@ -33,4 +33,5 @@ const z=await crypto.subtle.decrypt({name:'AES-GCM',iv:u(D.i)},k,u(D.c));
 const html=await new Response(new Blob([z]).stream().pipeThrough(new DecompressionStream('gzip'))).text();
 document.open();document.write(html);document.close();}
 catch(x){err.textContent='That password is not correct. Please check and try again.';}});
+if(location.hash.length>1){document.getElementById('pw').value=decodeURIComponent(location.hash.slice(1));document.getElementById('f').dispatchEvent(new Event('submit',{cancelable:true}));}
 </script></body></html>
