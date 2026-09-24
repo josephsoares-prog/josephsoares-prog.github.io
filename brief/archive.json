@@ -1,5 +1,14 @@
 [
   {
+    "date": "2026-09-24",
+    "long_en": "Thursday, 24 September 2026",
+    "long_fr": "jeudi 24 septembre 2026",
+    "count": 18,
+    "lead_en": "Trump and Xi extend the US–China trade truce through January 10 as Xi arrives in Washington for the first time in a decade",
+    "lead_fr": "Trump et Xi prolongent la trêve commerciale américano-chinoise jusqu’au 10 janvier, alors que Xi arrive à Washington pour la première fois en dix ans",
+    "url": "/brief/2026-09-24.html"
+  },
+  {
     "date": "2026-09-23",
     "long_en": "Wednesday, 23 September 2026",
     "long_fr": "mercredi 23 septembre 2026",
@@ -52,14 +61,5 @@
     "lead_en": "Fed hikes to 3.75%-4.00%, first increase since 2023, unanimous under new Chair Warsh",
     "lead_fr": "La Fed relève ses taux à 3,75-4,00 %, première hausse depuis 2023, vote unanime sous le nouveau président Warsh",
     "url": "/brief/2026-09-18.html"
-  },
-  {
-    "date": "2026-09-17",
-    "long_en": "Thursday, 17 September 2026",
-    "long_fr": "jeudi 17 septembre 2026",
-    "count": 22,
-    "lead_en": "Fed hikes to 3.75%-4% under Warsh, pencils in no cuts through 2027 as Trump attacks his own pick",
-    "lead_fr": "La Fed relève ses taux à 3,75-4 % sous Warsh, n'envisage aucune baisse avant 2027, alors que Trump attaque son propre choix",
-    "url": "/brief/2026-09-17.html"
   }
 ]
