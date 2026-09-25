@@ -33,16 +33,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/book.html"/>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/livre.html"/>
   </url>
-
-  <url>
-    <loc>https://josephsoares.com/sprint-30-jours.html</loc>
-    <lastmod>2026-08-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.55</priority>
-  
-    <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/sprint.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/sprint-30-jours.html"/>
-  </url>
   <url>
     <loc>https://josephsoares.com/media-fr.html</loc>
     <lastmod>2026-08-19</lastmod>
@@ -594,10 +584,6 @@
   <url><loc>https://josephsoares.com/spark-fr.html</loc><lastmod>2026-09-14</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/spark.html"/>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/spark-fr.html"/>
-  </url>
-  <url><loc>https://josephsoares.com/sprint.html</loc><lastmod>2026-09-01</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/sprint.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/sprint-30-jours.html"/>
   </url>
   <url><loc>https://josephsoares.com/issues-focus-africa.html</loc><lastmod>2026-09-13</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/issues-focus-africa.html"/>
