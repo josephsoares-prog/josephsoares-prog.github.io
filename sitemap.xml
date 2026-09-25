@@ -934,4 +934,36 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/newsroom.html"/>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/salle-de-presse.html"/>
   </url>
+  <url>
+    <loc>https://josephsoares.com/authority-build.html</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/authority-build.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/chantier-autorite.html"/>
+  </url>
+  <url>
+    <loc>https://josephsoares.com/chantier-autorite.html</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/authority-build.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/chantier-autorite.html"/>
+  </url>
+  <url>
+    <loc>https://josephsoares.com/authority-read.html</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/authority-read.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/lecture-autorite.html"/>
+  </url>
+  <url>
+    <loc>https://josephsoares.com/lecture-autorite.html</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/authority-read.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/lecture-autorite.html"/>
+  </url>
 </urlset>
