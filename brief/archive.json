@@ -1,65 +1,65 @@
 [
-  {
-    "date": "2026-09-24",
-    "long_en": "Thursday, 24 September 2026",
-    "long_fr": "jeudi 24 septembre 2026",
-    "count": 18,
-    "lead_en": "Trump and Xi extend the US–China trade truce through January 10 as Xi arrives in Washington for the first time in a decade",
-    "lead_fr": "Trump et Xi prolongent la trêve commerciale américano-chinoise jusqu’au 10 janvier, alors que Xi arrive à Washington pour la première fois en dix ans",
-    "url": "/brief/2026-09-24.html"
-  },
-  {
-    "date": "2026-09-23",
-    "long_en": "Wednesday, 23 September 2026",
-    "long_fr": "mercredi 23 septembre 2026",
-    "count": 17,
-    "lead_en": "Bessent calls US–China AI and trade talks ‘very successful’ two days before the Trump-Xi summit",
-    "lead_fr": "Bessent qualifie de « très fructueuses » les discussions commerciales et sur l’IA entre les États-Unis et la Chine, deux jours avant le sommet Trump-Xi",
-    "url": "/brief/2026-09-23.html"
-  },
-  {
-    "date": "2026-09-22",
-    "long_en": "Tuesday, 22 September 2026",
-    "long_fr": "mardi 22 septembre 2026",
-    "count": 19,
-    "lead_en": "Tech titans join Trump–Xi state dinner Thursday as Xi makes his first White House visit in a decade",
-    "lead_fr": "Les géants de la tech se joignent au dîner d’État Trump–Xi jeudi, alors que Xi effectue sa première visite à la Maison-Blanche en dix ans",
-    "url": "/brief/2026-09-22.html"
-  },
-  {
-    "date": "2026-09-21",
-    "long_en": "Monday, 21 September 2026",
-    "long_fr": "lundi 21 septembre 2026",
-    "count": 18,
-    "lead_en": "Trump-Xi summit set for September 24 in Washington as $14 billion Taiwan arms package, $1 trillion China trade surplus loom",
-    "lead_fr": "Le sommet Trump-Xi prévu le 24 septembre à Washington, entre un colis d'armement de 14 milliards $ pour Taïwan et un excédent commercial chinois de 1 000 milliards $",
-    "url": "/brief/2026-09-21.html"
-  },
-  {
-    "date": "2026-09-20",
-    "long_en": "Sunday, 20 September 2026",
-    "long_fr": "dimanche 20 septembre 2026",
-    "count": 18,
-    "lead_en": "Bessent and China's He Lifeng open all-day trade talks in Manhattan ahead of Trump-Xi summit",
-    "lead_fr": "Bessent et le vice-premier ministre chinois He Lifeng ouvrent une journée de négociations commerciales à Manhattan avant le sommet Trump-Xi",
-    "url": "/brief/2026-09-20.html"
-  },
-  {
-    "date": "2026-09-19",
-    "long_en": "Saturday, 19 September 2026",
-    "long_fr": "samedi 19 septembre 2026",
-    "count": 24,
-    "lead_en": "Houthi offensive captures Red Sea port, pushes second Gulf oil corridor toward crisis",
-    "lead_fr": "L’offensive houthie s’empare d’un port de la mer Rouge, poussant un second corridor pétrolier du Golfe vers la crise",
-    "url": "/brief/2026-09-19.html"
-  },
-  {
-    "date": "2026-09-18",
-    "long_en": "Friday, 18 September 2026",
-    "long_fr": "vendredi 18 septembre 2026",
-    "count": 21,
-    "lead_en": "Fed hikes to 3.75%-4.00%, first increase since 2023, unanimous under new Chair Warsh",
-    "lead_fr": "La Fed relève ses taux à 3,75-4,00 %, première hausse depuis 2023, vote unanime sous le nouveau président Warsh",
-    "url": "/brief/2026-09-18.html"
-  }
+    {
+        "date": "2026-09-25",
+        "long_en": "Friday, 25 September 2026",
+        "long_fr": "vendredi 25 septembre 2026",
+        "count": 20,
+        "lead_en": "IEA: more than 10 million barrels a day of Gulf oil output remains shut in as diesel stays 94% above pre-war levels",
+        "lead_fr": "AIE : plus de 10 millions de barils par jour de production pétrolière du Golfe restent hors service, le diesel demeurant 94 % au-dessus des niveaux d’avant-guerre",
+        "url": "/brief/2026-09-25.html"
+    },
+    {
+        "date": "2026-09-24",
+        "long_en": "Thursday, 24 September 2026",
+        "long_fr": "jeudi 24 septembre 2026",
+        "count": 18,
+        "lead_en": "Trump and Xi extend the US–China trade truce through January 10 as Xi arrives in Washington for the first time in a decade",
+        "lead_fr": "Trump et Xi prolongent la trêve commerciale américano-chinoise jusqu’au 10 janvier, alors que Xi arrive à Washington pour la première fois en dix ans",
+        "url": "/brief/2026-09-24.html"
+    },
+    {
+        "date": "2026-09-23",
+        "long_en": "Wednesday, 23 September 2026",
+        "long_fr": "mercredi 23 septembre 2026",
+        "count": 17,
+        "lead_en": "Bessent calls US–China AI and trade talks ‘very successful’ two days before the Trump-Xi summit",
+        "lead_fr": "Bessent qualifie de « très fructueuses » les discussions commerciales et sur l’IA entre les États-Unis et la Chine, deux jours avant le sommet Trump-Xi",
+        "url": "/brief/2026-09-23.html"
+    },
+    {
+        "date": "2026-09-22",
+        "long_en": "Tuesday, 22 September 2026",
+        "long_fr": "mardi 22 septembre 2026",
+        "count": 19,
+        "lead_en": "Tech titans join Trump–Xi state dinner Thursday as Xi makes his first White House visit in a decade",
+        "lead_fr": "Les géants de la tech se joignent au dîner d’État Trump–Xi jeudi, alors que Xi effectue sa première visite à la Maison-Blanche en dix ans",
+        "url": "/brief/2026-09-22.html"
+    },
+    {
+        "date": "2026-09-21",
+        "long_en": "Monday, 21 September 2026",
+        "long_fr": "lundi 21 septembre 2026",
+        "count": 18,
+        "lead_en": "Trump-Xi summit set for September 24 in Washington as $14 billion Taiwan arms package, $1 trillion China trade surplus loom",
+        "lead_fr": "Le sommet Trump-Xi prévu le 24 septembre à Washington, entre un colis d'armement de 14 milliards $ pour Taïwan et un excédent commercial chinois de 1 000 milliards $",
+        "url": "/brief/2026-09-21.html"
+    },
+    {
+        "date": "2026-09-20",
+        "long_en": "Sunday, 20 September 2026",
+        "long_fr": "dimanche 20 septembre 2026",
+        "count": 18,
+        "lead_en": "Bessent and China's He Lifeng open all-day trade talks in Manhattan ahead of Trump-Xi summit",
+        "lead_fr": "Bessent et le vice-premier ministre chinois He Lifeng ouvrent une journée de négociations commerciales à Manhattan avant le sommet Trump-Xi",
+        "url": "/brief/2026-09-20.html"
+    },
+    {
+        "date": "2026-09-19",
+        "long_en": "Saturday, 19 September 2026",
+        "long_fr": "samedi 19 septembre 2026",
+        "count": 24,
+        "lead_en": "Houthi offensive captures Red Sea port, pushes second Gulf oil corridor toward crisis",
+        "lead_fr": "L’offensive houthie s’empare d’un port de la mer Rouge, poussant un second corridor pétrolier du Golfe vers la crise",
+        "url": "/brief/2026-09-19.html"
+    }
 ]
