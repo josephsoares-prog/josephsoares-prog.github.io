@@ -1,5 +1,14 @@
 [
     {
+        "date": "2026-09-26",
+        "long_en": "Saturday, 26 September 2026",
+        "long_fr": "samedi 26 septembre 2026",
+        "count": 12,
+        "lead_en": "Trump rejects Iran’s seven-day plan to reopen the Strait of Hormuz, and expects to resume strikes only after the US midterms",
+        "lead_fr": "Trump rejette le plan iranien en sept jours pour rouvrir le détroit d’Ormuz, et ne compte reprendre les frappes qu’après les élections de mi-mandat américaines",
+        "url": "/brief/2026-09-26.html"
+    },
+    {
         "date": "2026-09-25",
         "long_en": "Friday, 25 September 2026",
         "long_fr": "vendredi 25 septembre 2026",
@@ -52,14 +61,5 @@
         "lead_en": "Bessent and China's He Lifeng open all-day trade talks in Manhattan ahead of Trump-Xi summit",
         "lead_fr": "Bessent et le vice-premier ministre chinois He Lifeng ouvrent une journée de négociations commerciales à Manhattan avant le sommet Trump-Xi",
         "url": "/brief/2026-09-20.html"
-    },
-    {
-        "date": "2026-09-19",
-        "long_en": "Saturday, 19 September 2026",
-        "long_fr": "samedi 19 septembre 2026",
-        "count": 24,
-        "lead_en": "Houthi offensive captures Red Sea port, pushes second Gulf oil corridor toward crisis",
-        "lead_fr": "L’offensive houthie s’empare d’un port de la mer Rouge, poussant un second corridor pétrolier du Golfe vers la crise",
-        "url": "/brief/2026-09-19.html"
     }
 ]
