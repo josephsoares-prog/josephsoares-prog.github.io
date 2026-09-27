@@ -1,5 +1,14 @@
 [
     {
+        "date": "2026-09-27",
+        "long_en": "Sunday, 27 September 2026",
+        "long_fr": "dimanche 27 septembre 2026",
+        "count": 20,
+        "lead_en": "Trump and Xi extend US–China trade truce, cut tariffs on $30B in goods and open a first-ever AI safety channel",
+        "lead_fr": "Trump et Xi prolongent la trêve commerciale sino-américaine, réduisent les tarifs sur 30 milliards $ de biens et créent un premier canal sur la sécurité de l’IA",
+        "url": "/brief/2026-09-27.html"
+    },
+    {
         "date": "2026-09-26",
         "long_en": "Saturday, 26 September 2026",
         "long_fr": "samedi 26 septembre 2026",
@@ -52,14 +61,5 @@
         "lead_en": "Trump-Xi summit set for September 24 in Washington as $14 billion Taiwan arms package, $1 trillion China trade surplus loom",
         "lead_fr": "Le sommet Trump-Xi prévu le 24 septembre à Washington, entre un colis d'armement de 14 milliards $ pour Taïwan et un excédent commercial chinois de 1 000 milliards $",
         "url": "/brief/2026-09-21.html"
-    },
-    {
-        "date": "2026-09-20",
-        "long_en": "Sunday, 20 September 2026",
-        "long_fr": "dimanche 20 septembre 2026",
-        "count": 18,
-        "lead_en": "Bessent and China's He Lifeng open all-day trade talks in Manhattan ahead of Trump-Xi summit",
-        "lead_fr": "Bessent et le vice-premier ministre chinois He Lifeng ouvrent une journée de négociations commerciales à Manhattan avant le sommet Trump-Xi",
-        "url": "/brief/2026-09-20.html"
     }
 ]
