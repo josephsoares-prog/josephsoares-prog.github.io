@@ -48,12 +48,14 @@
     backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
   nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
   .navlinks{display:flex;gap:30px;align-items:center}
+  .navlinks a{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.12em;
+    font-size:13px;font-weight:500;text-decoration:none;color:var(--muted)}
+  .navlinks a:hover{color:var(--gold)}
+  .navlinks a.cta{color:var(--bone);border:1px solid var(--line);padding:9px 16px;border-radius:2px}
+  .navlinks a.cta:hover{border-color:var(--gold);color:var(--gold)}
   .brand{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.2em;
     font-weight:600;font-size:15px}
   .brand span{color:var(--gold)}
-  nav .navcta{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.12em;
-    font-size:13px;font-weight:500;text-decoration:none;color:var(--muted);margin-left:28px;white-space:nowrap}
-  nav .navcta:hover{color:var(--gold)}
 
   /* HERO */
   .hero{padding:74px 0 40px}
