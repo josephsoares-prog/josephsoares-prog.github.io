@@ -75,12 +75,15 @@
 (function () {
   "use strict";
   var PATH = location.pathname.replace(/^\/+/, "");
-  /* book.html / livre.html keep their own two-link nav and footer (RoD-2026-08-18,
-     do-not-touch). Until 2026-09-14 that was an outright return, which also skipped
-     the language toggle — so the one pair on the site that matters most commercially
-     was the only pair with no way to switch language. The flag now scopes the
-     exemption to the nav and footer rewrite, which is what the decision was about. */
-  var KEEP_OWN_CHROME = (PATH === "book.html" || PATH === "livre.html");
+  /* book.html / livre.html used to keep their own custom nav and footer
+     (RoD-2026-08-18). Reversed 2026-09-28 — Joseph flagged the Book page's
+     menu as visibly different from the rest of the site (different links,
+     a bolted-on "Reserve the book" nav button, and a left-positioned
+     language pill instead of the standard right-aligned one) and asked for
+     one uniform menu everywhere. Both pages now take the same unified nav
+     and footer as every other page; their own hero CTA still carries the
+     book-specific "Reserve your copy" ask. */
+  var KEEP_OWN_CHROME = false;
 
   var LANG = (document.documentElement.getAttribute("lang") || "en").toLowerCase();
   var IS_FR = LANG.indexOf("fr") === 0;
