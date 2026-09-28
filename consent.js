@@ -96,7 +96,7 @@
     '<a href="/podcast.html">Podcast</a>' +
     '<a href="/writing.html">Writing</a>' +
     '<div class="navdrop"><a href="/stewardship.html">About</a><div class="navdrop-menu">' +
-    '<a href="/stewardship.html">Stewardship</a><a href="/media.html">Media</a></div></div>' +
+    '<a href="/media.html">Media</a></div></div>' +
     '<a href="/book.html">Book</a>' +
     '<a class="cta" href="/subscribe.html">Subscribe</a>';
 
