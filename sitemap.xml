@@ -291,6 +291,7 @@
   </url>
 
   <!-- Long-form analysis — EN -->
+  <url><loc>https://josephsoares.com/canada-puts-a-clock-on-capital-september-2026.html</loc><lastmod>2026-09-21</lastmod><priority>0.7</priority></url>
   <url><loc>https://josephsoares.com/chicoutimi-quebec-swing.html</loc><lastmod>2026-09-03</lastmod><priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/chicoutimi-quebec-swing.html"/>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/chicoutimi-le-fjord-le-quebec-bascule.html"/>
@@ -470,8 +471,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/hungary-orban-magyar-april-2026.html"/>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/hongrie-orban-magyar-avril-2026.html"/>
   </url>
+  <url><loc>https://josephsoares.com/islamabad-blockade-april-2026.html</loc><lastmod>2026-04-14</lastmod><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/islamabad-blockade-april-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/islamabad-echec-blocus-avril-2026.html"/>
+  </url>
   <url><loc>https://josephsoares.com/islamabad-echec-blocus-avril-2026.html</loc><lastmod>2026-04-14</lastmod><priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/islamabad-failed-blockade-april-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/islamabad-blockade-april-2026.html"/>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/islamabad-echec-blocus-avril-2026.html"/>
   </url>
   <url><loc>https://josephsoares.com/congres-liberal-paysage-federal-avril-2026.html</loc><lastmod>2026-04-14</lastmod><priority>0.6</priority>
@@ -834,6 +839,48 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://josephsoares.com/brief/2026-09-22.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://josephsoares.com/brief/2026-09-23.html</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://josephsoares.com/brief/2026-09-24.html</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://josephsoares.com/brief/2026-09-25.html</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://josephsoares.com/brief/2026-09-26.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://josephsoares.com/brief/2026-09-27.html</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://josephsoares.com/brief/2026-09-28.html</loc>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://josephsoares.com/issues-focus-angola.html</loc>
     <lastmod>2026-09-16</lastmod>
     <changefreq>monthly</changefreq>
@@ -913,5 +960,21 @@
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/newsroom.html"/>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/salle-de-presse.html"/>
+  </url>
+  <url>
+    <loc>https://josephsoares.com/newsroom/ducharme-travel-tax-credit-canada-september-2026.html</loc>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/newsroom/ducharme-travel-tax-credit-canada-september-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/salle-de-presse/ducharme-credit-impot-voyage-canada-septembre-2026.html"/>
+  </url>
+  <url>
+    <loc>https://josephsoares.com/salle-de-presse/ducharme-credit-impot-voyage-canada-septembre-2026.html</loc>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/newsroom/ducharme-travel-tax-credit-canada-september-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/salle-de-presse/ducharme-credit-impot-voyage-canada-septembre-2026.html"/>
   </url>
 </urlset>
