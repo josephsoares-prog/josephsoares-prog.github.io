@@ -20,7 +20,11 @@
 (function () {
   "use strict";
 
-  var ACTIVE = true;
+  /* Turned off 2026-09-28 — Joseph ruled the site was carrying too many
+     competing subscribe asks (this sticky bar, the nav's own Subscribe
+     link, and page-specific CTAs all at once). Set back to true and swap
+     the COPY blocks below to run it again. */
+  var ACTIVE = false;
   var SNOOZE_DAYS = 30;
   var KEY = "ci-banner-closed";
 
