@@ -52,7 +52,7 @@
     font-weight:600;font-size:15px}
   .brand span{color:var(--gold)}
   nav .navcta{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.12em;
-    font-size:13px;font-weight:500;text-decoration:none;color:var(--muted)}
+    font-size:13px;font-weight:500;text-decoration:none;color:var(--muted);margin-left:28px;white-space:nowrap}
   nav .navcta:hover{color:var(--gold)}
   .hero{padding:74px 0 40px}
   .hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
@@ -73,17 +73,23 @@
     font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.1em;
     font-weight:600;font-size:12px;padding:8px 12px;border-radius:2px;
     box-shadow:0 8px 24px rgba(0,0,0,.5)}
-  .authbar{border-top:1px solid var(--line);border-bottom:1px solid var(--line);
-    background:var(--panel);padding:22px 0}
-  .authbar .wrap{display:flex;flex-wrap:wrap;gap:14px 40px;align-items:center;justify-content:center;
-    font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.16em;
-    font-size:14px;color:var(--muted);font-weight:400;text-align:center}
-  .authbar b{color:var(--bone);font-weight:500}
-  .authbar .dot{color:var(--gold)}
+  .authbar{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--panel);padding:26px 0}
+  .authbar .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:20px clamp(30px,5vw,64px);
+    font-family:'Oswald',sans-serif;text-transform:uppercase}
+  .authbar .lab{font-size:12px;letter-spacing:.28em;color:var(--gold);margin-bottom:10px}
+  .authbar .lab.sec{color:var(--muted)}
+  .authbar .names{display:flex;flex-wrap:wrap;gap:8px clamp(18px,3vw,30px);align-items:baseline}
+  .authbar .names b{font-size:clamp(15px,4vw,18px);letter-spacing:.14em;color:var(--bone);font-weight:500}
+  .authbar .cov{border-left:1px solid var(--line);padding-left:clamp(0px,3vw,34px)}
+  .authbar .cov .names span{font-size:clamp(13px,3.4vw,14px);letter-spacing:.14em;color:rgba(242,239,233,.86)}
+  .authbar .scope{font-family:'EB Garamond',serif;text-transform:none;letter-spacing:0;font-size:15px;
+    line-height:1.5;color:rgba(242,239,233,.72);margin-top:12px;max-width:46ch}
+  .authbar .scope a{color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(212,175,55,.4)}
+  @media(max-width:880px){.authbar .wrap{gap:10px 22px;font-size:13px;letter-spacing:.1em}}
   section.blk{padding:70px 0}
   .klabel{margin-bottom:14px}
   .h2{font-family:'Oswald',sans-serif;text-transform:uppercase;font-weight:600;
-    font-size:36px;line-height:1.08;letter-spacing:.01em;margin-bottom:8px}
+    font-size:36px;line-height:1.2;letter-spacing:.01em;margin-bottom:20px}
   .lead{font-size:21px;color:var(--bone);max-width:62ch}
   .muted{color:var(--muted)}
   .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:40px}
@@ -185,9 +191,33 @@
 </head>
 <body>
 
+<style>
+  nav .navlinks{display:flex;gap:22px;align-items:center}
+  nav .navlinks a{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.12em;font-size:12px;font-weight:500;text-decoration:none;color:var(--muted)}
+  nav .navlinks a:hover{color:var(--bone,#F2EFE9)}
+  nav .bkburger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:12px 4px;margin-left:auto}
+  nav .bkburger span{display:block;width:22px;height:2px;background:currentColor;opacity:.85}
+  @media(max-width:860px){
+    nav .wrap{flex-wrap:wrap;height:auto;min-height:64px;padding-top:8px;padding-bottom:8px}
+    nav .bkburger{display:flex}
+    nav .navlinks{display:none;flex-basis:100%;flex-direction:column;align-items:stretch;gap:0;padding-bottom:6px}
+    nav .navlinks.open{display:flex}
+    nav .navlinks a{text-align:center;padding:13px 10px;border-top:1px solid var(--line)}
+    nav .navcta{order:2}
+  }
+</style>
 <nav>
   <div class="wrap">
     <a class="brand" href="/accueil.html" style="text-decoration:none">Joseph <span>Soares</span></a>
+    <button class="bkburger" aria-label="Menu" onclick="document.getElementById('bknav').classList.toggle('open')"><span></span><span></span><span></span></button>
+    <div class="navlinks" id="bknav">
+      <a href="/intelligence-fr.html">Intelligence</a>
+      <a href="/podcast-fr.html">Balado</a>
+      <a href="/writing-fr.html">&Eacute;crits</a>
+      <a href="/media-fr.html">M&eacute;dias</a>
+      <a href="/quebec2026/index-fr.html" style="color:#D4AF37">Qu&eacute;bec 2026</a>
+      <a href="/abonnement.html">S&rsquo;abonner</a>
+    </div>
     <a class="navcta" href="#reserve">Réserver le livre &rarr;</a>
   </div>
 </nav>
@@ -215,17 +245,15 @@
 
 <div class="authbar">
   <div class="wrap">
-    <span>Publié dans</span><span class="dot">&bull;</span>
-    <span><b>Forbes</b></span><span class="dot">&bull;</span>
-    <span><b>Newsweek</b></span><span class="dot">&bull;</span>
-    <span><b>Huffington Post</b></span><span class="dot">&bull;</span>
-    <span>Cité dans</span><span class="dot">&bull;</span>
-    <span><b>The Globe and Mail</b></span><span class="dot">&bull;</span>
-    <span><b>La Presse</b></span><span class="dot">&bull;</span>
-    <span><b>Le Devoir</b></span><span class="dot">&bull;</span>
-    <span><b>National Post</b></span><span class="dot">&bull;</span>
-    <span><b>Calgary Herald</b></span><span class="dot">&bull;</span>
-    <span><b>Maclean&rsquo;s</b></span>
+    <div>
+      <div class="lab">Publi&eacute; dans</div>
+      <div class="names"><b>Forbes</b><b>Newsweek</b><b>Huffington Post</b></div>
+    </div>
+    <div class="cov">
+      <div class="lab sec">Cit&eacute; dans</div>
+      <div class="names"><span>The Globe and Mail</span><span>La Presse</span><span>Le Devoir</span><span>National Post</span><span>Calgary Herald</span><span>Maclean&rsquo;s</span></div>
+      <p class="scope">ainsi que dans la presse anglophone, francophone et lusophone au Canada, aux &Eacute;tats-Unis et en Europe. <a href="/media-fr.html">Revue de presse compl&egrave;te &rarr;</a></p>
+    </div>
   </div>
 </div>
 
