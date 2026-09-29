@@ -37,7 +37,10 @@
       "#ci-consent button{font:inherit;font-weight:600;cursor:pointer;border-radius:3px;padding:9px 18px;border:1px solid #D4AF37}" +
       "#ci-consent .ci-accept{background:#D4AF37;color:#0A3161}" +
       "#ci-consent .ci-decline{background:transparent;color:#F2EFE9}" +
-      "@media(max-width:640px){#ci-consent .ci-btns{width:100%}#ci-consent button{flex:1}}";
+      "#ci-consent .ci-short{display:none}" +
+      "@media(max-width:640px){#ci-consent .ci-long{display:none}#ci-consent .ci-short{display:inline}" +
+      "#ci-consent{font-size:13px}#ci-consent .ci-wrap{padding:10px 14px;gap:8px}#ci-consent p{flex:1 1 100%;min-width:0}" +
+      "#ci-consent .ci-btns{width:100%;gap:8px}#ci-consent button{flex:1;padding:10px 8px;min-height:44px}}";
     document.head.appendChild(css);
 
     var bar = document.createElement("div");
@@ -46,8 +49,9 @@
     bar.setAttribute("aria-label", "Cookie consent / Consentement aux témoins");
     bar.innerHTML =
       '<div class="ci-wrap">' +
-      '<p>We use analytics cookies to understand site usage. You can accept or decline. ' +
-      '<span lang="fr">&mdash; Nous utilisons des t&eacute;moins d&rsquo;analyse pour comprendre l&rsquo;utilisation du site. Vous pouvez accepter ou refuser.</span> ' +
+      '<p><span class="ci-long">We use analytics cookies to understand site usage. You can accept or decline. ' +
+      '<span lang="fr">&mdash; Nous utilisons des t&eacute;moins d&rsquo;analyse pour comprendre l&rsquo;utilisation du site. Vous pouvez accepter ou refuser.</span></span>' +
+      '<span class="ci-short">We use analytics cookies. <span lang="fr">/ Nous utilisons des t&eacute;moins d&rsquo;analyse.</span></span> ' +
       '<a href="/cookies.html">Details / D&eacute;tails</a></p>' +
       '<div class="ci-btns">' +
       '<button type="button" class="ci-decline">Decline / Refuser</button>' +
