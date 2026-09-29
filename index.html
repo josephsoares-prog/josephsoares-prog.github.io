@@ -89,6 +89,7 @@
     border-radius:2px;padding:17px 22px;flex:1 1 240px;text-align:center}
   .ctar .quiet:hover{border-color:var(--gold);color:var(--gold)}
   .ctar .btn{flex:1 1 240px;text-align:center}
+  .hero .ctanote{margin:14px 0 0;font-size:16px;color:rgba(242,239,233,.7)}
 
   .authbar{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--panel);padding:26px 0}
   .authbar .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:20px clamp(30px,5vw,64px);
@@ -308,18 +309,20 @@
   .bookstrip .sep{opacity:.55;padding:0 6px}
   @media(max-width:560px){.bookstrip{font-size:12px;letter-spacing:.08em;padding:10px 12px}.bookstrip .hide-s{display:none}}
 </style>
-<a class="bookstrip" href="/book.html"><b>Leadership Under Fire</b><span class="sep">&middot;</span>Publishing October&nbsp;20<span class="sep hide-s">&middot;</span><span class="hide-s">The SPARK framework, forged in the rooms of power</span><span class="sep">&middot;</span>Reserve your copy &rarr;</a>
+<a class="bookstrip" href="/book.html"><b>Leadership Under Fire</b><span class="sep">&middot;</span>Out October&nbsp;20<span class="sep hide-s">&middot;</span><span class="hide-s">The SPARK framework, forged in the rooms of power</span><span class="sep">&middot;</span>Read the opening chapter free &rarr;</a>
 <!-- /BOOK LAUNCH STRIP -->
 
 <header class="hero">
   <div class="wrap">
     <div class="herotext">
-    <div class="eyebrow">PMO &amp; Senate Chief of Staff &middot; Crisis-Tested &middot; Trusted at the Top</div>
-    <h1>Joseph Soares served in the <span class="g">Prime&nbsp;Minister&rsquo;s Office</span> through a <span class="i">global financial crisis.</span> Now he advises <span class="i">leaders like you.</span></h1>
-    <p class="lede">He served in the <b>Prime Minister&rsquo;s Office of Canada</b> during the 2008 financial crisis and as <b>Chief of Staff in the Senate of Canada</b> through the pandemic &mdash; two of the highest-pressure rooms in the country, in two of its hardest years. He advises a select group of leaders on the decisions that don&rsquo;t allow a second draft.</p>
+    <div class="eyebrow">Prime Minister&rsquo;s Office &middot; Senate Chief of Staff</div>
+    <h1>Counsel for the decisions that <span class="i" style="color:var(--gold)">don&rsquo;t allow a second draft.</span></h1>
+    <p class="lede">He served in the <b>Prime Minister&rsquo;s Office of Canada</b> during the 2008 financial crisis and as <b>Chief of Staff in the Senate of Canada</b> through the pandemic &mdash; two of the highest-pressure rooms in the country, in two of its hardest years. Now he advises owners, founders and investors on exits, successions and the calls they can&rsquo;t afford to make alone.</p>
     <div class="ctar">
-      <a href="/book.html" class="btn btn-gold">Reserve your copy &mdash; Leadership Under Fire</a>
+      <a href="/spark.html?ref=home-hero" class="btn btn-gold">Take the free SPARK assessment</a>
+      <a href="/chair.html?ref=home-hero" class="quiet">Request a private conversation</a>
     </div>
+    <p class="ctanote">11 minutes &middot; a written leadership profile sent to your inbox</p>
     </div>
     <div class="heroportrait">
       <img src="/images/joseph-soares-portrait.jpg?v=20260831" alt="Joseph Soares" width="800" height="667" loading="eager">
@@ -413,8 +416,8 @@
       <div class="path">
         <div class="tier">The Book</div>
         <h3>Leadership Under Fire</h3>
-        <p>The SPARK framework in full, forged in the rooms of power. Reserve your copy ahead of the October&nbsp;20 launch.</p>
-        <a class="go" href="/book.html">Reserve your copy &rarr;</a>
+        <p>The SPARK framework in full, forged in the rooms of power. Out October&nbsp;20 &mdash; read the opening chapter free today.</p>
+        <a class="go" href="/book.html">Get the free chapter &rarr;</a>
       </div>
     </div>
   </div>
@@ -428,7 +431,7 @@
       <h2 class="h2">Leadership Under Fire</h2>
       <div class="subt">The SPARK Framework, Forged in the Rooms of Power.</div>
       <p class="sub" style="margin-bottom:26px">A field manual for the decisions that don&rsquo;t allow a second draft. Join the launch list and get the opening chapter now.</p>
-      <a href="/book.html" class="btn btn-gold">Reserve your copy</a>
+      <a href="/book.html" class="btn btn-gold">Get the free opening chapter</a>
     </div>
   </div>
 </div>
@@ -507,6 +510,8 @@
     if(h.indexOf('/call.html')>-1){ev('call_page_click',{page:location.pathname});return;}
     if(h.indexOf('tel:')===0){ev('phone_click',{page:location.pathname});return;}
     if(h.indexOf('/book.html')>-1){ev('book_page_click',{page:location.pathname});return;}
+    if(h.indexOf('/spark.html')>-1){ev('spark_click',{page:location.pathname});return;}
+    if(h.indexOf('/chair.html')>-1){ev('chair_click',{page:location.pathname});return;}
     if(h.indexOf('youtube.com')>-1){ev('outbound_youtube',{page:location.pathname});return;}
     if(h.indexOf('http')===0&&h.indexOf('josephsoares.com')===-1){ev('outbound_click',{link_url:h,page:location.pathname});}
   },true);
