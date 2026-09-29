@@ -1,5 +1,14 @@
 [
     {
+        "date": "2026-09-29",
+        "long_en": "Tuesday, 29 September 2026",
+        "long_fr": "mardi 29 septembre 2026",
+        "count": 21,
+        "lead_en": "Trump rejects Iran’s seven-day roadmap to reopen the Strait of Hormuz",
+        "lead_fr": "Trump rejette la feuille de route iranienne en sept jours pour rouvrir le détroit d’Ormuz",
+        "url": "/brief/2026-09-29.html"
+    },
+    {
         "date": "2026-09-28",
         "long_en": "Monday, 28 September 2026",
         "long_fr": "lundi 28 septembre 2026",
@@ -52,14 +61,5 @@
         "lead_en": "Bessent calls US–China AI and trade talks ‘very successful’ two days before the Trump-Xi summit",
         "lead_fr": "Bessent qualifie de « très fructueuses » les discussions commerciales et sur l’IA entre les États-Unis et la Chine, deux jours avant le sommet Trump-Xi",
         "url": "/brief/2026-09-23.html"
-    },
-    {
-        "date": "2026-09-22",
-        "long_en": "Tuesday, 22 September 2026",
-        "long_fr": "mardi 22 septembre 2026",
-        "count": 19,
-        "lead_en": "Tech titans join Trump–Xi state dinner Thursday as Xi makes his first White House visit in a decade",
-        "lead_fr": "Les géants de la tech se joignent au dîner d’État Trump–Xi jeudi, alors que Xi effectue sa première visite à la Maison-Blanche en dix ans",
-        "url": "/brief/2026-09-22.html"
     }
 ]
