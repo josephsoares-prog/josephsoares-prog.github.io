@@ -99,7 +99,7 @@
     '<a href="/issues-focus.html">Issues</a></div></div>' +
     '<a href="/podcast.html">Podcast</a>' +
     '<a href="/writing.html">Writing</a>' +
-    '<div class="navdrop"><a href="/stewardship.html">About</a><div class="navdrop-menu">' +
+    '<div class="navdrop"><a href="/media.html">About</a><div class="navdrop-menu">' +
     '<a href="/media.html">Media</a></div></div>' +
     '<a href="/book.html">Book</a>' +
     '<a class="cta" href="/subscribe.html">Subscribe</a>';
@@ -111,7 +111,7 @@
     '<a href="/issues-focus-fr.html">Enjeux</a></div></div>' +
     '<a href="/podcast.html">Balado</a>' +
     '<a href="/writing.html">&Eacute;crits</a>' +
-    '<div class="navdrop"><a href="/stewardship-fr.html">&Agrave; propos</a><div class="navdrop-menu">' +
+    '<div class="navdrop"><a href="/media-fr.html">&Agrave; propos</a><div class="navdrop-menu">' +
     '<a href="/conferences.html">Conf&eacute;rences</a>' +
     '<a href="/media-fr.html">M&eacute;dias</a></div></div>' +
     '<a href="/livre.html">Livre</a>' +
