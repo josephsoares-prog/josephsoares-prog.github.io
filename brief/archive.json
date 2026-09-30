@@ -1,65 +1,65 @@
 [
-    {
-        "date": "2026-09-29",
-        "long_en": "Tuesday, 29 September 2026",
-        "long_fr": "mardi 29 septembre 2026",
-        "count": 21,
-        "lead_en": "Trump rejects Iran’s seven-day roadmap to reopen the Strait of Hormuz",
-        "lead_fr": "Trump rejette la feuille de route iranienne en sept jours pour rouvrir le détroit d’Ormuz",
-        "url": "/brief/2026-09-29.html"
-    },
-    {
-        "date": "2026-09-28",
-        "long_en": "Monday, 28 September 2026",
-        "long_fr": "lundi 28 septembre 2026",
-        "count": 16,
-        "lead_en": "Trump rejects Iran’s seven-day Hormuz plan, says he still expects talks ‘this week’",
-        "lead_fr": "Trump rejette le plan iranien de sept jours pour Ormuz, mais dit s’attendre à des pourparlers « cette semaine »",
-        "url": "/brief/2026-09-28.html"
-    },
-    {
-        "date": "2026-09-27",
-        "long_en": "Sunday, 27 September 2026",
-        "long_fr": "dimanche 27 septembre 2026",
-        "count": 20,
-        "lead_en": "Trump and Xi extend US–China trade truce, cut tariffs on $30B in goods and open a first-ever AI safety channel",
-        "lead_fr": "Trump et Xi prolongent la trêve commerciale sino-américaine, réduisent les tarifs sur 30 milliards $ de biens et créent un premier canal sur la sécurité de l’IA",
-        "url": "/brief/2026-09-27.html"
-    },
-    {
-        "date": "2026-09-26",
-        "long_en": "Saturday, 26 September 2026",
-        "long_fr": "samedi 26 septembre 2026",
-        "count": 12,
-        "lead_en": "Trump rejects Iran’s seven-day plan to reopen the Strait of Hormuz, and expects to resume strikes only after the US midterms",
-        "lead_fr": "Trump rejette le plan iranien en sept jours pour rouvrir le détroit d’Ormuz, et ne compte reprendre les frappes qu’après les élections de mi-mandat américaines",
-        "url": "/brief/2026-09-26.html"
-    },
-    {
-        "date": "2026-09-25",
-        "long_en": "Friday, 25 September 2026",
-        "long_fr": "vendredi 25 septembre 2026",
-        "count": 20,
-        "lead_en": "IEA: more than 10 million barrels a day of Gulf oil output remains shut in as diesel stays 94% above pre-war levels",
-        "lead_fr": "AIE : plus de 10 millions de barils par jour de production pétrolière du Golfe restent hors service, le diesel demeurant 94 % au-dessus des niveaux d’avant-guerre",
-        "url": "/brief/2026-09-25.html"
-    },
-    {
-        "date": "2026-09-24",
-        "long_en": "Thursday, 24 September 2026",
-        "long_fr": "jeudi 24 septembre 2026",
-        "count": 18,
-        "lead_en": "Trump and Xi extend the US–China trade truce through January 10 as Xi arrives in Washington for the first time in a decade",
-        "lead_fr": "Trump et Xi prolongent la trêve commerciale américano-chinoise jusqu’au 10 janvier, alors que Xi arrive à Washington pour la première fois en dix ans",
-        "url": "/brief/2026-09-24.html"
-    },
-    {
-        "date": "2026-09-23",
-        "long_en": "Wednesday, 23 September 2026",
-        "long_fr": "mercredi 23 septembre 2026",
-        "count": 17,
-        "lead_en": "Bessent calls US–China AI and trade talks ‘very successful’ two days before the Trump-Xi summit",
-        "lead_fr": "Bessent qualifie de « très fructueuses » les discussions commerciales et sur l’IA entre les États-Unis et la Chine, deux jours avant le sommet Trump-Xi",
-        "url": "/brief/2026-09-23.html"
-    }
+ {
+  "date": "2026-09-30",
+  "long_en": "Wednesday, 30 September 2026",
+  "long_fr": "mercredi 30 septembre 2026",
+  "count": 18,
+  "lead_en": "Trump says Iran war will end ‘very soon,’ rejects Tehran’s Hormuz reopening bid",
+  "lead_fr": "Trump affirme que la guerre en Iran se terminera « très bientôt » et rejette l’offre iranienne de réouverture d’Ormuz",
+  "url": "/brief/2026-09-30.html"
+ },
+ {
+  "date": "2026-09-29",
+  "long_en": "Tuesday, 29 September 2026",
+  "long_fr": "mardi 29 septembre 2026",
+  "count": 21,
+  "lead_en": "Trump rejects Iran’s seven-day roadmap to reopen the Strait of Hormuz",
+  "lead_fr": "Trump rejette la feuille de route iranienne en sept jours pour rouvrir le détroit d’Ormuz",
+  "url": "/brief/2026-09-29.html"
+ },
+ {
+  "date": "2026-09-28",
+  "long_en": "Monday, 28 September 2026",
+  "long_fr": "lundi 28 septembre 2026",
+  "count": 16,
+  "lead_en": "Trump rejects Iran’s seven-day Hormuz plan, says he still expects talks ‘this week’",
+  "lead_fr": "Trump rejette le plan iranien de sept jours pour Ormuz, mais dit s’attendre à des pourparlers « cette semaine »",
+  "url": "/brief/2026-09-28.html"
+ },
+ {
+  "date": "2026-09-27",
+  "long_en": "Sunday, 27 September 2026",
+  "long_fr": "dimanche 27 septembre 2026",
+  "count": 20,
+  "lead_en": "Trump and Xi extend US–China trade truce, cut tariffs on $30B in goods and open a first-ever AI safety channel",
+  "lead_fr": "Trump et Xi prolongent la trêve commerciale sino-américaine, réduisent les tarifs sur 30 milliards $ de biens et créent un premier canal sur la sécurité de l’IA",
+  "url": "/brief/2026-09-27.html"
+ },
+ {
+  "date": "2026-09-26",
+  "long_en": "Saturday, 26 September 2026",
+  "long_fr": "samedi 26 septembre 2026",
+  "count": 12,
+  "lead_en": "Trump rejects Iran’s seven-day plan to reopen the Strait of Hormuz, and expects to resume strikes only after the US midterms",
+  "lead_fr": "Trump rejette le plan iranien en sept jours pour rouvrir le détroit d’Ormuz, et ne compte reprendre les frappes qu’après les élections de mi-mandat américaines",
+  "url": "/brief/2026-09-26.html"
+ },
+ {
+  "date": "2026-09-25",
+  "long_en": "Friday, 25 September 2026",
+  "long_fr": "vendredi 25 septembre 2026",
+  "count": 20,
+  "lead_en": "IEA: more than 10 million barrels a day of Gulf oil output remains shut in as diesel stays 94% above pre-war levels",
+  "lead_fr": "AIE : plus de 10 millions de barils par jour de production pétrolière du Golfe restent hors service, le diesel demeurant 94 % au-dessus des niveaux d’avant-guerre",
+  "url": "/brief/2026-09-25.html"
+ },
+ {
+  "date": "2026-09-24",
+  "long_en": "Thursday, 24 September 2026",
+  "long_fr": "jeudi 24 septembre 2026",
+  "count": 18,
+  "lead_en": "Trump and Xi extend the US–China trade truce through January 10 as Xi arrives in Washington for the first time in a decade",
+  "lead_fr": "Trump et Xi prolongent la trêve commerciale américano-chinoise jusqu’au 10 janvier, alors que Xi arrive à Washington pour la première fois en dix ans",
+  "url": "/brief/2026-09-24.html"
+ }
 ]
