@@ -257,24 +257,6 @@
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/guest-fr.html"/>
   </url>
   <url>
-    <loc>https://josephsoares.com/stewardship.html</loc>
-    <lastmod>2026-09-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  
-    <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/stewardship.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/stewardship-fr.html"/>
-  </url>
-  <url>
-    <loc>https://josephsoares.com/stewardship-fr.html</loc>
-    <lastmod>2026-09-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  
-    <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/stewardship.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/stewardship-fr.html"/>
-  </url>
-  <url>
     <loc>https://josephsoares.com/secureafrika.html</loc>
     <lastmod>2026-08-19</lastmod>
     <changefreq>monthly</changefreq>
@@ -913,5 +895,28 @@
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/newsroom.html"/>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/salle-de-presse.html"/>
+  </url>
+  <!-- Added by monthly audit 2026-10-01: indexable pages missing from sitemap -->
+  <url>
+    <loc>https://josephsoares.com/canada-puts-a-clock-on-capital-september-2026.html</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://josephsoares.com/newsroom/ducharme-travel-tax-credit-canada-september-2026.html</loc>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/newsroom/ducharme-travel-tax-credit-canada-september-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/salle-de-presse/ducharme-credit-impot-voyage-canada-septembre-2026.html"/>
+  </url>
+  <url>
+    <loc>https://josephsoares.com/salle-de-presse/ducharme-credit-impot-voyage-canada-septembre-2026.html</loc>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/newsroom/ducharme-travel-tax-credit-canada-september-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/salle-de-presse/ducharme-credit-impot-voyage-canada-septembre-2026.html"/>
   </url>
 </urlset>
