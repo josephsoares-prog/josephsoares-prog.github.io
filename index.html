@@ -89,6 +89,16 @@
     border-radius:2px;padding:17px 22px;flex:1 1 240px;text-align:center}
   .ctar .quiet:hover{border-color:var(--gold);color:var(--gold)}
   .ctar .btn{flex:1 1 240px;text-align:center}
+  .proof{padding:clamp(48px,7vw,80px) 0 0}
+  .proof .tgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-top:22px}
+  .tcard{margin:0;background:var(--panel2);border:1px solid var(--line);border-top:2px solid var(--gold);padding:30px 28px;display:flex;flex-direction:column;gap:16px}
+  .tcard .stat{font-family:'Oswald',sans-serif;text-transform:uppercase;font-weight:600;font-size:22px;line-height:1.15;letter-spacing:.02em;color:var(--gold);margin:0}
+  .tcard blockquote{margin:0;font-style:italic;font-size:20px;line-height:1.5;color:var(--bone);flex:1}
+  .tcard figcaption{display:flex;gap:14px;align-items:center;font-size:15px;line-height:1.45;color:var(--muted)}
+  .tcard figcaption b{color:var(--bone);font-weight:500}
+  .tcard figcaption img,.tcard .mono{width:56px;height:56px;border-radius:50%;flex:0 0 56px;object-fit:cover;border:1px solid rgba(212,175,55,.6)}
+  .tcard .mono{display:flex;align-items:center;justify-content:center;font-family:'Oswald',sans-serif;color:var(--gold);font-size:18px;letter-spacing:.08em;background:var(--ink)}
+  @media(max-width:880px){.proof .tgrid{grid-template-columns:1fr}.tcard{padding:24px 20px}.tcard blockquote{font-size:18px}}
   .hero .ctanote{margin:14px 0 0;font-size:16px;color:rgba(242,239,233,.7)}
 
   .authbar{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--panel);padding:26px 0}
@@ -343,6 +353,30 @@
     </div>
   </div>
 </div>
+
+<section class="proof" aria-label="What clients say">
+  <div class="wrap">
+    <div class="eyebrow klabel">In their words</div>
+    <div class="tgrid">
+      <figure class="tcard">
+        <p class="stat">Up to six months and $500,000 saved</p>
+        <blockquote>&ldquo;Thanks to his proactive presence and efficiency, we estimate that Mr. Soares accelerated the project&rsquo;s delivery by up to six months &mdash; likely generating savings of up to $500,000 in construction costs and delay-related expenses.&rdquo;</blockquote>
+        <figcaption>
+          <span class="mono" aria-hidden="true">SB</span>
+          <span><b>Sylvain Bertrand</b>, CPA, MBA<br>President, BBL Construction, general contractor<br><i>Translated from French</i></span>
+        </figcaption>
+      </figure>
+      <figure class="tcard">
+        <p class="stat">Reform of a federal Crown corporation</p>
+        <blockquote>&ldquo;It is more than fair to say that the achievements I have taken credit for could not have been possible without the steady guiding hand of Joseph Soares.&rdquo;</blockquote>
+        <figcaption>
+          <span class="mono" aria-hidden="true">DV</span>
+          <span><b>Dan Veniez</b><br>Then Chairman, Ridley Terminals Inc.</span>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
 
 <section class="blk">
   <div class="wrap">
