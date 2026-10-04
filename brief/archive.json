@@ -1,5 +1,14 @@
 [
  {
+  "date": "2026-10-04",
+  "long_en": "Sunday, 4 October 2026",
+  "long_fr": "dimanche 4 octobre 2026",
+  "count": 16,
+  "lead_en": "Houthis claim missile and drone strike on Aramco facility in Riyadh as Yemen's war intensifies",
+  "lead_fr": "Les Houthis revendiquent une frappe de missiles et de drones sur une installation d'Aramco à Riyad, alors que la guerre au Yémen s'intensifie",
+  "url": "/brief/2026-10-04.html"
+ },
+ {
   "date": "2026-10-03",
   "long_en": "Saturday, 3 October 2026",
   "long_fr": "samedi 3 octobre 2026",
@@ -52,14 +61,5 @@
   "lead_en": "Trump and Xi extend US–China trade truce, cut tariffs on $30B in goods and open a first-ever AI safety channel",
   "lead_fr": "Trump et Xi prolongent la trêve commerciale sino-américaine, réduisent les tarifs sur 30 milliards $ de biens et créent un premier canal sur la sécurité de l’IA",
   "url": "/brief/2026-09-27.html"
- },
- {
-  "date": "2026-09-26",
-  "long_en": "Saturday, 26 September 2026",
-  "long_fr": "samedi 26 septembre 2026",
-  "count": 12,
-  "lead_en": "Trump rejects Iran’s seven-day plan to reopen the Strait of Hormuz, and expects to resume strikes only after the US midterms",
-  "lead_fr": "Trump rejette le plan iranien en sept jours pour rouvrir le détroit d’Ormuz, et ne compte reprendre les frappes qu’après les élections de mi-mandat américaines",
-  "url": "/brief/2026-09-26.html"
  }
 ]
