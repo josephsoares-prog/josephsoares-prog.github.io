@@ -236,7 +236,7 @@
   <h1>Your record is real.<br><span class="g">Your search results don't show it.</span></h1>
   <p class="lede"><b>A written read, plus a video briefing of eight minutes or less, on what people find when they look you up and the three moves that close the gap.</b> In five business days.</p>
   <p class="lede" style="margin-top:14px"><span class="scar" style="margin-bottom:0">Complimentary by application &middot; November and December &middot; a US$995 value</span></p>
-  <div class="vsl" style="margin-top:28px;max-width:860px;position:relative;padding-top:56.25%;background:#000;border-radius:6px;overflow:hidden"><iframe src="https://www.youtube-nocookie.com/embed/0P37uHcnvCY?rel=0&modestbranding=1&playsinline=1" title="The Authority Read, in two minutes" style="position:absolute;inset:0;width:100%;height:100%;border:0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen loading="lazy"></iframe></div>
+  <!-- 2026-10-05: $995 sales video removed pending re-record (RoD-37). Re-insert the new video here. -->
   
 </div></header>
 
@@ -325,7 +325,7 @@ function readSubmit(e){e.preventDefault();
     utm_source:(u&&u.utm_source)||ref||'direct',utm_medium:(u&&u.utm_medium)||(ref?'site':'direct'),
     utm_campaign:(u&&u.utm_campaign)||'(none)',utm_content:(u&&u.utm_content)||'(none)',utm_term:(u&&u.utm_term)||'(none)',
     submitted_at:new Date().toISOString()};
-  if(btn){btn.disabled=true;btn.textContent='Sending\u2026';}
+  if(btn){btn.disabled=true;btn.textContent='Sending…';}
   try{window.gtag&&gtag('event','read_application_submit',{page:location.pathname,ref:ref});}catch(err){}
   fetch('https://hook.us2.make.com/sg45alu9cq4ayg7tssbwphp3foosk7sn',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(p),keepalive:true}).catch(function(){});
   setTimeout(function(){f.style.display='none';var ok=document.getElementById('readok');if(ok){ok.style.display='block';ok.scrollIntoView({behavior:'smooth',block:'center'});}},300);
