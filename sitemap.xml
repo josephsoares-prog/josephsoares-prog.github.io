@@ -256,21 +256,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/guest.html"/>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/guest-fr.html"/>
   </url>
-  <url>
-    <loc>https://josephsoares.com/secureafrika.html</loc>
-    <lastmod>2026-08-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://josephsoares.com/appel.html</loc>
-    <lastmod>2026-08-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  
-    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/appel.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/call.html"/>
-  </url>
 
   <!-- Long-form analysis — EN -->
   <url><loc>https://josephsoares.com/quebec-votes-what-to-watch.html</loc><lastmod>2026-10-05</lastmod><priority>0.7</priority>
@@ -393,10 +378,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/hungary-orban-magyar-april-2026.html"/>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/hongrie-orban-magyar-avril-2026.html"/>
   </url>
-  <url><loc>https://josephsoares.com/islamabad-failed-blockade-april-2026.html</loc><lastmod>2026-04-14</lastmod><priority>0.65</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/islamabad-failed-blockade-april-2026.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/islamabad-echec-blocus-avril-2026.html"/>
-  </url>
+  <url><loc>https://josephsoares.com/islamabad-failed-blockade-april-2026.html</loc><lastmod>2026-04-14</lastmod><priority>0.65</priority></url>
   <url><loc>https://josephsoares.com/ceasefire-that-isnt-april-2026.html</loc><lastmod>2026-04-14</lastmod><priority>0.65</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/ceasefire-that-isnt-april-2026.html"/>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/ceasefire-that-isnt-april-2026-fr.html"/>
@@ -461,8 +443,14 @@
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/hongrie-orban-magyar-avril-2026.html"/>
   </url>
   <url><loc>https://josephsoares.com/islamabad-echec-blocus-avril-2026.html</loc><lastmod>2026-04-14</lastmod><priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/islamabad-failed-blockade-april-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/islamabad-blockade-april-2026.html"/>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/islamabad-echec-blocus-avril-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://josephsoares.com/islamabad-blockade-april-2026.html"/>
+  </url>
+<url><loc>https://josephsoares.com/islamabad-blockade-april-2026.html</loc><lastmod>2026-04-14</lastmod><priority>0.65</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/islamabad-blockade-april-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/islamabad-echec-blocus-avril-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://josephsoares.com/islamabad-blockade-april-2026.html"/>
   </url>
   <url><loc>https://josephsoares.com/congres-liberal-paysage-federal-avril-2026.html</loc><lastmod>2026-04-14</lastmod><priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/liberal-convention-federal-landscape-april-2026.html"/>
@@ -551,21 +539,9 @@
   <url><loc>https://josephsoares.com/brief/2026-08-31.html</loc><lastmod>2026-08-31</lastmod></url>
 
   <!-- Added by monthly site audit 2026-09-01: pages present on site but missing from sitemap -->
-  <url><loc>https://josephsoares.com/call.html</loc><lastmod>2026-09-01</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/call.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/appel.html"/>
-  </url>
   <url><loc>https://josephsoares.com/chair.html</loc><lastmod>2026-09-01</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/chair.html"/>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/fauteuil.html"/>
-  </url>
-  <url><loc>https://josephsoares.com/session.html</loc><lastmod>2026-09-01</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/session.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/session-fr.html"/>
-  </url>
-  <url><loc>https://josephsoares.com/session-fr.html</loc><lastmod>2026-09-14</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/session.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/session-fr.html"/>
   </url>
   <url><loc>https://josephsoares.com/spark.html</loc><lastmod>2026-09-01</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/spark.html"/>
@@ -824,6 +800,84 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://josephsoares.com/brief/2026-09-22.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://josephsoares.com/brief/2026-09-23.html</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://josephsoares.com/brief/2026-09-24.html</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://josephsoares.com/brief/2026-09-25.html</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://josephsoares.com/brief/2026-09-26.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://josephsoares.com/brief/2026-09-27.html</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://josephsoares.com/brief/2026-09-28.html</loc>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://josephsoares.com/brief/2026-09-29.html</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://josephsoares.com/brief/2026-09-30.html</loc>
+    <lastmod>2026-09-30</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://josephsoares.com/brief/2026-10-01.html</loc>
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://josephsoares.com/brief/2026-10-03.html</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://josephsoares.com/brief/2026-10-04.html</loc>
+    <lastmod>2026-10-04</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://josephsoares.com/brief/2026-10-05.html</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://josephsoares.com/issues-focus-angola.html</loc>
     <lastmod>2026-09-16</lastmod>
     <changefreq>monthly</changefreq>
@@ -868,12 +922,6 @@
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://josephsoares.com/apply.html</loc>
-    <lastmod>2026-09-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://josephsoares.com/quebec2026/index-en.html</loc>

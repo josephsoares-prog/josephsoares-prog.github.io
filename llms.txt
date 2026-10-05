@@ -4,7 +4,7 @@
 
 Site-name: Joseph Soares & Co. — Corridor Intelligence
 Site-URL: https://josephsoares.com
-Contact: j@josephsoares.com
+Contact: info@josephsoares.com
 
 ## Summary (BLUF)
 Joseph Soares served in the Prime Minister's Office of Canada during the 2008
