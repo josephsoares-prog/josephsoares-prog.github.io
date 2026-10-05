@@ -273,6 +273,10 @@
   </url>
 
   <!-- Long-form analysis — EN -->
+  <url><loc>https://josephsoares.com/quebec-votes-what-to-watch.html</loc><lastmod>2026-10-05</lastmod><priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/quebec-votes-what-to-watch.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/quebec-vote-a-surveiller.html"/>
+  </url>
   <url><loc>https://josephsoares.com/chicoutimi-quebec-swing.html</loc><lastmod>2026-09-03</lastmod><priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/chicoutimi-quebec-swing.html"/>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/chicoutimi-le-fjord-le-quebec-bascule.html"/>
@@ -439,6 +443,10 @@
   </url>
 
   <!-- Long-form analysis — FR -->
+  <url><loc>https://josephsoares.com/quebec-vote-a-surveiller.html</loc><lastmod>2026-10-05</lastmod><priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/quebec-votes-what-to-watch.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/quebec-vote-a-surveiller.html"/>
+  </url>
   <url><loc>https://josephsoares.com/chicoutimi-le-fjord-le-quebec-bascule.html</loc><lastmod>2026-09-03</lastmod><priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/chicoutimi-quebec-swing.html"/>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/chicoutimi-le-fjord-le-quebec-bascule.html"/>
