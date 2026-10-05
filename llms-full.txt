@@ -7,7 +7,7 @@
 
 Site-name: Joseph Soares & Co. — Senior Strategic Advisory & Intelligence
 Site-URL: https://josephsoares.com
-Contact: j@josephsoares.com
+Contact: info@josephsoares.com
 Canonical-entity: Joseph Soares (person); Joseph Soares & Co. (advisory practice); IBPROM Corp. (legal entity)
 
 ## BLUF (bottom line up front)
