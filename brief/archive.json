@@ -1,5 +1,14 @@
 [
     {
+        "date": "2026-10-07",
+        "long_en": "Wednesday, 7 October 2026",
+        "long_fr": "mercredi 7 octobre 2026",
+        "count": 11,
+        "lead_en": "Carney calls Quebec's PQ premier-designate as bond markets price in political risk",
+        "lead_fr": "Carney appelle le premier ministre désigné du PQ, les marchés obligataires intègrent le risque politique",
+        "url": "/brief/2026-10-07.html"
+    },
+    {
         "date": "2026-10-06",
         "long_en": "Tuesday, 6 October 2026",
         "long_fr": "mardi 6 octobre 2026",
@@ -52,14 +61,5 @@
         "lead_en": "Trump says Iran war will end ‘very soon,’ rejects Tehran’s Hormuz reopening bid",
         "lead_fr": "Trump affirme que la guerre en Iran se terminera « très bientôt » et rejette l’offre iranienne de réouverture d’Ormuz",
         "url": "/brief/2026-09-30.html"
-    },
-    {
-        "date": "2026-09-29",
-        "long_en": "Tuesday, 29 September 2026",
-        "long_fr": "mardi 29 septembre 2026",
-        "count": 21,
-        "lead_en": "Trump rejects Iran’s seven-day roadmap to reopen the Strait of Hormuz",
-        "lead_fr": "Trump rejette la feuille de route iranienne en sept jours pour rouvrir le détroit d’Ormuz",
-        "url": "/brief/2026-09-29.html"
     }
 ]
