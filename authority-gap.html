@@ -115,7 +115,7 @@
   <section id="s-intro">
     <div class="eyebrow">Proof of Standing</div>
     <h1>What do people find when they <span class="g">search your name?</span></h1>
-    <p class="lede"><b>Three quick questions, under a minute.</b> Then the right next step for you. Proof of standing is the evidence, in public, that you are who your record says you are.</p>
+    <p class="lede"><b>Four quick steps, about a minute.</b> Then the right next step for you. Proof of standing is the evidence, in public, that you are who your record says you are.</p>
   </section>
 
   <!-- Question screens (1 to 3) -->
@@ -176,12 +176,12 @@
   try{if(!u&&qs.get('utm_source')){u={utm_source:qs.get('utm_source')||'',utm_medium:qs.get('utm_medium')||'',utm_campaign:qs.get('utm_campaign')||'',utm_content:qs.get('utm_content')||'',utm_term:qs.get('utm_term')||''};sessionStorage.setItem('utmData',JSON.stringify(u));}}catch(e){}
 
   var Q=[
-    {k:'role',t:'Which best describes you?',o:[
-      ['founder','Founder or business owner'],
-      ['executive','CEO or senior executive'],
-      ['partner','Senior partner or professional'],
-      ['board','Board director or former public official'],
-      ['other','Other']]},
+    {k:'find',t:'When someone searches your name, what do they mostly find?',o:[
+      ['older','An older chapter, not what I do now'],
+      ['someone','Someone else with my name'],
+      ['little','Not much at all'],
+      ['fair','A fair picture, but it is not working for me']]},
+      
     {k:'path',t:'How would you rather fix what people find about you?',o:[
       ['dfy','Done for me','Our team runs it all for you. From US$36,000 a year.'],
       ['diy','Show me how','A guided course with a live video call. US$3,000.'],
@@ -192,9 +192,9 @@
       ['exploring','Just exploring for now']]}
   ];
   var ROUTES={
-    call:{n:'A call with Joseph Soares',
-      l:'You are ready to move, so the next step is a direct conversation. Joseph will show you what people find when they search your name today, and what it would take to fix it.',
-      note:'Joseph Soares will write to you personally to set a time. No surprises and no hidden costs. If it is not a fit, we will say so.'},
+    call:{n:'A 30-minute call with Joseph Soares',
+      l:'You are ready to move, so the next step is a direct conversation. In 30 minutes Joseph will go through what people find when they search your name today, and what it would take to fix it.',
+      note:'Your request is in. Joseph Soares will email you within one business day with a link to book your 30-minute call. No surprises and no hidden costs. If it is not a fit, we will say so.'},
     course:{n:'The guided course',
       l:'You want to do the work yourself, with guidance. The course is US$3,000 and includes a live video call.',
       note:'Joseph Soares will send you the details in writing. Nothing is charged until you say yes.'},
@@ -203,6 +203,7 @@
       note:'Your request is in. The Read is complimentary by application in November and December. Joseph Soares reviews every request personally and replies in writing within five business days, either way.'}
   };
   var ans={},i=0,started=false;
+  var DX={older:['Search shows an older chapter of your career, not the one you are in now.','First move: write down the three facts about your current work you would want a stranger to read first, and check that a page you control states them plainly.'],someone:['Search is mixing you up with someone else who shares your name.','First move: choose one consistent way to write your name professionally and use it on every profile and byline until it is the first thing people find.'],little:['Search shows little or nothing, so people decide about you without the evidence.','First move: put one page you own online that states who you are and what you have done, under your own name.'],fair:['The picture is fair, but it is not working for you.','First move: find the single gap between what search shows and what you want decision-makers to see, and close that one first.']};
   function $(id){return document.getElementById(id);}
   function ev(n,p){try{gtag('event',n,p||{});}catch(e){}}
   function show(id){
@@ -241,10 +242,10 @@
     return 'read';
   }
   function score(){
-    var p=ans.path[0],s=ans.start[0],r=ans.role[0],n=0;
+    var p=ans.path[0],s=ans.start[0],r=ans.find[0],n=0;
     n+=(p==='dfy')?50:(p==='diy')?30:10;
     n+=(s==='7d')?40:(s==='30d')?30:5;
-    n+=(r==='other')?0:10;
+    n+=10;
     return Math.min(100,n);
   }
   $('f').addEventListener('submit',function(evt){
@@ -256,13 +257,13 @@
     $('err').textContent='';
     var rt=route(),pr=score();
     var pathTxt=ans.path[1]+' ('+ans.path[2]+')';
-    var summary='ROUTE: '+rt+' | PATH: '+pathTxt+' | START: '+ans.start[1]+' | ROLE: '+ans.role[1]+' | PHONE: '+phone+' | LINKEDIN/SITE: '+(link||'-');
+    var summary='ROUTE: '+rt+' | PATH: '+pathTxt+' | START: '+ans.start[1]+' | FIND: '+ans.find[1]+' | PHONE: '+phone+' | LINKEDIN/SITE: '+(link||'-');
     var p={
       form_type:'gap_survey',form_version:'one-step-2026-10-06',
       name:name,email:email,phone:phone,linkedin:link,optin:$('optin').checked?'yes':'no',
-      role:ans.role[1],path:ans.path[1],start:ans.start[1],route:rt,
+      find:ans.find[1],path:ans.path[1],start:ans.start[1],route:rt,
       /* legacy keys, so the existing notification and lead log keep working unchanged */
-      q1:'ROLE: '+ans.role[1],q2:'PATH: '+pathTxt,q3:'PHONE: '+phone,q4:'LINKEDIN/SITE: '+(link||'-'),q5:ans.start[1],
+      q1:'FIND: '+ans.find[1],q2:'PATH: '+pathTxt,q3:'PHONE: '+phone,q4:'LINKEDIN/SITE: '+(link||'-'),q5:ans.start[1],
       open_answer:summary,bucket:rt,priority:pr,
       ref:ref,lang:'en',page_url:location.href,referrer:document.referrer||'',
       utm_source:(u&&u.utm_source)||ref||'direct',
@@ -276,8 +277,8 @@
     $('submit').disabled=true;
     try{fetch(WEBHOOK,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(p),keepalive:true}).catch(function(){});}catch(e){}
     var R=ROUTES[rt];
-    $('rtag').textContent=R.n;$('rline').textContent=R.l;$('rnote').textContent=R.note;
-    if(rt==='call'&&BOOKING_URL){
+    var D=DX[ans.find[0]]||DX.fair;var dxe=$('rdx');if(!dxe){dxe=document.createElement('p');dxe.id='rdx';var mvv=document.createElement('p');mvv.id='rmove';mvv.className='fnote';mvv.style.cssText='font-style:normal;margin:10px 0 22px';var tgg=$('rtag');tgg.parentNode.insertBefore(dxe,tgg);tgg.parentNode.insertBefore(mvv,tgg);}$('rdx').textContent=D[0];$('rmove').textContent=D[1];$('rtag').textContent=R.n;$('rline').textContent=R.l;$('rnote').textContent=R.note;
+    if((rt==='call'||rt==='course')&&BOOKING_URL){
       $('rcta').href=BOOKING_URL;$('rctawrap').hidden=false;
       $('rnote').textContent='Pick a time that suits you. No surprises and no hidden costs. If it is not a fit, we will say so.';
     }
