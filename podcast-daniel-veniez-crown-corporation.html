@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Analytics (GA4) -->
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{ad_storage:'denied',analytics_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',wait_for_update:500});</script>
+<script defer src="/consent.js?v=20260916d"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HNRCLZN3PK"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-HNRCLZN3PK');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/favicon.ico">
+    <title>Daniel Veniez: I Took No Salary to Fix a Failing Crown Corporation | Corridor Intelligence</title>
+    <meta name="description" content="Daniel Veniez took no salary to fix Ridley Terminals, a Crown corporation that had lost money for 30 years. In 18 months: a new board, a seven-year labour agreement, First Nations as partners, and the first repayment to the taxpayer.">
+    <meta property="og:title" content="Daniel Veniez: I Took No Salary to Fix a Failing Crown Corporation | Corridor Intelligence">
+    <meta property="og:url" content="https://josephsoares.com/podcast-daniel-veniez-crown-corporation.html">
+    <meta property="og:description" content="Daniel Veniez took no salary to fix Ridley Terminals, a Crown corporation that had lost money for 30 years. In 18 months: a new board, a seven-year labour agreement, First Nations as partners, and the first repayment to the taxpayer.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Dark flag-blue premium standard.
+               NOTE: several names are intentionally re-valued away from their
+               literal meaning so that automation-inserted episode cards
+               (which reference --white for card bg, --navy for title text,
+               --text-mid for body, --border-light for border) recolor to dark.
+               --navy is therefore a LIGHT title color; static dark backgrounds
+               and dark-on-gold button text use explicit hex below. */
+            --navy: #F2EFE9;            /* card/heading TEXT on dark (was a dark bg) */
+            --navy-mid: #0E3A70;        /* raised panel */
+            --navy-light: #072244;      /* deep */
+            --gold: #D4AF37;
+            --gold-light: #E6C860;
+            --gold-muted: rgba(212, 175, 55, 0.12);
+            --cream: #0A3161;           /* section backgrounds -> flag blue */
+            --white: #0E3A70;           /* card/panel background (was #fff) */
+            --text-dark: #F2EFE9;       /* default body text -> bone */
+            --text-mid: #A9A39A;        /* muted body text */
+            --text-light: rgba(242,239,233,0.72);
+            --border-light: rgba(212, 175, 55, 0.22);
+            /* dark tones used explicitly where a real dark surface is needed */
+            --ink: #0A3161;
+            --panel: #0E3A70;
+            --deep: #072244;
+            --bone: #F2EFE9;
+            --muted: #A9A39A;
+            --line: rgba(242,239,233,.12);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'EB Garamond', Georgia, serif;
+            font-size: 18px;
+            line-height: 1.65;
+            color: var(--bone);
+            background: var(--ink);
+            background-image: radial-gradient(ellipse 120% 70% at 50% -8%, rgba(212,175,55,.07), rgba(0,0,0,0));
+            -webkit-font-smoothing: antialiased;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Oswald', sans-serif;
+            font-weight: 600;
+        }
+        .section-label, .hero-label, .format-label, .format-number,
+        .credential, .footer-firm, .nav-name, .brand, .btn-advisory-brief {
+            font-family: 'Oswald', sans-serif;
+        }
+
+        .btn-advisory-brief {
+            background: none;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            padding: 6px 14px;
+            border-radius: 2px;
+            font-family: 'Oswald', sans-serif;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .btn-advisory-brief:hover {
+            background: var(--gold);
+            color: #0E3A70;
+        }
+        /* ===== STANDARD UNIFIED NAV (matches index.html) ===== */
+        .wrap { max-width: 1120px; margin: 0 auto; padding: 0 30px; }
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 20;
+            background: rgba(7, 34, 68, .86);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(242,239,233,.12);
+        }
+        nav .wrap {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 66px;
+        }
+        .brand {
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: .2em;
+            font-weight: 600;
+            font-size: 16px;
+            color: var(--bone);
+        }
+        .brand span { color: var(--gold); }
+        .navlinks { display: flex; gap: 30px; align-items: center; }
+        .navlinks a {
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: .12em;
+            font-size: 13px;
+            font-weight: 500;
+            text-decoration: none;
+            color: var(--muted, #A9A39A);
+        }
+        .navlinks a:hover { color: var(--gold); }
+        .navlinks a.active { color: var(--gold); }
+        .navlinks a.cta {
+            color: var(--bone);
+            border: 1px solid rgba(242,239,233,.12);
+            padding: 9px 16px;
+            border-radius: 2px;
+        }
+        .navlinks a.cta:hover { border-color: var(--gold); color: var(--gold); }
+
+        /* ===== HERO ===== */
+        .hero {
+            background: linear-gradient(135deg, #0A3161 0%, #0E3A70 50%, #072244 100%);
+            padding: 84px 20px 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(ellipse at 30% 20%, rgba(212,175,55,0.10) 0%, transparent 60%);
+        }
+        .hero-content { position: relative; z-index: 1; max-width: 800px; margin: 0 auto; }
+        .hero-label {
+            display: inline-block;
+            font-family: 'Oswald', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 20px;
+            padding: 6px 18px;
+            border: 1px solid rgba(212,175,55,0.3);
+            border-radius: 20px;
+        }
+        .hero h1 {
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            font-size: clamp(2.2rem, 5vw, 3.6rem);
+            font-weight: 600;
+            color: var(--bone);
+            line-height: 1.06;
+            letter-spacing: 0.01em;
+            margin-bottom: 22px;
+        }
+        .hero h1 span { color: var(--gold); }
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            line-height: 1.6;
+            max-width: 640px;
+            margin: 0 auto 32px;
+        }
+        .hero-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 36px;
+            background: var(--gold);
+            color: #0E3A70;
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            border-radius: 2px;
+            transition: all 0.3s;
+        }
+        .hero-cta:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(212,175,55,0.3); }
+
+        .launch-badge {
+            display: inline-block;
+            margin-top: 24px;
+            padding: 8px 20px;
+            background: rgba(212,175,55,0.12);
+            border: 1px solid rgba(212,175,55,0.25);
+            border-radius: 20px;
+            color: var(--gold-light);
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        /* ===== SECTIONS ===== */
+        section { padding: 80px 20px; }
+        .container { max-width: 900px; margin: 0 auto; }
+
+        .section-label {
+            display: inline-block;
+            font-family: 'Oswald', sans-serif;
+            font-size: 0.72rem;
+            font-weight: 500;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 14px;
+        }
+
+        h2 {
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.01em;
+            font-size: clamp(1.6rem, 3vw, 2.3rem);
+            font-weight: 600;
+            color: var(--bone);
+            line-height: 1.12;
+            margin-bottom: 20px;
+        }
+
+        .section-intro {
+            font-size: 1.05rem;
+            color: var(--text-mid);
+            line-height: 1.7;
+            max-width: 700px;
+            margin-bottom: 40px;
+        }
+
+        /* ===== ABOUT THE SHOW ===== */
+        .about-section { background: var(--cream); }
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            margin-top: 40px;
+        }
+        .about-card {
+            background: var(--panel);
+            padding: 28px;
+            border-radius: 3px;
+            border: 1px solid var(--line);
+            border-left: 3px solid var(--gold);
+        }
+        .about-card h3 {
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            font-size: 1.05rem;
+            font-weight: 500;
+            color: var(--bone);
+            margin-bottom: 8px;
+        }
+        .about-card p {
+            font-size: 0.92rem;
+            color: var(--text-mid);
+            line-height: 1.6;
+        }
+
+        /* ===== FORMAT ===== */
+        .format-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 40px;
+        }
+        .format-item {
+            text-align: center;
+            padding: 32px 20px;
+            background: var(--panel2, #072244);
+            border: 1px solid var(--line);
+            border-radius: 3px;
+        }
+        .format-number {
+            font-family: 'Oswald', sans-serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--gold);
+            margin-bottom: 4px;
+        }
+        .format-label {
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--bone);
+            margin-bottom: 4px;
+        }
+        .format-desc {
+            font-size: 0.82rem;
+            color: var(--text-mid);
+        }
+
+        /* ===== HOST ===== */
+        .host-section { background: var(--deep); color: var(--bone); }
+        .host-section h2 { color: var(--bone); }
+        .host-section .section-intro { color: var(--text-light); }
+        .host-credentials {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-top: 28px;
+        }
+        .credential {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 18px;
+            background: rgba(201,168,76,0.1);
+            border: 1px solid rgba(201,168,76,0.2);
+            border-radius: 6px;
+            font-size: 0.88rem;
+            color: var(--gold-light);
+        }
+        .credential-icon { font-size: 1.1rem; }
+
+        /* ===== GUEST BENEFITS ===== */
+        .benefits-list {
+            list-style: none;
+            margin-top: 32px;
+        }
+        .benefits-list li {
+            display: flex;
+            gap: 16px;
+            padding: 20px 0;
+            border-bottom: 1px solid var(--line);
+        }
+        .benefit-check {
+            flex-shrink: 0;
+            width: 28px;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--gold-muted);
+            color: var(--gold);
+            border-radius: 50%;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+        .benefit-text h4 {
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+            font-size: 1.02rem;
+            font-weight: 500;
+            color: var(--bone);
+            margin-bottom: 4px;
+        }
+        .benefit-text p {
+            font-size: 0.92rem;
+            color: var(--text-mid);
+            line-height: 1.5;
+        }
+
+        /* ===== TOPICS ===== */
+        .topics-section { background: var(--cream); }
+        .topics-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin-top: 32px;
+        }
+        .topic-tag {
+            padding: 14px 20px;
+            background: var(--panel);
+            border: 1px solid var(--line);
+            border-radius: 3px;
+            font-size: 0.98rem;
+            color: var(--bone);
+            font-weight: 500;
+            border-left: 3px solid var(--gold);
+        }
+
+        /* ===== APPLY ===== */
+        .apply-section { background: var(--cream); }
+        .apply-intro { font-size: 1.05rem; color: var(--text-mid); line-height: 1.7; max-width: 700px; margin-bottom: 32px; }
+        .apply-criteria {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 40px;
+        }
+        .criteria-item {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+            padding: 16px 20px;
+            background: var(--panel);
+            border: 1px solid var(--line);
+            border-radius: 3px;
+            border-left: 3px solid var(--gold);
+        }
+        .criteria-check {
+            flex-shrink: 0;
+            color: var(--gold);
+            font-weight: 700;
+            font-size: 1.1rem;
+            line-height: 1.4;
+        }
+        .criteria-text {
+            font-size: 0.92rem;
+            color: var(--text-mid);
+            line-height: 1.5;
+        }
+        .apply-actions {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .apply-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 36px;
+            background: var(--gold);
+            color: #0E3A70;
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            border-radius: 2px;
+            transition: all 0.3s;
+        }
+        .apply-primary:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(212,175,55,0.3); }
+        .apply-alt {
+            font-size: 0.92rem;
+            color: var(--text-mid);
+        }
+        .apply-alt a {
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .apply-alt a:hover { text-decoration: underline; }
+
+        /* ===== CTA ===== */
+        .cta-section {
+            background: linear-gradient(135deg, #0A3161 0%, #072244 100%);
+            text-align: center;
+            padding: 80px 20px;
+        }
+        .cta-section h2 { color: var(--bone); margin-bottom: 12px; }
+        .cta-section p { color: var(--text-light); font-size: 1.05rem; max-width: 560px; margin: 0 auto 32px; line-height: 1.6; }
+        .cta-buttons { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+        .cta-primary {
+            padding: 16px 36px;
+            background: var(--gold);
+            color: #0E3A70;
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            border-radius: 2px;
+            transition: all 0.3s;
+        }
+        .cta-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+        .cta-secondary {
+            padding: 16px 36px;
+            background: transparent;
+            color: var(--gold);
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            border: 1px solid rgba(212,175,55,0.4);
+            border-radius: 2px;
+            transition: all 0.3s;
+        }
+        .cta-secondary:hover { border-color: var(--gold); background: rgba(212,175,55,0.08); }
+
+        /* ===== FOOTER (standard) ===== */
+        footer {
+            background: var(--deep);
+            border-top: 1px solid var(--line);
+            padding: 48px 0 64px;
+            color: var(--muted);
+            font-size: 16px;
+        }
+        footer .wrap {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 22px;
+            align-items: flex-start;
+        }
+        footer a { color: var(--muted); text-decoration: none; }
+        footer a:hover { color: var(--gold); }
+        footer .soc a { margin-left: 22px; }
+        .disc { max-width: 50ch; font-style: italic; font-size: 15px; line-height: 1.55; }
+        .footer-legal {
+            width: 100%;
+            display: flex;
+            gap: 20px;
+            margin-top: 22px;
+            font-size: 13px;
+        }
+        .footer-legal a {
+            color: rgba(242,239,233,0.5);
+            text-decoration: none;
+        }
+        .footer-legal a:hover {
+            color: var(--gold);
+            text-decoration: underline;
+        }
+        .footer-firm {
+            font-size: 12px;
+            color: rgba(242,239,233,0.55);
+            margin-bottom: 8px;
+            letter-spacing: 0.04em;
+        }
+        .footer-attribution {
+            width: 100%;
+            font-size: 11px;
+            color: rgba(242,239,233,0.35);
+            margin-top: 12px;
+            letter-spacing: 0.03em;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 880px) {
+            .navlinks { display: none; }
+        }
+        @media (max-width: 768px) {
+            .about-grid, .format-grid, .topics-grid, .apply-criteria { grid-template-columns: 1fr; }
+            .host-credentials { flex-direction: column; }
+        }
+
+        @media (max-width: 768px) {
+            footer > div:first-child { grid-template-columns: 1fr !important; gap: 28px !important; }
+        }
+    </style>
+    <link rel="canonical" href="https://josephsoares.com/podcast-daniel-veniez-crown-corporation.html">
+<meta property="og:image" content="https://josephsoares.com/assets/og-default.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Corridor Intelligence | The Podcast with Joseph Soares">
+    <meta name="twitter:image" content="https://josephsoares.com/assets/og-default.png">
+    
+  <!-- Apollo.io website visitor tracking -->
+  <script>function initApollo(){var n=Math.random().toString(36).substring(7),o=document.createElement("script");
+o.src="https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache="+n,o.async=!0,o.defer=!0,
+o.onload=function(){window.trackingFunctions.onLoad({appId:"69b933d5574de0002181290e"})},
+document.head.appendChild(o)}initApollo();</script>
+
+<!-- Mobile nav styles moved to /pages.css (2026-08-19) -->
+<!-- Dropdown styles moved to /pages.css (2026-08-19) -->
+<link rel="stylesheet" href="/pages.css">
+<link rel="stylesheet" href="/site.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "PodcastEpisode", "name": "Daniel Veniez: “I Took No Salary to Fix a Failing Crown Corporation — Here’s What It Took”", "url": "https://josephsoares.com/podcast-daniel-veniez-crown-corporation.html", "datePublished": "2026-10-07", "dateModified": "2026-10-07", "description": "Daniel Veniez took no salary to fix Ridley Terminals, a Crown corporation that had lost money for 30 years. In 18 months: a new board, a seven-year labour agreement, First Nations as partners, and the first repayment to the taxpayer.", "inLanguage": "en-US", "timeRequired": "PT46M52S", "partOfSeries": {"@type": "PodcastSeries", "name": "Corridor Intelligence", "url": "https://josephsoares.com/podcast.html"}, "author": {"@type": "Person", "name": "Joseph Soares", "url": "https://josephsoares.com/"}, "associatedMedia": {"@type": "AudioObject", "contentUrl": "https://www.buzzsprout.com/2655366/episodes/19924900-daniel-veniez-i-took-no-salary-to-fix-a-failing-crown-corporation-here-s-what-it-took.mp3", "encodingFormat": "audio/mpeg", "duration": "PT46M52S"}, "video": {"@type": "VideoObject", "name": "Daniel Veniez: “I Took No Salary to Fix a Failing Crown Corporation — Here’s What It Took”", "description": "Daniel Veniez took no salary to fix Ridley Terminals, a Crown corporation that had lost money for 30 years. In 18 months: a new board, a seven-year labour agreement, First Nations as partners, and the first repayment to the taxpayer.", "thumbnailUrl": "https://i.ytimg.com/vi/ik1UJrV2M5Q/hqdefault.jpg", "uploadDate": "2026-10-07", "embedUrl": "https://www.youtube.com/embed/ik1UJrV2M5Q", "contentUrl": "https://www.youtube.com/watch?v=ik1UJrV2M5Q", "duration": "PT46M52S"}, "transcript": "Full transcript on this page."}</script>
+</head>
+<body>
+<nav>
+      <div class="wrap">
+        <a href="/index.html" class="brand" style="text-decoration:none;color:inherit">Joseph <span>Soares</span></a>
+        <button class="menutoggle" aria-label="Menu" onclick="this.closest('nav').querySelector('.navlinks').classList.toggle('open')"><span></span><span></span><span></span></button>
+      <div class="navlinks">
+          
+          <div class="navdrop"><a href="/intelligence.html">Intelligence</a><div class="navdrop-menu"><a href="/brief/">Briefs</a><a href="/dispatch.html">Dispatches</a><a href="/corridor-files.html">Files</a><a href="/brief/index-dashboard.html">Index</a><a href="/issues-focus.html">Issues Focus</a></div></div>
+          <a href="/podcast.html" class="active">Podcast</a>
+          <a href="/writing.html">Writing</a>
+          <a href="/book.html">Book</a>
+          <a class="cta" href="/subscribe.html">Subscribe</a>
+        </div>
+      </div>
+    </nav>
+<style>
+.ep-wrap{max-width:820px;margin:0 auto;padding:48px 20px 24px}
+.ep-label{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.14em;font-size:.8rem;color:var(--gold)}
+.ep-wrap h1{margin:10px 0 12px;line-height:1.2}
+.ep-meta{opacity:.75;font-size:.95rem;margin-bottom:24px}
+.ep-video{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;background:#072244;border-radius:6px}
+.ep-video iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
+.ep-block{margin-top:28px}
+.ep-block h2{font-size:1.25rem;margin:0 0 10px}
+.ep-list{margin:0;padding-left:20px;line-height:1.7}
+.ep-chapters{list-style:none;padding:0;margin:0;line-height:1.9}
+.ep-ts{color:var(--gold);font-variant-numeric:tabular-nums;text-decoration:none;font-weight:600}
+.ep-ts:hover{text-decoration:underline}
+details.ep-tr{margin-top:28px;border:1px solid rgba(128,128,128,.3);border-radius:6px;padding:14px 18px}
+details.ep-tr summary{cursor:pointer;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.1em;min-height:44px;display:flex;align-items:center}
+details.ep-tr p{margin:0 0 14px;line-height:1.6}
+.ep-note{font-size:.85rem;opacity:.7}
+.ci-listen{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:8px 0 0}
+.ci-pill{display:inline-flex;align-items:center;min-height:44px;padding:10px 18px;border:1px solid rgba(212,175,55,.7);border-radius:2px;color:inherit;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.1em;font-size:.8rem;text-decoration:none}
+.ci-pill:hover,.ci-pill:focus{background:#D4AF37;color:#072244}
+</style>
+
+<main class="ep-wrap">
+  <a href="/podcast.html" class="ep-label" style="text-decoration:none">&larr; Corridor Intelligence &middot; The Podcast</a>
+  <h1>Daniel Veniez: “I Took No Salary to Fix a Failing Crown Corporation — Here’s What It Took”</h1>
+  <div class="ep-meta">October 7, 2026 &middot; Interview &middot; 46 minutes &middot; Hosted by Joseph Soares</div>
+  <div class="ep-video"><iframe data-src="https://www.youtube-nocookie.com/embed/ik1UJrV2M5Q?rel=0&modestbranding=1" title="Daniel Veniez: I Took No Salary to Fix a Failing Crown Corporation" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+  <div class="ep-block"><h2>Listen to the audio</h2><div id='buzzsprout-small-player-episode-id-19924900'></div><script type='text/javascript' charset='utf-8' src='https://www.buzzsprout.com/2655366/episodes/19924900-daniel-veniez-i-took-no-salary-to-fix-a-failing-crown-corporation-here-s-what-it-took.js?container_id=buzzsprout-small-player-episode-id-19924900&player=small'></script></div>
+  <div class="ep-block"><p>Daniel Veniez was handed a Crown corporation that had lost money for 30 straight years. He took no salary for the job &mdash; and within 18 months he had a new board, an unprecedented seven-year labour agreement, First Nations who now saw the terminal as theirs to help build, and the first repayment ever on what it owed the taxpayer.</p>
+  <p>He advised three federal cabinet ministers in Brian Mulroney&rsquo;s government. He built his own companies in British Columbia. Then he was sent in to fix Ridley Terminals. Joseph Soares talks with him about what leadership actually is &mdash; and what it asks of the person doing it.</p></div>
+  <div class="ep-block"><h2>In this conversation</h2><ul class="ep-list">
+  <li>What leadership is, and why a leader has to know the detail</li><li>Challenging assumptions without sounding arrogant</li><li>Fixing a culture of complacency</li><li>Winning a seven-year labour agreement with a suspicious workforce</li><li>Making First Nations partners in the business, not recipients</li><li>What Canada&ndash;U.S. trade demands of a leader</li><li>Why major national projects take time</li><li>When government should own a business, and when it shouldn&rsquo;t</li><li>What to do in week one at a struggling institution</li><li>Is leadership lonely? And what does it cost your family?</li></ul></div>
+  <div class="ep-block"><h2>Chapters</h2><ul class="ep-chapters"><li><a class="ep-ts" href="https://www.youtube.com/watch?v=ik1UJrV2M5Q&amp;t=0s" target="_blank" rel="noopener">0:00</a> Introduction</li><li><a class="ep-ts" href="https://www.youtube.com/watch?v=ik1UJrV2M5Q&amp;t=119s" target="_blank" rel="noopener">1:59</a> What is leadership?</li><li><a class="ep-ts" href="https://www.youtube.com/watch?v=ik1UJrV2M5Q&amp;t=223s" target="_blank" rel="noopener">3:43</a> Challenging assumptions without arrogance</li><li><a class="ep-ts" href="https://www.youtube.com/watch?v=ik1UJrV2M5Q&amp;t=319s" target="_blank" rel="noopener">5:19</a> Fixing a culture of complacency</li><li><a class="ep-ts" href="https://www.youtube.com/watch?v=ik1UJrV2M5Q&amp;t=480s" target="_blank" rel="noopener">8:00</a> A seven-year labour agreement</li><li><a class="ep-ts" href="https://www.youtube.com/watch?v=ik1UJrV2M5Q&amp;t=833s" target="_blank" rel="noopener">13:53</a> First Nations as partners in the business</li><li><a class="ep-ts" href="https://www.youtube.com/watch?v=ik1UJrV2M5Q&amp;t=1239s" target="_blank" rel="noopener">20:39</a> Canada–U.S. trade and the leader’s job</li><li><a class="ep-ts" href="https://www.youtube.com/watch?v=ik1UJrV2M5Q&amp;t=1500s" target="_blank" rel="noopener">25:00</a> Why major projects take time</li><li><a class="ep-ts" href="https://www.youtube.com/watch?v=ik1UJrV2M5Q&amp;t=1860s" target="_blank" rel="noopener">31:00</a> When government should own a business</li><li><a class="ep-ts" href="https://www.youtube.com/watch?v=ik1UJrV2M5Q&amp;t=2042s" target="_blank" rel="noopener">34:02</a> Week one at a struggling institution</li><li><a class="ep-ts" href="https://www.youtube.com/watch?v=ik1UJrV2M5Q&amp;t=2271s" target="_blank" rel="noopener">37:51</a> Is leadership lonely?</li><li><a class="ep-ts" href="https://www.youtube.com/watch?v=ik1UJrV2M5Q&amp;t=2530s" target="_blank" rel="noopener">42:10</a> The cost to family</li></ul></div>
+  <details class="ep-tr"><summary>Read the full transcript</summary>
+  <p class="ep-note">Transcript generated automatically and lightly formatted. It may contain errors. Timestamps open the video at that moment.</p>
+<p><a class="ep-ts" href="https://www.youtube.com/watch?v=ik1UJrV2M5Q&amp;t=8s" target="_blank" rel="noopener">0:08</a> <strong>Joseph Soares:</strong> My guest is a native of Quebec who advised three cabinet ministers in the Progressive Conservative government of Brian Mulroney, built companies of his own in British Columbia where he made his home, and in December of 2007 was appointed by the Canadian Federal Cabinet to chair a Crown Corporation, Ridley Terminals, a company owned by the government of Canada that had lost money for its 30 years of existence. He took no salary for it, and within 18 months, he had a new board, an unprecedented seven-year labor agreement. First Nations who now saw the terminal as theirs to help build, and the first repayment ever on what it owed the taxpayer. What he built there outlasted him. I wanted to talk to him about what leadership actually is and what it asks of the person who does it. At a moment when this country needs a great deal of it. Before we begin, a word to you. If this conversation is worth your time, like it, share it, and subscribe.</p>
+<p><a class="ep-ts" href="https://www.youtube.com/watch?v=ik1UJrV2M5Q&amp;t=78s" target="_blank" rel="noopener">1:18</a> <strong>Joseph Soares:</strong> That is not a formality. Every like and every share tells the platform this work deserves to reach more people. And the more people it reaches, the more good it can do. Thank you for being here. We will keep doing our best to earn it. One serious conversation at a time. One thing before we start. Dan is in my book, Leadership Under Fire, Chapter 3. He has read it, he has argued with me about it, and we have known each other a long time. None of that is why he is here. He&#x27;s here because he has thought harder about this subject than almost anyone I know. Dan, you&#x27;ve spent 40 years watching leadership up close. Yes. Business and government and companies you owned. And one you were sent in to fix. Strip away the seminars and the books. What is leadership actually?</p>
+<p><a class="ep-ts" href="https://www.youtube.com/watch?v=ik1UJrV2M5Q&amp;t=133s" target="_blank" rel="noopener">2:13</a> <strong>Daniel Veniez:</strong> I&#x27;ve sent I&#x27;ve been sent in to fix a couple of things, but the leadership, first and foremost, I think, is the ability to translate a vision or an idea for what you want to do into action and inspiring people around you to coalesce around that action. I think that&#x27;s the first thing. Making sure you&#x27;re surrounded by fantastic people who know what they&#x27;re doing, who are competent people. That&#x27;s another, I think, hallmark of leadership. Identifying recruiting, but maintaining or retaining, I should say, fantastic people, incenting them is another very important attribute of leadership. And from my experience anyway, leadership also means getting out of the way and letting great people do their jobs. And being there as a coach, as a supporter, micromanagement doesn&#x27;t cut it, but a leader or or the CEO, let&#x27;s say, really needs to know the detail in order to have the respect and credibility within the ranks and outside the organization.</p>
+<p><a class="ep-ts" href="https://www.youtube.com/watch?v=ik1UJrV2M5Q&amp;t=208s" target="_blank" rel="noopener">3:28</a> <strong>Daniel Veniez:</strong> So if you&#x27;re if you&#x27;re a great talker, great communicator, that helps. But if you really don&#x27;t know the detail of a business, you can&#x27;t maintain the credibility and respect of the people who you&#x27;re asking to execute on a vision.</p>
+<p><a class="ep-ts" href="https://www.youtube.com/watch?v=ik1UJrV2M5Q&amp;t=223s" target="_blank" rel="noopener">3:43</a> <strong>Joseph Soares:</strong> Aaron Powell You&#x27;ve written that great leaders refuse to accept assumptions simply because they&#x27;ve been around for a long time and because those assumptions can seem irrational in the moment. How do you tell that apart from arrogance? From the outside, they can look identical, don&#x27;t you think?</p>
+<p><a class="ep-ts" href="https://www.youtube.com/watch?v=ik1UJrV2M5Q&amp;t=242s" target="_blank" rel="noopener">4:02</a> <strong>Daniel Veniez:</strong> Maybe from the outside they might, but what I meant by that is that you can&#x27;t take for granted what someone has given you as fact. Assumptions and forecasts, or in what&#x27;s happening in the marketplace, or what a customer may or may not think. You have to know yourself. So you have to do your own homework either to validate those assumptions, challenging them is always a good idea because it forces you to think and the organization to think. And sometimes when you challenge assumptions, you come out with a completely different set of not assumptions, but facts or an agreed set of assumptions, if you will, that helps guide an organization. Yeah. Uh taking anything for granted or anything as a given without doing the homework yourself to validate, to challenge, to question, to recraft, I think is a dangerous thing because you might end up on a track that really doesn&#x27;t make any sense and won&#x27;t be effective.</p>
+<p><a class="ep-ts" href="https://www.youtube.com/watch?v=ik1UJrV2M5Q&amp;t=308s" target="_blank" rel="noopener">5:08</a> <strong>Joseph Soares:</strong> You&#x27;ve written that what you inherited at Ridley was not an operational problem. It was a culture that had grown used to underperforming. What does that look like on a Tuesday morning in a real building with real people? What is it that you what&#x27;s the first thing you do about it?</p>
+<p><a class="ep-ts" href="https://www.youtube.com/watch?v=ik1UJrV2M5Q&amp;t=327s" target="_blank" rel="noopener">5:27</a> <strong>Daniel Veniez:</strong> Operational problems stem from sick or dysfunctional, unhealthy cultures. So neither of which happens in isolation. They&#x27;re very much linked. I did inherit, in fact, I&#x27;m not sure where I read that, but I did inherit an operational problem which stemmed directly from a culture of complacency, a general attitude and mindset of defeat, defeat in that markets were never in their favor, customers never seemed to come, and in order to survive to the extent that they did, they had to make operational concessions in order to maintain what limited viability the business had at the time. By that they would make it far easier for the limited number of users of the terminal to take complete advantage of the company. So they had, in many cases, free access, they didn&#x27;t pay their bills on time, they went to the terminal at very deep discounts, and the management at the time believed that was necessary in order to maintain what jobs there were.</p>
+<p><a class="ep-ts" href="https://www.youtube.com/watch?v=ik1UJrV2M5Q&amp;t=402s" target="_blank" rel="noopener">6:42</a> <strong>Daniel Veniez:</strong> And of course, there were government subsidies, which kept the place going, so it was 100% government-owned. But that approach was borne by, in their view, necessity in order to maintain a status quo where the jobs were maintained and the government would decide, no, we&#x27;re not going to shut this place down because there are two customers or whatever it was. So that became the culture of the place, which would be to survive by any means necessary in order to keep Ottawa at at bay, in order to keep this little corner of Canada, in this case uh Prince Rupert, Ridley Island, employed. When you start from a standing start of the lowest common denominator, that becomes the embedded culture of the place. So no one innovated, no one demanded more of themselves, no one questioned why customers were paying a deep discount for access to the terminal. It was a survival in their in their minds. And the unions were paid very attractive union wages.</p>
+<p><a class="ep-ts" href="https://www.youtube.com/watch?v=ik1UJrV2M5Q&amp;t=480s" target="_blank" rel="noopener">8:00</a> <strong>Joseph Soares:</strong> Yeah. But isn&#x27;t it true that you took a workforce with decades of bad blood behind it and came out with a seven-year labor agreement? How do you open that conversation when nobody in the room has any reason to believe you?</p>
+<p><a class="ep-ts" href="https://www.youtube.com/watch?v=ik1UJrV2M5Q&amp;t=493s" target="_blank" rel="noopener">8:13</a> <strong>Daniel Veniez:</strong> There wasn&#x27;t a question of believing me, although they were very suspicious of me because I was an outsider, but they knew of me because of my previous experience up there. My partner and I had purchased a pulp mill and sawmills several years before, and we had to obtain new labor agreements, which we did. And it wasn&#x27;t pretty. So when you have a really uh strong union culture, especially in a community that&#x27;s resource-based and used to high wages, limited flexibility, unions pretty much controlling everything within that operation, and you have a community around it which grew up with that mindset. It&#x27;s very tough to crack that culture. But crack it we had to, because the world around them was giving them a huge dose of reality. In the case of forest products, mills were shutting down left and right, and that was a matter of market forces, technological advances, bad provincial forest policy, a whole bunch of factors meant that the industry was shrinking.</p>
+<p><a class="ep-ts" href="https://www.youtube.com/watch?v=ik1UJrV2M5Q&amp;t=570s" target="_blank" rel="noopener">9:30</a> <strong>Daniel Veniez:</strong> And so they weren&#x27;t immune to that. They saw what was going on. I came in when the collective agreement, as far as Ridley was concerned, the collective agreement was expiring. And it was a three-year agreement. And they were about to head into a new negotiation to have a new collective agreement for another three years. We decided that three years wasn&#x27;t enough because the rebuilding of the place would most likely take longer than three years. And so we wanted to have a longer-term agreement. Initially we thought five, and then we decided we&#x27;ll go for seven in order to give the place the stability that it needed. What they got in return was we didn&#x27;t nitpick on the small irritants that bothered them, but that management at the time felt were important. There was an adversarial relationship where management wanted to nitpick, and the unions resisted. So there was just an inherent tension that grew over the years out of a lack of trust and lack of respect.</p>
+<p><a class="ep-ts" href="https://www.youtube.com/watch?v=ik1UJrV2M5Q&amp;t=649s" target="_blank" rel="noopener">10:49</a> <strong>Daniel Veniez:</strong> So there are a number of lessons there. Being a nice guy doesn&#x27;t cut it. The workforce has to have respect for the individuals that are in charge. They have to have respect for a plan that you articulate, and they have to have respect in their belief that you&#x27;re going to execute on the plan. And so that&#x27;s what you have to do in order to at least begin the conversation. We&#x27;re lucky enough in that we changed the board, we brought in a new senior management team, and so they knew that we meant business. In isolation, we couldn&#x27;t have done any of that. We couldn&#x27;t have walked in and said, hey, we want a seven-year agreement. We would have been thrown out of the place. So we had to demonstrate initially that we&#x27;re taking steps which for them were unusual. For us, they made complete sense. But for them, it was unusual. They saw change was afoot. They saw that the management and the board leadership were serious about change, serious about wanting to rebuild the place.</p>
+<p><a class="ep-ts" href="https://www.youtube.com/watch?v=ik1UJrV2M5Q&amp;t=714s" target="_blank" rel="noopener">11:54</a> <strong>Daniel Veniez:</strong> And that was really the foundational basis. The other, the last part was the small nitpicky items. We directed that those be taken off the table. They didn&#x27;t matter to us. What mattered to us was enhancing productivity. So a lot of productivity enhancing measures in the labor agreement, including flexibility, which was also important. And with those two things, and they also had a they also had long-term certainty on their on their annual inflation-adjusted increases. And we also gave them for signing an initial substantial bump in compensation, which was a bit of risk, a bit of a risk for us, but one we were confident to take because we believed that with the productivity enhancing measures, operationally we could make up for what we have given up front. And uh so that&#x27;s what we did, and it worked out. And the the managers that executed on that labor agreement needed to understand, which they did, that the consistency in their leadership and behavior was key, that the unions would really hold them accountable for proper execution, and vice versa.</p>
+<p><a class="ep-ts" href="https://www.youtube.com/watch?v=ik1UJrV2M5Q&amp;t=793s" target="_blank" rel="noopener">13:13</a> <strong>Daniel Veniez:</strong> We couldn&#x27;t find ourselves uh going back to reverting to a culture where lack of performance was ignored or dismissed or didn&#x27;t pay attention to. So we held each other accountable for performance and for living up to the handshake and the signatures on the collective agreement. And that takes a little bit of time. Once that credibility is established and trust is established, we don&#x27;t have to like each other, but we have to respect each other. That&#x27;s central. That&#x27;s central.</p>
+<p><a class="ep-ts" href="https://www.youtube.com/watch?v=ik1UJrV2M5Q&amp;t=830s" target="_blank" rel="noopener">13:50</a> <strong>Joseph Soares:</strong> And talking about respect, you pushed the engagement with the local First Nations well beyond what was expected at the time: scholarships, training, hiring, business development. A decade later, those same First Nations owned 10% of that terminal. When you read that, what went through your mind?</p>
+<p><a class="ep-ts" href="https://www.youtube.com/watch?v=ik1UJrV2M5Q&amp;t=852s" target="_blank" rel="noopener">14:12</a> <strong>Daniel Veniez:</strong> That 10% wasn&#x27;t enough. Then they should have received more. And I&#x27;m sure they didn&#x27;t ask for more. That&#x27;s what I thought. They deserved more. They were probably presented with 10%. They very likely said, Well, that&#x27;s fantastic, thank you very much. And then they went on their way. But in the era of multiple Supreme Court decisions on consultation and accommodation, when assets on First Nations territories are transferred, 10% should be an opener. I thought they made a mistake. I thought that the new owners were very lucky to get that deal. And I don&#x27;t know the extent to which they&#x27;re involved in the business or not. But my concern in these situations always is that you throw a few dollars at them to keep them at bay, but you don&#x27;t really make them part of the business. What we wanted to do is to make them very much part of the business. That couldn&#x27;t happen overnight because they needed to be trained, they needed to feel part of it, they needed to build trust.</p>
+<p><a class="ep-ts" href="https://www.youtube.com/watch?v=ik1UJrV2M5Q&amp;t=922s" target="_blank" rel="noopener">15:22</a> <strong>Daniel Veniez:</strong> We wanted to build an entrepreneurial class that would supply the terminal with various services that we need that we contracted out to local businesses all the time. We wanted First Nations to develop the capability to do that themselves, and so we were prepared to and did in some cases help them finance the acquisition of equipment, for example. We also were highly cognizant of the educational system up there, which is pretty good, but there&#x27;s a heck of a transition between secondary and post-secondary. We wanted to try to do everything we could to encourage talented kids, indigenous kids, to go to university. And we tried very hard with some success and frankly also failure. And the failure in one particular instance, I won&#x27;t name names or places, but one kid, a wonderful, talented young lady, was offered a scholarship to go to Middlebury College in Vermont. And she went. But the transition was exceedingly difficult.</p>
+<p><a class="ep-ts" href="https://www.youtube.com/watch?v=ik1UJrV2M5Q&amp;t=998s" target="_blank" rel="noopener">16:38</a> <strong>Daniel Veniez:</strong> Imagine going from the high school in Prince Rupert to going across the country to Middlebury. Middlebury is one of the best liberal arts institutions in North America, actually. And so the transition, and that was our fault, by the way, we tried to do everything we could to support, but it wasn&#x27;t easy. And it was a learning experience for everybody. But that kind of thing takes time. It takes time, it takes effort, it takes patience, it takes money. The money really isn&#x27;t the important facet of it, though. Because with every success, it breathes more. Same is true when things don&#x27;t work out. When things don&#x27;t work out, people become gun shy, they become afraid, and they go back in their traditional shells, if you will, where it&#x27;s more comfortable, will they feel more supportive? We have to do, well, by we non-Indigenous business leaders, we have to do a better job of making sure a transition is longer term and as seamless as possible, and that they&#x27;re given every opportunity to succeed.</p>
+<p><a class="ep-ts" href="https://www.youtube.com/watch?v=ik1UJrV2M5Q&amp;t=1069s" target="_blank" rel="noopener">17:49</a> <strong>Daniel Veniez:</strong> And for that, a support system has to be developed in order to do that. So there&#x27;s still a lot of learning to take place on on both sides. And by the way, culturally, it&#x27;s also not easy. We assume, which is not the right thing to do, but we assume that, hey, you&#x27;re a kid up in Prince Hubert and you&#x27;re given an opportunity of a lifetime, say thank you and get the job done. That&#x27;s not the way the real world works. And there&#x27;s also a bit of I don&#x27;t know any other word way to characterize it, but there&#x27;s a bit of a white arrogance that comes with that mindset and attitude that we had and that a lot of people in in the position I was in have. I&#x27;m giving you this, you should be grateful, say thank you, and do the job. That&#x27;s wrong. They need support because of so it&#x27;s n well when I say culture, I&#x27;m not talking about socioeconomic status. I&#x27;m literally talking culture, language, history, how these people grew up, how they were raised, their mindsets, perspectives, attitudes, how they see the world, in many cases diametrically different than what we experienced.</p>
+<p><a class="ep-ts" href="https://www.youtube.com/watch?v=ik1UJrV2M5Q&amp;t=1152s" target="_blank" rel="noopener">19:12</a> <strong>Daniel Veniez:</strong> And we&#x27;re not we&#x27;re often not mindful of that. So the idea for us was to try to develop a holistic approach over time that made them part of our business ecosystem, not because it uh is nice or politically correct or woke or whatever the hell it is you want to call it, but it&#x27;s good business. Good business because we need we need people, we need the renewal of people, we need people within the the business community or the community at large that would have the skill level to integrate quickly in various job functions and leadership functions in the organization. We needed a community that broader community that understood that and that was supportive of what we were doing. And all of those things fundamentally are good for business. So, first principle is what do you do that will help you build and sustain a viable business over time? And those were critical pieces of it.</p>
+<p><a class="ep-ts" href="https://www.youtube.com/watch?v=ik1UJrV2M5Q&amp;t=1225s" target="_blank" rel="noopener">20:25</a> <strong>Joseph Soares:</strong> Dan, you&#x27;ve had a lot of the opportunities to work with the United States and in America generally. You&#x27;ve had mandates there, you&#x27;ve lived there for a period. Let me describe the room we&#x27;re all standing in right now. The United States has imposed 50% tariffs on a range of Canadian goods. On the 8th of September last, Canada responded with its own counter-tariffs. And since then, the United States has begun to ban some Canadian products outright, including alcohol, certain dairy, and large motorcycles and things of that nature. And in July, we also saw the first scheduled review of our trade agreement with them. Washington chose to not renew it for another 16 years or so. So the agreement now lives on an annual review basis. And our closest ally is still our cloud closest ally at the end of the day. But the ground under our relationship is being renegotiated every year now. What does that environment demand of a leader that the last 30 years of our relationship did not?</p>
+<p><a class="ep-ts" href="https://www.youtube.com/watch?v=ik1UJrV2M5Q&amp;t=1294s" target="_blank" rel="noopener">21:34</a> <strong>Daniel Veniez:</strong> Demands a recognition of reality. And the reality is the world has changed. The relationship with the United States, who we thought was our closest ally, I dispute the fact that it is anymore. I don&#x27;t how could you how could you call your closest ally a country that has done what it&#x27;s done to Canada? We have an agreement. By the way, that agreement is still in force today. That trade agreement is still in force. There&#x27;s a one-year review or six it&#x27;s still in force.</p>
+<p><a class="ep-ts" href="https://www.youtube.com/watch?v=ik1UJrV2M5Q&amp;t=1323s" target="_blank" rel="noopener">22:03</a> <strong>Joseph Soares:</strong> Yeah.</p>
+<p><a class="ep-ts" href="https://www.youtube.com/watch?v=ik1UJrV2M5Q&amp;t=1324s" target="_blank" rel="noopener">22:04</a> <strong>Daniel Veniez:</strong> There is one party in that agreement that is not respecting the agreement. So if you don&#x27;t have trust in your trading partners, if you don&#x27;t have trust in your friends and allies, they&#x27;re not friends and allies. So I think whatever happens in the next administration, Canada&#x27;s not going back ever, thank God. And I say thank God because as a country, we cannot be, which we have been, overwhelmingly dependent on the United States. And it&#x27;s a good thing. So we&#x27;re we&#x27;ve called ourselves a trading nation for the last 50 years. But we&#x27;re not a trading nation when 80% or more, depending on the year, goes south of the border. That&#x27;s not trade, that&#x27;s making your stuff and selling your stuff to your next door neighbor. Trading, a real trading nation has a diversified basket of trading relationships around the world. And we understand that, we strengthen it, and we uh we fuel it. I think and I hope that&#x27;s what we&#x27;re doing.</p>
+<p><a class="ep-ts" href="https://www.youtube.com/watch?v=ik1UJrV2M5Q&amp;t=1401s" target="_blank" rel="noopener">23:21</a> <strong>Daniel Veniez:</strong> We&#x27;ve never had a strong consensus on this point. And I don&#x27;t know in in my I do know, but in my lifetime anyway, that there&#x27;s been such a strong consensus on anything in Canada, then right now, in the importance of diversify, diversifying our trade, lessening our dependence on the United States in economic and in military terms. Now where you say our we&#x27;re still close allies, by definition, geography has to make us a close ally. And uh militarily, of course, we are, but there&#x27;s a difference between being an ally and being overly dependent. And I think that loosening that grip of dependency is gonna make Canada stronger. Arguably, it&#x27;ll make the relationship with the United States stronger over the long term. But what does a leader do? A leader tells the truth. This is not easy, it&#x27;s gonna be tough. We&#x27;re feeling the pain already. I suspect that we&#x27;ll feel some more. And a leader has to be straight with the Canadian people.</p>
+<p><a class="ep-ts" href="https://www.youtube.com/watch?v=ik1UJrV2M5Q&amp;t=1472s" target="_blank" rel="noopener">24:32</a> <strong>Daniel Veniez:</strong> The Prime Minister Carney is straight with the Canadian people, is straight with the world, is straight with the United States. And no bluster, no yelling and screaming, just be okay, we recognize that things have changed, and Canada, an independent country, a resilient country with fantastic people, will adjust accordingly. And that&#x27;s what we&#x27;ve done.</p>
+<p><a class="ep-ts" href="https://www.youtube.com/watch?v=ik1UJrV2M5Q&amp;t=1499s" target="_blank" rel="noopener">24:59</a> <strong>Joseph Soares:</strong> The Building Canada Act, the law meant to fast-track projects the government judges to be in the national interest. It became law in June of 2025. And since then, 18 projects, more or less, have been referred to the major projects office. The federal body put in place to carry them out. So last week, for the first time, one was listed. A pipeline called Pacific Link, which I&#x27;m sure you&#x27;ve heard of, which would carry about a million barrels of oil a day from Alberta to the West Coast. Fifteen months to list one project. And listed is not built, of course. So the federal conditions are not due until September of 2027. The consultations with First Nations are not finished, and the company partner has not made a final investment decision either. So on the 19th of October, Alberta votes on whether to begin the legal process towards a referendum on leaving the country. It&#x27;s not a criticism. Every government in the world has a version of this.</p>
+<p><a class="ep-ts" href="https://www.youtube.com/watch?v=ik1UJrV2M5Q&amp;t=1568s" target="_blank" rel="noopener">26:08</a> <strong>Joseph Soares:</strong> Is it a question about how things actually get done? What has to be true inside the system, any system, for the citizen to travel from an announcement to the actual delivery?</p>
+<p><a class="ep-ts" href="https://www.youtube.com/watch?v=ik1UJrV2M5Q&amp;t=1583s" target="_blank" rel="noopener">26:23</a> <strong>Daniel Veniez:</strong> These are multi-billion dollar projects. They don&#x27;t happen overnight. A feasibility study on a bridge, for example, the the new bridge between Windsor and Detroit, how many years do you think that took to build? And that was what, five and a half billion dollars or whatever it is? That&#x27;s peanuts compared to what we&#x27;re talking about on these other projects. It took at least a decade, if not more. So there&#x27;s a lot of engineering, there&#x27;s a lot of feasibility. Finance is not the issue, but it&#x27;s got to be financially viable. And whether you like it or not, there are communities involved, there&#x27;s there&#x27;s environmental studies to go through, there&#x27;s a process to go through. The process could and should be and will be shortened. I have no doubt about that. But we&#x27;re talking many multi-billions of dollars. Each individual project, they take time. Are we suggesting that they should be done in six months?</p>
+<p><a class="ep-ts" href="https://www.youtube.com/watch?v=ik1UJrV2M5Q&amp;t=1639s" target="_blank" rel="noopener">27:19</a> <strong>Daniel Veniez:</strong> It&#x27;s not going to happen. Yeah. I don&#x27;t know what else a prime minister can do. You mentioned Alberta, a separatist movement that&#x27;s existed for 50 years or more. And I&#x27;m not concerned about it. Neither am I concerned with the election of the Papsquivicois. There&#x27;s a there&#x27;s a change of government. It doesn&#x27;t mean, not even close, does it mean that Quebecers are in favor of the separation of the province from Canada? That&#x27;s not what it means in the slightest. There&#x27;s a minority of people that would like that in Alberta and in Quebec, but an overwhelming majority don&#x27;t believe that is a smart thing to do. Major projects take major time. And in a democracy, they take more time because we&#x27;re a democracy. We get sold people, our political leaders are accountable. If you&#x27;re Xi Jinping, you could build a high-speed rail at the stroke of a pen and they build things at warp speed. That&#x27;s nice. But thank God we&#x27;re not China.</p>
+<p><a class="ep-ts" href="https://www.youtube.com/watch?v=ik1UJrV2M5Q&amp;t=1706s" target="_blank" rel="noopener">28:26</a> <strong>Daniel Veniez:</strong> I think that in the circumstances we are going at warp speed. I&#x27;ve never seen, and I don&#x27;t think that there it&#x27;s ever there&#x27;s ever been a case where we&#x27;ve had these kind of nation-building projects and a process to deal with on this scale and at this speed ever. The meeting in Toronto, the investment summit that the Prime Minister convened, brought together the most senior private equity pension funds bankers from around the world in one room. Uh, and some people were expecting deals to be announced. That&#x27;s simply not the way it works. The fact that they were convened allowed the Prime Minister and the government of Canada to tell a story. And the story is Canada is open for business, and here&#x27;s why. We&#x27;ve got a wealth of resources, we have a highly educated population, we are strongly motivated to diversify our economy, to strengthen our economic, political, military independence, to unlock the wealth of our natural resources for a lot of reasons.</p>
+<p><a class="ep-ts" href="https://www.youtube.com/watch?v=ik1UJrV2M5Q&amp;t=1780s" target="_blank" rel="noopener">29:40</a> <strong>Daniel Veniez:</strong> And I think that message is being heard all over the world. And so conversations now are taking place, but a process is in place to support those conversations on getting projects approved and done. So it takes a bit of time. That&#x27;s understandable, that&#x27;s normal. I have no doubt that it will it will happen again, in large part because there&#x27;s a massive consensus in Canada among the Canadian people and across the lines politically that these things have to be done in our national interest. And it&#x27;s an opportunity that we must seize. And any government, thankfully, we have a prime minister in place who understands how the wheels of the economy turn, but any government in place in Canada today, in the same circumstances, I think would do the same thing, perhaps not as effectively as this government is doing it and systematically, but with the Canadian people behind these kinds of moves, it&#x27;s going to happen.</p>
+<p><a class="ep-ts" href="https://www.youtube.com/watch?v=ik1UJrV2M5Q&amp;t=1846s" target="_blank" rel="noopener">30:46</a> <strong>Daniel Veniez:</strong> There&#x27;s no turning back. We all recognize that it&#x27;s a great opportunity for us to really strengthen and deepen our independence and sovereignty.</p>
+<p><a class="ep-ts" href="https://www.youtube.com/watch?v=ik1UJrV2M5Q&amp;t=1857s" target="_blank" rel="noopener">30:57</a> <strong>Joseph Soares:</strong> One of the things that the government talked about at that meeting in Toronto is it wants to put the country&#x27;s four largest airports into long-term private concessions and keep the land. You chaired a Crown Corporation, and 10 years after you left, it was sold to private owners. What does the state get right when it owns an operating business like that? And what is it structurally not built to do?</p>
+<p><a class="ep-ts" href="https://www.youtube.com/watch?v=ik1UJrV2M5Q&amp;t=1886s" target="_blank" rel="noopener">31:26</a> <strong>Daniel Veniez:</strong> The Crown Corporation should have first and foremost a public policy purpose. The one that comes to mind, of course, is the CBC Radio Canada. That, especially in Quebec or in French Canada, for me anyway, that public policy purpose is very clear and compelling. In English Canada, I don&#x27;t see it as much because there are alternatives in English Canada. But it has to have a public policy purpose. Owning airports, the model&#x27;s been demonstrated around the world that government doesn&#x27;t have to own airports for airports to exist and for them to operate well. I personally don&#x27;t have a pro I&#x27;ve been to a lot of airports. I don&#x27;t have any issue really with how airports are managed. Vancouver&#x27;s great, Toronto is great. I was in Montreal recently. It&#x27;s congested, it&#x27;s tight. But I don&#x27;t I never experienced a problem with it. I expect that the government&#x27;s idea there is to unlock money to redirect elsewhere.</p>
+<p><a class="ep-ts" href="https://www.youtube.com/watch?v=ik1UJrV2M5Q&amp;t=1951s" target="_blank" rel="noopener">32:31</a> <strong>Daniel Veniez:</strong> But when you privatize something, the purpose should be that it&#x27;s better managed, more effectively managed in the hands of the private sector. And that the costs are also more competitive. And so in this particular case, my concern would only be privatizing the management of airports would lead to higher costs because they&#x27;re going to want to extract as much, as many fees as possible from as many places as they can. That would be my only concern. Per se, I don&#x27;t care if governments-owned or operated airports. They will function one way or another. Transport Canada and federal regulators have enough control over our skies and air traffic control and how airports are supposed to be managed, that I wouldn&#x27;t be concerned at all with public safety or the safety of the skies or anything of that sort. But if there&#x27;s no public policy purpose to government ownership of anything, my personal view is we shouldn&#x27;t be in that business.</p>
+<p><a class="ep-ts" href="https://www.youtube.com/watch?v=ik1UJrV2M5Q&amp;t=2024s" target="_blank" rel="noopener">33:44</a> <strong>Daniel Veniez:</strong> Should hand it over to the private sector. That&#x27;s my opinion.</p>
+<p><a class="ep-ts" href="https://www.youtube.com/watch?v=ik1UJrV2M5Q&amp;t=2028s" target="_blank" rel="noopener">33:48</a> <strong>Joseph Soares:</strong> I&#x27;m publishing uh Leadership Under Fire. It&#x27;s coming out on October 20th. And we talk about working conditions and how leaders deal with how they confront difficulties. Hypothetically, if someone is handed a struggling institution on a Monday morning, a company, an agency, a department, what do you tell them to do in week one and what do you tell them it will cost them?</p>
+<p><a class="ep-ts" href="https://www.youtube.com/watch?v=ik1UJrV2M5Q&amp;t=2055s" target="_blank" rel="noopener">34:15</a> <strong>Daniel Veniez:</strong> You don&#x27;t know that it&#x27;ll cost them anything. And you don&#x27;t tell them anything in week one other than I want to listen to you. So you have to listen. And you have to learn your brief. You have to know the intricacies in minute detail of whatever whatever business or organization that you&#x27;ve been charged with running. Again, your credibility and the respect of the people that you&#x27;re responsible for will be severely diminished or will be extinguished pretty damn quick if you don&#x27;t know what you&#x27;re talking about. Similarly, if you go into any organization in week one and you think you know everything and you&#x27;re going to dictate from the top what they have to do in week two, you will get shut down real fast. So you have to listen, you have to learn, you have to figure out where the impediments to progress are, impediments to performance. They could be systemic, they could be cultural, they could be people, there could be a number of factors, but you have to do a proper conduct a proper assessment of what&#x27;s going on and why.</p>
+<p><a class="ep-ts" href="https://www.youtube.com/watch?v=ik1UJrV2M5Q&amp;t=2129s" target="_blank" rel="noopener">35:29</a> <strong>Daniel Veniez:</strong> That doesn&#x27;t take a week, it doesn&#x27;t take two weeks, it takes many months. But if you&#x27;re asking what you do on week one or two, I don&#x27;t know of many examples where you could make sizable change or meaningful change in week one or two, but as you&#x27;re figuring things out, you will find some low-hanging fruit everywhere. And you pick off the low-hanging fruit as quickly as possible in order to build some momentum and credibility within the organization that, yeah, this person is serious, they&#x27;re prepared to take action, and that will open the system up to more ideas, and it will show people that you&#x27;re serious about meaningful change. As far as the costs are concerned, are you talking financial costs?</p>
+<p><a class="ep-ts" href="https://www.youtube.com/watch?v=ik1UJrV2M5Q&amp;t=2184s" target="_blank" rel="noopener">36:24</a> <strong>Joseph Soares:</strong> Just generally, in terms of there are financial considerations, but there&#x27;s also everything from the leader&#x27;s time to how the leader has to deal with those conflicting environments in particular, how challenging they can be, and taxing on on you physically, emotionally, mentally, et cetera.</p>
+<p><a class="ep-ts" href="https://www.youtube.com/watch?v=ik1UJrV2M5Q&amp;t=2206s" target="_blank" rel="noopener">36:46</a> <strong>Daniel Veniez:</strong> If they&#x27;re taxing on you physically and emotionally, then you&#x27;re in the wrong business. This has to be fun. And if it&#x27;s not fun and if it&#x27;s not challenging, if you&#x27;re not having a great time doing what you&#x27;re doing, you should make way for someone who has a different attitude. And by the way, an organization won&#x27;t have any time for a person comes in and complains that the work is too hard or that this is too hard. No. There are financial considerations to everything, but again, you don&#x27;t make those judgments quickly. You do it analytically and with time, with knowing what you&#x27;re going through. And by the way, actions in isolation never work. You have to bring people along with you. And if you do that, those kinds of changes will not only gain traction, but they&#x27;ll become embedded and they&#x27;ll create some momentum. The last thing someone wants to hear of a leader, any leader, is how difficult their life is, how taxing it is, how tired they are.</p>
+<p><a class="ep-ts" href="https://www.youtube.com/watch?v=ik1UJrV2M5Q&amp;t=2269s" target="_blank" rel="noopener">37:49</a> <strong>Daniel Veniez:</strong> No.</p>
+<p><a class="ep-ts" href="https://www.youtube.com/watch?v=ik1UJrV2M5Q&amp;t=2270s" target="_blank" rel="noopener">37:50</a> <strong>Joseph Soares:</strong> But down that you&#x27;ve written that history makes courageous leadership look obvious once it has worked. Right? It never captures how lonely the decision is felt at the time. So if someone&#x27;s sitting in that lonely moment right now, and what do you want to say to them?</p>
+<p><a class="ep-ts" href="https://www.youtube.com/watch?v=ik1UJrV2M5Q&amp;t=2293s" target="_blank" rel="noopener">38:13</a> <strong>Daniel Veniez:</strong> It is lonely sometimes. Because uh ultimately the a lot of these decisions come down to one person, even if you&#x27;re reporting to a board. Although if you have a good board, for example, so if I&#x27;m assuming you&#x27;re asking, if you&#x27;re a CEO of a company that has a board, you consult your board and you spend a lot of time with your board, and these are collective decisions involving a board, that makes it easier because any per any person needs uh a shoulder to lean on. So it&#x27;s not the the practical reality is so if you&#x27;re in a public company or if you have uh a private company with multiple investors who are members of boards, you want to make sure they&#x27;re on side. You also want to take advantage of their wisdom, experience, and knowledge, and you want to double and triple check your actions against what they think. So that&#x27;s a confidence builder to a CEO who has to make some tough decisions. That&#x27;s for sure.</p>
+<p><a class="ep-ts" href="https://www.youtube.com/watch?v=ik1UJrV2M5Q&amp;t=2358s" target="_blank" rel="noopener">39:18</a> <strong>Daniel Veniez:</strong> Ultimately, yes, the decision comes down to the CEO and or chair, depending on how the organization works. But it gets it can get lonely sometimes, and you but if you&#x27;re caught second guessing yourself regularly, you know there&#x27;s something wrong. That you&#x27;re not on terra firma as far as the decisions that you&#x27;re making, which is a very bad place to be. It&#x27;s not a comfortable place. And if you&#x27;re doubting yourself on a consistent basis, chances are pretty good that over time the organization will doubt you. And if you&#x27;re doubting yourself on your decisions on a consistent basis, chances are pretty good that some of your decisions aren&#x27;t very good. It&#x27;s lonely, yes, but again, if someone believes and wallows in their loneliness, oh my God, I&#x27;m lonely, what am I going to do? They&#x27;re in the wrong job. When I was in those positions, I loved it. I reveled in it because with the sense of ownership and responsibility that you have over making those kinds of decisions and shaping an organization, it&#x27;s a gratifying feeling because you&#x27;re impacting, hopefully in a positive way, people, real people, their families, the communities that depend on those jobs, uh, but you&#x27;re making a meaningful difference.</p>
+<p><a class="ep-ts" href="https://www.youtube.com/watch?v=ik1UJrV2M5Q&amp;t=2448s" target="_blank" rel="noopener">40:48</a> <strong>Daniel Veniez:</strong> And that gives you a purpose in life which is well beyond a paycheck or well beyond whatever wealth you create for yourself. It&#x27;s never really about that. So I don&#x27;t know of any CEO worth their salt. I&#x27;ve known a few whose primary motivation is the paycheck. They get turned on by making an impact and by having a purpose that&#x27;s bigger than themselves. That&#x27;s what turns them on. So when you talk about loneliness and stress and the job being taxing, that&#x27;s nonsense. That&#x27;s fun doing those things. And it&#x27;s a great privilege to be able to do it and to be able to have such a great impact. The loneliness comes when you fail. That&#x27;s lonely. That&#x27;s not fun. So when you succeed, it&#x27;s cool. When you fail, well there&#x27;s the old adage, success has a thousand fathers, but failure is an orphan. Being an orphan is no fun. There&#x27;s no fun in that whatsoever, and it hurts.</p>
+<p><a class="ep-ts" href="https://www.youtube.com/watch?v=ik1UJrV2M5Q&amp;t=2519s" target="_blank" rel="noopener">41:59</a> <strong>Joseph Soares:</strong> Dan you talked about impact and you talked about families.</p>
+<p><a class="ep-ts" href="https://www.youtube.com/watch?v=ik1UJrV2M5Q&amp;t=2522s" target="_blank" rel="noopener">42:02</a> <strong>Daniel Veniez:</strong> Yeah.</p>
+<p><a class="ep-ts" href="https://www.youtube.com/watch?v=ik1UJrV2M5Q&amp;t=2525s" target="_blank" rel="noopener">42:05</a> <strong>Joseph Soares:</strong> W and I talked about the cost. Is there a cost to doing what you do as a leader? Is there a cost to your family? Can you do both and do them well?</p>
+<p><a class="ep-ts" href="https://www.youtube.com/watch?v=ik1UJrV2M5Q&amp;t=2537s" target="_blank" rel="noopener">42:17</a> <strong>Daniel Veniez:</strong> In degrees. In degrees. So I&#x27;ve known some great entrepreneurs. My former partner, George Petty, a great entrepreneur. And he had uh three kids. He&#x27;s passed away, George. He built two multi-billion dollar companies, and he was completely consumed with his babies. His babies weren&#x27;t his kids. And they grew up knowing that. I went out to dinner with a very famous entrepreneur in Vancouver a few years ago. And at the end of dinner, it was about 9 p.m. And I was on my way to my car, it was a Sunday, and I asked him if he&#x27;s older than me, quite a bit older than me. I asked him if I could take him to his car. And he says, No, I&#x27;m going back to the office. Going back to the office. Why are you doing that? So I want to check up on European markets. This guy also, again, famous guy, this guy also said to me, he said, Dan, you could call me anytime. So the best time to call me would be Sunday morning.</p>
+<p><a class="ep-ts" href="https://www.youtube.com/watch?v=ik1UJrV2M5Q&amp;t=2611s" target="_blank" rel="noopener">43:31</a> <strong>Daniel Veniez:</strong> So I don&#x27;t think I have your home number. He said, No, you don&#x27;t need it. I&#x27;ll be at the office. So why are you at the office on Sunday? He says, Because I have so much fun. But this guy has also three kids. The relationship with his kids, but his joy in life literally is the creation of the businesses he built, all of them from scratch. Same with George. George wasn&#x27;t obsessive to the degree that this guy was, or still is, actually. And I remember going home to my wife that night after dinner with this guy. And I said to her, I never want to be like that. And I wasn&#x27;t. So there&#x27;s a balance if you can. As you&#x27;re building a business, I think balance is a pipe dream. It doesn&#x27;t exist. Your focus has to be laser sharp and you&#x27;re on call all the time and you&#x27;re pushing. When you reach a certain level of financial success and business success, you think that people slow down. But someone who&#x27;s wired the way this guy is wired never thinks he succeeds.</p>
+<p><a class="ep-ts" href="https://www.youtube.com/watch?v=ik1UJrV2M5Q&amp;t=2698s" target="_blank" rel="noopener">44:58</a> <strong>Daniel Veniez:</strong> I asked him specifically. This guy&#x27;s a billionaire many times over. And I asked him over that dinner, at what point in your life did you think you made it? And he said to me, honest to God, he said to me, I never wake up in the morning thinking that I can&#x27;t lose this all today. I wouldn&#x27;t want to live like that personally. I would want to. But that&#x27;s how he&#x27;s wired. And that&#x27;s how a lot of guys like that are wired. Not wired that way. Knock on wood, I&#x27;ve got a great relationship with my kids. Very close to them. They&#x27;re close to me. Arguably I could have done a lot more professionally. And I didn&#x27;t for various reasons, but that&#x27;s one of them. When the kids were younger, I would spend an awful lot of time on airplanes, and I would do whatever I needed to do to get back to them. But from a business point of view, I let some things go because I chose my family instead. And I don&#x27;t regret that for a second.</p>
+<p><a class="ep-ts" href="https://www.youtube.com/watch?v=ik1UJrV2M5Q&amp;t=2771s" target="_blank" rel="noopener">46:11</a> <strong>Daniel Veniez:</strong> But it does have an impact. Building these things is not easy, and it requires a huge amount of effort, focus, consistent over a long period of time. And the maintaining relationships, family or other relationships that you care about that need nurturing and attention is less easy than it looks.</p>
+<p><a class="ep-ts" href="https://www.youtube.com/watch?v=ik1UJrV2M5Q&amp;t=2795s" target="_blank" rel="noopener">46:35</a> <strong>Joseph Soares:</strong> Dan Venier, thank you so much for being so generous and sharing your time with us today.</p>
+<p><a class="ep-ts" href="https://www.youtube.com/watch?v=ik1UJrV2M5Q&amp;t=2801s" target="_blank" rel="noopener">46:41</a> <strong>Daniel Veniez:</strong> You&#x27;re welcome, Joseph.</p>
+</details>
+  <div class="ep-block"><h2>Listen anywhere</h2><div class="ci-listen"><a class="ci-pill" href="https://podcasts.apple.com/podcast/id6820142712" target="_blank" rel="noopener" data-listen="Apple Podcasts">Apple Podcasts</a><a class="ci-pill" href="https://open.spotify.com/show/3nQ5hq9zdDpjeCohceHa0H" target="_blank" rel="noopener" data-listen="Spotify">Spotify</a><a class="ci-pill" href="https://iheart.com/podcast/347134443" target="_blank" rel="noopener" data-listen="iHeartRadio">iHeartRadio</a><a class="ci-pill" href="https://www.youtube.com/@corridorintelligence" target="_blank" rel="noopener" data-listen="YouTube">YouTube</a></div></div>
+  <p class="ep-note" style="margin-top:28px">Disclosure: Daniel Veniez appears in Joseph Soares&rsquo; book, <em>Leadership Under Fire</em> (chapter three), coming October 20. He is here on the strength of his experience, not the book.</p>
+  <p style="margin-top:20px"><a class="ci-pill" href="/podcast.html#apply">Be a Guest on Corridor Intelligence &rarr;</a></p>
+</main>
+<script>document.addEventListener('click',function(e){var a=e.target.closest('a[data-listen]');if(a&&window.gtag){gtag('event','listen_click',{platform:a.getAttribute('data-listen')})}});</script>
+<footer>
+  <div class="wrap">
+    <div class="disc">
+      <div class="brand" style="font-size:15px;margin-bottom:10px">Joseph <span style="color:var(--gold)">Soares</span> &amp; Co.</div>
+      <span class="copyr" style="display:block;margin-top:10px;font-style:normal;font-size:14px;letter-spacing:.02em;opacity:.8">&copy; 2026 Joseph Soares &amp; Co.</span>
+    </div>
+    <div class="soc">
+      
+      <a href="/podcast.html" style="margin-left:22px">Podcast</a>
+      <a href="https://www.linkedin.com/in/soaresjoseph/">LinkedIn</a>
+      <a href="https://x.com/JosephSoares">X</a>
+      <a href="https://www.youtube.com/@corridorintelligence?sub_confirmation=1">YouTube (English)</a>
+      <a href="https://www.youtube.com/@LeCorridorIntelligence?sub_confirmation=1">YouTube (French)</a>
+      <a href="https://www.instagram.com/soaresjoseph/">Instagram</a>
+    </div>
+    <div class="footer-legal">
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/terms.html">Terms of Service</a>
+      <a href="/cookies.html">Cookie Policy</a>
+    </div>
+    <div class="footer-attribution">Strategy, design &amp; technology by International Business Promotion (IBPROM) Corp.</div>
+  </div>
+</footer>
+
+<!-- Advisory Brief capture popup removed 2026-08-19: advisory is dormant. -->
+
+<!-- Advisory popup handler removed 2026-08-19 with its markup. The setLang() stub that
+     lived here is superseded by the hreflang-derived EN/FR toggle in /consent.js. -->
+
+<script>
+/* Click-to-play facades. No YouTube iframe loads until the visitor asks for one.
+   Applies the decision locked for the homepage band (RoD-2026-08-18-06) to the podcast page. */
+(function(){
+  var frames = document.querySelectorAll('iframe[data-src]');
+  Array.prototype.forEach.call(frames, function(f){
+    var box = f.parentNode;
+    if (window.getComputedStyle(box).position === 'static') { box.style.position = 'relative'; }
+    var vid = (f.getAttribute('data-src').match(/\/embed\/([a-zA-Z0-9_-]+)/) || [])[1];
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.setAttribute('aria-label', 'Play this episode');
+    b.style.cssText = 'position:absolute;top:0;left:0;width:100%;height:100%;border:0;padding:0;cursor:pointer;display:flex;align-items:center;justify-content:center;background:#072244' + (vid ? (';background-image:linear-gradient(rgba(7,34,68,.35),rgba(7,34,68,.55)),url(https://i.ytimg.com/vi/' + vid + '/hqdefault.jpg);background-size:cover;background-position:center') : '');
+    b.innerHTML = '<span style="display:block;width:72px;height:72px;border:2px solid #D4AF37;border-radius:50%;position:relative;background:rgba(7,34,68,.55)"><span style="position:absolute;top:50%;left:56%;transform:translate(-50%,-50%);border-style:solid;border-width:13px 0 13px 21px;border-color:transparent transparent transparent #D4AF37"></span></span>';
+    b.addEventListener('click', function(){
+      f.src = f.getAttribute('data-src') + '&autoplay=1';
+      if (b.parentNode) { b.parentNode.removeChild(b); }
+      if (window.gtag) { window.gtag('event', 'episode_play', { page: location.pathname }); }
+    });
+    box.appendChild(b);
+  });
+})();
+</script>
+</body>
+</html>
