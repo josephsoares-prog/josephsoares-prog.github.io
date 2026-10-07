@@ -119,7 +119,7 @@
 
   var FOOTER_HTML =
     '<div class="wrap">' +
-    '<div class="disc"><div class="brand" style="font-size:15px;margin-bottom:10px">Joseph <span style="color:var(--gold)">Soares</span> &amp; Co.</div>' +
+    '<div class="disc">' +
     '<span style="display:block;margin-top:10px;font-style:normal;font-size:14px;letter-spacing:.02em;opacity:.8">&copy; 2026 Joseph Soares &amp; Co.</span></div>' +
     '<div class="soc ci-soc">' +
     '<div class="ci-socrow">' +
@@ -139,7 +139,7 @@
 
   var FOOTER_HTML_FR =
     '<div class="wrap">' +
-    '<div class="disc"><div class="brand" style="font-size:15px;margin-bottom:10px">Joseph <span style="color:var(--gold)">Soares</span> &amp; Co.</div>' +
+    '<div class="disc">' +
     '<span style="display:block;margin-top:10px;font-style:normal;font-size:14px;letter-spacing:.02em;opacity:.8">&copy; 2026 Joseph Soares &amp; Co.</span></div>' +
     '<div class="soc ci-soc">' +
     '<div class="ci-socrow">' +
