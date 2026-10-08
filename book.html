@@ -78,6 +78,17 @@
     font-weight:600;font-size:12px;padding:8px 12px;border-radius:2px;
     box-shadow:0 8px 24px rgba(0,0,0,.5)}
 
+
+  /* BOOK VIDEO */
+  .bvid{padding:56px 0 8px}
+  .bvid .vwrap{max-width:960px;margin:0 auto;position:relative}
+  .bvid .vframe{position:relative;aspect-ratio:16/9;background:var(--panel2);border:1px solid var(--line);border-radius:4px;overflow:hidden;box-shadow:0 30px 70px rgba(0,0,0,.5)}
+  .bvid iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  .bvid .vsound{position:absolute;right:14px;top:14px;z-index:5;font-family:'Oswald',sans-serif;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;background:var(--gold);color:var(--ink);border:0;border-radius:3px;padding:10px 16px;cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,.5)}
+  .bvid .vsound[hidden]{display:none}
+  .bvid .vcap{text-align:center;margin-top:16px;font-size:16px;color:var(--muted);font-style:italic}
+  @media(max-width:860px){.bvid{padding:36px 0 0}}
+
   /* AUTHORITY BAR */
   .authbar{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--panel);padding:26px 0}
   .authbar .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:20px clamp(30px,5vw,64px);
@@ -262,6 +273,47 @@
     </div>
   </div>
 </div>
+
+<!-- BOOK VIDEO -->
+<section class="bvid" id="watch" aria-label="Leadership Under Fire — watch the book video">
+  <div class="wrap">
+    <div class="vwrap">
+      <div class="vframe" id="bvidFrame" data-vid="0AP2XH0yx1Q">
+        <button class="vsound" id="bvidSound" type="button" hidden>Tap for sound</button>
+        <noscript><a href="https://youtu.be/0AP2XH0yx1Q" style="display:block;padding:40px;text-align:center;color:var(--gold)">Watch the book video on YouTube</a></noscript>
+      </div>
+      <p class="vcap">Leadership Under Fire &mdash; publishing October&nbsp;20,&nbsp;2026.</p>
+    </div>
+  </div>
+</section>
+<script>
+(function(){
+  var f=document.getElementById('bvidFrame'),b=document.getElementById('bvidSound'),ifr=null;
+  if(!f)return;
+  function load(){
+    if(ifr)return;
+    ifr=document.createElement('iframe');
+    ifr.src='https://www.youtube.com/embed/'+f.getAttribute('data-vid')+'?autoplay=1&mute=1&playsinline=1&rel=0&modestbranding=1&enablejsapi=1&origin='+encodeURIComponent(location.origin);
+    ifr.title='Leadership Under Fire — book video';
+    ifr.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';
+    ifr.setAttribute('allowfullscreen','');
+    ifr.referrerPolicy='strict-origin-when-cross-origin';
+    f.appendChild(ifr);
+    if(b)b.hidden=false;
+  }
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){load();io.disconnect();}})},{threshold:.35});
+    io.observe(f);
+  }else{load();}
+  if(b)b.addEventListener('click',function(){
+    if(ifr&&ifr.contentWindow){
+      ifr.contentWindow.postMessage(JSON.stringify({event:'command',func:'unMute',args:[]}),'*');
+      ifr.contentWindow.postMessage(JSON.stringify({event:'command',func:'setVolume',args:[100]}),'*');
+    }
+    b.hidden=true;
+  });
+})();
+</script>
 
 <!-- WHO / PROBLEM / GUIDE -->
 <section class="blk">
