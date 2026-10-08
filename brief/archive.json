@@ -1,65 +1,65 @@
 [
-    {
-        "date": "2026-10-07",
-        "long_en": "Wednesday, 7 October 2026",
-        "long_fr": "mercredi 7 octobre 2026",
-        "count": 11,
-        "lead_en": "Carney calls Quebec's PQ premier-designate as bond markets price in political risk",
-        "lead_fr": "Carney appelle le premier ministre désigné du PQ, les marchés obligataires intègrent le risque politique",
-        "url": "/brief/2026-10-07.html"
-    },
-    {
-        "date": "2026-10-06",
-        "long_en": "Tuesday, 6 October 2026",
-        "long_fr": "mardi 6 octobre 2026",
-        "count": 23,
-        "lead_en": "Parti Québécois wins power on a pledge to hold a third sovereignty referendum",
-        "lead_fr": "Le Parti québécois reprend le pouvoir avec la promesse d’un troisième référendum sur la souveraineté",
-        "url": "/brief/2026-10-06.html"
-    },
-    {
-        "date": "2026-10-05",
-        "long_en": "Monday, 5 October 2026",
-        "long_fr": "lundi 5 octobre 2026",
-        "count": 13,
-        "lead_en": "Yemeni forces launch major offensive on the Houthis as Iran says there is 'no military solution' to its war with the US",
-        "lead_fr": "Les forces yéménites lancent une offensive majeure contre les Houthis tandis que l'Iran affirme qu'il n'existe «aucune solution militaire» à sa guerre avec les États-Unis",
-        "url": "/brief/2026-10-05.html"
-    },
-    {
-        "date": "2026-10-04",
-        "long_en": "Sunday, 4 October 2026",
-        "long_fr": "dimanche 4 octobre 2026",
-        "count": 16,
-        "lead_en": "Houthis claim missile and drone strike on Aramco facility in Riyadh as Yemen's war intensifies",
-        "lead_fr": "Les Houthis revendiquent une frappe de missiles et de drones sur une installation d'Aramco à Riyad, alors que la guerre au Yémen s'intensifie",
-        "url": "/brief/2026-10-04.html"
-    },
-    {
-        "date": "2026-10-03",
-        "long_en": "Saturday, 3 October 2026",
-        "long_fr": "samedi 3 octobre 2026",
-        "count": 16,
-        "lead_en": "US adds just 29,000 jobs in September, unemployment rises to 4.2%, a week after the Fed's first hike since 2023",
-        "lead_fr": "Les États-Unis n'ajoutent que 29 000 emplois en septembre, le chômage grimpe à 4,2 %, une semaine après la première hausse de taux de la Fed depuis 2023",
-        "url": "/brief/2026-10-03.html"
-    },
-    {
-        "date": "2026-10-01",
-        "long_en": "Thursday, 1 October 2026",
-        "long_fr": "jeudi 1 octobre 2026",
-        "count": 20,
-        "lead_en": "Fed raises rates to 3.75%–4%, first hike since 2023, as oil-driven inflation bites",
-        "lead_fr": "La Fed relève ses taux à 3,75–4 %, première hausse depuis 2023, face à une inflation alimentée par le pétrole",
-        "url": "/brief/2026-10-01.html"
-    },
-    {
-        "date": "2026-09-30",
-        "long_en": "Wednesday, 30 September 2026",
-        "long_fr": "mercredi 30 septembre 2026",
-        "count": 18,
-        "lead_en": "Trump says Iran war will end ‘very soon,’ rejects Tehran’s Hormuz reopening bid",
-        "lead_fr": "Trump affirme que la guerre en Iran se terminera « très bientôt » et rejette l’offre iranienne de réouverture d’Ormuz",
-        "url": "/brief/2026-09-30.html"
-    }
+  {
+    "date": "2026-10-08",
+    "long_en": "Thursday, 8 October 2026",
+    "long_fr": "jeudi 8 octobre 2026",
+    "count": 18,
+    "lead_en": "Pentagon Orders CENTCOM Ready for Iran Strikes, Timing Tied to Midterms",
+    "lead_fr": "Le Pentagone ordonne au CENTCOM de se préparer à frapper l'Iran, le calendrier lié aux élections de mi-mandat",
+    "url": "/brief/2026-10-08.html"
+  },
+  {
+    "date": "2026-10-07",
+    "long_en": "Wednesday, 7 October 2026",
+    "long_fr": "mercredi 7 octobre 2026",
+    "count": 11,
+    "lead_en": "Carney calls Quebec's PQ premier-designate as bond markets price in political risk",
+    "lead_fr": "Carney appelle le premier ministre désigné du PQ, les marchés obligataires intègrent le risque politique",
+    "url": "/brief/2026-10-07.html"
+  },
+  {
+    "date": "2026-10-06",
+    "long_en": "Tuesday, 6 October 2026",
+    "long_fr": "mardi 6 octobre 2026",
+    "count": 23,
+    "lead_en": "Parti Québécois wins power on a pledge to hold a third sovereignty referendum",
+    "lead_fr": "Le Parti québécois reprend le pouvoir avec la promesse d’un troisième référendum sur la souveraineté",
+    "url": "/brief/2026-10-06.html"
+  },
+  {
+    "date": "2026-10-05",
+    "long_en": "Monday, 5 October 2026",
+    "long_fr": "lundi 5 octobre 2026",
+    "count": 13,
+    "lead_en": "Yemeni forces launch major offensive on the Houthis as Iran says there is 'no military solution' to its war with the US",
+    "lead_fr": "Les forces yéménites lancent une offensive majeure contre les Houthis tandis que l'Iran affirme qu'il n'existe «aucune solution militaire» à sa guerre avec les États-Unis",
+    "url": "/brief/2026-10-05.html"
+  },
+  {
+    "date": "2026-10-04",
+    "long_en": "Sunday, 4 October 2026",
+    "long_fr": "dimanche 4 octobre 2026",
+    "count": 16,
+    "lead_en": "Houthis claim missile and drone strike on Aramco facility in Riyadh as Yemen's war intensifies",
+    "lead_fr": "Les Houthis revendiquent une frappe de missiles et de drones sur une installation d'Aramco à Riyad, alors que la guerre au Yémen s'intensifie",
+    "url": "/brief/2026-10-04.html"
+  },
+  {
+    "date": "2026-10-03",
+    "long_en": "Saturday, 3 October 2026",
+    "long_fr": "samedi 3 octobre 2026",
+    "count": 16,
+    "lead_en": "US adds just 29,000 jobs in September, unemployment rises to 4.2%, a week after the Fed's first hike since 2023",
+    "lead_fr": "Les États-Unis n'ajoutent que 29 000 emplois en septembre, le chômage grimpe à 4,2 %, une semaine après la première hausse de taux de la Fed depuis 2023",
+    "url": "/brief/2026-10-03.html"
+  },
+  {
+    "date": "2026-10-01",
+    "long_en": "Thursday, 1 October 2026",
+    "long_fr": "jeudi 1 octobre 2026",
+    "count": 20,
+    "lead_en": "Fed raises rates to 3.75%–4%, first hike since 2023, as oil-driven inflation bites",
+    "lead_fr": "La Fed relève ses taux à 3,75–4 %, première hausse depuis 2023, face à une inflation alimentée par le pétrole",
+    "url": "/brief/2026-10-01.html"
+  }
 ]
