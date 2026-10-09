@@ -93,21 +93,19 @@
   var IS_FR = LANG.indexOf("fr") === 0;
 
   var NAV_HTML =
-    '<div class="navdrop"><a href="/intelligence.html">Intelligence</a><div class="navdrop-menu">' +
-    '<a href="/brief/">Briefs</a><a href="/dispatch.html">Dispatches</a></div></div>' +
-    '<a href="/podcast.html">Podcast</a>' +
-    '<a href="/writing.html">Writing</a>' +
-    '<a href="/media.html">About</a>' +
+    '<a href="/index.html">Home</a>' +
     '<a href="/book.html">Book</a>' +
+    '<div class="navdrop"><a href="/intelligence.html">Corridor Intelligence</a><div class="navdrop-menu">' +
+    '<a href="/podcast.html">Podcast</a><a href="/brief/">Briefs</a><a href="/dispatch.html">Dispatches</a><a href="/writing.html">Writing</a></div></div>' +
+    '<a href="/media.html">About</a>' +
     '<a class="cta" href="/subscribe.html">Subscribe</a>';
 
   var NAV_HTML_FR =
-    '<div class="navdrop"><a href="/intelligence.html">Intelligence</a><div class="navdrop-menu">' +
-    '<a href="/brief/">Breffages</a><a href="/dispatch.html">D&eacute;p&ecirc;ches</a></div></div>' +
-    '<a href="/podcast.html">Balado</a>' +
-    '<a href="/writing.html">&Eacute;crits</a>' +
-    '<a href="/media-fr.html">&Agrave; propos</a>' +
+    '<a href="/accueil.html">Accueil</a>' +
     '<a href="/livre.html">Livre</a>' +
+    '<div class="navdrop"><a href="/intelligence-fr.html">Corridor Intelligence</a><div class="navdrop-menu">' +
+    '<a href="/podcast-fr.html">Balado</a><a href="https://brief-fr.josephsoares.com/">Breffages</a><a href="/dispatch-fr.html">D&eacute;p&ecirc;ches</a><a href="/writing-fr.html">&Eacute;crits</a></div></div>' +
+    '<a href="/media-fr.html">&Agrave; propos</a>' +
     '<a class="cta" href="/abonnement.html">S&rsquo;abonner</a>';
 
   var FOOTER_HTML =
