@@ -1,5 +1,14 @@
 [
   {
+    "date": "2026-10-09",
+    "long_en": "Friday, 9 October 2026",
+    "long_fr": "vendredi 9 octobre 2026",
+    "count": 16,
+    "lead_en": "Pentagon Draws Up Three-Day Iran Strike Plan; Trump Rules Out Action Before Midterms",
+    "lead_fr": "Le Pentagone élabore un plan de frappes de trois jours contre l’Iran; Trump exclut toute action avant les élections de mi-mandat",
+    "url": "/brief/2026-10-09.html"
+  },
+  {
     "date": "2026-10-08",
     "long_en": "Thursday, 8 October 2026",
     "long_fr": "jeudi 8 octobre 2026",
@@ -52,14 +61,5 @@
     "lead_en": "US adds just 29,000 jobs in September, unemployment rises to 4.2%, a week after the Fed's first hike since 2023",
     "lead_fr": "Les États-Unis n'ajoutent que 29 000 emplois en septembre, le chômage grimpe à 4,2 %, une semaine après la première hausse de taux de la Fed depuis 2023",
     "url": "/brief/2026-10-03.html"
-  },
-  {
-    "date": "2026-10-01",
-    "long_en": "Thursday, 1 October 2026",
-    "long_fr": "jeudi 1 octobre 2026",
-    "count": 20,
-    "lead_en": "Fed raises rates to 3.75%–4%, first hike since 2023, as oil-driven inflation bites",
-    "lead_fr": "La Fed relève ses taux à 3,75–4 %, première hausse depuis 2023, face à une inflation alimentée par le pétrole",
-    "url": "/brief/2026-10-01.html"
   }
 ]
