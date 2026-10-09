@@ -141,39 +141,6 @@
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/podcast-fr.html"/>
   </url>
   <url>
-    <loc>https://josephsoares.com/corridor-files.html</loc>
-    <lastmod>2026-08-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  
-    <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/corridor-files.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/corridor-files-fr.html"/>
-  </url>
-  <url>
-    <loc>https://josephsoares.com/corridor-files-fr.html</loc>
-    <lastmod>2026-09-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  
-    <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/corridor-files.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/corridor-files-fr.html"/>
-  </url>
-  <url>
-    <loc>https://josephsoares.com/brief/index-dashboard.html</loc>
-    <lastmod>2026-08-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.75</priority>
-  </url>
-  <url>
-    <loc>https://josephsoares.com/issues-focus.html</loc>
-    <lastmod>2026-09-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.75</priority>
-  
-    <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/issues-focus.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/issues-focus-fr.html"/>
-  </url>
-  <url>
     <loc>https://josephsoares.com/writing.html</loc>
     <lastmod>2026-08-19</lastmod>
     <changefreq>monthly</changefreq>
@@ -460,8 +427,6 @@
   <url><loc>https://josephsoares.com/entente-canada-alberta-avril-2026.html</loc><lastmod>2026-04-14</lastmod><priority>0.6</priority></url>
 
   <!-- Corridor Files editions -->
-  <url><loc>https://josephsoares.com/files/2026-07-23-cpc-001.html</loc><lastmod>2026-07-23</lastmod><priority>0.6</priority></url>
-  <url><loc>https://josephsoares.com/files/2026-07-23-lpc-002.html</loc><lastmod>2026-07-23</lastmod><priority>0.6</priority></url>
 
   <!-- Legal -->
   <url><loc>https://josephsoares.com/privacy.html</loc><lastmod>2026-04-14</lastmod><changefreq>yearly</changefreq><priority>0.3</priority>
@@ -551,78 +516,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/spark.html"/>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/spark-fr.html"/>
   </url>
-  <url><loc>https://josephsoares.com/issues-focus-africa.html</loc><lastmod>2026-09-13</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/issues-focus-africa.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/issues-focus-africa-fr.html"/>
-  </url>
-  <url><loc>https://josephsoares.com/issues-focus-drc.html</loc><lastmod>2026-09-13</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/issues-focus-drc.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/issues-focus-drc-fr.html"/>
-  </url>
-  <url><loc>https://josephsoares.com/issues-focus-drc-fr.html</loc><lastmod>2026-09-13</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/issues-focus-drc.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/issues-focus-drc-fr.html"/>
-  </url>
-  <url><loc>https://josephsoares.com/issues-focus-fr.html</loc><lastmod>2026-09-14</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/issues-focus.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/issues-focus-fr.html"/>
-  </url>
-  <url><loc>https://josephsoares.com/issues-focus-africa-fr.html</loc><lastmod>2026-09-13</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/issues-focus-africa.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/issues-focus-africa-fr.html"/>
-  </url>
-  <url><loc>https://josephsoares.com/issues-focus-china-india-pakistan.html</loc><lastmod>2026-09-11</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/issues-focus-china-india-pakistan.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/issues-focus-china-india-pakistan-fr.html"/>
-  </url>
-  <url><loc>https://josephsoares.com/issues-focus-china-india-pakistan-fr.html</loc><lastmod>2026-09-14</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/issues-focus-china-india-pakistan.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/issues-focus-china-india-pakistan-fr.html"/>
-  </url>
-  <url><loc>https://josephsoares.com/issues-focus-europe.html</loc><lastmod>2026-09-11</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/issues-focus-europe.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/issues-focus-europe-fr.html"/>
-  </url>
-  <url><loc>https://josephsoares.com/issues-focus-europe-fr.html</loc><lastmod>2026-09-14</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/issues-focus-europe.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/issues-focus-europe-fr.html"/>
-  </url>
-  <url><loc>https://josephsoares.com/issues-focus-iran.html</loc><lastmod>2026-09-11</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/issues-focus-iran.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/issues-focus-iran-fr.html"/>
-  </url>
-  <url><loc>https://josephsoares.com/issues-focus-iran-fr.html</loc><lastmod>2026-09-14</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/issues-focus-iran.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/issues-focus-iran-fr.html"/>
-  </url>
-  <url><loc>https://josephsoares.com/issues-focus-israel-lebanon-palestine-syria.html</loc><lastmod>2026-09-11</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/issues-focus-israel-lebanon-palestine-syria.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/issues-focus-israel-lebanon-palestine-syria-fr.html"/>
-  </url>
-  <url><loc>https://josephsoares.com/issues-focus-israel-lebanon-palestine-syria-fr.html</loc><lastmod>2026-09-14</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/issues-focus-israel-lebanon-palestine-syria.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/issues-focus-israel-lebanon-palestine-syria-fr.html"/>
-  </url>
-  <url><loc>https://josephsoares.com/issues-focus-russia-ukraine.html</loc><lastmod>2026-09-11</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/issues-focus-russia-ukraine.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/issues-focus-russia-ukraine-fr.html"/>
-  </url>
-  <url><loc>https://josephsoares.com/issues-focus-russia-ukraine-fr.html</loc><lastmod>2026-09-14</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/issues-focus-russia-ukraine.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/issues-focus-russia-ukraine-fr.html"/>
-  </url>
-  <url><loc>https://josephsoares.com/issues-focus-turkiye.html</loc><lastmod>2026-09-11</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/issues-focus-turkiye.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/issues-focus-turkiye-fr.html"/>
-  </url>
-  <url><loc>https://josephsoares.com/issues-focus-turkiye-fr.html</loc><lastmod>2026-09-14</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/issues-focus-turkiye.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/issues-focus-turkiye-fr.html"/>
-  </url>
-  <url><loc>https://josephsoares.com/issues-focus-usa.html</loc><lastmod>2026-09-11</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/issues-focus-usa.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/issues-focus-usa-fr.html"/>
-  </url>
   <url><loc>https://josephsoares.com/isfahan-440-kilograms-april-2026.html</loc><lastmod>2026-09-01</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/isfahan-440-kilograms-april-2026.html"/>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/isfahan-440-kilograms-april-2026-fr.html"/>
@@ -707,38 +600,6 @@
   <url><loc>https://josephsoares.com/brief/2026-09-09.html</loc><lastmod>2026-09-09</lastmod></url>
   <url><loc>https://josephsoares.com/brief/2026-09-10.html</loc><lastmod>2026-09-10</lastmod></url>
   <url><loc>https://josephsoares.com/brief/2026-09-11.html</loc><lastmod>2026-09-11</lastmod></url>
-  <url><loc>https://josephsoares.com/issues-focus-latin-america.html</loc><lastmod>2026-09-14</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/issues-focus-latin-america.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/issues-focus-latin-america-fr.html"/>
-  </url>
-  <url><loc>https://josephsoares.com/issues-focus-latin-america-fr.html</loc><lastmod>2026-09-14</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/issues-focus-latin-america.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/issues-focus-latin-america-fr.html"/>
-  </url>
-  <url><loc>https://josephsoares.com/issues-focus-venezuela.html</loc><lastmod>2026-09-14</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/issues-focus-venezuela.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/issues-focus-venezuela-fr.html"/>
-  </url>
-  <url><loc>https://josephsoares.com/issues-focus-venezuela-fr.html</loc><lastmod>2026-09-14</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/issues-focus-venezuela.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/issues-focus-venezuela-fr.html"/>
-  </url>
-  <url><loc>https://josephsoares.com/issues-focus-colombia.html</loc><lastmod>2026-09-14</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/issues-focus-colombia.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/issues-focus-colombia-fr.html"/>
-  </url>
-  <url><loc>https://josephsoares.com/issues-focus-colombia-fr.html</loc><lastmod>2026-09-14</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/issues-focus-colombia.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/issues-focus-colombia-fr.html"/>
-  </url>
-  <url><loc>https://josephsoares.com/issues-focus-brazil.html</loc><lastmod>2026-09-14</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/issues-focus-brazil.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/issues-focus-brazil-fr.html"/>
-  </url>
-  <url><loc>https://josephsoares.com/issues-focus-brazil-fr.html</loc><lastmod>2026-09-14</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/issues-focus-brazil.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/issues-focus-brazil-fr.html"/>
-  </url>
   <url>
     <loc>https://josephsoares.com/brief/2026-09-12.html</loc>
     <lastmod>2026-09-12</lastmod>
@@ -876,46 +737,6 @@
     <lastmod>2026-10-05</lastmod>
     <changefreq>never</changefreq>
     <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://josephsoares.com/issues-focus-angola.html</loc>
-    <lastmod>2026-09-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/issues-focus-angola.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/issues-focus-angola-fr.html"/>
-  </url>
-  <url>
-    <loc>https://josephsoares.com/issues-focus-angola-fr.html</loc>
-    <lastmod>2026-09-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/issues-focus-angola.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/issues-focus-angola-fr.html"/>
-  </url>
-  <url>
-    <loc>https://josephsoares.com/issues-focus-argentina.html</loc>
-    <lastmod>2026-09-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/issues-focus-argentina.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/issues-focus-argentina-fr.html"/>
-  </url>
-  <url>
-    <loc>https://josephsoares.com/issues-focus-argentina-fr.html</loc>
-    <lastmod>2026-09-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/issues-focus-argentina.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/issues-focus-argentina-fr.html"/>
-  </url>
-  <url>
-    <loc>https://josephsoares.com/issues-focus-usa-fr.html</loc>
-    <lastmod>2026-09-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://josephsoares.com/issues-focus-usa.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://josephsoares.com/issues-focus-usa-fr.html"/>
   </url>
   <url>
     <loc>https://josephsoares.com/gulf-oil-81-percent-buffers-october-2026.html</loc>
