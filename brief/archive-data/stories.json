@@ -25455,6 +25455,20 @@
   "date": "2026-10-09",
   "long_en": "Friday, 9 October 2026",
   "rank": 10,
+  "tag_en": "TECHNOLOGY",
+  "tag_fr": "TECHNOLOGIE",
+  "headline_en": "Apple Teases Oct. 13 \"Welcome Home\" Event, Its First Serious Push Into Smart-Home Hardware",
+  "headline_fr": "Apple annonce un événement « Welcome Home » le 13 octobre, sa première incursion sérieuse dans le matériel pour la maison intelligente",
+  "outlet": "9to5Mac",
+  "domain": "9to5mac.com",
+  "url": "https://9to5mac.com/2026/10/08/apple-announces-special-event-for-october-13-welcome-home/",
+  "bluf_en": "Apple SVP Greg Joswiak posted \"Welcome home. October 13.\" on October 8 as Apple sent press invitations for a media event in Tribeca, New York on October 13 at 9 a.m. ET, deliberately styled as an \"Apple Experience\" rather than a livestreamed keynote, with no event video expected. Bloomberg's Mark Gurman has reported the lineup is likely to include Apple's first smart-home hub with a built-in display, an updated HomePod mini and a new Apple TV 4K, all built around Siri -- Apple's first serious push into smart-home hardware and its first major product announcement since John Ternus succeeded Tim Cook as CEO on September 1. For hardware and retail-channel partners, the signal worth tracking is less the specific devices than the format change itself: skipping a globally livestreamed keynote for a smaller in-person event suggests Apple is treating this as a category test, not a flagship launch, and is sizing its marketing spend accordingly.",
+  "bluf_fr": "Le vice-président senior d'Apple, Greg Joswiak, a publié « Welcome home. October 13. » le 8 octobre, tandis qu'Apple envoyait des invitations de presse pour un événement médiatique à Tribeca, à New York, le 13 octobre à 9 h (heure de l'Est) -- délibérément présenté comme une « Apple Experience » plutôt qu'une allocution diffusée en direct, sans vidéo d'événement prévue. Mark Gurman, de Bloomberg, a rapporté que la gamme présentée inclurait probablement le premier concentrateur domestique intelligent d'Apple avec écran intégré, un HomePod mini mis à jour et un nouvel Apple TV 4K, tous construits autour de Siri -- la première incursion sérieuse d'Apple dans le matériel pour la maison intelligente et sa première annonce de produit majeure depuis que John Ternus a succédé à Tim Cook au poste de PDG le 1er septembre. Pour les partenaires du matériel et des circuits de distribution, le signal à surveiller tient moins aux appareils eux-mêmes qu'au changement de format: renoncer à une allocution diffusée mondialement en direct au profit d'un événement en personne plus restreint suggère qu'Apple considère cela comme un test de catégorie plutôt qu'un lancement phare, et calibre ses dépenses marketing en conséquence."
+ },
+ {
+  "date": "2026-10-09",
+  "long_en": "Friday, 9 October 2026",
+  "rank": 11,
   "tag_en": "GEOPOLITICS",
   "tag_fr": "GÉOPOLITIQUE",
   "headline_en": "EU-China Trade Talks Open in Beijing Amid Escalating Pressure",
@@ -25468,7 +25482,7 @@
  {
   "date": "2026-10-09",
   "long_en": "Friday, 9 October 2026",
-  "rank": 11,
+  "rank": 12,
   "tag_en": "ENERGY",
   "tag_fr": "ÉNERGIE",
   "headline_en": "China Resumes October Fuel Exports After Brief Halt, Trade Sources Say",
@@ -25482,7 +25496,7 @@
  {
   "date": "2026-10-09",
   "long_en": "Friday, 9 October 2026",
-  "rank": 12,
+  "rank": 13,
   "tag_en": "MARKETS",
   "tag_fr": "MARCHÉS",
   "headline_en": "Takaichi Says Growth Push Will Support the Yen, but May Review Spending if Yields Jump",
@@ -25496,7 +25510,7 @@
  {
   "date": "2026-10-09",
   "long_en": "Friday, 9 October 2026",
-  "rank": 13,
+  "rank": 14,
   "tag_en": "M&A",
   "tag_fr": "F&A",
   "headline_en": "Viatris to Acquire Pacira BioSciences for $1.65 Billion in Non-Opioid Pain Push",
@@ -25510,7 +25524,7 @@
  {
   "date": "2026-10-09",
   "long_en": "Friday, 9 October 2026",
-  "rank": 14,
+  "rank": 15,
   "tag_en": "CANADA",
   "tag_fr": "CANADA",
   "headline_en": "Carney Unveils $2-Billion, One-Million-Home Heat-Pump Retrofit Program in Sherbrooke",
@@ -25524,7 +25538,7 @@
  {
   "date": "2026-10-09",
   "long_en": "Friday, 9 October 2026",
-  "rank": 15,
+  "rank": 16,
   "tag_en": "CANADA",
   "tag_fr": "CANADA",
   "headline_en": "Carney to Make First-Ever Bilateral Visit by a Canadian PM to Türkiye, Meet Erdoğan Oct. 21-23",
@@ -25538,7 +25552,7 @@
  {
   "date": "2026-10-09",
   "long_en": "Friday, 9 October 2026",
-  "rank": 16,
+  "rank": 17,
   "tag_en": "GEOPOLITICS",
   "tag_fr": "GÉOPOLITIQUE",
   "headline_en": "Gaza War's Third Anniversary Brings Israeli Political Fallout, Eisenkot Calls for Netanyahu Probe",
