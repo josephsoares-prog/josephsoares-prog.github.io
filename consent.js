@@ -94,26 +94,19 @@
 
   var NAV_HTML =
     '<div class="navdrop"><a href="/intelligence.html">Intelligence</a><div class="navdrop-menu">' +
-    '<a href="/brief/">Briefs</a><a href="/dispatch.html">Dispatches</a>' +
-    '<a href="/corridor-files.html">Files</a><a href="/brief/index-dashboard.html">Index</a>' +
-    '<a href="/issues-focus.html">Issues</a></div></div>' +
+    '<a href="/brief/">Briefs</a><a href="/dispatch.html">Dispatches</a></div></div>' +
     '<a href="/podcast.html">Podcast</a>' +
     '<a href="/writing.html">Writing</a>' +
-    '<div class="navdrop"><a href="/media.html">About</a><div class="navdrop-menu">' +
-    '<a href="/media.html">Media</a></div></div>' +
+    '<a href="/media.html">About</a>' +
     '<a href="/book.html">Book</a>' +
     '<a class="cta" href="/subscribe.html">Subscribe</a>';
 
   var NAV_HTML_FR =
     '<div class="navdrop"><a href="/intelligence.html">Intelligence</a><div class="navdrop-menu">' +
-    '<a href="/brief/">Breffages</a><a href="/dispatch.html">D&eacute;p&ecirc;ches</a>' +
-    '<a href="/corridor-files.html">Dossiers</a><a href="/brief/index-dashboard.html">Index</a>' +
-    '<a href="/issues-focus-fr.html">Enjeux</a></div></div>' +
+    '<a href="/brief/">Breffages</a><a href="/dispatch.html">D&eacute;p&ecirc;ches</a></div></div>' +
     '<a href="/podcast.html">Balado</a>' +
     '<a href="/writing.html">&Eacute;crits</a>' +
-    '<div class="navdrop"><a href="/media-fr.html">&Agrave; propos</a><div class="navdrop-menu">' +
-    '<a href="/conferences.html">Conf&eacute;rences</a>' +
-    '<a href="/media-fr.html">M&eacute;dias</a></div></div>' +
+    '<a href="/media-fr.html">&Agrave; propos</a>' +
     '<a href="/livre.html">Livre</a>' +
     '<a class="cta" href="/abonnement.html">S&rsquo;abonner</a>';
 
