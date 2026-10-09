@@ -1,4 +1,4 @@
-/* fb-lead.js: Meta Pixel for the Proof of Standing ad test (added 2026-10-07).
+/* fb-lead.js: Meta Pixel for the Authority Read ad test (added 2026-10-07).
    Loads the pixel ONLY after the visitor accepts cookies (consent.js, key ci_consent_v1).
    Fires a Lead event when the form fires its existing generate_lead event, so the
    form code itself is untouched. No names, emails or phone numbers are sent. */
