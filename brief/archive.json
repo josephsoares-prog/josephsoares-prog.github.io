@@ -1,5 +1,14 @@
 [
   {
+    "date": "2026-10-11",
+    "long_en": "Sunday, 11 October 2026",
+    "long_fr": "dimanche 11 octobre 2026",
+    "count": 19,
+    "lead_en": "Trump Secures Russian Diesel Pledge From Putin, Treasury Grants Temporary Sanctions Waiver",
+    "lead_fr": "Trump obtient de Poutine une promesse de diesel russe, le Trésor accorde une dérogation temporaire aux sanctions",
+    "url": "/brief/2026-10-11.html"
+  },
+  {
     "date": "2026-10-09",
     "long_en": "Friday, 9 October 2026",
     "long_fr": "vendredi 9 octobre 2026",
@@ -52,14 +61,5 @@
     "lead_en": "Houthis claim missile and drone strike on Aramco facility in Riyadh as Yemen's war intensifies",
     "lead_fr": "Les Houthis revendiquent une frappe de missiles et de drones sur une installation d'Aramco à Riyad, alors que la guerre au Yémen s'intensifie",
     "url": "/brief/2026-10-04.html"
-  },
-  {
-    "date": "2026-10-03",
-    "long_en": "Saturday, 3 October 2026",
-    "long_fr": "samedi 3 octobre 2026",
-    "count": 16,
-    "lead_en": "US adds just 29,000 jobs in September, unemployment rises to 4.2%, a week after the Fed's first hike since 2023",
-    "lead_fr": "Les États-Unis n'ajoutent que 29 000 emplois en septembre, le chômage grimpe à 4,2 %, une semaine après la première hausse de taux de la Fed depuis 2023",
-    "url": "/brief/2026-10-03.html"
   }
 ]
