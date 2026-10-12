@@ -96,6 +96,17 @@ def esc(s):
     return (s.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;'))
 
 
+MIME = {'jpg': 'image/jpeg', 'jpeg': 'image/jpeg', 'png': 'image/png',
+        'webp': 'image/webp', 'gif': 'image/gif', 'avif': 'image/avif',
+        'svg': 'image/svg+xml'}
+
+
+def mime(url):
+    """Enclosure type from the image's own extension, query string ignored."""
+    ext = re.sub(r'[?#].*$', '', url or '').rsplit('.', 1)
+    return MIME.get(ext[-1].lower(), 'image/jpeg') if len(ext) == 2 else 'image/jpeg'
+
+
 def build_feed(items, chan, limit):
     out = ['<?xml version="1.0" encoding="UTF-8"?>',
            '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">',
@@ -118,7 +129,8 @@ def build_feed(items, chan, limit):
                 f'      <pubDate>{rfc822(it["date"])}</pubDate>',
                 f'      <description>{esc(it["desc"])}</description>']
         if it.get('ogimage'):
-            out.append(f'      <enclosure url="{esc(it["ogimage"])}" type="image/jpeg" length="0"/>')
+            out.append(f'      <enclosure url="{esc(it["ogimage"])}" '
+                       f'type="{mime(it["ogimage"])}" length="0"/>')
         out.append('    </item>')
     out += ['  </channel>', '</rss>', '']
     return '\n'.join(out)
