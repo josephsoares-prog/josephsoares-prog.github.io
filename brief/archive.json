@@ -1,5 +1,14 @@
 [
   {
+    "date": "2026-10-13",
+    "long_en": "Tuesday, 13 October 2026",
+    "long_fr": "mardi 13 octobre 2026",
+    "count": 11,
+    "lead_en": "UK Blames Iran's Revolutionary Guard for Plot Against RAF Fairford as Nearly 30 Nations Condemn Tehran",
+    "lead_fr": "Le Royaume-Uni accuse les Gardiens de la révolution iraniens du complot visant la base de la RAF Fairford, près de 30 pays condamnent Téhéran",
+    "url": "/brief/2026-10-13.html"
+  },
+  {
     "date": "2026-10-11",
     "long_en": "Sunday, 11 October 2026",
     "long_fr": "dimanche 11 octobre 2026",
@@ -52,14 +61,5 @@
     "lead_en": "Yemeni forces launch major offensive on the Houthis as Iran says there is 'no military solution' to its war with the US",
     "lead_fr": "Les forces yéménites lancent une offensive majeure contre les Houthis tandis que l'Iran affirme qu'il n'existe «aucune solution militaire» à sa guerre avec les États-Unis",
     "url": "/brief/2026-10-05.html"
-  },
-  {
-    "date": "2026-10-04",
-    "long_en": "Sunday, 4 October 2026",
-    "long_fr": "dimanche 4 octobre 2026",
-    "count": 16,
-    "lead_en": "Houthis claim missile and drone strike on Aramco facility in Riyadh as Yemen's war intensifies",
-    "lead_fr": "Les Houthis revendiquent une frappe de missiles et de drones sur une installation d'Aramco à Riyad, alors que la guerre au Yémen s'intensifie",
-    "url": "/brief/2026-10-04.html"
   }
 ]
