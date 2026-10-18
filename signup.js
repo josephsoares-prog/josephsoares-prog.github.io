@@ -1,4 +1,5 @@
-/* signup.js: working email signup for every "Subscribe" button on josephsoares.com.
+/* signup.js: INTERIM email signup for the French pages only (English Subscribe buttons now go
+   straight to the GoHighLevel Chapter One page). Remove once a French GoHighLevel page exists.
    Added 2026-10-18. Replaces the Ghost Portal popup, which no longer starts (Portal fails to
    initialize against brief.josephsoares.com). Posts to the same Make webhook as the SPARK email
    capture ("JS Site - Lead Capture"), with form_type "newsletter_signup" and consent "newsletter".
