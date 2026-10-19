@@ -1,5 +1,14 @@
 [
     {
+        "date": "2026-10-19",
+        "long_en": "Monday, 19 October 2026",
+        "long_fr": "lundi 19 octobre 2026",
+        "count": 22,
+        "lead_en": "Macron Faces Political Crisis as French Protests Draw at Least 2,400 Arrests",
+        "lead_fr": "Macron confronté à une crise politique alors que les manifestations françaises font au moins 2 400 arrestations",
+        "url": "/brief/2026-10-19.html"
+    },
+    {
         "date": "2026-10-18",
         "long_en": "Sunday, 18 October 2026",
         "long_fr": "dimanche 18 octobre 2026",
@@ -52,14 +61,5 @@
         "lead_en": "UK Blames Iran's Revolutionary Guard for Plot Against RAF Fairford as Nearly 30 Nations Condemn Tehran",
         "lead_fr": "Le Royaume-Uni accuse les Gardiens de la révolution iraniens du complot visant la base de la RAF Fairford, près de 30 pays condamnent Téhéran",
         "url": "/brief/2026-10-13.html"
-    },
-    {
-        "date": "2026-10-11",
-        "long_en": "Sunday, 11 October 2026",
-        "long_fr": "dimanche 11 octobre 2026",
-        "count": 19,
-        "lead_en": "Trump Secures Russian Diesel Pledge From Putin, Treasury Grants Temporary Sanctions Waiver",
-        "lead_fr": "Trump obtient de Poutine une promesse de diesel russe, le Trésor accorde une dérogation temporaire aux sanctions",
-        "url": "/brief/2026-10-11.html"
     }
 ]
