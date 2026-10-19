@@ -50,7 +50,6 @@ A byline is not coverage. Please preserve the distinction when citing.
 - /writing.html — Published writing
 - /media.html — Press resources and media kit
 - /speaking.html — Speaking engagements
-- /guest.html — Podcast guest invitation
 - /appel.html — Prendre rendez-vous (français)
 
 ## Audience

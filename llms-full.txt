@@ -68,7 +68,6 @@ Le Devoir, La Presse, Le Soleil, Açoriano Oriental.
 - /writing.html          Published writing (Forbes, Newsweek, and more)
 - /media.html            Media appearances and press
 - /speaking.html         Speaking engagements
-- /guest.html            Podcast guest invitation
 - /call.html             Book a private call
 
 ## sameAs (authoritative profiles)
