@@ -193,6 +193,27 @@
     .finalcta .h2{font-size:32px}
     .authbar .wrap{gap:10px 22px;font-size:13px;letter-spacing:.1em}
   }
+
+  /* ---- visual polish 2026-10-19 ---- */
+  .hero{background:radial-gradient(ellipse 70% 80% at 85% 40%,rgba(212,175,55,.10),transparent 70%),linear-gradient(180deg,rgba(255,255,255,.025),transparent 60%)}
+  .hero h1{font-size:clamp(34px,5.4vw,72px);line-height:1.03;max-width:16ch}
+  .hero h1 .i{display:block;margin-top:.12em;font-size:.82em;color:var(--gold)}
+  .hero .heroportrait{overflow:visible;position:relative;flex:5 1 min(300px,100%);max-width:430px;margin:0 auto}
+  .hero .heroportrait::before{content:"";position:absolute;inset:18px -18px -18px 18px;border:1px solid rgba(212,175,55,.55);z-index:0}
+  .hero .heroportrait img,.hero .heroportrait video{position:relative;z-index:1;box-shadow:0 30px 70px rgba(0,0,0,.45)}
+  .hero .ctanote{font-size:15px;max-width:52ch}
+  .eyebrow{display:flex;align-items:center;gap:14px}
+  .eyebrow::before{content:"";width:28px;height:1px;background:var(--gold);flex:0 0 auto}
+  .finalcta .eyebrow{justify-content:center}
+  .card,.path{transition:transform .25s ease-out,border-color .25s ease-out,background-color .25s ease-out}
+  .card{position:relative}
+  .card::before{content:"";position:absolute;top:-1px;left:0;width:44px;height:2px;background:var(--gold)}
+  .path{box-shadow:0 18px 40px rgba(0,0,0,.25)}
+  .quote p{font-size:clamp(22px,5.6vw,34px)}
+  .who .row{transition:border-color .25s ease-out}
+  @media(hover:hover){.path:hover{transform:translateY(-4px);border-color:rgba(212,175,55,.6)}.card:hover{transform:translateY(-3px)}.who .row:hover{border-color:var(--gold)}}
+  @media(max-width:880px){.hero h1{font-size:clamp(32px,9.4vw,46px)}.hero .heroportrait{max-width:320px}.hero .heroportrait::before{inset:12px -10px -12px 10px}.eyebrow::before{width:20px}}
+  @media(prefers-reduced-motion:reduce){.card,.path,.who .row{transition:none}.path:hover,.card:hover{transform:none}}
 </style>
 
 <script type="application/ld+json">
@@ -465,8 +486,8 @@
     <div class="eyebrow klabel">The loneliest decisions are the ones that matter most</div>
     <h2 class="h2">Some decisions shouldn&rsquo;t wait.</h2>
     <div class="ctar" style="justify-content:center">
-      <a href="https://brief.josephsoares.com/chapter-one?utm_source=josephsoares.com&amp;utm_medium=site&amp;utm_campaign=subscribe" data-portal="signup" class="btn btn-gold">Subscribe to Corridor Intelligence</a>
-      <a href="/chair.html?ref=home" class="quiet">Request a conversation</a>
+      <a href="/chair.html?ref=home" class="btn btn-gold">Apply for a conversation</a>
+      <a href="https://brief.josephsoares.com/chapter-one?utm_source=josephsoares.com&amp;utm_medium=site&amp;utm_campaign=subscribe" data-portal="signup" class="quiet">Not ready? Read the Corridor Intelligence brief</a>
     </div>
   </div>
 </div>
