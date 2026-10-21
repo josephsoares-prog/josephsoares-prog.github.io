@@ -1,5 +1,14 @@
 [
   {
+    "date": "2026-10-21",
+    "long_en": "Wednesday, 21 October 2026",
+    "long_fr": "mercredi 21 octobre 2026",
+    "count": 17,
+    "lead_en": "Zelenskyy Holds Oslo Talks With Witkoff, Europeans as Russian Strikes Kill Three, Cut Power to 32,000 Homes",
+    "lead_fr": "Zelensky tient des pourparlers à Oslo avec Witkoff et des dirigeants européens, alors que des frappes russes tuent trois personnes et privent 32 000 foyers d’électricité",
+    "url": "/brief/2026-10-21.html"
+  },
+  {
     "date": "2026-10-20",
     "long_en": "Tuesday, 20 October 2026",
     "long_fr": "mardi 20 octobre 2026",
@@ -52,14 +61,5 @@
     "lead_en": "Oil Slides as Washington Weighs Easing Sanctions on Russia's 'Shadow Fleet'",
     "lead_fr": "Le pétrole recule alors que Washington envisage d'alléger les sanctions sur la « flotte fantôme » russe",
     "url": "/brief/2026-10-15.html"
-  },
-  {
-    "date": "2026-10-14",
-    "long_en": "Wednesday, 14 October 2026",
-    "long_fr": "mercredi 14 octobre 2026",
-    "count": 18,
-    "lead_en": "Houthi Missile Strike Kills 12 at Riyadh Airport in Deadliest Attack on Saudi Arabia in a Decade",
-    "lead_fr": "Une frappe de missile houthie tue 12 personnes à l'aéroport de Riyad, l'attaque la plus meurtrière contre l'Arabie saoudite depuis dix ans",
-    "url": "/brief/2026-10-14.html"
   }
 ]
