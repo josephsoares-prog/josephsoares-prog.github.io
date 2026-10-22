@@ -1,5 +1,14 @@
 [
   {
+    "date": "2026-10-22",
+    "long_en": "Thursday, 22 October 2026",
+    "long_fr": "jeudi 22 octobre 2026",
+    "count": 14,
+    "lead_en": "US Pulls Diplomats From Saudi Arabia as Houthi Strikes Push Brent Past $110",
+    "lead_fr": "Les États-Unis retirent des diplomates d’Arabie saoudite alors que les frappes houthies poussent le Brent au-delà de 110 dollars",
+    "url": "/brief/2026-10-22.html"
+  },
+  {
     "date": "2026-10-21",
     "long_en": "Wednesday, 21 October 2026",
     "long_fr": "mercredi 21 octobre 2026",
@@ -52,14 +61,5 @@
     "lead_en": "Iran Shifts Tactics in the Strait of Hormuz to Keep Oil Prices High Through the US Midterms",
     "lead_fr": "L'Iran change de tactique dans le détroit d'Ormuz pour maintenir le prix du pétrole élevé jusqu'aux élections de mi-mandat américaines",
     "url": "/brief/2026-10-16.html"
-  },
-  {
-    "date": "2026-10-15",
-    "long_en": "Thursday, 15 October 2026",
-    "long_fr": "jeudi 15 octobre 2026",
-    "count": 26,
-    "lead_en": "Oil Slides as Washington Weighs Easing Sanctions on Russia's 'Shadow Fleet'",
-    "lead_fr": "Le pétrole recule alors que Washington envisage d'alléger les sanctions sur la « flotte fantôme » russe",
-    "url": "/brief/2026-10-15.html"
   }
 ]
