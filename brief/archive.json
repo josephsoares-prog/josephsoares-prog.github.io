@@ -1,5 +1,14 @@
 [
   {
+    "date": "2026-10-23",
+    "long_en": "Thursday, 23 October 2026",
+    "long_fr": "jeudi 23 octobre 2026",
+    "count": 20,
+    "lead_en": "Wall Street’s AI Trade Cracks as Nasdaq Sinks 2.6%, Chipmakers Lead Rout",
+    "lead_fr": "Le « AI trade » de Wall Street se fissure : le Nasdaq chute de 2,6 %, les fabricants de puces en tête du repli",
+    "url": "/brief/2026-10-23.html"
+  },
+  {
     "date": "2026-10-22",
     "long_en": "Thursday, 22 October 2026",
     "long_fr": "jeudi 22 octobre 2026",
@@ -52,14 +61,5 @@
     "lead_en": "Fourth Tanker Struck in the Strait of Hormuz as Iran's Shipping Campaign Grinds On",
     "lead_fr": "Un quatrième pétrolier touché dans le détroit d'Ormuz alors que la campagne iranienne contre le transport maritime se poursuit",
     "url": "/brief/2026-10-17.html"
-  },
-  {
-    "date": "2026-10-16",
-    "long_en": "Friday, 16 October 2026",
-    "long_fr": "vendredi 16 octobre 2026",
-    "count": 22,
-    "lead_en": "Iran Shifts Tactics in the Strait of Hormuz to Keep Oil Prices High Through the US Midterms",
-    "lead_fr": "L'Iran change de tactique dans le détroit d'Ormuz pour maintenir le prix du pétrole élevé jusqu'aux élections de mi-mandat américaines",
-    "url": "/brief/2026-10-16.html"
   }
 ]
