@@ -302,7 +302,7 @@
      Any page gets the buttons by carrying an empty <div data-book-buy></div>.
      ------------------------------------------------------------------ */
   var BOOK_BUY = {
-    ebook: "",        // Kindle URL - fill as soon as the pre-order is set up
+    ebook: "https://www.amazon.com/dp/B0HNDZXSHK",        // Kindle URL - fill as soon as the pre-order is set up
     paperback: "",    // Paperback URL - exists only from 20 October
     launchISO: "2026-10-20",
     isbnPaper: "978-0-9868758-2-3",
@@ -333,16 +333,16 @@
     buyCSS();
 
     var t = IS_FR ? {
-      paper: "Acheter le livre papier", ebook: "Acheter le livre num&eacute;rique",
-      pre: "Pr&eacute;commander le livre num&eacute;rique",
-      soon: "Livre papier et livre num&eacute;rique, en vente le 20 octobre 2026.",
-      paperSoon: "Le livre papier para&icirc;t le 20 octobre 2026.",
+      paper: "Acheter le livre papier", ebook: "Maintenant disponible sur Amazon",
+      pre: "Maintenant disponible sur Amazon",
+      soon: "Maintenant disponible sur Amazon.",
+      paperSoon: "&Eacute;dition anglaise (Kindle).",
       isbn: "ISBN &mdash; papier " + BOOK_BUY.isbnPaper + " &middot; num&eacute;rique " + BOOK_BUY.isbnEbook
     } : {
-      paper: "Buy the paperback", ebook: "Buy the ebook",
-      pre: "Pre-order the ebook",
-      soon: "Paperback and ebook, on sale 20 October 2026.",
-      paperSoon: "The paperback is published on 20 October 2026.",
+      paper: "Buy the paperback", ebook: "Now available on Amazon",
+      pre: "Now available on Amazon",
+      soon: "Now available on Amazon.",
+      paperSoon: "",
       isbn: "ISBN &mdash; paperback " + BOOK_BUY.isbnPaper + " &middot; ebook " + BOOK_BUY.isbnEbook
     };
 
