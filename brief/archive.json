@@ -1,5 +1,14 @@
 [
   {
+    "date": "2026-10-25",
+    "long_en": "Sunday, 25 October 2026",
+    "long_fr": "dimanche 25 octobre 2026",
+    "count": 10,
+    "lead_en": "Brent Tops $116 as US and Israel Reportedly Draw Up Plans to Strike Iran After the Midterms",
+    "lead_fr": "Le Brent dépasse 116 $, alors que Washington et Israël prépareraient des frappes contre l’Iran après les élections de mi-mandat",
+    "url": "/brief/2026-10-25.html"
+  },
+  {
     "date": "2026-10-24",
     "long_en": "Saturday, 24 October 2026",
     "long_fr": "samedi 24 octobre 2026",
@@ -52,14 +61,5 @@
     "lead_en": "Macron Faces Political Crisis as French Protests Draw at Least 2,400 Arrests",
     "lead_fr": "Macron confronté à une crise politique alors que les manifestations françaises font au moins 2 400 arrestations",
     "url": "/brief/2026-10-19.html"
-  },
-  {
-    "date": "2026-10-18",
-    "long_en": "Sunday, 18 October 2026",
-    "long_fr": "dimanche 18 octobre 2026",
-    "count": 19,
-    "lead_en": "Iran's Hormuz Campaign Crashes Oil Flows as Brent Nears $110",
-    "lead_fr": "La campagne iranienne dans le détroit d'Ormuz fait chuter les flux pétroliers, le Brent approche 110 $",
-    "url": "/brief/2026-10-18.html"
   }
 ]
