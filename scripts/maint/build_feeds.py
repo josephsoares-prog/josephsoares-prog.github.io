@@ -15,7 +15,7 @@ change without writing.
 Validated 2026-10-05 (josephsoares) and 2026-10-12 (campuscorridor) by
 reproducing the then-live item sets field-for-field before any change was applied.
 """
-import sys, os, datetime
+import sys, os, re, datetime
 import xml.etree.ElementTree as ET
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import rails
@@ -62,6 +62,11 @@ SITES = {
     }),
 }
 GENERATOR = 'Static feed, regenerated on publish'
+
+
+def strip_build_date(xml):
+    """The feed minus its lastBuildDate, for change detection."""
+    return re.sub(r'<lastBuildDate>.*?</lastBuildDate>', '', xml, flags=re.S)
 
 
 def candidates(pages, cfg, lang, today):
@@ -116,18 +121,26 @@ def main():
                     description=ch_cfg['description'], language=ch_cfg['language'],
                     copyright=cfg['copyright'], editor=cfg['editor'],
                     lastBuildDate=now, generator=GENERATOR)
+        prev = ''
         if os.path.exists(path):      # keep the channel wording already published
             ch = ET.parse(path).getroot().find('channel')
             for tag, k in (('title', 'title'), ('description', 'description')):
                 if ch.findtext(tag):
                     chan[k] = ch.findtext(tag)
             old = [i.findtext('link') for i in ET.parse(path).getroot().iter('item')]
+            prev = open(path, encoding='utf-8').read()
         else:
             old = []
         xml = rails.build_feed(items, chan, cfg['cap'])
         ET.fromstring(xml)            # a malformed feed is worse than a stale one
         new = [i['url'] for i in items]
-        if new == old:
+        # Compare the whole feed, not just the item set, with lastBuildDate
+        # normalised out. lastBuildDate moves on every run, so including it
+        # would rewrite the file daily for nothing; excluding everything else
+        # meant a corrected title, description, pubDate or og:image never
+        # reached the feed at all -- caught 2026-10-26, when a French page's
+        # og:image was fixed and the feed kept serving the English logo.
+        if prev and strip_build_date(prev) == strip_build_date(xml):
             print(f'{site}/{ch_cfg["file"]}: no change ({len(new)} items)')
             continue
         changed.append(ch_cfg['file'])
@@ -137,6 +150,8 @@ def main():
             if x not in old: print('   + ' + x)
         for x in old:
             if x not in new: print('   - ' + x)
+        if new == old:
+            print('   (same items; a title, description, pubDate or image changed)')
         if not check:
             open(path, 'w', encoding='utf-8').write(xml)
     print('changed:', changed or 'nothing')
