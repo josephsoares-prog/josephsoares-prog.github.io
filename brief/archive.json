@@ -1,5 +1,14 @@
 [
   {
+    "date": "2026-10-27",
+    "long_en": "Tuesday, 27 October 2026",
+    "long_fr": "mardi 27 octobre 2026",
+    "count": 18,
+    "lead_en": "Saudi, Pakistani and Turkish Officials Meet Iran’s President in Tehran as Washington Weighs New Strikes",
+    "lead_fr": "Des responsables saoudiens, pakistanais et turcs rencontrent le président iranien à Téhéran, alors que Washington envisage de nouvelles frappes",
+    "url": "/brief/2026-10-27.html"
+  },
+  {
     "date": "2026-10-25",
     "long_en": "Sunday, 25 October 2026",
     "long_fr": "dimanche 25 octobre 2026",
@@ -52,14 +61,5 @@
     "lead_en": "Albertans Reject Path to Separation, Backing Carney by Roughly 76% to 23%",
     "lead_fr": "Les Albertains rejettent la voie vers la séparation, appuyant Carney à environ 76 % contre 23 %",
     "url": "/brief/2026-10-20.html"
-  },
-  {
-    "date": "2026-10-19",
-    "long_en": "Monday, 19 October 2026",
-    "long_fr": "lundi 19 octobre 2026",
-    "count": 22,
-    "lead_en": "Macron Faces Political Crisis as French Protests Draw at Least 2,400 Arrests",
-    "lead_fr": "Macron confronté à une crise politique alors que les manifestations françaises font au moins 2 400 arrestations",
-    "url": "/brief/2026-10-19.html"
   }
 ]
