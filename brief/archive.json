@@ -1,5 +1,14 @@
 [
   {
+    "date": "2026-10-29",
+    "long_en": "Thursday, 29 October 2026",
+    "long_fr": "jeudi 29 octobre 2026",
+    "count": 16,
+    "lead_en": "Tehran Presses 7-Day Hormuz Ceasefire Plan as Trump Rejects It and Vows Strikes Could Resume After Midterms",
+    "lead_fr": "Téhéran insiste sur un plan de cessez-le-feu de 7 jours dans le détroit d'Ormuz, que Trump rejette en évoquant de possibles frappes après les élections de mi-mandat",
+    "url": "/brief/2026-10-29.html"
+  },
+  {
     "date": "2026-10-27",
     "long_en": "Tuesday, 27 October 2026",
     "long_fr": "mardi 27 octobre 2026",
@@ -52,14 +61,5 @@
     "lead_en": "Zelenskyy Holds Oslo Talks With Witkoff, Europeans as Russian Strikes Kill Three, Cut Power to 32,000 Homes",
     "lead_fr": "Zelensky tient des pourparlers à Oslo avec Witkoff et des dirigeants européens, alors que des frappes russes tuent trois personnes et privent 32 000 foyers d’électricité",
     "url": "/brief/2026-10-21.html"
-  },
-  {
-    "date": "2026-10-20",
-    "long_en": "Tuesday, 20 October 2026",
-    "long_fr": "mardi 20 octobre 2026",
-    "count": 9,
-    "lead_en": "Albertans Reject Path to Separation, Backing Carney by Roughly 76% to 23%",
-    "lead_fr": "Les Albertains rejettent la voie vers la séparation, appuyant Carney à environ 76 % contre 23 %",
-    "url": "/brief/2026-10-20.html"
   }
 ]
