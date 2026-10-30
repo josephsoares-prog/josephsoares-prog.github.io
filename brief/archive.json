@@ -1,5 +1,14 @@
 [
   {
+    "date": "2026-10-30",
+    "long_en": "Friday, 30 October 2026",
+    "long_fr": "vendredi 30 octobre 2026",
+    "count": 12,
+    "lead_en": "Iran Says Four Tankers Have Now Hit Mines in Hormuz as Saudi Arabia Intercepts Houthi Missiles Aimed at Riyadh",
+    "lead_fr": "L’Iran affirme que quatre pétroliers ont désormais heurté des mines dans le détroit d’Ormuz, alors que l’Arabie saoudite intercepte des missiles houthis visant Riyad",
+    "url": "/brief/2026-10-30.html"
+  },
+  {
     "date": "2026-10-29",
     "long_en": "Thursday, 29 October 2026",
     "long_fr": "jeudi 29 octobre 2026",
@@ -23,7 +32,7 @@
     "long_fr": "dimanche 25 octobre 2026",
     "count": 10,
     "lead_en": "Brent Tops $116 as US and Israel Reportedly Draw Up Plans to Strike Iran After the Midterms",
-    "lead_fr": "Le Brent dépasse 116 $, alors que Washington et Israël prépareraient des frappes contre l’Iran après les élections de mi-mandat",
+    "lead_fr": "Le Brent dépasse 116 $, alors que Washington et Israël prépareraient des frappes contre l’Iran après les élections de mi-mandat",
     "url": "/brief/2026-10-25.html"
   },
   {
@@ -52,14 +61,5 @@
     "lead_en": "US Pulls Diplomats From Saudi Arabia as Houthi Strikes Push Brent Past $110",
     "lead_fr": "Les États-Unis retirent des diplomates d’Arabie saoudite alors que les frappes houthies poussent le Brent au-delà de 110 dollars",
     "url": "/brief/2026-10-22.html"
-  },
-  {
-    "date": "2026-10-21",
-    "long_en": "Wednesday, 21 October 2026",
-    "long_fr": "mercredi 21 octobre 2026",
-    "count": 17,
-    "lead_en": "Zelenskyy Holds Oslo Talks With Witkoff, Europeans as Russian Strikes Kill Three, Cut Power to 32,000 Homes",
-    "lead_fr": "Zelensky tient des pourparlers à Oslo avec Witkoff et des dirigeants européens, alors que des frappes russes tuent trois personnes et privent 32 000 foyers d’électricité",
-    "url": "/brief/2026-10-21.html"
   }
 ]
