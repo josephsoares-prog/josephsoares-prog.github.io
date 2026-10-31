@@ -295,15 +295,15 @@
      Amazon's rules, which decide what is possible before launch day:
        - Kindle ebook CAN be put on pre-order. Doing so makes the Amazon
          detail page live immediately with a "Pre-order" button, so the
-         ebook URL can be filled in before 20 October.
+         ebook URL could be filled in before release.
        - Paperback CANNOT be pre-ordered. KDP keeps the detail page hidden
-         until the release date, so no paperback URL exists until 20 October.
+         until the release date, so the paperback URL exists only after release.
 
      Any page gets the buttons by carrying an empty <div data-book-buy></div>.
      ------------------------------------------------------------------ */
   var BOOK_BUY = {
-    ebook: "",        // Kindle URL - fill as soon as the pre-order is set up
-    paperback: "",    // Paperback URL - exists only from 20 October
+    ebook: "https://www.amazon.com/dp/B0HNDZXSHK",  // Kindle edition on Amazon (live)
+    paperback: "",    // Paperback URL - fill in when the paperback page is confirmed on Amazon
     launchISO: "2026-10-20",
     isbnPaper: "978-0-9868758-2-3",
     isbnEbook: "978-0-9868758-4-7"
@@ -335,14 +335,14 @@
     var t = IS_FR ? {
       paper: "Acheter le livre papier", ebook: "Acheter le livre num&eacute;rique",
       pre: "Pr&eacute;commander le livre num&eacute;rique",
-      soon: "Livre papier et livre num&eacute;rique, en vente le 20 octobre 2026.",
-      paperSoon: "Le livre papier para&icirc;t le 20 octobre 2026.",
+      soon: "Disponible sur Amazon.",
+      paperSoon: "Disponible maintenant sur Amazon.",
       isbn: "ISBN &mdash; papier " + BOOK_BUY.isbnPaper + " &middot; num&eacute;rique " + BOOK_BUY.isbnEbook
     } : {
       paper: "Buy the paperback", ebook: "Buy the ebook",
       pre: "Pre-order the ebook",
-      soon: "Paperback and ebook, on sale 20 October 2026.",
-      paperSoon: "The paperback is published on 20 October 2026.",
+      soon: "Available on Amazon.",
+      paperSoon: "Now available on Amazon.",
       isbn: "ISBN &mdash; paperback " + BOOK_BUY.isbnPaper + " &middot; ebook " + BOOK_BUY.isbnEbook
     };
 
