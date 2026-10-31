@@ -238,7 +238,16 @@
          is the only control and has to show at every width, not just on a phone. */
       ".ci-langmob.ci-langalways{display:inline-flex}" +
       "@media(max-width:880px){.ci-langmob{display:inline-flex}" +
-      "body.ci-langmob-on .navlinks .lang{display:none}}";
+      "body.ci-langmob-on .navlinks .lang{display:none}}" +
+      /* Prominent language button - 2026-10-31 (Joseph's request). A solid gold box with navy
+         text so FR/EN reads as a control, not a nav word. Gold, not red: it is the site's
+         button colour, and red reads as an error on navy. !important beats the per-page
+         inline nav styles. */
+      ".navlinks a.lang,a.lang.ci-langmob{background:#D4AF37!important;color:#0A3161!important;" +
+      "border:1px solid #D4AF37!important;border-radius:3px!important;padding:8px 14px!important;" +
+      "font-weight:600!important;letter-spacing:.14em!important;min-width:44px;min-height:36px;" +
+      "box-sizing:border-box;text-align:center;justify-content:center}" +
+      ".navlinks a.lang:hover,a.lang.ci-langmob:hover{background:#E6C860!important;border-color:#E6C860!important}";
     document.head.appendChild(st);
   }
 
