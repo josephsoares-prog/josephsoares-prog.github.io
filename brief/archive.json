@@ -1,5 +1,14 @@
 [
   {
+    "date": "2026-10-31",
+    "long_en": "Saturday, 31 October 2026",
+    "long_fr": "samedi 31 octobre 2026",
+    "count": 10,
+    "lead_en": "Israel’s Election Ends in Deadlock — Netanyahu’s Bloc Takes 53 Seats, Eisenkot’s 48, as Arab Parties Win a Record 19",
+    "lead_fr": "L’élection israélienne se solde par une impasse — le bloc de Netanyahou obtient 53 sièges, celui d’Eisenkot 48, les partis arabes en remportant un nombre record de 19",
+    "url": "/brief/2026-10-31.html"
+  },
+  {
     "date": "2026-10-30",
     "long_en": "Friday, 30 October 2026",
     "long_fr": "vendredi 30 octobre 2026",
@@ -52,14 +61,5 @@
     "lead_en": "Wall Street’s AI Trade Cracks as Nasdaq Sinks 2.6%, Chipmakers Lead Rout",
     "lead_fr": "Le « AI trade » de Wall Street se fissure : le Nasdaq chute de 2,6 %, les fabricants de puces en tête du repli",
     "url": "/brief/2026-10-23.html"
-  },
-  {
-    "date": "2026-10-22",
-    "long_en": "Thursday, 22 October 2026",
-    "long_fr": "jeudi 22 octobre 2026",
-    "count": 14,
-    "lead_en": "US Pulls Diplomats From Saudi Arabia as Houthi Strikes Push Brent Past $110",
-    "lead_fr": "Les États-Unis retirent des diplomates d’Arabie saoudite alors que les frappes houthies poussent le Brent au-delà de 110 dollars",
-    "url": "/brief/2026-10-22.html"
   }
 ]
