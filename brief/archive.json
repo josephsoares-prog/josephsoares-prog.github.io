@@ -1,5 +1,14 @@
 [
   {
+    "date": "2026-11-01",
+    "long_en": "Sunday, 1 November 2026",
+    "long_fr": "dimanche 1 novembre 2026",
+    "count": 12,
+    "lead_en": "US Midterms, Two Days Out: Democrats Need a Net Three House Seats, Four in the Senate, to Flip Congress",
+    "lead_fr": "Élections de mi-mandat américaines, dans deux jours : les démocrates doivent gagner trois sièges nets à la Chambre et quatre au Sénat pour renverser le Congrès",
+    "url": "/brief/2026-11-01.html"
+  },
+  {
     "date": "2026-10-31",
     "long_en": "Saturday, 31 October 2026",
     "long_fr": "samedi 31 octobre 2026",
@@ -52,14 +61,5 @@
     "lead_en": "Brent Hits Five-Month High Near $115 as Houthi-Saudi Attacks and UAE Oil Spill Compound Supply Fears",
     "lead_fr": "Le Brent atteint un sommet de cinq mois près de 115 $, les attaques houthies en Arabie saoudite et une fuite pétrolière aux Émirats aggravant les craintes d’approvisionnement",
     "url": "/brief/2026-10-24.html"
-  },
-  {
-    "date": "2026-10-23",
-    "long_en": "Thursday, 23 October 2026",
-    "long_fr": "jeudi 23 octobre 2026",
-    "count": 20,
-    "lead_en": "Wall Street’s AI Trade Cracks as Nasdaq Sinks 2.6%, Chipmakers Lead Rout",
-    "lead_fr": "Le « AI trade » de Wall Street se fissure : le Nasdaq chute de 2,6 %, les fabricants de puces en tête du repli",
-    "url": "/brief/2026-10-23.html"
   }
 ]
