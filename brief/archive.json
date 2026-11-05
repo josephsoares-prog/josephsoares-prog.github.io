@@ -1,5 +1,14 @@
 [
   {
+    "date": "2026-11-05",
+    "long_en": "Thursday, 5 November 2026",
+    "long_fr": "jeudi 5 novembre 2026",
+    "count": 15,
+    "lead_en": "“What We Just Witnessed Was an AI Earthquake”: Voters Revolt Against Data-Center Politics at the Polls",
+    "lead_fr": "« Ce que nous venons de vivre est un séisme pour l’IA » : les électeurs se révoltent contre la politique des centres de données dans les urnes",
+    "url": "/brief/2026-11-05.html"
+  },
+  {
     "date": "2026-11-04",
     "long_en": "Wednesday, 4 November 2026",
     "long_fr": "mercredi 4 novembre 2026",
@@ -52,14 +61,5 @@
     "lead_en": "Tehran Presses 7-Day Hormuz Ceasefire Plan as Trump Rejects It and Vows Strikes Could Resume After Midterms",
     "lead_fr": "Téhéran insiste sur un plan de cessez-le-feu de 7 jours dans le détroit d'Ormuz, que Trump rejette en évoquant de possibles frappes après les élections de mi-mandat",
     "url": "/brief/2026-10-29.html"
-  },
-  {
-    "date": "2026-10-27",
-    "long_en": "Tuesday, 27 October 2026",
-    "long_fr": "mardi 27 octobre 2026",
-    "count": 18,
-    "lead_en": "Saudi, Pakistani and Turkish Officials Meet Iran’s President in Tehran as Washington Weighs New Strikes",
-    "lead_fr": "Des responsables saoudiens, pakistanais et turcs rencontrent le président iranien à Téhéran, alors que Washington envisage de nouvelles frappes",
-    "url": "/brief/2026-10-27.html"
   }
 ]
