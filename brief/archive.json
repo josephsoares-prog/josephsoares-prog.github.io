@@ -1,5 +1,14 @@
 [
   {
+    "date": "2026-11-07",
+    "long_en": "Saturday, 7 November 2026",
+    "long_fr": "samedi 7 novembre 2026",
+    "count": 10,
+    "lead_en": "Iran Claims Seven Tankers Hit in Hormuz as Trump Weighs New Strikes and US Offers $20 Million for Nuclear Intelligence",
+    "lead_fr": "L’Iran affirme que sept pétroliers ont été touchés dans le détroit d’Ormuz, alors que Trump envisage de nouvelles frappes et que Washington offre 20 millions de dollars pour des renseignements sur le nucléaire iranien",
+    "url": "/brief/2026-11-07.html"
+  },
+  {
     "date": "2026-11-06",
     "long_en": "Friday, 6 November 2026",
     "long_fr": "vendredi 6 novembre 2026",
@@ -14,7 +23,7 @@
     "long_fr": "jeudi 5 novembre 2026",
     "count": 15,
     "lead_en": "“What We Just Witnessed Was an AI Earthquake”: Voters Revolt Against Data-Center Politics at the Polls",
-    "lead_fr": "« Ce que nous venons de vivre est un séisme pour l’IA » : les électeurs se révoltent contre la politique des centres de données dans les urnes",
+    "lead_fr": "« Ce que nous venons de vivre est un séisme pour l’IA » : les électeurs se révoltent contre la politique des centres de données dans les urnes",
     "url": "/brief/2026-11-05.html"
   },
   {
@@ -52,14 +61,5 @@
     "lead_en": "Israel’s Election Ends in Deadlock — Netanyahu’s Bloc Takes 53 Seats, Eisenkot’s 48, as Arab Parties Win a Record 19",
     "lead_fr": "L’élection israélienne se solde par une impasse — le bloc de Netanyahou obtient 53 sièges, celui d’Eisenkot 48, les partis arabes en remportant un nombre record de 19",
     "url": "/brief/2026-10-31.html"
-  },
-  {
-    "date": "2026-10-30",
-    "long_en": "Friday, 30 October 2026",
-    "long_fr": "vendredi 30 octobre 2026",
-    "count": 12,
-    "lead_en": "Iran Says Four Tankers Have Now Hit Mines in Hormuz as Saudi Arabia Intercepts Houthi Missiles Aimed at Riyadh",
-    "lead_fr": "L’Iran affirme que quatre pétroliers ont désormais heurté des mines dans le détroit d’Ormuz, alors que l’Arabie saoudite intercepte des missiles houthis visant Riyad",
-    "url": "/brief/2026-10-30.html"
   }
 ]
