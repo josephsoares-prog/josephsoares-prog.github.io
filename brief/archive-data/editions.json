@@ -1,5 +1,23 @@
 [
  {
+  "date": "2026-11-10",
+  "long_en": "Tuesday, 10 November 2026",
+  "long_fr": "mardi 10 novembre 2026",
+  "count": 12,
+  "lead_en": "US, Russia and Ukraine Open Third Round of Abu Dhabi Talks on Security Guarantees as Putin and Zelensky Stay Away",
+  "lead_fr": "Les États-Unis, la Russie et l’Ukraine ouvrent un troisième cycle de pourparlers à Abou Dabi sur les garanties de sécurité, Poutine et Zelensky restant à l’écart",
+  "url": "/brief/2026-11-10.html"
+ },
+ {
+  "date": "2026-11-07",
+  "long_en": "Saturday, 7 November 2026",
+  "long_fr": "samedi 7 novembre 2026",
+  "count": 10,
+  "lead_en": "Iran Claims Seven Tankers Hit in Hormuz as Trump Weighs New Strikes and US Offers $20 Million for Nuclear Intelligence",
+  "lead_fr": "L’Iran affirme que sept pétroliers ont été touchés dans le détroit d’Ormuz, alors que Trump envisage de nouvelles frappes et que Washington offre 20 millions de dollars pour des renseignements sur le nucléaire iranien",
+  "url": "/brief/2026-11-07.html"
+ },
+ {
   "date": "2026-11-06",
   "long_en": "Friday, 6 November 2026",
   "long_fr": "vendredi 6 novembre 2026",
@@ -14,7 +32,7 @@
   "long_fr": "jeudi 5 novembre 2026",
   "count": 15,
   "lead_en": "“What We Just Witnessed Was an AI Earthquake”: Voters Revolt Against Data-Center Politics at the Polls",
-  "lead_fr": "« Ce que nous venons de vivre est un séisme pour l’IA » : les électeurs se révoltent contre la politique des centres de données dans les urnes",
+  "lead_fr": "« Ce que nous venons de vivre est un séisme pour l’IA » : les électeurs se révoltent contre la politique des centres de données dans les urnes",
   "url": "/brief/2026-11-05.html"
  },
  {
@@ -32,7 +50,7 @@
   "long_fr": "lundi 2 novembre 2026",
   "count": 10,
   "lead_en": "US Midterms, One Day Out: Early Voting Tops 49.6 Million as DOJ Sues to Contest a Possible Alaska Senate Loss",
-  "lead_fr": "Mi-mandat américain, à un jour du scrutin : le vote par anticipation dépasse 49,6 millions alors que le DOJ poursuit pour contester une possible défaite sénatoriale en Alaska",
+  "lead_fr": "Mi-mandat américain, à un jour du scrutin : le vote par anticipation dépasse 49,6 millions alors que le DOJ poursuit pour contester une possible défaite sénatoriale en Alaska",
   "url": "/brief/2026-11-02.html"
  },
  {
@@ -86,7 +104,7 @@
   "long_fr": "dimanche 25 octobre 2026",
   "count": 10,
   "lead_en": "Brent Tops $116 as US and Israel Reportedly Draw Up Plans to Strike Iran After the Midterms",
-  "lead_fr": "Le Brent dépasse 116 $, alors que Washington et Israël prépareraient des frappes contre l’Iran après les élections de mi-mandat",
+  "lead_fr": "Le Brent dépasse 116 $, alors que Washington et Israël prépareraient des frappes contre l’Iran après les élections de mi-mandat",
   "url": "/brief/2026-10-25.html"
  },
  {
@@ -122,7 +140,7 @@
   "long_fr": "mercredi 21 octobre 2026",
   "count": 17,
   "lead_en": "Zelenskyy Holds Oslo Talks With Witkoff, Europeans as Russian Strikes Kill Three, Cut Power to 32,000 Homes",
-  "lead_fr": "Zelensky tient des pourparlers à Oslo avec Witkoff et des dirigeants européens, alors que des frappes russes tuent trois personnes et privent 32 000 foyers d’électricité",
+  "lead_fr": "Zelensky tient des pourparlers à Oslo avec Witkoff et des dirigeants européens, alors que des frappes russes tuent trois personnes et privent 32 000 foyers d’électricité",
   "url": "/brief/2026-10-21.html"
  },
  {
@@ -131,7 +149,7 @@
   "long_fr": "mardi 20 octobre 2026",
   "count": 9,
   "lead_en": "Albertans Reject Path to Separation, Backing Carney by Roughly 76% to 23%",
-  "lead_fr": "Les Albertains rejettent la voie vers la séparation, appuyant Carney à environ 76 % contre 23 %",
+  "lead_fr": "Les Albertains rejettent la voie vers la séparation, appuyant Carney à environ 76 % contre 23 %",
   "url": "/brief/2026-10-20.html"
  },
  {
@@ -140,7 +158,7 @@
   "long_fr": "lundi 19 octobre 2026",
   "count": 22,
   "lead_en": "Macron Faces Political Crisis as French Protests Draw at Least 2,400 Arrests",
-  "lead_fr": "Macron confronté à une crise politique alors que les manifestations françaises font au moins 2 400 arrestations",
+  "lead_fr": "Macron confronté à une crise politique alors que les manifestations françaises font au moins 2 400 arrestations",
   "url": "/brief/2026-10-19.html"
  },
  {
@@ -275,7 +293,7 @@
   "long_fr": "jeudi 1 octobre 2026",
   "count": 20,
   "lead_en": "Fed raises rates to 3.75%–4%, first hike since 2023, as oil-driven inflation bites",
-  "lead_fr": "La Fed relève ses taux à 3,75–4 %, première hausse depuis 2023, face à une inflation alimentée par le pétrole",
+  "lead_fr": "La Fed relève ses taux à 3,75–4 %, première hausse depuis 2023, face à une inflation alimentée par le pétrole",
   "url": "/brief/2026-10-01.html"
  },
  {
@@ -284,7 +302,7 @@
   "long_fr": "mercredi 30 septembre 2026",
   "count": 18,
   "lead_en": "Trump says Iran war will end ‘very soon,’ rejects Tehran’s Hormuz reopening bid",
-  "lead_fr": "Trump affirme que la guerre en Iran se terminera « très bientôt » et rejette l’offre iranienne de réouverture d’Ormuz",
+  "lead_fr": "Trump affirme que la guerre en Iran se terminera « très bientôt » et rejette l’offre iranienne de réouverture d’Ormuz",
   "url": "/brief/2026-09-30.html"
  },
  {
@@ -302,7 +320,7 @@
   "long_fr": "lundi 28 septembre 2026",
   "count": 16,
   "lead_en": "Trump rejects Iran’s seven-day Hormuz plan, says he still expects talks ‘this week’",
-  "lead_fr": "Trump rejette le plan iranien de sept jours pour Ormuz, mais dit s’attendre à des pourparlers « cette semaine »",
+  "lead_fr": "Trump rejette le plan iranien de sept jours pour Ormuz, mais dit s’attendre à des pourparlers « cette semaine »",
   "url": "/brief/2026-09-28.html"
  },
  {
@@ -329,7 +347,7 @@
   "long_fr": "vendredi 25 septembre 2026",
   "count": 20,
   "lead_en": "IEA: more than 10 million barrels a day of Gulf oil output remains shut in as diesel stays 94% above pre-war levels",
-  "lead_fr": "AIE : plus de 10 millions de barils par jour de production pétrolière du Golfe restent hors service, le diesel demeurant 94 % au-dessus des niveaux d’avant-guerre",
+  "lead_fr": "AIE : plus de 10 millions de barils par jour de production pétrolière du Golfe restent hors service, le diesel demeurant 94 % au-dessus des niveaux d’avant-guerre",
   "url": "/brief/2026-09-25.html"
  },
  {
@@ -347,7 +365,7 @@
   "long_fr": "mercredi 23 septembre 2026",
   "count": 17,
   "lead_en": "Bessent calls US–China AI and trade talks ‘very successful’ two days before the Trump-Xi summit",
-  "lead_fr": "Bessent qualifie de « très fructueuses » les discussions commerciales et sur l’IA entre les États-Unis et la Chine, deux jours avant le sommet Trump-Xi",
+  "lead_fr": "Bessent qualifie de « très fructueuses » les discussions commerciales et sur l’IA entre les États-Unis et la Chine, deux jours avant le sommet Trump-Xi",
   "url": "/brief/2026-09-23.html"
  },
  {
@@ -419,7 +437,7 @@
   "long_fr": "mardi 15 septembre 2026",
   "count": 23,
   "lead_en": "Saudi Arabia shuts its 4-5 million bpd East-West pipeline after a drone attack from Iraq, sending Brent past $104",
-  "lead_fr": "L'Arabie saoudite ferme son oléoduc Est-Ouest de 4 à 5 millions de barils/jour après une attaque de drones depuis l'Irak, propulsant le Brent au-delà de 104 $",
+  "lead_fr": "L'Arabie saoudite ferme son oléoduc Est-Ouest de 4 à 5 millions de barils/jour après une attaque de drones depuis l'Irak, propulsant le Brent au-delà de 104 $",
   "url": "/brief/2026-09-15.html"
  },
  {
@@ -428,7 +446,7 @@
   "long_fr": "lundi 14 septembre 2026",
   "count": 14,
   "lead_en": "Saudi Arabia shuts its 1,200km East-West pipeline after a drone attack from Iraq, pushing Brent past $104",
-  "lead_fr": "L'Arabie saoudite ferme son oléoduc Est-Ouest de 1 200 km après une attaque de drones depuis l'Irak, portant le Brent au-delà de 104 $",
+  "lead_fr": "L'Arabie saoudite ferme son oléoduc Est-Ouest de 1 200 km après une attaque de drones depuis l'Irak, portant le Brent au-delà de 104 $",
   "url": "/brief/2026-09-14.html"
  },
  {
@@ -446,7 +464,7 @@
   "long_fr": "samedi 12 septembre 2026",
   "count": 17,
   "lead_en": "US diesel hits record $6.05 a gallon as Brent crosses $105 on Hormuz disruption",
-  "lead_fr": "Le diesel américain atteint un record de 6,05 $ le gallon alors que le Brent dépasse 105 $ à cause de la perturbation d’Ormuz",
+  "lead_fr": "Le diesel américain atteint un record de 6,05 $ le gallon alors que le Brent dépasse 105 $ à cause de la perturbation d’Ormuz",
   "url": "/brief/2026-09-12.html"
  },
  {
@@ -698,7 +716,7 @@
   "long_fr": "mardi 11 août 2026",
   "count": 28,
   "lead_en": "Trump claims ‘100%’ US control of the Strait of Hormuz and demands Iran pay reparations, opening a new front in the standoff",
-  "lead_fr": "Trump revendique un contrôle américain « à 100 % » du détroit d’Ormuz et exige des réparations de l’Iran, ouvrant un nouveau front dans l’impasse",
+  "lead_fr": "Trump revendique un contrôle américain « à 100 % » du détroit d’Ormuz et exige des réparations de l’Iran, ouvrant un nouveau front dans l’impasse",
   "url": "/brief/2026-08-11.html"
  },
  {
