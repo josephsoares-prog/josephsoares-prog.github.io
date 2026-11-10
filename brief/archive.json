@@ -1,5 +1,14 @@
 [
   {
+    "date": "2026-11-10",
+    "long_en": "Tuesday, 10 November 2026",
+    "long_fr": "mardi 10 novembre 2026",
+    "count": 12,
+    "lead_en": "US, Russia and Ukraine Open Third Round of Abu Dhabi Talks on Security Guarantees as Putin and Zelensky Stay Away",
+    "lead_fr": "Les États-Unis, la Russie et l’Ukraine ouvrent un troisième cycle de pourparlers à Abou Dabi sur les garanties de sécurité, Poutine et Zelensky restant à l’écart",
+    "url": "/brief/2026-11-10.html"
+  },
+  {
     "date": "2026-11-07",
     "long_en": "Saturday, 7 November 2026",
     "long_fr": "samedi 7 novembre 2026",
@@ -52,14 +61,5 @@
     "lead_en": "US Midterms, Two Days Out: Democrats Need a Net Three House Seats, Four in the Senate, to Flip Congress",
     "lead_fr": "Élections de mi-mandat américaines, dans deux jours : les démocrates doivent gagner trois sièges nets à la Chambre et quatre au Sénat pour renverser le Congrès",
     "url": "/brief/2026-11-01.html"
-  },
-  {
-    "date": "2026-10-31",
-    "long_en": "Saturday, 31 October 2026",
-    "long_fr": "samedi 31 octobre 2026",
-    "count": 10,
-    "lead_en": "Israel’s Election Ends in Deadlock — Netanyahu’s Bloc Takes 53 Seats, Eisenkot’s 48, as Arab Parties Win a Record 19",
-    "lead_fr": "L’élection israélienne se solde par une impasse — le bloc de Netanyahou obtient 53 sièges, celui d’Eisenkot 48, les partis arabes en remportant un nombre record de 19",
-    "url": "/brief/2026-10-31.html"
   }
 ]
