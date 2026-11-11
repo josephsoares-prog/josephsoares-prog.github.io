@@ -1,5 +1,14 @@
 [
   {
+    "date": "2026-11-11",
+    "long_en": "Wednesday, 11 November 2026",
+    "long_fr": "mercredi 11 novembre 2026",
+    "count": 9,
+    "lead_en": "October CPI Rises 0.4% as BLS Says It Cannot Publish an Annual Inflation Rate for the First Time on Record",
+    "lead_fr": "L’IPC d’octobre augmente de 0,4 %, le BLS indiquant qu’il ne peut publier de taux d’inflation annuel pour la première fois de son histoire",
+    "url": "/brief/2026-11-11.html"
+  },
+  {
     "date": "2026-11-10",
     "long_en": "Tuesday, 10 November 2026",
     "long_fr": "mardi 10 novembre 2026",
@@ -52,14 +61,5 @@
     "lead_en": "US Midterms, One Day Out: Early Voting Tops 49.6 Million as DOJ Sues to Contest a Possible Alaska Senate Loss",
     "lead_fr": "Mi-mandat américain, à un jour du scrutin : le vote par anticipation dépasse 49,6 millions alors que le DOJ poursuit pour contester une possible défaite sénatoriale en Alaska",
     "url": "/brief/2026-11-02.html"
-  },
-  {
-    "date": "2026-11-01",
-    "long_en": "Sunday, 1 November 2026",
-    "long_fr": "dimanche 1 novembre 2026",
-    "count": 12,
-    "lead_en": "US Midterms, Two Days Out: Democrats Need a Net Three House Seats, Four in the Senate, to Flip Congress",
-    "lead_fr": "Élections de mi-mandat américaines, dans deux jours : les démocrates doivent gagner trois sièges nets à la Chambre et quatre au Sénat pour renverser le Congrès",
-    "url": "/brief/2026-11-01.html"
   }
 ]
