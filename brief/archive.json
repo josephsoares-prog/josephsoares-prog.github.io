@@ -1,5 +1,14 @@
 [
   {
+    "date": "2026-11-12",
+    "long_en": "Thursday, 12 November 2026",
+    "long_fr": "jeudi 12 novembre 2026",
+    "count": 9,
+    "lead_en": "Abu Dhabi Talks End With Prisoner-Swap Agreement as Kushner and Witkoff Head to Moscow, Then Dublin",
+    "lead_fr": "Les pourparlers d’Abou Dabi s’achèvent sur un accord d’échange de prisonniers, alors que Kushner et Witkoff se rendent à Moscou, puis à Dublin",
+    "url": "/brief/2026-11-12.html"
+  },
+  {
     "date": "2026-11-11",
     "long_en": "Wednesday, 11 November 2026",
     "long_fr": "mercredi 11 novembre 2026",
@@ -52,14 +61,5 @@
     "lead_en": "Democrats Sweep Congress, Flipping the Senate and the House as Jeffries Nears First Black Speakership",
     "lead_fr": "Les démocrates balaient le Congrès, renversant le Sénat et la Chambre, alors que Jeffries se rapproche du poste de premier président noir de la Chambre",
     "url": "/brief/2026-11-04.html"
-  },
-  {
-    "date": "2026-11-02",
-    "long_en": "Monday, 2 November 2026",
-    "long_fr": "lundi 2 novembre 2026",
-    "count": 10,
-    "lead_en": "US Midterms, One Day Out: Early Voting Tops 49.6 Million as DOJ Sues to Contest a Possible Alaska Senate Loss",
-    "lead_fr": "Mi-mandat américain, à un jour du scrutin : le vote par anticipation dépasse 49,6 millions alors que le DOJ poursuit pour contester une possible défaite sénatoriale en Alaska",
-    "url": "/brief/2026-11-02.html"
   }
 ]
