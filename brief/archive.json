@@ -1,65 +1,65 @@
 [
-  {
-    "date": "2026-11-12",
-    "long_en": "Thursday, 12 November 2026",
-    "long_fr": "jeudi 12 novembre 2026",
-    "count": 9,
-    "lead_en": "Abu Dhabi Talks End With Prisoner-Swap Agreement as Kushner and Witkoff Head to Moscow, Then Dublin",
-    "lead_fr": "Les pourparlers d’Abou Dabi s’achèvent sur un accord d’échange de prisonniers, alors que Kushner et Witkoff se rendent à Moscou, puis à Dublin",
-    "url": "/brief/2026-11-12.html"
-  },
-  {
-    "date": "2026-11-11",
-    "long_en": "Wednesday, 11 November 2026",
-    "long_fr": "mercredi 11 novembre 2026",
-    "count": 9,
-    "lead_en": "October CPI Rises 0.4% as BLS Says It Cannot Publish an Annual Inflation Rate for the First Time on Record",
-    "lead_fr": "L’IPC d’octobre augmente de 0,4 %, le BLS indiquant qu’il ne peut publier de taux d’inflation annuel pour la première fois de son histoire",
-    "url": "/brief/2026-11-11.html"
-  },
-  {
-    "date": "2026-11-10",
-    "long_en": "Tuesday, 10 November 2026",
-    "long_fr": "mardi 10 novembre 2026",
-    "count": 12,
-    "lead_en": "US, Russia and Ukraine Open Third Round of Abu Dhabi Talks on Security Guarantees as Putin and Zelensky Stay Away",
-    "lead_fr": "Les États-Unis, la Russie et l’Ukraine ouvrent un troisième cycle de pourparlers à Abou Dabi sur les garanties de sécurité, Poutine et Zelensky restant à l’écart",
-    "url": "/brief/2026-11-10.html"
-  },
-  {
-    "date": "2026-11-07",
-    "long_en": "Saturday, 7 November 2026",
-    "long_fr": "samedi 7 novembre 2026",
-    "count": 10,
-    "lead_en": "Iran Claims Seven Tankers Hit in Hormuz as Trump Weighs New Strikes and US Offers $20 Million for Nuclear Intelligence",
-    "lead_fr": "L’Iran affirme que sept pétroliers ont été touchés dans le détroit d’Ormuz, alors que Trump envisage de nouvelles frappes et que Washington offre 20 millions de dollars pour des renseignements sur le nucléaire iranien",
-    "url": "/brief/2026-11-07.html"
-  },
-  {
-    "date": "2026-11-06",
-    "long_en": "Friday, 6 November 2026",
-    "long_fr": "vendredi 6 novembre 2026",
-    "count": 10,
-    "lead_en": "Three More Tankers Hit in Hormuz as Reuters Sources Say Trump Leans Toward Resuming Iran Strikes",
-    "lead_fr": "Trois autres pétroliers touchés dans le détroit d’Ormuz, alors que des sources de Reuters évoquent une reprise probable des frappes de Trump",
-    "url": "/brief/2026-11-06.html"
-  },
-  {
-    "date": "2026-11-05",
-    "long_en": "Thursday, 5 November 2026",
-    "long_fr": "jeudi 5 novembre 2026",
-    "count": 15,
-    "lead_en": "“What We Just Witnessed Was an AI Earthquake”: Voters Revolt Against Data-Center Politics at the Polls",
-    "lead_fr": "« Ce que nous venons de vivre est un séisme pour l’IA » : les électeurs se révoltent contre la politique des centres de données dans les urnes",
-    "url": "/brief/2026-11-05.html"
-  },
-  {
-    "date": "2026-11-04",
-    "long_en": "Wednesday, 4 November 2026",
-    "long_fr": "mercredi 4 novembre 2026",
-    "count": 13,
-    "lead_en": "Democrats Sweep Congress, Flipping the Senate and the House as Jeffries Nears First Black Speakership",
-    "lead_fr": "Les démocrates balaient le Congrès, renversant le Sénat et la Chambre, alors que Jeffries se rapproche du poste de premier président noir de la Chambre",
-    "url": "/brief/2026-11-04.html"
-  }
+    {
+        "date": "2026-11-14",
+        "long_en": "Saturday, 14 November 2026",
+        "long_fr": "samedi 14 novembre 2026",
+        "count": 18,
+        "lead_en": "Nvidia Ousts Jensen Huang as CEO Amid Espionage Inquiry, Stock Swings Sharply",
+        "lead_fr": "Nvidia évince Jensen Huang de son poste de PDG au cœur d’une enquête d’espionnage, l’action vacille fortement",
+        "url": "/brief/2026-11-14.html"
+    },
+    {
+        "date": "2026-11-12",
+        "long_en": "Thursday, 12 November 2026",
+        "long_fr": "jeudi 12 novembre 2026",
+        "count": 9,
+        "lead_en": "Abu Dhabi Talks End With Prisoner-Swap Agreement as Kushner and Witkoff Head to Moscow, Then Dublin",
+        "lead_fr": "Les pourparlers d’Abou Dabi s’achèvent sur un accord d’échange de prisonniers, alors que Kushner et Witkoff se rendent à Moscou, puis à Dublin",
+        "url": "/brief/2026-11-12.html"
+    },
+    {
+        "date": "2026-11-11",
+        "long_en": "Wednesday, 11 November 2026",
+        "long_fr": "mercredi 11 novembre 2026",
+        "count": 9,
+        "lead_en": "October CPI Rises 0.4% as BLS Says It Cannot Publish an Annual Inflation Rate for the First Time on Record",
+        "lead_fr": "L’IPC d’octobre augmente de 0,4 %, le BLS indiquant qu’il ne peut publier de taux d’inflation annuel pour la première fois de son histoire",
+        "url": "/brief/2026-11-11.html"
+    },
+    {
+        "date": "2026-11-10",
+        "long_en": "Tuesday, 10 November 2026",
+        "long_fr": "mardi 10 novembre 2026",
+        "count": 12,
+        "lead_en": "US, Russia and Ukraine Open Third Round of Abu Dhabi Talks on Security Guarantees as Putin and Zelensky Stay Away",
+        "lead_fr": "Les États-Unis, la Russie et l’Ukraine ouvrent un troisième cycle de pourparlers à Abou Dabi sur les garanties de sécurité, Poutine et Zelensky restant à l’écart",
+        "url": "/brief/2026-11-10.html"
+    },
+    {
+        "date": "2026-11-07",
+        "long_en": "Saturday, 7 November 2026",
+        "long_fr": "samedi 7 novembre 2026",
+        "count": 10,
+        "lead_en": "Iran Claims Seven Tankers Hit in Hormuz as Trump Weighs New Strikes and US Offers $20 Million for Nuclear Intelligence",
+        "lead_fr": "L’Iran affirme que sept pétroliers ont été touchés dans le détroit d’Ormuz, alors que Trump envisage de nouvelles frappes et que Washington offre 20 millions de dollars pour des renseignements sur le nucléaire iranien",
+        "url": "/brief/2026-11-07.html"
+    },
+    {
+        "date": "2026-11-06",
+        "long_en": "Friday, 6 November 2026",
+        "long_fr": "vendredi 6 novembre 2026",
+        "count": 10,
+        "lead_en": "Three More Tankers Hit in Hormuz as Reuters Sources Say Trump Leans Toward Resuming Iran Strikes",
+        "lead_fr": "Trois autres pétroliers touchés dans le détroit d’Ormuz, alors que des sources de Reuters évoquent une reprise probable des frappes de Trump",
+        "url": "/brief/2026-11-06.html"
+    },
+    {
+        "date": "2026-11-05",
+        "long_en": "Thursday, 5 November 2026",
+        "long_fr": "jeudi 5 novembre 2026",
+        "count": 15,
+        "lead_en": "“What We Just Witnessed Was an AI Earthquake”: Voters Revolt Against Data-Center Politics at the Polls",
+        "lead_fr": "« Ce que nous venons de vivre est un séisme pour l’IA » : les électeurs se révoltent contre la politique des centres de données dans les urnes",
+        "url": "/brief/2026-11-05.html"
+    }
 ]
