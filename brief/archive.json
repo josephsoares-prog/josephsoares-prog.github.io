@@ -1,5 +1,14 @@
 [
     {
+        "date": "2026-11-15",
+        "long_en": "Sunday, 15 November 2026",
+        "long_fr": "dimanche 15 novembre 2026",
+        "count": 8,
+        "lead_en": "Trump, Xi and Putin Confirm First-Ever Trilateral at APEC, Agenda Set on Nuclear Arms",
+        "lead_fr": "Trump, Xi et Poutine confirment une première rencontre trilatérale à l’APEC, le nucléaire à l’ordre du jour",
+        "url": "/brief/2026-11-15.html"
+    },
+    {
         "date": "2026-11-14",
         "long_en": "Saturday, 14 November 2026",
         "long_fr": "samedi 14 novembre 2026",
@@ -52,14 +61,5 @@
         "lead_en": "Three More Tankers Hit in Hormuz as Reuters Sources Say Trump Leans Toward Resuming Iran Strikes",
         "lead_fr": "Trois autres pétroliers touchés dans le détroit d’Ormuz, alors que des sources de Reuters évoquent une reprise probable des frappes de Trump",
         "url": "/brief/2026-11-06.html"
-    },
-    {
-        "date": "2026-11-05",
-        "long_en": "Thursday, 5 November 2026",
-        "long_fr": "jeudi 5 novembre 2026",
-        "count": 15,
-        "lead_en": "“What We Just Witnessed Was an AI Earthquake”: Voters Revolt Against Data-Center Politics at the Polls",
-        "lead_fr": "« Ce que nous venons de vivre est un séisme pour l’IA » : les électeurs se révoltent contre la politique des centres de données dans les urnes",
-        "url": "/brief/2026-11-05.html"
     }
 ]
