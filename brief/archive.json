@@ -1,5 +1,14 @@
 [
     {
+        "date": "2026-11-17",
+        "long_en": "Tuesday, 17 November 2026",
+        "long_fr": "mardi 17 novembre 2026",
+        "count": 11,
+        "lead_en": "Trump, Xi and Putin Set Thursday Trilateral at APEC as White House Frames It Around Nuclear Arms",
+        "lead_fr": "Trump, Xi et Poutine fixent un sommet trilatéral jeudi à l’APEC, axé sur les armements nucléaires",
+        "url": "/brief/2026-11-17.html"
+    },
+    {
         "date": "2026-11-16",
         "long_en": "Monday, 16 November 2026",
         "long_fr": "lundi 16 novembre 2026",
@@ -52,14 +61,5 @@
         "lead_en": "US, Russia and Ukraine Open Third Round of Abu Dhabi Talks on Security Guarantees as Putin and Zelensky Stay Away",
         "lead_fr": "Les États-Unis, la Russie et l’Ukraine ouvrent un troisième cycle de pourparlers à Abou Dabi sur les garanties de sécurité, Poutine et Zelensky restant à l’écart",
         "url": "/brief/2026-11-10.html"
-    },
-    {
-        "date": "2026-11-07",
-        "long_en": "Saturday, 7 November 2026",
-        "long_fr": "samedi 7 novembre 2026",
-        "count": 10,
-        "lead_en": "Iran Claims Seven Tankers Hit in Hormuz as Trump Weighs New Strikes and US Offers $20 Million for Nuclear Intelligence",
-        "lead_fr": "L’Iran affirme que sept pétroliers ont été touchés dans le détroit d’Ormuz, alors que Trump envisage de nouvelles frappes et que Washington offre 20 millions de dollars pour des renseignements sur le nucléaire iranien",
-        "url": "/brief/2026-11-07.html"
     }
 ]
