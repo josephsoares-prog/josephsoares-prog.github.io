@@ -1,5 +1,14 @@
 [
  {
+  "date": "2026-11-22",
+  "long_en": "Sunday, 22 November 2026",
+  "long_fr": "dimanche 22 novembre 2026",
+  "count": 12,
+  "lead_en": "Nvidia Posts a Record $115.8 Billion Quarter as the AI Boom Outruns Its Own Boardroom Crisis",
+  "lead_fr": "Nvidia affiche un trimestre record de 115,8 milliards de dollars, le boom de l’IA dépassant sa propre crise de gouvernance",
+  "url": "/brief/2026-11-22.html"
+ },
+ {
   "date": "2026-11-20",
   "long_en": "Friday, 20 November 2026",
   "long_fr": "vendredi 20 novembre 2026",
@@ -113,7 +122,7 @@
   "long_fr": "jeudi 5 novembre 2026",
   "count": 15,
   "lead_en": "“What We Just Witnessed Was an AI Earthquake”: Voters Revolt Against Data-Center Politics at the Polls",
-  "lead_fr": "« Ce que nous venons de vivre est un séisme pour l’IA » : les électeurs se révoltent contre la politique des centres de données dans les urnes",
+  "lead_fr": "« Ce que nous venons de vivre est un séisme pour l’IA » : les électeurs se révoltent contre la politique des centres de données dans les urnes",
   "url": "/brief/2026-11-05.html"
  },
  {
@@ -131,7 +140,7 @@
   "long_fr": "lundi 2 novembre 2026",
   "count": 10,
   "lead_en": "US Midterms, One Day Out: Early Voting Tops 49.6 Million as DOJ Sues to Contest a Possible Alaska Senate Loss",
-  "lead_fr": "Mi-mandat américain, à un jour du scrutin : le vote par anticipation dépasse 49,6 millions alors que le DOJ poursuit pour contester une possible défaite sénatoriale en Alaska",
+  "lead_fr": "Mi-mandat américain, à un jour du scrutin : le vote par anticipation dépasse 49,6 millions alors que le DOJ poursuit pour contester une possible défaite sénatoriale en Alaska",
   "url": "/brief/2026-11-02.html"
  },
  {
@@ -140,7 +149,7 @@
   "long_fr": "dimanche 1 novembre 2026",
   "count": 12,
   "lead_en": "US Midterms, Two Days Out: Democrats Need a Net Three House Seats, Four in the Senate, to Flip Congress",
-  "lead_fr": "Élections de mi-mandat américaines, dans deux jours : les démocrates doivent gagner trois sièges nets à la Chambre et quatre au Sénat pour renverser le Congrès",
+  "lead_fr": "Élections de mi-mandat américaines, dans deux jours : les démocrates doivent gagner trois sièges nets à la Chambre et quatre au Sénat pour renverser le Congrès",
   "url": "/brief/2026-11-01.html"
  },
  {
@@ -185,7 +194,7 @@
   "long_fr": "dimanche 25 octobre 2026",
   "count": 10,
   "lead_en": "Brent Tops $116 as US and Israel Reportedly Draw Up Plans to Strike Iran After the Midterms",
-  "lead_fr": "Le Brent dépasse 116 $, alors que Washington et Israël prépareraient des frappes contre l’Iran après les élections de mi-mandat",
+  "lead_fr": "Le Brent dépasse 116 $, alors que Washington et Israël prépareraient des frappes contre l’Iran après les élections de mi-mandat",
   "url": "/brief/2026-10-25.html"
  },
  {
@@ -203,7 +212,7 @@
   "long_fr": "jeudi 23 octobre 2026",
   "count": 20,
   "lead_en": "Wall Street’s AI Trade Cracks as Nasdaq Sinks 2.6%, Chipmakers Lead Rout",
-  "lead_fr": "Le « AI trade » de Wall Street se fissure : le Nasdaq chute de 2,6 %, les fabricants de puces en tête du repli",
+  "lead_fr": "Le « AI trade » de Wall Street se fissure : le Nasdaq chute de 2,6 %, les fabricants de puces en tête du repli",
   "url": "/brief/2026-10-23.html"
  },
  {
@@ -374,7 +383,7 @@
   "long_fr": "jeudi 1 octobre 2026",
   "count": 20,
   "lead_en": "Fed raises rates to 3.75%–4%, first hike since 2023, as oil-driven inflation bites",
-  "lead_fr": "La Fed relève ses taux à 3,75–4 %, première hausse depuis 2023, face à une inflation alimentée par le pétrole",
+  "lead_fr": "La Fed relève ses taux à 3,75–4 %, première hausse depuis 2023, face à une inflation alimentée par le pétrole",
   "url": "/brief/2026-10-01.html"
  },
  {
@@ -383,7 +392,7 @@
   "long_fr": "mercredi 30 septembre 2026",
   "count": 18,
   "lead_en": "Trump says Iran war will end ‘very soon,’ rejects Tehran’s Hormuz reopening bid",
-  "lead_fr": "Trump affirme que la guerre en Iran se terminera « très bientôt » et rejette l’offre iranienne de réouverture d’Ormuz",
+  "lead_fr": "Trump affirme que la guerre en Iran se terminera « très bientôt » et rejette l’offre iranienne de réouverture d’Ormuz",
   "url": "/brief/2026-09-30.html"
  },
  {
@@ -428,7 +437,7 @@
   "long_fr": "vendredi 25 septembre 2026",
   "count": 20,
   "lead_en": "IEA: more than 10 million barrels a day of Gulf oil output remains shut in as diesel stays 94% above pre-war levels",
-  "lead_fr": "AIE : plus de 10 millions de barils par jour de production pétrolière du Golfe restent hors service, le diesel demeurant 94 % au-dessus des niveaux d’avant-guerre",
+  "lead_fr": "AIE : plus de 10 millions de barils par jour de production pétrolière du Golfe restent hors service, le diesel demeurant 94 % au-dessus des niveaux d’avant-guerre",
   "url": "/brief/2026-09-25.html"
  },
  {
@@ -446,7 +455,7 @@
   "long_fr": "mercredi 23 septembre 2026",
   "count": 17,
   "lead_en": "Bessent calls US–China AI and trade talks ‘very successful’ two days before the Trump-Xi summit",
-  "lead_fr": "Bessent qualifie de « très fructueuses » les discussions commerciales et sur l’IA entre les États-Unis et la Chine, deux jours avant le sommet Trump-Xi",
+  "lead_fr": "Bessent qualifie de « très fructueuses » les discussions commerciales et sur l’IA entre les États-Unis et la Chine, deux jours avant le sommet Trump-Xi",
   "url": "/brief/2026-09-23.html"
  },
  {
@@ -527,7 +536,7 @@
   "long_fr": "lundi 14 septembre 2026",
   "count": 14,
   "lead_en": "Saudi Arabia shuts its 1,200km East-West pipeline after a drone attack from Iraq, pushing Brent past $104",
-  "lead_fr": "L'Arabie saoudite ferme son oléoduc Est-Ouest de 1 200 km après une attaque de drones depuis l'Irak, portant le Brent au-delà de 104 $",
+  "lead_fr": "L'Arabie saoudite ferme son oléoduc Est-Ouest de 1 200 km après une attaque de drones depuis l'Irak, portant le Brent au-delà de 104 $",
   "url": "/brief/2026-09-14.html"
  },
  {
@@ -545,7 +554,7 @@
   "long_fr": "samedi 12 septembre 2026",
   "count": 17,
   "lead_en": "US diesel hits record $6.05 a gallon as Brent crosses $105 on Hormuz disruption",
-  "lead_fr": "Le diesel américain atteint un record de 6,05 $ le gallon alors que le Brent dépasse 105 $ à cause de la perturbation d’Ormuz",
+  "lead_fr": "Le diesel américain atteint un record de 6,05 $ le gallon alors que le Brent dépasse 105 $ à cause de la perturbation d’Ormuz",
   "url": "/brief/2026-09-12.html"
  },
  {
@@ -698,7 +707,7 @@
   "long_fr": "mardi 25 août 2026",
   "count": 32,
   "lead_en": "Ottawa unveils its domestic tariff response: loans, tax deferrals and export support",
-  "lead_fr": "Ottawa dévoile sa réponse tarifaire intérieure : prêts, reports d'impôt et soutien à l'exportation",
+  "lead_fr": "Ottawa dévoile sa réponse tarifaire intérieure : prêts, reports d'impôt et soutien à l'exportation",
   "url": "/brief/2026-08-25.html"
  },
  {
@@ -761,7 +770,7 @@
   "long_fr": "dimanche 16 août 2026",
   "count": 21,
   "lead_en": "Canada's 50% tariff deadline is three days out as US negotiators offer Carney and Trump 'options' — not a deal",
-  "lead_fr": "L'échéance du tarif de 50 % du Canada n'est plus qu'à trois jours : les négociateurs américains proposent des « options » à Carney et Trump — pas un accord",
+  "lead_fr": "L'échéance du tarif de 50 % du Canada n'est plus qu'à trois jours : les négociateurs américains proposent des « options » à Carney et Trump — pas un accord",
   "url": "/brief/2026-08-16.html"
  },
  {
@@ -770,7 +779,7 @@
   "long_fr": "samedi 15 août 2026",
   "count": 33,
   "lead_en": "UAE tankers hit and a carrier group inbound: the Hormuz war escalates as Trump vows to declare the strait US territory",
-  "lead_fr": "Pétroliers émiratis frappés et porte-avions en route : la guerre d'Ormuz s'intensifie alors que Trump promet de déclarer le détroit territoire américain",
+  "lead_fr": "Pétroliers émiratis frappés et porte-avions en route : la guerre d'Ormuz s'intensifie alors que Trump promet de déclarer le détroit territoire américain",
   "url": "/brief/2026-08-15.html"
  },
  {
@@ -797,7 +806,7 @@
   "long_fr": "mardi 11 août 2026",
   "count": 28,
   "lead_en": "Trump claims ‘100%’ US control of the Strait of Hormuz and demands Iran pay reparations, opening a new front in the standoff",
-  "lead_fr": "Trump revendique un contrôle américain « à 100 % » du détroit d’Ormuz et exige des réparations de l’Iran, ouvrant un nouveau front dans l’impasse",
+  "lead_fr": "Trump revendique un contrôle américain « à 100 % » du détroit d’Ormuz et exige des réparations de l’Iran, ouvrant un nouveau front dans l’impasse",
   "url": "/brief/2026-08-11.html"
  },
  {
@@ -887,7 +896,7 @@
   "long_fr": "samedi 1er août 2026",
   "count": 20,
   "lead_en": "Deadline day: Trump's threatened 35% tariff on Canada takes hold as talks run to the wire — but CUSMA-compliant goods, close to 90% of exports, stay exempt",
-  "lead_fr": "Jour d'échéance : le tarif de 35 % dont Trump menace le Canada entre en vigueur alors que les pourparlers filent jusqu'au bout — mais les biens conformes à l'ACEUM, près de 90 % des exportations, restent exemptés",
+  "lead_fr": "Jour d'échéance : le tarif de 35 % dont Trump menace le Canada entre en vigueur alors que les pourparlers filent jusqu'au bout — mais les biens conformes à l'ACEUM, près de 90 % des exportations, restent exemptés",
   "url": "/brief/2026-08-01.html"
  },
  {
@@ -905,7 +914,7 @@
   "long_fr": "jeudi 30 juillet 2026",
   "count": 18,
   "lead_en": "The Fed holds at 3.50-3.75% for a fifth meeting, but the split is the story: three officials dissent for a HIKE, not the cut the president wants",
-  "lead_fr": "La Fed maintient à 3,50-3,75 % pour une cinquième réunion, mais c'est la fracture qui compte : trois responsables dissident en faveur d'une HAUSSE, non de la baisse voulue par le président",
+  "lead_fr": "La Fed maintient à 3,50-3,75 % pour une cinquième réunion, mais c'est la fracture qui compte : trois responsables dissident en faveur d'une HAUSSE, non de la baisse voulue par le président",
   "url": "/brief/2026-07-30.html"
  },
  {
@@ -941,7 +950,7 @@
   "long_fr": "dimanche 26 juillet 2026",
   "count": 19,
   "lead_en": "The US-Iran war grinds into a third week as Washington strikes Iran again, Tehran hits Gulf bases, and Trump threatens to bomb Iranian infrastructure over Hormuz",
-  "lead_fr": "La guerre américano-iranienne entre dans sa troisième semaine : Washington frappe de nouveau l'Iran, Téhéran vise des bases du Golfe et Trump menace de bombarder les infrastructures iraniennes à propos d'Ormuz",
+  "lead_fr": "La guerre américano-iranienne entre dans sa troisième semaine : Washington frappe de nouveau l'Iran, Téhéran vise des bases du Golfe et Trump menace de bombarder les infrastructures iraniennes à propos d'Ormuz",
   "url": "/brief/2026-07-26.html"
  },
  {
