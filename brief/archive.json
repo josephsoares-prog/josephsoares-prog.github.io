@@ -1,5 +1,14 @@
 [
     {
+        "date": "2026-11-23",
+        "long_en": "Monday, 23 November 2026",
+        "long_fr": "lundi 23 novembre 2026",
+        "count": 18,
+        "lead_en": "Israel Ends Its Rare Central Gaza Ground Operation as Families Return to Nuseirat",
+        "lead_fr": "Israël met fin à sa rare opération terrestre dans le centre de Gaza, les familles retournent à Nuseirat",
+        "url": "/brief/2026-11-23.html"
+    },
+    {
         "date": "2026-11-22",
         "long_en": "Sunday, 22 November 2026",
         "long_fr": "dimanche 22 novembre 2026",
@@ -52,14 +61,5 @@
         "lead_en": "Bessent Demands Nvidia Look Outside for a Successor, Gives Board 10 Days on Export Compliance",
         "lead_fr": "Bessent exige que Nvidia cherche un successeur à l’extérieur, donne dix jours au conseil sur la conformité des exportations",
         "url": "/brief/2026-11-16.html"
-    },
-    {
-        "date": "2026-11-15",
-        "long_en": "Sunday, 15 November 2026",
-        "long_fr": "dimanche 15 novembre 2026",
-        "count": 8,
-        "lead_en": "Trump, Xi and Putin Confirm First-Ever Trilateral at APEC, Agenda Set on Nuclear Arms",
-        "lead_fr": "Trump, Xi et Poutine confirment une première rencontre trilatérale à l’APEC, le nucléaire à l’ordre du jour",
-        "url": "/brief/2026-11-15.html"
     }
 ]
