@@ -1,5 +1,14 @@
 [
     {
+        "date": "2026-11-24",
+        "long_en": "Tuesday, 24 November 2026",
+        "long_fr": "mardi 24 novembre 2026",
+        "count": 19,
+        "lead_en": "Nvidia's Board Reinstates Jensen Huang as CEO, Citing Government Input on National Security",
+        "lead_fr": "Le conseil de Nvidia réintègre Jensen Huang comme PDG, invoquant l'avis du gouvernement sur la sécurité nationale",
+        "url": "/brief/2026-11-24.html"
+    },
+    {
         "date": "2026-11-23",
         "long_en": "Monday, 23 November 2026",
         "long_fr": "lundi 23 novembre 2026",
@@ -52,14 +61,5 @@
         "lead_en": "Trump, Xi and Putin Set Thursday Trilateral at APEC as White House Frames It Around Nuclear Arms",
         "lead_fr": "Trump, Xi et Poutine fixent un sommet trilatéral jeudi à l’APEC, axé sur les armements nucléaires",
         "url": "/brief/2026-11-17.html"
-    },
-    {
-        "date": "2026-11-16",
-        "long_en": "Monday, 16 November 2026",
-        "long_fr": "lundi 16 novembre 2026",
-        "count": 17,
-        "lead_en": "Bessent Demands Nvidia Look Outside for a Successor, Gives Board 10 Days on Export Compliance",
-        "lead_fr": "Bessent exige que Nvidia cherche un successeur à l’extérieur, donne dix jours au conseil sur la conformité des exportations",
-        "url": "/brief/2026-11-16.html"
     }
 ]
