@@ -178,5 +178,914 @@
   "lead_en": "US Midterms, Two Days Out: Democrats Need a Net Three House Seats, Four in the Senate, to Flip Congress",
   "lead_fr": "Élections de mi-mandat américaines, dans deux jours : les démocrates doivent gagner trois sièges nets à la Chambre et quatre au Sénat pour renverser le Congrès",
   "url": "/brief/2026-11-01.html"
+ },
+ {
+  "date": "2026-10-31",
+  "long_en": "Saturday, 31 October 2026",
+  "long_fr": "samedi 31 octobre 2026",
+  "count": 10,
+  "lead_en": "Israel’s Election Ends in Deadlock — Netanyahu’s Bloc Takes 53 Seats, Eisenkot’s 48, as Arab Parties Win a Record 19",
+  "lead_fr": "L’élection israélienne se solde par une impasse — le bloc de Netanyahou obtient 53 sièges, celui d’Eisenkot 48, les partis arabes en remportant un nombre record de 19",
+  "url": "/brief/2026-10-31.html"
+ },
+ {
+  "date": "2026-10-30",
+  "long_en": "Friday, 30 October 2026",
+  "long_fr": "vendredi 30 octobre 2026",
+  "count": 12,
+  "lead_en": "Iran Says Four Tankers Have Now Hit Mines in Hormuz as Saudi Arabia Intercepts Houthi Missiles Aimed at Riyadh",
+  "lead_fr": "L’Iran affirme que quatre pétroliers ont désormais heurté des mines dans le détroit d’Ormuz, alors que l’Arabie saoudite intercepte des missiles houthis visant Riyad",
+  "url": "/brief/2026-10-30.html"
+ },
+ {
+  "date": "2026-10-29",
+  "long_en": "Thursday, 29 October 2026",
+  "long_fr": "jeudi 29 octobre 2026",
+  "count": 16,
+  "lead_en": "Tehran Presses 7-Day Hormuz Ceasefire Plan as Trump Rejects It and Vows Strikes Could Resume After Midterms",
+  "lead_fr": "Téhéran insiste sur un plan de cessez-le-feu de 7 jours dans le détroit d'Ormuz, que Trump rejette en évoquant de possibles frappes après les élections de mi-mandat",
+  "url": "/brief/2026-10-29.html"
+ },
+ {
+  "date": "2026-10-27",
+  "long_en": "Tuesday, 27 October 2026",
+  "long_fr": "mardi 27 octobre 2026",
+  "count": 18,
+  "lead_en": "Saudi, Pakistani and Turkish Officials Meet Iran’s President in Tehran as Washington Weighs New Strikes",
+  "lead_fr": "Des responsables saoudiens, pakistanais et turcs rencontrent le président iranien à Téhéran, alors que Washington envisage de nouvelles frappes",
+  "url": "/brief/2026-10-27.html"
+ },
+ {
+  "date": "2026-10-25",
+  "long_en": "Sunday, 25 October 2026",
+  "long_fr": "dimanche 25 octobre 2026",
+  "count": 10,
+  "lead_en": "Brent Tops $116 as US and Israel Reportedly Draw Up Plans to Strike Iran After the Midterms",
+  "lead_fr": "Le Brent dépasse 116 $, alors que Washington et Israël prépareraient des frappes contre l’Iran après les élections de mi-mandat",
+  "url": "/brief/2026-10-25.html"
+ },
+ {
+  "date": "2026-10-24",
+  "long_en": "Saturday, 24 October 2026",
+  "long_fr": "samedi 24 octobre 2026",
+  "count": 11,
+  "lead_en": "Brent Hits Five-Month High Near $115 as Houthi-Saudi Attacks and UAE Oil Spill Compound Supply Fears",
+  "lead_fr": "Le Brent atteint un sommet de cinq mois près de 115 $, les attaques houthies en Arabie saoudite et une fuite pétrolière aux Émirats aggravant les craintes d’approvisionnement",
+  "url": "/brief/2026-10-24.html"
+ },
+ {
+  "date": "2026-10-23",
+  "long_en": "Thursday, 23 October 2026",
+  "long_fr": "jeudi 23 octobre 2026",
+  "count": 20,
+  "lead_en": "Wall Street’s AI Trade Cracks as Nasdaq Sinks 2.6%, Chipmakers Lead Rout",
+  "lead_fr": "Le « AI trade » de Wall Street se fissure : le Nasdaq chute de 2,6 %, les fabricants de puces en tête du repli",
+  "url": "/brief/2026-10-23.html"
+ },
+ {
+  "date": "2026-10-22",
+  "long_en": "Thursday, 22 October 2026",
+  "long_fr": "jeudi 22 octobre 2026",
+  "count": 14,
+  "lead_en": "US Pulls Diplomats From Saudi Arabia as Houthi Strikes Push Brent Past $110",
+  "lead_fr": "Les États-Unis retirent des diplomates d’Arabie saoudite alors que les frappes houthies poussent le Brent au-delà de 110 dollars",
+  "url": "/brief/2026-10-22.html"
+ },
+ {
+  "date": "2026-10-21",
+  "long_en": "Wednesday, 21 October 2026",
+  "long_fr": "mercredi 21 octobre 2026",
+  "count": 17,
+  "lead_en": "Zelenskyy Holds Oslo Talks With Witkoff, Europeans as Russian Strikes Kill Three, Cut Power to 32,000 Homes",
+  "lead_fr": "Zelensky tient des pourparlers à Oslo avec Witkoff et des dirigeants européens, alors que des frappes russes tuent trois personnes et privent 32 000 foyers d’électricité",
+  "url": "/brief/2026-10-21.html"
+ },
+ {
+  "date": "2026-10-20",
+  "long_en": "Tuesday, 20 October 2026",
+  "long_fr": "mardi 20 octobre 2026",
+  "count": 9,
+  "lead_en": "Albertans Reject Path to Separation, Backing Carney by Roughly 76% to 23%",
+  "lead_fr": "Les Albertains rejettent la voie vers la séparation, appuyant Carney à environ 76 % contre 23 %",
+  "url": "/brief/2026-10-20.html"
+ },
+ {
+  "date": "2026-10-19",
+  "long_en": "Monday, 19 October 2026",
+  "long_fr": "lundi 19 octobre 2026",
+  "count": 22,
+  "lead_en": "Macron Faces Political Crisis as French Protests Draw at Least 2,400 Arrests",
+  "lead_fr": "Macron confronté à une crise politique alors que les manifestations françaises font au moins 2 400 arrestations",
+  "url": "/brief/2026-10-19.html"
+ },
+ {
+  "date": "2026-10-18",
+  "long_en": "Sunday, 18 October 2026",
+  "long_fr": "dimanche 18 octobre 2026",
+  "count": 19,
+  "lead_en": "Iran's Hormuz Campaign Crashes Oil Flows as Brent Nears $110",
+  "lead_fr": "La campagne iranienne dans le détroit d'Ormuz fait chuter les flux pétroliers, le Brent approche 110 $",
+  "url": "/brief/2026-10-18.html"
+ },
+ {
+  "date": "2026-10-17",
+  "long_en": "Saturday, 17 October 2026",
+  "long_fr": "samedi 17 octobre 2026",
+  "count": 12,
+  "lead_en": "Fourth Tanker Struck in the Strait of Hormuz as Iran's Shipping Campaign Grinds On",
+  "lead_fr": "Un quatrième pétrolier touché dans le détroit d'Ormuz alors que la campagne iranienne contre le transport maritime se poursuit",
+  "url": "/brief/2026-10-17.html"
+ },
+ {
+  "date": "2026-10-16",
+  "long_en": "Friday, 16 October 2026",
+  "long_fr": "vendredi 16 octobre 2026",
+  "count": 22,
+  "lead_en": "Iran Shifts Tactics in the Strait of Hormuz to Keep Oil Prices High Through the US Midterms",
+  "lead_fr": "L'Iran change de tactique dans le détroit d'Ormuz pour maintenir le prix du pétrole élevé jusqu'aux élections de mi-mandat américaines",
+  "url": "/brief/2026-10-16.html"
+ },
+ {
+  "date": "2026-10-15",
+  "long_en": "Thursday, 15 October 2026",
+  "long_fr": "jeudi 15 octobre 2026",
+  "count": 26,
+  "lead_en": "Oil Slides as Washington Weighs Easing Sanctions on Russia's 'Shadow Fleet'",
+  "lead_fr": "Le pétrole recule alors que Washington envisage d'alléger les sanctions sur la « flotte fantôme » russe",
+  "url": "/brief/2026-10-15.html"
+ },
+ {
+  "date": "2026-10-14",
+  "long_en": "Wednesday, 14 October 2026",
+  "long_fr": "mercredi 14 octobre 2026",
+  "count": 18,
+  "lead_en": "Houthi Missile Strike Kills 12 at Riyadh Airport in Deadliest Attack on Saudi Arabia in a Decade",
+  "lead_fr": "Une frappe de missile houthie tue 12 personnes à l'aéroport de Riyad, l'attaque la plus meurtrière contre l'Arabie saoudite depuis dix ans",
+  "url": "/brief/2026-10-14.html"
+ },
+ {
+  "date": "2026-10-13",
+  "long_en": "Tuesday, 13 October 2026",
+  "long_fr": "mardi 13 octobre 2026",
+  "count": 11,
+  "lead_en": "UK Blames Iran’s Revolutionary Guard for Plot Against RAF Fairford as Nearly 30 Nations Condemn Tehran",
+  "lead_fr": "Le Royaume-Uni accuse les Gardiens de la révolution iraniens du complot visant la base de la RAF Fairford, près de 30 pays condamnent Téhéran",
+  "url": "/brief/2026-10-13.html"
+ },
+ {
+  "date": "2026-10-11",
+  "long_en": "Sunday, 11 October 2026",
+  "long_fr": "dimanche 11 octobre 2026",
+  "count": 19,
+  "lead_en": "Trump Secures Russian Diesel Pledge From Putin, Treasury Grants Temporary Sanctions Waiver",
+  "lead_fr": "Trump obtient de Poutine une promesse de diesel russe, le Trésor accorde une dérogation temporaire aux sanctions",
+  "url": "/brief/2026-10-11.html"
+ },
+ {
+  "date": "2026-10-09",
+  "long_en": "Friday, 9 October 2026",
+  "long_fr": "vendredi 9 octobre 2026",
+  "count": 17,
+  "lead_en": "Pentagon Draws Up Three-Day Iran Strike Plan; Trump Rules Out Action Before Midterms",
+  "lead_fr": "Le Pentagone élabore un plan de frappes de trois jours contre l’Iran; Trump exclut toute action avant les élections de mi-mandat",
+  "url": "/brief/2026-10-09.html"
+ },
+ {
+  "date": "2026-10-08",
+  "long_en": "Thursday, 8 October 2026",
+  "long_fr": "jeudi 8 octobre 2026",
+  "count": 18,
+  "lead_en": "Pentagon Orders CENTCOM Ready for Iran Strikes, Timing Tied to Midterms",
+  "lead_fr": "Le Pentagone ordonne au CENTCOM de se préparer à frapper l'Iran, le calendrier lié aux élections de mi-mandat",
+  "url": "/brief/2026-10-08.html"
+ },
+ {
+  "date": "2026-10-07",
+  "long_en": "Wednesday, 7 October 2026",
+  "long_fr": "mercredi 7 octobre 2026",
+  "count": 11,
+  "lead_en": "Carney calls Quebec's PQ premier-designate as bond markets price in political risk",
+  "lead_fr": "Carney appelle le premier ministre désigné du PQ, les marchés obligataires intègrent le risque politique",
+  "url": "/brief/2026-10-07.html"
+ },
+ {
+  "date": "2026-10-06",
+  "long_en": "Tuesday, 6 October 2026",
+  "long_fr": "mardi 6 octobre 2026",
+  "count": 23,
+  "lead_en": "Parti Québécois wins power on a pledge to hold a third sovereignty referendum",
+  "lead_fr": "Le Parti québécois reprend le pouvoir avec la promesse d’un troisième référendum sur la souveraineté",
+  "url": "/brief/2026-10-06.html"
+ },
+ {
+  "date": "2026-10-05",
+  "long_en": "Monday, 5 October 2026",
+  "long_fr": "lundi 5 octobre 2026",
+  "count": 13,
+  "lead_en": "Yemeni forces launch major offensive on the Houthis as Iran says there is 'no military solution' to its war with the US",
+  "lead_fr": "Les forces yéménites lancent une offensive majeure contre les Houthis tandis que l'Iran affirme qu'il n'existe « aucune solution militaire » à sa guerre avec les États-Unis",
+  "url": "/brief/2026-10-05.html"
+ },
+ {
+  "date": "2026-10-04",
+  "long_en": "Sunday, 4 October 2026",
+  "long_fr": "dimanche 4 octobre 2026",
+  "count": 16,
+  "lead_en": "Houthis claim missile and drone strike on Aramco facility in Riyadh as Yemen's war intensifies",
+  "lead_fr": "Les Houthis revendiquent une frappe de missiles et de drones sur une installation d'Aramco à Riyad, alors que la guerre au Yémen s'intensifie",
+  "url": "/brief/2026-10-04.html"
+ },
+ {
+  "date": "2026-10-03",
+  "long_en": "Saturday, 3 October 2026",
+  "long_fr": "samedi 3 octobre 2026",
+  "count": 16,
+  "lead_en": "US adds just 29,000 jobs in September, unemployment rises to 4.2%, a week after the Fed's first hike since 2023",
+  "lead_fr": "Les États-Unis n'ajoutent que 29 000 emplois en septembre, le chômage grimpe à 4,2 %, une semaine après la première hausse de taux de la Fed depuis 2023",
+  "url": "/brief/2026-10-03.html"
+ },
+ {
+  "date": "2026-10-01",
+  "long_en": "Thursday, 1 October 2026",
+  "long_fr": "jeudi 1 octobre 2026",
+  "count": 20,
+  "lead_en": "Fed raises rates to 3.75%–4%, first hike since 2023, as oil-driven inflation bites",
+  "lead_fr": "La Fed relève ses taux à 3,75–4 %, première hausse depuis 2023, face à une inflation alimentée par le pétrole",
+  "url": "/brief/2026-10-01.html"
+ },
+ {
+  "date": "2026-09-30",
+  "long_en": "Wednesday, 30 September 2026",
+  "long_fr": "mercredi 30 septembre 2026",
+  "count": 18,
+  "lead_en": "Trump says Iran war will end ‘very soon,’ rejects Tehran’s Hormuz reopening bid",
+  "lead_fr": "Trump affirme que la guerre en Iran se terminera « très bientôt » et rejette l’offre iranienne de réouverture d’Ormuz",
+  "url": "/brief/2026-09-30.html"
+ },
+ {
+  "date": "2026-09-29",
+  "long_en": "Tuesday, 29 September 2026",
+  "long_fr": "mardi 29 septembre 2026",
+  "count": 21,
+  "lead_en": "Trump rejects Iran’s seven-day roadmap to reopen the Strait of Hormuz",
+  "lead_fr": "Trump rejette la feuille de route iranienne en sept jours pour rouvrir le détroit d’Ormuz",
+  "url": "/brief/2026-09-29.html"
+ },
+ {
+  "date": "2026-09-28",
+  "long_en": "Monday, 28 September 2026",
+  "long_fr": "lundi 28 septembre 2026",
+  "count": 16,
+  "lead_en": "Trump rejects Iran’s seven-day Hormuz plan, says he still expects talks ‘this week’",
+  "lead_fr": "Trump rejette le plan iranien de sept jours pour Ormuz, mais dit s’attendre à des pourparlers « cette semaine »",
+  "url": "/brief/2026-09-28.html"
+ },
+ {
+  "date": "2026-09-27",
+  "long_en": "Sunday, 27 September 2026",
+  "long_fr": "dimanche 27 septembre 2026",
+  "count": 20,
+  "lead_en": "Trump and Xi extend US–China trade truce, cut tariffs on $30B in goods and open a first-ever AI safety channel",
+  "lead_fr": "Trump et Xi prolongent la trêve commerciale sino-américaine, réduisent les tarifs sur 30 milliards $ de biens et créent un premier canal sur la sécurité de l’IA",
+  "url": "/brief/2026-09-27.html"
+ },
+ {
+  "date": "2026-09-26",
+  "long_en": "Saturday, 26 September 2026",
+  "long_fr": "samedi 26 septembre 2026",
+  "count": 12,
+  "lead_en": "Trump rejects Iran’s seven-day plan to reopen the Strait of Hormuz, and expects to resume strikes only after the US midterms",
+  "lead_fr": "Trump rejette le plan iranien en sept jours pour rouvrir le détroit d’Ormuz, et ne compte reprendre les frappes qu’après les élections de mi-mandat américaines",
+  "url": "/brief/2026-09-26.html"
+ },
+ {
+  "date": "2026-09-25",
+  "long_en": "Friday, 25 September 2026",
+  "long_fr": "vendredi 25 septembre 2026",
+  "count": 20,
+  "lead_en": "IEA: more than 10 million barrels a day of Gulf oil output remains shut in as diesel stays 94% above pre-war levels",
+  "lead_fr": "AIE : plus de 10 millions de barils par jour de production pétrolière du Golfe restent hors service, le diesel demeurant 94 % au-dessus des niveaux d’avant-guerre",
+  "url": "/brief/2026-09-25.html"
+ },
+ {
+  "date": "2026-09-24",
+  "long_en": "Thursday, 24 September 2026",
+  "long_fr": "jeudi 24 septembre 2026",
+  "count": 18,
+  "lead_en": "Trump and Xi extend the US–China trade truce through January 10 as Xi arrives in Washington for the first time in a decade",
+  "lead_fr": "Trump et Xi prolongent la trêve commerciale américano-chinoise jusqu’au 10 janvier, alors que Xi arrive à Washington pour la première fois en dix ans",
+  "url": "/brief/2026-09-24.html"
+ },
+ {
+  "date": "2026-09-23",
+  "long_en": "Wednesday, 23 September 2026",
+  "long_fr": "mercredi 23 septembre 2026",
+  "count": 17,
+  "lead_en": "Bessent calls US–China AI and trade talks ‘very successful’ two days before the Trump-Xi summit",
+  "lead_fr": "Bessent qualifie de « très fructueuses » les discussions commerciales et sur l’IA entre les États-Unis et la Chine, deux jours avant le sommet Trump-Xi",
+  "url": "/brief/2026-09-23.html"
+ },
+ {
+  "date": "2026-09-22",
+  "long_en": "Tuesday, 22 September 2026",
+  "long_fr": "mardi 22 septembre 2026",
+  "count": 19,
+  "lead_en": "Tech titans join Trump–Xi state dinner Thursday as Xi makes his first White House visit in a decade",
+  "lead_fr": "Les géants de la tech se joignent au dîner d’État Trump–Xi jeudi, alors que Xi effectue sa première visite à la Maison-Blanche en dix ans",
+  "url": "/brief/2026-09-22.html"
+ },
+ {
+  "date": "2026-09-21",
+  "long_en": "Monday, 21 September 2026",
+  "long_fr": "lundi 21 septembre 2026",
+  "count": 18,
+  "lead_en": "Trump-Xi summit set for September 24 in Washington as $14 billion Taiwan arms package, $1 trillion China trade surplus loom",
+  "lead_fr": "Le sommet Trump-Xi prévu le 24 septembre à Washington, entre un colis d'armement de 14 milliards $ pour Taïwan et un excédent commercial chinois de 1 000 milliards $",
+  "url": "/brief/2026-09-21.html"
+ },
+ {
+  "date": "2026-09-20",
+  "long_en": "Sunday, 20 September 2026",
+  "long_fr": "dimanche 20 septembre 2026",
+  "count": 18,
+  "lead_en": "Bessent and China's He Lifeng open all-day trade talks in Manhattan ahead of Trump-Xi summit",
+  "lead_fr": "Bessent et le vice-premier ministre chinois He Lifeng ouvrent une journée de négociations commerciales à Manhattan avant le sommet Trump-Xi",
+  "url": "/brief/2026-09-20.html"
+ },
+ {
+  "date": "2026-09-19",
+  "long_en": "Saturday, 19 September 2026",
+  "long_fr": "samedi 19 septembre 2026",
+  "count": 24,
+  "lead_en": "Houthi offensive captures Red Sea port, pushes second Gulf oil corridor toward crisis",
+  "lead_fr": "L’offensive houthie s’empare d’un port de la mer Rouge, poussant un second corridor pétrolier du Golfe vers la crise",
+  "url": "/brief/2026-09-19.html"
+ },
+ {
+  "date": "2026-09-18",
+  "long_en": "Friday, 18 September 2026",
+  "long_fr": "vendredi 18 septembre 2026",
+  "count": 21,
+  "lead_en": "Fed hikes to 3.75%-4.00%, first increase since 2023, unanimous under new Chair Warsh",
+  "lead_fr": "La Fed relève ses taux à 3,75-4,00 %, première hausse depuis 2023, vote unanime sous le nouveau président Warsh",
+  "url": "/brief/2026-09-18.html"
+ },
+ {
+  "date": "2026-09-17",
+  "long_en": "Thursday, 17 September 2026",
+  "long_fr": "jeudi 17 septembre 2026",
+  "count": 22,
+  "lead_en": "Fed hikes to 3.75%-4% under Warsh, pencils in no cuts through 2027 as Trump attacks his own pick",
+  "lead_fr": "La Fed relève ses taux à 3,75-4 % sous Warsh, n'envisage aucune baisse avant 2027, alors que Trump attaque son propre choix",
+  "url": "/brief/2026-09-17.html"
+ },
+ {
+  "date": "2026-09-16",
+  "long_en": "Wednesday, 16 September 2026",
+  "long_fr": "mercredi 16 septembre 2026",
+  "count": 18,
+  "lead_en": "Fed meets today under Chair Warsh with markets pricing a first rate hike since 2023",
+  "lead_fr": "La Fed se réunit aujourd’hui sous le président Warsh, les marchés anticipant une première hausse depuis 2023",
+  "url": "/brief/2026-09-16.html"
+ },
+ {
+  "date": "2026-09-15",
+  "long_en": "Tuesday, 15 September 2026",
+  "long_fr": "mardi 15 septembre 2026",
+  "count": 23,
+  "lead_en": "Saudi Arabia shuts its 4-5 million bpd East-West pipeline after a drone attack from Iraq, sending Brent past $104",
+  "lead_fr": "L'Arabie saoudite ferme son oléoduc Est-Ouest de 4 à 5 millions de barils/jour après une attaque de drones depuis l'Irak, propulsant le Brent au-delà de 104 $",
+  "url": "/brief/2026-09-15.html"
+ },
+ {
+  "date": "2026-09-14",
+  "long_en": "Monday, 14 September 2026",
+  "long_fr": "lundi 14 septembre 2026",
+  "count": 14,
+  "lead_en": "Saudi Arabia shuts its 1,200km East-West pipeline after a drone attack from Iraq, pushing Brent past $104",
+  "lead_fr": "L'Arabie saoudite ferme son oléoduc Est-Ouest de 1 200 km après une attaque de drones depuis l'Irak, portant le Brent au-delà de 104 $",
+  "url": "/brief/2026-09-14.html"
+ },
+ {
+  "date": "2026-09-13",
+  "long_en": "Sunday, 13 September 2026",
+  "long_fr": "dimanche 13 septembre 2026",
+  "count": 19,
+  "lead_en": "US inflation holds at 3.4% in August, pushing Fed hike odds for the September 16 decision to nearly 80%",
+  "lead_fr": "L'inflation américaine se maintient à 3,4 % en août, portant à près de 80 % les probabilités d'une hausse de la Fed le 16 septembre",
+  "url": "/brief/2026-09-13.html"
+ },
+ {
+  "date": "2026-09-12",
+  "long_en": "Saturday, 12 September 2026",
+  "long_fr": "samedi 12 septembre 2026",
+  "count": 17,
+  "lead_en": "US diesel hits record $6.05 a gallon as Brent crosses $105 on Hormuz disruption",
+  "lead_fr": "Le diesel américain atteint un record de 6,05 $ le gallon alors que le Brent dépasse 105 $ à cause de la perturbation d’Ormuz",
+  "url": "/brief/2026-09-12.html"
+ },
+ {
+  "date": "2026-09-11",
+  "long_en": "Friday, 11 September 2026",
+  "long_fr": "vendredi 11 septembre 2026",
+  "count": 24,
+  "lead_en": "US destroys five Iranian tankers as Iran strikes a Jordanian air base",
+  "lead_fr": "Les États-Unis détruisent cinq pétroliers iraniens alors que l'Iran frappe une base aérienne jordanienne",
+  "url": "/brief/2026-09-11.html"
+ },
+ {
+  "date": "2026-09-10",
+  "long_en": "Thursday, 10 September 2026",
+  "long_fr": "jeudi 10 septembre 2026",
+  "count": 23,
+  "lead_en": "US destroys five Iranian tankers as Iran strikes a Jordanian air base and threatens further attacks on US warships",
+  "lead_fr": "Les États-Unis détruisent cinq pétroliers iraniens alors que l'Iran frappe une base aérienne jordanienne et menace de nouvelles attaques contre des navires américains",
+  "url": "/brief/2026-09-10.html"
+ },
+ {
+  "date": "2026-09-09",
+  "long_en": "Wednesday, 9 September 2026",
+  "long_fr": "mercredi 9 septembre 2026",
+  "count": 23,
+  "lead_en": "US destroys five Iranian tankers as Iran strikes a Jordanian air base and claims hits on two US destroyers",
+  "lead_fr": "Les États-Unis détruisent cinq pétroliers iraniens alors que l'Iran frappe une base aérienne jordanienne et revendique des tirs sur deux destroyers américains",
+  "url": "/brief/2026-09-09.html"
+ },
+ {
+  "date": "2026-09-08",
+  "long_en": "Tuesday, 8 September 2026",
+  "long_fr": "mardi 8 septembre 2026",
+  "count": 20,
+  "lead_en": "Iran nears a Hormuz 'exclusion zone' and a transit pact with Oman as the US-Iran tanker war grinds into its fourth month",
+  "lead_fr": "L'Iran approche d'une « zone d'exclusion » à Ormuz et d'un pacte de transit avec Oman alors que la guerre des pétroliers américano-iranienne entre dans son quatrième mois",
+  "url": "/brief/2026-09-08.html"
+ },
+ {
+  "date": "2026-09-07",
+  "long_en": "Monday, 7 September 2026",
+  "long_fr": "lundi 7 septembre 2026",
+  "count": 20,
+  "lead_en": "Iran declares a restricted Gulf zone as the IRGC claims fresh strikes on US warships and Washington sinks more tankers",
+  "lead_fr": "L'Iran décrète une zone d'exclusion dans le Golfe alors que les Gardiens revendiquent de nouvelles frappes sur des navires américains et que Washington coule d'autres pétroliers",
+  "url": "/brief/2026-09-07.html"
+ },
+ {
+  "date": "2026-09-06",
+  "long_en": "Sunday, 6 September 2026",
+  "long_fr": "dimanche 6 septembre 2026",
+  "count": 21,
+  "lead_en": "CENTCOM sinks three IRGC-linked tankers after Iran fires on US warships in the Gulf",
+  "lead_fr": "Le CENTCOM coule trois pétroliers liés aux Gardiens après des tirs iraniens sur des navires américains dans le Golfe",
+  "url": "/brief/2026-09-06.html"
+ },
+ {
+  "date": "2026-09-05",
+  "long_en": "Saturday, 5 September 2026",
+  "long_fr": "samedi 5 septembre 2026",
+  "count": 35,
+  "lead_en": "US strike hits an Iranian tanker off Kharg Island, Iran's main crude export terminal",
+  "lead_fr": "Une frappe américaine touche un pétrolier iranien au large de l'île de Kharg, principal terminal d'exportation de brut iranien",
+  "url": "/brief/2026-09-05.html"
+ },
+ {
+  "date": "2026-09-04",
+  "long_en": "Friday, 4 September 2026",
+  "long_fr": "vendredi 4 septembre 2026",
+  "count": 33,
+  "lead_en": "South Korea prepares a naval deployment to the Strait of Hormuz as US pressure mounts",
+  "lead_fr": "La Corée du Sud prépare un déploiement naval dans le détroit d'Ormuz sous la pression américaine",
+  "url": "/brief/2026-09-04.html"
+ },
+ {
+  "date": "2026-09-03",
+  "long_en": "Thursday, 3 September 2026",
+  "long_fr": "jeudi 3 septembre 2026",
+  "count": 19,
+  "lead_en": "U.S. strikes Iranian oil tankers for the first time in its largest Hormuz barrage yet",
+  "lead_fr": "Les États-Unis frappent pour la première fois des pétroliers iraniens dans leur plus vaste offensive sur Ormuz",
+  "url": "/brief/2026-09-03.html"
+ },
+ {
+  "date": "2026-09-01",
+  "long_en": "Tuesday, 1 September 2026",
+  "long_fr": "mardi 1er septembre 2026",
+  "count": 21,
+  "lead_en": "Iran retaliates against Jordan and the UAE after US strikes on Hormuz, ending a month-long lull",
+  "lead_fr": "L'Iran riposte contre la Jordanie et les Émirats après des frappes américaines sur Ormuz, mettant fin à un mois d'accalmie",
+  "url": "/brief/2026-09-01.html"
+ },
+ {
+  "date": "2026-08-31",
+  "long_en": "Monday, 31 August 2026",
+  "long_fr": "lundi 31 août 2026",
+  "count": 28,
+  "lead_en": "US strikes Iranian rocket launchers preparing to mine the Strait of Hormuz, first military action in weeks",
+  "lead_fr": "Les États-Unis frappent des lance-roquettes iraniens qui préparaient un minage du détroit d'Ormuz, première action militaire depuis des semaines",
+  "url": "/brief/2026-08-31.html"
+ },
+ {
+  "date": "2026-08-30",
+  "long_en": "Sunday, 30 August 2026",
+  "long_fr": "dimanche 30 août 2026",
+  "count": 25,
+  "lead_en": "Nepal-China flood death toll surges to roughly 750 with nearly 3,000 still missing",
+  "lead_fr": "Le bilan des inondations Népal-Chine grimpe à environ 750 morts, près de 3 000 personnes toujours disparues",
+  "url": "/brief/2026-08-30.html"
+ },
+ {
+  "date": "2026-08-29",
+  "long_en": "Saturday, 29 August 2026",
+  "long_fr": "samedi 29 août 2026",
+  "count": 26,
+  "lead_en": "Oil slides as Iran-Oman corridor talks advance and Hormuz risk is repriced",
+  "lead_fr": "Le pétrole recule alors que le corridor Iran-Oman avance et qu'Ormuz est reévalué",
+  "url": "/brief/2026-08-29.html"
+ },
+ {
+  "date": "2026-08-28",
+  "long_en": "Friday, 28 August 2026",
+  "long_fr": "vendredi 28 août 2026",
+  "count": 33,
+  "lead_en": "Iran says diplomacy is not impossible but ties Hormuz to ending every Mideast war",
+  "lead_fr": "L Iran dit la diplomatie non impossible mais lie Ormuz à la fin de toutes les guerres au Moyen-Orient",
+  "url": "/brief/2026-08-28.html"
+ },
+ {
+  "date": "2026-08-27",
+  "long_en": "Thursday, 27 August 2026",
+  "long_fr": "jeudi 27 août 2026",
+  "count": 30,
+  "lead_en": "Another tanker struck off Oman as Hormuz transits collapse and Qatar pushes new talks",
+  "lead_fr": "Un autre pétrolier frappé au large d'Oman alors que les transits d'Ormuz s'effondrent et que le Qatar relance les pourparlers",
+  "url": "/brief/2026-08-27.html"
+ },
+ {
+  "date": "2026-08-26",
+  "long_en": "Wednesday, 26 August 2026",
+  "long_fr": "mercredi 26 août 2026",
+  "count": 32,
+  "lead_en": "Iran and Oman prepare a Hormuz management deal as Washington holds back secondary sanctions",
+  "lead_fr": "L'Iran et Oman préparent un accord de gestion d'Ormuz alors que Washington retient ses sanctions secondaires",
+  "url": "/brief/2026-08-26.html"
+ },
+ {
+  "date": "2026-08-25",
+  "long_en": "Tuesday, 25 August 2026",
+  "long_fr": "mardi 25 août 2026",
+  "count": 32,
+  "lead_en": "Ottawa unveils its domestic tariff response: loans, tax deferrals and export support",
+  "lead_fr": "Ottawa dévoile sa réponse tarifaire intérieure : prêts, reports d'impôt et soutien à l'exportation",
+  "url": "/brief/2026-08-25.html"
+ },
+ {
+  "date": "2026-08-22",
+  "long_en": "Saturday, 22 August 2026",
+  "long_fr": "samedi 22 août 2026",
+  "count": 30,
+  "lead_en": "US-Canada trade talks collapse at the deadline and the 50% tariff takes effect",
+  "lead_fr": "Les négociations commerciales Canada-États-Unis échouent à l'échéance et le tarif de 50 % entre en vigueur",
+  "url": "/brief/2026-08-22.html"
+ },
+ {
+  "date": "2026-08-21",
+  "long_en": "Friday, 21 August 2026",
+  "long_fr": "vendredi 21 août 2026",
+  "count": 30,
+  "lead_en": "Three-day tariff pause on Canadian goods runs out today with paperwork unfinished",
+  "lead_fr": "La pause tarifaire de trois jours sur les produits canadiens expire aujourd hui, documents inachevés",
+  "url": "/brief/2026-08-21.html"
+ },
+ {
+  "date": "2026-08-20",
+  "long_en": "Thursday, 20 August 2026",
+  "long_fr": "jeudi 20 août 2026",
+  "count": 30,
+  "lead_en": "Carney asks provinces to end bans on US alcohol sales as part of the trade deal",
+  "lead_fr": "Carney demande aux provinces de lever les interdictions de vente d alcool américain dans le cadre de l accord commercial",
+  "url": "/brief/2026-08-20.html"
+ },
+ {
+  "date": "2026-08-19",
+  "long_en": "Wednesday, 19 August 2026",
+  "long_fr": "mercredi 19 août 2026",
+  "count": 30,
+  "lead_en": "Trump pauses the 50% tariff on Canadian goods for three days and announces a deal with Ottawa",
+  "lead_fr": "Trump suspend trois jours le tarif de 50 % sur les produits canadiens et annonce un accord avec Ottawa",
+  "url": "/brief/2026-08-19.html"
+ },
+ {
+  "date": "2026-08-18",
+  "long_en": "Tuesday, 18 August 2026",
+  "long_fr": "mardi 18 août 2026",
+  "count": 30,
+  "lead_en": "Washington's 50% tariff on Canadian goods lands tomorrow and small exporters say it could halve their sales",
+  "lead_fr": "Le tarif de 50 % de Washington sur les produits canadiens entre en vigueur demain et de petits exportateurs disent qu'il pourrait réduire leurs ventes de moitié",
+  "url": "/brief/2026-08-18.html"
+ },
+ {
+  "date": "2026-08-17",
+  "long_en": "Monday, 17 August 2026",
+  "long_fr": "lundi 17 août 2026",
+  "count": 30,
+  "lead_en": "Strait of Hormuz shipping grinds to a halt as the US-Iran ceasefire expires with no deal in sight",
+  "lead_fr": "Le trafic maritime dans le détroit d'Ormuz s'arrête net alors que le cessez-le-feu américano-iranien expire sans accord en vue",
+  "url": "/brief/2026-08-17.html"
+ },
+ {
+  "date": "2026-08-16",
+  "long_en": "Sunday, 16 August 2026",
+  "long_fr": "dimanche 16 août 2026",
+  "count": 21,
+  "lead_en": "Canada's 50% tariff deadline is three days out as US negotiators offer Carney and Trump 'options' — not a deal",
+  "lead_fr": "L'échéance du tarif de 50 % du Canada n'est plus qu'à trois jours : les négociateurs américains proposent des « options » à Carney et Trump — pas un accord",
+  "url": "/brief/2026-08-16.html"
+ },
+ {
+  "date": "2026-08-15",
+  "long_en": "Saturday, 15 August 2026",
+  "long_fr": "samedi 15 août 2026",
+  "count": 33,
+  "lead_en": "UAE tankers hit and a carrier group inbound: the Hormuz war escalates as Trump vows to declare the strait US territory",
+  "lead_fr": "Pétroliers émiratis frappés et porte-avions en route : la guerre d'Ormuz s'intensifie alors que Trump promet de déclarer le détroit territoire américain",
+  "url": "/brief/2026-08-15.html"
+ },
+ {
+  "date": "2026-08-13",
+  "long_en": "Thursday, 13 August 2026",
+  "long_fr": "jeudi 13 août 2026",
+  "count": 29,
+  "lead_en": "Trump insists the US controls the Strait of Hormuz as shipping traffic sinks to a three-month low",
+  "lead_fr": "Trump insiste sur un controle americain du detroit d'Ormuz alors que le trafic maritime tombe a son plus bas en trois mois",
+  "url": "/brief/2026-08-13.html"
+ },
+ {
+  "date": "2026-08-12",
+  "long_en": "Wednesday, 12 August 2026",
+  "long_fr": "mercredi 12 août 2026",
+  "count": 28,
+  "lead_en": "Iran holds firm on Hormuz conditions as US, Iran and Oman target a Wednesday deal announcement",
+  "lead_fr": "L’Iran maintient ses conditions sur Ormuz alors que Washington, Téhéran et Mascate visent une annonce mercredi",
+  "url": "/brief/2026-08-12.html"
+ },
+ {
+  "date": "2026-08-11",
+  "long_en": "Tuesday, 11 August 2026",
+  "long_fr": "mardi 11 août 2026",
+  "count": 28,
+  "lead_en": "Trump claims ‘100%’ US control of the Strait of Hormuz and demands Iran pay reparations, opening a new front in the standoff",
+  "lead_fr": "Trump revendique un contrôle américain « à 100 % » du détroit d’Ormuz et exige des réparations de l’Iran, ouvrant un nouveau front dans l’impasse",
+  "url": "/brief/2026-08-11.html"
+ },
+ {
+  "date": "2026-08-10",
+  "long_en": "Monday, 10 August 2026",
+  "long_fr": "lundi 10 août 2026",
+  "count": 21,
+  "lead_en": "An Iranian missile hits an ADNOC tanker in the Strait of Hormuz — the 16th strike on the state carrier's fleet since the war began — as the UAE and Qatar demand Tehran reopen the strait unconditionally",
+  "lead_fr": "Un missile iranien frappe un pétrolier de l'ADNOC dans le détroit d'Ormuz — la 16e attaque contre la flotte du transporteur d'État depuis le début de la guerre — alors que les Émirats et le Qatar exigent que Téhéran rouvre le détroit sans condition",
+  "url": "/brief/2026-08-10.html"
+ },
+ {
+  "date": "2026-08-09",
+  "long_en": "Sunday, 9 August 2026",
+  "long_fr": "dimanche 9 août 2026",
+  "count": 27,
+  "lead_en": "Iran's Supreme National Security Council sets sweeping new conditions for reopening Hormuz — end the war, withdraw US forces, pay reparations, unfreeze assets",
+  "lead_fr": "Le Conseil suprême de sécurité nationale iranien pose de vastes nouvelles conditions à la réouverture d'Ormuz — fin de la guerre, retrait des forces américaines, réparations, dégel des avoirs",
+  "url": "/brief/2026-08-09.html"
+ },
+ {
+  "date": "2026-08-08",
+  "long_en": "Saturday, 8 August 2026",
+  "long_fr": "samedi 8 août 2026",
+  "count": 21,
+  "lead_en": "US employers shed 23,000 jobs in July against forecasts of an 80,000 gain, with unemployment easing to 4.1% and labour-force participation at a five-year low of 61.4%",
+  "lead_fr": "Les employeurs américains ont supprimé 23 000 emplois en juillet, alors qu'on attendait 80 000 créations, le chômage refluant à 4,1 % et le taux d'activité tombant à un creux de cinq ans de 61,4 %",
+  "url": "/brief/2026-08-08.html"
+ },
+ {
+  "date": "2026-08-07",
+  "long_en": "Friday, 7 August 2026",
+  "long_fr": "vendredi 7 août 2026",
+  "count": 20,
+  "lead_en": "Wall Street braces for the July jobs report, the day's one scheduled catalyst, with hiring seen rebounding to about 120,000 but unemployment ticking up to 4.3%",
+  "lead_fr": "Wall Street se prépare au rapport américain de l'emploi de juillet, seul catalyseur programmé du jour, l'embauche devant rebondir à environ 120 000 mais le chômage grimpant à 4,3 %",
+  "url": "/brief/2026-08-07.html"
+ },
+ {
+  "date": "2026-08-06",
+  "long_en": "Thursday, 6 August 2026",
+  "long_fr": "jeudi 6 août 2026",
+  "count": 25,
+  "lead_en": "Iran and Oman reach an understanding on the Hormuz shipping route as both sides finalise joint-management arrangements",
+  "lead_fr": "L’Iran et Oman s’entendent sur la route de navigation d’Ormuz, les deux parties finalisant la gestion conjointe du passage",
+  "url": "/brief/2026-08-06.html"
+ },
+ {
+  "date": "2026-08-05",
+  "long_en": "Wednesday, 5 August 2026",
+  "long_fr": "mercredi 5 août 2026",
+  "count": 27,
+  "lead_en": "US, Iran and Oman near an interim deal to reopen the Strait of Hormuz, with a Wednesday announcement targeted",
+  "lead_fr": "Washington, Téhéran et Mascate proches d’un accord intérimaire pour rouvrir le détroit d’Ormuz, une annonce visée pour mercredi",
+  "url": "/brief/2026-08-05.html"
+ },
+ {
+  "date": "2026-08-04",
+  "long_en": "Tuesday, 4 August 2026",
+  "long_fr": "mardi 4 août 2026",
+  "count": 20,
+  "lead_en": "Palantir detonates its Q2 — revenue up 93% to $1.94 billion, guidance raised to about $8.15 billion, and the stock jumps ~13% after hours",
+  "lead_fr": "Palantir fait exploser son T2 — chiffre d’affaires en hausse de 93 % à 1,94 milliard $, prévisions relevées à environ 8,15 milliards $, et le titre bondit d’environ 13 % après la clôture",
+  "url": "/brief/2026-08-04.html"
+ },
+ {
+  "date": "2026-08-03",
+  "long_en": "Monday, 3 August 2026",
+  "long_fr": "lundi 3 août 2026",
+  "count": 17,
+  "lead_en": "AstraZeneca and Bristol Myers Squibb are in early talks on a roughly $400 billion merger that would create one of the world's largest drugmakers",
+  "lead_fr": "AstraZeneca et Bristol Myers Squibb mènent des pourparlers préliminaires en vue d'une fusion d'environ 400 milliards $ qui créerait l'un des plus grands laboratoires pharmaceutiques du monde",
+  "url": "/brief/2026-08-03.html"
+ },
+ {
+  "date": "2026-08-02",
+  "long_en": "Sunday, 2 August 2026",
+  "long_fr": "dimanche 2 août 2026",
+  "count": 18,
+  "lead_en": "Canada's 35% US tariff is now in force after the August 1 deadline passed with no deal — but CUSMA-compliant goods, close to 90% of exports, remain exempt",
+  "lead_fr": "Le tarif américain de 35 % sur le Canada est désormais en vigueur, l'échéance du 1er août étant passée sans accord — mais les biens conformes à l'ACEUM, près de 90 % des exportations, restent exemptés",
+  "url": "/brief/2026-08-02.html"
+ },
+ {
+  "date": "2026-08-01",
+  "long_en": "Saturday, 1 August 2026",
+  "long_fr": "samedi 1er août 2026",
+  "count": 20,
+  "lead_en": "Deadline day: Trump's threatened 35% tariff on Canada takes hold as talks run to the wire — but CUSMA-compliant goods, close to 90% of exports, stay exempt",
+  "lead_fr": "Jour d'échéance : le tarif de 35 % dont Trump menace le Canada entre en vigueur alors que les pourparlers filent jusqu'au bout — mais les biens conformes à l'ACEUM, près de 90 % des exportations, restent exemptés",
+  "url": "/brief/2026-08-01.html"
+ },
+ {
+  "date": "2026-07-31",
+  "long_en": "Friday, 31 July 2026",
+  "long_fr": "vendredi 31 juillet 2026",
+  "count": 19,
+  "lead_en": "Amazon jumps about 10% after a Q2 beat — AWS revenue hits $42.23 billion, up 37% and its fastest since 2021, and its AI-chip business clears a $25 billion run rate",
+  "lead_fr": "Amazon bondit d'environ 10 % après un dépassement au T2 — les revenus d'AWS atteignent 42,23 milliards $, en hausse de 37 % et à leur rythme le plus rapide depuis 2021, et son activité de puces d'IA franchit un rythme annualisé de 25 milliards $",
+  "url": "/brief/2026-07-31.html"
+ },
+ {
+  "date": "2026-07-30",
+  "long_en": "Thursday, 30 July 2026",
+  "long_fr": "jeudi 30 juillet 2026",
+  "count": 18,
+  "lead_en": "The Fed holds at 3.50-3.75% for a fifth meeting, but the split is the story: three officials dissent for a HIKE, not the cut the president wants",
+  "lead_fr": "La Fed maintient à 3,50-3,75 % pour une cinquième réunion, mais c'est la fracture qui compte : trois responsables dissident en faveur d'une HAUSSE, non de la baisse voulue par le président",
+  "url": "/brief/2026-07-30.html"
+ },
+ {
+  "date": "2026-07-29",
+  "long_en": "Wednesday, 29 July 2026",
+  "long_fr": "mercredi 29 juillet 2026",
+  "count": 21,
+  "lead_en": "The Fed decides today and is widely expected to hold at 3.50-3.75% for a fifth straight meeting — with the statement's language, not the level, the market's real signal",
+  "lead_fr": "La Fed tranche aujourd'hui et devrait, selon un large consensus, maintenir à 3,50-3,75 % pour une cinquième réunion d'affilée — le libellé du communiqué, non le niveau, étant le vrai signal pour le marché",
+  "url": "/brief/2026-07-29.html"
+ },
+ {
+  "date": "2026-07-28",
+  "long_en": "Tuesday, 28 July 2026",
+  "long_fr": "mardi 28 juillet 2026",
+  "count": 26,
+  "lead_en": "US-Iran fighting stays paused for a third day, but Tehran calls the talks 'fabricated' as Netanyahu heads to the White House to plot the next phase",
+  "lead_fr": "Les combats américano-iraniens restent suspendus pour un troisième jour, mais Téhéran qualifie les pourparlers de « fabriqués » tandis que Netanyahou gagne la Maison-Blanche pour planifier la suite",
+  "url": "/brief/2026-07-28.html"
+ },
+ {
+  "date": "2026-07-27",
+  "long_en": "Monday, 27 July 2026",
+  "long_fr": "lundi 27 juillet 2026",
+  "count": 20,
+  "lead_en": "The US-Iran war goes quiet for a second straight day as Oman brokers talks and a Hormuz shipping compromise takes shape",
+  "lead_fr": "La guerre américano-iranienne fait silence pour un deuxième jour d'affilée, Oman négociant un accord tandis qu'un compromis sur la navigation dans le détroit d'Ormuz prend forme",
+  "url": "/brief/2026-07-27.html"
+ },
+ {
+  "date": "2026-07-26",
+  "long_en": "Sunday, 26 July 2026",
+  "long_fr": "dimanche 26 juillet 2026",
+  "count": 19,
+  "lead_en": "The US-Iran war grinds into a third week as Washington strikes Iran again, Tehran hits Gulf bases, and Trump threatens to bomb Iranian infrastructure over Hormuz",
+  "lead_fr": "La guerre américano-iranienne entre dans sa troisième semaine : Washington frappe de nouveau l'Iran, Téhéran vise des bases du Golfe et Trump menace de bombarder les infrastructures iraniennes à propos d'Ormuz",
+  "url": "/brief/2026-07-26.html"
+ },
+ {
+  "date": "2026-07-25",
+  "long_en": "Saturday, 25 July 2026",
+  "long_fr": "samedi 25 juillet 2026",
+  "count": 21,
+  "lead_en": "The US carries out a 13th straight night of strikes on Iran as Tehran hits US targets in Bahrain, Kuwait and Jordan and rejects a ceasefire",
+  "lead_fr": "Les États-Unis mènent une treizième nuit consécutive de frappes sur l'Iran, tandis que Téhéran vise des cibles américaines à Bahreïn, au Koweït et en Jordanie et rejette un cessez-le-feu",
+  "url": "/brief/2026-07-25.html"
+ },
+ {
+  "date": "2026-07-24",
+  "long_en": "Friday, 24 July 2026",
+  "long_fr": "vendredi 24 juillet 2026",
+  "count": 22,
+  "lead_en": "Oil tops $100 for the first time since May after Houthi attacks on Saudi tankers in the Red Sea",
+  "lead_fr": "Le pétrole franchit 100 $ pour la première fois depuis mai après des attaques houthies sur des pétroliers saoudiens en mer Rouge",
+  "url": "/brief/2026-07-24.html"
+ },
+ {
+  "date": "2026-07-23",
+  "long_en": "Thursday, 23 July 2026",
+  "long_fr": "jeudi 23 juillet 2026",
+  "count": 22,
+  "lead_en": "Trump vows to destroy an Iranian bridge or power plant for every ship Iran hits in Hormuz",
+  "lead_fr": "Trump promet de détruire un pont ou une centrale iranienne pour chaque navire touché par l'Iran dans le détroit d'Ormuz",
+  "url": "/brief/2026-07-23.html"
+ },
+ {
+  "date": "2026-07-22",
+  "long_en": "Wednesday, 22 July 2026",
+  "long_fr": "mercredi 22 juillet 2026",
+  "count": 20,
+  "lead_en": "US strikes Iran again as a tanker is hit in Hormuz; a 10-day ceasefire moves into focus",
+  "lead_fr": "Nouvelles frappes américaines sur l'Iran; un pétrolier touché dans le détroit d'Ormuz; un cessez-le-feu de 10 jours se dessine",
+  "url": "/brief/2026-07-22.html"
+ },
+ {
+  "date": "2026-07-21",
+  "long_en": "Tuesday, 21 July 2026",
+  "long_fr": "mardi 21 juillet 2026",
+  "count": 20,
+  "lead_en": "US strikes Iran again as a tanker is hit in Hormuz; a 10-day ceasefire moves into focus",
+  "lead_fr": "Nouvelles frappes américaines sur l'Iran; un pétrolier touché dans le détroit d'Ormuz; un cessez-le-feu de 10 jours se dessine",
+  "url": "/brief/2026-07-21.html"
+ },
+ {
+  "date": "2026-07-20",
+  "long_en": "Monday, 20 July 2026",
+  "long_fr": "lundi 20 juillet 2026",
+  "count": 22,
+  "lead_en": "US launches a ninth night of strikes on Iran as American troop deaths reach 17",
+  "lead_fr": "Les États-Unis lancent une neuvième nuit de frappes sur l’Iran; 17 militaires américains tués",
+  "url": "/brief/2026-07-20.html"
+ },
+ {
+  "date": "2026-07-19",
+  "long_en": "Sunday, 19 July 2026",
+  "long_fr": "dimanche 19 juillet 2026",
+  "count": 10,
+  "lead_en": "US launches a ninth straight night of strikes on Iran as the US death toll reaches 17",
+  "lead_fr": "Les États-Unis lancent une neuvième nuit consécutive de frappes sur l’Iran; le bilan américain atteint 17 morts",
+  "url": "/brief/2026-07-19.html"
+ },
+ {
+  "date": "2026-07-18",
+  "long_en": "Saturday, 18 July 2026",
+  "long_fr": "samedi 18 juillet 2026",
+  "count": 11,
+  "lead_en": "An Iranian missile attack on a Jordan air base kills two US troops",
+  "lead_fr": "Une attaque de missile iranienne sur une base aérienne en Jordanie tue deux militaires américains",
+  "url": "/brief/2026-07-18.html"
+ },
+ {
+  "date": "2026-07-17",
+  "long_en": "Friday, 17 July 2026",
+  "long_fr": "vendredi 17 juillet 2026",
+  "count": 22,
+  "lead_en": "US strikes bridges and naval bases inside Iran to choke Hormuz supply routes",
+  "lead_fr": "Les États-Unis frappent ponts et bases navales en Iran pour asphyxier les routes d’Ormuz",
+  "url": "/brief/2026-07-17.html"
+ },
+ {
+  "date": "2026-07-16",
+  "long_en": "Thursday, 16 July 2026",
+  "long_fr": "jeudi 16 juillet 2026",
+  "count": 13,
+  "lead_en": "TSMC posts a record Q2 profit and pledges an extra $100B for Arizona",
+  "lead_fr": "TSMC affiche un bénéfice trimestriel record et engage 100 G$ de plus pour l’Arizona",
+  "url": "/brief/2026-07-16.html"
+ },
+ {
+  "date": "2026-07-15",
+  "long_en": "Wednesday, 15 July 2026",
+  "long_fr": "mercredi 15 juillet 2026",
+  "count": 17,
+  "lead_en": "US launches a fresh wave of strikes on Iran and hits a tanker running the blockade",
+  "lead_fr": "Les États-Unis lancent une nouvelle vague de frappes sur l’Iran et touchent un pétrolier forçant le blocus",
+  "url": "/brief/2026-07-15.html"
+ },
+ {
+  "date": "2026-07-14",
+  "long_en": "Tuesday, 14 July 2026",
+  "long_fr": "mardi 14 juillet 2026",
+  "count": 34,
+  "lead_en": "Iran strikes two UAE tankers in the Strait of Hormuz, killing a crew member",
+  "lead_fr": "L'Iran frappe deux pétroliers émiratis dans le détroit d'Ormuz, tuant un membre d'équipage",
+  "url": "/brief/2026-07-14.html"
  }
 ]
