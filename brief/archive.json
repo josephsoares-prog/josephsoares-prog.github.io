@@ -1,5 +1,14 @@
 [
     {
+        "date": "2026-11-26",
+        "long_en": "Thursday, 26 November 2026",
+        "long_fr": "jeudi 26 novembre 2026",
+        "count": 6,
+        "lead_en": "USTR Proposes New Section 301 Tariffs on 14 Economies, Topping Out at 20% for China and Vietnam",
+        "lead_fr": "L’USTR propose de nouveaux tarifs au titre de la Section 301 visant 14 économies, plafonnés à 20 % pour la Chine et le Vietnam",
+        "url": "/brief/2026-11-26.html"
+    },
+    {
         "date": "2026-11-24",
         "long_en": "Tuesday, 24 November 2026",
         "long_fr": "mardi 24 novembre 2026",
@@ -52,14 +61,5 @@
         "lead_en": "US Strikes Iranian Missile Site on Qeshm Island, Citing Self-Defense, as Hormuz Blockade Grinds On",
         "lead_fr": "Les États-Unis frappent un site de missiles iranien sur l’île de Qeshm, invoquant la légitime défense, alors que le blocus d’Ormuz se poursuit",
         "url": "/brief/2026-11-18.html"
-    },
-    {
-        "date": "2026-11-17",
-        "long_en": "Tuesday, 17 November 2026",
-        "long_fr": "mardi 17 novembre 2026",
-        "count": 11,
-        "lead_en": "Trump, Xi and Putin Set Thursday Trilateral at APEC as White House Frames It Around Nuclear Arms",
-        "lead_fr": "Trump, Xi et Poutine fixent un sommet trilatéral jeudi à l’APEC, axé sur les armements nucléaires",
-        "url": "/brief/2026-11-17.html"
     }
 ]
