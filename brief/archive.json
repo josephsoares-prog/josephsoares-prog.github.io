@@ -1,5 +1,14 @@
 [
     {
+        "date": "2026-11-28",
+        "long_en": "Saturday, 28 November 2026",
+        "long_fr": "samedi 28 novembre 2026",
+        "count": 18,
+        "lead_en": "Sanofi Agrees to Buy Insmed for $41 Billion, Industry’s Largest Deal in Years",
+        "lead_fr": "Sanofi accepte d’acheter Insmed pour 41 milliards de dollars, la plus importante transaction du secteur depuis des années",
+        "url": "/brief/2026-11-28.html"
+    },
+    {
         "date": "2026-11-27",
         "long_en": "Friday, 27 November 2026",
         "long_fr": "vendredi 27 novembre 2026",
@@ -52,14 +61,5 @@
         "lead_en": "Wall Street Sinks to a Sixth Straight Loss as the Dow Sheds 1,100 Points",
         "lead_fr": "Wall Street essuie une sixième séance de pertes d’affilée, le Dow Jones perd 1 100 points",
         "url": "/brief/2026-11-20.html"
-    },
-    {
-        "date": "2026-11-19",
-        "long_en": "Thursday, 19 November 2026",
-        "long_fr": "jeudi 19 novembre 2026",
-        "count": 13,
-        "lead_en": "Trump, Xi and Putin Hold First-Ever Trilateral in Shenzhen as Xi Calls for a 'World Without Nuclear Weapons'",
-        "lead_fr": "Trump, Xi et Poutine tiennent leur premier sommet trilatéral à Shenzhen, Xi appelant à « un monde sans armes nucléaires »",
-        "url": "/brief/2026-11-19.html"
     }
 ]
